@@ -1,0 +1,10 @@
+{
+  "name": "TT Matchup Check",
+  "short_name": "TT Check",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#e9eef2",
+  "theme_color": "#17456e",
+  "icons": [{"src": "icon.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]
+}
