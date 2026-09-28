@@ -57,35 +57,183 @@ summary{padding:12px 14px;cursor:pointer;font-weight:600}
 .banlist li{display:flex;justify-content:space-between;padding:6px 0;border-top:1px solid var(--border);font-size:.95rem}
 .banlist span{color:var(--muted)}
 .note{color:var(--muted);font-size:.82rem;margin-top:18px}
+.tools{margin-top:22px}
+.tools details{margin-top:10px}
+.pad{padding:0 14px 14px}
+textarea{width:100%;min-height:160px;font:inherit;font-size:15px;padding:10px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+textarea:focus{outline:3px solid var(--ball);outline-offset:1px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{font:inherit;font-weight:600;padding:9px 14px;border-radius:4px;border:1px solid var(--border);background:var(--card);color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--table);border-color:var(--table);color:#fff}
+.btn:focus-visible{outline:3px solid var(--ball)}
+.msg{margin-top:10px;font-size:.92rem}
+.msg.err{color:var(--ban)}.msg.ok{color:var(--ok)}
+.help{color:var(--muted);font-size:.88rem;margin:0 0 8px}
+.src{color:var(--muted);font-size:.88rem;margin:-8px 0 14px}
+.tag{border:0;font-family:inherit;cursor:pointer}
+.banlist .gone{color:var(--ban)}
 @media (max-width:420px){.sides{gap:14px}.elo{font-size:2rem}.pname{font-size:1.15rem}}
 @media (prefers-reduced-motion:reduce){.bar div{transition:none}}
+.tools{margin-top:22px}.tools details{margin-top:10px}
+.pad{padding:0 14px 14px}
+textarea{width:100%;min-height:150px;font:inherit;font-size:15px;padding:10px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-offset:1px}
+.inp{background:var(--bg);color:var(--ink);border:1px solid var(--border);margin-bottom:10px}
+.lbl{display:block;font-size:.85rem;color:var(--muted);margin-bottom:3px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{font:inherit;font-weight:600;padding:9px 14px;border-radius:4px;border:1px solid var(--border);background:var(--card);color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--table);border-color:var(--table);color:#fff}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible{outline:3px solid var(--ball)}
+.msg{margin-top:10px;font-size:.92rem}.msg.err{color:var(--ban)}.msg.ok{color:var(--ok)}
+.help{color:var(--muted);font-size:.88rem;margin:0 0 10px}
+.src{color:var(--muted);font-size:.88rem;margin:-8px 0 14px}
+.tag{border:0;font-family:inherit;cursor:pointer}
+.banlist .gone{color:var(--ban)}
+.form{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+.form b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:3px;font-size:.78rem}
+.form b.w{background:#fff;color:var(--table)}.form b.l{background:rgba(0,0,0,.35);color:#fff}
+.form small{width:100%;font-size:.78rem;opacity:.85}
+.panel{margin-top:12px;background:var(--card);border:1px solid var(--border);border-radius:4px;padding:12px 14px}
+.panel h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.25rem;margin:0 0 6px}
+.meet{list-style:none;margin:6px 0 0;padding:0}
+.meet li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-top:1px solid var(--border);font-size:.93rem}
+.meet span{color:var(--muted);white-space:nowrap}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row select,.row input[type=date]{font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink);width:auto}
+.del{background:none;border:0;color:var(--ban);font:inherit;cursor:pointer;padding:0 0 0 8px}
 </style></head><body><main>
 <h1>TT matchup check</h1>
-<p class="sub">Pick two players to compare Elo, win odds and ban list flags.</p>
+<p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
+<p class="src" id="srcInfo">Loading data…</p>
 <section class="court">
  <div class="sides">
-  <div class="side" id="sideA"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
-  <div class="side" id="sideB"><label for="inB">Player 2</label><div class="field"><input id="inB" autocomplete="off" placeholder="Type a name"><ul class="sugg" id="sgB"></ul></div><div class="pcard" id="cardB"><div class="empty">No player picked</div></div></div>
+  <div class="side"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
+  <div class="side"><label for="inB">Player 2</label><div class="field"><input id="inB" autocomplete="off" placeholder="Type a name"><ul class="sugg" id="sgB"></ul></div><div class="pcard" id="cardB"><div class="empty">No player picked</div></div></div>
  </div>
  <div id="odds" hidden><div class="bar"><div class="a" id="barA"></div><div class="b" id="barB"></div></div><div class="pct"><span id="pA"></span><span id="pB"></span></div></div>
 </section>
 <div id="verdict"></div>
+<div id="h2h"></div>
+<div id="logBox" hidden></div>
 <button class="swap" id="clear" type="button">Clear both</button>
+<div class="tools">
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
-<p class="note">Win odds use the standard Elo formula, so treat them as a rough guide. Glanowski, Kaczmarek and Sobel are left off the ban list because the exact player wasn't confirmed. Works offline once opened.</p>
+<details><summary id="recSum">Recent results</summary><ul class="banlist" id="recList"></ul></details>
+<details><summary>Update Elo ratings</summary><div class="pad">
+<p class="help">Paste the new ratings list. Each line needs a name and an Elo number, like "1 Folwarski Jakub 1506". Saving updates the list for everyone using the app.</p>
+<textarea id="paste" placeholder="Paste the new list here"></textarea>
+<div class="btns"><button class="btn primary" id="saveList" type="button">Save new ratings</button></div>
+<div class="msg" id="updMsg" role="status"></div>
+</div></details>
+<details id="setupDet"><summary id="setupSum">Sharing setup</summary><div class="pad">
+<p class="help">To log results, change the ban list or update ratings, this phone needs a GitHub access token. Viewing works without one. The token is saved only on this phone.</p>
+<label class="lbl" for="owner">GitHub username</label><input id="owner" class="inp">
+<label class="lbl" for="repo">Repository name</label><input id="repo" class="inp">
+<label class="lbl" for="token">Access token</label><input id="token" class="inp" type="password" autocomplete="off" placeholder="github_pat_…">
+<div class="btns"><button class="btn primary" id="saveSetup" type="button">Save and test</button><button class="btn" id="syncNow" type="button">Sync now</button><button class="btn" id="forget" type="button">Remove token</button></div>
+<div class="msg" id="setupMsg" role="status"></div>
+</div></details>
+</div>
+<p class="note">Win odds use the standard Elo formula, so treat them as a rough guide. Head-to-head and form only count results logged in this app. Tap a player's ban list tag to add or remove them.</p>
 </main>
-<script>
-const P=[[1, "Folwarski Jakub", 1506], [2, "Kosowski Jakub", 1325], [3, "Felkel Grzegorz", 1314], [4, "Zandecki Jan", 1312], [5, "Petas Kacper", 1309], [6, "Grela Artur", 1307], [7, "David Petr", 1307], [8, "Abbasi Amirreza", 1299], [9, "Cyrnek Piotr", 1298], [10, "Wiecek Adrian", 1291], [11, "Olejnik Martin", 1288], [12, "Kulpa Konrad", 1271], [13, "Spanik Tibor", 1270], [14, "Witkowski Antoni", 1269], [15, "Baggaley Andrew", 1266], [16, "Michna Dawid", 1263], [17, "Jadczyk Marcin", 1261], [18, "Wederlich Damian", 1257], [19, "Dosz Adam", 1252], [20, "Kolasa Szymon", 1243], [21, "Bak Daniel", 1224], [22, "Benes Michal", 1214], [23, "Miastowski Maksymilian", 1207], [24, "Golebiowski Mateusz", 1203], [25, "Strowski Karol", 1201], [26, "Wloczko Krzysztof", 1189], [27, "Braun Josef", 1183], [28, "Prokopcov Dimitrij", 1174], [29, "Domin Maciej", 1169], [30, "Gawlas Michal", 1167], [31, "Stecyszyn Jakub", 1166], [32, "Kuzmicz Jakub", 1165], [33, "Dosz Slawomir", 1164], [34, "Horejsi Miroslav", 1159], [35, "Sklensky Miroslav", 1158], [36, "Murawski Michal", 1157], [37, "Sokolowski Lukasz", 1140], [38, "Nowalinski Maciej", 1138], [39, "Adamiak Grzegorz", 1135], [40, "Glazowski Kacper", 1133], [41, "Lis Daniel", 1131], [42, "Mlynarski Filip", 1126], [43, "Gorak Daniel", 1126], [44, "Vrablik Jiri", 1124], [45, "Kolodziej Krystian", 1119], [46, "Klos Patrik", 1117], [47, "Jarocki Lukasz", 1114], [48, "Chrzescian Radoslaw", 1106], [49, "Poliniewicz Grzegorz", 1098], [50, "Urbanek Jan", 1095], [51, "Balcerzak Marcin", 1087], [52, "Daniel Artur", 1085], [53, "Olbrycht Michal", 1084], [54, "Sporek Szymon", 1084], [55, "Chodorski Piotr", 1078], [56, "Mitas Jacek", 1077], [57, "Spychala Adrian", 1072], [58, "Nadolski Lukasz", 1072], [59, "Szymanski Filip", 1065], [60, "Rutkowski Mateusz", 1055], [61, "Jadam Dawid", 1055], [62, "Chmielowski Jakub", 1050], [63, "Staszczyk Konrad", 1045], [64, "Martinko Tomas", 1043], [65, "Jendrzejewski Patryk", 1037], [66, "Marek David", 1035], [67, "Kulczycki Alan", 1031], [68, "Malachowski Michal", 1031], [69, "Kolek Maciej", 1027], [70, "Seroka Szymon", 1026], [71, "Wisniewski Karol", 1025], [72, "Kapik Krzysztof", 1023], [73, "Maslowski Jakub", 1021], [74, "Szurlej Kacper", 1016], [75, "Kwapis Jakub", 1015], [76, "Kosmal Dawid", 1014], [77, "Litwiniuk Marcin", 1006], [78, "Ufnal Mateusz", 999], [79, "Kostal Daniel", 999], [80, "Sobel Artur", 998], [81, "Pietraszko Lukasz", 995], [82, "Filbrandt Tomasz", 993], [83, "Lewandowski Patryk", 981], [84, "Kukawka Milosz", 976], [85, "Twardowski Szymon", 971], [86, "Sawczak Jr Milosz", 967], [87, "Wos Alan", 961], [88, "Perzynski Przemyslaw", 959], [89, "Chlodnicki Piotr", 954], [90, "Sulkowski Bartek", 952], [91, "Zochniak Jakub", 951], [92, "Kurowski Kamil", 937], [93, "Czerwinski Bartosz", 936], [94, "Solilo Dominik", 936], [95, "Kaczmarek Krzysztof", 926], [96, "Marchlewski Marcin", 921], [97, "Linek Adam", 921], [98, "Krzyzanowski Michal", 913], [99, "Baran Sebastian", 909], [100, "Rudomina Kamil", 908], [101, "Kesik Gracjan", 899], [102, "Szafranek Piotr", 897], [103, "Belik Simon", 893], [104, "Niemiec Krzysztof", 893], [105, "Czernik Mateusz", 876], [106, "Lilien Aleksander", 873], [107, "Brud Szymon", 871], [108, "Utylski Rafal", 870], [109, "Marcinowski Krzysztof", 870], [110, "Gromek Artur", 864], [111, "Minda Michal", 846], [112, "Blocho Przemyslaw", 838], [113, "Makajew Maciej", 834], [114, "Witkowski Jakub", 834], [115, "Stapor Rafal", 831], [116, "Wasilewski Damian", 829], [117, "Kostyk Kamil", 825], [118, "Kufel Karol", 823], [119, "Wandachowicz Michal", 813], [120, "Michalczyk Jakub", 812], [121, "Mleczko Bartlomiej", 811], [122, "Krawczyk Jakub", 807], [123, "Murawski Daniel", 802], [124, "Gasiorski Pawel", 801], [125, "Klocek Kamil", 792], [126, "Malinowski Radoslaw", 791], [127, "Kujawa Filip", 791], [128, "Dabrowski Igor", 788], [129, "Woskowicz Mateusz", 787], [130, "Pruszkowski Jakub", 786], [131, "Skop Szymon", 777], [132, "Mugowski Arkadiusz", 777], [133, "Glanowski Jakub", 774], [134, "Durak Kamil", 771], [135, "Pawlowski Krzysztof", 768], [136, "Cichocki Aleksander", 766], [137, "Baca Jaroslav", 766], [138, "Piecowski Milosz", 761], [139, "Krcil Frantisek", 758], [140, "Radlo Szymon", 754], [141, "Dzida Karol", 751], [142, "Sikora Filip", 746], [143, "Brozek Piotr", 745], [144, "Olejnik Mikolaj", 743], [145, "Iwasyszyn Wojciech", 742], [146, "Wawrosz Pavel", 742], [147, "Grela Pawel", 742], [148, "Pilch Aleksander", 742], [149, "Staniszewski Piotr", 741], [150, "Misiak Mateusz", 740], [151, "Pisarczyk Tomasz", 739], [152, "Gaik Krystian", 738], [153, "Kotyl Wojciech", 737], [154, "Kotyl Krzysztof", 737], [155, "Makowski Kacper", 734], [156, "Niezgoda Rostislav", 728], [157, "Lamperski Jakub", 725], [158, "Myszewski Adrian", 724], [159, "Nagel Kacper", 721], [160, "Cioch Blazej", 720], [161, "Skotniczny Rafal", 719], [162, "Zemla Piotr", 718], [163, "Maruszak Piotr", 717], [164, "Jedrzejak Patryk", 715], [165, "Rusnak Ales", 714], [166, "Klag Wiktor", 714], [167, "Stodolica Mikolaj", 713], [168, "Kratochvil Michal", 711], [169, "Polok Pawel", 710], [170, "Szostok Sebastian", 710], [171, "Wrobel Dariusz", 710], [172, "Burkacki Mateusz", 709], [173, "Slawinski Kacper", 707], [174, "Zagajewski Mateusz", 705], [175, "Wichowski Grzegorz", 705], [176, "Wozniak Jakub", 705], [177, "Zwolinski Mariusz", 705], [178, "Szlubowski Dariusz", 704], [179, "Kwodawski Bartosz", 704], [180, "Kotwica Dawid", 702], [181, "Hetnar Krzysztof", 702], [182, "Piotrowski Tadeusz", 698], [183, "Kowol Marek", 697], [184, "Wojewodka Michal", 695], [185, "Sulkowski Karol", 694], [186, "Poloszczanski Dawid", 693], [187, "Sinicki Maciej", 693], [188, "Idaczyk Dominik", 689], [189, "Kalinowski Mateusz", 688], [190, "Lukaszewski Mikolaj", 687], [191, "Wieczerzak Jacek", 682], [192, "Witczak Filip", 682], [193, "Lach Marcin", 681], [194, "Marchlewski Kacper", 678], [195, "Lebek Marian", 675], [196, "Gumulinski Piotr", 675], [197, "Warpas Blazej", 672], [198, "Wisniewski Bartlomiej", 671], [199, "Kasperski Adam", 668], [200, "Mrugala Bartlomiej", 667], [201, "Tkocz Marek", 666], [202, "Skorski Michal", 666], [203, "Krukar Piotr", 665], [204, "Adamus Pawel", 665], [205, "Trela Mateusz", 663], [206, "Szoltysek Artur", 663], [207, "Jadach Oskar", 662], [208, "Wojtaszczyk Wojciech", 661], [209, "Orszulik Jan", 660], [210, "Skrla Jiri", 657], [211, "Nosiadek Jakub", 657], [212, "Juszczyk Krzysztof", 655], [213, "Badura Jaroslaw", 654], [214, "Guminski Krzysztof", 653], [215, "Gronowski Wojciech", 652], [216, "Marud Grzegorz", 650], [217, "Gluszek Wojciech", 650], [218, "Oracz Michal", 650], [219, "Kowalczyk Marcin", 644], [220, "Kostepski Robert", 641], [221, "Piecowski Miroslaw", 641], [222, "Sikon Mateusz", 641], [223, "Szymik Robert", 639], [224, "Przewlocki Jacek", 636], [225, "Strus Piotr", 635], [226, "Jablonski Karol", 634], [227, "Golaszewski Kuba", 634], [228, "Idaczyk Rafal", 634], [229, "Glica Rafal", 633], [230, "Adamus Kacper", 632], [231, "Smolka Kamil", 631], [232, "Guzik Michal", 629], [233, "Kaczynski Piotr", 628], [234, "Krupa Sebastian", 627], [235, "Niemiec Rafal", 625], [236, "Rolak Jaroslaw", 622], [237, "Sojka Stanislaw", 619], [238, "Koczyba Mariusz", 616], [239, "Fabis Adrian", 615], [240, "Jesiek Jakub", 614], [241, "Gamrot Patryk", 613], [242, "Pokorny Adam", 613], [243, "Lojtek Tomasz", 610], [244, "Pelka Jerzy", 609], [245, "Adamus Mariusz", 608], [246, "Sobkow Zbigniew", 606], [247, "Baranowski Jakub", 604], [248, "Vincenec Oliver", 604], [249, "Eliasz Adrian", 603], [250, "Urban Wojciech", 601], [251, "Molenda Dariusz", 600], [252, "Jablonski Filip", 599], [253, "Ostachowski Piotr", 599], [254, "Kurek Pawel", 595], [255, "Gajda Rafal", 594], [256, "Oracz Lukasz", 591], [257, "Sobel Bartosz", 590], [258, "Skwierz Jakub", 589], [259, "Paszkiewicz Michal", 588], [260, "Kocik Tomasz", 585], [261, "Dytko Dawid", 584], [262, "Ptak Wiktor", 583], [263, "Przewlocki Piotr", 582], [264, "Morawiec Daniel", 578], [265, "Durda Michal", 577], [266, "Kaczmarek Jakub", 575], [267, "Baron Mariusz", 573], [268, "Suchecki Waclaw", 565], [269, "Ruszkiewicz Adam", 564], [270, "Oracz Jacek", 561], [271, "Warzecha Miroslaw", 561], [272, "Wrzalik Tomasz", 561], [273, "Sokolowski Oliwier", 560], [274, "Wnek Stanislaw", 559], [275, "Wiza Roman", 559], [276, "Wodniak Michal", 555], [277, "Jurowicz Grzegorz", 554], [278, "Rozum Dawid", 553], [279, "Jozefiak Michal", 552], [280, "Bernacki Lukasz", 551], [281, "Skuril Michal", 548], [282, "Wojcik Rafal", 545], [283, "Szczepanek Blazej", 544], [284, "Fira Damian", 541], [285, "Sawicki Grzegorz", 541], [286, "Tkaczyk Henryk", 540], [287, "Zmijewski Artur", 536], [288, "Fomin Yurij", 536], [289, "Krezel Andrzej", 534], [290, "Burkacki Adrian", 531], [291, "Malecha Maciej", 527], [292, "Szydlo Aleksander", 526], [293, "Buczynski Witold", 519], [294, "Stepien Damian", 519], [295, "Sikora Mariusz", 515], [296, "Pytlas Wojciech", 511], [297, "Nowak Jakub", 509], [298, "Mecik Patryk", 508], [299, "Twarog Mariusz", 507], [300, "Szczepanski Mateusz", 506], [301, "Slosarczyk Pawel", 506], [302, "Pawlik Cezary", 506], [303, "Tobiasz Wojciech", 505], [304, "Karpiuk Mateusz", 503], [305, "Juzek Sebastian", 502], [306, "Zelezik Jacek", 502], [307, "Glanowski Waldemar", 501], [308, "Schaniel Krzysztof", 498], [309, "Piechnik Roman", 495], [310, "Kumor Michal", 495], [311, "Tomsia Slawomir", 493], [312, "Sokolowski Oskar", 484], [313, "Krutak Michal", 483], [314, "Jedrzejowski Oskar", 480], [315, "Fomin Andriej", 475], [316, "Jendrysik Dawid", 471], [317, "Nocun Zbigniew", 470], [318, "Pacia Bartlomiej", 453], [319, "Jozala Waldemar", 443], [320, "Michalik Jerzy", 440], [321, "Komandzik Rafal", 440], [322, "Madej Boguslaw", 432], [323, "Gudzik Krystian", 431], [324, "Panczyk Adrian", 410], [325, "Baran Mateusz", 408], [326, "Lewczuk Miroslaw", 407], [327, "Kwiatkowski Kacper", 406], [328, "Szymanski Igor", 399], [329, "Cyndera Jakub", 398], [330, "Adach Rafal", 394], [331, "Michalski Jakub", 394], [332, "Rus Maksymilian", 389], [333, "Gesiarz Piotr", 384], [334, "Mucha Grzegorz", 384], [335, "Gorski Przemyslaw", 382], [336, "Janus Slawomir", 381], [337, "Bluszcz Tomasz", 380], [338, "Polanski Pawel", 374], [339, "Kubiak Artur", 373], [340, "Delikatny Kamil", 367], [341, "Natkaniec Michal", 366], [342, "Skorupa Jakub", 359], [343, "Scigany Dariusz", 359], [344, "Cesarz Milosz", 358], [345, "Wozniczka Marcin", 344], [346, "Malcher Krzysztof", 317], [347, "Ogon Rafal", 315], [348, "Machelski Michal", 305], [349, "Wolny Michal", 304], [350, "Pyrek Dawid", 298], [351, "Kowalski Kamil", 295], [352, "Brunner Marian", 291], [353, "Szurgot Andrzej", 282], [354, "Chojnacki Pawel", 276], [355, "Staniczek Adam", 274], [356, "Skupinski Arkadiusz", 251], [357, "Gabrys Dariusz", 246], [358, "Mista Sylwester", 237], [359, "Debski Jerzy", 226], [360, "Lamer Maciej", 216], [361, "Pyda Lukasz", 170], [362, "Stechly Witold", 140], [363, "Maszczynski Dariusz", 136], [364, "Kucharek Jerzy", 106], [365, "Barton Aleksander", 103], [366, "Przebierala Tomasz", 70], [367, "Rybak Kazimierz", 53], [368, "Kordaszewski Tomasz", 39]];
-const BAN=new Set(["Spychala Adrian", "Rutkowski Mateusz", "Kapik Krzysztof", "Filbrandt Tomasz", "Chlodnicki Piotr", "Sulkowski Bartek", "Zochniak Jakub", "Solilo Dominik", "Minda Michal", "Kostyk Kamil", "Gasiorski Pawel", "Mugowski Arkadiusz", "Piecowski Milosz", "Sulkowski Karol", "Lukaszewski Mikolaj", "Marchlewski Kacper", "Lebek Marian", "Wisniewski Bartlomiej", "Trela Mateusz", "Gluszek Wojciech", "Piecowski Miroslaw", "Sikon Mateusz", "Strus Piotr", "Adamus Kacper", "Krupa Sebastian", "Rolak Jaroslaw", "Koczyba Mariusz", "Fabis Adrian", "Adamus Mariusz", "Eliasz Adrian", "Oracz Lukasz", "Paszkiewicz Michal", "Pytlas Wojciech", "Nowak Jakub"]);
-const players=P.map(([r,n,e])=>({rank:r,name:n,elo:e,ban:BAN.has(n)}));
-const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
+<script>const $=id=>document.getElementById(id);
+function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/\s+/g," ").trim();
+const b64e=s=>btoa(unescape(encodeURIComponent(s)));
+const b64d=s=>decodeURIComponent(escape(atob(s.replace(/\n/g,""))));
+const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const nice=d=>{const x=new Date(d+"T12:00:00");return isNaN(x)?d:x.toLocaleDateString(undefined,{day:"numeric",month:"short"})};
+
+// ---------- settings ----------
+const guessOwner=location.hostname.endsWith(".github.io")?location.hostname.split(".")[0]:"Killp24";
+const guessRepo=location.hostname.endsWith(".github.io")?(location.pathname.split("/")[1]||"TT-Check"):"TT-Check";
+let cfg=load("tt-cfg")||{owner:guessOwner,repo:guessRepo,token:""};
+let pending=load("tt-pending")||[];          // match lines waiting to sync
+
+// ---------- data ----------
+let data=load("tt-data");                   // {ratings,ban,matches,at}
+let players=[],BAN=new Set(),matches=[];
+function parseRatings(text){
+ const rows=[];
+ for(let line of text.split(/\r?\n/)){
+  line=line.replace(/\s+/g," ").trim();if(!line||line[0]==="#")continue;
+  let m=line.match(/^(\d+)[.)]? (.+?) (\d{1,4})$/);
+  if(m){rows.push([+m[1],m[2],+m[3]]);continue}
+  m=line.match(/^([^\d].*?) (\d{1,4})$/);if(m)rows.push([0,m[1],+m[2]]);
+ }
+ if(rows.some(r=>r[0]===0)||new Set(rows.map(r=>r[0])).size!==rows.length){rows.sort((x,y)=>y[2]-x[2]);rows.forEach((r,i)=>r[0]=i+1)}
+ else rows.sort((x,y)=>x[0]-y[0]);
+ return rows;
+}
+const parseBan=t=>t.split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&s[0]!=="#");
+function parseMatches(t){return t.split(/\r?\n/).map((raw,i)=>{const s=raw.trim();if(!s||s[0]==="#")return null;
+ const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||""}}).filter(Boolean)}
+function apply(){
+ if(!data){$("srcInfo").textContent="No data yet. Open the app once while online.";return}
+ players=parseRatings(data.ratings).map(([r,n,e])=>({rank:r,name:n,elo:e}));
+ BAN=new Set(parseBan(data.ban));
+ matches=parseMatches(data.matches+"\n"+pending.join("\n"));
+ const when=new Date(data.at);
+ $("srcInfo").textContent=`${players.length} players, ${matches.length} results logged. Data from ${when.toLocaleDateString()} ${when.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`+(pending.length?`, ${pending.length} result${pending.length>1?"s":""} waiting to sync.`:".");
+ ["A","B"].forEach(k=>{if(sel[k])sel[k]=players.find(p=>p.name===sel[k].name)||null});
+ update();renderBan();renderRecent();renderSetup();
+}
+
+// ---------- GitHub ----------
+const api=path=>`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${path}`;
+const hdr=()=>({"Accept":"application/vnd.github+json","Authorization":"Bearer "+cfg.token});
+async function ghGet(path){
+ const r=await fetch(api(path)+"?ref=main&t="+Date.now(),{headers:hdr(),cache:"no-store"});
+ if(r.status===404)return{text:"",sha:null};
+ if(!r.ok)throw new Error(r.status===401?"The token was rejected. Check it in Sharing setup.":`GitHub error ${r.status}.`);
+ const j=await r.json();return{text:b64d(j.content||""),sha:j.sha};
+}
+async function ghEdit(path,fn,message){
+ for(let tries=0;tries<3;tries++){
+  const cur=await ghGet(path);const next=fn(cur.text);
+  const body={message,content:b64e(next),branch:"main"};if(cur.sha)body.sha=cur.sha;
+  const r=await fetch(api(path),{method:"PUT",headers:{...hdr(),"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(r.ok)return next;
+  if(r.status===409||r.status===422)continue;          // someone else saved at the same time, retry
+  throw new Error(r.status===401||r.status===403?"The token can't save to this repository. Check it has Contents: read and write.":`GitHub error ${r.status}.`);
+ }
+ throw new Error("Couldn't save because the file kept changing. Try again.");
+}
+async function fetchAll(){
+ let ratings,ban,m;
+ if(cfg.token){[ratings,ban,m]=await Promise.all(["ratings.txt","ban.txt","matches.txt"].map(f=>ghGet(f).then(x=>x.text)))}
+ else{[ratings,ban,m]=await Promise.all(["ratings.txt","ban.txt","matches.txt"].map(f=>fetch(f+"?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("Couldn't load "+f);return r.text()})))}
+ data={ratings,ban,matches:m,at:Date.now()};save("tt-data",data);
+}
+async function syncPending(){
+ if(!pending.length||!cfg.token||!navigator.onLine)return;
+ const lines=[...pending];
+ const text=await ghEdit("matches.txt",t=>(t.replace(/\s*$/,"")+"\n"+lines.join("\n")+"\n").replace(/^\n/,""),`Add ${lines.length} result${lines.length>1?"s":""}`);
+ pending=pending.slice(lines.length);save("tt-pending",pending);
+ data.matches=text;data.at=Date.now();save("tt-data",data);
+}
+let busy=false;
+async function refresh(showMsg){
+ if(busy)return;busy=true;
+ try{if(navigator.onLine){await syncPending();await fetchAll()}
+  if(showMsg)setMsg("setupMsg","ok","Synced.")}
+ catch(e){if(showMsg||!data)setMsg("setupMsg","err",e.message);else console.warn(e)}
+ finally{busy=false;apply()}
+}
+function setMsg(id,cls,t){const m=$(id);m.className="msg "+cls;m.textContent=t}
+
+// ---------- matchup ----------
 const sel={A:null,B:null};
-function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
-function search(q){q=norm(q);if(!q)return[];const parts=q.split(/\s+/);return players.filter(p=>{const n=norm(p.name);return parts.every(x=>n.includes(x))}).slice(0,12)}
+const isBan=p=>BAN.has(p.name);
+const sortNew=(x,y)=>(y.date>x.date?1:y.date<x.date?-1:y.order-x.order);
+function search(q){q=norm(q);if(!q)return[];const parts=q.split(" ");return players.filter(p=>{const n=norm(p.name);return parts.every(x=>n.includes(x))}).slice(0,12)}
 function setup(k){
- const inp=document.getElementById("in"+k),sg=document.getElementById("sg"+k);let act=-1,list=[];
+ const inp=$("in"+k),sg=$("sg"+k);let act=-1,list=[];
  function render(){list=search(inp.value);act=list.length?0:-1;
-  sg.innerHTML=list.map((p,i)=>`<li data-i="${i}" class="${i===act?'act':''}">${esc(p.name)}${p.ban?' 🚫':''}<small>${p.elo}</small></li>`).join("");
+  sg.innerHTML=list.map((p,i)=>`<li data-i="${i}" class="${i===act?'act':''}">${esc(p.name)}${isBan(p)?' 🚫':''}<small>${p.elo}</small></li>`).join("");
   sg.style.display=list.length?"block":"none"}
  function pick(p){sel[k]=p;inp.value=p.name;sg.style.display="none";update()}
  inp.addEventListener("input",()=>{sel[k]=null;render();update()});
@@ -99,32 +247,107 @@ function setup(k){
  sg.addEventListener("mousedown",e=>{const li=e.target.closest("li");if(li){e.preventDefault();pick(list[+li.dataset.i])}});
  inp.addEventListener("blur",()=>setTimeout(()=>sg.style.display="none",120));
 }
-function card(p){if(!p)return'<div class="empty">No player picked</div>';
+function form(p){
+ const last=matches.filter(m=>m.w===p.name||m.l===p.name).sort(sortNew).slice(0,5);
+ if(!last.length)return'<div class="form"><small>No results logged</small></div>';
+ const w=last.filter(m=>m.w===p.name).length;
+ return `<div class="form">${last.map(m=>{const won=m.w===p.name,opp=won?m.l:m.w;return`<b class="${won?'w':'l'}" title="${won?'Beat':'Lost to'} ${esc(opp)} ${esc(m.score)}">${won?'W':'L'}</b>`}).join("")}<small>Form: ${w}–${last.length-w} in last ${last.length}</small></div>`;
+}
+function card(p,k){if(!p)return'<div class="empty">No player picked</div>';
  return `<div class="pname">${esc(p.name)}</div><div class="elo">${p.elo}</div><div class="rank">Rank #${p.rank} of ${players.length}</div>`+
- (p.ban?'<span class="tag ban">On ban list</span>':'<span class="tag clean">Not on ban list</span>')}
+ `<button type="button" class="tag ${isBan(p)?'ban':'clean'}" data-k="${k}">${isBan(p)?'On ban list':'Not on ban list'}</button>`+form(p)}
+const sur=n=>n.split(" ")[0];
 function update(){
  const a=sel.A,b=sel.B;
- document.getElementById("cardA").innerHTML=card(a);document.getElementById("cardB").innerHTML=card(b);
- const odds=document.getElementById("odds"),v=document.getElementById("verdict");
- if(!a||!b){odds.hidden=true;v.innerHTML="";return}
- if(a===b){odds.hidden=true;v.innerHTML='<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>';return}
+ $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
+ const odds=$("odds"),v=$("verdict"),h=$("h2h"),lb=$("logBox");
+ if(!a||!b||a===b){odds.hidden=true;lb.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
  const pa=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- odds.hidden=false;document.getElementById("barA").style.width=(pa*100)+"%";document.getElementById("barB").style.width=((1-pa)*100)+"%";
- document.getElementById("pA").textContent=Math.round(pa*100)+"%";document.getElementById("pB").textContent=Math.round((1-pa)*100)+"%";
- const gap=Math.abs(a.elo-b.elo);
- const fav=a.elo>=b.elo?a:b,dog=fav===a?b:a;
+ odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
+ const gap=Math.abs(a.elo-b.elo),fav=a.elo>=b.elo?a:b,dog=fav===a?b:a,fb=isBan(fav),db=isBan(dog);
+ const meet=matches.filter(m=>(m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name)).sort(sortNew);
+ const fw=meet.filter(m=>m.w===fav.name).length,dw=meet.length-fw;
  let cls="verdict",title,body;
- if(gap===0){title="Dead even on Elo";body=a.ban||b.ban?`${[a,b].filter(p=>p.ban).map(p=>esc(p.name)).join(" and ")} ${a.ban&&b.ban?"are":"is"} on the ban list.`:"Neither player is on the ban list.";cls+=a.ban||b.ban?" warn":""}
- else if(fav.ban&&dog.ban){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} is favored by ${gap} Elo points, but both have a record of dropping matches they should win.`}
- else if(fav.ban){cls+=" warn";title="Upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is on the ban list. ${esc(dog.name)} has a better shot than the numbers suggest.`}
- else if(dog.ban){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player is the underdog.`}
+ if(gap===0){const bs=[a,b].filter(isBan);title="Dead even on Elo";body=bs.length?`${bs.map(p=>esc(p.name)).join(" and ")} ${bs.length>1?"are":"is"} on the ban list.`:"Neither player is on the ban list.";if(bs.length)cls+=" warn"}
+ else if(fb&&db){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} is favored by ${gap} Elo points, but both have a record of dropping matches they should win.`}
+ else if(fb){cls+=" warn";title="Upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is on the ban list. ${esc(dog.name)} has a better shot than the numbers suggest.`}
+ else if(db){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player is the underdog.`}
  else{cls+=" good";title="No ban list flags";body=`${esc(fav.name)} is favored by ${gap} Elo points.`}
+ if(gap&&dw>fw){if(!fb&&!db)title="Head-to-head favors the underdog";cls=cls.replace(" good","")+" warn";body+=` Head-to-head goes the other way: ${esc(dog.name)} leads ${dw}–${fw}.`}
  v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}</div>`;
+ const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
+ const headline=!meet.length?"No meetings logged yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`;
+ h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`</div>`;
+ lb.hidden=false;
+ lb.innerHTML=`<div class="panel"><h2>Log a result</h2>`+(cfg.token?`<div class="row"><select id="lgWin"><option value="A">${esc(sur(a.name))} won</option><option value="B">${esc(sur(b.name))} won</option></select><select id="lgScore"><option value="">Score</option><option>3-0</option><option>3-1</option><option>3-2</option><option>2-0</option><option>2-1</option></select><input type="date" id="lgDate" value="${today()}"></div><div class="btns"><button class="btn primary" id="lgSave" type="button">Save result</button></div><div class="msg" id="lgMsg" role="status"></div>`:`<p class="help" style="margin:0">Add an access token in Sharing setup to log results.</p>`)+`</div>`;
+ if(cfg.token)$("lgSave").onclick=logResult;
 }
-setup("A");setup("B");
-document.getElementById("clear").onclick=()=>{sel.A=sel.B=null;document.getElementById("inA").value="";document.getElementById("inB").value="";update()};
-const bl=players.filter(p=>p.ban);
-document.getElementById("banSum").textContent=`Ban list (${bl.length} players)`;
-document.getElementById("banList").innerHTML=bl.map(p=>`<li>${esc(p.name)}<span>#${p.rank}, ${p.elo}</span></li>`).join("");
+async function logResult(){
+ const a=sel.A,b=sel.B;if(!a||!b)return;
+ const winA=$("lgWin").value==="A",w=winA?a:b,l=winA?b:a;
+ const line=`${$("lgDate").value||today()} | ${w.name} | ${l.name} | ${$("lgScore").value}`.replace(/ \| $/,"");
+ pending.push(line);save("tt-pending",pending);apply();
+ setMsg("lgMsg","ok",navigator.onLine?"Saving…":"Saved on this phone. It will sync when you're back online.");
+ if(navigator.onLine){try{await syncPending();setMsg("lgMsg","ok",`Saved: ${sur(w.name)} beat ${sur(l.name)}.`)}catch(e){setMsg("lgMsg","err",e.message+" The result is kept on this phone and will retry.")}apply()}
+}
+
+// ---------- lists ----------
+function renderBan(){
+ const byName=new Map(players.map(p=>[p.name,p]));
+ const names=[...BAN].sort((x,y)=>((byName.get(y)||{elo:-1}).elo)-((byName.get(x)||{elo:-1}).elo));
+ $("banSum").textContent=`Ban list (${BAN.size} players)`;
+ $("banList").innerHTML=names.map(n=>{const p=byName.get(n);return p?`<li>${esc(n)}<span>#${p.rank}, ${p.elo}</span></li>`:`<li>${esc(n)}<span class="gone">Not in ratings</span></li>`}).join("")||"<li>No players yet.</li>";
+}
+function renderRecent(){
+ const list=[...matches].sort(sortNew).slice(0,30);
+ $("recSum").textContent=`Recent results (${matches.length})`;
+ $("recList").innerHTML=list.map(m=>`<li><div>${esc(m.w)} beat ${esc(m.l)}${m.score?" "+esc(m.score):""}</div><span>${esc(nice(m.date))}${cfg.token?`<button class="del" type="button" data-raw="${esc(m.raw)}" aria-label="Delete result">Delete</button>`:""}</span></li>`).join("")||"<li>No results logged yet.</li>";
+}
+$("recList").addEventListener("click",async e=>{const d=e.target.closest(".del");if(!d)return;
+ const raw=d.dataset.raw;if(!confirm("Delete this result for everyone?\n\n"+raw))return;
+ const pi=pending.indexOf(raw);if(pi>=0){pending.splice(pi,1);save("tt-pending",pending);apply();return}
+ if(!navigator.onLine){alert("Connect to the internet to delete a synced result.");return}
+ try{data.matches=await ghEdit("matches.txt",t=>{const ls=t.split(/\r?\n/);const i=ls.findIndex(x=>x.trim()===raw);if(i>=0)ls.splice(i,1);return ls.join("\n")},"Delete result");data.at=Date.now();save("tt-data",data)}catch(err){alert(err.message)}
+ apply();
+});
+document.addEventListener("click",async e=>{const t=e.target.closest(".pcard .tag");if(!t)return;const p=sel[t.dataset.k];if(!p)return;
+ if(!cfg.token){alert("Add an access token in Sharing setup to change the shared ban list.");return}
+ if(!navigator.onLine){alert("Connect to the internet to change the ban list.");return}
+ const adding=!BAN.has(p.name);t.disabled=true;t.textContent="Saving…";
+ try{data.ban=await ghEdit("ban.txt",txt=>{const ls=txt.split(/\r?\n/).filter(x=>x.trim()!==p.name);if(adding)ls.push(p.name);return ls.filter((x,i)=>x.trim()||i===0).join("\n")+"\n"},(adding?"Add ":"Remove ")+p.name+(adding?" to":" from")+" ban list");data.at=Date.now();save("tt-data",data)}catch(err){alert(err.message)}
+ apply();
+});
+$("saveList").onclick=async()=>{
+ const rows=parseRatings($("paste").value);
+ if(rows.length<2){setMsg("updMsg","err","No players found. Check each line has a name followed by an Elo number, then paste again.");return}
+ if(!cfg.token){setMsg("updMsg","err","Add an access token in Sharing setup first.");return}
+ if(!navigator.onLine){setMsg("updMsg","err","Connect to the internet to save new ratings.");return}
+ setMsg("updMsg","ok","Saving…");
+ try{data.ratings=await ghEdit("ratings.txt",()=>"# Elo ratings: rank, name, Elo\n"+rows.map(r=>r.join("\t")).join("\n")+"\n","Update Elo ratings");data.at=Date.now();save("tt-data",data);
+  const names=new Set(rows.map(r=>r[1])),missing=[...BAN].filter(n=>!names.has(n));
+  setMsg("updMsg","ok",`Saved ${rows.length} players for everyone.`+(missing.length?` Not in the new list: ${missing.join(", ")}.`:""));$("paste").value="";apply()}
+ catch(e){setMsg("updMsg","err",e.message)}
+};
+
+// ---------- setup ----------
+function renderSetup(){$("owner").value=cfg.owner;$("repo").value=cfg.repo;$("token").value=cfg.token?"••••••••":"";$("setupSum").textContent=cfg.token?"Sharing setup (connected)":"Sharing setup (view only)"}
+$("token").addEventListener("focus",()=>{if($("token").value==="••••••••")$("token").value=""});
+$("saveSetup").onclick=async()=>{
+ const t=$("token").value.trim();
+ cfg={owner:$("owner").value.trim(),repo:$("repo").value.trim(),token:t&&t!=="••••••••"?t:cfg.token};
+ if(!cfg.token){setMsg("setupMsg","err","Paste an access token first.");return}
+ setMsg("setupMsg","ok","Testing…");
+ try{await ghGet("matches.txt");save("tt-cfg",cfg);setMsg("setupMsg","ok","Connected. You can now log results and make changes.");await refresh(false)}
+ catch(e){setMsg("setupMsg","err",e.message)}
+ renderSetup();update();
+};
+$("syncNow").onclick=()=>refresh(true);
+$("forget").onclick=()=>{cfg.token="";save("tt-cfg",cfg);renderSetup();update();renderRecent();setMsg("setupMsg","ok","Token removed from this phone.")};
+$("clear").onclick=()=>{sel.A=sel.B=null;$("inA").value="";$("inB").value="";update()};
+
+setup("A");setup("B");apply();refresh(false);
+addEventListener("online",()=>refresh(false));
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script></body></html>
