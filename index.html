@@ -325,7 +325,7 @@ function computeStats(){
  const byName=new Map(players.map(p=>[p.name,p.elo]));
  STATS=new Map();let bad=0,days=0;
  const tacc={};   // tier|role -> [n, wins, sum of expected]
- const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,days:new Map()});return STATS.get(n)};
+ const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,dogN:0,dogW:0,dogE:0,days:new Map()});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);   // last 6 months only
  for(const m of official){
   if(m.date<since)continue;
@@ -337,6 +337,7 @@ function computeStats(){
    const s=get(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
    d.n++;d.w+=won;d.e+=e;
    if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;if(!won)d.favL++}
+   else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e}
    const t=BAN.has(n)?tierOfName(n):0;
    if(t&&m.eloW!==null&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
   }
@@ -352,18 +353,24 @@ function computeStats(){
 const toElo=x=>Math.round(x*400/Math.LN10);
 function estimate(a,b){
  const pe=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- let adj=0;const why=[];
+ let adj=0;const why=[],skipped=[];
  for(const [p,sign] of [[a,1],[b,-1]]){
   if(!isBan(p))continue;
   const role=(sign>0?pe:1-pe)>0.5?"fav":"dog",t=tierOf(p),x=TADJ[t+"|"+role];
   if(!x||Math.abs(x.shift)<0.02)continue;
+  const o=ownRecord(p.name,role);
+  if(o&&o.n>=10&&Math.sign(o.diff)!==Math.sign(x.shift)){skipped.push({p,role,o});continue}
   adj+=sign*x.shift;
   why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so ${x.shift<0?"−":"+"}${Math.abs(toElo(x.shift))} Elo`);
  }
  adj=Math.max(-1,Math.min(1,adj));
  const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
- return{pe,pa,why};
+ return{pe,pa,why,skipped};
 }
+// A player's own record in a role: wins vs what Elo expected (last 6 months)
+function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
+ return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favE}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogE}}
+const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favE:0};
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
@@ -435,6 +442,7 @@ function update(){
  let cls="verdict",title,body;
  if(gap===0){const bs=[a,b].filter(isBan);title="Dead even on Elo";body=bs.length?`${bs.map(p=>esc(p.name)).join(" and ")} ${bs.length>1?"are":"is"} on the ban list.`:"Neither player is on the ban list.";if(bs.length)cls+=" warn"}
  else if(fb&&db){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} (#${banRank(fav)}, Tier ${tierOf(fav)}) is favored by ${gap} Elo points over ${esc(dog.name)} (#${banRank(dog)}, Tier ${tierOf(dog)}). Both have a record of dropping matches they should win.`}
+ else if(fb&&est.skipped.some(k=>k.p===fav)){const k=est.skipped.find(k=>k.p===fav);title="Ban list not backed by data";body=`${esc(fav.name)} is favored by ${gap} Elo points and is on your ban list (#${banRank(fav)}, Tier ${tierOf(fav)}), but as favorite he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected. The win chance isn't adjusted for him.`}
  else if(fb){const t=tierOf(fav);cls+=" warn";title=t===1?"High upset risk":t===2?"Upset risk":"Some upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is ${t===1?"one of the worst on":t===2?"high on":"on"} your ban list (#${banRank(fav)}, Tier ${t}). ${esc(dog.name)} has a better shot than the numbers suggest.`}
  else if(db){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player (#${banRank(dog)}, Tier ${tierOf(dog)}) is the underdog.`}
  else{cls+=" good";title="No ban list flags";body=`${esc(fav.name)} is favored by ${gap} Elo points.`}
@@ -444,7 +452,7 @@ function update(){
  if(gap){const s=STATS.get(fav.name);
   if(s&&s.favN>=10){const pm=(s.favW-s.favE)/s.favN;
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
-   else if(pm>=0.08&&isBan(fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favE)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
+   else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favE)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
  v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
@@ -489,7 +497,7 @@ function oddsCalc(a,b,pa){
  const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
- out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
+ out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
 }
 
 async function logResult(){
@@ -599,15 +607,16 @@ function reportCard(){
  const rows=official.filter(m=>m.eloW!==null&&KS[m.score]).map(m=>({m,ew:Math.min(.995,Math.max(.005,1-m.eloW/KS[m.score]))})).sort((x,y)=>x.m.date<y.m.date?-1:x.m.date>y.m.date?1:0);
  const dates=[...new Set(rows.map(r=>r.m.date))];if(dates.length<3){box.innerHTML='<p class="help">Not enough match data yet.</p>';return}
  const testDays=dates.slice(-14),first=testDays[0];
- const acc={};let tested=[];
- const addAcc=(r)=>{for(const [n,e,won] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]){const t=BAN.has(n)?tierOfName(n):0;if(!t||e===.5)continue;const k=t+"|"+(e>.5?"fav":"dog");const a=acc[k]||(acc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}};
+ const acc={},own={};let tested=[];
+ const addAcc=(r)=>{for(const [n,e,won] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]){const t=BAN.has(n)?tierOfName(n):0;if(!t||e===.5)continue;const k=t+"|"+(e>.5?"fav":"dog");const a=acc[k]||(acc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e;
+   if(e>.55||e<.45){const ok=n+"|"+(e>.5?"fav":"dog"),q=own[ok]||(own[ok]=[0,0]);q[0]++;q[1]+=won-e}}};
  let di=0;
  for(const d of dates){
   const today=rows.filter(r=>r.m.date===d);
   if(d>=first){
    const adjOf={};for(const [k,[n,w,e]] of Object.entries(acc))adjOf[k]=(lg(cl(w/n))-lg(cl(e/n)))*n/(n+300);
    for(const r of today){let a=0;
-    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t){const x=adjOf[t+"|"+(e>.5?"fav":"dog")];if(x)a+=s*x}}
+    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t){const role=e>.5?"fav":"dog",x=adjOf[t+"|"+role],q=own[n+"|"+role];if(x&&!(q&&q[0]>=10&&Math.sign(q[1])!==Math.sign(x)))a+=s*x}}
     a=Math.max(-1,Math.min(1,a));const pw=1/(1+Math.exp(-(lg(r.ew)+a)));
     tested.push({date:d,e:r.ew,p:pw,adj:Math.abs(a)>0.001,w:r.m.w,l:r.m.l})}
   }
