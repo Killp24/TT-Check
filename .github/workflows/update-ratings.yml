@@ -1,0 +1,56 @@
+name: Update Elo ratings
+
+on:
+  schedule:
+    - cron: "0 5,17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download official ranking
+        run: |
+          python3 - <<'PY'
+          import re, html, sys, urllib.request
+          url = "https://www.tt-series.com/ranking/"
+          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (TT-Check ratings updater)"})
+          page = urllib.request.urlopen(req, timeout=60).read().decode("utf-8", "replace")
+
+          m = re.search(r"as of\s*(\d{4}-\d{2}-\d{2})", page)
+          as_of = m.group(1) if m else "unknown date"
+
+          rows = []
+          for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, flags=re.S | re.I):
+              cells = [html.unescape(re.sub(r"<[^>]+>", "", c)).strip()
+                       for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, flags=re.S | re.I)]
+              cells = [re.sub(r"\s+", " ", c) for c in cells]
+              if len(cells) >= 3 and cells[0].isdigit() and cells[-1].isdigit() and cells[1]:
+                  rows.append((int(cells[0]), cells[1], int(cells[-1])))
+
+          if len(rows) < 100:
+              sys.exit(f"Only found {len(rows)} players, so ratings.txt was left unchanged.")
+
+          with open("ratings.txt", "w", encoding="utf-8") as f:
+              f.write(f"# Official TT Elite Series ranking as of {as_of} (updated automatically)\n")
+              for r, n, e in rows:
+                  f.write(f"{r}\t{n}\t{e}\n")
+          print(f"Saved {len(rows)} players, ranking as of {as_of}")
+          PY
+
+      - name: Save if changed
+        run: |
+          if git diff --quiet ratings.txt; then
+            echo "No changes."
+          else
+            git config user.name "ratings-bot"
+            git config user.email "ratings-bot@users.noreply.github.com"
+            git add ratings.txt
+            git commit -m "Update Elo ratings from tt-series.com"
+            git push
+          fi
