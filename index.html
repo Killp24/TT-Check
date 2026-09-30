@@ -138,6 +138,21 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .sheethd h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.6rem;margin:0}
 .sheet .tools details:first-child{margin-top:0}
 html.lock,html.lock body{overflow:hidden}
+.eloOnly{font-size:.8rem;opacity:.85;margin-top:4px;min-height:0}
+.wc .wcrow{display:flex;justify-content:space-between;gap:12px;align-items:flex-end}
+.wcp{display:flex;flex-direction:column;min-width:0}
+.wcp.r{align-items:flex-end;text-align:right}
+.wcn{display:flex;align-items:center;gap:6px;font-size:.95rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wcp b{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:2rem;line-height:1.05;color:var(--muted);font-weight:700}
+.wcp b.lead{color:var(--ink)}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex:none}
+.dot.a{background:var(--ball)}.dot.b{background:var(--table2)}
+.wc .bar{margin-top:10px;height:12px;border-radius:6px;background:var(--border);gap:2px}
+.wc .bar .a{background:var(--ball)}.wc .bar .b{background:var(--table2)}
+.wc .eloOnly{color:var(--muted);font-size:.85rem;margin-top:8px;opacity:1}
+.wc .eloOnly:empty{display:none}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dot.b,:root:not([data-theme="light"]) .wc .bar .b{background:#5b9bd5}}
+:root[data-theme="dark"] .dot.b,:root[data-theme="dark"] .wc .bar .b{background:#5b9bd5}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
@@ -148,8 +163,16 @@ html.lock,html.lock body{overflow:hidden}
   <div class="side"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="A" aria-label="Clear player 1">✕</button><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
   <div class="side"><label for="inB">Player 2</label><div class="field"><input id="inB" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="B" aria-label="Clear player 2">✕</button><ul class="sugg" id="sgB"></ul></div><div class="pcard" id="cardB"><div class="empty">No player picked</div></div></div>
  </div>
- <div id="odds" hidden><div class="bar"><div class="a" id="barA"></div><div class="b" id="barB"></div></div><div class="pct"><span id="pA"></span><span id="pB"></span></div></div>
 </section>
+<div id="odds" class="panel wc" hidden>
+ <h2>Win chance</h2>
+ <div class="wcrow">
+  <div class="wcp"><span class="wcn"><i class="dot a"></i><span id="nA"></span></span><b id="pA"></b></div>
+  <div class="wcp r"><span class="wcn"><span id="nB"></span><i class="dot b"></i></span><b id="pB"></b></div>
+ </div>
+ <div class="bar" role="img" id="barImg"><div class="a" id="barA"></div><div class="b" id="barB"></div></div>
+ <div class="eloOnly" id="eloOnly"></div>
+</div>
 <div id="verdict"></div>
 <div id="oddsBox"></div>
 <div id="h2h"></div>
@@ -195,7 +218,7 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let offAt=null,STATS=new Map(),LEAGUE=0;
+let offAt=null,STATS=new Map(),LEAGUE=0,TADJ={};
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
@@ -282,6 +305,7 @@ const warsawToday=()=>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/Wa
 function computeStats(){
  const byName=new Map(players.map(p=>[p.name,p.elo]));
  STATS=new Map();let bad=0,days=0;
+ const tacc={};   // tier|role -> [n, wins, sum of expected]
  const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,days:new Map()});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);   // last 6 months only
  for(const m of official){
@@ -294,12 +318,32 @@ function computeStats(){
    const s=get(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
    d.n++;d.w+=won;d.e+=e;
    if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;if(!won)d.favL++}
+   const t=BAN.has(n)?tierOfName(n):0;
+   if(t&&m.eloW!==null&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
   }
  }
  for(const s of STATS.values()){s.play=0;s.bad=0;
   for(const d of s.days.values())if(d.n>=3){s.play++;if(d.w-d.e<=-1.5&&d.favL>=2)s.bad++}
   bad+=s.bad;days+=s.play}
  LEAGUE=days?bad/days:0;
+ // How ban-tier players actually did vs Elo, shrunk toward zero so small samples count for little
+ TADJ={};const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
+ for(const [k,[n,w,e]] of Object.entries(tacc)){const shift=lg(cl(w/n))-lg(cl(e/n));TADJ[k]={n,shift:shift*n/(n+300),won:w,exp:e}}
+}
+const toElo=x=>Math.round(x*400/Math.LN10);
+function estimate(a,b){
+ const pe=1/(1+Math.pow(10,(b.elo-a.elo)/400));
+ let adj=0;const why=[];
+ for(const [p,sign] of [[a,1],[b,-1]]){
+  if(!isBan(p))continue;
+  const role=(sign>0?pe:1-pe)>0.5?"fav":"dog",t=tierOf(p),x=TADJ[t+"|"+role];
+  if(!x||Math.abs(x.shift)<0.02)continue;
+  adj+=sign*x.shift;
+  why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so ${x.shift<0?"−":"+"}${Math.abs(toElo(x.shift))} Elo`);
+ }
+ adj=Math.max(-1,Math.min(1,adj));
+ const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
+ return{pe,pa,why};
 }
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favE:0};
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
@@ -311,7 +355,7 @@ function statLines(p){
  if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favE)} vs expected</small>`;
  if(s.play>=3)h+=`<small>Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
  const d=todayOf(p.name);
- if(d)h+=badToday(p.name)?`<small class="today bad">⚠ Today: ${d.w}–${d.n-d.w}, bad session</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
+ if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}, rough start</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
  return h;
 }
 
@@ -319,7 +363,8 @@ function statLines(p){
 const sel={A:null,B:null};
 const isBan=p=>BAN.has(p.name);
 const banRank=p=>BANORDER.indexOf(p.name)+1;
-const tierOf=p=>{const r=banRank(p);return !r?0:r<=5?1:r<=10?2:3};
+const tierOfName=n=>{const r=BANORDER.indexOf(n)+1;return !r?0:r<=5?1:r<=10?2:3};
+const tierOf=p=>tierOfName(p.name);
 const tierTxt=p=>{const r=banRank(p),t=tierOf(p);return `Ban #${r} · Tier ${t}`};
 const sortNew=(x,y)=>(y.date>x.date?1:y.date<x.date?-1:y.order-x.order);
 const idxFor=(m,n)=>(m.w===n?m.iw:m.l===n?m.il:0)||50;
@@ -358,9 +403,13 @@ function update(){
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h"),lb=$("logBox");
  if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;lb.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
- const pa=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- renderOdds(a,b,pa);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ const est=estimate(a,b),pa=est.pa;
+ renderOdds(a,b,pa,est);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
+ $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
+ $("pA").classList.toggle("lead",pa>=.5);$("pB").classList.toggle("lead",pa<.5);
+ $("barImg").setAttribute("aria-label",`${a.name} ${Math.round(pa*100)}%, ${b.name} ${Math.round((1-pa)*100)}%`);
+ $("eloOnly").innerHTML=Math.round(est.pe*100)!==Math.round(pa*100)?`Adjusted for ban list tiers. Elo alone: ${esc(sur(a.name))} ${Math.round(est.pe*100)}%, ${esc(sur(b.name))} ${Math.round((1-est.pe)*100)}%.`:"";
  const gap=Math.abs(a.elo-b.elo),fav=a.elo>=b.elo?a:b,dog=fav===a?b:a,fb=isBan(fav),db=isBan(dog);
  const meet=matches.filter(m=>(m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name)).sort(sortFor(a.name));
  const fw=meet.filter(m=>m.w===fav.name).length,dw=meet.length-fw;
@@ -372,11 +421,10 @@ function update(){
  else{cls+=" good";title="No ban list flags";body=`${esc(fav.name)} is favored by ${gap} Elo points.`}
  if(gap&&dw>fw&&meet.length>=4){if(!fb&&!db)title="Head-to-head favors the underdog";cls=cls.replace(" good","")+" warn";body+=` Head-to-head goes the other way: ${esc(dog.name)} leads ${dw}–${fw}.`}
  const notes=[];
- if(gap&&badToday(fav.name)){title=`${esc(sur(fav.name))} is having a bad session`}
- for(const p of [fav,dog]){if(badToday(p.name)){const d=todayOf(p.name);notes.push(`⚠ ${esc(p.name)} is having a bad session today: ${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}.`);if(p===fav)cls=cls.replace(" good","").replace(" warn","")+" warn"}}
+ for(const p of [fav,dog]){if(badToday(p.name)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
   if(s&&s.favN>=10){const pm=(s.favW-s.favE)/s.favN;
-   if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`);cls=cls.replace(" good","").replace(" warn","")+" warn"}
+   if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
    else if(pm>=0.08&&isBan(fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favE)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
  v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
@@ -395,7 +443,8 @@ const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
 const profit=o=>o<0?100*100/(-o):o;                 // profit on a $100 stake
 const fairAm=p=>p>=.5?"−"+Math.round(100*p/(1-p)):"+"+Math.round(100*(1-p)/p);
 const readOdds=k=>{const n=parseFloat(odds[k].v);return n>=100?(odds[k].neg?-n:n):null};
-function renderOdds(a,b,pa){
+let EST=null;
+function renderOdds(a,b,pa,est){EST=est||null;
  const box=$("oddsBox");
  if(!a||!b||a===b){box.innerHTML="";oddsPair="";return}
  const pair=a.name+"|"+b.name;
@@ -410,7 +459,7 @@ function oddsCalc(a,b,pa){
  const out=$("oddsOut");if(!out)return;
  const oa=readOdds("A"),ob=readOdds("B");
  const model={A:pa,B:1-pa};
- if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from Elo: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;return}
+ if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
@@ -418,10 +467,10 @@ function oddsCalc(a,b,pa){
   const cls=ev>=3?"pos":ev>0?"thin":"neg";
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${cls}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the Elo estimate is right.</div>`
+ const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
-  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the Elo estimate supports.</div>`;
- out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Elo</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`<p class="help" style="margin:8px 0 0">Estimate uses Elo only for now. Form, head-to-head and ban list aren't factored in yet, so weigh them yourself.</p>`;
+  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
+ out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
 }
 
 async function logResult(){
