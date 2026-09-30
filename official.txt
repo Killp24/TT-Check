@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-09-30T17:34Z
+# updated 2026-09-30T18:36Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8317,6 +8317,8 @@
 2026-09-30 | Pytlas Wojciech | Koczyba Mariusz | 3-2 | 1 | 5 | Pending
 2026-09-30 | Lewczuk Miroslaw | Skorupa Jakub | 3-1 | 1 | 5 | Pending
 2026-09-30 | Skupinski Arkadiusz | Machelski Michal | 3-1 | 1 | 1 | Pending
+2026-09-30 | Zelezik Jacek | Michalczyk Jakub | 3-2 | 1 | 1 | +14
+2026-09-30 | Janus Slawomir | Staniczek Adam | 3-0 | 1 | 1 | +14
 2026-09-30 | Grela Artur | David Petr | 3-1 | 2 | 2 | +12
 2026-09-30 | Miastowski Maksymilian | Jadczyk Marcin | 3-0 | 2 | 2 | +16
 2026-09-30 | Wloczko Krzysztof | Wiecek Adrian | 3-0 | 2 | 2 | +19
@@ -8389,6 +8391,12 @@
 2026-09-30 | Minda Michal | Zwolinski Mariusz | 3-1 | 3 | 8 | +5
 2026-09-30 | Zochniak Jakub | Kolek Maciej | 3-1 | 3 | 3 | +15
 2026-09-30 | Blocho Przemyslaw | Rudomina Kamil | 3-2 | 3 | 4 | +7
+2026-09-30 | Staszczyk Konrad | Sulkowski Bartek | 3-1 | 3 | 3 | +10
+2026-09-30 | Solilo Dominik | Blocho Przemyslaw | 3-1 | 3 | 4 | Pending
+2026-09-30 | Kotwica Dawid | Klocek Kamil | 3-0 | 3 | 6 | Pending
+2026-09-30 | Lamperski Jakub | Poloszczanski Dawid | 3-1 | 3 | 3 | Pending
+2026-09-30 | Juszczyk Krzysztof | Koczyba Mariusz | 3-1 | 3 | 7 | Pending
+2026-09-30 | Nocun Zbigniew | Lewczuk Miroslaw | 3-0 | 3 | 3 | Pending
 2026-09-30 | Gumulinski Piotr | Nowak Jakub | 3-2 | 4 | 4 | +3
 2026-09-30 | Adamus Pawel | Cesarz Milosz | 3-1 | 4 | 2 | +3
 2026-09-30 | Fomin Andriej | Kwiatkowski Kacper | 3-1 | 4 | 4 | +11
@@ -8456,6 +8464,7 @@
 2026-09-30 | Schaniel Krzysztof | Buczynski Witold | 3-0 | 6 | 6 | +19
 2026-09-30 | Zochniak Jakub | Blocho Przemyslaw | 3-2 | 6 | 2 | +6
 2026-09-30 | Koczyba Mariusz | Kaczynski Piotr | 3-2 | 6 | 2 | Pending
+2026-09-30 | Zielinski Marcin | Fomin Andriej | 3-0 |  | 6 | 
 2026-09-30 | Sikon Mateusz | Gajda Rafal | 3-1 | 7 | 7 | +8
 2026-09-30 | Jadach Oskar | Kowalski Kamil | 3-1 | 7 | 7 | +3
 2026-09-30 | Madej Boguslaw | Buczynski Witold | 3-1 | 7 | 7 | +13
@@ -8472,6 +8481,7 @@
 2026-09-30 | Poliniewicz Grzegorz | Jarocki Lukasz | 3-2 | 7 | 8 | +9
 2026-09-30 | Schaniel Krzysztof | Rus Maksymilian | 3-0 | 7 | 7 | +11
 2026-09-30 | Zochniak Jakub | Sulkowski Bartek | 3-1 | 7 | 2 | +11
+2026-09-30 | Skorupa Jakub | Skupinski Arkadiusz | 3-1 | 7 | 3 | Pending
 2026-09-30 | Buczynski Witold | Gajda Rafal | 3-1 | 8 | 8 | +11
 2026-09-30 | David Petr | Grela Artur | 3-1 | 8 | 8 | +13
 2026-09-30 | Miastowski Maksymilian | Wiecek Adrian | 3-1 | 8 | 8 | +12
@@ -8482,6 +8492,7 @@
 2026-09-30 | Przewlocki Piotr | Kowalski Kamil | 3-1 | 8 | 8 | +4
 2026-09-30 | Schaniel Krzysztof | Sikon Mateusz | 3-2 | 8 | 8 | +10
 2026-09-30 | Madej Boguslaw | Rus Maksymilian | 3-0 | 8 | 8 | +11
+2026-09-30 | Mucha Grzegorz | Machelski Michal | 3-1 | 8 | 3 | Pending
 2026-09-30 | Przewlocki Piotr | Szymanski Igor | 3-2 | 9 | 9 | +5
 2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 9 | 9 | +8
 2026-09-30 | Gajda Rafal | Rus Maksymilian | 3-2 | 9 | 9 | +6
