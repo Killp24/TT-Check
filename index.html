@@ -356,12 +356,13 @@ function estimate(a,b){
  let adj=0;const why=[],skipped=[];
  for(const [p,sign] of [[a,1],[b,-1]]){
   if(!isBan(p))continue;
-  const role=(sign>0?pe:1-pe)>0.5?"fav":"dog",t=tierOf(p),x=TADJ[t+"|"+role];
-  if(!x||Math.abs(x.shift)<0.02)continue;
+  const pf=sign>0?pe:1-pe;if(pf<=0.5)continue;          // only when he's the favorite
+  const role="fav",t=tierOf(p),x=TADJ[t+"|"+role],wt=Math.min(1,(pf-0.5)/0.1);   // near 50–50, phase it in
+  if(!x||x.shift>=0||Math.abs(x.shift*wt)<0.02)continue;
   const o=ownRecord(p.name,role);
   if(o&&o.n>=10&&Math.sign(o.diff)!==Math.sign(x.shift)){skipped.push({p,role,o});continue}
-  adj+=sign*x.shift;
-  why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so ${x.shift<0?"−":"+"}${Math.abs(toElo(x.shift))} Elo`);
+  adj+=sign*x.shift*wt;
+  why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so −${Math.abs(toElo(x.shift*wt))} Elo${wt<1?" (reduced because the match is close to 50–50)":""}`);
  }
  adj=Math.max(-1,Math.min(1,adj));
  const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
@@ -578,7 +579,10 @@ function plToDate(d,t){const [y,m,da]=d.split("-").map(Number),[h,mi]=t.split(":
 const byNameP=n=>players.find(p=>p.name===n);
 function renderSched(){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked;
- const rows=SCHED.filter(r=>showDone||(!r.res&&r.at.getTime()>now-20*60000)).filter(r=>r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
+ // the site doesn't fill in results on schedule posts, so look them up in the collected matches
+ const offIdx=new Map();for(const m of official){const k=m.date+"|"+[m.w,m.l].sort().join("|");if(!offIdx.has(k))offIdx.set(k,[]);offIdx.get(k).push(m)}
+ for(const r of SCHED){if(r.res)continue;const ms=offIdx.get(r.date+"|"+[r.p1,r.p2].sort().join("|"));if(ms&&ms.length)r.fin=ms[0]}
+ const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin&&r.at.getTime()>now-20*60000)).filter(r=>r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
  let shown=0;
  const html=rows.map((r,i)=>{
   const a=byNameP(r.p1),b=byNameP(r.p2);
@@ -590,8 +594,8 @@ function renderSched(){
   }else tags+=`<span class="stag">Player not in ratings</span>`;
   if(onlyFlag&&!flag)return"";
   shown++;
-  const mins=Math.round((r.at-now)/60000),when=r.res?`Final ${esc(r.res)}`:mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
-  return `<li><button type="button" class="srow${r.res?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
+  const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-20?"Result pending":mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
+  return `<li><button type="button" class="srow${r.res||r.fin||mins<-20?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try unticking the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
  $("schedInfo").textContent=SCHED.length?`${shown} match${shown===1?"":"es"} in the next 30 hours. Times are shown in your phone's time zone. Tap a match to load it.`:"";
 }
@@ -616,7 +620,7 @@ function reportCard(){
   if(d>=first){
    const adjOf={};for(const [k,[n,w,e]] of Object.entries(acc))adjOf[k]=(lg(cl(w/n))-lg(cl(e/n)))*n/(n+300);
    for(const r of today){let a=0;
-    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t){const role=e>.5?"fav":"dog",x=adjOf[t+"|"+role],q=own[n+"|"+role];if(x&&!(q&&q[0]>=10&&Math.sign(q[1])!==Math.sign(x)))a+=s*x}}
+    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t&&e>.5){const x=adjOf[t+"|fav"],q=own[n+"|fav"],wt=Math.min(1,(e-.5)/.1);if(x&&x<0&&!(q&&q[0]>=10&&q[1]>=0))a+=s*x*wt}}
     a=Math.max(-1,Math.min(1,a));const pw=1/(1+Math.exp(-(lg(r.ew)+a)));
     tested.push({date:d,e:r.ew,p:pw,adj:Math.abs(a)>0.001,w:r.m.w,l:r.m.l})}
   }
