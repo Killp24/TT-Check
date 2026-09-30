@@ -123,11 +123,26 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .vv{margin-top:10px;padding:10px 12px;border-radius:4px;border-left:6px solid var(--muted);background:var(--bg)}
 .vv strong{display:block}
 .vv.pos{border-left-color:var(--ok);color:var(--ink);font-weight:400}.vv.neg{border-left-color:var(--ban);color:var(--ink);font-weight:400}.vv.thin{border-left-color:var(--ball);color:var(--ink);font-weight:400}
+.tag.ban.t1{background:#8e1f1a}.tag.ban.t2{background:var(--ban)}.tag.ban.t3{background:#d9665f}
+.rk{display:inline-grid;place-items:center;min-width:24px;height:22px;border-radius:3px;margin-right:8px;font-size:.78rem;color:#fff;background:#d9665f}
+.rk.t1{background:#8e1f1a}.rk.t2{background:var(--ban)}
+.bn{display:flex;align-items:center;color:var(--ink)!important}
+.banlist .tierhd{font-weight:700;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em;border-top:0;padding-top:12px}
+.form small.today{font-weight:600}.form small.today.bad{color:#ffd0cc}
+.note{display:block;margin-top:6px;font-size:.93rem}
+.banlist .pos{color:var(--ok)}.banlist .neg{color:var(--ban)}
+.topbar{justify-content:space-between}
+.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.sheet .tools{max-width:640px;margin:0 auto}
+.sheethd{max-width:640px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);padding:4px 0 8px;z-index:1}
+.sheethd h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.6rem;margin:0}
+.sheet .tools details:first-child{margin-top:0}
+html.lock,html.lock body{overflow:hidden}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
 <p class="src" id="srcInfo">Loading data…</p>
-<div class="topbar"><button class="btn" id="clear" type="button">Clear both</button></div>
+<div class="topbar"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="clear" type="button">Clear both</button></div>
 <section class="court">
  <div class="sides">
   <div class="side"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="A" aria-label="Clear player 1">✕</button><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
@@ -139,6 +154,7 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 <div id="oddsBox"></div>
 <div id="h2h"></div>
 <div id="logBox" hidden></div>
+<div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><h2 id="menuTitle">Menu</h2><button class="btn" id="menuClose" type="button">Done</button></div>
 <div class="tools">
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
 <details><summary id="recSum">Recent results</summary><ul class="banlist" id="recList"></ul></details>
@@ -157,7 +173,8 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 <div class="msg" id="setupMsg" role="status"></div>
 </div></details>
 </div>
-<p class="note">Win odds use the standard Elo formula, so treat them as a rough guide. Form, head-to-head and career records come from tt-series.com and update automatically every 6 hours. Head-to-head history builds up over time from Sep 2026 onward. Tap a player's ban list tag to add or remove them.</p>
+</div>
+<p class="note">Win odds use the standard Elo formula, so treat them as a rough guide. Form, head-to-head and career records come from tt-series.com and update automatically every hour. Head-to-head history builds up over time from Sep 2026 onward. Tap a player's ban list tag to add or remove them.</p>
 </main>
 <script>const $=id=>document.getElementById(id);
 function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
@@ -167,6 +184,7 @@ const norm=s=>s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").re
 const b64e=s=>btoa(unescape(encodeURIComponent(s)));
 const b64d=s=>decodeURIComponent(escape(atob(s.replace(/\n/g,""))));
 const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const ago=t=>{const m=Math.round((Date.now()-new Date(t))/60000);return m<1?"just now":m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago"};
 const nice=d=>{const x=new Date(d+"T12:00:00");return isNaN(x)?d:x.toLocaleDateString(undefined,{day:"numeric",month:"short"})};
 
 // ---------- settings ----------
@@ -177,7 +195,8 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let players=[],BAN=new Set(),matches=[],official=[],career=new Map(),mine=[];
+let offAt=null,STATS=new Map(),LEAGUE=0;
+let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
  for(let line of text.split(/\r?\n/)){
@@ -192,22 +211,23 @@ function parseRatings(text){
 }
 const parseBan=t=>t.split(/\r?\n/).map(s=>s.trim()).filter(s=>s&&s[0]!=="#");
 function parseMatches(t,src){return t.split(/\r?\n/).map((raw,i)=>{const s=raw.trim();if(!s||s[0]==="#")return null;
- const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||"",iw:+p[4]||0,il:+p[5]||0,src}}).filter(Boolean)}
+ const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||"",iw:+p[4]||0,il:+p[5]||0,eloW:/^[+-]?\d+$/.test(p[6]||"")?parseInt(p[6]):null,src}}).filter(Boolean)}
 function parseCareer(t){const m=new Map();t.split(/\r?\n/).forEach(l=>{const p=l.split("|").map(x=>x.trim());if(p.length>=3&&l[0]!=="#")m.set(p[0],[+p[1],+p[2]])});return m}
 async function loadOfficial(){
  try{const [o,c]=await Promise.all(["official.txt","players.txt"].map(f=>fetch(f).then(r=>r.ok?r.text():"")));
-  official=parseMatches(o,"off");career=parseCareer(c)}catch(e){}
+  official=parseMatches(o,"off");career=parseCareer(c);offAt=(o.match(/# updated (\S+)/)||[])[1]||null}catch(e){}
 }
 function apply(){
  if(!data){$("srcInfo").textContent="No data yet. Open the app once while online.";return}
  players=parseRatings(data.ratings).map(([r,n,e])=>({rank:r,name:n,elo:e}));
- BAN=new Set(parseBan(data.ban));
+ BANORDER=parseBan(data.ban);BAN=new Set(BANORDER);
  mine=parseMatches(data.matches+"\n"+pending.join("\n"),"me");
  const offKey=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l+"|"+m.score)),offKey2=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l));
+ computeStats();
  matches=official.concat(mine.filter(m=>!(offKey.has(m.date+"|"+m.w+"|"+m.l+"|"+m.score)||(!m.score&&offKey2.has(m.date+"|"+m.w+"|"+m.l)))));
  const when=new Date(data.at);
  const asOf=(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
- $("srcInfo").textContent=(asOf?`Official Elo as of ${nice(asOf)}. `:"")+`${players.length} players, ${official.length} official matches, ${mine.length} logged by you. Data from ${when.toLocaleDateString()} ${when.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`+(pending.length?`, ${pending.length} result${pending.length>1?"s":""} waiting to sync.`:".");
+ $("srcInfo").textContent=(asOf?`Official Elo as of ${nice(asOf)}. `:"")+`${players.length} players, ${official.length} official matches${offAt?` (updated ${ago(offAt)})`:""}, ${mine.length} logged by you. Data from ${when.toLocaleDateString()} ${when.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`+(pending.length?`, ${pending.length} result${pending.length>1?"s":""} waiting to sync.`:".");
  ["A","B"].forEach(k=>{if(sel[k])sel[k]=players.find(p=>p.name===sel[k].name)||null});
  update();renderBan();renderRecent();renderSetup();
 }
@@ -255,9 +275,52 @@ async function refresh(showMsg){
 }
 function setMsg(id,cls,t){const m=$(id);m.className="msg "+cls;m.textContent=t}
 
+
+// ---------- performance vs expectation ----------
+const KS={"3-0":32,"3-1":24,"3-2":16};   // official Elo change per result margin
+const warsawToday=()=>new Date().toLocaleDateString("en-CA",{timeZone:"Europe/Warsaw"});
+function computeStats(){
+ const byName=new Map(players.map(p=>[p.name,p.elo]));
+ STATS=new Map();let bad=0,days=0;
+ const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,days:new Map()});return STATS.get(n)};
+ const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);   // last 6 months only
+ for(const m of official){
+  if(m.date<since)continue;
+  let ew=null;
+  if(m.eloW!==null&&KS[m.score])ew=Math.min(1,Math.max(0,1-m.eloW/KS[m.score]));
+  else if(byName.has(m.w)&&byName.has(m.l))ew=1/(1+Math.pow(10,(byName.get(m.l)-byName.get(m.w))/400));
+  if(ew===null)continue;
+  for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
+   const s=get(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
+   d.n++;d.w+=won;d.e+=e;
+   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;if(!won)d.favL++}
+  }
+ }
+ for(const s of STATS.values()){s.play=0;s.bad=0;
+  for(const d of s.days.values())if(d.n>=3){s.play++;if(d.w-d.e<=-1.5&&d.favL>=2)s.bad++}
+  bad+=s.bad;days+=s.play}
+ LEAGUE=days?bad/days:0;
+}
+const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favE:0};
+const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
+const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
+const sgn=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(1);
+function statLines(p){
+ const s=STATS.get(p.name);if(!s)return"";
+ let h="";
+ if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favE)} vs expected</small>`;
+ if(s.play>=3)h+=`<small>Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
+ const d=todayOf(p.name);
+ if(d)h+=badToday(p.name)?`<small class="today bad">⚠ Today: ${d.w}–${d.n-d.w}, bad session</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
+ return h;
+}
+
 // ---------- matchup ----------
 const sel={A:null,B:null};
 const isBan=p=>BAN.has(p.name);
+const banRank=p=>BANORDER.indexOf(p.name)+1;
+const tierOf=p=>{const r=banRank(p);return !r?0:r<=5?1:r<=10?2:3};
+const tierTxt=p=>{const r=banRank(p),t=tierOf(p);return `Ban #${r} · Tier ${t}`};
 const sortNew=(x,y)=>(y.date>x.date?1:y.date<x.date?-1:y.order-x.order);
 const idxFor=(m,n)=>(m.w===n?m.iw:m.l===n?m.il:0)||50;
 const sortFor=n=>(x,y)=>(y.date>x.date?1:y.date<x.date?-1:(idxFor(y,n)-idxFor(x,n))||(y.order-x.order));
@@ -265,7 +328,7 @@ function search(q){q=norm(q);if(!q)return[];const parts=q.split(" ");return play
 function setup(k){
  const inp=$("in"+k),sg=$("sg"+k);let act=-1,list=[];
  function render(){list=search(inp.value);act=list.length?0:-1;
-  sg.innerHTML=list.map((p,i)=>`<li data-i="${i}" class="${i===act?'act':''}">${esc(p.name)}${isBan(p)?' 🚫':''}<small>${p.elo}</small></li>`).join("");
+  sg.innerHTML=list.map((p,i)=>`<li data-i="${i}" class="${i===act?'act':''}">${esc(p.name)}${isBan(p)?` 🚫${tierOf(p)<3?tierOf(p):''}`:''}<small>${p.elo}</small></li>`).join("");
   sg.style.display=list.length?"block":"none"}
  function pick(p){sel[k]=p;inp.value=p.name;sg.style.display="none";update()}
  inp.addEventListener("input",()=>{sel[k]=null;render();update()});
@@ -282,13 +345,13 @@ function setup(k){
 function form(p){
  const all=matches.filter(m=>m.w===p.name||m.l===p.name).sort(sortFor(p.name)),last=all.slice(0,5),ten=all.slice(0,10);
  const c=career.get(p.name),car=c?`<small>Career: ${c[0]}–${c[1]} (${Math.round(100*c[0]/Math.max(1,c[0]+c[1]))}%)</small>`:"";
- if(!last.length)return`<div class="form"><small>No recent matches found</small>${car}</div>`;
+ if(!last.length)return`<div class="form"><small>No recent matches found</small>${statLines(p)}${car}</div>`;
  const w=ten.filter(m=>m.w===p.name).length;
- return `<div class="form">${last.map(m=>{const won=m.w===p.name,opp=won?m.l:m.w;return`<b class="${won?'w':'l'}" title="${won?'Beat':'Lost to'} ${esc(opp)} ${esc(m.score)}">${won?'W':'L'}</b>`}).join("")}<small>Last ${ten.length}: ${w}–${ten.length-w}</small>${car}</div>`;
+ return `<div class="form">${last.map(m=>{const won=m.w===p.name,opp=won?m.l:m.w;return`<b class="${won?'w':'l'}" title="${won?'Beat':'Lost to'} ${esc(opp)} ${esc(m.score)}">${won?'W':'L'}</b>`}).join("")}<small>Last ${ten.length}: ${w}–${ten.length-w}</small>${statLines(p)}${car}</div>`;
 }
 function card(p,k){if(!p)return'<div class="empty">No player picked</div>';
  return `<div class="pname">${esc(p.name)}</div><div class="elo">${p.elo}</div><div class="rank">Rank #${p.rank} of ${players.length}</div>`+
- `<button type="button" class="tag ${isBan(p)?'ban':'clean'}" data-k="${k}">${isBan(p)?'On ban list':'Not on ban list'}</button>`+form(p)+`<a class="ext" href="https://www.tt-series.com/player/?player=${encodeURIComponent(p.name).replace(/%20/g,'+')}" target="_blank" rel="noopener">Official profile ↗</a>`}
+ `<button type="button" class="tag ${isBan(p)?'ban t'+tierOf(p):'clean'}" data-k="${k}">${isBan(p)?tierTxt(p):'Not on ban list'}</button>`+form(p)+`<a class="ext" href="https://www.tt-series.com/player/?player=${encodeURIComponent(p.name).replace(/%20/g,'+')}" target="_blank" rel="noopener">Official profile ↗</a>`}
 const sur=n=>n.split(" ")[0];
 function update(){
  const a=sel.A,b=sel.B;
@@ -303,12 +366,20 @@ function update(){
  const fw=meet.filter(m=>m.w===fav.name).length,dw=meet.length-fw;
  let cls="verdict",title,body;
  if(gap===0){const bs=[a,b].filter(isBan);title="Dead even on Elo";body=bs.length?`${bs.map(p=>esc(p.name)).join(" and ")} ${bs.length>1?"are":"is"} on the ban list.`:"Neither player is on the ban list.";if(bs.length)cls+=" warn"}
- else if(fb&&db){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} is favored by ${gap} Elo points, but both have a record of dropping matches they should win.`}
- else if(fb){cls+=" warn";title="Upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is on the ban list. ${esc(dog.name)} has a better shot than the numbers suggest.`}
- else if(db){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player is the underdog.`}
+ else if(fb&&db){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} (#${banRank(fav)}, Tier ${tierOf(fav)}) is favored by ${gap} Elo points over ${esc(dog.name)} (#${banRank(dog)}, Tier ${tierOf(dog)}). Both have a record of dropping matches they should win.`}
+ else if(fb){const t=tierOf(fav);cls+=" warn";title=t===1?"High upset risk":t===2?"Upset risk":"Some upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is ${t===1?"one of the worst on":t===2?"high on":"on"} your ban list (#${banRank(fav)}, Tier ${t}). ${esc(dog.name)} has a better shot than the numbers suggest.`}
+ else if(db){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player (#${banRank(dog)}, Tier ${tierOf(dog)}) is the underdog.`}
  else{cls+=" good";title="No ban list flags";body=`${esc(fav.name)} is favored by ${gap} Elo points.`}
  if(gap&&dw>fw&&meet.length>=4){if(!fb&&!db)title="Head-to-head favors the underdog";cls=cls.replace(" good","")+" warn";body+=` Head-to-head goes the other way: ${esc(dog.name)} leads ${dw}–${fw}.`}
- v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}</div>`;
+ const notes=[];
+ if(gap&&badToday(fav.name)){title=`${esc(sur(fav.name))} is having a bad session`}
+ for(const p of [fav,dog]){if(badToday(p.name)){const d=todayOf(p.name);notes.push(`⚠ ${esc(p.name)} is having a bad session today: ${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}.`);if(p===fav)cls=cls.replace(" good","").replace(" warn","")+" warn"}}
+ if(gap){const s=STATS.get(fav.name);
+  if(s&&s.favN>=10){const pm=(s.favW-s.favE)/s.favN;
+   if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`);cls=cls.replace(" good","").replace(" warn","")+" warn"}
+   else if(pm>=0.08&&isBan(fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favE)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
+  if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
+ v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
@@ -365,9 +436,13 @@ async function logResult(){
 // ---------- lists ----------
 function renderBan(){
  const byName=new Map(players.map(p=>[p.name,p]));
- const names=[...BAN].sort((x,y)=>((byName.get(y)||{elo:-1}).elo)-((byName.get(x)||{elo:-1}).elo));
+ const names=[...BANORDER];
  $("banSum").textContent=`Ban list (${BAN.size} players)`;
- $("banList").innerHTML=names.map(n=>{const p=byName.get(n);return p?`<li>${esc(n)}<span>#${p.rank}, ${p.elo}</span></li>`:`<li>${esc(n)}<span class="gone">Not in ratings</span></li>`}).join("")||"<li>No players yet.</li>";
+ $("banList").innerHTML=names.map(n=>{const p=byName.get(n);const r=BANORDER.indexOf(n)+1,t=r<=5?1:r<=10?2:3,hd=r===1?'<li class="tierhd">Tier 1: worst</li>':r===6?'<li class="tierhd">Tier 2</li>':r===11?'<li class="tierhd">Tier 3</li>':"";
+  const s=STATS.get(n),dd=s&&s.favN>=5?`<span class="${favDiff(n)<=-1?"neg":favDiff(n)>=1?"pos":""}">${sgn(favDiff(n))}</span> · `:"";
+  return hd+(p?`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span>${dd}Elo ${p.elo}</span></li>`:`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span class="gone">Not in ratings</span></li>`)}).join("")||"<li>No players yet.</li>";
+ const flagged=[...STATS.entries()].filter(([n,s])=>!BAN.has(n)&&s.favN>=10&&(s.favW-s.favE)/s.favN<=-0.2).sort((x,y)=>(x[1].favW-x[1].favE)/x[1].favN-(y[1].favW-y[1].favE)/y[1].favN).slice(0,10);
+ $("banList").innerHTML+=`<li class="tierhd">Flagged by data, not on your list</li>`+(flagged.map(([n,s])=>`<li><span class="bn">${esc(n)}</span><span><span class="neg">${sgn(s.favW-s.favE)}</span> · ${s.favW}–${s.favN-s.favW} as fav</span></li>`).join("")||`<li><span class="muted">None yet</span></li>`)+`<li class="muted" style="border-top:0;display:block">Numbers show wins above or below what Elo expected when the player was favorite, over the last 6 months. Small samples are noisy.</li>`;
 }
 function renderRecent(){
  const list=[...mine].sort(sortNew).slice(0,30);
@@ -417,6 +492,12 @@ $("forget").onclick=()=>{cfg.token="";save("tt-cfg",cfg);renderSetup();update();
 $("clear").onclick=()=>{sel.A=sel.B=null;$("inA").value="";$("inB").value="";update();$("inA").focus()};
 document.querySelectorAll(".x").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.x;sel[k]=null;$("in"+k).value="";update();$("in"+k).focus()}));
 
+
+// ---------- menu sheet ----------
+function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
+function closeMenu(){$("menu").hidden=true;document.documentElement.classList.remove("lock");$("menuBtn").focus()}
+$("menuBtn").onclick=openMenu;$("menuClose").onclick=closeMenu;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
