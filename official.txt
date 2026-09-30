@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-09-30T19:36Z
+# updated 2026-09-30T20:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8362,6 +8362,7 @@
 2026-09-30 | Nocun Zbigniew | Skupinski Arkadiusz | 3-2 | 2 | 2 | Pending
 2026-09-30 | Machelski Michal | Skorupa Jakub | 3-0 | 2 | 6 | Pending
 2026-09-30 | Zelezik Jacek | Michalik Jerzy | 3-2 | 2 | 6 | +5
+2026-09-30 | Staniczek Adam | Zielinski Marcin | 3-2 | 2 | 2 | +12
 2026-09-30 | Miastowski Maksymilian | Wloczko Krzysztof | 3-0 | 3 | 3 | +12
 2026-09-30 | Klocek Kamil | Mrugala Bartlomiej | 3-0 | 3 | 3 | +11
 2026-09-30 | Gumulinski Piotr | Oracz Lukasz | 3-0 | 3 | 2 | +10
@@ -8403,6 +8404,7 @@
 2026-09-30 | Pytlas Wojciech | Krupa Sebastian | 3-2 | 3 | 3 | Pending
 2026-09-30 | Strus Piotr | Kowalczyk Marcin | 3-2 | 3 | 3 | Pending
 2026-09-30 | Kaczynski Piotr | Ruszkiewicz Adam | 3-2 | 3 | 3 | Pending
+2026-09-30 | Zelezik Jacek | Janus Slawomir | 3-2 | 3 | 3 | +5
 2026-09-30 | Gumulinski Piotr | Nowak Jakub | 3-2 | 4 | 4 | +3
 2026-09-30 | Adamus Pawel | Cesarz Milosz | 3-1 | 4 | 2 | +3
 2026-09-30 | Fomin Andriej | Kwiatkowski Kacper | 3-1 | 4 | 4 | +11
@@ -8434,6 +8436,9 @@
 2026-09-30 | Solilo Dominik | Zochniak Jakub | 3-0 | 4 | 9 | Pending
 2026-09-30 | Lamperski Jakub | Kotwica Dawid | 3-0 | 4 | 4 | Pending
 2026-09-30 | Lewczuk Miroslaw | Machelski Michal | 3-1 | 4 | 4 | Pending
+2026-09-30 | Sulkowski Bartek | Rudomina Kamil | 3-1 | 4 | 6 | Pending
+2026-09-30 | Krupa Sebastian | Kaczynski Piotr | 3-0 | 4 | 4 | Pending
+2026-09-30 | Poloszczanski Dawid | Kowalczyk Marcin | 3-2 | 4 | 4 | Pending
 2026-09-30 | Lebek Marian | Guzik Michal | 3-2 | 5 | 3 | +6
 2026-09-30 | Adamus Pawel | Kaczmarek Jakub | 3-0 | 5 | 3 | +10
 2026-09-30 | Brunner Marian | Fomin Andriej | 3-0 | 5 | 5 | +24
@@ -8461,6 +8466,11 @@
 2026-09-30 | Zochniak Jakub | Stapor Rafal | 3-1 | 5 | 10 | +6
 2026-09-30 | Rudomina Kamil | Zochniak Jakub | 3-2 | 5 | 8 | Pending
 2026-09-30 | Michalik Jerzy | Janus Slawomir | 3-2 | 5 | 2 | +8
+2026-09-30 | Staszczyk Konrad | Zochniak Jakub | 3-1 | 5 | 10 | Pending
+2026-09-30 | Sulkowski Bartek | Blocho Przemyslaw | 3-2 | 5 | 6 | Pending
+2026-09-30 | Lamperski Jakub | Strus Piotr | 3-2 | 5 | 5 | Pending
+2026-09-30 | Poloszczanski Dawid | Kotwica Dawid | 3-0 | 5 | 5 | Pending
+2026-09-30 | Lewczuk Miroslaw | Skupinski Arkadiusz | 3-1 | 5 | 5 | Pending
 2026-09-30 | Madej Boguslaw | Gajda Rafal | 3-0 | 6 | 6 | +18
 2026-09-30 | Lebek Marian | Cesarz Milosz | 3-1 | 6 | 4 | +3
 2026-09-30 | Grela Artur | Miastowski Maksymilian | 3-1 | 6 | 6 | +10
