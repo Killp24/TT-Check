@@ -191,6 +191,10 @@ html.lock,html.lock body{overflow:hidden}
 .bsum td:first-child{white-space:normal;min-width:90px}.bsum td,.bsum th{padding-right:8px}.bsum td{font-size:.85rem}
 .stag.ev{background:var(--ok);color:#fff;border-color:var(--ok)}
 .smid small.muted{font-size:.8rem}
+.slip{margin-top:10px;border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;background:var(--card)}
+.sleg{list-style:none;margin:6px 0;padding:0}
+.sleg li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:3px 0;font-size:.9rem}
+.sleg li.won{color:var(--ok)}.sleg li.lost{color:var(--ban)}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
@@ -360,11 +364,12 @@ function computeStats(){
  const K=20,MIN=12;                       // K-factor, and matches a player needs before we trust their rating
  const ord=m=>(m.iw||m.il||99);
  const hist=[...official].sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:ord(x)-ord(y));
- const R=new Map(),seen=new Map(),PRE=[];
+ const R=new Map(),seen=new Map(),PRE=[],ALL=[];
  const get=(map,k,d)=>map.has(k)?map.get(k):d;
  for(const m of hist){
   const ra=get(R,m.w,1000),rb=get(R,m.l,1000);
   const e=1/(1+Math.pow(10,(rb-ra)/400));
+  ALL.push([m,e]);
   if(get(seen,m.w,0)>=MIN&&get(seen,m.l,0)>=MIN)PRE.push([m,e]);
   R.set(m.w,ra+K*(1-e));R.set(m.l,rb-K*(1-e));
   seen.set(m.w,get(seen,m.w,0)+1);seen.set(m.l,get(seen,m.l,0)+1);
@@ -380,12 +385,19 @@ function computeStats(){
    if(!prev||ord(m)>ord(prev))seenPair.set(k,m)}
   if(m.date<since)continue;
   for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
-   const s=st(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
-   d.n++;d.w+=won;d.e+=e;
-   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e]);if(!won)d.favL++}
+   const s=st(n);
+   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e])}
    else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
    const t=BAN.has(n)?tierOfName(n):0;
    if(t&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
+  }
+ }
+ // Day-by-day record uses every match, including ones with too little history to measure with
+ for(const [m,ew] of ALL){
+  if(m.date<since)continue;
+  for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
+   const s=st(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
+   d.n++;d.w+=won;d.e+=e;if(e>0.55&&!won)d.favL++;
   }
  }
  for(const s of STATS.values()){s.play=0;s.bad=0;
@@ -434,6 +446,7 @@ function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
+const yestOf=n=>{const s=STATS.get(n);if(!s)return null;const d=new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"Europe/Warsaw"});return s.days.get(d)||null};
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
 const sgn=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(1);
 function statLines(p){
@@ -442,7 +455,8 @@ function statLines(p){
  if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favB)} vs expected</small>`;
  if(s.dogN>=5)h+=`<small>As underdog: ${s.dogW}–${s.dogN-s.dogW}, ${sgn(s.dogW-s.dogB)} vs expected</small>`;
  if(s.play>=3)h+=`<small class="bd">Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
- const d=todayOf(p.name);
+ const d=todayOf(p.name),y=d?null:yestOf(p.name);
+ if(!d&&y)h+=`<small class="today">Yesterday: ${y.w}–${y.n-y.w}</small>`;
  if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}, rough start</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
  return h;
 }
@@ -584,8 +598,10 @@ function oddsCalc(a,b,pa){
   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
  out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
- out.insertAdjacentHTML("beforeend",`<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button></div><div class="msg" id="bfMsg" role="status"></div></div>`);
+ out.insertAdjacentHTML("beforeend",`<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button><button class="btn" id="bfAdd" type="button">Add to parlay</button></div><div class="msg" id="bfMsg" role="status"></div><div id="slipBox"></div></div>`);
  $("bfSave").onclick=()=>logBet(a,b,model);
+ $("bfAdd").onclick=()=>addLeg(a,b,model);
+ renderSlip();
 }
 
 async function logResult(){
@@ -782,6 +798,52 @@ setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
 // ---------- bet tracker (private, stored on this phone) ----------
 let BETS=load("tt-bets")||[];
 const saveBets=()=>save("tt-bets",BETS);
+
+// ---------- parlays ----------
+let SLIP=load("tt-slip")||[];
+const saveSlip=()=>save("tt-slip",SLIP);
+const decOf=o=>o<0?1+100/(-o):1+o/100;
+const amOf=d=>d>=2?Math.round((d-1)*100):-Math.round(100/(d-1));
+function legFrom(a,b,model){
+ const k=$("bfPick").value,o=readOdds(k);
+ if(o===null)return null;
+ const pick=k==="A"?a:b,opp=k==="A"?b:a,pe=EST?(k==="A"?EST.pe:1-EST.pe):model[k];
+ const r=CURMATCH&&!CURMATCH.fin&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;
+ return{pick:pick.name,opp:opp.name,odds:o,p:model[k],pe,date:r?r.date:warsawToday(),time:r?r.time:"",tour:r?r.tour:"",
+  pickBan:isBan(pick)?tierOf(pick):0,oppBan:isBan(opp)?tierOf(opp):0};
+}
+function addLeg(a,b,model){
+ const leg=legFrom(a,b,model);
+ if(!leg){setMsg("bfMsg","err","Enter the odds for that player first.");return}
+ if(SLIP.some(x=>[x.pick,x.opp].sort().join("|")===[leg.pick,leg.opp].sort().join("|")&&x.time===leg.time)){setMsg("bfMsg","err","That match is already in the parlay.");return}
+ SLIP.push(leg);saveSlip();renderSlip();setMsg("bfMsg","ok",`${leg.pick} added. ${SLIP.length} pick${SLIP.length>1?"s":""} in the parlay.`);
+}
+function renderSlip(){
+ const box=$("slipBox");if(!box)return;
+ if(!SLIP.length){box.innerHTML="";return}
+ const dec=SLIP.reduce((s,l)=>s*decOf(l.odds),1),p=SLIP.reduce((s,l)=>s*l.p,1);
+ const am=amOf(dec),ev=p*(dec-1)*100-(1-p)*100;
+ box.innerHTML=`<div class="slip"><b>Parlay: ${SLIP.length} pick${SLIP.length>1?"s":""}</b>
+  <ul class="sleg">${SLIP.map((l,i)=>`<li><span>${esc(l.pick)} <span class="muted">${l.odds>0?"+":""}${l.odds} · ${Math.round(l.p*100)}%</span></span><button type="button" class="mini" data-leg="${i}" aria-label="Remove ${esc(l.pick)}">✕</button></li>`).join("")}</ul>
+  <div class="bm">Combined ${am>0?"+":""}${am} · all win ${(p*100).toFixed(1)}% · <span class="${ev>=3?"pos":ev>0?"thin":"neg"}">EV ${money(ev)}</span> per $100</div>
+  <div class="row"><span class="dollar">$</span><input id="slStake" class="bfstake" inputmode="decimal" aria-label="Parlay stake" placeholder="Stake" value="${esc(String(load("tt-pstake")||""))}"><button class="btn primary" id="slSave" type="button">Log parlay</button><button class="btn" id="slClear" type="button">Clear</button></div>
+  <div class="msg" id="slMsg" role="status"></div></div>`;
+ box.querySelectorAll("[data-leg]").forEach(btn=>btn.onclick=()=>{SLIP.splice(+btn.dataset.leg,1);saveSlip();renderSlip()});
+ $("slClear").onclick=()=>{SLIP=[];saveSlip();renderSlip()};
+ $("slSave").onclick=()=>{
+  const stake=parseFloat(($("slStake").value||"").replace(/[^0-9.]/g,""));
+  if(!(stake>0)){setMsg("slMsg","err","Enter a stake first.");return}
+  if(SLIP.length<2){setMsg("slMsg","err","A parlay needs at least 2 picks.");return}
+  const bet={id:Date.now().toString(36),made:Date.now(),parlay:true,legs:SLIP.map(l=>({...l,status:"pending"})),
+   odds:am,stake,p,ev,cat:ev>=3?"value":ev>0?"thin":"none",
+   date:SLIP.map(l=>l.date).sort()[0],time:"",tour:"",
+   pick:SLIP.map(l=>sur(l.pick)).join(" + "),opp:`${SLIP.length}-pick parlay`,
+   pickBan:Math.max(...SLIP.map(l=>l.pickBan)),oppBan:Math.max(...SLIP.map(l=>l.oppBan)),pickFav:SLIP.every(l=>l.pe>0.5),status:"pending"};
+  BETS.push(bet);saveBets();save("tt-pstake",stake);SLIP=[];saveSlip();renderSlip();
+  setMsg("bfMsg","ok",`Parlay logged: $${stake} at ${am>0?"+":""}${am}. See 💵 Bets.`);settleBets();
+ };
+}
+
 function logBet(a,b,model){
  const k=$("bfPick").value,o=readOdds(k),stake=parseFloat(($("bfStake").value||"").replace(/[^0-9.]/g,""));
  if(!(stake>0)){setMsg("bfMsg","err","Enter a stake first.");return}
@@ -797,21 +859,36 @@ function logBet(a,b,model){
 function settleBets(){
  let changed=false;
  const pairKey=(x,y)=>[x,y].sort().join("|");
- const used=new Set(BETS.filter(b=>b.matchRaw).map(b=>b.matchRaw));
+ const used=new Set(BETS.flatMap(b=>b.parlay?b.legs.filter(l=>l.matchRaw).map(l=>l.matchRaw):(b.matchRaw?[b.matchRaw]:[])));
+ const dayBefore=d=>{const x=new Date(d+"T12:00:00");x.setDate(x.getDate()-1);return x.toISOString().slice(0,10)};
+ // Find the result for one pick. A pair can meet several times a day, so when the bet
+ // came from the schedule we take the right meeting; otherwise the first unused one.
+ const findResult=leg=>{
+  const key=pairKey(leg.pick,leg.opp),from=dayBefore(leg.date);
+  let nth=0;if(leg.time){nth=SCHED.filter(r=>r.date===leg.date&&pairKey(r.p1,r.p2)===key&&r.time<leg.time).length}
+  const ms=official.filter(m=>pairKey(m.w,m.l)===key&&m.date>=from&&!used.has(m.raw)).sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:(x.iw||x.il||50)-(y.iw||y.il||50));
+  const sameDay=ms.filter(m=>m.date===leg.date);
+  return leg.time?(sameDay[nth]||null):(ms[0]||null);
+ };
  for(const b of BETS){
   if(b.status!=="pending"||b.manual)continue;
-  const key=pairKey(b.pick,b.opp);
-  // which meeting of the day this is, from the schedule (for pairs that meet twice)
-  let nth=0;if(b.time){nth=SCHED.filter(r=>r.date===b.date&&pairKey(r.p1,r.p2)===key&&r.time<b.time).length}
-  const ms=official.filter(m=>pairKey(m.w,m.l)===key&&m.date>=b.date&&!used.has(m.raw)).sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:(x.iw||x.il||50)-(y.iw||y.il||50));
-  const sameDay=ms.filter(m=>m.date===b.date);
-  const m=b.time?(sameDay[nth]||null):(ms[0]||null);
-  if(!m)continue;
+  if(b.parlay){
+   for(const leg of b.legs){
+    if(leg.status!=="pending")continue;
+    const m=findResult(leg);if(!m)continue;
+    leg.status=m.w===leg.pick?"won":"lost";leg.score=m.score;leg.matchRaw=m.raw;used.add(m.raw);changed=true;
+   }
+   if(b.legs.some(l=>l.status==="lost")){b.status="lost";changed=true}
+   else if(b.legs.every(l=>l.status==="won")){b.status="won";changed=true}
+   continue;
+  }
+  const m=findResult(b);if(!m)continue;
   b.status=m.w===b.pick?"won":"lost";b.score=m.score;b.matchRaw=m.raw;used.add(m.raw);changed=true;
  }
  if(changed)saveBets();
  if(!$("bets").hidden)renderBets();
 }
+
 const betProfit=b=>b.status==="won"?b.stake*profit(b.odds)/100:b.status==="lost"?-b.stake:0;
 const money=x=>(x<0?"−":"+")+"$"+Math.abs(x).toFixed(2);
 function sumRow(label,bs){const st=bs.filter(b=>b.status==="won"||b.status==="lost");
@@ -819,11 +896,12 @@ function sumRow(label,bs){const st=bs.filter(b=>b.status==="won"||b.status==="lo
  return `<tr><td>${label}</td><td>${st.length}${bs.length>st.length?` <span class="muted">+${bs.length-st.length}</span>`:""}</td><td>${st.length?`${w}–${st.length-w}`:"–"}${st.length?`<br><span class="muted">est. ${exp.toFixed(1)} wins</span>`:""}</td><td class="${pr>0?"pos":pr<0?"neg":""}">${st.length?money(pr):"–"}${staked?`<br><span class="muted">${(pr/staked*100).toFixed(1)}% ROI</span>`:""}</td></tr>`}
 function renderBets(){
  const all=BETS;
- const groups=[["All bets",all],["Value (green)",all.filter(b=>b.cat==="value")],["Thin (orange)",all.filter(b=>b.cat==="thin")],["No value (red)",all.filter(b=>b.cat==="none")],
+ const groups=[["All bets",all],["Single bets",all.filter(b=>!b.parlay)],["Parlays",all.filter(b=>b.parlay)],["Value (green)",all.filter(b=>b.cat==="value")],["Thin (orange)",all.filter(b=>b.cat==="thin")],["No value (red)",all.filter(b=>b.cat==="none")],
   ["Vs ban list favorite",all.filter(b=>b.oppBan&&!b.pickFav)],["On ban list player",all.filter(b=>b.pickBan)],["No ban list player",all.filter(b=>!b.pickBan&&!b.oppBan)]];
  $("betSum").innerHTML=all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. "est. wins" is how many the app expected you to win; if you keep beating it, the estimate is finding real value. It takes 100+ bets before these numbers mean much.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use "Log a bet" under Odds and value.</p>`;
  const list=[...all].sort((x,y)=>(x.status==="pending")-(y.status==="pending")||y.made-x.made).sort((x,y)=>(y.status==="pending")-(x.status==="pending"));
- $("betList").innerHTML=list.map(b=>`<li class="bet ${b.status}"><div class="bt"><b>${esc(b.pick)}</b> <span class="muted">vs ${esc(b.opp)}</span></div>
+ $("betList").innerHTML=list.map(b=>`<li class="bet ${b.status}"><div class="bt">${b.parlay?`<b>${b.legs.length}-pick parlay</b>`:`<b>${esc(b.pick)}</b> <span class="muted">vs ${esc(b.opp)}</span>`}</div>
+  ${b.parlay?`<ul class="sleg">${b.legs.map(l=>`<li class="${l.status}"><span>${l.status==="won"?"✓":l.status==="lost"?"✕":"·"} ${esc(l.pick)} <span class="muted">vs ${esc(sur(l.opp))} ${l.odds>0?"+":""}${l.odds}${l.score?" · "+esc(l.score):""}</span></span></li>`).join("")}</ul>`:""}
   <div class="bm">${b.odds>0?"+":""}${b.odds} · $${b.stake} · est ${Math.round(b.p*100)}% · <span class="${b.cat==="value"?"pos":b.cat==="thin"?"thin":"neg"}">EV ${money(b.ev)}</span></div>
   <div class="bm muted">${esc(nice(b.date))}${b.time?` ${esc(b.time)} PL`:""}${b.tour?` · ${esc(b.tour)}`:""}</div>
   <div class="bs"><span class="bst">${b.status==="pending"?"Pending":b.status==="void"?"Void":`${b.status==="won"?"Won":"Lost"}${b.score?" "+esc(b.score):""} · ${money(betProfit(b))}`}${b.manual?" (set by you)":""}</span>
