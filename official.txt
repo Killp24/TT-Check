@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-09-30T12:43Z
+# updated 2026-09-30T13:37Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8368,6 +8368,7 @@
 2026-09-30 | Buczynski Witold | Rus Maksymilian | 3-2 | 3 | 3 | +5
 2026-09-30 | Czerwinski Bartosz | Stapor Rafal | 3-0 | 3 | 8 | Pending
 2026-09-30 | Minda Michal | Zwolinski Mariusz | 3-1 | 3 | 8 | Pending
+2026-09-30 | Zochniak Jakub | Kolek Maciej | 3-1 | 3 | 3 | Pending
 2026-09-30 | Gumulinski Piotr | Nowak Jakub | 3-2 | 4 | 4 | +3
 2026-09-30 | Adamus Pawel | Cesarz Milosz | 3-1 | 4 | 2 | +3
 2026-09-30 | Fomin Andriej | Kwiatkowski Kacper | 3-1 | 4 | 4 | +11
@@ -8390,6 +8391,8 @@
 2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 4 | 4 | Pending
 2026-09-30 | Buczynski Witold | Sikon Mateusz | 3-1 | 4 | 4 | +16
 2026-09-30 | Gajda Rafal | Rus Maksymilian | 3-2 | 4 | 4 | +5
+2026-09-30 | Kolodziej Krystian | Rutkowski Mateusz | 3-0 | 4 | 4 | +13
+2026-09-30 | Czerwinski Bartosz | Zwolinski Mariusz | 3-0 | 4 | 9 | Pending
 2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 5 | 5 | Pending
 2026-09-30 | Lebek Marian | Guzik Michal | 3-2 | 5 | 3 | +6
 2026-09-30 | Adamus Pawel | Kaczmarek Jakub | 3-0 | 5 | 3 | +10
@@ -8411,7 +8414,7 @@
 2026-09-30 | Sikon Mateusz | Madej Boguslaw | 3-2 | 5 | 5 | +5
 2026-09-30 | Buczynski Witold | Gajda Rafal | 3-1 | 5 | 5 | +12
 2026-09-30 | Rus Maksymilian | Schaniel Krzysztof | 3-2 | 5 | 5 | +11
-2026-09-30 | Madej Boguslaw | Gajda Rafal | 3-0 | 6 | 6 | Pending
+2026-09-30 | Madej Boguslaw | Gajda Rafal | 3-0 | 6 | 6 | +18
 2026-09-30 | Lebek Marian | Cesarz Milosz | 3-1 | 6 | 4 | +3
 2026-09-30 | Grela Artur | Miastowski Maksymilian | 3-1 | 6 | 6 | +10
 2026-09-30 | Brozek Piotr | Przewlocki Piotr | 3-1 | 6 | 6 | +8
@@ -8423,7 +8426,8 @@
 2026-09-30 | Kuzmicz Jakub | David Petr | 3-1 | 6 | 7 | +17
 2026-09-30 | Jarocki Lukasz | Kolodziej Krystian | 3-0 | 6 | 1 | +19
 2026-09-30 | Sikon Mateusz | Rus Maksymilian | 3-1 | 6 | 6 | +5
-2026-09-30 | Schaniel Krzysztof | Buczynski Witold | 3-0 | 6 | 6 | Pending
+2026-09-30 | Schaniel Krzysztof | Buczynski Witold | 3-0 | 6 | 6 | +19
+2026-09-30 | Sikon Mateusz | Gajda Rafal | 3-1 | 7 | 7 | +8
 2026-09-30 | Jadach Oskar | Kowalski Kamil | 3-1 | 7 | 7 | +3
 2026-09-30 | Lebek Marian | Adamus Pawel | 3-1 | 7 | 7 | +12
 2026-09-30 | Adamus Kacper | Przewlocki Piotr | 3-2 | 7 | 7 | +7
@@ -8433,11 +8437,19 @@
 2026-09-30 | Spychala Adrian | Poliniewicz Grzegorz | 3-2 | 7 | 6 | +8
 2026-09-30 | Zwolinski Mariusz | Stapor Rafal | 3-1 | 7 | 7 | Pending
 2026-09-30 | Szymanski Igor | Brozek Piotr | 3-1 | 7 | 7 | +20
-2026-09-30 | Jarocki Lukasz | Rutkowski Mateusz | 3-2 | 7 | 2 | Pending
+2026-09-30 | Jarocki Lukasz | Rutkowski Mateusz | 3-2 | 7 | 2 | +7
+2026-09-30 | Kuzmicz Jakub | Jadczyk Marcin | 3-2 | 7 | 8 | +10
+2026-09-30 | Poliniewicz Grzegorz | Jarocki Lukasz | 3-2 | 7 | 8 | +9
+2026-09-30 | Schaniel Krzysztof | Rus Maksymilian | 3-0 | 7 | 7 | +11
 2026-09-30 | David Petr | Grela Artur | 3-1 | 8 | 8 | +13
 2026-09-30 | Miastowski Maksymilian | Wiecek Adrian | 3-1 | 8 | 8 | +12
-2026-09-30 | Spychala Adrian | Kolodziej Krystian | 3-2 | 8 | 3 | Pending
-2026-09-30 | Olbrycht Michal | Rutkowski Mateusz | 3-1 | 8 | 3 | Pending
+2026-09-30 | Spychala Adrian | Kolodziej Krystian | 3-2 | 8 | 3 | +9
+2026-09-30 | Olbrycht Michal | Rutkowski Mateusz | 3-1 | 8 | 3 | +11
 2026-09-30 | Brozek Piotr | Adamus Kacper | 3-2 | 8 | 8 | +6
 2026-09-30 | Jadach Oskar | Szymanski Igor | 3-0 | 8 | 8 | +8
 2026-09-30 | Przewlocki Piotr | Kowalski Kamil | 3-1 | 8 | 8 | +4
+2026-09-30 | Przewlocki Piotr | Szymanski Igor | 3-2 | 9 | 9 | Pending
+2026-09-30 | Wiecek Adrian | David Petr | 3-2 | 9 | 9 | +9
+2026-09-30 | Jadczyk Marcin | Grela Artur | 3-1 | 9 | 9 | +14
+2026-09-30 | Olbrycht Michal | Poliniewicz Grzegorz | 3-0 | 9 | 8 | Pending
+2026-09-30 | Adamus Kacper | Kowalski Kamil | 3-0 | 9 | 9 | Pending
