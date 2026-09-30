@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-09-30T09:35Z
+# updated 2026-09-30T10:39Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8305,6 +8305,8 @@
 2026-09-30 | Skorupa Jakub | Brunner Marian | 3-2 | 1 | 2 | +6
 2026-09-30 | Madej Boguslaw | Rus Maksymilian | 3-2 | 1 | 1 | Pending
 2026-09-30 | Minda Michal | Stapor Rafal | 3-1 | 1 | 6 | Pending
+2026-09-30 | Kolek Maciej | Czerwinski Bartosz | 3-1 | 1 | 1 | Pending
+2026-09-30 | Zochniak Jakub | Zwolinski Mariusz | 3-1 | 1 | 6 | Pending
 2026-09-30 | Grela Artur | David Petr | 3-1 | 2 | 2 | +12
 2026-09-30 | Miastowski Maksymilian | Jadczyk Marcin | 3-0 | 2 | 2 | +16
 2026-09-30 | Wloczko Krzysztof | Wiecek Adrian | 3-0 | 2 | 2 | +19
@@ -8382,6 +8384,9 @@
 2026-09-30 | Kuzmicz Jakub | Jarocki Lukasz | 3-1 | 4 | 5 | +10
 2026-09-30 | Poliniewicz Grzegorz | Wisniewski Karol | 3-1 | 4 | 5 | +10
 2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 4 | 4 | Pending
+2026-09-30 | Buczynski Witold | Sikon Mateusz | 3-1 | 4 | 4 | Pending
+2026-09-30 | Gajda Rafal | Rus Maksymilian | 3-2 | 4 | 4 | Pending
+2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 5 | 5 | Pending
 2026-09-30 | Lebek Marian | Guzik Michal | 3-2 | 5 | 3 | +6
 2026-09-30 | Adamus Pawel | Kaczmarek Jakub | 3-0 | 5 | 3 | +10
 2026-09-30 | Brunner Marian | Fomin Andriej | 3-0 | 5 | 5 | +24
@@ -8398,8 +8403,13 @@
 2026-09-30 | Guzik Michal | Cesarz Milosz | 3-0 | 5 | 5 | +5
 2026-09-30 | Kaczmarek Jakub | Urban Wojciech | 3-1 | 5 | 5 | +13
 2026-09-30 | Wiecek Adrian | David Petr | 3-2 | 5 | 5 | +10
-2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 5 | 5 | Pending
 2026-09-30 | Lebek Marian | Cesarz Milosz | 3-1 | 6 | 4 | +3
 2026-09-30 | Grela Artur | Miastowski Maksymilian | 3-1 | 6 | 6 | Pending
 2026-09-30 | Brozek Piotr | Przewlocki Piotr | 3-1 | 6 | 6 | +8
+2026-09-30 | David Petr | Jadczyk Marcin | 3-1 | 6 | 6 | Pending
+2026-09-30 | Wiecek Adrian | Kuzmicz Jakub | 3-0 | 6 | 5 | Pending
+2026-09-30 | Olbrycht Michal | Spychala Adrian | 3-1 | 6 | 6 | Pending
+2026-09-30 | Adamus Kacper | Jadach Oskar | 3-2 | 6 | 6 | +8
+2026-09-30 | Szymanski Igor | Kowalski Kamil | 3-0 | 6 | 6 | +11
 2026-09-30 | Lebek Marian | Adamus Pawel | 3-1 | 7 | 7 | +12
+2026-09-30 | Adamus Kacper | Przewlocki Piotr | 3-2 | 7 | 7 | +7
