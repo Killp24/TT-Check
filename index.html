@@ -171,11 +171,29 @@ html.lock,html.lock body{overflow:hidden}
 .rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 .minfo{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;margin:0 0 10px}
 .mi1{font-size:1rem}.mi2{font-size:.85rem;color:var(--muted)}
+.tb{flex-wrap:wrap}
+.topbar .btn{padding:6px 10px}
+.betform{margin-top:12px;border-top:1px solid var(--border);padding-top:4px}
+.betform .row{display:flex;gap:6px;align-items:center;flex-wrap:nowrap}
+.betform select{flex:1;min-width:0}
+.dollar{color:var(--muted);font-weight:600}
+.bfstake{width:80px;flex:none;background:var(--bg);color:var(--ink);border:1px solid var(--border)}
+.bet{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--muted);border-radius:4px;padding:10px 12px;margin-bottom:8px}
+.bet.won{border-left-color:var(--ok)}.bet.lost{border-left-color:var(--ban)}.bet.pending{border-left-color:var(--ball)}
+.bt{font-size:.98rem}.bm{font-size:.85rem;margin-top:2px}
+.bs{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:6px;flex-wrap:wrap}
+.bst{font-weight:600;font-size:.92rem}
+.bb{display:flex;gap:4px}
+.mini{font:inherit;font-size:.8rem;padding:4px 8px;border-radius:3px;border:1px solid var(--border);background:var(--bg);color:var(--ink);cursor:pointer}
+.mini:focus-visible{outline:3px solid var(--ball)}
+.mini.del2{color:var(--ban)}
+.thin{color:var(--ball);font-weight:700}
+.bsum td:first-child{white-space:normal;min-width:90px}.bsum td,.bsum th{padding-right:8px}.bsum td{font-size:.85rem}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
 <p class="src" id="srcInfo">Loading data…</p>
-<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">📅 Today</button></div><button class="btn" id="clear" type="button">Clear both</button></div>
+<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">📅 Today</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><button class="btn" id="clear" type="button">Clear</button></div>
 <div id="matchInfo" class="minfo" hidden></div>
 <section class="court">
  <div class="sides">
@@ -196,6 +214,9 @@ html.lock,html.lock body{overflow:hidden}
 <div id="oddsBox"></div>
 <div id="h2h"></div>
 <div id="logBox" hidden></div>
+<div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><h2 id="betsTitle">My bets</h2><button class="btn" id="betsClose" type="button">Done</button></div>
+<div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul>
+<details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
 <div class="sheet" id="sched" role="dialog" aria-modal="true" aria-labelledby="schedTitle" hidden><div class="sheethd"><h2 id="schedTitle">Today's matches</h2><button class="btn" id="schedClose" type="button">Done</button></div>
 <div class="tools"><div class="schedopts"><label><input type="checkbox" id="onlyFlag"> Flagged only</label><label><input type="checkbox" id="showDone"> Show finished</label></div><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div></div>
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><h2 id="menuTitle">Menu</h2><button class="btn" id="menuClose" type="button">Done</button></div>
@@ -240,7 +261,7 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={};
+let CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={};
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
@@ -269,6 +290,7 @@ function apply(){
  mine=parseMatches(data.matches+"\n"+pending.join("\n"),"me");
  const offKey=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l+"|"+m.score)),offKey2=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l));
  computeStats();try{reportCard()}catch(e){console.warn(e)}
+ try{settleBets()}catch(e){console.warn(e)}
  matches=official.concat(mine.filter(m=>!(offKey.has(m.date+"|"+m.w+"|"+m.l+"|"+m.score)||(!m.score&&offKey2.has(m.date+"|"+m.w+"|"+m.l)))));
  const when=new Date(data.at);
  const asOf=(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
@@ -498,11 +520,15 @@ function oddsCalc(a,b,pa){
   const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
   const cls=ev>=3?"pos":ev>0?"thin":"neg";
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${cls}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
+ const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
  const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
  out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
+ const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
+ out.insertAdjacentHTML("beforeend",`<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button></div><div class="msg" id="bfMsg" role="status"></div></div>`);
+ $("bfSave").onclick=()=>logBet(a,b,model);
 }
 
 async function logResult(){
@@ -660,12 +686,13 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("sched").hidden)
 // ---------- scheduled time for the selected pair ----------
 function renderMatchInfo(){
  const box=$("matchInfo"),a=sel.A,b=sel.B;
- if(!a||!b||a===b){box.hidden=true;return}
+ if(!a||!b||a===b){box.hidden=true;CURMATCH=null;return}
  const pair=[a.name,b.name].sort().join("|"),now=Date.now();
  const same=r=>[r.p1,r.p2].sort().join("|")===pair;
  let r=PICKED&&same(PICKED)?PICKED:null;
  const next=SCHED.filter(x=>same(x)&&!x.res&&!x.fin&&x.at.getTime()>now-20*60000).sort((x,y)=>x.at-y.at);
  if(!r)r=next[0]||null;
+ CURMATCH=r;
  if(!r){box.hidden=true;return}
  const mins=Math.round((r.at-now)/60000);
  const day=r.at.toDateString()===new Date().toDateString()?"Today":r.at.toDateString()===new Date(now+864e5).toDateString()?"Tomorrow":r.at.toLocaleDateString([],{weekday:"short",day:"numeric",month:"short"});
@@ -675,6 +702,66 @@ function renderMatchInfo(){
  box.hidden=false;
 }
 setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
+
+
+// ---------- bet tracker (private, stored on this phone) ----------
+let BETS=load("tt-bets")||[];
+const saveBets=()=>save("tt-bets",BETS);
+function logBet(a,b,model){
+ const k=$("bfPick").value,o=readOdds(k),stake=parseFloat(($("bfStake").value||"").replace(/[^0-9.]/g,""));
+ if(!(stake>0)){setMsg("bfMsg","err","Enter a stake first.");return}
+ if(o===null){setMsg("bfMsg","err","Enter the odds for that player first.");return}
+ const pick=k==="A"?a:b,opp=k==="A"?b:a,p=model[k],pe=EST?(k==="A"?EST.pe:1-EST.pe):p,ev=p*profit(o)-(1-p)*100;
+ const r=CURMATCH&&!CURMATCH.fin&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;
+ const bet={id:Date.now().toString(36),made:Date.now(),date:r?r.date:warsawToday(),time:r?r.time:"",tour:r?r.tour:"",pick:pick.name,opp:opp.name,odds:o,stake,p,pe,ev,
+  cat:ev>=3?"value":ev>0?"thin":"none",pickBan:isBan(pick)?tierOf(pick):0,oppBan:isBan(opp)?tierOf(opp):0,pickFav:pe>0.5,status:"pending"};
+ BETS.push(bet);saveBets();save("tt-stake",stake);
+ setMsg("bfMsg","ok",`Logged: $${stake} on ${pick.name} at ${o>0?"+":""}${o}${r?` (${r.time} Polish time)`:""}. See 💵 Bets.`);
+ settleBets();
+}
+function settleBets(){
+ let changed=false;
+ const pairKey=(x,y)=>[x,y].sort().join("|");
+ const used=new Set(BETS.filter(b=>b.matchRaw).map(b=>b.matchRaw));
+ for(const b of BETS){
+  if(b.status!=="pending"||b.manual)continue;
+  const key=pairKey(b.pick,b.opp);
+  // which meeting of the day this is, from the schedule (for pairs that meet twice)
+  let nth=0;if(b.time){nth=SCHED.filter(r=>r.date===b.date&&pairKey(r.p1,r.p2)===key&&r.time<b.time).length}
+  const ms=official.filter(m=>pairKey(m.w,m.l)===key&&m.date>=b.date&&!used.has(m.raw)).sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:(x.iw||x.il||50)-(y.iw||y.il||50));
+  const sameDay=ms.filter(m=>m.date===b.date);
+  const m=b.time?(sameDay[nth]||null):(ms[0]||null);
+  if(!m)continue;
+  b.status=m.w===b.pick?"won":"lost";b.score=m.score;b.matchRaw=m.raw;used.add(m.raw);changed=true;
+ }
+ if(changed)saveBets();
+ if(!$("bets").hidden)renderBets();
+}
+const betProfit=b=>b.status==="won"?b.stake*profit(b.odds)/100:b.status==="lost"?-b.stake:0;
+const money=x=>(x<0?"−":"+")+"$"+Math.abs(x).toFixed(2);
+function sumRow(label,bs){const st=bs.filter(b=>b.status==="won"||b.status==="lost");
+ const staked=st.reduce((s,b)=>s+b.stake,0),pr=st.reduce((s,b)=>s+betProfit(b),0),w=st.filter(b=>b.status==="won").length,exp=st.reduce((s,b)=>s+b.p,0);
+ return `<tr><td>${label}</td><td>${st.length}${bs.length>st.length?` <span class="muted">+${bs.length-st.length}</span>`:""}</td><td>${st.length?`${w}–${st.length-w}`:"–"}${st.length?`<br><span class="muted">est. ${exp.toFixed(1)} wins</span>`:""}</td><td class="${pr>0?"pos":pr<0?"neg":""}">${st.length?money(pr):"–"}${staked?`<br><span class="muted">${(pr/staked*100).toFixed(1)}% ROI</span>`:""}</td></tr>`}
+function renderBets(){
+ const all=BETS;
+ const groups=[["All bets",all],["Value (green)",all.filter(b=>b.cat==="value")],["Thin (orange)",all.filter(b=>b.cat==="thin")],["No value (red)",all.filter(b=>b.cat==="none")],
+  ["Vs ban list favorite",all.filter(b=>b.oppBan&&!b.pickFav)],["On ban list player",all.filter(b=>b.pickBan)],["No ban list player",all.filter(b=>!b.pickBan&&!b.oppBan)]];
+ $("betSum").innerHTML=all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. "est. wins" is how many the app expected you to win; if you keep beating it, the estimate is finding real value. It takes 100+ bets before these numbers mean much.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use "Log a bet" under Odds and value.</p>`;
+ const list=[...all].sort((x,y)=>(x.status==="pending")-(y.status==="pending")||y.made-x.made).sort((x,y)=>(y.status==="pending")-(x.status==="pending"));
+ $("betList").innerHTML=list.map(b=>`<li class="bet ${b.status}"><div class="bt"><b>${esc(b.pick)}</b> <span class="muted">vs ${esc(b.opp)}</span></div>
+  <div class="bm">${b.odds>0?"+":""}${b.odds} · $${b.stake} · est ${Math.round(b.p*100)}% · <span class="${b.cat==="value"?"pos":b.cat==="thin"?"thin":"neg"}">EV ${money(b.ev)}</span></div>
+  <div class="bm muted">${esc(nice(b.date))}${b.time?` ${esc(b.time)} PL`:""}${b.tour?` · ${esc(b.tour)}`:""}</div>
+  <div class="bs"><span class="bst">${b.status==="pending"?"Pending":b.status==="void"?"Void":`${b.status==="won"?"Won":"Lost"}${b.score?" "+esc(b.score):""} · ${money(betProfit(b))}`}${b.manual?" (set by you)":""}</span>
+  <span class="bb"><button type="button" class="mini" data-act="won" data-id="${b.id}">Won</button><button type="button" class="mini" data-act="lost" data-id="${b.id}">Lost</button><button type="button" class="mini" data-act="void" data-id="${b.id}">Void</button><button type="button" class="mini del2" data-act="del" data-id="${b.id}" aria-label="Delete bet">✕</button></span></div></li>`).join("");
+}
+$("betList").addEventListener("click",e=>{const t=e.target.closest(".mini");if(!t)return;const b=BETS.find(x=>x.id===t.dataset.id);if(!b)return;
+ if(t.dataset.act==="del"){if(!confirm(`Delete this bet on ${b.pick}?`))return;BETS=BETS.filter(x=>x!==b)}
+ else{b.status=t.dataset.act;b.manual=true;if(b.status!=="won"&&b.status!=="lost")b.score=""}
+ saveBets();renderBets()});
+$("betCopy").onclick=async()=>{const txt=JSON.stringify(BETS);try{await navigator.clipboard.writeText(txt);setMsg("betMsg","ok",`Copied ${BETS.length} bets. Paste them somewhere safe, like Notes.`)}catch(e){$("betRestoreTxt").value=txt;setMsg("betMsg","ok","Couldn't copy automatically, so the backup is in the box above. Select all and copy it.")}};
+$("betRestore").onclick=()=>{try{const arr=JSON.parse($("betRestoreTxt").value);if(!Array.isArray(arr))throw 0;const ids=new Set(BETS.map(b=>b.id));let n=0;for(const b of arr)if(b&&b.id&&!ids.has(b.id)){BETS.push(b);n++}saveBets();renderBets();setMsg("betMsg","ok",`Restored ${n} bet${n===1?"":"s"}.`);$("betRestoreTxt").value=""}catch(e){setMsg("betMsg","err","That doesn't look like a backup. Paste the whole text you copied.")}};
+$("betsBtn").onclick=()=>{settleBets();renderBets();openSheet("bets")};$("betsClose").onclick=()=>{closeSheet("bets");$("betsBtn").focus()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");$("betsBtn").focus()}});
 
 // ---------- menu sheet ----------
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
