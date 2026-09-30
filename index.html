@@ -610,8 +610,7 @@ const byNameP=n=>players.find(p=>p.name===n);
 function renderSched(){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked;
  // the site doesn't fill in results on schedule posts, so look them up in the collected matches
- const offIdx=new Map();for(const m of official){const k=m.date+"|"+[m.w,m.l].sort().join("|");if(!offIdx.has(k))offIdx.set(k,[]);offIdx.get(k).push(m)}
- for(const r of SCHED){if(r.res)continue;const ms=offIdx.get(r.date+"|"+[r.p1,r.p2].sort().join("|"));if(ms&&ms.length)r.fin=ms[0]}
+ linkResults();
  const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin&&r.at.getTime()>now-20*60000)).filter(r=>r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
  let shown=0;
  const html=rows.map((r,i)=>{
@@ -683,9 +682,23 @@ $("schedBtn").onclick=()=>openSheet("sched");$("schedClose").onclick=()=>{closeS
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("sched").hidden){closeSheet("sched");$("schedBtn").focus()}});
 
 
+
+// Match scheduled games to collected results in order: the same two players often meet
+// in both the morning and afternoon session, so the 1st result goes with the 1st scheduled game, etc.
+function linkResults(){
+ const key=(d,x,y)=>d+"|"+[x,y].sort().join("|");
+ const res=new Map();
+ for(const m of official){const k=key(m.date,m.w,m.l);if(!res.has(k))res.set(k,[]);res.get(k).push(m)}
+ for(const v of res.values())v.sort((x,y)=>(x.iw||x.il||50)-(y.iw||y.il||50)||x.order-y.order);
+ const games=new Map();
+ for(const r of SCHED){r.fin=null;const k=key(r.date,r.p1,r.p2);if(!games.has(k))games.set(k,[]);games.get(k).push(r)}
+ for(const [k,rs] of games){rs.sort((x,y)=>x.at-y.at);const ms=res.get(k)||[];rs.forEach((r,i)=>{if(!r.res&&ms[i])r.fin=ms[i]})}
+}
+
 // ---------- scheduled time for the selected pair ----------
 function renderMatchInfo(){
  const box=$("matchInfo"),a=sel.A,b=sel.B;
+ linkResults();
  if(!a||!b||a===b){box.hidden=true;CURMATCH=null;return}
  const pair=[a.name,b.name].sort().join("|"),now=Date.now();
  const same=r=>[r.p1,r.p2].sort().join("|")===pair;
