@@ -358,8 +358,8 @@ function computeStats(){
  STATS=new Map();let bad=0,days=0;
  const tacc={};   // tier|role -> [n, wins, sum of expected]
  const racc={};   // first-match margin -> [n, times the earlier winner won again, sum expected]
- const seen=new Map(),cal=[];
- const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,dogN:0,dogW:0,dogE:0,days:new Map()});return STATS.get(n)};
+ const seen=new Map(),cal=[],sides=[];
+ const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);   // last 6 months only
  for(const m of official){
   if(m.date<since)continue;
@@ -374,8 +374,8 @@ function computeStats(){
   for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
    const s=get(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
    d.n++;d.w+=won;d.e+=e;
-   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;if(!won)d.favL++}
-   else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e}
+   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e]);if(!won)d.favL++}
+   else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
    const t=BAN.has(n)?tierOfName(n):0;
    if(t&&m.eloW!==null&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
   }
@@ -388,6 +388,7 @@ function computeStats(){
  // Favorites win a bit less often than the official Elo says, so measure effects
  // against what players at that level actually do, not the raw rating.
  CAL=[];for(let i=0;i<20;i++){const lo=i*0.05,xs=cal.filter(([p])=>p>=lo-0.06&&p<lo+0.11);CAL.push(xs.length>=50?xs.reduce((s,x)=>s+x[1],0)/xs.length:null)}
+ for(const [s,k,e] of sides)s[k]+=baseline(e);   // what players at that level actually win
  const lgr=p=>Math.log(p/(1-p)),clr=p=>Math.min(.97,Math.max(.03,p));
  RADJ={};for(const [sc,[n,w,e]] of Object.entries(racc)){const bb=clr(baseline(e/n));RADJ[sc]={n,won:w,exp:e,shift:(lgr(clr(w/n))-lgr(bb))*n/(n+150)}}
  TADJ={};const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
@@ -422,17 +423,18 @@ function estimate(a,b){
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
- return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favE}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogE}}
+ return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favB}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogB}}
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
-const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favE:0};
+const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
 const sgn=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(1);
 function statLines(p){
  const s=STATS.get(p.name);if(!s)return"";
  let h="";
- if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favE)} vs expected</small>`;
- if(s.play>=3)h+=`<small>Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
+ if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favB)} vs expected</small>`;
+ if(s.dogN>=5)h+=`<small>As underdog: ${s.dogW}–${s.dogN-s.dogW}, ${sgn(s.dogW-s.dogB)} vs expected</small>`;
+ if(s.play>=3)h+=`<small class="bd">Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
  const d=todayOf(p.name);
  if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}, rough start</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
  return h;
@@ -515,9 +517,9 @@ function update(){
  }
  for(const p of [fav,dog]){if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
-  if(s&&s.favN>=10){const pm=(s.favW-s.favE)/s.favN;
-   if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
-   else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favE)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
+  if(s&&s.favN>=10){const pm=(s.favW-s.favB)/s.favN;
+   if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favB).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
+   else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favB)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
  v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
