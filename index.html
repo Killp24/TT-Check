@@ -109,6 +109,20 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .field input{padding-right:34px}
 .x{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:none;color:#5b6b78;font-size:15px;cursor:pointer;border-radius:4px}
 .x:focus-visible{outline:3px solid var(--ball)}
+.orow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.olbl{display:block;font-size:.85rem;color:var(--muted);margin-bottom:3px}
+.orow{display:flex;gap:6px}
+.sign{flex:none;width:42px;font:inherit;font-size:1.2rem;font-weight:700;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink);cursor:pointer}
+.sign:focus-visible,.oval:focus{outline:3px solid var(--ball);outline-offset:1px}
+.oval{background:var(--bg);color:var(--ink);border:1px solid var(--border);min-width:0}
+.otab{overflow-x:auto;margin-top:10px}
+.otab table{width:100%;border-collapse:collapse;font-size:.88rem}
+.otab th{text-align:left;color:var(--muted);font-weight:600;padding:4px 6px 4px 0;white-space:nowrap}
+.otab td{padding:6px 6px 6px 0;vertical-align:top;border-top:1px solid var(--border);white-space:nowrap}
+.pos{color:var(--ok);font-weight:700}.neg{color:var(--ban);font-weight:700}.thin{color:var(--ball);font-weight:700}
+.vv{margin-top:10px;padding:10px 12px;border-radius:4px;border-left:6px solid var(--muted);background:var(--bg)}
+.vv strong{display:block}
+.vv.pos{border-left-color:var(--ok);color:var(--ink);font-weight:400}.vv.neg{border-left-color:var(--ban);color:var(--ink);font-weight:400}.vv.thin{border-left-color:var(--ball);color:var(--ink);font-weight:400}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
@@ -122,6 +136,7 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
  <div id="odds" hidden><div class="bar"><div class="a" id="barA"></div><div class="b" id="barB"></div></div><div class="pct"><span id="pA"></span><span id="pB"></span></div></div>
 </section>
 <div id="verdict"></div>
+<div id="oddsBox"></div>
 <div id="h2h"></div>
 <div id="logBox" hidden></div>
 <div class="tools">
@@ -279,9 +294,9 @@ function update(){
  const a=sel.A,b=sel.B;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h"),lb=$("logBox");
- if(!a||!b||a===b){odds.hidden=true;lb.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;lb.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
  const pa=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ renderOdds(a,b,pa);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  const gap=Math.abs(a.elo-b.elo),fav=a.elo>=b.elo?a:b,dog=fav===a?b:a,fb=isBan(fav),db=isBan(dog);
  const meet=matches.filter(m=>(m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name)).sort(sortFor(a.name));
@@ -301,6 +316,43 @@ function update(){
  lb.innerHTML=`<div class="panel"><h2>Log a result</h2>`+(cfg.token?`<div class="row"><select id="lgWin"><option value="A">${esc(sur(a.name))} won</option><option value="B">${esc(sur(b.name))} won</option></select><select id="lgScore"><option value="">Score</option><option>3-0</option><option>3-1</option><option>3-2</option><option>2-0</option><option>2-1</option></select><input type="date" id="lgDate" value="${today()}"></div><div class="btns"><button class="btn primary" id="lgSave" type="button">Save result</button></div><div class="msg" id="lgMsg" role="status"></div>`:`<p class="help" style="margin:0">Add an access token in Sharing setup to log results.</p>`)+`</div>`;
  if(cfg.token)$("lgSave").onclick=logResult;
 }
+
+// ---------- odds & value (American odds) ----------
+const odds={A:{v:"",neg:true},B:{v:"",neg:false}};
+let oddsPair="";
+const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
+const profit=o=>o<0?100*100/(-o):o;                 // profit on a $100 stake
+const fairAm=p=>p>=.5?"−"+Math.round(100*p/(1-p)):"+"+Math.round(100*(1-p)/p);
+const readOdds=k=>{const n=parseFloat(odds[k].v);return n>=100?(odds[k].neg?-n:n):null};
+function renderOdds(a,b,pa){
+ const box=$("oddsBox");
+ if(!a||!b||a===b){box.innerHTML="";oddsPair="";return}
+ const pair=a.name+"|"+b.name;
+ if(pair!==oddsPair){oddsPair=pair;odds.A={v:"",neg:true};odds.B={v:"",neg:false}}
+ const inp=k=>`<div class="oin"><span class="olbl">${esc(sur((k==="A"?a:b).name))}</span><div class="orow"><button type="button" class="sign" data-s="${k}" aria-label="Switch plus or minus">${odds[k].neg?"−":"+"}</button><input class="oval" data-o="${k}" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 150" value="${esc(odds[k].v)}" aria-label="Odds for ${esc((k==="A"?a:b).name)}"></div></div>`;
+ box.innerHTML=`<div class="panel"><h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter the bookmaker's American odds. Tap −/+ to switch the sign.</p><div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
+ box.querySelectorAll(".oval").forEach(i=>i.addEventListener("input",()=>{odds[i.dataset.o].v=i.value.replace(/[^0-9.]/g,"");oddsCalc(a,b,pa)}));
+ box.querySelectorAll(".sign").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.s;odds[k].neg=!odds[k].neg;btn.textContent=odds[k].neg?"−":"+";oddsCalc(a,b,pa)}));
+ oddsCalc(a,b,pa);
+}
+function oddsCalc(a,b,pa){
+ const out=$("oddsOut");if(!out)return;
+ const oa=readOdds("A"),ob=readOdds("B");
+ const model={A:pa,B:1-pa};
+ if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from Elo: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;return}
+ const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
+ const margin=ia!==null&&ib!==null?ia+ib-1:null;
+ const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
+  const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
+  const cls=ev>=3?"pos":ev>0?"thin":"neg";
+  return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${cls}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
+ const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
+ const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the Elo estimate is right.</div>`
+  :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
+  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the Elo estimate supports.</div>`;
+ out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Elo</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`<p class="help" style="margin:8px 0 0">Estimate uses Elo only for now. Form, head-to-head and ban list aren't factored in yet, so weigh them yourself.</p>`;
+}
+
 async function logResult(){
  const a=sel.A,b=sel.B;if(!a||!b)return;
  const winA=$("lgWin").value==="A",w=winA?a:b,l=winA?b:a;
