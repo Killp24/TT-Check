@@ -24,10 +24,10 @@ Braun Josef | 1639 | 1521
 Brozek Piotr | 105 | 80
 Brud Szymon | 695 | 727
 Brunner Marian | 557 | 661
-Buczynski Witold | 1027 | 1784
+Buczynski Witold | 1028 | 1784
 Burkacki Adrian | 138 | 230
 Burkacki Mateusz | 1959 | 1475
-Cesarz Milosz | 217 | 541
+Cesarz Milosz | 217 | 542
 Chlodnicki Piotr | 876 | 1463
 Chmielowski Jakub | 452 | 440
 Chodorski Piotr | 1643 | 1107
@@ -82,7 +82,7 @@ Gronowski Wojciech | 499 | 653
 Gudzik Krystian | 66 | 62
 Guminski Krzysztof | 516 | 573
 Gumulinski Piotr | 2076 | 1734
-Guzik Michal | 180 | 63
+Guzik Michal | 181 | 63
 Hetnar Krzysztof | 940 | 602
 Horejsi Miroslav | 28 | 22
 Idaczyk Dominik | 44 | 74
@@ -90,11 +90,11 @@ Idaczyk Rafal | 917 | 1122
 Iwasyszyn Wojciech | 1628 | 1462
 Jablonski Filip | 172 | 330
 Jablonski Karol | 124 | 156
-Jadach Oskar | 1948 | 1209
+Jadach Oskar | 1948 | 1210
 Jadam Dawid | 164 | 166
 Jadczyk Marcin | 3965 | 2693
 Janus Slawomir | 351 | 337
-Jarocki Lukasz | 3530 | 3156
+Jarocki Lukasz | 3530 | 3157
 Jedrzejak Patryk | 929 | 403
 Jedrzejowski Oskar | 132 | 107
 Jendrysik Dawid | 273 | 402
@@ -105,7 +105,7 @@ Jozefiak Michal | 8 | 12
 Jurowicz Grzegorz | 392 | 628
 Juszczyk Krzysztof | 1306 | 1225
 Juzek Sebastian | 377 | 571
-Kaczmarek Jakub | 1030 | 1837
+Kaczmarek Jakub | 1031 | 1837
 Kaczmarek Krzysztof | 289 | 261
 Kaczynski Piotr | 219 | 192
 Kalinowski Mateusz | 113 | 153
@@ -152,7 +152,7 @@ Kulpa Konrad | 603 | 202
 Kumor Michal | 544 | 916
 Kurek Pawel | 467 | 460
 Kurowski Kamil | 56 | 115
-Kuzmicz Jakub | 743 | 581
+Kuzmicz Jakub | 744 | 581
 Kwapis Jakub | 467 | 571
 Kwiatkowski Kacper | 145 | 182
 Kwodawski Bartosz | 573 | 765
@@ -217,7 +217,7 @@ Nosiadek Jakub | 34 | 61
 Nowak Jakub | 1307 | 2060
 Nowalinski Maciej | 1911 | 1777
 Ogon Rafal | 223 | 565
-Olbrycht Michal | 754 | 942
+Olbrycht Michal | 754 | 943
 Olejnik Martin | 1359 | 974
 Olejnik Mikolaj | 151 | 183
 Oracz Jacek | 775 | 342
@@ -258,7 +258,7 @@ Radlo Szymon | 3129 | 2925
 Rolak Jaroslaw | 2398 | 2504
 Rozum Dawid | 25 | 105
 Rudomina Kamil | 3000 | 3023
-Rus Maksymilian | 134 | 298
+Rus Maksymilian | 134 | 299
 Rusnak Ales | 139 | 153
 Ruszkiewicz Adam | 381 | 692
 Rutkowski Mateusz | 2175 | 2308
@@ -294,10 +294,10 @@ Sokolowski Oskar | 140 | 274
 Solilo Dominik | 277 | 288
 Spanik Tibor | 263 | 212
 Sporek Szymon | 1217 | 1155
-Spychala Adrian | 2194 | 3231
+Spychala Adrian | 2195 | 3231
 Staniczek Adam | 513 | 1081
 Staniszewski Piotr | 897 | 1176
-Stapor Rafal | 708 | 546
+Stapor Rafal | 708 | 547
 Staszczyk Konrad | 1337 | 1173
 Stechly Witold | 105 | 509
 Stecyszyn Jakub | 243 | 337
@@ -307,7 +307,7 @@ Strowski Karol | 1582 | 1035
 Strus Piotr | 1109 | 1665
 Suchecki Waclaw | 319 | 510
 Sulkowski Bartek | 617 | 749
-Sulkowski Karol | 652 | 659
+Sulkowski Karol | 653 | 659
 Szafranek Piotr | 377 | 345
 Szczepanek Blazej | 846 | 1067
 Szczepanski Mateusz | 329 | 368
@@ -318,7 +318,7 @@ Szurgot Andrzej | 26 | 103
 Szurlej Kacper | 223 | 197
 Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
-Szymanski Igor | 114 | 360
+Szymanski Igor | 115 | 360
 Szymik Robert | 1171 | 751
 Tkaczyk Henryk | 1109 | 567
 Tkocz Marek | 937 | 525
@@ -328,7 +328,7 @@ Trela Mateusz | 1475 | 1594
 Twardowski Szymon | 384 | 222
 Twarog Mariusz | 11 | 54
 Ufnal Mateusz | 235 | 416
-Urban Wojciech | 827 | 919
+Urban Wojciech | 827 | 920
 Urbanek Jan | 31 | 15
 Utylski Rafal | 260 | 369
 Vincenec Oliver | 735 | 949
@@ -367,4 +367,4 @@ Zelezik Jacek | 412 | 343
 Zemla Piotr | 94 | 41
 Zmijewski Artur | 101 | 69
 Zochniak Jakub | 4178 | 3623
-Zwolinski Mariusz | 285 | 471
+Zwolinski Mariusz | 285 | 472
