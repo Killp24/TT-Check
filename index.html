@@ -396,14 +396,16 @@ function computeStats(){
 const toElo=x=>Math.round(x*400/Math.LN10);
 function estimate(a,b){
  const pe=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- let adj=0;const why=[],skipped=[];
+ let adj=0;const why=[],skipped=[],banWhy=[];
  for(const [p,sign] of [[a,1],[b,-1]]){
   if(!isBan(p))continue;
-  const pf=sign>0?pe:1-pe;if(pf<=0.5)continue;          // only when he's the favorite
-  const role="fav",t=tierOf(p),x=TADJ[t+"|"+role],wt=Math.min(1,(pf-0.5)/0.1);   // near 50–50, phase it in
-  if(!x||x.shift>=0||Math.abs(x.shift*wt)<0.02)continue;
+  const pf=sign>0?pe:1-pe,t=tierOf(p);
+  if(pf<=0.5){banWhy.push({p,t,no:"dog",pf});continue}          // only counts when he's the favorite
+  const role="fav",x=TADJ[t+"|"+role],wt=Math.min(1,(pf-0.5)/0.1);   // near 50–50, phase it in
+  if(!x||x.shift>=0||Math.abs(x.shift*wt)<0.02){banWhy.push({p,t,no:"weak",pf,x});continue}
   const o=ownRecord(p.name,role);
-  if(o&&o.n>=10&&Math.sign(o.diff)!==Math.sign(x.shift)){skipped.push({p,role,o});continue}
+  if(o&&o.n>=10&&Math.sign(o.diff)!==Math.sign(x.shift)){skipped.push({p,role,o});banWhy.push({p,t,no:"own",o,pf});continue}
+  banWhy.push({p,t,no:"",pf,elo:toElo(x.shift*wt),wt,x,o});
   adj+=sign*x.shift*wt;
   why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so −${Math.abs(toElo(x.shift*wt))} Elo${wt<1?" (reduced because the match is close to 50–50)":""}`);
  }
@@ -416,7 +418,7 @@ function estimate(a,b){
  }
  adj=Math.max(-1,Math.min(1,adj));
  const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
- return{pe,pa,why,skipped,prev};
+ return{pe,pa,why,skipped,prev,banWhy};
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
@@ -503,7 +505,15 @@ function update(){
  if(est.prev){const p=est.prev,rx=RADJ[p.score],wonEarlier=p.w===fav.name;
   notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The official Elo moved ${esc(sur(p.w))} up and ${esc(sur(p.l))} down right after, and the ratings above already include that change — but the data says the move isn't big enough.${rx&&rx.n>=40?` After a same-day ${esc(p.score)} win, the winner takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time (${rx.won} of ${rx.n}).`:""} ${wonEarlier?`That favors ${esc(sur(fav.name))}.`:`That works against ${esc(sur(fav.name))}, who is still favored despite losing to ${esc(sur(dog.name))} earlier.`}`);
   if(!wonEarlier){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}}
- for(const p of [fav,dog]){if(badToday(p.name)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
+ for(const k of est.banWhy){
+  const d=todayOf(k.p.name),today=d?` Today he's ${d.w}–${d.n-d.w}${d.favL?` with ${d.favL} loss${d.favL>1?"es":""} as favorite`:""}.`:" He hasn't played yet today.";
+  const who=`${esc(k.p.name)} (ban #${banRank(k.p)}, Tier ${k.t})`;
+  if(k.no==="dog")notes.push(`${who}: no points deducted.${today} He's the underdog here, and the ban list only predicts upsets when the flagged player is favored — as an underdog his results match the ratings, so today's form doesn't change that.`);
+  else if(k.no==="own"){const o=k.o;notes.push(`${who}: no points deducted.${today} Over the last 6 months he's ${o.w}–${o.n-o.w} as favorite, ${sgn(o.diff)} wins vs expected, so his own record contradicts his ban list place. A bad day alone isn't enough to deduct points, because players who start badly haven't kept losing.`)}
+  else if(k.no==="weak")notes.push(`${who}: no points deducted.${today} ${k.pf<0.6?"The match is close to even, so the ban list adjustment is phased out.":"Tier "+k.t+" players haven't underperformed enough as favorites to move the number."}`);
+  else notes.push(`${who}: −${Math.abs(k.elo)} Elo deducted${k.wt<1?" (reduced because the match is close to even)":""}.${today} Tier ${k.t} players as favorites have won ${k.x.won} of ${k.x.n} when the ratings expected ${k.x.exp.toFixed(0)}${k.o&&k.o.n>=10?`, and his own record backs it: ${k.o.w}–${k.o.n-k.o.w} as favorite, ${sgn(k.o.diff)} vs expected`:""}. Today's results aren't part of this; the deduction comes from the long-run record.`);
+ }
+ for(const p of [fav,dog]){if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
   if(s&&s.favN>=10){const pm=(s.favW-s.favE)/s.favN;
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favE).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
