@@ -263,7 +263,7 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
+let MODEL={n:0},CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
@@ -354,45 +354,52 @@ function earlierToday(a,b){const k=[a.name,b.name].sort().join("|"),t=warsawToda
  const ms=official.filter(m=>m.date===t&&[m.w,m.l].sort().join("|")===k).sort((x,y)=>(x.iw||x.il||50)-(y.iw||y.il||50));
  return ms.length?ms[ms.length-1]:null}
 function computeStats(){
- const byName=new Map(players.map(p=>[p.name,p.elo]));
+ // Rebuild ratings by walking through every match in order, so each match is judged
+ // only on what was known before it. (The official Elo change per match can't be used
+ // for this: it already contains the result.)
+ const K=20,MIN=12;                       // K-factor, and matches a player needs before we trust their rating
+ const ord=m=>(m.iw||m.il||99);
+ const hist=[...official].sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:ord(x)-ord(y));
+ const R=new Map(),seen=new Map(),PRE=[];
+ const get=(map,k,d)=>map.has(k)?map.get(k):d;
+ for(const m of hist){
+  const ra=get(R,m.w,1000),rb=get(R,m.l,1000);
+  const e=1/(1+Math.pow(10,(rb-ra)/400));
+  if(get(seen,m.w,0)>=MIN&&get(seen,m.l,0)>=MIN)PRE.push([m,e]);
+  R.set(m.w,ra+K*(1-e));R.set(m.l,rb-K*(1-e));
+  seen.set(m.w,get(seen,m.w,0)+1);seen.set(m.l,get(seen,m.l,0)+1);
+ }
  STATS=new Map();let bad=0,days=0;
- const tacc={};   // tier|role -> [n, wins, sum of expected]
- const racc={};   // first-match margin -> [n, times the earlier winner won again, sum expected]
- const seen=new Map(),cal=[],sides=[];
- const get=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
- const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);   // last 6 months only
- for(const m of official){
-  if(m.date<since)continue;
-  let ew=null;
-  if(m.eloW!==null&&KS[m.score])ew=Math.min(1,Math.max(0,1-m.eloW/KS[m.score]));
-  else if(byName.has(m.w)&&byName.has(m.l))ew=1/(1+Math.pow(10,(byName.get(m.l)-byName.get(m.w))/400));
-  if(ew===null)continue;
+ const tacc={},racc={},cal=[],sides=[],seenPair=new Map();
+ const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
+ const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);
+ for(const [m,ew] of PRE){
   cal.push([ew,1]);cal.push([1-ew,0]);
-  {const k=m.date+"|"+[m.w,m.l].sort().join("|"),prev=seen.get(k);
-   if(prev&&m.eloW!==null&&prev.eloW!==null){const a=racc[prev.score]||(racc[prev.score]=[0,0,0]);a[0]++;a[1]+=m.w===prev.w?1:0;a[2]+=m.w===prev.w?ew:1-ew}
-   if(!prev||(m.iw||m.il||99)>(prev.iw||prev.il||99))seen.set(k,m)}
+  {const k=m.date+"|"+[m.w,m.l].sort().join("|"),prev=seenPair.get(k);
+   if(prev){const a=racc[prev.score]||(racc[prev.score]=[0,0,0]);a[0]++;a[1]+=m.w===prev.w?1:0;a[2]+=m.w===prev.w?ew:1-ew}
+   if(!prev||ord(m)>ord(prev))seenPair.set(k,m)}
+  if(m.date<since)continue;
   for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
-   const s=get(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
+   const s=st(n);let d=s.days.get(m.date);if(!d){d={n:0,w:0,e:0,favL:0};s.days.set(m.date,d)}
    d.n++;d.w+=won;d.e+=e;
    if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e]);if(!won)d.favL++}
    else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
    const t=BAN.has(n)?tierOfName(n):0;
-   if(t&&m.eloW!==null&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
+   if(t&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
   }
  }
  for(const s of STATS.values()){s.play=0;s.bad=0;
   for(const d of s.days.values())if(d.n>=3){s.play++;if(d.w-d.e<=-1.5&&d.favL>=2)s.bad++}
   bad+=s.bad;days+=s.play}
  LEAGUE=days?bad/days:0;
- // How ban-tier players actually did vs Elo, shrunk toward zero so small samples count for little
- // Favorites win a bit less often than the official Elo says, so measure effects
- // against what players at that level actually do, not the raw rating.
  CAL=[];for(let i=0;i<20;i++){const lo=i*0.05,xs=cal.filter(([p])=>p>=lo-0.06&&p<lo+0.11);CAL.push(xs.length>=50?xs.reduce((s,x)=>s+x[1],0)/xs.length:null)}
- for(const [s,k,e] of sides)s[k]+=baseline(e);   // what players at that level actually win
- const lgr=p=>Math.log(p/(1-p)),clr=p=>Math.min(.97,Math.max(.03,p));
- RADJ={};for(const [sc,[n,w,e]] of Object.entries(racc)){const bb=clr(baseline(e/n));RADJ[sc]={n,won:w,exp:e,shift:(lgr(clr(w/n))-lgr(bb))*n/(n+150)}}
- TADJ={};const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
- for(const [k,[n,w,e]] of Object.entries(tacc)){const shift=lg(cl(w/n))-lg(cl(e/n));TADJ[k]={n,shift:shift*n/(n+300),won:w,exp:e}}
+ for(const [s,k,e] of sides)s[k]+=baseline(e);
+ const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
+ // Each effect is measured against what players at the same level actually win,
+ // then shrunk toward zero so a small sample can't move much.
+ RADJ={};for(const [sc,[n,w,e]] of Object.entries(racc))RADJ[sc]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+150)};
+ TADJ={};for(const [k,[n,w,e]] of Object.entries(tacc))TADJ[k]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+300)};
+ MODEL={n:PRE.length,rated:R.size};
 }
 const toElo=x=>Math.round(x*400/Math.LN10);
 function estimate(a,b){
@@ -408,7 +415,7 @@ function estimate(a,b){
   if(o&&o.n>=10&&Math.sign(o.diff)!==Math.sign(x.shift)){skipped.push({p,role,o});banWhy.push({p,t,no:"own",o,pf});continue}
   banWhy.push({p,t,no:"",pf,elo:toElo(x.shift*wt),wt,x,o});
   adj+=sign*x.shift*wt;
-  why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as ${role==="fav"?"favorite":"underdog"} have won ${x.won} of ${x.n} (Elo expected ${x.exp.toFixed(0)}), so −${Math.abs(toElo(x.shift*wt))} Elo${wt<1?" (reduced because the match is close to 50–50)":""}`);
+  why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as favorite have won ${x.won} of ${x.n} where ${x.exp.toFixed(0)} was predicted, so −${Math.abs(toElo(x.shift*wt))} Elo${wt<1?" (reduced because the match is close to 50–50)":""}`);
  }
  // Rematch: these two already played today, and that result carries more
  // information than the rating change gives it.
@@ -499,21 +506,23 @@ function update(){
  if(gap===0){const bs=[a,b].filter(isBan);title="Dead even on Elo";body=bs.length?`${bs.map(p=>esc(p.name)).join(" and ")} ${bs.length>1?"are":"is"} on the ban list.`:"Neither player is on the ban list.";if(bs.length)cls+=" warn"}
  else if(fb&&db){cls+=" warn";title="Both players are on the ban list";body=`${esc(fav.name)} (#${banRank(fav)}, Tier ${tierOf(fav)}) is favored by ${gap} Elo points over ${esc(dog.name)} (#${banRank(dog)}, Tier ${tierOf(dog)}). Both have a record of dropping matches they should win.`}
  else if(fb&&est.skipped.some(k=>k.p===fav)){const k=est.skipped.find(k=>k.p===fav);title="Ban list not backed by data";body=`${esc(fav.name)} is favored by ${gap} Elo points and is on your ban list (#${banRank(fav)}, Tier ${tierOf(fav)}), but as favorite he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected. The win chance isn't adjusted for him.`}
- else if(fb){const t=tierOf(fav);cls+=" warn";title=t===1?"High upset risk":t===2?"Upset risk":"Some upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is ${t===1?"one of the worst on":t===2?"high on":"on"} your ban list (#${banRank(fav)}, Tier ${t}). ${esc(dog.name)} has a better shot than the numbers suggest.`}
+ else if(fb&&est.banWhy.some(k=>k.p===fav&&!k.no)){const t=tierOf(fav);cls+=" warn";title=t===1?"High upset risk":t===2?"Upset risk":"Some upset risk";body=`${esc(fav.name)} is favored by ${gap} Elo points but is ${t===1?"one of the worst on":t===2?"high on":"on"} your ban list (#${banRank(fav)}, Tier ${t}). ${esc(dog.name)} has a better shot than the numbers suggest.`}
+ else if(fb){title="On the ban list, but no adjustment";body=`${esc(fav.name)} is favored by ${gap} Elo points and is on your ban list (#${banRank(fav)}, Tier ${tierOf(fav)}), but the data doesn't support changing the win chance here.`}
  else if(db){cls+=" good";title="Favorite looks solid";body=`${esc(fav.name)} leads by ${gap} Elo points and the ban list player (#${banRank(dog)}, Tier ${tierOf(dog)}) is the underdog.`}
  else{cls+=" good";title="No ban list flags";body=`${esc(fav.name)} is favored by ${gap} Elo points.`}
  if(gap&&dw>fw&&meet.length>=4){if(!fb&&!db)title="Head-to-head favors the underdog";cls=cls.replace(" good","")+" warn";body+=` Head-to-head goes the other way: ${esc(dog.name)} leads ${dw}–${fw}.`}
  const notes=[];
  if(est.prev){const p=est.prev,rx=RADJ[p.score],wonEarlier=p.w===fav.name;
-  notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The official Elo moved ${esc(sur(p.w))} up and ${esc(sur(p.l))} down right after, and the ratings above already include that change — but the data says the move isn't big enough.${rx&&rx.n>=40?` After a same-day ${esc(p.score)} win, the winner takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time (${rx.won} of ${rx.n}).`:""} ${wonEarlier?`That favors ${esc(sur(fav.name))}.`:`That works against ${esc(sur(fav.name))}, who is still favored despite losing to ${esc(sur(dog.name))} earlier.`}`);
-  if(!wonEarlier){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}}
+  const on=rx&&rx.n>=40&&rx.shift>=0.05;
+  notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The ratings above already include the points that moved after it.${rx&&rx.n>=40?` Historically the winner of the first match takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time, and the ratings predict ${Math.round(rx.exp/rx.n*100)}%${on?", so the estimate adds points for it":" — the same thing, so no points are added: winning earlier mostly just confirms who the better player is"}.`:""}`);
+  if(!wonEarlier&&on){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}}
  for(const k of est.banWhy){
   const d=todayOf(k.p.name),today=d?` Today he's ${d.w}–${d.n-d.w}${d.favL?` with ${d.favL} loss${d.favL>1?"es":""} as favorite`:""}.`:" He hasn't played yet today.";
   const who=`${esc(k.p.name)} (ban #${banRank(k.p)}, Tier ${k.t})`;
   if(k.no==="dog")notes.push(`${who}: no points deducted.${today} He's the underdog here, and the ban list only predicts upsets when the flagged player is favored — as an underdog his results match the ratings, so today's form doesn't change that.`);
   else if(k.no==="own"){const o=k.o;notes.push(`${who}: no points deducted.${today} Over the last 6 months he's ${o.w}–${o.n-o.w} as favorite, ${sgn(o.diff)} wins vs expected, so his own record contradicts his ban list place. A bad day alone isn't enough to deduct points, because players who start badly haven't kept losing.`)}
   else if(k.no==="weak")notes.push(`${who}: no points deducted.${today} ${k.pf<0.6?"The match is close to even, so the ban list adjustment is phased out.":"Tier "+k.t+" players haven't underperformed enough as favorites to move the number."}`);
-  else notes.push(`${who}: −${Math.abs(k.elo)} Elo deducted${k.wt<1?" (reduced because the match is close to even)":""}.${today} Tier ${k.t} players as favorites have won ${k.x.won} of ${k.x.n} when the ratings expected ${k.x.exp.toFixed(0)}${k.o&&k.o.n>=10?`, and his own record backs it: ${k.o.w}–${k.o.n-k.o.w} as favorite, ${sgn(k.o.diff)} vs expected`:""}. Today's results aren't part of this; the deduction comes from the long-run record.`);
+  else notes.push(`${who}: −${Math.abs(k.elo)} Elo deducted${k.wt<1?" (reduced because the match is close to even)":""}.${today} Tier ${k.t} players as favorites have won ${k.x.won} of ${k.x.n} where ${k.x.exp.toFixed(0)} was predicted${k.o&&k.o.n>=10?`, and his own record backs it: ${k.o.w}–${k.o.n-k.o.w} as favorite, ${sgn(k.o.diff)} vs expected`:""}. Today's results aren't part of this; the deduction comes from the long-run record.`);
  }
  for(const p of [fav,dog]){if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
@@ -694,50 +703,41 @@ $("onlyEV").onchange=renderSched;$("onlyFlag").onchange=renderSched;$("showDone"
 // ---------- estimate report card ----------
 const LISTDATE="2026-09-29";   // the ban list was made on Sep 28, so later matches are a fair test
 function reportCard(){
- const box=$("rc");const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
- const rows=official.filter(m=>m.eloW!==null&&KS[m.score]).map(m=>({m,ew:Math.min(.995,Math.max(.005,1-m.eloW/KS[m.score]))})).sort((x,y)=>x.m.date<y.m.date?-1:x.m.date>y.m.date?1:0);
- const dates=[...new Set(rows.map(r=>r.m.date))];if(dates.length<3){box.innerHTML='<p class="help">Not enough match data yet.</p>';return}
- const testDays=dates.slice(-14),first=testDays[0];
- const acc={},own={};let tested=[];
- const addAcc=(r)=>{for(const [n,e,won] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]){const t=BAN.has(n)?tierOfName(n):0;if(!t||e===.5)continue;const k=t+"|"+(e>.5?"fav":"dog");const a=acc[k]||(acc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e;
-   if(e>.55||e<.45){const ok=n+"|"+(e>.5?"fav":"dog"),q=own[ok]||(own[ok]=[0,0]);q[0]++;q[1]+=won-e}}};
- let di=0;
- for(const d of dates){
-  const today=rows.filter(r=>r.m.date===d);
-  if(d>=first){
-   const adjOf={};for(const [k,[n,w,e]] of Object.entries(acc))adjOf[k]=(lg(cl(w/n))-lg(cl(e/n)))*n/(n+300);
-   for(const r of today){let a=0;
-    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t&&e>.5){const x=adjOf[t+"|fav"],q=own[n+"|fav"],wt=Math.min(1,(e-.5)/.1);if(x&&x<0&&!(q&&q[0]>=10&&q[1]>=0))a+=s*x*wt}}
-    a=Math.max(-1,Math.min(1,a));const pw=1/(1+Math.exp(-(lg(r.ew)+a)));
-    tested.push({date:d,e:r.ew,p:pw,adj:Math.abs(a)>0.001,w:r.m.w,l:r.m.l})}
-  }
-  today.forEach(addAcc);
- }
- // score: average log loss (lower = better), from the winner's side
- const ll=(arr,k)=>-arr.reduce((s,x)=>s+Math.log(x[k]),0)/arr.length;
- const adjd=tested.filter(x=>x.adj&&x.date>=LISTDATE);   // only matches after the list was made count
- const better=adjd.length?ll(adjd,"p")<ll(adjd,"e"):null;
- // calibration from the favorite's side
- const buckets=[[.5,.6],[.6,.7],[.7,.8],[.8,.9],[.9,1.01]].map(([lo,hi])=>{const xs=tested.map(x=>({pf:Math.max(x.p,1-x.p),won:x.p>=.5?1:0})).filter(x=>x.pf>=lo&&x.pf<hi);
-  return {lo,hi,n:xs.length,pred:xs.length?xs.reduce((s,x)=>s+x.pf,0)/xs.length:0,act:xs.length?xs.reduce((s,x)=>s+x.won,0)/xs.length:0}});
- // ban list since the list was made
- const tiers=[1,2,3].map(t=>{const xs=rows.filter(r=>r.m.date>=LISTDATE).flatMap(r=>[[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]).filter(([n,e])=>BAN.has(n)&&tierOfName(n)===t&&e>.5);
-  return {t,n:xs.length,won:xs.reduce((s,x)=>s+x[2],0),exp:xs.reduce((s,x)=>s+x[1],0)}});
- const pct=x=>Math.round(x*100)+"%";
- box.innerHTML=`<p class="help">Tested on ${tested.length} matches from ${nice(first)} to ${nice(testDays[testDays.length-1])}. Each day is predicted using only data from before that day, so this is a fair test.</p>
- <h3 class="rch">Did the ban list adjustment help?</h3>
- ${adjd.length?`<p class="rcv ${better?"pos":"neg"}">${better?"So far, yes":"So far, no"}: on the ${adjd.length} matches since you made the list where it applied, the adjusted estimate was ${better?"more":"less"} accurate than Elo alone.</p>${adjd.length<100?`<p class="help">Only ${adjd.length} matches so far, so this can easily flip. Check again once there are 100+.</p>`:""}`:`<p class="help">No matches since you made the list to test on yet.</p>`}
+ const box=$("rc"),pct=x=>Math.round(x*100)+"%";
+ const K=20,MIN=12,ord=m=>(m.iw||m.il||99);
+ const hist=[...official].sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:ord(x)-ord(y));
+ const R=new Map(),seen=new Map(),PRE=[];
+ const g=(map,k,d)=>map.has(k)?map.get(k):d;
+ for(const m of hist){const ra=g(R,m.w,1000),rb=g(R,m.l,1000),e=1/(1+Math.pow(10,(rb-ra)/400));
+  if(g(seen,m.w,0)>=MIN&&g(seen,m.l,0)>=MIN)PRE.push([m,e]);
+  R.set(m.w,ra+K*(1-e));R.set(m.l,rb-K*(1-e));seen.set(m.w,g(seen,m.w,0)+1);seen.set(m.l,g(seen,m.l,0)+1)}
+ if(PRE.length<200){box.innerHTML='<p class="help">Not enough match data yet.</p>';return}
+ const dates=[...new Set(PRE.map(([m])=>m.date))],first=dates[Math.max(0,dates.length-14)];
+ const tested=PRE.filter(([m])=>m.date>=first);
+ // calibration
+ const bk=[[.5,.6],[.6,.7],[.7,.8],[.8,.9],[.9,1.01]].map(([lo,hi])=>{
+  const xs=tested.map(([m,e])=>({p:Math.max(e,1-e),won:e>=.5?1:0})).filter(x=>x.p>=lo&&x.p<hi);
+  return{lo,hi,n:xs.length,pred:xs.length?xs.reduce((s,x)=>s+x.p,0)/xs.length:0,act:xs.length?xs.reduce((s,x)=>s+x.won,0)/xs.length:0}});
+ // ban tiers, whole window and since the list was made
+ const tierRow=(from)=>[1,2,3].map(t=>{const xs=[];
+  for(const [m,e] of PRE){if(m.date<from)continue;
+   for(const [n,p,y] of [[m.w,e,1],[m.l,1-e,0]])if(BAN.has(n)&&tierOfName(n)===t&&p>.5)xs.push([p,y])}
+  return{t,n:xs.length,won:xs.reduce((s,x)=>s+x[1],0),exp:xs.reduce((s,x)=>s+x[0],0)}});
+ const tiersAll=tierRow(dates[0]),tiersNew=tierRow(LISTDATE);
+ const rem=Object.keys(RADJ).sort();
+ const used=rem.filter(k=>RADJ[k].n>=40&&RADJ[k].shift>=0.05);
+ box.innerHTML=`<p class="help">Every match below is scored using ratings built only from earlier matches, so nothing is judged with hindsight. ${MODEL.n.toLocaleString()} matches have enough history to test; the calibration table covers the last 14 days (${tested.length}).</p>
+ <h3 class="rch">Is the ban list still working?</h3>
+ <div class="otab"><table><tr><th>Tier as favorite</th><th>Matches</th><th>Won</th><th>Predicted</th></tr>${tiersAll.map(x=>`<tr><td>Tier ${x.t}</td><td>${x.n}</td><td class="${x.n>=30&&x.won/x.n-x.exp/x.n<-0.05?"neg":""}">${x.n?pct(x.won/x.n):"–"}</td><td>${x.n?pct(x.exp/x.n):"–"}</td></tr>`).join("")}</table></div>
+ <p class="help">Won below Predicted means the list is picking up real underperformance. Since you made the list on ${nice(LISTDATE)}: ${tiersNew.map(x=>`Tier ${x.t} ${x.n?`${pct(x.won/x.n)} vs ${pct(x.exp/x.n)} (${x.n})`:"no matches"}`).join(", ")}.</p>
  <h3 class="rch">Same-day rematches</h3>
- ${(()=>{const ks=Object.keys(RADJ).sort();if(!ks.length)return`<p class="help">No rematch data yet.</p>`;
-  const used=ks.filter(k=>RADJ[k].n>=40&&RADJ[k].shift>=0.02);
-  return `<div class="otab"><table><tr><th>First result</th><th>Rematches</th><th>Winner won again</th><th>Elo expected</th></tr>${ks.map(k=>{const x=RADJ[k];return `<tr><td>${esc(k)}</td><td>${x.n}</td><td class="${x.won/x.n-x.exp/x.n>0.05?"pos":""}">${Math.round(x.won/x.n*100)}%</td><td>${Math.round(x.exp/x.n*100)}%</td></tr>`}).join("")}</table></div><p class="help">When two players meet twice in a day, whoever won the first match wins the rematch more often than the updated ratings predict. The estimate adds ${used.map(k=>`${esc(k)}: +${Math.abs(toElo(RADJ[k].shift))} Elo`).join(", ")||"nothing yet"}.</p>`})()}
- <h3 class="rch">Ban list favorites since you made the list</h3>
- <div class="otab"><table><tr><th>Tier</th><th>Matches</th><th>Won</th><th>Elo expected</th></tr>${tiers.map(x=>`<tr><td>Tier ${x.t}</td><td>${x.n}</td><td>${x.n?pct(x.won/x.n):"–"}</td><td>${x.n?pct(x.exp/x.n):"–"}</td></tr>`).join("")}</table></div>
- <p class="help">If the "Won" column stays well below "Elo expected", the ban list is working on new matches, not just in hindsight.</p>
+ ${rem.length?`<div class="otab"><table><tr><th>First result</th><th>Rematches</th><th>Winner won again</th><th>Predicted</th></tr>${rem.map(k=>{const x=RADJ[k];return `<tr><td>${esc(k)}</td><td>${x.n}</td><td class="${x.won/x.n-x.exp/x.n>0.05?"pos":""}">${pct(x.won/x.n)}</td><td>${pct(x.exp/x.n)}</td></tr>`}).join("")}</table></div>
+ <p class="help">Whoever won the first match usually wins the rematch, but that's because they're the better player — the ratings already expect it. The estimate only adds points if they win by more than predicted: currently ${used.length?used.map(k=>`${esc(k)}: +${Math.abs(toElo(RADJ[k].shift))} Elo`).join(", "):"no adjustment, the gap is too small to be real"}.</p>`:`<p class="help">No rematch data yet.</p>`}
  <h3 class="rch">When the estimate says…</h3>
- <div class="otab"><table><tr><th>Estimate</th><th>Matches</th><th>Favorite won</th></tr>${buckets.filter(b=>b.n).map(b=>`<tr><td>${Math.round(b.lo*100)}–${Math.min(100,Math.round(b.hi*100))}%</td><td>${b.n}</td><td class="${Math.abs(b.act-b.pred)>0.08&&b.n>=30?"neg":""}">${pct(b.act)} <span class="muted">(avg est ${pct(b.pred)})</span></td></tr>`).join("")}</table></div>
- <p class="help">Well-calibrated means the favorite wins about as often as the estimate says. Big gaps on 30+ matches are marked red.</p>`;
+ <div class="otab"><table><tr><th>Estimate</th><th>Matches</th><th>Favorite won</th></tr>${bk.filter(b=>b.n).map(b=>`<tr><td>${Math.round(b.lo*100)}–${Math.min(100,Math.round(b.hi*100))}%</td><td>${b.n}</td><td class="${Math.abs(b.act-b.pred)>0.08&&b.n>=30?"neg":""}">${pct(b.act)} <span class="muted">(avg est ${pct(b.pred)})</span></td></tr>`).join("")}</table></div>
+ <p class="help">Favorites should win about as often as predicted. Gaps over 8 points on 30+ matches are marked red.</p>`;
 }
+
 function openSheet(id){$(id).hidden=false;document.documentElement.classList.add("lock");$(id+"Close").focus();if(id==="sched")renderSched()}
 function closeSheet(id){$(id).hidden=true;document.documentElement.classList.remove("lock")}
 $("schedBtn").onclick=()=>openSheet("sched");$("schedClose").onclick=()=>{closeSheet("sched");$("schedBtn").focus()};
