@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-09-30T15:37Z
+# updated 2026-09-30T16:37Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8309,6 +8309,14 @@
 2026-09-30 | Zochniak Jakub | Zwolinski Mariusz | 3-1 | 1 | 6 | +4
 2026-09-30 | Kaczynski Piotr | Juszczyk Krzysztof | 3-1 | 1 | 1 | Pending
 2026-09-30 | Nocun Zbigniew | Mucha Grzegorz | 3-1 | 1 | 6 | Pending
+2026-09-30 | Staszczyk Konrad | Rudomina Kamil | 3-2 | 1 | 3 | +5
+2026-09-30 | Solilo Dominik | Sulkowski Bartek | 3-2 | 1 | 1 | +7
+2026-09-30 | Lamperski Jakub | Kowalczyk Marcin | 3-0 | 1 | 1 | Pending
+2026-09-30 | Kotwica Dawid | Strus Piotr | 3-2 | 1 | 1 | Pending
+2026-09-30 | Krupa Sebastian | Ruszkiewicz Adam | 3-2 | 1 | 1 | Pending
+2026-09-30 | Pytlas Wojciech | Koczyba Mariusz | 3-2 | 1 | 5 | Pending
+2026-09-30 | Lewczuk Miroslaw | Skorupa Jakub | 3-1 | 1 | 5 | Pending
+2026-09-30 | Skupinski Arkadiusz | Machelski Michal | 3-1 | 1 | 1 | Pending
 2026-09-30 | Grela Artur | David Petr | 3-1 | 2 | 2 | +12
 2026-09-30 | Miastowski Maksymilian | Jadczyk Marcin | 3-0 | 2 | 2 | +16
 2026-09-30 | Wloczko Krzysztof | Wiecek Adrian | 3-0 | 2 | 2 | +19
@@ -8340,6 +8348,7 @@
 2026-09-30 | Madej Boguslaw | Buczynski Witold | 3-1 | 2 | 2 | +15
 2026-09-30 | Minda Michal | Kolek Maciej | 3-2 | 2 | 2 | +11
 2026-09-30 | Czerwinski Bartosz | Zochniak Jakub | 3-0 | 2 | 2 | +16
+2026-09-30 | Lewczuk Miroslaw | Mucha Grzegorz | 3-0 | 2 | 7 | Pending
 2026-09-30 | Miastowski Maksymilian | Wloczko Krzysztof | 3-0 | 3 | 3 | +12
 2026-09-30 | Klocek Kamil | Mrugala Bartlomiej | 3-0 | 3 | 3 | +11
 2026-09-30 | Gumulinski Piotr | Oracz Lukasz | 3-0 | 3 | 2 | +10
@@ -8397,6 +8406,7 @@
 2026-09-30 | Czerwinski Bartosz | Zwolinski Mariusz | 3-0 | 4 | 9 | +5
 2026-09-30 | Kolek Maciej | Stapor Rafal | 3-2 | 4 | 9 | +3
 2026-09-30 | Zochniak Jakub | Minda Michal | 3-2 | 4 | 4 | +7
+2026-09-30 | Klocek Kamil | Poloszczanski Dawid | 3-2 | 4 | 1 | Pending
 2026-09-30 | Lebek Marian | Guzik Michal | 3-2 | 5 | 3 | +6
 2026-09-30 | Adamus Pawel | Kaczmarek Jakub | 3-0 | 5 | 3 | +10
 2026-09-30 | Brunner Marian | Fomin Andriej | 3-0 | 5 | 5 | +24
@@ -8435,6 +8445,7 @@
 2026-09-30 | Jarocki Lukasz | Kolodziej Krystian | 3-0 | 6 | 1 | +19
 2026-09-30 | Sikon Mateusz | Rus Maksymilian | 3-1 | 6 | 6 | +5
 2026-09-30 | Schaniel Krzysztof | Buczynski Witold | 3-0 | 6 | 6 | +19
+2026-09-30 | Zochniak Jakub | Blocho Przemyslaw | 3-2 | 6 | 2 | +6
 2026-09-30 | Sikon Mateusz | Gajda Rafal | 3-1 | 7 | 7 | +8
 2026-09-30 | Jadach Oskar | Kowalski Kamil | 3-1 | 7 | 7 | +3
 2026-09-30 | Madej Boguslaw | Buczynski Witold | 3-1 | 7 | 7 | +13
@@ -8462,6 +8473,7 @@
 2026-09-30 | Madej Boguslaw | Rus Maksymilian | 3-0 | 8 | 8 | +11
 2026-09-30 | Przewlocki Piotr | Szymanski Igor | 3-2 | 9 | 9 | +5
 2026-09-30 | Madej Boguslaw | Schaniel Krzysztof | 3-2 | 9 | 9 | +8
+2026-09-30 | Gajda Rafal | Rus Maksymilian | 3-2 | 9 | 9 | +6
 2026-09-30 | Wiecek Adrian | David Petr | 3-2 | 9 | 9 | +9
 2026-09-30 | Jadczyk Marcin | Grela Artur | 3-1 | 9 | 9 | +14
 2026-09-30 | Olbrycht Michal | Poliniewicz Grzegorz | 3-0 | 9 | 8 | +16
@@ -8470,9 +8482,11 @@
 2026-09-30 | Spychala Adrian | Jarocki Lukasz | 3-2 | 9 | 9 | +8
 2026-09-30 | Jadach Oskar | Brozek Piotr | 3-2 | 9 | 9 | +10
 2026-09-30 | Kuzmicz Jakub | Grela Artur | 3-2 | 9 | 10 | +11
+2026-09-30 | Sikon Mateusz | Buczynski Witold | 3-2 | 9 | 9 | +6
 2026-09-30 | Wiecek Adrian | Jadczyk Marcin | 3-2 | 10 | 10 | +8
 2026-09-30 | Adamus Kacper | Szymanski Igor | 3-0 | 10 | 10 | +8
 2026-09-30 | Miastowski Maksymilian | David Petr | 3-2 | 10 | 10 | +8
 2026-09-30 | Jarocki Lukasz | Olbrycht Michal | 3-2 | 10 | 10 | +8
 2026-09-30 | Kowalski Kamil | Brozek Piotr | 3-1 | 10 | 10 | +22
 2026-09-30 | Jadach Oskar | Przewlocki Piotr | 3-2 | 10 | 10 | +7
+2026-09-30 | Gajda Rafal | Schaniel Krzysztof | 3-1 | 10 | 10 | +13
