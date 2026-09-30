@@ -153,11 +153,27 @@ html.lock,html.lock body{overflow:hidden}
 .wc .eloOnly:empty{display:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dot.b,:root:not([data-theme="light"]) .wc .bar .b{background:#5b9bd5}}
 :root[data-theme="dark"] .dot.b,:root[data-theme="dark"] .wc .bar .b{background:#5b9bd5}
+.tb{display:flex;gap:8px}
+.schedopts{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 6px}.schedopts label{display:flex;align-items:center;gap:6px;font-size:.95rem}
+.schedopts input{width:auto;accent-color:var(--table)}
+.slist{list-style:none;margin:0;padding:0}
+.srow{display:flex;gap:12px;width:100%;text-align:left;font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--border);border-radius:4px;padding:10px 12px;margin-bottom:8px;cursor:pointer}
+.srow:focus-visible{outline:3px solid var(--ball)}
+.srow.done{opacity:.6}
+.stime{display:flex;flex-direction:column;width:64px;flex:none}.stime b{font-size:1.05rem}.stime small{color:var(--muted);font-size:.78rem}
+.smid{display:flex;flex-direction:column;gap:2px;min-width:0}.sp{font-weight:600}
+.smid small{font-size:.82rem}
+.stags{display:flex;gap:4px;flex-wrap:wrap;margin-top:3px}
+.stag{font-size:.74rem;font-weight:600;padding:1px 6px;border-radius:3px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
+.stag.w{background:var(--ball);color:#1b1b1b;border-color:var(--ball)}
+.stag.t1{background:#8e1f1a;color:#fff;border-color:#8e1f1a}.stag.t2{background:var(--ban);color:#fff;border-color:var(--ban)}.stag.t3{background:#d9665f;color:#fff;border-color:#d9665f}
+.rch{font-size:1rem;margin:16px 0 6px}
+.rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
 <p class="src" id="srcInfo">Loading data…</p>
-<div class="topbar"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="clear" type="button">Clear both</button></div>
+<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">📅 Today</button></div><button class="btn" id="clear" type="button">Clear both</button></div>
 <section class="court">
  <div class="sides">
   <div class="side"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="A" aria-label="Clear player 1">✕</button><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
@@ -177,6 +193,8 @@ html.lock,html.lock body{overflow:hidden}
 <div id="oddsBox"></div>
 <div id="h2h"></div>
 <div id="logBox" hidden></div>
+<div class="sheet" id="sched" role="dialog" aria-modal="true" aria-labelledby="schedTitle" hidden><div class="sheethd"><h2 id="schedTitle">Today's matches</h2><button class="btn" id="schedClose" type="button">Done</button></div>
+<div class="tools"><div class="schedopts"><label><input type="checkbox" id="onlyFlag"> Flagged only</label><label><input type="checkbox" id="showDone"> Show finished</label></div><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div></div>
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><h2 id="menuTitle">Menu</h2><button class="btn" id="menuClose" type="button">Done</button></div>
 <div class="tools">
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
@@ -187,6 +205,7 @@ html.lock,html.lock body{overflow:hidden}
 <div class="btns"><button class="btn primary" id="saveList" type="button">Save new ratings</button></div>
 <div class="msg" id="updMsg" role="status"></div>
 </div></details>
+<details id="rcDet"><summary>Estimate report card</summary><div class="pad" id="rc"><p class="help">Needs match data. Open the app while online.</p></div></details>
 <details id="setupDet"><summary id="setupSum">Sharing setup</summary><div class="pad">
 <p class="help">To log results, change the ban list or update ratings, this phone needs a GitHub access token. Viewing works without one. The token is saved only on this phone.</p>
 <label class="lbl" for="owner">GitHub username</label><input id="owner" class="inp">
@@ -218,7 +237,7 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let offAt=null,STATS=new Map(),LEAGUE=0,TADJ={};
+let SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={};
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
@@ -237,7 +256,7 @@ function parseMatches(t,src){return t.split(/\r?\n/).map((raw,i)=>{const s=raw.t
  const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||"",iw:+p[4]||0,il:+p[5]||0,eloW:/^[+-]?\d+$/.test(p[6]||"")?parseInt(p[6]):null,src}}).filter(Boolean)}
 function parseCareer(t){const m=new Map();t.split(/\r?\n/).forEach(l=>{const p=l.split("|").map(x=>x.trim());if(p.length>=3&&l[0]!=="#")m.set(p[0],[+p[1],+p[2]])});return m}
 async function loadOfficial(){
- try{const [o,c]=await Promise.all(["official.txt","players.txt"].map(f=>fetch(f).then(r=>r.ok?r.text():"")));
+ try{const [o,c,sc]=await Promise.all(["official.txt","players.txt","schedule.txt"].map(f=>fetch(f).then(r=>r.ok?r.text():"")));SCHED=parseSched(sc);
   official=parseMatches(o,"off");career=parseCareer(c);offAt=(o.match(/# updated (\S+)/)||[])[1]||null}catch(e){}
 }
 function apply(){
@@ -246,7 +265,7 @@ function apply(){
  BANORDER=parseBan(data.ban);BAN=new Set(BANORDER);
  mine=parseMatches(data.matches+"\n"+pending.join("\n"),"me");
  const offKey=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l+"|"+m.score)),offKey2=new Set(official.map(m=>m.date+"|"+m.w+"|"+m.l));
- computeStats();
+ computeStats();try{reportCard()}catch(e){console.warn(e)}
  matches=official.concat(mine.filter(m=>!(offKey.has(m.date+"|"+m.w+"|"+m.l+"|"+m.score)||(!m.score&&offKey2.has(m.date+"|"+m.w+"|"+m.l)))));
  const when=new Date(data.at);
  const asOf=(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
@@ -541,6 +560,84 @@ $("forget").onclick=()=>{cfg.token="";save("tt-cfg",cfg);renderSetup();update();
 $("clear").onclick=()=>{sel.A=sel.B=null;$("inA").value="";$("inB").value="";update();$("inA").focus()};
 document.querySelectorAll(".x").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.x;sel[k]=null;$("in"+k).value="";update();$("in"+k).focus()}));
 
+
+
+// ---------- schedule ----------
+function parseSched(t){return t.split(/\r?\n/).map(l=>{if(!l.trim()||l[0]==="#")return null;const p=l.split("|").map(x=>x.trim());if(p.length<5)return null;return{date:p[0],time:p[1],tour:p[2],p1:p[3],p2:p[4],res:p[5]||"",at:plToDate(p[0],p[1])}}).filter(Boolean)}
+function plToDate(d,t){const [y,m,da]=d.split("-").map(Number),[h,mi]=t.split(":").map(Number),guess=Date.UTC(y,m-1,da,h,mi);
+ try{const g=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Europe/Warsaw",hourCycle:"h23",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}).formatToParts(new Date(guess)).map(x=>[x.type,x.value]));
+  return new Date(guess-(Date.UTC(+g.year,+g.month-1,+g.day,+g.hour%24,+g.minute)-guess))}catch(e){return new Date(guess-2*36e5)}}
+const byNameP=n=>players.find(p=>p.name===n);
+function renderSched(){
+ const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked;
+ const rows=SCHED.filter(r=>showDone||(!r.res&&r.at.getTime()>now-20*60000)).filter(r=>r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
+ let shown=0;
+ const html=rows.map((r,i)=>{
+  const a=byNameP(r.p1),b=byNameP(r.p2);
+  let fav="",flag=false,tags="";
+  if(a&&b){const e=estimate(a,b),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa),diff=Math.abs(e.pa-e.pe);
+   fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
+   if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
+   for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
+  }else tags+=`<span class="stag">Player not in ratings</span>`;
+  if(onlyFlag&&!flag)return"";
+  shown++;
+  const mins=Math.round((r.at-now)/60000),when=r.res?`Final ${esc(r.res)}`:mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
+  return `<li><button type="button" class="srow${r.res?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
+ $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try unticking the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
+ $("schedInfo").textContent=SCHED.length?`${shown} match${shown===1?"":"es"} in the next 30 hours. Times are shown in your phone's time zone. Tap a match to load it.`:"";
+}
+$("schedList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
+ const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
+ closeSheet("sched");update();scrollTo(0,0)});
+$("onlyFlag").onchange=renderSched;$("showDone").onchange=renderSched;
+
+// ---------- estimate report card ----------
+const LISTDATE="2026-09-29";   // the ban list was made on Sep 28, so later matches are a fair test
+function reportCard(){
+ const box=$("rc");const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
+ const rows=official.filter(m=>m.eloW!==null&&KS[m.score]).map(m=>({m,ew:Math.min(.995,Math.max(.005,1-m.eloW/KS[m.score]))})).sort((x,y)=>x.m.date<y.m.date?-1:x.m.date>y.m.date?1:0);
+ const dates=[...new Set(rows.map(r=>r.m.date))];if(dates.length<3){box.innerHTML='<p class="help">Not enough match data yet.</p>';return}
+ const testDays=dates.slice(-14),first=testDays[0];
+ const acc={};let tested=[];
+ const addAcc=(r)=>{for(const [n,e,won] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]){const t=BAN.has(n)?tierOfName(n):0;if(!t||e===.5)continue;const k=t+"|"+(e>.5?"fav":"dog");const a=acc[k]||(acc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}};
+ let di=0;
+ for(const d of dates){
+  const today=rows.filter(r=>r.m.date===d);
+  if(d>=first){
+   const adjOf={};for(const [k,[n,w,e]] of Object.entries(acc))adjOf[k]=(lg(cl(w/n))-lg(cl(e/n)))*n/(n+300);
+   for(const r of today){let a=0;
+    for(const [n,e,s] of [[r.m.w,r.ew,1],[r.m.l,1-r.ew,-1]]){const t=BAN.has(n)?tierOfName(n):0;if(t){const x=adjOf[t+"|"+(e>.5?"fav":"dog")];if(x)a+=s*x}}
+    a=Math.max(-1,Math.min(1,a));const pw=1/(1+Math.exp(-(lg(r.ew)+a)));
+    tested.push({date:d,e:r.ew,p:pw,adj:Math.abs(a)>0.001,w:r.m.w,l:r.m.l})}
+  }
+  today.forEach(addAcc);
+ }
+ // score: average log loss (lower = better), from the winner's side
+ const ll=(arr,k)=>-arr.reduce((s,x)=>s+Math.log(x[k]),0)/arr.length;
+ const adjd=tested.filter(x=>x.adj&&x.date>=LISTDATE);   // only matches after the list was made count
+ const better=adjd.length?ll(adjd,"p")<ll(adjd,"e"):null;
+ // calibration from the favorite's side
+ const buckets=[[.5,.6],[.6,.7],[.7,.8],[.8,.9],[.9,1.01]].map(([lo,hi])=>{const xs=tested.map(x=>({pf:Math.max(x.p,1-x.p),won:x.p>=.5?1:0})).filter(x=>x.pf>=lo&&x.pf<hi);
+  return {lo,hi,n:xs.length,pred:xs.length?xs.reduce((s,x)=>s+x.pf,0)/xs.length:0,act:xs.length?xs.reduce((s,x)=>s+x.won,0)/xs.length:0}});
+ // ban list since the list was made
+ const tiers=[1,2,3].map(t=>{const xs=rows.filter(r=>r.m.date>=LISTDATE).flatMap(r=>[[r.m.w,r.ew,1],[r.m.l,1-r.ew,0]]).filter(([n,e])=>BAN.has(n)&&tierOfName(n)===t&&e>.5);
+  return {t,n:xs.length,won:xs.reduce((s,x)=>s+x[2],0),exp:xs.reduce((s,x)=>s+x[1],0)}});
+ const pct=x=>Math.round(x*100)+"%";
+ box.innerHTML=`<p class="help">Tested on ${tested.length} matches from ${nice(first)} to ${nice(testDays[testDays.length-1])}. Each day is predicted using only data from before that day, so this is a fair test.</p>
+ <h3 class="rch">Did the ban list adjustment help?</h3>
+ ${adjd.length?`<p class="rcv ${better?"pos":"neg"}">${better?"So far, yes":"So far, no"}: on the ${adjd.length} matches since you made the list where it applied, the adjusted estimate was ${better?"more":"less"} accurate than Elo alone.</p>${adjd.length<100?`<p class="help">Only ${adjd.length} matches so far, so this can easily flip. Check again once there are 100+.</p>`:""}`:`<p class="help">No matches since you made the list to test on yet.</p>`}
+ <h3 class="rch">Ban list favorites since you made the list</h3>
+ <div class="otab"><table><tr><th>Tier</th><th>Matches</th><th>Won</th><th>Elo expected</th></tr>${tiers.map(x=>`<tr><td>Tier ${x.t}</td><td>${x.n}</td><td>${x.n?pct(x.won/x.n):"–"}</td><td>${x.n?pct(x.exp/x.n):"–"}</td></tr>`).join("")}</table></div>
+ <p class="help">If the "Won" column stays well below "Elo expected", the ban list is working on new matches, not just in hindsight.</p>
+ <h3 class="rch">When the estimate says…</h3>
+ <div class="otab"><table><tr><th>Estimate</th><th>Matches</th><th>Favorite won</th></tr>${buckets.filter(b=>b.n).map(b=>`<tr><td>${Math.round(b.lo*100)}–${Math.min(100,Math.round(b.hi*100))}%</td><td>${b.n}</td><td class="${Math.abs(b.act-b.pred)>0.08&&b.n>=30?"neg":""}">${pct(b.act)} <span class="muted">(avg est ${pct(b.pred)})</span></td></tr>`).join("")}</table></div>
+ <p class="help">Well-calibrated means the favorite wins about as often as the estimate says. Big gaps on 30+ matches are marked red.</p>`;
+}
+function openSheet(id){$(id).hidden=false;document.documentElement.classList.add("lock");$(id+"Close").focus();if(id==="sched")renderSched()}
+function closeSheet(id){$(id).hidden=true;document.documentElement.classList.remove("lock")}
+$("schedBtn").onclick=()=>openSheet("sched");$("schedClose").onclick=()=>{closeSheet("sched");$("schedBtn").focus()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("sched").hidden){closeSheet("sched");$("schedBtn").focus()}});
 
 // ---------- menu sheet ----------
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
