@@ -450,10 +450,10 @@ const yestOf=n=>{const s=STATS.get(n);if(!s)return null;const d=new Date(Date.no
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
 const sgn=x=>(x>=0?"+":"−")+Math.abs(x).toFixed(1);
 function statLines(p){
- const s=STATS.get(p.name);if(!s)return"";
+ const s=STATS.get(p.name);if(!s)return'<small>As favorite: no matches on record</small><small>As underdog: no matches on record</small>';
  let h="";
- if(s.favN>=5)h+=`<small>As favorite: ${s.favW}–${s.favN-s.favW}, ${sgn(s.favW-s.favB)} vs expected</small>`;
- if(s.dogN>=5)h+=`<small>As underdog: ${s.dogW}–${s.dogN-s.dogW}, ${sgn(s.dogW-s.dogB)} vs expected</small>`;
+ const line=(lab,n,w,bse)=>n?`<small>As ${lab}: ${w}–${n-w}, ${sgn(w-bse)} vs expected${n<5?" (few matches)":""}</small>`:`<small>As ${lab}: no matches on record</small>`;
+ h+=line("favorite",s.favN,s.favW,s.favB)+line("underdog",s.dogN,s.dogW,s.dogB);
  if(s.play>=3)h+=`<small class="bd">Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
  const d=todayOf(p.name),y=d?null:yestOf(p.name);
  if(!d&&y)h+=`<small class="today">Yesterday: ${y.w}–${y.n-y.w}</small>`;
@@ -684,7 +684,8 @@ function renderSched(){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked,onlyEV=$("onlyEV").checked;
  // the site doesn't fill in results on schedule posts, so look them up in the collected matches
  linkResults();
- const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin&&r.at.getTime()>now-20*60000)).filter(r=>r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
+ // Sessions often run early or late, so a match is only hidden once a result exists
+ const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin)).filter(r=>r.at.getTime()>now-14*36e5&&r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
  let shown=0;
  const html=rows.map((r,i)=>{
   const a=byNameP(r.p1),b=byNameP(r.p2);
@@ -706,10 +707,10 @@ function renderSched(){
   if(onlyEV&&!/stag ev/.test(tags))return"";
   if(onlyFlag&&!flag)return"";
   shown++;
-  const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-20?"Result pending":mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
-  return `<li><button type="button" class="srow${r.res||r.fin||mins<-20?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${be?`<small class="muted">${be}</small>`:""}${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
+  const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-20?"No result yet":mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
+  return `<li><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${be?`<small class="muted">${be}</small>`:""}${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try unticking the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
- $("schedInfo").innerHTML=SCHED.length?`${shown} match${shown===1?"":"es"} in the next 30 hours, your phone's time zone. Tap one to load it.<br>"Value under" = odds better than these would be value. Enter real odds on a matchup and they're remembered here.`:"";
+ $("schedInfo").innerHTML=SCHED.length?`${shown} match${shown===1?"":"es"}, your phone's time zone. Scheduled times are the official plan; sessions often run early or late, so matches stay listed until a result comes in.<br>"Value under" = odds better than these would be value. Enter real odds on a matchup and they're remembered here.`:"";
 }
 $("schedList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
  PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;

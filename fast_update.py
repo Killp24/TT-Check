@@ -69,7 +69,7 @@ def fix(raw):
 
 # ---- find today's tournament pages ----
 posts, pages_seen = [], 0
-for pg in range(1, 5):
+for pg in range(1, 8):
     lst = get(BASE + "category/turnieje/" + (f"page/{pg}/" if pg > 1 else ""))
     pages_seen += 1
     found = re.findall(r'href="(https://www\.tt-series\.com/(\d+)-result-(\d{1,2})-(\d{1,2})-(\d{4})-([^"/]+)/?)"', lst)
@@ -82,7 +82,7 @@ for pg in range(1, 5):
         dates_here.add(day)
         if day in WANTED and url not in [p[0] for p in posts]:
             posts.append((url, day, slug.replace("-", " ")))
-    if dates_here and max(dates_here) < min(WANTED):
+    if dates_here and max(dates_here) < min(WANTED) and len({d for _, d, _ in posts}) >= len(WANTED):
         break
 
 sched, results, with_result = [], [], 0
