@@ -20,7 +20,7 @@ jobs:
         run: python3 update_data.py
       - name: Save if changed
         run: |
-          git add ratings.txt official.txt players.txt
+          git add ratings.txt official.txt players.txt schedule.txt ratings_history.txt
           if git diff --cached --quiet; then
             echo "No changes."
           else
