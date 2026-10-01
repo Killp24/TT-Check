@@ -208,7 +208,7 @@ html.lock,html.lock body{overflow:hidden}
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
 <p class="src" id="srcInfo">Loading data…</p>
-<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">📅 Today</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><div class="tb"><button class="btn star" id="favMBtn" type="button" hidden aria-pressed="false">☆ This match</button><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Matchup</button><button class="btn" id="clear" type="button">Clear</button></div></div>
+<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">📅 Today</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><div class="tb"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
 <div id="matchInfo" class="minfo" hidden></div>
 <section class="court">
  <div class="sides">
@@ -228,6 +228,8 @@ html.lock,html.lock body{overflow:hidden}
 <div id="verdict"></div>
 <div id="oddsBox"></div>
 <div id="h2h"></div>
+<div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><h2 id="favTitle">Favourites</h2><button class="btn" id="favsClose" type="button">Done</button></div>
+<div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><h2 id="betsTitle">My bets</h2><button class="btn" id="betsClose" type="button">Done</button></div>
 <div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
 <details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
@@ -243,7 +245,6 @@ html.lock,html.lock body{overflow:hidden}
 <div class="btns"><button class="btn primary" id="saveList" type="button">Save new ratings</button></div>
 <div class="msg" id="updMsg" role="status"></div>
 </div></details>
-<details id="favDet"><summary id="favSum">Saved matchups</summary><div class="pad" id="favBox"></div></details>
 <details id="pasteDet"><summary>Paste odds from your sportsbook</summary><div class="pad">
 <p class="help">Copy the table tennis page from DraftKings (or anywhere) and paste it here. The app finds player names and American odds, matches them to upcoming matches, and fills in the EV for each one.</p>
 <textarea id="oddsPaste" placeholder="Paste here"></textarea>
@@ -562,12 +563,14 @@ const sur=n=>n.split(" ")[0];
 function update(){
  const a=sel.A,b=sel.B;
  renderMatchInfo();
- const favB=$("favBtn"),favM=$("favMBtn");
- if(a&&b&&a!==b){const on=isFav(a.name,b.name);favB.hidden=false;favB.textContent=on?"★ Matchup":"☆ Matchup";favB.setAttribute("aria-pressed",on);favB.classList.toggle("on",on);favB.onclick=()=>toggleFav(a.name,b.name);
+ // One star. It saves the scheduled match when there is one, otherwise the pairing.
+ const favB=$("favBtn");
+ if(a&&b&&a!==b){
   const r=CURMATCH&&!CURMATCH.fin&&!CURMATCH.res&&favKey(CURMATCH.p1,CURMATCH.p2)===favKey(a.name,b.name)?CURMATCH:null;
-  if(r){const m=isFavM(r);favM.hidden=false;favM.textContent=m?"★ This match":"☆ This match";favM.setAttribute("aria-pressed",m);favM.classList.toggle("on",m);favM.onclick=()=>toggleFavM(r)}
-  else favM.hidden=true;}
- else {favB.hidden=true;favM.hidden=true;}
+  const on=r?isFavM(r):isFav(a.name,b.name);
+  favB.hidden=false;favB.textContent=on?"★ Saved":"☆ Save";favB.setAttribute("aria-pressed",on);favB.classList.toggle("on",on);
+  favB.onclick=()=>r?toggleFavM(r):toggleFav(a.name,b.name);
+ }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
  if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
@@ -640,7 +643,8 @@ const okey=(x,y,slot)=>[x,y].sort().join("|")+(slot?"@"+slot:"");
 const slotOf=(a,b)=>{const r=CURMATCH&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;return r?r.date+" "+r.time:""};
 function rememberOdds(a,b){const k=okey(a.name,b.name,slotOf(a,b)),oa=readOdds("A"),ob=readOdds("B");
  if(oa===null&&ob===null)return;
- clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typingconst first=a.name<b.name;
+ clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typing
+ const first=a.name<b.name;
  (OHIST[k]||(OHIST[k]=[])).push({o1:first?oa:ob,o2:first?ob:oa,at:Date.now()});trimOdds();
  }
 function storedOdds(n1,n2,slot){const v=ODDS[okey(n1,n2,slot)];if(!v)return null;const first=n1<n2;return{o1:first?v.o1:v.o2,o2:first?v.o2:v.o1,at:v.at}}
@@ -1266,11 +1270,10 @@ function bookScore(){
 function renderFavs(){
  const box=$("favBox");if(!box)return;
  tidyFavM();
- $("favSum").textContent=`Saved (${FAVM.size+FAVS.size})`;
  if(!FAVS.size&&!FAVM.size){box.innerHTML='<p class="help">Nothing saved yet. On a matchup, tap ☆ This match for one scheduled game, or ☆ Matchup to follow that pairing every time they meet. In Today, the star saves that match.</p>';return}
  const now=Date.now();
  const mrows=[...FAVM].map(k=>SCHED.find(r=>matchKey(r)===k)).filter(Boolean).sort((a,b)=>a.at-b.at);
- const mhtml=mrows.length?`<h3 class="rch">Saved matches</h3><ul class="slist">${mrows.map(r=>{
+ const mhtml=mrows.length?`<h3 class="rch">Matches</h3><ul class="slist">${mrows.map(r=>{
    const a=players.find(p=>p.name===r.p1),b=players.find(p=>p.name===r.p2),e=a&&b?estimate(a,b):null;
    return `<li class="srowwrap"><button type="button" class="favtog on" data-rmm="${matchKey(r)}" aria-label="Remove from saved">★</button>
    <button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${r.at.toLocaleDateString([],{weekday:"short"})}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${e?` · Est: ${esc(sur((e.pa>=.5?a:b).name))} ${Math.round(Math.max(e.pa,1-e.pa)*100)}%`:""}</small></span></button></li>`}).join("")}</ul>`:"";
@@ -1282,7 +1285,7 @@ function renderFavs(){
   return{k,x,y,next,a,b,est};
  }).sort((p,q)=>(p.next?p.next.at:Infinity)-(q.next?q.next.at:Infinity));
 if(!FAVS.size){box.innerHTML=mhtml;wireFavs(box);return}
- box.innerHTML=mhtml+`<h3 class="rch">Saved matchups</h3><ul class="slist">${rows.map(r=>`<li class="srowwrap"><button type="button" class="favtog on" data-fav="${esc(r.x)}|${esc(r.y)}" aria-label="Remove from saved">★</button>
+ box.innerHTML=mhtml+`<h3 class="rch">Matchups</h3><ul class="slist">${rows.map(r=>`<li class="srowwrap"><button type="button" class="favtog on" data-fav="${esc(r.x)}|${esc(r.y)}" aria-label="Remove from saved">★</button>
   <button type="button" class="srow" data-pair="${esc(r.x)}|${esc(r.y)}"><span class="smid"><span class="sp">${esc(r.x)} <span class="muted">vs</span> ${esc(r.y)}</span>
   <small class="muted">${r.next?`${r.next.at.toLocaleString([], {weekday:"short",hour:"2-digit",minute:"2-digit"})} · ${esc(r.next.tour)}`:"not scheduled in the next 30 hours"}${r.est?` · Est: ${esc(sur((r.est.pa>=.5?r.a:r.b).name))} ${Math.round(Math.max(r.est.pa,1-r.est.pa)*100)}%`:""}</small></span></button></li>`).join("")}</ul>`;
  wireFavs(box);
@@ -1292,21 +1295,24 @@ function wireFavs(box){
  box.querySelectorAll("[data-rmm]").forEach(btn=>btn.onclick=()=>{FAVM.delete(btn.dataset.rmm);save("tt-favm",[...FAVM]);renderSched();renderFavs()});
  box.querySelectorAll("[data-i]").forEach(btn=>btn.onclick=()=>{
   const r=SCHED[+btn.dataset.i];PICKED=r;sel.A=players.find(p=>p.name===r.p1)||null;sel.B=players.find(p=>p.name===r.p2)||null;
-  $("inA").value=r.p1;$("inB").value=r.p2;closeSheet("menu");update();scrollTo(0,0);
+  $("inA").value=r.p1;$("inB").value=r.p2;closeSheet("favs");update();scrollTo(0,0);
  });
  box.querySelectorAll("[data-pair]").forEach(btn=>btn.onclick=()=>{
   const [x,y]=btn.dataset.pair.split("|");
   const r=SCHED.filter(z=>!z.res&&!z.fin&&favKey(z.p1,z.p2)===favKey(x,y)&&z.at.getTime()>Date.now()-30*60000).sort((p,q)=>p.at-q.at)[0];
   PICKED=r||null;sel.A=players.find(p=>p.name===(r?r.p1:x))||null;sel.B=players.find(p=>p.name===(r?r.p2:y))||null;
   $("inA").value=sel.A?sel.A.name:x;$("inB").value=sel.B?sel.B.name:y;
-  closeSheet("menu");update();scrollTo(0,0);
+  closeSheet("favs");update();scrollTo(0,0);
  });
 }
 
 // ---------- menu sheet ----------
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
 function closeMenu(){$("menu").hidden=true;document.documentElement.classList.remove("lock");$("menuBtn").focus()}
-$("menuBtn").onclick=()=>{renderFavs();openMenu()};$("menuClose").onclick=closeMenu;
+$("menuBtn").onclick=openMenu;
+$("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
+$("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");$("favsBtn").focus()}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
