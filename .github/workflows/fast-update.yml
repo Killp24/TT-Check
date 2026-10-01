@@ -1,0 +1,37 @@
+name: Fast update (schedule and results)
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"    # GitHub often runs late, so each run keeps working for ~50 min
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-update          # never clashes with the full update
+
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every 5 minutes for 50 minutes
+        run: |
+          git config user.name "data-bot"
+          git config user.email "data-bot@users.noreply.github.com"
+          END=$(( $(date +%s) + 50*60 ))
+          while [ "$(date +%s)" -lt "$END" ]; do
+            echo "--- $(date -u +%H:%M) ---"
+            python3 fast_update.py || echo "run failed, will retry"
+            git add schedule.txt official.txt 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -m "Fast update: schedule and results"
+              git pull --rebase --autostash || true
+              git push || echo "push failed, will retry next loop"
+            else
+              echo "no changes"
+            fi
+            sleep 300
+          done
