@@ -284,7 +284,7 @@ let pending=load("tt-pending")||[];          // match lines waiting to sync
 
 // ---------- data ----------
 let data=load("tt-data");                   // {ratings,ban,matches,at}
-let KCAL={k:0.85,n:0,fitted:false},HIST=[],MODEL={n:0},CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
+let SADJ={},KCAL={k:0.85,n:0,fitted:false},HIST=[],MODEL={n:0},CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 function parseRatings(text){
  const rows=[];
@@ -398,6 +398,8 @@ function computeStats(){
  }
  STATS=new Map();let bad=0,days=0;
  const tacc={},racc={},cal=[],sides=[],seenPair=new Map();
+ const sacc={};              // losing streak length -> [n, wins, sum predicted]
+ const dayOrder=new Map();   // player|date -> [[match number, predicted, won]]
  const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);
  for(const [m,ew] of PRE){
@@ -407,6 +409,8 @@ function computeStats(){
    if(!prev||ord(m)>ord(prev))seenPair.set(k,m)}
   if(m.date<since)continue;
   for(const [n,e,won] of [[m.w,ew,1],[m.l,1-ew,0]]){
+   const idx=(m.w===n?m.iw:m.il);
+   if(idx){const k=n+"|"+m.date,arr=dayOrder.get(k)||[];arr.push([idx,e,won]);dayOrder.set(k,arr)}
    const s=st(n);
    if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e])}
    else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
@@ -422,6 +426,17 @@ function computeStats(){
    d.n++;d.w+=won;d.e+=e;if(e>0.55&&!won)d.favL++;
   }
  }
+ // Each loss pushes a rating down faster than real form drops, so a player on a
+ // losing run inside one day tends to beat the number next time out.
+ for(const lst of dayOrder.values()){
+  lst.sort((a,b)=>a[0]-b[0]);
+  if(new Set(lst.map(x=>x[0])).size<lst.length)continue;
+  let run=0;
+  for(const [,p,won] of lst){
+   if(run>=1){const k=Math.min(run,3),a=sacc[k]||(sacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=p}
+   run=won?0:run+1;
+  }
+ }
  for(const s of STATS.values()){s.play=0;s.bad=0;
   for(const d of s.days.values())if(d.n>=3){s.play++;if(d.w-d.e<=-1.5&&d.favL>=2)s.bad++}
   bad+=s.bad;days+=s.play}
@@ -431,6 +446,7 @@ function computeStats(){
  const lg=p=>Math.log(p/(1-p)),cl=p=>Math.min(.97,Math.max(.03,p));
  // Each effect is measured against what players at the same level actually win,
  // then shrunk toward zero so a small sample can't move much.
+ SADJ={};for(const [k,[n,w,e]] of Object.entries(sacc))SADJ[k]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+150)};
  RADJ={};for(const [sc,[n,w,e]] of Object.entries(racc))RADJ[sc]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+150)};
  TADJ={};for(const [k,[n,w,e]] of Object.entries(tacc))TADJ[k]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+300)};
  MODEL={n:PRE.length,rated:R.size};
@@ -459,6 +475,12 @@ function estimate(a,b){
   adj+=(prev.w===a.name?1:-1)*rx.shift;
   why.push(`${esc(sur(prev.w))} beat ${esc(sur(prev.l))} ${esc(prev.score)} earlier today; after a same-day ${esc(prev.score)} win the winner takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time (${rx.won} of ${rx.n}), more than the new ratings allow for, so +${Math.abs(toElo(rx.shift))} Elo`);
  }
+ // A long losing run today means the rating has overshot downward
+ for(const [p,sign] of [[a,1],[b,-1]]){
+  const st=streakToday(p.name),x=SADJ[Math.min(st.run,3)];
+  if(st.run>=3&&x&&x.n>=100&&x.shift>0.02){adj+=sign*x.shift;
+   why.push(`${esc(sur(p.name))} has lost ${st.run} in a row today, which drags a rating down faster than real form: players in that spot won ${Math.round(x.won/x.n*100)}% where ${Math.round(x.exp/x.n*100)}% was predicted, so +${Math.abs(toElo(x.shift))} Elo`)}
+ }
  adj=Math.max(-1,Math.min(1,adj));
  const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
  return{pe,pa,why,skipped,prev,banWhy,raw};
@@ -468,6 +490,10 @@ function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
  return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favB}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogB}}
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
+const streakToday=n=>{const t=warsawToday();
+ const ms=official.filter(m=>m.date===t&&(m.w===n||m.l===n)).sort((x,y)=>((x.w===n?x.iw:x.il)||99)-((y.w===n?y.iw:y.il)||99));
+ let run=0;for(const m of ms){if(m.w===n)run=0;else run++}
+ return{run,n:ms.length,w:ms.filter(m=>m.w===n).length}};
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
 const yestOf=n=>{const s=STATS.get(n);if(!s)return null;const d=new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"Europe/Warsaw"});return s.days.get(d)||null};
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
@@ -480,7 +506,7 @@ function statLines(p){
  if(s.play>=3)h+=`<small class="bd">Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
  const d=todayOf(p.name),y=d?null:yestOf(p.name);
  if(!d&&y)h+=`<small class="today">Yesterday: ${y.w}–${y.n-y.w}</small>`;
- if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}, rough start</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
+ if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}${streakToday(p.name).run>=3?`, lost ${streakToday(p.name).run} in a row`:""}</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
  return h;
 }
 
@@ -608,7 +634,10 @@ function update(){
   else if(k.no==="weak")notes.push(`${who}: no points deducted.${today} ${k.pf<0.6?"The match is close to even, so the ban list adjustment is phased out.":"Tier "+k.t+" players haven't underperformed enough as favorites to move the number."}`);
   else notes.push(`${who}: −${Math.abs(k.elo)} Elo deducted${k.wt<1?" (reduced because the match is close to even)":""}.${today} Tier ${k.t} players as favorites have won ${k.x.won} of ${k.x.n} where ${k.x.exp.toFixed(0)} was predicted${k.o&&k.o.n>=10?`, and his own record backs it: ${k.o.w}–${k.o.n-k.o.w} as favorite, ${sgn(k.o.diff)} vs expected`:""}. Today's results aren't part of this; the deduction comes from the long-run record.`);
  }
- for(const p of [fav,dog]){if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} has had a rough start today (${d.w}–${d.n-d.w}${d.favL?`, lost ${d.favL} as favorite`:""}). So far, players haven't kept slumping after a bad start, so this isn't counted in the estimate.`)}}
+ for(const p of [fav,dog]){
+  const stk=streakToday(p.name),x=SADJ[3];
+  if(stk.run>=3){notes.push(`${esc(p.name)} has lost ${stk.run} in a row today (${stk.w}–${stk.n-stk.w}). That isn't a reason to fade him: each loss pushes his rating down faster than his real level drops, and players on a run like this won ${x&&x.n?Math.round(x.won/x.n*100):48}% where ${x&&x.n?Math.round(x.exp/x.n*100):43}% was predicted${x&&x.n>=100&&x.shift>0.02?", so the estimate gives those points back":""}.`);continue}
+  if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} is ${d.w}–${d.n-d.w} today. A bad start on its own hasn't predicted the next result, so it isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
   if(s&&s.favN>=10){const pm=(s.favW-s.favB)/s.favN;
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favB).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
@@ -847,6 +876,10 @@ function reportCard(){
  <h3 class="rch">Is the ban list still working?</h3>
  <div class="otab"><table><tr><th>Tier as favorite</th><th>Matches</th><th>Won</th><th>Predicted</th></tr>${tiersAll.map(x=>`<tr><td>Tier ${x.t}</td><td>${x.n}</td><td class="${x.n>=30&&x.won/x.n-x.exp/x.n<-0.05?"neg":""}">${x.n?pct(x.won/x.n):"–"}</td><td>${x.n?pct(x.exp/x.n):"–"}</td></tr>`).join("")}</table></div>
  <p class="help">Won below Predicted means the list is picking up real underperformance. Since you made the list on ${nice(LISTDATE)}: ${tiersNew.map(x=>`Tier ${x.t} ${x.n?`${pct(x.won/x.n)} vs ${pct(x.exp/x.n)} (${x.n})`:"no matches"}`).join(", ")}.</p>
+ <h3 class="rch">After a losing run today</h3>
+ ${(()=>{const ks=Object.keys(SADJ).sort();if(!ks.length)return`<p class="help">No data yet.</p>`;
+  return `<div class="otab"><table><tr><th>Lost in a row</th><th>Next matches</th><th>Won</th><th>Predicted</th></tr>${ks.map(k=>{const x=SADJ[k];return `<tr><td>${k==="3"?"3 or more":k}</td><td>${x.n}</td><td class="${x.won/x.n-x.exp/x.n>0.03?"pos":""}">${Math.round(x.won/x.n*100)}%</td><td>${Math.round(x.exp/x.n*100)}%</td></tr>`}).join("")}</table></div>
+  <p class="help">The estimate adds ${SADJ[3]&&SADJ[3].n>=100&&SADJ[3].shift>0.02?`+${Math.abs(toElo(SADJ[3].shift))} Elo after 3 or more losses in a row`:"nothing yet"}. It needs today's results, so it only works while results are collected through the day.</p>`})()}
  <h3 class="rch">Same-day rematches</h3>
  ${rem.length?`<div class="otab"><table><tr><th>First result</th><th>Rematches</th><th>Winner won again</th><th>Predicted</th></tr>${rem.map(k=>{const x=RADJ[k];return `<tr><td>${esc(k)}</td><td>${x.n}</td><td class="${x.won/x.n-x.exp/x.n>0.05?"pos":""}">${pct(x.won/x.n)}</td><td>${pct(x.exp/x.n)}</td></tr>`}).join("")}</table></div>
  <p class="help">Whoever won the first match usually wins the rematch, but that's because they're the better player — the ratings already expect it. The estimate only adds points if they win by more than predicted: currently ${used.length?used.map(k=>`${esc(k)}: +${Math.abs(toElo(RADJ[k].shift))} Elo`).join(", "):"no adjustment, the gap is too small to be real"}.</p>`:`<p class="help">No rematch data yet.</p>`}
