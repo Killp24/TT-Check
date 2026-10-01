@@ -310,7 +310,7 @@ function parseMatches(t,src){return t.split(/\r?\n/).map((raw,i)=>{const s=raw.t
  const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||"",iw:+p[4]||0,il:+p[5]||0,eloW:/^[+-]?\d+$/.test(p[6]||"")?parseInt(p[6]):null,src}}).filter(Boolean)}
 function parseCareer(t){const m=new Map();t.split(/\r?\n/).forEach(l=>{const p=l.split("|").map(x=>x.trim());if(p.length>=3&&l[0]!=="#")m.set(p[0],[+p[1],+p[2]])});return m}
 async function loadOfficial(){
- try{const [o,c,sc]=await Promise.all(["official.txt","players.txt","schedule.txt"].map(getData));SCHED=parseSched(sc);
+ try{const [o,c,sc]=await Promise.all(["official.txt","players.txt","schedule.txt"].map(getData));SCHED=parseSched(sc);TIMEIX=null;
   official=parseMatches(o,"off");career=parseCareer(c);offAt=(o.match(/# updated (\S+)/)||[])[1]||null;
   try{HIST=parseHistory(await getData("ratings_history.txt"))}catch(e){HIST=[]}
   await loadSharedOdds();
@@ -494,7 +494,7 @@ function estimate(a,b){
  for(const [p,sign] of [[a,1],[b,-1]]){
   const st=streakToday(p.name),x=SADJ[Math.min(st.run,3)];
   if(st.run>=3&&x&&x.n>=100&&x.shift>0.02){adj+=sign*x.shift;
-   why.push(`${esc(sur(p.name))} has lost ${st.run} in a row today, which drags a rating down faster than real form: players in that spot won ${Math.round(x.won/x.n*100)}% where ${Math.round(x.exp/x.n*100)}% was predicted, so +${Math.abs(toElo(x.shift))} Elo`)}
+   why.push(`${esc(sur(p.name))} has lost ${st.run} in a row this session, which drags a rating down faster than real form: players in that spot won ${Math.round(x.won/x.n*100)}% where ${Math.round(x.exp/x.n*100)}% was predicted, so +${Math.abs(toElo(x.shift))} Elo`)}
  }
  adj=Math.max(-1,Math.min(1,adj));
  const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
@@ -505,10 +505,26 @@ function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
  return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favB}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogB}}
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
-const streakToday=n=>{const t=warsawToday();
- const ms=official.filter(m=>m.date===t&&(m.w===n||m.l===n)).sort((x,y)=>((x.w===n?x.iw:x.il)||99)-((y.w===n?y.iw:y.il)||99));
+// A session can run past Polish midnight, so "today" means the player's recent run of
+// matches rather than the calendar date: everything within the last 12 hours.
+let TIMEIX=null;
+function matchTime(m){
+ if(!TIMEIX){TIMEIX=new Map();
+  for(const r of SCHED){const k=r.date+"|"+[r.p1,r.p2].sort().join("|");const a=TIMEIX.get(k)||[];a.push(r.at.getTime());TIMEIX.set(k,a)}
+  for(const v of TIMEIX.values())v.sort((a,b)=>a-b);
+ }
+ const arr=TIMEIX.get(m.date+"|"+[m.w,m.l].sort().join("|"));
+ if(arr&&arr.length)return arr[arr.length-1];
+ return Date.parse(m.date+"T12:00:00Z");       // rough fallback when it isn't on the schedule
+}
+function sessionOf(n){
+ const cut=Date.now()-12*36e5;
+ const ms=official.filter(m=>(m.w===n||m.l===n)&&matchTime(m)>=cut)
+   .sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:((x.w===n?x.iw:x.il)||99)-((y.w===n?y.iw:y.il)||99));
  let run=0;for(const m of ms){if(m.w===n)run=0;else run++}
- return{run,n:ms.length,w:ms.filter(m=>m.w===n).length}};
+ return{run,n:ms.length,w:ms.filter(m=>m.w===n).length};
+}
+const streakToday=sessionOf;
 const todayOf=n=>{const s=STATS.get(n);return s?s.days.get(warsawToday()):null};
 const yestOf=n=>{const s=STATS.get(n);if(!s)return null;const d=new Date(Date.now()-864e5).toLocaleDateString("en-CA",{timeZone:"Europe/Warsaw"});return s.days.get(d)||null};
 const badToday=n=>{const d=todayOf(n);return d&&(d.favL>=2||d.w-d.e<=-1.5)};
@@ -519,9 +535,11 @@ function statLines(p){
  const line=(lab,n,w,bse)=>n?`<small>As ${lab}: ${w}–${n-w}, ${sgn(w-bse)} vs expected${n<5?" (few matches)":""}</small>`:`<small>As ${lab}: no matches on record</small>`;
  h+=line("favorite",s.favN,s.favW,s.favB)+line("underdog",s.dogN,s.dogW,s.dogB);
  if(s.play>=3)h+=`<small class="bd">Bad days: ${s.bad} of ${s.play} (league ${Math.round(LEAGUE*100)}%)</small>`;
- const d=todayOf(p.name),y=d?null:yestOf(p.name);
- if(!d&&y)h+=`<small class="today">Yesterday: ${y.w}–${y.n-y.w}</small>`;
- if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}${streakToday(p.name).run>=3?`, lost ${streakToday(p.name).run} in a row`:""}</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
+ const ses=sessionOf(p.name);
+ if(ses.n)h+=`<small class="today${ses.run>=3?" bad":""}">This session: ${ses.w}–${ses.n-ses.w}${ses.run>=3?`, lost ${ses.run} in a row`:""}</small>`;
+ const d=ses.n?null:todayOf(p.name),y=(d||ses.n)?null:yestOf(p.name);
+ if(y)h+=`<small class="today">Yesterday: ${y.w}–${y.n-y.w}</small>`;
+ if(d)h+=badToday(p.name)?`<small class="today bad">Today: ${d.w}–${d.n-d.w}</small>`:`<small class="today">Today: ${d.w}–${d.n-d.w}</small>`;
  return h;
 }
 
@@ -642,7 +660,7 @@ function update(){
   notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The ratings above already include the points that moved after it.${rx&&rx.n>=40?` Historically the winner of the first match takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time, and the ratings predict ${Math.round(rx.exp/rx.n*100)}%${on?", so the estimate adds points for it":" — the same thing, so no points are added: winning earlier mostly just confirms who the better player is"}.`:""}`);
   if(!wonEarlier&&on){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}}
  for(const k of est.banWhy){
-  const d=todayOf(k.p.name),today=d?` Today he's ${d.w}–${d.n-d.w}${d.favL?` with ${d.favL} loss${d.favL>1?"es":""} as favorite`:""}.`:" He hasn't played yet today.";
+  const se=sessionOf(k.p.name),today=se.n?` This session he's ${se.w}–${se.n-se.w}${se.run>=3?`, having lost ${se.run} in a row`:""}.`:" He hasn't played recently.";
   const who=`${esc(k.p.name)} (ban #${banRank(k.p)}, Tier ${k.t})`;
   if(k.no==="dog")notes.push(`${who}: no points deducted.${today} He's the underdog here, and the ban list only predicts upsets when the flagged player is favored — as an underdog his results match the ratings, so today's form doesn't change that.`);
   else if(k.no==="own"){const o=k.o;notes.push(`${who}: no points deducted.${today} Over the last 6 months he's ${o.w}–${o.n-o.w} as favorite, ${sgn(o.diff)} wins vs expected, so his own record contradicts his ban list place. A bad day alone isn't enough to deduct points, because players who start badly haven't kept losing.`)}
@@ -651,7 +669,7 @@ function update(){
  }
  for(const p of [fav,dog]){
   const stk=streakToday(p.name),x=SADJ[3];
-  if(stk.run>=3){notes.push(`${esc(p.name)} has lost ${stk.run} in a row today (${stk.w}–${stk.n-stk.w}). That isn't a reason to fade him: each loss pushes his rating down faster than his real level drops, and players on a run like this won ${x&&x.n?Math.round(x.won/x.n*100):48}% where ${x&&x.n?Math.round(x.exp/x.n*100):43}% was predicted${x&&x.n>=100&&x.shift>0.02?", so the estimate gives those points back":""}.`);continue}
+  if(stk.run>=3){notes.push(`${esc(p.name)} has lost ${stk.run} in a row this session (${stk.w}–${stk.n-stk.w}). That isn't a reason to fade him: each loss pushes his rating down faster than his real level drops, and players on a run like this won ${x&&x.n?Math.round(x.won/x.n*100):48}% where ${x&&x.n?Math.round(x.exp/x.n*100):43}% was predicted${x&&x.n>=100&&x.shift>0.02?", so the estimate gives those points back":""}.`);continue}
   if(badToday(p.name)&&!est.banWhy.some(k=>k.p===p)){const d=todayOf(p.name);notes.push(`${esc(p.name)} is ${d.w}–${d.n-d.w} today. A bad start on its own hasn't predicted the next result, so it isn't counted in the estimate.`)}}
  if(gap){const s=STATS.get(fav.name);
   if(s&&s.favN>=10){const pm=(s.favW-s.favB)/s.favN;
