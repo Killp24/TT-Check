@@ -981,47 +981,60 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){
 // We walk the lines, collect names we recognise and the odds that follow them, then
 // pair them up with a scheduled match.
 function parsePastedOdds(text){
- const byLast=new Map();
- for(const p of players){const k=norm(p.name.split(" ")[0]);if(!byLast.has(k))byLast.set(k,[]);byLast.get(k).push(p)}
+ const byWord=new Map();
+ for(const p of players)for(const w of norm(p.name).split(" ")){if(!byWord.has(w))byWord.set(w,[]);byWord.get(w).push(p)}
  const find=raw=>{
-  const t=norm(raw).replace(/[^a-z .'-]/g," ").replace(/\s+/g," ").trim();
-  if(!t||t.length<4)return null;
+  let t=norm(raw).replace(/[^a-z .'-]/g," ").replace(/\s+/g," ").trim();
+  if(t.length<4||t.split(" ").length>4)return null;
   let hit=players.filter(p=>norm(p.name)===t);
   if(hit.length===1)return hit[0];
   const w=t.split(" ");
-  if(w.length>=2){                                  // "Lukasz Oracz" or "Oracz Lukasz"
-   const flip=w.slice().reverse().join(" ");
-   hit=players.filter(p=>norm(p.name)===flip);
+  if(w.length>=2){
+   hit=players.filter(p=>norm(p.name)===w.slice().reverse().join(" "));   // "Michal Olbrycht" -> "Olbrycht Michal"
    if(hit.length===1)return hit[0];
-   const cands=(byLast.get(w[w.length-1])||[]).concat(byLast.get(w[0])||[]);
-   const m=cands.filter(p=>w.every(x=>norm(p.name).includes(x)));
+   const seen=new Set(),cands=[];
+   for(const x of w)for(const p of (byWord.get(x)||[]))if(!seen.has(p.name)){seen.add(p.name);cands.push(p)}
+   const m=cands.filter(p=>{const n=norm(p.name).split(" ");return w.every(x=>n.includes(x))});
    if(m.length===1)return m[0];
   }
   return null;
  };
- const seq=[];
+ // A pasted page arrives as markdown links and loose lines, so flatten it first
+ const lines=[];
  for(let line of text.split(/\r?\n/)){
-  line=line.trim();if(!line)continue;
-  // a line may hold a name and a price together
-  const om=line.match(/([+\u2212\u2013-]\s?\d{3,4})\s*$/);
-  if(om){
-   const price=+om[1].replace(/[\u2212\u2013]/,"-").replace(/\s/g,"");
-   const rest=line.slice(0,om.index).trim();
-   const pl=find(rest);
-   if(pl)seq.push({p:pl,o:price}); else seq.push({o:price});
-   continue;
+  line=line.replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").trim();      // [Name](link) -> Name
+  if(!line||/^https?:/i.test(line))continue;
+  lines.push(line);
+ }
+ const ODDRE=/^[+\-\u2212\u2013]\s?(\d{2,4})$/;
+ const toks=[];
+ for(const line of lines){
+  const m=line.match(ODDRE);
+  if(m){toks.push({o:(/^[\-\u2212\u2013]/.test(line)?-1:1)*(+m[1])});continue}
+  const inline=line.match(/^(.*?)\s+([+\-\u2212\u2013]\s?\d{2,4})$/);
+  if(inline){const p=find(inline[1]);if(p){toks.push({p});toks.push({o:(/^[\-\u2212\u2013]/.test(inline[2].trim())?-1:1)*(+inline[2].replace(/[^\d]/g,""))});continue}}
+  const p=find(line);
+  if(p)toks.push({p});
+ }
+ // Each matchup is two names followed by their two prices, in that order
+ const out=[];let names=[],odds=[];
+ const flush=()=>{
+  if(names.length===2&&odds.length===2){out.push({name:names[0].name,o:odds[0]});out.push({name:names[1].name,o:odds[1]})}
+  names=[];odds=[];
+ };
+ for(const t of toks){
+  if(t.p){
+   if(odds.length)flush();
+   if(names.length===2)names=[];
+   names.push(t.p);
+  }else{
+   if(!names.length)continue;
+   odds.push(t.o);
+   if(odds.length===2)flush();
   }
-  const pl=find(line);
-  if(pl)seq.push({p:pl});
  }
- // attach each price to the most recent name that has none yet
- const picks=[];let pend=null;
- for(const it of seq){
-  if(it.p&&it.o!==undefined){picks.push({name:it.p.name,o:it.o});pend=null;continue}
-  if(it.p){if(pend)picks.push({name:pend,o:null});pend=it.p.name;continue}
-  if(it.o!==undefined&&pend){picks.push({name:pend,o:it.o});pend=null}
- }
- return picks;
+ flush();
+ return out;
 }
 function applyPastedOdds(text){
  const picks=parsePastedOdds(text);
