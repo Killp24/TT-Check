@@ -605,15 +605,16 @@ function update(){
 // ---------- odds & value (American odds) ----------
 const odds={A:{v:"",neg:true},B:{v:"",neg:false}};
 let pushTimer=0;
-let ODDS=load("tt-odds")||{};   // "Player A|Player B" -> [oddsA, oddsB], newest first
+let OHIST=load("tt-odds")||{};
+let ODDS={};   // "Player A|Player B" -> [oddsA, oddsB], newest first
 const okey=(x,y,slot)=>[x,y].sort().join("|")+(slot?"@"+slot:"");
 // Each scheduled meeting keeps its own odds, so a rematch later the same day starts blank
 const slotOf=(a,b)=>{const r=CURMATCH&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;return r?r.date+" "+r.time:""};
 function rememberOdds(a,b){const k=okey(a.name,b.name,slotOf(a,b)),oa=readOdds("A"),ob=readOdds("B");
  if(oa===null&&ob===null)return;
  clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typingconst first=a.name<b.name;
- ODDS[k]={o1:first?oa:ob,o2:first?ob:oa,at:Date.now()};
- const ks=Object.keys(ODDS).sort((x,y)=>ODDS[y].at-ODDS[x].at).slice(0,200);ODDS=Object.fromEntries(ks.map(x=>[x,ODDS[x]]));save("tt-odds",ODDS)}
+ (OHIST[k]||(OHIST[k]=[])).push({o1:first?oa:ob,o2:first?ob:oa,at:Date.now()});trimOdds();
+ }
 function storedOdds(n1,n2,slot){const v=ODDS[okey(n1,n2,slot)];if(!v)return null;const first=n1<n2;return{o1:first?v.o1:v.o2,o2:first?v.o2:v.o1,at:v.at}}
 let oddsPair="";
 const toProb=o=>o<0?(-o)/(-o+100):100/(o+100);
@@ -797,6 +798,15 @@ function reportCard(){
  const rem=Object.keys(RADJ).sort();
  const used=rem.filter(k=>RADJ[k].n>=40&&RADJ[k].shift>=0.05);
  box.innerHTML=`<p class="help">Every match below is scored using ratings built only from earlier matches, so nothing is judged with hindsight. ${MODEL.n.toLocaleString()} matches have enough history to test; the calibration table covers the last 14 days (${tested.length}).</p>
+ <h3 class="rch">The app vs the book</h3>
+ ${(()=>{const s=bookScore();
+  if(!s.n)return `<p class="help">No priced matches with a result yet. Paste the odds before matches start and this fills in by itself.</p>`;
+  const better=s.app<s.book;
+  return `<p class="rcv ${better?"pos":"neg"}">On ${s.n} priced match${s.n===1?"":"es"} with a result, the ${better?"app was more accurate than the book":"book was more accurate than the app"}.</p>
+   <div class="otab"><table><tr><th></th><th>Error per match</th></tr><tr><td>App</td><td>${(s.app/s.n).toFixed(3)}</td></tr><tr><td>Book</td><td>${(s.book/s.n).toFixed(3)}</td></tr></table></div>
+   <p class="help">Lower is better. ${s.gaps?`When they disagreed by 8 points or more (${s.gaps} match${s.gaps===1?"":"es"}), the app's side won ${s.appRight} time${s.appRight===1?"":"s"} (${Math.round(s.appRight/s.gaps*100)}%).`:"No big disagreements measured yet."} The book is the hardest benchmark there is, so beating it is the real test.</p>`})()}
+ <h3 class="rch">Closing line value</h3>
+ ${clvSummary()}
  <h3 class="rch">How confident should the ratings be?</h3>
  <p class="rcv">${KCAL.fitted?`Measured on ${KCAL.n.toLocaleString()} matches: the ratings are ${KCAL.k<1?"overconfident":KCAL.k>1?"underconfident":"about right"}, so the estimate pulls them toward 50% with a factor of ${KCAL.k}.`:`Not measured yet — using a cautious default of ${KCAL.k}. It needs a few days of saved rating snapshots (${HIST.length} day${HIST.length===1?"":"s"} on file), then the app measures this itself.`}</p>
  <p class="help">A favourite the ratings put at 73% becomes ${Math.round(sg(KCAL.k*lgt(0.73))*100)}% after the pull-in. This is the biggest single correction in the app.</p>
@@ -985,36 +995,52 @@ const num=x=>{const n=parseInt(x,10);return isNaN(n)?null:n};
 // Odds live in the repo so every device, and your friend, sees the same prices.
 // Lines: date | time | player 1 | player 2 | odds 1 | odds 2 | saved at
 function parseOddsFile(t){
- const o={};
+ const h={};
  for(const line of (t||"").split(/\r?\n/)){
   if(!line.trim()||line[0]==="#")continue;
   const p=line.split("|").map(x=>x.trim());
   if(p.length<6)continue;
-  const first=p[2]<p[3];
-  o[okey(p[2],p[3],p[0]+" "+p[1])]={o1:first?num(p[4]):num(p[5]),o2:first?num(p[5]):num(p[4]),at:Date.parse(p[6]||"")||0};
+  const first=p[2]<p[3],k=okey(p[2],p[3],p[0]+" "+p[1]);
+  (h[k]||(h[k]=[])).push({o1:first?num(p[4]):num(p[5]),o2:first?num(p[5]):num(p[4]),at:Date.parse(p[6]||"")||0});
  }
- return o;
+ for(const k in h)h[k].sort((a,b)=>a.at-b.at);
+ return h;
 }
+const latestOf=arr=>arr&&arr.length?arr[arr.length-1]:null;
 function oddsFileText(){
  const lines=[];
- for(const [k,v] of Object.entries(ODDS)){
+ for(const [k,arr] of Object.entries(OHIST)){
   const at=k.indexOf("@");if(at<0)continue;                 // only odds tied to a scheduled match
   const [n1,n2]=k.slice(0,at).split("|"),slot=k.slice(at+1),sp=slot.indexOf(" ");
   if(sp<0)continue;
-  lines.push([slot.slice(0,sp),slot.slice(sp+1),n1,n2,v.o1??"",v.o2??"",new Date(v.at||Date.now()).toISOString()].join(" | "));
+  for(const v of arr)lines.push([slot.slice(0,sp),slot.slice(sp+1),n1,n2,v.o1??"",v.o2??"",new Date(v.at||Date.now()).toISOString()].join(" | "));
  }
  lines.sort();
- return "# Odds entered in the app (shared between devices)\n# date | time | player 1 | player 2 | odds 1 | odds 2 | saved at\n"+lines.join("\n")+"\n";
+ return "# Every price seen in the app, kept so we can compare opening and closing lines\n# date | time | player 1 | player 2 | odds 1 | odds 2 | saved at\n"+lines.slice(-4000).join("\n")+"\n";
 }
 function mergeOdds(remote){
  let added=0;
- for(const [k,v] of Object.entries(remote)){
-  const mine=ODDS[k];
-  if(!mine||(v.at||0)>(mine.at||0)){ODDS[k]=v;added++}
+ for(const [k,arr] of Object.entries(remote)){
+  const mine=OHIST[k]||(OHIST[k]=[]);
+  for(const v of arr){
+   if(!mine.some(x=>x.at===v.at&&x.o1===v.o1&&x.o2===v.o2)){mine.push(v);added++}
+  }
+  mine.sort((a,b)=>a.at-b.at);
  }
- const ks=Object.keys(ODDS).sort((x,y)=>(ODDS[y].at||0)-(ODDS[x].at||0)).slice(0,600);
- ODDS=Object.fromEntries(ks.map(x=>[x,ODDS[x]]));save("tt-odds",ODDS);
+ trimOdds();
  return added;
+}
+function trimOdds(){
+ const ks=Object.keys(OHIST).sort((x,y)=>(latestOf(OHIST[y])||{at:0}).at-(latestOf(OHIST[x])||{at:0}).at).slice(0,600);
+ OHIST=Object.fromEntries(ks.map(x=>[x,OHIST[x].slice(-12)]));
+ ODDS={};for(const k of ks){const v=latestOf(OHIST[k]);if(v)ODDS[k]=v}
+ save("tt-odds",OHIST);
+}
+// The price just before a match starts is the market's final word on it
+function closingOdds(key,startMs){
+ const arr=OHIST[key];if(!arr||!arr.length)return null;
+ const before=arr.filter(v=>!startMs||v.at<=startMs+5*60000);
+ return latestOf(before.length?before:arr);
 }
 async function loadSharedOdds(){
  try{const t=await fetch("odds.txt?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.text():"");
@@ -1114,7 +1140,7 @@ function applyPastedOdds(text){
   used.add(r.date+r.time+key);matched++;
   const o1=r.p1===x.name?x.o:y.o,o2=r.p2===x.name?x.o:y.o;
   const slot=r.date+" "+r.time,k=okey(r.p1,r.p2,slot),first=r.p1<r.p2;
-  ODDS[k]={o1:first?o1:o2,o2:first?o2:o1,at:Date.now()};
+  (OHIST[k]||(OHIST[k]=[])).push({o1:first?o1:o2,o2:first?o2:o1,at:Date.now()});
   const a=byNameP(r.p1),b=byNameP(r.p2);
   if(a&&b){const e=estimate(a,b);
    const sides=[[a,e.pa,o1],[b,1-e.pa,o2]].filter(z=>z[2]!==null&&z[2]!==undefined)
@@ -1122,8 +1148,7 @@ function applyPastedOdds(text){
    if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,gap:top.pm-top.imp})}
   }
  }
- const ks=Object.keys(ODDS).sort((p,q)=>ODDS[q].at-ODDS[p].at).slice(0,400);
- ODDS=Object.fromEntries(ks.map(x=>[x,ODDS[x]]));save("tt-odds",ODDS);
+ trimOdds();
  rows.sort((p,q)=>q.top.ev-p.top.ev);
  return{read:pairs.length,matched,rows};
 }
@@ -1150,9 +1175,61 @@ $("oddsSave").onclick=()=>{
  if(cfg.token)pushOdds().then(ok=>setMsg("oddsMsg",ok?"ok":"err",ok?`Read ${res.read} matchups, filled in ${res.matched} upcoming matches, and saved them for your other devices.`:`Read ${res.read} matchups, but couldn't save them to the shared file. They're still on this device.`));
  else setMsg("oddsMsg","ok",`Read ${res.read} matchups, filled in ${res.matched} upcoming matches. Add an access token in Sharing setup to share them with your other devices.`);
 };
-$("oddsWipe").onclick=async()=>{ODDS={};save("tt-odds",ODDS);$("gapBox").innerHTML="";$("oddsPaste").value="";renderSched();
+$("oddsWipe").onclick=async()=>{OHIST={};ODDS={};save("tt-odds",OHIST);$("gapBox").innerHTML="";$("oddsPaste").value="";renderSched();
  if(cfg.token&&navigator.onLine){try{await ghEdit("odds.txt",()=>oddsFileText(),"Clear odds");setMsg("oddsMsg","ok","Odds cleared on every device.")}catch(e){setMsg("oddsMsg","err","Cleared here, but the shared file didn't update.")}}
  else setMsg("oddsMsg","ok","Odds cleared on this device.")};
+
+
+// ---------- closing line value, and keeping score against the book ----------
+// Removing the bookmaker's cut from a two-sided price gives their true opinion.
+function fairPair(o1,o2){
+ if(o1===null||o1===undefined||o2===null||o2===undefined)return null;
+ const a=toProb(o1),b=toProb(o2),s=a+b;
+ return s>0?[a/s,b/s]:null;
+}
+function betKey(b){return b.time?okey(b.pick,b.opp,b.date+" "+b.time):null}
+// Did the price move your way after you bet? That is the best early sign of an edge.
+function clvOf(b){
+ const k=betKey(b);if(!k)return null;
+ const arr=OHIST[k];if(!arr||arr.length<2)return null;
+ const r=SCHED.find(x=>x.date===b.date&&x.time===b.time&&[x.p1,x.p2].sort().join("|")===[b.pick,b.opp].sort().join("|"));
+ const close=closingOdds(k,r?r.at.getTime():null);
+ if(!close)return null;
+ const first=b.pick<b.opp;
+ const co=first?close.o1:close.o2,oo=first?close.o2:close.o1;
+ const fair=fairPair(co,oo);
+ if(!fair)return null;
+ const closeP=fair[0];
+ return toProb(b.odds)-closeP;        // negative means you got a better price than the close
+}
+function clvSummary(){
+ const rows=BETS.filter(b=>!b.parlay).map(b=>({b,c:clvOf(b)})).filter(x=>x.c!==null);
+ if(!rows.length)return `<p class="help">Closing line value needs the same match priced twice — paste the odds again closer to the start and it will start measuring.</p>`;
+ const beat=rows.filter(x=>x.c<0).length,avg=rows.reduce((s,x)=>s+x.c,0)/rows.length;
+ return `<div class="otab"><table><tr><th>Bets measured</th><th>Beat the close</th><th>Average</th></tr>
+  <tr><td>${rows.length}</td><td class="${beat/rows.length>0.5?"pos":""}">${beat} (${Math.round(beat/rows.length*100)}%)</td><td class="${avg<0?"pos":"neg"}">${avg<0?"+":"−"}${Math.abs(avg*100).toFixed(1)} pts</td></tr></table></div>
+  <p class="help">You beat the close when the price shortened after you bet. Over 50+ bets this tells you whether you have an edge far sooner than profit does.</p>`;
+}
+// For every priced match with a result: who was closer, the app or the book?
+function bookScore(){
+ const out={n:0,app:0,book:0,gaps:0,appRight:0};
+ const byKey=new Map();
+ for(const m of official)byKey.set(m.date+"|"+[m.w,m.l].sort().join("|"),m);
+ for(const [k,arr] of Object.entries(OHIST)){
+  const at=k.indexOf("@");if(at<0)continue;
+  const [n1,n2]=k.slice(0,at).split("|"),slot=k.slice(at+1),date=slot.slice(0,slot.indexOf(" "));
+  const m=byKey.get(date+"|"+[n1,n2].sort().join("|"));
+  if(!m)continue;
+  const a=players.find(p=>p.name===n1),b=players.find(p=>p.name===n2);
+  if(!a||!b)continue;
+  const v=arr[0];const fair=fairPair(v.o1,v.o2);if(!fair)continue;
+  const pApp=estimate(a,b).pa,pBook=fair[0],won=m.w===n1?1:0;
+  const ll=(p,y)=>-(y?Math.log(Math.max(1e-6,p)):Math.log(Math.max(1e-6,1-p)));
+  out.n++;out.app+=ll(pApp,won);out.book+=ll(pBook,won);
+  if(Math.abs(pApp-pBook)>=0.08){out.gaps++;if((pApp>pBook)===(won===1))out.appRight++}
+ }
+ return out;
+}
 
 // ---------- menu sheet ----------
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
