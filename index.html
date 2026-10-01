@@ -303,9 +303,9 @@ function parseMatches(t,src){return t.split(/\r?\n/).map((raw,i)=>{const s=raw.t
  const p=s.split("|").map(x=>x.trim());if(p.length<3)return null;return{raw:s,order:i,date:p[0],w:p[1],l:p[2],score:p[3]||"",iw:+p[4]||0,il:+p[5]||0,eloW:/^[+-]?\d+$/.test(p[6]||"")?parseInt(p[6]):null,src}}).filter(Boolean)}
 function parseCareer(t){const m=new Map();t.split(/\r?\n/).forEach(l=>{const p=l.split("|").map(x=>x.trim());if(p.length>=3&&l[0]!=="#")m.set(p[0],[+p[1],+p[2]])});return m}
 async function loadOfficial(){
- try{const [o,c,sc]=await Promise.all(["official.txt","players.txt","schedule.txt"].map(f=>fetch(f).then(r=>r.ok?r.text():"")));SCHED=parseSched(sc);
+ try{const [o,c,sc]=await Promise.all(["official.txt","players.txt","schedule.txt"].map(getData));SCHED=parseSched(sc);
   official=parseMatches(o,"off");career=parseCareer(c);offAt=(o.match(/# updated (\S+)/)||[])[1]||null;
-  try{HIST=parseHistory(await fetch("ratings_history.txt").then(r=>r.ok?r.text():""))}catch(e){HIST=[]}
+  try{HIST=parseHistory(await getData("ratings_history.txt"))}catch(e){HIST=[]}
   await loadSharedOdds();
  }catch(e){}
 }
@@ -329,6 +329,14 @@ function apply(){
 
 // ---------- GitHub ----------
 const api=path=>`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/contents/${path}`;
+// Read data straight from the repo rather than the hosted copy: the website only
+// refreshes when GitHub rebuilds it, which can lag or fail, while the repo is instant.
+const rawUrl=f=>`https://raw.githubusercontent.com/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/main/${f}?t=${Date.now()}`;
+async function getData(f){
+ try{const r=await fetch(rawUrl(f),{cache:"no-store"});if(r.ok)return await r.text()}catch(e){}
+ try{const r=await fetch(f+"?t="+Date.now(),{cache:"no-store"});if(r.ok)return await r.text()}catch(e){}
+ return "";
+}
 const hdr=()=>({"Accept":"application/vnd.github+json","Authorization":"Bearer "+cfg.token});
 async function ghGet(path){
  const r=await fetch(api(path)+"?ref=main&t="+Date.now(),{headers:hdr(),cache:"no-store"});
@@ -350,7 +358,7 @@ async function ghEdit(path,fn,message){
 async function fetchAll(){
  let ratings,ban,m;
  if(cfg.token){[ratings,ban,m]=await Promise.all(["ratings.txt","ban.txt","matches.txt"].map(f=>ghGet(f).then(x=>x.text)))}
- else{[ratings,ban,m]=await Promise.all(["ratings.txt","ban.txt","matches.txt"].map(f=>fetch(f+"?t="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("Couldn't load "+f);return r.text()})))}
+ else{[ratings,ban,m]=await Promise.all(["ratings.txt","ban.txt","matches.txt"].map(getData))}
  data={ratings,ban,matches:m,at:Date.now()};save("tt-data",data);
 }
 async function syncPending(){
@@ -1110,7 +1118,7 @@ function closingOdds(key,startMs){
  return latestOf(before.length?before:arr);
 }
 async function loadSharedOdds(){
- try{const t=await fetch("odds.txt?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.text():"");
+ try{const t=await getData("odds.txt");
   if(t)mergeOdds(parseOddsFile(t))}catch(e){}
 }
 let oddsSyncing=false;
