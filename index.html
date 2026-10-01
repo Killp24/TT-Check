@@ -684,8 +684,8 @@ function renderSched(){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked,onlyEV=$("onlyEV").checked;
  // the site doesn't fill in results on schedule posts, so look them up in the collected matches
  linkResults();
- // Sessions often run early or late, so a match is only hidden once a result exists
- const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin)).filter(r=>r.at.getTime()>now-14*36e5&&r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
+ // Upcoming matches only, unless "Show finished" is ticked
+ const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin&&r.at.getTime()>now-30*60000)).filter(r=>r.at.getTime()>now-20*36e5&&r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
  let shown=0;
  const html=rows.map((r,i)=>{
   const a=byNameP(r.p1),b=byNameP(r.p2);
@@ -707,10 +707,10 @@ function renderSched(){
   if(onlyEV&&!/stag ev/.test(tags))return"";
   if(onlyFlag&&!flag)return"";
   shown++;
-  const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-20?"No result yet":mins<=0?"Now":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
+  const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-30?"No result on file":mins<=0?"Started":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
   return `<li><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${be?`<small class="muted">${be}</small>`:""}${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try unticking the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
- $("schedInfo").innerHTML=SCHED.length?`${shown} match${shown===1?"":"es"}, your phone's time zone. Scheduled times are the official plan; sessions often run early or late, so matches stay listed until a result comes in.<br>"Value under" = odds better than these would be value. Enter real odds on a matchup and they're remembered here.`:"";
+ $("schedInfo").innerHTML=SCHED.length?`${shown} match${shown===1?"":"es"}, your phone's time zone. Matches drop off 30 minutes after their scheduled start; tick "Show finished" to see earlier ones.<br>"Value under" = odds better than these would be value. Enter real odds on a matchup and they're remembered here.`:"";
 }
 $("schedList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
  PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
