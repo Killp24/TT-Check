@@ -2,7 +2,7 @@ name: Update ratings and matches
 
 on:
   schedule:
-    - cron: "7 * * * *"
+    - cron: "7 */6 * * *"
   workflow_dispatch:
 
 permissions:
