@@ -204,6 +204,8 @@ html.lock,html.lock body{overflow:hidden}
 .favtog.on{color:var(--ball);border-color:var(--ball)}
 .favtog.pair{color:var(--muted);border-style:dashed;border-color:var(--ball)}
 .favtog:focus-visible,.star:focus-visible{outline:3px solid var(--ball)}
+.stag.flagp{background:#6b21a8;color:#fff;border-color:#6b21a8}
+.vv.flagv{border-left-color:#6b21a8}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
@@ -244,6 +246,11 @@ html.lock,html.lock body{overflow:hidden}
 <textarea id="paste" placeholder="Paste the new list here"></textarea>
 <div class="btns"><button class="btn primary" id="saveList" type="button">Save new ratings</button></div>
 <div class="msg" id="updMsg" role="status"></div>
+</div></details>
+<details id="flagDet"><summary>Flagged price pair</summary><div class="pad">
+<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds.</p>
+<div class="row"><input id="flagA" class="bfstake" inputmode="numeric" aria-label="First price"><input id="flagB" class="bfstake" inputmode="numeric" aria-label="Second price"><button class="btn primary" id="flagSave" type="button">Save</button></div>
+<div class="msg" id="flagMsg" role="status"></div>
 </div></details>
 <details id="pasteDet"><summary>Paste odds from your sportsbook</summary><div class="pad">
 <p class="help">Copy the table tennis page from DraftKings (or anywhere) and paste it here. The app finds player names and American odds, matches them to upcoming matches, and fills in the EV for each one.</p>
@@ -659,6 +666,11 @@ function update(){
 
 // ---------- odds & value (American odds) ----------
 const odds={A:{v:"",neg:true},B:{v:"",neg:false}};
+// A price pair worth spotting: flag any match listed at exactly these two numbers
+let FLAGO=load("tt-flago")||{a:102,b:-136};
+const isFlagPair=(o1,o2)=>{if(o1===null||o2===null||o1===undefined||o2===undefined)return false;
+ const x=[o1,o2].sort((p,q)=>p-q),y=[FLAGO.a,FLAGO.b].sort((p,q)=>p-q);return x[0]===y[0]&&x[1]===y[1]};
+const fmtO=o=>(o>0?"+":"")+o;
 let FAVS=new Set(load("tt-favs")||[]);          // pairings, kept until you remove them
 let FAVM=new Set(load("tt-favm")||[]);          // one specific scheduled match
 const favKey=(x,y)=>[x,y].sort().join("|");
@@ -723,7 +735,8 @@ function oddsCalc(a,b,pa){
  const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
- out.innerHTML=`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
+ const flagged=isFlagPair(oa,ob);
+ out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Form, head-to-head and today's session aren't in the estimate: so far they haven't predicted results better than Elo.</p>`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
  out.insertAdjacentHTML("beforeend",`<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button><button class="btn" id="bfAdd" type="button">Add to parlay</button></div><div class="msg" id="bfMsg" role="status"></div><div id="slipBox"></div></div>`);
  $("bfSave").onclick=()=>logBet(a,b,model);
@@ -815,6 +828,7 @@ function renderSched(){
    if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
    const so=storedOdds(a.name,b.name,r.date+" "+r.time);
+   if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
@@ -1350,6 +1364,13 @@ function wireFavs(box){
 // ---------- menu sheet ----------
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
 function closeMenu(){$("menu").hidden=true;document.documentElement.classList.remove("lock");$("menuBtn").focus()}
+$("flagA").value=fmtO(FLAGO.a);$("flagB").value=fmtO(FLAGO.b);
+$("flagSave").onclick=()=>{
+ const a=parseInt(($("flagA").value||"").replace(/[^0-9+\-]/g,""),10),b=parseInt(($("flagB").value||"").replace(/[^0-9+\-]/g,""),10);
+ if(isNaN(a)||isNaN(b)){setMsg("flagMsg","err","Enter two American prices, like +102 and -136.");return}
+ FLAGO={a,b};save("tt-flago",FLAGO);$("flagA").value=fmtO(a);$("flagB").value=fmtO(b);
+ setMsg("flagMsg","ok",`Watching for ${fmtO(a)} / ${fmtO(b)}.`);renderSched();update();
+};
 $("menuBtn").onclick=openMenu;
 $("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
 $("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
