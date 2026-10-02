@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-01T23:34Z
+# updated 2026-10-02T00:41Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8623,7 +8623,7 @@
 2026-10-01 | Pytlas Wojciech | Jurowicz Grzegorz | 3-1 | 1 | 1 | +11
 2026-10-01 | Krezel Andrzej | Leczycki Mariusz | 3-1 | 1 | 1 | +13
 2026-10-01 | Skupinski Arkadiusz | Barton Aleksander | 3-0 | 1 | 1 | +9
-2026-10-01 | Guzik Michal | Lebek Marian | 3-0 | 1 | 10 | Pending
+2026-10-01 | Guzik Michal | Lebek Marian | 3-0 | 1 | 10 | +19
 2026-10-01 | Sokolowski Oliwier | Lebek Marian | 3-1 | 2 | 1 | +17
 2026-10-01 | Lebek Marian | Oracz Lukasz | 3-1 | 2 | 2 | +10
 2026-10-01 | Jozefiak Michal | Burkacki Adrian | 3-2 | 2 | 1 | +7
@@ -8663,7 +8663,7 @@
 2026-10-01 | Leczycki Mariusz | Nocun Zbigniew | 3-1 | 2 | 5 | +12
 2026-10-01 | Krezel Andrzej | Barton Aleksander | 3-0 | 2 | 2 | +3
 2026-10-01 | Klocek Kamil | Rolak Jaroslaw | 3-0 | 2 | 8 | Pending
-2026-10-01 | Guzik Michal | Jurowicz Grzegorz | 3-1 | 2 | 7 | Pending
+2026-10-01 | Guzik Michal | Jurowicz Grzegorz | 3-1 | 2 | 7 | +8
 2026-10-01 | Jozefiak Michal | Kurek Pawel | 3-1 | 3 | 2 | +15
 2026-10-01 | Kurek Pawel | Sokolowski Oliwier | 3-2 | 3 | 4 | +6
 2026-10-01 | Oracz Lukasz | Jozefiak Michal | 3-2 | 3 | 4 | +8
@@ -8777,11 +8777,11 @@
 2026-10-01 | Iwasyszyn Wojciech | Rolak Jaroslaw | 3-0 | 5 | 5 | +14
 2026-10-01 | Tkocz Marek | Adamus Kacper | 3-1 | 5 | 5 | +12
 2026-10-01 | Juszczyk Krzysztof | Pytlas Wojciech | 3-0 | 5 | 5 | +17
-2026-10-01 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 5 | Pending
+2026-10-01 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 5 | +7
 2026-10-01 | Skupinski Arkadiusz | Barton Aleksander | 3-0 | 6 | 6 | +9
 2026-10-01 | Linek Adam | Mugowski Arkadiusz | 3-1 | 6 | 10 | +11
 2026-10-01 | Gumulinski Piotr | Slosarczyk Pawel | 3-1 | 6 | 6 | +4
-2026-10-01 | Tkocz Marek | Adamus Kacper | 3-1 | 6 | 6 | Pending
+2026-10-01 | Tkocz Marek | Adamus Kacper | 3-1 | 6 | 6 | +12
 2026-10-01 | Kurek Pawel | Lebek Marian | 3-2 | 6 | 6 | +8
 2026-10-01 | Grela Artur | Rutkowski Mateusz | 3-0 | 6 | 1 | +6
 2026-10-01 | Wloczko Krzysztof | Jarocki Lukasz | 3-0 | 6 | 6 | +16
@@ -8801,6 +8801,7 @@
 2026-10-01 | Staszczyk Konrad | Solilo Dominik | 3-1 | 6 | 6 | +9
 2026-10-01 | Myszewski Adrian | Rolak Jaroslaw | 3-0 | 6 | 6 | Pending
 2026-10-01 | Leczycki Mariusz | Nocun Zbigniew | 3-2 | 6 | 9 | +7
+2026-10-01 | Michalik Jerzy | Wolny Michal | 3-1 | 6 | 6 | Pending
 2026-10-01 | Niemiec Rafal | Kaczmarek Jakub | 3-1 | 7 | 7 | +7
 2026-10-01 | Solilo Dominik | Linek Adam | 3-1 | 7 | 7 | Pending
 2026-10-01 | Staszczyk Konrad | Glanowski Jakub | 3-0 | 7 | 6 | Pending
@@ -8827,6 +8828,7 @@
 2026-10-01 | Nocun Zbigniew | Barton Aleksander | 3-1 | 7 | 4 | +2
 2026-10-01 | Iwasyszyn Wojciech | Klocek Kamil | 3-0 | 7 | 1 | Pending
 2026-10-01 | Myszewski Adrian | Lamperski Jakub | 3-2 | 7 | 9 | Pending
+2026-10-01 | Tkocz Marek | Sokolowski Oliwier | 3-0 | 7 | 12 | +11
 2026-10-01 | Jozefiak Michal | Sokolowski Oliwier | 3-2 | 8 | 8 | +7
 2026-10-01 | Staszczyk Konrad | Linek Adam | 3-1 | 8 | 8 | Pending
 2026-10-01 | Wloczko Krzysztof | Grela Artur | 3-0 | 8 | 8 | +24
@@ -8848,7 +8850,10 @@
 2026-10-01 | Solilo Dominik | Sulkowski Bartek | 3-2 | 8 | 2 | Pending
 2026-10-01 | Lamperski Jakub | Rolak Jaroslaw | 3-0 | 8 | 7 | Pending
 2026-10-01 | Lewczuk Miroslaw | Molenda Dariusz | 3-0 | 8 | 5 | +24
+2026-10-01 | Myszewski Adrian | Klocek Kamil | 3-0 | 8 | 3 | Pending
+2026-10-01 | Jurowicz Grzegorz | Lebek Marian | 3-2 | 8 | 12 | Pending
 2026-10-01 | Kwapis Jakub | Kapik Krzysztof | 3-1 | 9 | 9 | +12
+2026-10-01 | Lewczuk Miroslaw | Staniczek Adam | 3-1 | 9 | 10 | Pending
 2026-10-01 | Grela Artur | Michna Dawid | 3-2 | 9 | 9 | +6
 2026-10-01 | Wloczko Krzysztof | Kolodziej Krystian | 3-1 | 9 | 4 | +11
 2026-10-01 | Jendrzejewski Patryk | Kolek Maciej | 3-0 | 9 | 8 | +17
@@ -8865,6 +8870,9 @@
 2026-10-01 | Fomin Andriej | Barton Aleksander | 3-2 | 9 | 5 | +2
 2026-10-01 | Zielinski Marcin | Molenda Dariusz | 3-2 | 9 | 4 | +11
 2026-10-01 | Staszczyk Konrad | Sulkowski Bartek | 3-0 | 9 | 3 | Pending
+2026-10-01 | Linek Adam | Glanowski Jakub | 3-0 | 9 | 7 | Pending
+2026-10-01 | Iwasyszyn Wojciech | Myszewski Adrian | 3-1 | 9 | 9 | Pending
+2026-10-01 | Rolak Jaroslaw | Iwasyszyn Wojciech | 3-1 | 9 | 8 | Pending
 2026-10-01 | Sokolowski Oliwier | Burkacki Adrian | 3-1 | 10 | 9 | +12
 2026-10-01 | Grela Artur | Jarocki Lukasz | 3-0 | 10 | 10 | +7
 2026-10-01 | Fomin Andriej | Krezel Andrzej | 3-2 | 10 | 6 | +9
@@ -8880,8 +8888,16 @@
 2026-10-01 | Ptak Wiktor | Nowak Jakub | 3-0 | 10 | 10 | +14
 2026-10-01 | Kosmal Dawid | Linek Adam | 3-1 | 10 | 5 | +5
 2026-10-01 | Zielinski Marcin | Staniczek Adam | 3-1 | 10 | 9 | +7
-2026-10-01 | Sokolowski Oliwier | Jurowicz Grzegorz | 3-1 | 11 | 6 | Pending
-2026-10-01 | Lebek Marian | Adamus Kacper | 3-1 | 11 | 7 | Pending
+2026-10-01 | Staszczyk Konrad | Solilo Dominik | 3-0 | 10 | 9 | Pending
+2026-10-01 | Sokolowski Oliwier | Jurowicz Grzegorz | 3-1 | 11 | 6 | +11
+2026-10-01 | Lebek Marian | Adamus Kacper | 3-1 | 11 | 7 | +11
 2026-10-02 | Skupinski Arkadiusz | Leczycki Mariusz | 3-0 | 1 | 1 | +26
 2026-10-02 | Barton Aleksander | Krezel Andrzej | 3-2 | 1 | 1 | +15
 2026-10-02 | Fomin Andriej | Nocun Zbigniew | 3-1 | 1 | 1 | +13
+2026-10-02 | Sulkowski Bartek | Glanowski Jakub | 3-1 | 1 | 1 | Pending
+2026-10-02 | Tkocz Marek | Guzik Michal | 3-1 | 1 | 1 | Pending
+2026-10-02 | Zielinski Marcin | Zmijewski Artur | 3-2 | 1 | 1 | Pending
+2026-10-02 | Glanowski Jakub | Solilo Dominik | 3-2 | 2 | 1 | Pending
+2026-10-02 | Krezel Andrzej | Leczycki Mariusz | 3-1 | 2 | 2 | Pending
+2026-10-02 | Nocun Zbigniew | Skupinski Arkadiusz | 3-2 | 2 | 2 | Pending
+2026-10-02 | Fomin Andriej | Barton Aleksander | 3-2 | 2 | 2 | Pending
