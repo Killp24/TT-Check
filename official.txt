@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-02T09:37Z
+# updated 2026-10-02T10:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8994,7 +8994,9 @@
 2026-10-02 | Skotniczny Rafal | Jadach Oskar | 3-1 | 4 | 4 | +8
 2026-10-02 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 | 4 | 4 | +13
 2026-10-02 | Urban Wojciech | Cesarz Milosz | 3-1 | 4 | 4 | +6
-2026-10-02 | Wiciok Piotr | Hetnar Krzysztof | 3-1 | 4 | 4 | Pending
+2026-10-02 | Wiciok Piotr | Hetnar Krzysztof | 3-1 | 4 | 4 | +15
+2026-10-02 | Bernacki Lukasz | Wichowski Grzegorz | 3-1 | 4 | 4 | +18
+2026-10-02 | Pelka Jerzy | Slosarczyk Pawel | 3-0 | 4 | 4 | +12
 2026-10-02 | Fomin Andriej | Guzik Michal | 3-0 | 5 | 4 | +23
 2026-10-02 | Zielinski Marcin | Lewczuk Miroslaw | 3-2 | 5 | 4 | +7
 2026-10-02 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 4 | +8
@@ -9013,9 +9015,14 @@
 2026-10-02 | Warpas Blazej | Przewlocki Jacek | 3-2 | 5 | 5 | +7
 2026-10-02 | Jadach Oskar | Cesarz Milosz | 3-1 | 5 | 5 | Pending
 2026-10-02 | Adamus Pawel | Urban Wojciech | 3-2 | 5 | 5 | Pending
+2026-10-02 | Kufel Karol | Warpas Blazej | 3-0 | 6 | 6 | Pending
 2026-10-02 | Guzik Michal | Sokolowski Oliwier | 3-1 | 6 | 6 | +11
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 6 | 7 | +6
 2026-10-02 | Wisniewski Karol | Kosmal Dawid | 3-1 | 6 | 1 | Pending
 2026-10-02 | Krcil Frantisek | Czerwinski Bartosz | 3-1 | 6 | 1 | Pending
+2026-10-02 | Jendrzejewski Patryk | Rutkowski Mateusz | 3-0 | 6 | 6 | Pending
+2026-10-02 | Kapik Krzysztof | Poliniewicz Grzegorz | 3-2 | 6 | 6 | Pending
+2026-10-02 | Zochniak Jakub | Przewlocki Jacek | 3-0 | 6 | 6 | Pending
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 7 | 8 | +6
+2026-10-02 | Krcil Frantisek | Warpas Blazej | 3-0 | 7 | 7 | Pending
 2026-10-02 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 9 | 5 | +16

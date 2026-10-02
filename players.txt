@@ -17,7 +17,7 @@ Baron Mariusz | 1863 | 2202
 Barton Aleksander | 90 | 330
 Belik Simon | 106 | 299
 Benes Michal | 531 | 486
-Bernacki Lukasz | 732 | 790
+Bernacki Lukasz | 733 | 790
 Blocho Przemyslaw | 1562 | 1159
 Bluszcz Tomasz | 123 | 152
 Braun Josef | 1639 | 1521
@@ -98,7 +98,7 @@ Jarocki Lukasz | 3536 | 3166
 Jedrzejak Patryk | 929 | 403
 Jedrzejowski Oskar | 132 | 107
 Jendrysik Dawid | 273 | 402
-Jendrzejewski Patryk | 407 | 440
+Jendrzejewski Patryk | 408 | 440
 Jesiek Jakub | 296 | 264
 Jozala Waldemar | 413 | 492
 Jozefiak Michal | 15 | 15
@@ -109,7 +109,7 @@ Kaczmarek Jakub | 1034 | 1844
 Kaczmarek Krzysztof | 289 | 261
 Kaczynski Piotr | 221 | 195
 Kalinowski Mateusz | 113 | 153
-Kapik Krzysztof | 3792 | 3738
+Kapik Krzysztof | 3793 | 3738
 Karpiuk Mateusz | 153 | 175
 Kasperski Adam | 1583 | 2018
 Kesik Gracjan | 398 | 378
@@ -136,7 +136,7 @@ Kowalski Kamil | 29 | 140
 Kowol Marek | 279 | 262
 Kratochvil Michal | 10 | 10
 Krawczyk Jakub | 181 | 285
-Krcil Frantisek | 703 | 826
+Krcil Frantisek | 704 | 826
 Krezel Andrzej | 107 | 173
 Krukar Piotr | 13 | 22
 Krupa Sebastian | 468 | 430
@@ -144,7 +144,7 @@ Krutak Michal | 220 | 141
 Krzyzanowski Michal | 536 | 491
 Kubiak Artur | 823 | 674
 Kucharek Jerzy | 7 | 78
-Kufel Karol | 29 | 19
+Kufel Karol | 30 | 19
 Kujawa Filip | 1576 | 1854
 Kukawka Milosz | 512 | 301
 Kulczycki Alan | 3 | 27
@@ -231,7 +231,7 @@ Panczyk Adrian | 193 | 342
 Paszkiewicz Michal | 475 | 422
 Pawlik Cezary | 400 | 283
 Pawlowski Krzysztof | 858 | 656
-Pelka Jerzy | 847 | 975
+Pelka Jerzy | 848 | 975
 Perzynski Przemyslaw | 634 | 545
 Petas Kacper | 2045 | 1964
 Piechnik Roman | 24 | 46
@@ -243,13 +243,13 @@ Piotrowski Tadeusz | 1631 | 1072
 Pisarczyk Tomasz | 199 | 311
 Pokorny Adam | 18 | 44
 Polanski Pawel | 786 | 744
-Poliniewicz Grzegorz | 4067 | 2876
+Poliniewicz Grzegorz | 4067 | 2877
 Polok Pawel | 168 | 96
 Poloszczanski Dawid | 1209 | 2090
 Prokopcov Dimitrij | 112 | 134
 Pruszkowski Jakub | 2323 | 1644
 Przebierala Tomasz | 31 | 240
-Przewlocki Jacek | 899 | 1163
+Przewlocki Jacek | 899 | 1164
 Przewlocki Piotr | 706 | 883
 Ptak Wiktor | 91 | 75
 Pyda Lukasz | 130 | 466
@@ -262,7 +262,7 @@ Rudomina Kamil | 3003 | 3029
 Rus Maksymilian | 136 | 304
 Rusnak Ales | 139 | 153
 Ruszkiewicz Adam | 382 | 696
-Rutkowski Mateusz | 2182 | 2316
+Rutkowski Mateusz | 2182 | 2317
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
 Sawicki Grzegorz | 726 | 1053
@@ -283,7 +283,7 @@ Skupinski Arkadiusz | 376 | 592
 Skuril Michal | 25 | 35
 Skwierz Jakub | 6 | 26
 Slawinski Kacper | 2031 | 1454
-Slosarczyk Pawel | 429 | 799
+Slosarczyk Pawel | 429 | 800
 Smolka Kamil | 233 | 216
 Sobel Artur | 1786 | 1286
 Sobel Bartosz | 4 | 11
@@ -335,12 +335,12 @@ Utylski Rafal | 260 | 369
 Vincenec Oliver | 739 | 955
 Vrablik Jiri | 25 | 35
 Wandachowicz Michal | 17 | 71
-Warpas Blazej | 434 | 405
+Warpas Blazej | 434 | 407
 Warzecha Miroslaw | 1197 | 599
 Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1060 | 835
-Wichowski Grzegorz | 1069 | 664
+Wichowski Grzegorz | 1069 | 665
 Wiciok Piotr | 2 | 2
 Wiecek Adrian | 3183 | 2368
 Wieczerzak Jacek | 157 | 139
@@ -369,5 +369,5 @@ Zelezik Jacek | 421 | 344
 Zemla Piotr | 94 | 41
 Zielinski Marcin | 14 | 6
 Zmijewski Artur | 105 | 75
-Zochniak Jakub | 4189 | 3632
+Zochniak Jakub | 4190 | 3632
 Zwolinski Mariusz | 286 | 476
