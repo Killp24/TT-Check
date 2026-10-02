@@ -1,5 +1,5 @@
-const CACHE = "tt-check-v40";
-const SHELL = ["./", "index.html", "manifest.json", "icon.png"];
+const CACHE = "tt-check-v41";
+const SHELL = ["./", "index.html", "settle.js", "manifest.json", "icon.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
