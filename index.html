@@ -206,6 +206,9 @@ html.lock,html.lock body{overflow:hidden}
 .favtog:focus-visible,.star:focus-visible{outline:3px solid var(--ball)}
 .stag.flagp{background:#6b21a8;color:#fff;border-color:#6b21a8}
 .vv.flagv{border-left-color:#6b21a8}
+#bookBox .row{flex-wrap:wrap;gap:6px}
+#bookBox select{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+#bookBox .bfstake{width:72px}
 </style></head><body><main>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
@@ -229,6 +232,7 @@ html.lock,html.lock body{overflow:hidden}
 </div>
 <div id="verdict"></div>
 <div id="oddsBox"></div>
+<div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
 <div id="h2h"></div>
 <div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><h2 id="favTitle">Favourites</h2><button class="btn" id="favsClose" type="button">Done</button></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
@@ -632,9 +636,9 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";return}
  const est=estimate(a,b),pa=est.pa;
- renderOdds(a,b,pa,est);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
  $("pA").classList.toggle("lead",pa>=.5);$("pB").classList.toggle("lead",pa<.5);
@@ -706,13 +710,15 @@ let pushTimer=0;
 let OHIST=load("tt-odds")||{};
 let ODDS={};   // "Player A|Player B" -> [oddsA, oddsB], newest first
 const okey=(x,y,slot)=>[x,y].sort().join("|")+(slot?"@"+slot:"");
+const BOOKS=["DraftKings","bet365","FanDuel","BetMGM","Fanatics","Other"];
+const MAINBOOK="DraftKings";
 // Each scheduled meeting keeps its own odds, so a rematch later the same day starts blank
 const slotOf=(a,b)=>{const r=CURMATCH&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;return r?r.date+" "+r.time:""};
 function rememberOdds(a,b){const k=okey(a.name,b.name,slotOf(a,b)),oa=readOdds("A"),ob=readOdds("B");
  if(oa===null&&ob===null)return;
  clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typing
  const first=a.name<b.name;
- (OHIST[k]||(OHIST[k]=[])).push({o1:first?oa:ob,o2:first?ob:oa,at:Date.now()});trimOdds();
+ (OHIST[k]||(OHIST[k]=[])).push({o1:first?oa:ob,o2:first?ob:oa,at:Date.now(),book:MAINBOOK});trimOdds();
  }
 function storedOdds(n1,n2,slot){const v=ODDS[okey(n1,n2,slot)];if(!v)return null;const first=n1<n2;return{o1:first?v.o1:v.o2,o2:first?v.o2:v.o1,at:v.at}}
 let oddsPair="";
@@ -973,6 +979,66 @@ setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
 let BETS=load("tt-bets")||[];
 const saveBets=()=>save("tt-bets",BETS);
 
+
+// ---------- comparing books ----------
+// The newest price each book has shown for this exact match
+function booksFor(key){
+ const arr=OHIST[key]||[],out=new Map();
+ for(const v of arr){const b=v.book||MAINBOOK;const prev=out.get(b);if(!prev||v.at>prev.at)out.set(b,v)}
+ return out;
+}
+// Strip each book's cut, then average: a consensus of several books beats any one model
+function consensus(books,first){
+ const ps=[];
+ for(const v of books.values()){
+  const f=fairPair(first?v.o1:v.o2,first?v.o2:v.o1);
+  if(f)ps.push(f[0]);
+ }
+ return ps.length?{p:ps.reduce((s,x)=>s+x,0)/ps.length,n:ps.length}:null;
+}
+function renderBooks(a,b){
+ const box=$("bookBox");if(!box)return;
+ const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
+ const books=booksFor(key);
+ const rows=[...books.entries()].map(([name,v])=>({name,oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
+ const bestA=rows.filter(r=>r.oa!==null).sort((x,y)=>toProb(x.oa)-toProb(y.oa))[0];
+ const bestB=rows.filter(r=>r.ob!==null).sort((x,y)=>toProb(x.ob)-toProb(y.ob))[0];
+ const con=consensus(books,first);
+ let html=`<div class="row"><select id="bkName" aria-label="Sportsbook">${BOOKS.map(n=>`<option${n===(load("tt-lastbook")||BOOKS[1])?" selected":""}>${n}</option>`).join("")}</select>
+   <button type="button" class="sign" id="bkSA">−</button><input id="bkA" class="bfstake" inputmode="numeric" aria-label="${esc(sur(a.name))} price" placeholder="${esc(sur(a.name))}">
+   <button type="button" class="sign" id="bkSB">+</button><input id="bkB" class="bfstake" inputmode="numeric" aria-label="${esc(sur(b.name))} price" placeholder="${esc(sur(b.name))}">
+   <button class="btn primary" id="bkAdd" type="button">Add</button></div><div class="msg" id="bkMsg" role="status"></div>`;
+ if(rows.length){
+  html+=`<div class="otab"><table><tr><th>Book</th><th>${esc(sur(a.name))}</th><th>${esc(sur(b.name))}</th><th></th></tr>${
+   rows.map(r=>`<tr><td>${esc(r.name)}</td><td class="${bestA&&r===bestA?"pos":""}">${r.oa===null?"–":fmtO(r.oa)}</td><td class="${bestB&&r===bestB?"pos":""}">${r.ob===null?"–":fmtO(r.ob)}</td><td><button type="button" class="mini del2" data-bk="${esc(r.name)}" aria-label="Remove ${esc(r.name)}">✕</button></td></tr>`).join("")}</table></div>`;
+  if(con&&con.n>=2){
+   const evA=bestA?con.p*profit(bestA.oa)-(1-con.p)*100:null;
+   const evB=bestB?(1-con.p)*profit(bestB.ob)-con.p*100:null;
+   const best=[[a,evA,bestA],[b,evB,bestB]].filter(x=>x[1]!==null).sort((x,y)=>y[1]-x[1])[0];
+   html+=`<p class="help" style="margin:8px 0 0">${con.n} books agree on about ${esc(sur(a.name))} ${Math.round(con.p*100)}% / ${esc(sur(b.name))} ${Math.round((1-con.p)*100)}%, with each book's cut removed. That consensus is usually a better guide than any single model.</p>`;
+   if(best)html+=`<div class="vv ${best[1]>=3?"pos":best[1]>0?"thin":"neg"}"><strong>${best[1]>=3?"Best price beats the consensus":best[1]>0?"Barely worth it":"No book is out of line"}</strong>${esc(best[0].name)} at ${fmtO(best[2]===bestA?bestA.oa:bestB.ob)} with ${esc(best[2].name)} is ${best[1]>=0?"+":"−"}$${Math.abs(best[1]).toFixed(2)} per $100 against the other books.</div>`;
+  }else html+=`<p class="help" style="margin:8px 0 0">Add a second book and the app will work out a consensus price and tell you which book is out of line.</p>`;
+ }
+ box.innerHTML=html;
+ const sa=$("bkSA"),sb=$("bkSB");let negA=true,negB=false;
+ sa.onclick=()=>{negA=!negA;sa.textContent=negA?"−":"+"};
+ sb.onclick=()=>{negB=!negB;sb.textContent=negB?"−":"+"};
+ $("bkAdd").onclick=()=>{
+  const name=$("bkName").value;
+  const na=parseInt(($("bkA").value||"").replace(/[^0-9]/g,""),10),nb=parseInt(($("bkB").value||"").replace(/[^0-9]/g,""),10);
+  if(isNaN(na)&&isNaN(nb)){setMsg("bkMsg","err","Enter at least one price.");return}
+  const oa=isNaN(na)?null:(negA?-na:na),ob=isNaN(nb)?null:(negB?-nb:nb);
+  (OHIST[key]||(OHIST[key]=[])).push({o1:first?oa:ob,o2:first?ob:oa,at:Date.now(),book:name});
+  save("tt-lastbook",name);trimOdds();
+  if(cfg.token)pushOdds();
+  renderBooks(a,b);renderSched();
+ };
+ box.querySelectorAll("[data-bk]").forEach(btn=>btn.onclick=()=>{
+  const n=btn.dataset.bk;OHIST[key]=(OHIST[key]||[]).filter(v=>(v.book||MAINBOOK)!==n);trimOdds();
+  if(cfg.token)pushOdds();renderBooks(a,b);renderSched();
+ });
+}
+
 // ---------- parlays ----------
 let SLIP=load("tt-slip")||[];
 const saveSlip=()=>save("tt-slip",SLIP);
@@ -1108,7 +1174,7 @@ function parseOddsFile(t){
   const p=line.split("|").map(x=>x.trim());
   if(p.length<6)continue;
   const first=p[2]<p[3],k=okey(p[2],p[3],p[0]+" "+p[1]);
-  (h[k]||(h[k]=[])).push({o1:first?num(p[4]):num(p[5]),o2:first?num(p[5]):num(p[4]),at:Date.parse(p[6]||"")||0});
+  (h[k]||(h[k]=[])).push({o1:first?num(p[4]):num(p[5]),o2:first?num(p[5]):num(p[4]),at:Date.parse(p[6]||"")||0,book:(p[7]||MAINBOOK).trim()});
  }
  for(const k in h)h[k].sort((a,b)=>a.at-b.at);
  return h;
@@ -1120,17 +1186,17 @@ function oddsFileText(){
   const at=k.indexOf("@");if(at<0)continue;                 // only odds tied to a scheduled match
   const [n1,n2]=k.slice(0,at).split("|"),slot=k.slice(at+1),sp=slot.indexOf(" ");
   if(sp<0)continue;
-  for(const v of arr)lines.push([slot.slice(0,sp),slot.slice(sp+1),n1,n2,v.o1??"",v.o2??"",new Date(v.at||Date.now()).toISOString()].join(" | "));
+  for(const v of arr)lines.push([slot.slice(0,sp),slot.slice(sp+1),n1,n2,v.o1??"",v.o2??"",new Date(v.at||Date.now()).toISOString(),v.book||MAINBOOK].join(" | "));
  }
  lines.sort();
- return "# Every price seen in the app, kept so we can compare opening and closing lines\n# date | time | player 1 | player 2 | odds 1 | odds 2 | saved at\n"+lines.slice(-4000).join("\n")+"\n";
+ return "# Every price seen in the app, kept so we can compare opening and closing lines\n# date | time | player 1 | player 2 | odds 1 | odds 2 | saved at | book\n"+lines.slice(-4000).join("\n")+"\n";
 }
 function mergeOdds(remote){
  let added=0;
  for(const [k,arr] of Object.entries(remote)){
   const mine=OHIST[k]||(OHIST[k]=[]);
   for(const v of arr){
-   if(!mine.some(x=>x.at===v.at&&x.o1===v.o1&&x.o2===v.o2)){mine.push(v);added++}
+   if(!mine.some(x=>x.at===v.at&&x.o1===v.o1&&x.o2===v.o2&&(x.book||"")===(v.book||""))){mine.push(v);added++}
   }
   mine.sort((a,b)=>a.at-b.at);
  }
@@ -1139,8 +1205,9 @@ function mergeOdds(remote){
 }
 function trimOdds(){
  const ks=Object.keys(OHIST).sort((x,y)=>(latestOf(OHIST[y])||{at:0}).at-(latestOf(OHIST[x])||{at:0}).at).slice(0,600);
- OHIST=Object.fromEntries(ks.map(x=>[x,OHIST[x].slice(-12)]));
- ODDS={};for(const k of ks){const v=latestOf(OHIST[k]);if(v)ODDS[k]=v}
+ OHIST=Object.fromEntries(ks.map(x=>[x,OHIST[x].slice(-24)]));
+ // ODDS holds the newest price from the main book, which is what the EV panel uses
+ ODDS={};for(const k of ks){const main=OHIST[k].filter(v=>(v.book||MAINBOOK)===MAINBOOK),v=latestOf(main.length?main:OHIST[k]);if(v)ODDS[k]=v}
  save("tt-odds",OHIST);
 }
 // The price just before a match starts is the market's final word on it
@@ -1247,7 +1314,7 @@ function applyPastedOdds(text){
   used.add(r.date+r.time+key);matched++;
   const o1=r.p1===x.name?x.o:y.o,o2=r.p2===x.name?x.o:y.o;
   const slot=r.date+" "+r.time,k=okey(r.p1,r.p2,slot),first=r.p1<r.p2;
-  (OHIST[k]||(OHIST[k]=[])).push({o1:first?o1:o2,o2:first?o2:o1,at:Date.now()});
+  (OHIST[k]||(OHIST[k]=[])).push({o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book:MAINBOOK});
   const a=byNameP(r.p1),b=byNameP(r.p2);
   if(a&&b){const e=estimate(a,b);
    const sides=[[a,e.pa,o1],[b,1-e.pa,o2]].filter(z=>z[2]!==null&&z[2]!==undefined)
