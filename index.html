@@ -132,7 +132,7 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .note{display:block;margin-top:6px;font-size:.93rem}
 .banlist .pos{color:var(--ok)}.banlist .neg{color:var(--ban)}
 .topbar{justify-content:space-between}
-.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 72px)}
+.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;overflow-anchor:none;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 72px)}
 .sheet .tools{max-width:640px;margin:0 auto}
 .sheethd{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;position:sticky;top:0;background:var(--bg);padding:4px 0 8px;z-index:1}
 .sheethd h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.6rem;margin:0}
@@ -938,8 +938,13 @@ function renderSched(opt){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked,onlyEV=$("onlyEV").checked;
  const q=norm($("schFind").value||"").split(" ").filter(Boolean),onlyFav=$("onlyFav").checked;
  const sheet=$("sched"),keep=!!(opt&&opt.keep);
- const prev=keep?document.getElementById("schedNow"):null;
- const prevTop=prev?prev.getBoundingClientRect().top:null;
+ const head=sheet.querySelector(".sheethd");
+ const line=head?head.getBoundingClientRect().bottom+8:sheet.getBoundingClientRect().top;
+ let anchor=null;
+ if(keep){
+  const vis=[...sheet.querySelectorAll(".srow")].find(r=>r.getBoundingClientRect().bottom>line);
+  if(vis)anchor={i:vis.dataset.i,top:vis.getBoundingClientRect().top};
+ }
  // the site doesn't fill in results on schedule posts, so look them up in the collected matches
  linkResults();
  // Upcoming matches only, unless "Show finished" is ticked. Finished ones are listed above Up next.
@@ -975,12 +980,17 @@ function renderSched(opt){
  }
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
  $("schedInfo").textContent=shown?`${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"";
- const nowEl=document.getElementById("schedNow");
- if(keep&&prevTop!=null&&nowEl)sheet.scrollTop+=nowEl.getBoundingClientRect().top-prevTop;
+ if(anchor){
+  const again=sheet.querySelector('.srow[data-i="'+anchor.i+'"]');
+  const el=again||document.getElementById("schedNow");
+  if(el)sheet.scrollTop+=el.getBoundingClientRect().top-(again?anchor.top:line);
+ }
 }
 function schedNowTop(sheet){
- const el=document.getElementById("schedNow");
- if(!el)return 0;
+ const row=document.getElementById("schedNow");
+ if(!row)return 0;
+ const mark=row.previousElementSibling;
+ const el=mark&&mark.classList.contains("schedmark")?mark:row;
  const head=sheet.querySelector(".sheethd");
  const line=(head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top)+8;
  return Math.max(0,el.getBoundingClientRect().top-line+sheet.scrollTop);
