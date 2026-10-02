@@ -213,6 +213,10 @@ html.lock,html.lock body{overflow:hidden}
 .flow{display:flex;gap:8px;margin:0 0 10px}
 .flow .btn{flex:1;text-align:center}
 .flow .btn.on{background:var(--table);border-color:var(--table);color:#fff}
+.listback{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;display:flex;align-items:center;width:calc(100% + 32px);margin:-16px -16px 12px;padding:12px 16px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:var(--card);color:var(--ink);font:inherit;font-weight:700;text-align:left;cursor:pointer}
+.listback[hidden]{display:none}
+.listback:focus-visible{outline:3px solid var(--ball);outline-offset:-3px}
+.srow.here{outline:3px solid var(--ball);outline-offset:1px}
 .trust{color:var(--muted);font-size:.82rem;margin:-4px 0 14px}
 .trust:empty,.trust[hidden]{display:none}
 .sheethd h2{flex:1;text-align:center}
@@ -224,6 +228,7 @@ html.lock,html.lock body{overflow:hidden}
 .sleg li.void{color:var(--muted)}
 .sleg .bb{flex:none}
 </style></head><body><main>
+<button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players.</p>
 <p class="src" id="srcInfo">Loading data…</p>
@@ -1093,10 +1098,37 @@ function bindSheetTop(sheetId,btnId){
  sheet.addEventListener("scroll",()=>{btn.hidden=sheet.scrollTop<360});
  btn.onclick=()=>sheet.scrollTo({top:0,behavior:"smooth"});
 }
+let LISTBACK=null;
+function rememberToday(btn){
+ const sheet=$("sched"),row=btn.closest(".srowwrap")||btn,head=sheet.querySelector(".sheethd");
+ const line=head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top;
+ LISTBACK={i:btn.dataset.i,offset:row.getBoundingClientRect().top-line};
+ const back=$("listBack");if(back)back.hidden=false;
+}
+function restoreToday(){
+ if(!LISTBACK)return;
+ const back=LISTBACK;
+ openSheet("sched",{keep:true});
+ requestAnimationFrame(()=>{
+  const sheet=$("sched"),row=sheet.querySelector('.srow[data-i="'+back.i+'"]');
+  const head=sheet.querySelector(".sheethd");
+  const line=head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top;
+  if(row){
+   const wrap=row.closest(".srowwrap")||row;
+   sheet.scrollTop+=wrap.getBoundingClientRect().top-line-back.offset;
+   row.classList.add("here");
+   setTimeout(()=>row.classList.remove("here"),1600);
+   row.focus({preventScroll:true});
+  }
+  $("schedTop").hidden=sheet.scrollTop<360;
+ });
+}
+$("listBack").onclick=restoreToday;
 $("schedList").addEventListener("click",e=>{const f=e.target.closest("[data-favm]");if(f){toggleFavM(SCHED[+f.dataset.favm]);return}
  const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
+ rememberToday(b);
  PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
- closeSheet("sched");setFlow("assist");update();scrollTo(0,0)});
+ closeSheet("sched");setFlow("assist");update();scrollTo(0,0);$("listBack").focus()});
 $("onlyFav").onchange=()=>renderSched({keep:true});$("onlyEV").onchange=()=>renderSched({keep:true});$("onlyFlag").onchange=()=>renderSched({keep:true});
 $("schFind").addEventListener("input",()=>renderSched({keep:true}));
 $("schClear").onclick=()=>{$("schFind").value="";renderSched({keep:true});$("schFind").focus()};
@@ -1199,10 +1231,11 @@ function renderSignals(){
 $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
  PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
  closeSheet("signals");setFlow("assist");update();scrollTo(0,0)});
-function openSheet(id){
+function openSheet(id, opt){
  $(id).hidden=false;document.documentElement.classList.add("lock");
- const c=$(id+"Close");if(c)c.focus();
- if(id==="sched"){setFlow("today");renderSched();requestAnimationFrame(()=>{const s=$("sched");s.scrollTop=$("showDone").checked?schedNowTop(s):0;$("schedTop").hidden=s.scrollTop<360})}
+ const c=$(id+"Close");if(c&&!(opt&&opt.keep))c.focus();
+ if(id==="sched"){setFlow("today");renderSched();
+  if(!(opt&&opt.keep))requestAnimationFrame(()=>{const s=$("sched");s.scrollTop=$("showDone").checked?schedNowTop(s):0;$("schedTop").hidden=s.scrollTop<360})}
  if(id==="signals"){setFlow("signals");renderSignals();const s=$("sigClose");if(s)s.focus()}
 }
 function closeSheet(id){$(id).hidden=true;if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock")}
