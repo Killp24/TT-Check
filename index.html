@@ -293,7 +293,7 @@ html.lock,html.lock body{overflow:hidden}
 </div></details>
 </div>
 </div>
-<p class="note">Win odds use the standard Elo formula, so treat them as a rough guide. Form, head-to-head and career records come from tt-series.com and update automatically every hour. Recent form and head-to-head move the estimate only when the record on file is clearly off Elo, and they never edit the ban list. Head-to-head history builds up over time from Sep 2026 onward. Tap a player's ban list tag to add or remove them.</p>
+<p class="note">Win odds start from the Elo formula, then use the calibration that has been more accurate on past matches. Form, head-to-head, and how many matches a player has already played today are added only when that has lowered the error. A saved book price is mixed in only after priced results show that the mix is closer. None of this edits the ban list. Tap a player's ban list tag to add or remove them.</p>
 </main>
 <script src="settle.js"></script>
 <script>const $=id=>document.getElementById(id);
@@ -318,6 +318,7 @@ let data=load("tt-data");                   // {ratings,ban,matches,at}
 let SADJ={},KCAL={k:0.85,n:0,fitted:false},HIST=[],MODEL={n:0},CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 let RECENT=new Map(),H2H=new Map(),REC=new Map();
+let CAL_TRAIN=[],CAL_HOLD=[],USE_CURVE=false,WIN_CURVE=null,FORM_MODE="off",H2H_ON=false,SESSION_ON=false,SESSION_SHIFT={},BOOK_W=0,MODEL_REPORT={};
 function parseRatings(text){
  const rows=[];
  for(let line of text.split(/\r?\n/)){
@@ -429,12 +430,34 @@ function computeStats(){
  const hist=[...official].sort((x,y)=>x.date<y.date?-1:x.date>y.date?1:ord(x)-ord(y));
  const R=new Map(),seen=new Map(),PRE=[],ALL=[];
  const get=(map,k,d)=>map.has(k)?map.get(k):d;
+ const dateList=[...new Set(hist.map(m=>m.date))];
+ const cutoff=dateList[Math.max(0,dateList.length-14)]||"";
+ CAL_TRAIN=[];CAL_HOLD=[];
+ const dayCount=new Map(),sessionRows=[];
+ const formLoss={base:0,plain:0,margin:0,decay:0,both:0},formModes=["plain","margin","decay","both"];
+ let formN=0,h2hN=0,h2hBase=0,h2hWith=0;
+ const sideShift=(rows,mode)=>{const r=recentShift(rows,mode,80);return r&&rows.length>=8&&Math.abs(r.shift)>=0.03?r.shift:0};
+ const addRec=(n,exp,won,score)=>{const r=REC.get(n)||{w:0,l:0};if(won)r.w++;else r.l++;REC.set(n,r);const q=RECENT.get(n)||[];q.push({e:exp,won:won?1:0,score:score||""});if(q.length>12)q.shift();RECENT.set(n,q)};
  for(const m of hist){
   const ra=get(R,m.w,1000),rb=get(R,m.l,1000);
   const e=1/(1+Math.pow(10,(rb-ra)/400));
   ALL.push([m,e]);
-  const addRec=(n,exp,won)=>{const r=REC.get(n)||{w:0,l:0};if(won)r.w++;else r.l++;REC.set(n,r);const q=RECENT.get(n)||[];q.push({e:exp,won:won?1:0});if(q.length>12)q.shift();RECENT.set(n,q)};
-  addRec(m.w,e,1);addRec(m.l,1-e,0);
+  const qw=RECENT.get(m.w)||[],ql=RECENT.get(m.l)||[];
+  const cw=dayCount.get(m.w+"|"+m.date)||0,cl=dayCount.get(m.l+"|"+m.date)||0;
+  dayCount.set(m.w+"|"+m.date,cw+1);dayCount.set(m.l+"|"+m.date,cl+1);
+  if(get(seen,m.w,0)>=MIN&&get(seen,m.l,0)>=MIN){
+   if(m.date<cutoff)CAL_TRAIN.push([e,1]);else CAL_HOLD.push(e);
+   if(m.date>=cutoff){
+    const dlt={};let any=false;
+    for(const mode of formModes){const d=sideShift(qw,mode)-sideShift(ql,mode);dlt[mode]=Math.abs(d)>=0.03?d:0;if(dlt[mode])any=true}
+    if(any){formN++;formLoss.base+=logLoss(e,1);for(const mode of formModes)formLoss[mode]+=logLoss(sigmoid(logit(e)+dlt[mode]),1)}
+    const pairKey=[m.w,m.l].sort().join("|"),prior=(H2H.get(pairKey)||[]).filter(x=>x.date!==m.date);
+    const hx=h2hShiftFrom(prior,m.w===pairKey.slice(0,pairKey.indexOf("|")));
+    if(hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03){h2hN++;h2hBase+=logLoss(e,1);h2hWith+=logLoss(sigmoid(logit(e)+hx.shift),1)}
+   }
+   sessionRows.push({hold:m.date>=cutoff,e,bw:sessionBin(cw),bl:sessionBin(cl)});
+  }
+  addRec(m.w,e,1,m.score);addRec(m.l,1-e,0,m.score);
   const pair=[m.w,m.l].sort().join("|"),first=pair.slice(0,pair.indexOf("|"));
   const hq=H2H.get(pair)||[];hq.push({date:m.date,eFirst:m.w===first?e:1-e,firstWon:m.w===first});H2H.set(pair,hq);
   if(get(seen,m.w,0)>=MIN&&get(seen,m.l,0)>=MIN)PRE.push([m,e]);
@@ -495,11 +518,20 @@ function computeStats(){
  RADJ={};for(const [sc,[n,w,e]] of Object.entries(racc))RADJ[sc]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+150)};
  TADJ={};for(const [k,[n,w,e]] of Object.entries(tacc))TADJ[k]={n,won:w,exp:e,shift:(lg(cl(w/n))-lg(cl(baseline(e/n))))*n/(n+300)};
  MODEL={n:PRE.length,rated:R.size};
+ FORM_MODE=chooseNudge(formLoss.base,{plain:formLoss.plain,margin:formLoss.margin,decay:formLoss.decay,both:formLoss.both},formN,0.001);
+ H2H_ON=h2hN>=150&&(h2hBase-h2hWith)/h2hN>=0.001;
+ const fittedS=fitSessionShifts(sessionRows.filter(r=>!r.hold),80,150);
+ let sb=0,sw=0,sn=0;
+ for(const r of sessionRows)if(r.hold){const d=(fittedS[r.bw]||0)-(fittedS[r.bl]||0);sb+=logLoss(r.e,1);sw+=logLoss(sigmoid(logit(r.e)+d),1);sn++}
+ SESSION_ON=sn>=150&&(sb-sw)/sn>=0.001;
+ SESSION_SHIFT=SESSION_ON?fittedS:{};
+ MODEL_REPORT={form:{n:formN,base:formLoss.base,plain:formLoss.plain,margin:formLoss.margin,decay:formLoss.decay,both:formLoss.both,mode:FORM_MODE},h2h:{n:h2hN,base:h2hBase,with:h2hWith,on:H2H_ON},session:{n:sn,base:sb,with:sw,on:SESSION_ON,shift:SESSION_SHIFT}};
 }
 const toElo=x=>Math.round(x*400/Math.LN10);
-function estimate(a,b){
+function estimate(a,b,opt){
  const raw=1/(1+Math.pow(10,(b.elo-a.elo)/400));
- const pe=sg(KCAL.k*lgt(Math.min(.995,Math.max(.005,raw))));   // pulled toward 50%: favourites win less often than the ratings say
+ const curved=USE_CURVE&&WIN_CURVE?applyWinCurve(raw,WIN_CURVE):null;
+ const pe=curved==null?sg(KCAL.k*lgt(Math.min(.995,Math.max(.005,raw)))):curved;
  let adj=0;const why=[],skipped=[],banWhy=[];
  for(const [p,sign] of [[a,1],[b,-1]]){
   if(!isBan(p))continue;
@@ -513,17 +545,18 @@ function estimate(a,b){
   adj+=sign*x.shift*wt;
   why.push(`${esc(sur(p.name))}: Tier ${t} ban list players as favorite have won ${x.won} of ${x.n} where ${x.exp.toFixed(0)} was predicted, so −${Math.abs(toElo(x.shift*wt))} Elo${wt<1?" (reduced because the match is close to 50–50)":""}`);
  }
- // Form and head-to-head. The ban list block above is left as it is.
+ // Form and head-to-head stay out unless they lowered the error on past matches.
  const formNotes=[];
- for(const [p,sign] of [[a,1],[b,-1]]){
+ const formHow=FORM_MODE==="margin"?" Closer matches count less.":FORM_MODE==="decay"?" Newer matches count more.":FORM_MODE==="both"?" Newer matches count more, and closer matches count less.":"";
+ if(FORM_MODE!=="off")for(const [p,sign] of [[a,1],[b,-1]]){
   const f=formEdge(p.name);
   if(!f||f.n<8||Math.abs(f.shift)<0.03)continue;
   adj+=sign*f.shift;
-  const line=`${esc(sur(p.name))} is ${f.w}–${f.n-f.w} over the last ${f.n} on file, ${sgn(f.diff)} wins vs Elo, so ${f.shift>0?"+":"−"}${Math.abs(toElo(f.shift))} Elo for form.`;
+  const line=`${esc(sur(p.name))} is ${f.w}–${f.n-f.w} over the last ${f.n} on file, ${sgn(f.diff)} wins vs Elo, so ${f.shift>0?"+":"−"}${Math.abs(toElo(f.shift))} Elo for form.${formHow}`;
   formNotes.push(line);why.push(line);
  }
  const hx=h2hEdge(a,b);
- if(hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03){
+ if(H2H_ON&&hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03){
   adj+=hx.shift;
   const line=`Head-to-head on file is ${hx.aw}–${hx.bw} for ${esc(sur(a.name))}, ${sgn(hx.diff)} vs Elo, so ${hx.shift>0?"+":"−"}${Math.abs(toElo(hx.shift))} Elo.`;
   formNotes.push(line);why.push(line);
@@ -540,10 +573,14 @@ function estimate(a,b){
   const st=streakToday(p.name),x=SADJ[Math.min(st.run,3)];
   if(st.run>=3&&x&&x.n>=100&&x.shift>0.02){adj+=sign*x.shift;
    why.push(`${esc(sur(p.name))} has lost ${st.run} in a row this session, which drags a rating down faster than real form: players in that spot won ${Math.round(x.won/x.n*100)}% where ${Math.round(x.exp/x.n*100)}% was predicted, so +${Math.abs(toElo(x.shift))} Elo`)}
+  if(SESSION_ON){const bin=sessionBin(st.n),sh=SESSION_SHIFT[bin];
+   if(sh){adj+=sign*sh;const line=`${esc(sur(p.name))} has already played ${st.n} this session. Players at that point in the day have finished ${sh>0?"better":"worse"} than the ratings, so ${sh>0?"+":"−"}${Math.abs(toElo(sh))} Elo.`;formNotes.push(line);why.push(line)}}
  }
  adj=Math.max(-1,Math.min(1,adj));
- const pa=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
- return{pe,pa,why,skipped,prev,banWhy,raw,formNotes,h2h:hx};
+ const preBook=1/(1+Math.exp(-(Math.log(pe/(1-pe))+adj)));
+ let pa=preBook,book=null,bookW=0;
+ if(opt&&opt.book!=null&&BOOK_W>0){book=opt.book;bookW=BOOK_W;pa=logitBlend(preBook,book,BOOK_W)}
+ return{pe,pa,preBook,why,skipped,prev,banWhy,raw,formNotes,h2h:hx,book,bookW};
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
@@ -552,8 +589,10 @@ const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as 
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
 function formEdge(name){
  const q=RECENT.get(name);if(!q||q.length<8)return null;
- const n=q.length,w=q.reduce((s,x)=>s+x.won,0),exp=q.reduce((s,x)=>s+x.e,0);
- return{n,w,exp,diff:w-exp,shift:shrunkShift(n,w,exp,80)};
+ const mode=FORM_MODE==="off"?"plain":FORM_MODE;
+ const r=recentShift(q,mode,80);if(!r)return null;
+ const w=q.reduce((s,x)=>s+x.won,0),exp=q.reduce((s,x)=>s+x.e,0);
+ return{n:q.length,w,exp,diff:w-exp,shift:FORM_MODE==="off"?0:r.shift};
 }
 function h2hEdge(a,b){
  const key=[a.name,b.name].sort().join("|"),rows=(H2H.get(key)||[]).filter(x=>x.date!==warsawToday());
@@ -620,24 +659,70 @@ function parseHistory(t){
 const lgt=p=>Math.log(p/(1-p)),sg=z=>1/(1+Math.exp(-z));
 function fitCalibration(){
  KCAL={k:0.85,n:0,fitted:false};
- if(!HIST.length)return;
- const rows=[];
- for(const m of official){
-  let snap=null;
-  for(const h of HIST){if(h.date<m.date)snap=h;else break}     // only ratings known before the match
-  if(!snap)continue;
-  const a=snap.r.get(m.w),b=snap.r.get(m.l);
-  if(a===undefined||b===undefined)continue;
-  rows.push(1/(1+Math.pow(10,(b-a)/400)));
+ if(HIST.length){
+  const rows=[];
+  for(const m of official){
+   let snap=null;
+   for(const h of HIST){if(h.date<m.date)snap=h;else break}     // only ratings known before the match
+   if(!snap)continue;
+   const a=snap.r.get(m.w),b=snap.r.get(m.l);
+   if(a===undefined||b===undefined)continue;
+   rows.push(1/(1+Math.pow(10,(b-a)/400)));
+  }
+  if(rows.length>=300){
+   let best=null;
+   for(let k=0.4;k<=1.301;k+=0.05){
+    let s=0;for(const e of rows)s-=Math.log(Math.max(1e-9,sg(k*lgt(Math.min(.995,Math.max(.005,e))))));
+    if(!best||s<best[0])best=[s,k];
+   }
+   KCAL={k:Math.round(best[1]*100)/100,n:rows.length,fitted:true};
+  }
  }
- if(rows.length<300)return;
- let best=null;
- for(let k=0.4;k<=1.301;k+=0.05){
-  let s=0;for(const e of rows)s-=Math.log(Math.max(1e-9,sg(k*lgt(Math.min(.995,Math.max(.005,e))))));
-  if(!best||s<best[0])best=[s,k];
- }
- KCAL={k:Math.round(best[1]*100)/100,n:rows.length,fitted:true};
+ chooseCurve();fitBookBlend();
 }
+function eloBefore(name,date){
+ let snap=null;
+ for(const h of HIST){if(h.date<date)snap=h;else break}
+ if(!snap)return null;
+ const e=snap.r.get(name);
+ return e===undefined?null:e;
+}
+function chooseCurve(){
+ const hold=CAL_HOLD||[],train=CAL_TRAIN||[];
+ const k=KCAL.k||0.85;
+ const shrink=e=>sg(k*lgt(Math.min(.995,Math.max(.005,e))));
+ const kLoss=hold.reduce((s,e)=>s+logLoss(shrink(e),1),0);
+ const rawLoss=hold.reduce((s,e)=>s+logLoss(e,1),0);
+ const trainCurve=fitWinCurve(train,40);
+ const cLoss=trainCurve?hold.reduce((s,e)=>s+logLoss(applyWinCurve(e,trainCurve),1),0):null;
+ USE_CURVE=!!(trainCurve&&hold.length>=150&&cLoss!=null&&(kLoss-cLoss)/hold.length>=0.001);
+ WIN_CURVE=USE_CURVE?fitWinCurve(train.concat(hold.map(e=>[e,1])),40):null;
+ if(USE_CURVE&&!WIN_CURVE)USE_CURVE=false;
+ MODEL_REPORT.curve={n:hold.length,k,kLoss,cLoss,rawLoss,on:USE_CURVE};
+}
+function fitBookBlend(){
+ const byKey=new Map();
+ for(const m of official)byKey.set(m.date+"|"+[m.w,m.l].sort().join("|"),m);
+ const rows=[];
+ for(const [k,arr] of Object.entries(OHIST||{})){
+  const at=k.indexOf("@");if(at<0)continue;
+  const [n1,n2]=k.slice(0,at).split("|"),slot=k.slice(at+1),date=slot.slice(0,slot.indexOf(" "));
+  const m=byKey.get(date+"|"+[n1,n2].sort().join("|"));
+  if(!m)continue;
+  const v=arr[0],fair=fairPair(v.o1,v.o2);if(!fair)continue;
+  const ea=eloBefore(n1,m.date),eb=eloBefore(n2,m.date);
+  if(ea==null||eb==null)continue;
+  const raw=1/(1+Math.pow(10,(eb-ea)/400));
+  const curved=USE_CURVE&&WIN_CURVE?applyWinCurve(raw,WIN_CURVE):null;
+  const pApp=curved==null?sg(KCAL.k*lgt(Math.min(.995,Math.max(.005,raw)))):curved;
+  rows.push({app:pApp,book:fair[0],y:m.w===n1?1:0,at:v.at||0,date:m.date});
+ }
+ rows.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:a.at-b.at);
+ const fit=bestBlendWeight(rows);
+ BOOK_W=fit.w;
+ MODEL_REPORT.book=fit;
+}
+function bookOpt(o1,o2){if(!(BOOK_W>0))return null;const fair=fairPair(o1,o2);return fair?{book:fair[0]}:null}
 
 // ---------- matchup ----------
 const sel={A:null,B:null};
@@ -698,15 +783,17 @@ function update(){
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
  if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();return}
- const est=estimate(a,b),pa=est.pa;
+ const soNow=storedOdds(a.name,b.name,slotOf(a,b));
+ const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
  renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
  $("pA").classList.toggle("lead",pa>=.5);$("pB").classList.toggle("lead",pa<.5);
  $("barImg").setAttribute("aria-label",`${a.name} ${Math.round(pa*100)}%, ${b.name} ${Math.round((1-pa)*100)}%`);
  $("eloOnly").innerHTML=[
-  Math.round(est.raw*100)!==Math.round(est.pe*100)?`Ratings alone say ${esc(sur(a.name))} ${Math.round(est.raw*100)}%, but favourites win less often than that, so it's pulled in${KCAL.fitted?` (measured on ${KCAL.n.toLocaleString()} matches)`:""}.`:"",
-  Math.round(est.pe*100)!==Math.round(pa*100)?`Ban list adjustment: ${esc(sur(a.name))} ${Math.round(est.pe*100)}% → ${Math.round(pa*100)}%.`:""].filter(Boolean).join(" ");
+  Math.round(est.raw*100)!==Math.round(est.pe*100)?(USE_CURVE?`Ratings alone say ${esc(sur(a.name))} ${Math.round(est.raw*100)}%. Players at that gap have won about ${Math.round(est.pe*100)}%, so the win chance starts there.`:`Ratings alone say ${esc(sur(a.name))} ${Math.round(est.raw*100)}%, but favourites win less often than that, so it's pulled in${KCAL.fitted?` (measured on ${KCAL.n.toLocaleString()} matches)`:""}.`):"",
+  Math.round(est.pe*100)!==Math.round(est.preBook*100)?`Adjustments move ${esc(sur(a.name))} from ${Math.round(est.pe*100)}% to ${Math.round(est.preBook*100)}%.`:"",
+  est.bookW?`The book, with the vig removed, says ${Math.round(est.book*100)}%. It has ${Math.round(est.bookW*100)}% of the say, so the win chance is ${Math.round(pa*100)}%.`:""].filter(Boolean).join(" ");
  const gap=Math.abs(a.elo-b.elo),fav=a.elo>=b.elo?a:b,dog=fav===a?b:a,fb=isBan(fav),db=isBan(dog);
  const meet=matches.filter(m=>(m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name)).sort(sortFor(a.name));
  const fw=meet.filter(m=>m.w===fav.name).length,dw=meet.length-fw;
@@ -744,7 +831,7 @@ function update(){
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
  v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
- const hx=est.h2h,h2hEdgeTxt=hx?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
+ const hx=est.h2h,h2hEdgeTxt=hx&&H2H_ON?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
  renderTrust();
@@ -954,11 +1041,11 @@ function renderSched(opt){
  for(const r of rows){
   const a=byNameP(r.p1),b=byNameP(r.p2);
   let fav="",flag=false,tags="";
-  if(a&&b){const e=estimate(a,b),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa),diff=Math.abs(e.pa-e.pe);
+  if(a&&b){const so=storedOdds(a.name,b.name,r.date+" "+r.time);
+   const e=estimate(a,b,so?bookOpt(so.o1,so.o2):null),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa),diff=Math.abs(e.pa-e.pe);
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
    if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
-   const so=storedOdds(a.name,b.name,r.date+" "+r.time);
    if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
@@ -1054,8 +1141,7 @@ function reportCard(){
  <h3 class="rch">Closing line value</h3>
  ${clvSummary()}
  <h3 class="rch">How confident should the ratings be?</h3>
- <p class="rcv">${KCAL.fitted?`Measured on ${KCAL.n.toLocaleString()} matches: the ratings are ${KCAL.k<1?"overconfident":KCAL.k>1?"underconfident":"about right"}, so the estimate pulls them toward 50% with a factor of ${KCAL.k}.`:`Not measured yet — using a cautious default of ${KCAL.k}. It needs a few days of saved rating snapshots (${HIST.length} day${HIST.length===1?"":"s"} on file), then the app measures this itself.`}</p>
- <p class="help">A favourite the ratings put at 73% becomes ${Math.round(sg(KCAL.k*lgt(0.73))*100)}% after the pull-in. This is the biggest single correction in the app.</p>
+ ${modelReportHtml()}
  <h3 class="rch">Is the ban list still working?</h3>
  <div class="otab"><table><tr><th>Tier as favorite</th><th>Matches</th><th>Won</th><th>Predicted</th></tr>${tiersAll.map(x=>`<tr><td>Tier ${x.t}</td><td>${x.n}</td><td class="${x.n>=30&&x.won/x.n-x.exp/x.n<-0.05?"neg":""}">${x.n?pct(x.won/x.n):"–"}</td><td>${x.n?pct(x.exp/x.n):"–"}</td></tr>`).join("")}</table></div>
  <p class="help">Won below Predicted means the list is picking up real underperformance. Since you made the list on ${nice(LISTDATE)}: ${tiersNew.map(x=>`Tier ${x.t} ${x.n?`${pct(x.won/x.n)} vs ${pct(x.exp/x.n)} (${x.n})`:"no matches"}`).join(", ")}.</p>
@@ -1084,14 +1170,15 @@ function renderSignals(){
  const items=[];
  for(const r of rows){
   const a=byNameP(r.p1),b=byNameP(r.p2);if(!a||!b)continue;
-  const e=estimate(a,b),sigs=[];
+  const so0=storedOdds(a.name,b.name,r.date+" "+r.time);
+  const e=estimate(a,b,so0?bookOpt(so0.o1,so0.o2):null),sigs=[];
   const fav=a.elo>=b.elo?a:b;
   if(isBan(fav))sigs.push({cls:"t"+tierOf(fav),text:sur(fav.name)+" ban favorite T"+tierOf(fav),rank:tierOf(fav)===1?50:tierOf(fav)===2?35:22});
   for(const p of [a,b]){const f=formEdge(p.name);if(!f||Math.abs(f.diff)<3||Math.abs(f.shift)<0.03)continue;
    sigs.push({cls:f.diff>0?"ev":"t2",text:sur(p.name)+(f.diff>0?" hot ":" cold ")+sgn(f.diff),rank:Math.abs(toElo(f.shift))});}
   const hx=h2hEdge(a,b);
-  if(hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03&&Math.abs(hx.diff)>=2)sigs.push({cls:"w",text:`H2H ${hx.aw}–${hx.bw} (${sgn(hx.diff)})`,rank:Math.abs(toElo(hx.shift))});
-  const so=storedOdds(a.name,b.name,r.date+" "+r.time);
+  if(H2H_ON&&hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03&&Math.abs(hx.diff)>=2)sigs.push({cls:"w",text:`H2H ${hx.aw}–${hx.bw} (${sgn(hx.diff)})`,rank:Math.abs(toElo(hx.shift))});
+  const so=so0;
   let best=null;
   if(so&&(so.o1!==null||so.o2!==null)){
    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
@@ -1517,10 +1604,10 @@ function applyPastedOdds(text){
   const slot=r.date+" "+r.time,k=okey(r.p1,r.p2,slot),first=r.p1<r.p2;
   const a=byNameP(r.p1),b=byNameP(r.p2);
   let row={o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book:MAINBOOK};
-  if(a&&b){const e=estimate(a,b),snap=decisionSnapshot(o1,o2,e.pa,1-e.pa);
+  if(a&&b){const e=estimate(a,b,bookOpt(o1,o2)),snap=decisionSnapshot(o1,o2,e.pa,1-e.pa);
    row={...row,at:snap.at,app1:first?snap.app1:snap.app2,app2:first?snap.app2:snap.app1,edge1:first?snap.edge1:snap.edge2,edge2:first?snap.edge2:snap.edge1};}
   (OHIST[k]||(OHIST[k]=[])).push(row);
-  if(a&&b){const e=estimate(a,b);
+  if(a&&b){const e=estimate(a,b,bookOpt(o1,o2));
    const sides=[[a,e.pa,o1],[b,1-e.pa,o2]].filter(z=>z[2]!==null&&z[2]!==undefined)
      .map(([p,pm,o])=>({p,o,pm,ev:pm*profit(o)-(1-pm)*100,imp:toProb(o)}));
    if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,gap:top.pm-top.imp})}
@@ -1589,6 +1676,20 @@ function clvSummary(){
   <p class="help">You beat the close when the price shortened after you bet. Over 50+ bets this tells you whether you have an edge far sooner than profit does.</p>`;
 }
 // For every priced match with a result: who was closer, the app or the book?
+function modelReportHtml(){
+ const r=MODEL_REPORT||{},c=r.curve||{},f=r.form||{},h=r.h2h||{},s=r.session||{},b=r.book||{};
+ const per=(loss,n)=>n?(loss/n).toFixed(3):"–";
+ const formLabel=id=>id==="plain"?"the last 12 counted equally":id==="margin"?"closer matches counting less":id==="decay"?"newer matches counting more":"newer matches counting more and closer matches counting less";
+ const formBest=[["plain",f.plain],["margin",f.margin],["decay",f.decay],["both",f.both]].filter(x=>x[1]!=null).sort((a,b)=>a[1]-b[1])[0];
+ const bits=[
+  !c.n?"":c.on?`On the last ${c.n.toLocaleString()} test matches, a curve of how often each rating gap won (error ${per(c.cLoss,c.n)}) beat one pull toward 50% (error ${per(c.kLoss,c.n)}). The win chance uses the curve.`:`On the last ${c.n.toLocaleString()} test matches, one pull toward 50% (error ${per(c.kLoss,c.n)}) was as good as or better than a full curve${c.cLoss==null?"":` (error ${per(c.cLoss,c.n)})`}. The win chance keeps that single pull of ${c.k}.`,
+  !f.n||!formBest?"Form did not have enough matches to test.":f.mode==="off"?`Form is left out. On ${f.n.toLocaleString()} matches, ${formLabel(formBest[0])} was the closest and ${(f.base-formBest[1])/f.n>=0?"improved":"worsened"} the error by ${Math.abs((f.base-formBest[1])/f.n).toFixed(5)} per match. It is added only when that reaches 0.001.`:`Form is in, with ${formLabel(f.mode)}. Error on those ${f.n.toLocaleString()} matches went from ${per(f.base,f.n)} to ${per(f[f.mode],f.n)}.`,
+  !h.n?"Head-to-head did not have enough matches to test.":h.on?`Head-to-head is in. Error on ${h.n.toLocaleString()} matches went from ${per(h.base,h.n)} to ${per(h.with,h.n)}.`:`Head-to-head is left out. On ${h.n.toLocaleString()} matches it did not lower the error enough.`,
+  !s.n?"":s.on?`Matches already played today are in. Error on the test matches went from ${per(s.base,s.n)} to ${per(s.with,s.n)}.`:`Matches already played today are left out. On ${s.n.toLocaleString()} test matches that did not lower the error enough.`,
+  !b.n?`The book is not mixed in yet. That starts after 25 priced matches have a result and a rating saved from before the match.`:(b.ready?`The book, with the vig removed, has ${Math.round(b.w*100)}% of the say. On ${b.scored} later priced matches the mix error was ${per(b.blendLoss,b.scored)} against ${per(b.appLoss,b.scored)} for the app alone.`:`The book was tested on ${b.n} priced matches and left out, because mixing it in did not beat the app on the later ones.`)
+ ].filter(Boolean);
+ return bits.map(t=>`<p class="help">${t}</p>`).join("");
+}
 function bookScore(){
  const out={n:0,app:0,book:0,gaps:0,appRight:0};
  const byKey=new Map();

@@ -70,3 +70,185 @@ function settleParlayLegs(bet, findResult) {
   }
   return changed;
 }
+
+function clampProb(p) {
+  return Math.min(0.995, Math.max(0.005, p));
+}
+
+function logit(p) {
+  const c = clampProb(p);
+  return Math.log(c / (1 - c));
+}
+
+function sigmoid(z) {
+  return 1 / (1 + Math.exp(-z));
+}
+
+function logLoss(p, y) {
+  const c = clampProb(p);
+  return y ? -Math.log(c) : -Math.log(1 - c);
+}
+
+function logitBlend(app, book, w) {
+  return sigmoid((1 - w) * logit(app) + w * logit(book));
+}
+
+// Favorite win rate by rating gap. Bins that fall as the gap grows are pooled
+// so a bigger favorite is never given a lower chance than a smaller one.
+function fitWinCurve(rows, minBin) {
+  minBin = minBin || 40;
+  const bins = [];
+  for (let i = 0; i < 10; i++) bins.push({ x: 0.525 + i * 0.05, n: 0, w: 0 });
+  for (const row of rows || []) {
+    const p = row[0], y = row[1];
+    if (p == null || Number.isNaN(p) || y == null) continue;
+    const fav = Math.max(p, 1 - p);
+    const won = p >= 0.5 ? y : 1 - y;
+    const i = Math.min(9, Math.max(0, Math.floor((fav - 0.5) / 0.05)));
+    bins[i].n++;
+    bins[i].w += won;
+  }
+  const pts = bins.filter(b => b.n >= minBin).map(b => ({ x: b.x, y: b.w / b.n, w: b.n }));
+  if (pts.length < 3) return null;
+  const blocks = pts.map(p => ({ x0: p.x, x1: p.x, y: p.y, w: p.w }));
+  let i = 0;
+  while (i < blocks.length - 1) {
+    if (blocks[i].y <= blocks[i + 1].y + 1e-9) { i++; continue; }
+    const a = blocks[i], b = blocks[i + 1];
+    const w = a.w + b.w;
+    blocks.splice(i, 2, { x0: a.x0, x1: b.x1, y: (a.y * a.w + b.y * b.w) / w, w });
+    if (i) i--;
+  }
+  return blocks;
+}
+
+function applyWinCurve(p, blocks) {
+  if (!blocks || !blocks.length || p == null || Number.isNaN(p)) return null;
+  const fav = Math.max(p, 1 - p);
+  const centers = blocks.map(b => ({ x: (b.x0 + b.x1) / 2, y: b.y }));
+  let rate;
+  if (fav <= centers[0].x) rate = centers[0].y;
+  else if (fav >= centers[centers.length - 1].x) rate = centers[centers.length - 1].y;
+  else {
+    let j = 1;
+    while (j < centers.length && centers[j].x < fav) j++;
+    const a = centers[j - 1], b = centers[j];
+    const t = (fav - a.x) / ((b.x - a.x) || 1);
+    rate = a.y + t * (b.y - a.y);
+  }
+  rate = Math.min(0.98, Math.max(0.5, rate));
+  return p >= 0.5 ? rate : 1 - rate;
+}
+
+function marginFactor(score) {
+  const s = String(score || "");
+  if (s === "3-0" || s === "0-3") return 1;
+  if (s === "3-1" || s === "1-3") return 0.8;
+  if (s === "3-2" || s === "2-3") return 0.55;
+  return 1;
+}
+
+// rows are oldest first: {e, won, score}. mode is plain, margin, decay, or both.
+function recentShift(rows, mode, prior) {
+  if (!rows || rows.length < 8) return null;
+  const decay = mode === "decay" || mode === "both" ? 0.82 : 1;
+  const margin = mode === "margin" || mode === "both";
+  let sw = 0, sy = 0, se = 0;
+  const n = rows.length;
+  for (let i = 0; i < n; i++) {
+    const w = Math.pow(decay, n - 1 - i) * (margin ? marginFactor(rows[i].score) : 1);
+    sw += w;
+    sy += w * (rows[i].won ? 1 : 0);
+    se += w * rows[i].e;
+  }
+  if (sw <= 0) return null;
+  return { n, w: sy, exp: se, shift: shrunkShift(sw, sy, se, prior == null ? 80 : prior) };
+}
+
+function h2hShiftFrom(rows, wantFirst, prior) {
+  if (!rows || rows.length < 5) return null;
+  let aw = 0, exp = 0;
+  for (const x of rows) {
+    if (wantFirst ? x.firstWon : !x.firstWon) aw++;
+    exp += wantFirst ? x.eFirst : 1 - x.eFirst;
+  }
+  return { n: rows.length, aw, exp, diff: aw - exp, shift: shrunkShift(rows.length, aw, exp, prior == null ? 40 : prior) };
+}
+
+function sessionBin(n) {
+  n = n | 0;
+  if (n <= 0) return 0;
+  if (n <= 2) return 1;
+  if (n <= 5) return 2;
+  return 3;
+}
+
+function fitSessionShifts(rows, minN, prior) {
+  minN = minN || 80;
+  prior = prior == null ? 150 : prior;
+  const bins = {};
+  for (const r of rows || []) {
+    const sides = [[r.bw, r.e, 1], [r.bl, 1 - r.e, 0]];
+    for (const [bin, e, y] of sides) {
+      if (!bin) continue;
+      const a = bins[bin] || (bins[bin] = { n: 0, w: 0, exp: 0 });
+      a.n++;
+      a.w += y;
+      a.exp += e;
+    }
+  }
+  const shift = {};
+  for (const k of Object.keys(bins)) {
+    const a = bins[k];
+    if (a.n < minN) continue;
+    const s = shrunkShift(a.n, a.w, a.exp, prior);
+    if (Math.abs(s) >= 0.02) shift[k] = s;
+  }
+  return shift;
+}
+
+// Keep a nudge only when it lowers the error by minGain per match.
+function chooseNudge(baseLoss, options, n, minGain) {
+  minGain = minGain == null ? 0.001 : minGain;
+  if (!n || n < 150) return "off";
+  let best = null;
+  for (const id of Object.keys(options || {})) {
+    const loss = options[id];
+    if (best == null || loss < best.loss) best = { id, loss };
+  }
+  if (!best || (baseLoss - best.loss) / n < minGain) return "off";
+  return best.id;
+}
+
+// Walk-forward: the weight for each priced match is fit only on earlier ones.
+// The live weight is kept when that mix beat the app on the matches it was scored on.
+function bestBlendWeight(rows) {
+  const empty = { w: 0, n: rows ? rows.length : 0, scored: 0, appLoss: 0, bookLoss: 0, blendLoss: 0, ready: false };
+  if (!rows || rows.length < 25) return empty;
+  function lossAt(w, subset) {
+    let s = 0;
+    for (const r of subset) s += logLoss(logitBlend(r.app, r.book, w), r.y);
+    return s;
+  }
+  function bestW(subset) {
+    let best = { w: 0, s: lossAt(0, subset) };
+    for (let i = 1; i <= 20; i++) {
+      const w = i / 20;
+      const s = lossAt(w, subset);
+      if (s < best.s - 1e-9) best = { w, s };
+    }
+    return best;
+  }
+  let wf = 0, app = 0, book = 0, scored = 0;
+  for (let i = 25; i < rows.length; i++) {
+    const w = bestW(rows.slice(0, i)).w;
+    const r = rows[i];
+    wf += logLoss(logitBlend(r.app, r.book, w), r.y);
+    app += logLoss(r.app, r.y);
+    book += logLoss(r.book, r.y);
+    scored++;
+  }
+  const fitted = bestW(rows);
+  const ready = scored >= 15 && wf < app - 1e-6;
+  return { w: ready ? fitted.w : 0, n: rows.length, scored, appLoss: app, bookLoss: book, blendLoss: wf, ready };
+}

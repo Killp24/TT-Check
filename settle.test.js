@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -71,6 +71,74 @@ test("decision snapshot keeps book odds, app probability, edge, and time", () =>
   assert.equal(typeof snap.edge1, "number");
   assert.equal(typeof snap.edge2, "number");
   assert.ok(snap.edge1 > 0);
+});
+
+test("the calibration curve pulls an overconfident favorite down and stays ordered", () => {
+  const rows = [];
+  for (let i = 0; i < 80; i++) rows.push([0.62, i < 50 ? 1 : 0]);
+  for (let i = 0; i < 80; i++) rows.push([0.72, i < 48 ? 1 : 0]);
+  for (let i = 0; i < 80; i++) rows.push([0.82, i < 60 ? 1 : 0]);
+  const curve = fitWinCurve(rows, 40);
+  const lo = applyWinCurve(0.62, curve);
+  const mid = applyWinCurve(0.72, curve);
+  const hi = applyWinCurve(0.82, curve);
+  assert.ok(lo <= mid + 1e-9 && mid <= hi + 1e-9);
+  assert.ok(hi < 0.82);
+  assert.ok(Math.abs(applyWinCurve(0.18, curve) - (1 - hi)) < 0.03);
+});
+
+test("a blowout win counts more than a scrape when margins are used", () => {
+  const blow = [];
+  const scrape = [];
+  for (let i = 0; i < 6; i++) {
+    blow.push({ e: 0.5, won: 1, score: "3-0" });
+    scrape.push({ e: 0.5, won: 1, score: "3-2" });
+  }
+  for (let i = 0; i < 6; i++) {
+    blow.push({ e: 0.5, won: 0, score: "3-2" });
+    scrape.push({ e: 0.5, won: 0, score: "3-0" });
+  }
+  const a = recentShift(blow, "margin", 80);
+  const b = recentShift(scrape, "margin", 80);
+  assert.ok(a.shift > 0);
+  assert.ok(b.shift < 0);
+  assert.equal(recentShift(blow, "plain", 80).shift, 0);
+});
+
+test("a nudge is kept only when it lowers the error enough", () => {
+  assert.equal(chooseNudge(100, { plain: 99.9, margin: 80 }, 200, 0.001), "margin");
+  assert.equal(chooseNudge(100, { plain: 99.9 }, 200, 0.001), "off");
+  assert.equal(chooseNudge(100, { plain: 50 }, 40, 0.001), "off");
+});
+
+test("the book gets a vote only when the mix beat the app on later matches", () => {
+  const helpful = [];
+  for (let i = 0; i < 50; i++) {
+    const y = i % 2;
+    helpful.push({ app: 0.5, book: y ? 0.8 : 0.2, y });
+  }
+  const fit = bestBlendWeight(helpful);
+  assert.equal(fit.ready, true);
+  assert.ok(fit.w > 0);
+  assert.ok(fit.blendLoss < fit.appLoss);
+  const useless = [];
+  for (let i = 0; i < 50; i++) {
+    const y = i % 2;
+    useless.push({ app: y ? 0.8 : 0.2, book: 0.5, y });
+  }
+  assert.equal(bestBlendWeight(useless).w, 0);
+  assert.ok(logitBlend(0.7, 0.4, 0) > 0.69 && logitBlend(0.7, 0.4, 0) < 0.71);
+});
+
+test("session shifts need a real sample and ignore the first match of the day", () => {
+  assert.equal(sessionBin(0), 0);
+  assert.equal(sessionBin(2), 1);
+  assert.equal(sessionBin(8), 3);
+  const rows = [];
+  for (let i = 0; i < 100; i++) rows.push({ bw: 0, bl: 3, e: 0.4 });
+  const shift = fitSessionShifts(rows, 80, 150);
+  assert.ok(shift[3] < 0);
+  assert.equal(shift[0], undefined);
 });
 
 test("form shift shrinks a small sample toward zero", () => {
