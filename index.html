@@ -132,9 +132,9 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .note{display:block;margin-top:6px;font-size:.93rem}
 .banlist .pos{color:var(--ok)}.banlist .neg{color:var(--ban)}
 .topbar{justify-content:space-between}
-.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 24px)}
+.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 72px)}
 .sheet .tools{max-width:640px;margin:0 auto}
-.sheethd{max-width:640px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);padding:4px 0 8px;z-index:1}
+.sheethd{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;position:sticky;top:0;background:var(--bg);padding:4px 0 8px;z-index:1}
 .sheethd h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.6rem;margin:0}
 .sheet .tools details:first-child{margin-top:0}
 html.lock,html.lock body{overflow:hidden}
@@ -213,11 +213,18 @@ html.lock,html.lock body{overflow:hidden}
 .flow .btn{flex:1;text-align:center}
 .flow .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .trust{color:var(--muted);font-size:.82rem;margin:-4px 0 14px}
+.trust:empty,.trust[hidden]{display:none}
+.sheethd h2{flex:1;text-align:center}
+.schedmore{margin:0 0 8px;background:transparent;border:0}
+.schedmore summary{padding:0;font-weight:600;font-size:.9rem;color:var(--muted)}
+.schedmark{list-style:none;margin:4px 0 8px;padding:8px 0 0;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.totop{position:fixed;right:max(16px,calc(50vw - 320px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:30;background:var(--table);color:#fff;border:0;border-radius:20px;padding:10px 16px;font:inherit;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+.totop:focus-visible{outline:3px solid var(--ball)}
 .sleg li.void{color:var(--muted)}
 .sleg .bb{flex:none}
 </style></head><body><main>
 <h1>TT matchup check</h1>
-<p class="sub">Pick two players to compare Elo, win odds, head-to-head and ban list flags.</p>
+<p class="sub">Pick two players.</p>
 <p class="src" id="srcInfo">Loading data…</p>
 <nav class="flow" aria-label="Today, signals, assist"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">1 Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">2 Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="step">3 Assist</button></nav>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
@@ -242,16 +249,16 @@ html.lock,html.lock body{overflow:hidden}
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
 <div id="h2h"></div>
-<div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><h2 id="favTitle">Favourites</h2><button class="btn" id="favsClose" type="button">Done</button></div>
+<div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><button class="btn" id="favsClose" type="button">Back</button><h2 id="favTitle">Favourites</h2><span></span></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
-<div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><h2 id="betsTitle">My bets</h2><button class="btn" id="betsClose" type="button">Done</button></div>
+<div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
 <div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
 <details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
-<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><h2 id="sigTitle">Signals</h2><button class="btn" id="sigClose" type="button">Done</button></div>
-<div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div></div>
-<div class="sheet" id="sched" role="dialog" aria-modal="true" aria-labelledby="schedTitle" hidden><div class="sheethd"><h2 id="schedTitle">Today's matches</h2><button class="btn" id="schedClose" type="button">Done</button></div>
-<div class="tools"><div class="field schfield"><input id="schFind" autocomplete="off" placeholder="Search a player or tournament"><button class="x" type="button" id="schClear" aria-label="Clear search">✕</button></div><div class="schedopts"><label><input type="checkbox" id="onlyFav"> Saved only</label><label><input type="checkbox" id="onlyEV"> Value only</label><label><input type="checkbox" id="onlyFlag"> Flagged only</label><label><input type="checkbox" id="showDone"> Show finished</label></div><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div></div>
-<div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><h2 id="menuTitle">Menu</h2><button class="btn" id="menuClose" type="button">Done</button></div>
+<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span></div>
+<div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div><button class="totop" id="sigTop" type="button" hidden>Top</button></div>
+<div class="sheet" id="sched" role="dialog" aria-modal="true" aria-labelledby="schedTitle" hidden><div class="sheethd"><button class="btn" id="schedClose" type="button">Back</button><h2 id="schedTitle">Today</h2><button class="btn" id="schedJump" type="button">Now</button></div>
+<div class="tools"><div class="field schfield"><input id="schFind" autocomplete="off" placeholder="Search a player or tournament"><button class="x" type="button" id="schClear" aria-label="Clear search">✕</button></div><div class="schedopts"><label><input type="checkbox" id="showDone"> Show finished</label></div><details class="schedmore"><summary>More filters</summary><div class="schedopts"><label><input type="checkbox" id="onlyFav"> Saved only</label><label><input type="checkbox" id="onlyEV"> Value only</label><label><input type="checkbox" id="onlyFlag"> Flagged only</label></div></details><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div><button class="totop" id="schedTop" type="button" hidden>Top</button></div>
+<div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><button class="btn" id="menuClose" type="button">Back</button><h2 id="menuTitle">Menu</h2><span></span></div>
 <div class="tools">
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
 <details><summary id="formSum">Hot and cold form</summary><ul class="banlist" id="formList"></ul></details>
@@ -743,12 +750,10 @@ function update(){
 }
 function renderTrust(){
  const el=$("trustInfo");if(!el)return;
- if(!data){el.textContent="No ratings loaded yet. Serve this folder, or open the app while online, so the text files can load.";return}
- const asOf=(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
- const bits=[asOf?`Elo as of ${nice(asOf)}`:"Elo date unknown",offAt?`results ${ago(offAt)}`:"results time unknown"];
- if(CURMATCH){const so=storedOdds(CURMATCH.p1,CURMATCH.p2,CURMATCH.date+" "+CURMATCH.time);
-  bits.push(so&&so.at?`book price ${ago(so.at)}`:"no book price saved for this match")}
- el.textContent=bits.join(" · ")+". Trust: the ban list is yours and form does not edit it. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Small samples stay noisy.";
+ if(!data){el.hidden=false;el.textContent="No ratings loaded yet.";return}
+ if(!CURMATCH){el.hidden=true;el.textContent="";return}
+ const so=storedOdds(CURMATCH.p1,CURMATCH.p2,CURMATCH.date+" "+CURMATCH.time);
+ el.hidden=false;el.textContent=so&&so.at?`Book price saved ${ago(so.at)}`:"No book price saved for this match yet";
 }
 
 // ---------- odds & value (American odds) ----------
@@ -929,17 +934,20 @@ function plToDate(d,t){const [y,m,da]=d.split("-").map(Number),[h,mi]=t.split(":
  try{const g=Object.fromEntries(new Intl.DateTimeFormat("en-US",{timeZone:"Europe/Warsaw",hourCycle:"h23",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}).formatToParts(new Date(guess)).map(x=>[x.type,x.value]));
   return new Date(guess-(Date.UTC(+g.year,+g.month-1,+g.day,+g.hour%24,+g.minute)-guess))}catch(e){return new Date(guess-2*36e5)}}
 const byNameP=n=>players.find(p=>p.name===n);
-function renderSched(){
+function renderSched(opt){
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked,onlyEV=$("onlyEV").checked;
  const q=norm($("schFind").value||"").split(" ").filter(Boolean),onlyFav=$("onlyFav").checked;
+ const sheet=$("sched"),keep=!!(opt&&opt.keep);
+ const prev=keep?document.getElementById("schedNow"):null;
+ const prevTop=prev?prev.getBoundingClientRect().top:null;
  // the site doesn't fill in results on schedule posts, so look them up in the collected matches
  linkResults();
- // Upcoming matches only, unless "Show finished" is ticked
+ // Upcoming matches only, unless "Show finished" is ticked. Finished ones are listed above Up next.
  const rows=SCHED.filter(r=>showDone||(!r.res&&!r.fin&&r.at.getTime()>now-30*60000)).filter(r=>r.at.getTime()>now-20*36e5&&r.at.getTime()<now+30*36e5).sort((x,y)=>x.at-y.at);
- let shown=0;
- const html=rows.map((r,i)=>{
+ let shown=0,html="",marked=false,finishedAbove=false;
+ for(const r of rows){
   const a=byNameP(r.p1),b=byNameP(r.p2);
-  let fav="",flag=false,tags="",be="";
+  let fav="",flag=false,tags="";
   if(a&&b){const e=estimate(a,b),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa),diff=Math.abs(e.pa-e.pe);
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
    if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
@@ -951,27 +959,52 @@ function renderSched(){
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
     if(top.ev>=3){flag=true;tags+=`<span class="stag ev">+$${top.ev.toFixed(0)} on ${esc(sur(top.p.name))} at ${top.o>0?"+":""}${top.o}</span>`}
     else tags+=`<span class="stag">Best EV ${top.ev>=0?"+":"−"}$${Math.abs(top.ev).toFixed(0)} at your odds</span>`;
-   }else{
-    be=`Value under ${esc(sur(a.name))} ${fairAm(e.pa)} / ${esc(sur(b.name))} ${fairAm(1-e.pa)}`;
    }
   }else tags+=`<span class="stag">Player not in ratings</span>`;
-  if(onlyFav&&!isFav(r.p1,r.p2)&&!isFavM(r))return"";
-  if(q.length&&!q.every(w=>norm(r.p1+" "+r.p2+" "+r.tour).includes(w)))return"";
-  if(onlyEV&&!/stag ev/.test(tags))return"";
-  if(onlyFlag&&!flag)return"";
+  if(onlyFav&&!isFav(r.p1,r.p2)&&!isFavM(r))continue;
+  if(q.length&&!q.every(w=>norm(r.p1+" "+r.p2+" "+r.tour).includes(w)))continue;
+  if(onlyEV&&!/stag ev/.test(tags))continue;
+  if(onlyFlag&&!flag)continue;
+  const live=!r.res&&!r.fin&&r.at.getTime()>now-30*60000;
+  let isNow=false;
+  if(!marked&&live){marked=true;isNow=true;if(finishedAbove)html+=`<li class="schedmark">Up next</li>`}
+  if(!live)finishedAbove=true;
   shown++;
   const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-30?"No result on file":mins<=0?"Started":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
-  return `<li class="srowwrap"><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${be?`<small class="muted">${be}</small>`:""}${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`}).join("");
- $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try unticking the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
- $("schedInfo").innerHTML=SCHED.length?`${shown} match${shown===1?"":"es"}${q.length?" matching your search":""}, your phone's time zone. Matches drop off 30 minutes after their scheduled start; tick "Show finished" to see earlier ones.<br>"Value under" = odds better than these would be value. Enter real odds on a matchup and they're remembered here.`:"";
+  html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
+ }
+ $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
+ $("schedInfo").textContent=shown?`${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"";
+ const nowEl=document.getElementById("schedNow");
+ if(keep&&prevTop!=null&&nowEl)sheet.scrollTop+=nowEl.getBoundingClientRect().top-prevTop;
+}
+function schedNowTop(sheet){
+ const el=document.getElementById("schedNow");
+ if(!el)return 0;
+ const head=sheet.querySelector(".sheethd");
+ const line=(head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top)+8;
+ return Math.max(0,el.getBoundingClientRect().top-line+sheet.scrollTop);
+}
+function jumpSchedNow(){
+ const sheet=$("sched");
+ if(!sheet)return;
+ sheet.scrollTo({top:schedNowTop(sheet),behavior:"smooth"});
+}
+function bindSheetTop(sheetId,btnId){
+ const sheet=$(sheetId),btn=$(btnId);if(!sheet||!btn)return;
+ sheet.addEventListener("scroll",()=>{btn.hidden=sheet.scrollTop<360});
+ btn.onclick=()=>sheet.scrollTo({top:0,behavior:"smooth"});
 }
 $("schedList").addEventListener("click",e=>{const f=e.target.closest("[data-favm]");if(f){toggleFavM(SCHED[+f.dataset.favm]);return}
  const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
  PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
  closeSheet("sched");setFlow("assist");update();scrollTo(0,0)});
-$("onlyFav").onchange=renderSched;$("onlyEV").onchange=renderSched;$("onlyFlag").onchange=renderSched;
-$("schFind").addEventListener("input",renderSched);
-$("schClear").onclick=()=>{$("schFind").value="";renderSched();$("schFind").focus()};$("showDone").onchange=renderSched;
+$("onlyFav").onchange=()=>renderSched({keep:true});$("onlyEV").onchange=()=>renderSched({keep:true});$("onlyFlag").onchange=()=>renderSched({keep:true});
+$("schFind").addEventListener("input",()=>renderSched({keep:true}));
+$("schClear").onclick=()=>{$("schFind").value="";renderSched({keep:true});$("schFind").focus()};
+$("showDone").onchange=()=>renderSched({keep:true});
+$("schedJump").onclick=jumpSchedNow;
+bindSheetTop("sched","schedTop");bindSheetTop("signals","sigTop");
 
 // ---------- estimate report card ----------
 const LISTDATE="2026-09-29";   // the ban list was made on Sep 28, so later matches are a fair test
@@ -1071,7 +1104,7 @@ $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!
 function openSheet(id){
  $(id).hidden=false;document.documentElement.classList.add("lock");
  const c=$(id+"Close");if(c)c.focus();
- if(id==="sched"){setFlow("today");renderSched()}
+ if(id==="sched"){setFlow("today");renderSched();requestAnimationFrame(()=>{const s=$("sched");s.scrollTop=$("showDone").checked?schedNowTop(s):0;$("schedTop").hidden=s.scrollTop<360})}
  if(id==="signals"){setFlow("signals");renderSignals();const s=$("sigClose");if(s)s.focus()}
 }
 function closeSheet(id){$(id).hidden=true;if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock")}
