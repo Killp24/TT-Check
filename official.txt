@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-02T20:38Z
+# updated 2026-10-02T21:39Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -8920,13 +8920,13 @@
 2026-10-02 | Wiciok Piotr | Slosarczyk Pawel | 3-2 | 1 | 1 | +6
 2026-10-02 | Bernacki Lukasz | Hetnar Krzysztof | 3-1 | 1 | 1 | +16
 2026-10-02 | Kolodziej Krystian | Jadczyk Marcin | 3-2 | 1 | 6 | +11
-2026-10-02 | Kocik Tomasz | Pawlik Cezary | 3-1 | 1 | 1 | Pending
+2026-10-02 | Kocik Tomasz | Pawlik Cezary | 3-1 | 1 | 1 | +9
 2026-10-02 | Baron Mariusz | Kowalski Kamil | 3-1 | 1 | 1 | +5
-2026-10-02 | Szlubowski Dariusz | Strus Piotr | 3-0 | 1 | 1 | Pending
-2026-10-02 | Sulkowski Karol | Klocek Kamil | 3-1 | 1 | 2 | Pending
+2026-10-02 | Szlubowski Dariusz | Strus Piotr | 3-0 | 1 | 1 | +10
+2026-10-02 | Sulkowski Karol | Klocek Kamil | 3-1 | 1 | 2 | +14
 2026-10-02 | Nowak Jakub | Juszczyk Krzysztof | 3-2 | 1 | 1 | +10
 2026-10-02 | Vincenec Oliver | Oracz Lukasz | 3-1 | 1 | 1 | +14
-2026-10-02 | Oracz Jacek | Malcher Krzysztof | 3-1 | 1 | 1 | Pending
+2026-10-02 | Oracz Jacek | Malcher Krzysztof | 3-1 | 1 | 1 | +5
 2026-10-02 | Staszczyk Konrad | Brud Szymon | 3-0 | 1 | 1 | Pending
 2026-10-02 | Kukawka Milosz | Makajew Maciej | 3-0 | 1 | 1 | Pending
 2026-10-02 | Ruszkiewicz Adam | Wiza Roman | 3-0 | 1 | 1 | +15
@@ -8964,15 +8964,17 @@
 2026-10-02 | Hetnar Krzysztof | Slosarczyk Pawel | 3-0 | 2 | 2 | +10
 2026-10-02 | Kolodziej Krystian | Kwapis Jakub | 3-0 | 2 | 7 | +13
 2026-10-02 | Vincenec Oliver | Kowalski Kamil | 3-0 | 2 | 2 | +7
-2026-10-02 | Szlubowski Dariusz | Sulkowski Karol | 3-0 | 2 | 2 | Pending
+2026-10-02 | Szlubowski Dariusz | Sulkowski Karol | 3-0 | 2 | 2 | +14
 2026-10-02 | Baron Mariusz | Juszczyk Krzysztof | 3-0 | 2 | 2 | +17
-2026-10-02 | Kocik Tomasz | Wozniczka Marcin | 3-1 | 2 | 2 | Pending
+2026-10-02 | Kocik Tomasz | Wozniczka Marcin | 3-1 | 2 | 2 | +4
 2026-10-02 | Oracz Lukasz | Nowak Jakub | 3-0 | 2 | 2 | +13
-2026-10-02 | Pawlik Cezary | Oracz Jacek | 3-2 | 2 | 2 | Pending
+2026-10-02 | Pawlik Cezary | Oracz Jacek | 3-2 | 2 | 2 | +9
 2026-10-02 | Staszczyk Konrad | Kosmal Dawid | 3-1 | 2 | 7 | Pending
 2026-10-02 | Kesik Gracjan | Kukawka Milosz | 3-0 | 2 | 2 | Pending
 2026-10-02 | Brud Szymon | Makajew Maciej | 3-0 | 2 | 2 | Pending
 2026-10-02 | Fira Damian | Wiza Roman | 3-1 | 2 | 2 | Pending
+2026-10-02 | Jozala Waldemar | Ruszkiewicz Adam | 3-2 | 2 | 2 | Pending
+2026-10-02 | Tkaczyk Henryk | Michalski Jakub | 3-2 | 2 | 2 | Pending
 2026-10-02 | Krezel Andrzej | Skupinski Arkadiusz | 3-1 | 3 | 3 | +6
 2026-10-02 | Fomin Andriej | Leczycki Mariusz | 3-1 | 3 | 3 | +13
 2026-10-02 | Nocun Zbigniew | Barton Aleksander | 3-1 | 3 | 3 | +2
@@ -9000,18 +9002,20 @@
 2026-10-02 | Slosarczyk Pawel | Bernacki Lukasz | 3-1 | 3 | 3 | +14
 2026-10-02 | Kosmal Dawid | Kapik Krzysztof | 3-0 | 3 | 8 | +17
 2026-10-02 | Czerwinski Bartosz | Warpas Blazej | 3-1 | 3 | 8 | +5
-2026-10-02 | Glanowski Jakub | Trela Mateusz | 3-1 | 3 | 1 | Pending
-2026-10-02 | Klocek Kamil | Trela Mateusz | 3-2 | 3 | 2 | Pending
-2026-10-02 | Szlubowski Dariusz | Trela Mateusz | 3-2 | 3 | 3 | Pending
-2026-10-02 | Sulkowski Karol | Strus Piotr | 3-1 | 3 | 3 | Pending
-2026-10-02 | Oracz Jacek | Kocik Tomasz | 3-1 | 3 | 3 | Pending
+2026-10-02 | Glanowski Jakub | Trela Mateusz | 3-1 | 3 | 1 | +9
+2026-10-02 | Klocek Kamil | Trela Mateusz | 3-2 | 3 | 2 | +7
+2026-10-02 | Szlubowski Dariusz | Trela Mateusz | 3-2 | 3 | 3 | +6
+2026-10-02 | Sulkowski Karol | Strus Piotr | 3-1 | 3 | 3 | +8
+2026-10-02 | Oracz Jacek | Kocik Tomasz | 3-1 | 3 | 3 | +14
 2026-10-02 | Oracz Lukasz | Juszczyk Krzysztof | 3-2 | 3 | 3 | +8
 2026-10-02 | Vincenec Oliver | Baron Mariusz | 3-2 | 3 | 3 | +9
-2026-10-02 | Pawlik Cezary | Zielinski Marcin | 3-1 | 3 | 8 | Pending
+2026-10-02 | Pawlik Cezary | Zielinski Marcin | 3-1 | 3 | 8 | +13
 2026-10-02 | Nowak Jakub | Kowalski Kamil | 3-1 | 3 | 3 | +7
-2026-10-02 | Wozniczka Marcin | Malcher Krzysztof | 3-1 | 3 | 3 | Pending
+2026-10-02 | Wozniczka Marcin | Malcher Krzysztof | 3-1 | 3 | 3 | +11
 2026-10-02 | Staszczyk Konrad | Kukawka Milosz | 3-2 | 3 | 3 | Pending
 2026-10-02 | Makajew Maciej | Kesik Gracjan | 3-0 | 3 | 3 | Pending
+2026-10-02 | Fira Damian | Ruszkiewicz Adam | 3-1 | 3 | 3 | Pending
+2026-10-02 | Wiza Roman | Michalski Jakub | 3-0 | 3 | 3 | Pending
 2026-10-02 | Nocun Zbigniew | Krezel Andrzej | 3-0 | 4 | 4 | +17
 2026-10-02 | Fomin Andriej | Skupinski Arkadiusz | 3-0 | 4 | 4 | +7
 2026-10-02 | Leczycki Mariusz | Barton Aleksander | 3-0 | 4 | 4 | +3
@@ -9037,15 +9041,16 @@
 2026-10-02 | Pelka Jerzy | Slosarczyk Pawel | 3-0 | 4 | 4 | +12
 2026-10-02 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 4 | 9 | +12
 2026-10-02 | Kolodziej Krystian | Kuzmicz Jakub | 3-2 | 4 | 9 | +8
-2026-10-02 | Glanowski Jakub | Strus Piotr | 3-0 | 4 | 2 | Pending
-2026-10-02 | Oracz Jacek | Zielinski Marcin | 3-1 | 4 | 9 | Pending
-2026-10-02 | Strus Piotr | Trela Mateusz | 3-1 | 4 | 4 | Pending
-2026-10-02 | Oracz Lukasz | Baron Mariusz | 3-0 | 4 | 4 | Pending
+2026-10-02 | Glanowski Jakub | Strus Piotr | 3-0 | 4 | 2 | +7
+2026-10-02 | Oracz Jacek | Zielinski Marcin | 3-1 | 4 | 9 | +10
+2026-10-02 | Strus Piotr | Trela Mateusz | 3-1 | 4 | 4 | +15
+2026-10-02 | Oracz Lukasz | Baron Mariusz | 3-0 | 4 | 4 | +15
 2026-10-02 | Juszczyk Krzysztof | Kowalski Kamil | 3-1 | 4 | 4 | +5
 2026-10-02 | Vincenec Oliver | Nowak Jakub | 3-2 | 4 | 4 | +7
-2026-10-02 | Pawlik Cezary | Wozniczka Marcin | 3-0 | 4 | 4 | Pending
+2026-10-02 | Pawlik Cezary | Wozniczka Marcin | 3-0 | 4 | 4 | +8
 2026-10-02 | Staszczyk Konrad | Makajew Maciej | 3-0 | 4 | 4 | Pending
-2026-10-02 | Kocik Tomasz | Malcher Krzysztof | 3-2 | 4 | 4 | Pending
+2026-10-02 | Kocik Tomasz | Malcher Krzysztof | 3-2 | 4 | 4 | +3
+2026-10-02 | Brud Szymon | Kesik Gracjan | 3-1 | 4 | 4 | Pending
 2026-10-02 | Fomin Andriej | Guzik Michal | 3-0 | 5 | 4 | +23
 2026-10-02 | Zielinski Marcin | Lewczuk Miroslaw | 3-2 | 5 | 4 | +7
 2026-10-02 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 4 | +8
@@ -9068,12 +9073,15 @@
 2026-10-02 | Pelka Jerzy | Hetnar Krzysztof | 3-1 | 5 | 5 | +13
 2026-10-02 | Wiciok Piotr | Bernacki Lukasz | 3-1 | 5 | 5 | +11
 2026-10-02 | Kosmal Dawid | Rutkowski Mateusz | 3-1 | 5 | 10 | +12
-2026-10-02 | Glanowski Jakub | Klocek Kamil | 3-0 | 5 | 4 | Pending
-2026-10-02 | Klocek Kamil | Szlubowski Dariusz | 3-2 | 5 | 4 | Pending
-2026-10-02 | Strus Piotr | Klocek Kamil | 3-1 | 5 | 6 | Pending
-2026-10-02 | Baron Mariusz | Nowak Jakub | 3-2 | 5 | 5 | Pending
-2026-10-02 | Juszczyk Krzysztof | Vincenec Oliver | 3-2 | 5 | 5 | Pending
-2026-10-02 | Oracz Jacek | Wozniczka Marcin | 3-2 | 5 | 5 | Pending
+2026-10-02 | Glanowski Jakub | Klocek Kamil | 3-0 | 5 | 4 | +12
+2026-10-02 | Klocek Kamil | Szlubowski Dariusz | 3-2 | 5 | 4 | +9
+2026-10-02 | Strus Piotr | Klocek Kamil | 3-1 | 5 | 6 | +16
+2026-10-02 | Baron Mariusz | Nowak Jakub | 3-2 | 5 | 5 | +6
+2026-10-02 | Juszczyk Krzysztof | Vincenec Oliver | 3-2 | 5 | 5 | +8
+2026-10-02 | Oracz Jacek | Wozniczka Marcin | 3-2 | 5 | 5 | +3
+2026-10-02 | Trela Mateusz | Sulkowski Karol | 3-0 | 5 | 5 | +18
+2026-10-02 | Kowalski Kamil | Oracz Jacek | 3-2 | 5 | 6 | +13
+2026-10-02 | Pawlik Cezary | Malcher Krzysztof | 3-1 | 5 | 5 | +5
 2026-10-02 | Wiciok Piotr | Slosarczyk Pawel | 3-2 | 6 | 6 | +6
 2026-10-02 | Kufel Karol | Warpas Blazej | 3-0 | 6 | 6 | +10
 2026-10-02 | Skotniczny Rafal | Adamus Pawel | 3-1 | 6 | 6 | +7
@@ -9090,9 +9098,10 @@
 2026-10-02 | Schaniel Krzysztof | Cesarz Milosz | 3-1 | 6 | 6 | +7
 2026-10-02 | Pelka Jerzy | Bernacki Lukasz | 3-2 | 6 | 6 | +6
 2026-10-02 | Hetnar Krzysztof | Wichowski Grzegorz | 3-1 | 6 | 6 | +15
-2026-10-02 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 6 | 1 | Pending
+2026-10-02 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 6 | 1 | +9
 2026-10-02 | Kosmal Dawid | Kesik Gracjan | 3-1 | 6 | 1 | Pending
-2026-10-02 | Glanowski Jakub | Sulkowski Karol | 3-1 | 6 | 4 | Pending
+2026-10-02 | Glanowski Jakub | Sulkowski Karol | 3-1 | 6 | 4 | +8
+2026-10-02 | Baron Mariusz | Juszczyk Krzysztof | 3-2 | 6 | 6 | Pending
 2026-10-02 | Wichowski Grzegorz | Pelka Jerzy | 3-1 | 7 | 7 | +9
 2026-10-02 | Hetnar Krzysztof | Slosarczyk Pawel | 3-0 | 7 | 7 | +9
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 7 | 8 | +6
@@ -9108,9 +9117,10 @@
 2026-10-02 | Kuzmicz Jakub | Michna Dawid | 3-1 | 7 | 7 | +14
 2026-10-02 | Urban Wojciech | Skotniczny Rafal | 3-1 | 7 | 7 | +19
 2026-10-02 | Bernacki Lukasz | Wiciok Piotr | 3-0 | 7 | 7 | +19
-2026-10-02 | Zielinski Marcin | Malcher Krzysztof | 3-0 | 7 | 2 | Pending
-2026-10-02 | Glanowski Jakub | Szlubowski Dariusz | 3-0 | 7 | 5 | Pending
+2026-10-02 | Zielinski Marcin | Malcher Krzysztof | 3-0 | 7 | 2 | +7
+2026-10-02 | Glanowski Jakub | Szlubowski Dariusz | 3-0 | 7 | 5 | +13
 2026-10-02 | Bernacki Lukasz | Hetnar Krzysztof | 3-1 | 8 | 8 | +15
+2026-10-02 | Glanowski Jakub | Trela Mateusz | 3-1 | 8 | 6 | Pending
 2026-10-02 | Wisniewski Karol | Jendrzejewski Patryk | 3-0 | 8 | 8 | +19
 2026-10-02 | Zochniak Jakub | Krcil Frantisek | 3-1 | 8 | 8 | +7
 2026-10-02 | Kufel Karol | Przewlocki Jacek | 3-1 | 8 | 8 | +5
@@ -9152,3 +9162,5 @@
 2026-10-02 | Wloczko Krzysztof | Kolodziej Krystian | 3-2 | 10 | 5 | +8
 2026-10-02 | Hetnar Krzysztof | Pelka Jerzy | 3-1 | 10 | 10 | +11
 2026-10-02 | Bernacki Lukasz | Slosarczyk Pawel | 3-2 | 10 | 10 | +6
+2026-10-02 | Kosmal Dawid | Makajew Maciej | 3-0 | 10 | 5 | Pending
+2026-10-02 | Zielinski Marcin | Kocik Tomasz | 3-1 | 10 | 5 | +15
