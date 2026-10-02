@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-02T08:38Z
+# updated 2026-10-02T09:37Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -5104,7 +5104,7 @@
 2026-09-18 | Durak Kamil | Hetnar Krzysztof | 3-2 | 4 |  | +6
 2026-09-18 | Pilch Aleksander | Szlubowski Dariusz | 3-2 | 4 | 4 | +6
 2026-09-18 | Daniel Artur | Maruszak Piotr | 3-0 |  | 4 | 
-2026-09-18 | Przewlocki Jacek | Gronowski Wojciech | 3-1 | 4 | 4 | +13
+2026-09-18 | Przewlocki Jacek | Gronowski Wojciech | 3-1 | 4 | 4 | +12
 2026-09-18 | Skorski Michal | Strus Piotr | 3-1 |  | 4 | 
 2026-09-18 | Jedrzejowski Oskar | Oracz Jacek | 3-2 | 4 |  | +12
 2026-09-18 | Jurowicz Grzegorz | Lebek Marian | 3-0 | 4 |  | +21
@@ -8903,19 +8903,19 @@
 2026-10-02 | Sokolowski Oliwier | Adamus Kacper | 3-1 | 1 | 1 | +15
 2026-10-02 | Lewczuk Miroslaw | Michalik Jerzy | 3-2 | 1 | 1 | +7
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-0 | 1 | 2 | +11
-2026-10-02 | Kuzmicz Jakub | Wloczko Krzysztof | 3-0 | 1 | 1 | Pending
+2026-10-02 | Kuzmicz Jakub | Wloczko Krzysztof | 3-0 | 1 | 1 | +17
 2026-10-02 | Schaniel Krzysztof | Adamus Pawel | 3-1 | 1 | 1 | +18
 2026-10-02 | Lukaszewski Mikolaj | Warpas Blazej | 3-2 | 1 | 1 | +8
-2026-10-02 | Jadczyk Marcin | Michna Dawid | 3-1 | 1 | 1 | Pending
-2026-10-02 | Poliniewicz Grzegorz | Kwapis Jakub | 3-1 | 1 | 1 | Pending
-2026-10-02 | Zochniak Jakub | Kapik Krzysztof | 3-1 | 1 | 1 | Pending
+2026-10-02 | Jadczyk Marcin | Michna Dawid | 3-1 | 1 | 1 | +10
+2026-10-02 | Poliniewicz Grzegorz | Kwapis Jakub | 3-1 | 1 | 1 | +12
+2026-10-02 | Zochniak Jakub | Kapik Krzysztof | 3-1 | 1 | 1 | +16
 2026-10-02 | Krcil Frantisek | Kufel Karol | 3-1 | 1 | 1 | +15
 2026-10-02 | Stapor Rafal | Przewlocki Jacek | 3-2 | 1 | 1 | +4
 2026-10-02 | Skotniczny Rafal | Cesarz Milosz | 3-2 | 1 | 1 | +1
 2026-10-02 | Urban Wojciech | Jadach Oskar | 3-1 | 1 | 1 | +16
-2026-10-02 | Jendrzejewski Patryk | Zochniak Jakub | 3-0 | 1 | 2 | Pending
-2026-10-02 | Rutkowski Mateusz | Wisniewski Karol | 3-0 | 1 | 1 | Pending
-2026-10-02 | Kolek Maciej | Rutkowski Mateusz | 3-2 | 1 | 2 | Pending
+2026-10-02 | Jendrzejewski Patryk | Zochniak Jakub | 3-0 | 1 | 2 | +12
+2026-10-02 | Rutkowski Mateusz | Wisniewski Karol | 3-0 | 1 | 1 | +12
+2026-10-02 | Kolek Maciej | Rutkowski Mateusz | 3-2 | 1 | 2 | +9
 2026-10-02 | Wichowski Grzegorz | Pelka Jerzy | 3-1 | 1 | 1 | +8
 2026-10-02 | Wiciok Piotr | Slosarczyk Pawel | 3-2 | 1 | 1 | +6
 2026-10-02 | Bernacki Lukasz | Hetnar Krzysztof | 3-1 | 1 | 1 | +16
@@ -8934,14 +8934,14 @@
 2026-10-02 | Michalik Jerzy | Zmijewski Artur | 3-1 | 2 | 3 | +16
 2026-10-02 | Kwapis Jakub | Kuzmicz Jakub | 3-1 | 2 | 2 | Pending
 2026-10-02 | Warpas Blazej | Stapor Rafal | 3-1 | 2 | 2 | +17
-2026-10-02 | Jadczyk Marcin | Wloczko Krzysztof | 3-0 | 2 | 2 | Pending
-2026-10-02 | Michna Dawid | Poliniewicz Grzegorz | 3-1 | 2 | 2 | Pending
-2026-10-02 | Kwapis Jakub | Kuzmicz Jakub | 3-0 | 2 | 2 | Pending
-2026-10-02 | Wisniewski Karol | Kapik Krzysztof | 3-0 | 2 | 2 | Pending
+2026-10-02 | Jadczyk Marcin | Wloczko Krzysztof | 3-0 | 2 | 2 | +11
+2026-10-02 | Michna Dawid | Poliniewicz Grzegorz | 3-1 | 2 | 2 | +8
+2026-10-02 | Kwapis Jakub | Kuzmicz Jakub | 3-0 | 2 | 2 | +22
+2026-10-02 | Wisniewski Karol | Kapik Krzysztof | 3-0 | 2 | 2 | +20
 2026-10-02 | Kufel Karol | Przewlocki Jacek | 3-2 | 2 | 2 | +4
 2026-10-02 | Krcil Frantisek | Lukaszewski Mikolaj | 3-0 | 2 | 2 | +12
 2026-10-02 | Kurek Pawel | Adamus Mariusz | 3-1 | 2 | 2 | +8
-2026-10-02 | Jendrzejewski Patryk | Wisniewski Karol | 3-2 | 2 | 3 | Pending
+2026-10-02 | Jendrzejewski Patryk | Wisniewski Karol | 3-2 | 2 | 3 | +6
 2026-10-02 | Fomin Yurij | Guzik Michal | 3-0 | 2 | 5 | +21
 2026-10-02 | Skotniczny Rafal | Urban Wojciech | 3-2 | 2 | 2 | +4
 2026-10-02 | Wichowski Grzegorz | Wiciok Piotr | 3-0 | 2 | 2 | +10
@@ -8957,21 +8957,23 @@
 2026-10-02 | Wolny Michal | Staniczek Adam | 3-0 | 3 | 3 | +19
 2026-10-02 | Stapor Rafal | Lukaszewski Mikolaj | 3-0 | 3 | 3 | +10
 2026-10-02 | Lebek Marian | Kurek Pawel | 3-0 | 3 | 1 | +14
-2026-10-02 | Jadczyk Marcin | Poliniewicz Grzegorz | 3-0 | 3 | 3 | Pending
-2026-10-02 | Michna Dawid | Kuzmicz Jakub | 3-2 | 3 | 3 | Pending
-2026-10-02 | Kwapis Jakub | Wloczko Krzysztof | 3-1 | 3 | 3 | Pending
-2026-10-02 | Rutkowski Mateusz | Kapik Krzysztof | 3-2 | 3 | 3 | Pending
-2026-10-02 | Zochniak Jakub | Kolek Maciej | 3-0 | 3 | 2 | Pending
+2026-10-02 | Jadczyk Marcin | Poliniewicz Grzegorz | 3-0 | 3 | 3 | +7
+2026-10-02 | Michna Dawid | Kuzmicz Jakub | 3-2 | 3 | 3 | +7
+2026-10-02 | Kwapis Jakub | Wloczko Krzysztof | 3-1 | 3 | 3 | +15
+2026-10-02 | Rutkowski Mateusz | Kapik Krzysztof | 3-2 | 3 | 3 | +7
+2026-10-02 | Zochniak Jakub | Kolek Maciej | 3-0 | 3 | 2 | +20
 2026-10-02 | Kufel Karol | Warpas Blazej | 3-0 | 3 | 3 | +10
 2026-10-02 | Krcil Frantisek | Przewlocki Jacek | 3-2 | 3 | 3 | +5
 2026-10-02 | Kurek Pawel | Fomin Yurij | 3-2 | 3 | 1 | +5
 2026-10-02 | Fomin Yurij | Sokolowski Oliwier | 3-0 | 3 | 5 | +19
-2026-10-02 | Kolek Maciej | Jendrzejewski Patryk | 3-2 | 3 | 3 | Pending
+2026-10-02 | Kolek Maciej | Jendrzejewski Patryk | 3-2 | 3 | 3 | +9
 2026-10-02 | Schaniel Krzysztof | Jadach Oskar | 3-1 | 3 | 3 | +17
 2026-10-02 | Skotniczny Rafal | Adamus Pawel | 3-1 | 3 | 4 | +8
 2026-10-02 | Cesarz Milosz | Adamus Pawel | 3-0 | 3 | 3 | +28
 2026-10-02 | Pelka Jerzy | Wiciok Piotr | 3-1 | 3 | 3 | +11
 2026-10-02 | Urban Wojciech | Schaniel Krzysztof | 3-1 | 3 | 4 | +11
+2026-10-02 | Wichowski Grzegorz | Hetnar Krzysztof | 3-1 | 3 | 3 | +10
+2026-10-02 | Slosarczyk Pawel | Bernacki Lukasz | 3-1 | 3 | 3 | +14
 2026-10-02 | Nocun Zbigniew | Krezel Andrzej | 3-0 | 4 | 4 | +17
 2026-10-02 | Fomin Andriej | Skupinski Arkadiusz | 3-0 | 4 | 4 | +7
 2026-10-02 | Leczycki Mariusz | Barton Aleksander | 3-0 | 4 | 4 | +3
@@ -8979,29 +8981,41 @@
 2026-10-02 | Lebek Marian | Guzik Michal | 3-1 | 4 | 4 | +9
 2026-10-02 | Sokolowski Oliwier | Adamus Mariusz | 3-0 | 4 | 1 | +14
 2026-10-02 | Michalik Jerzy | Staniczek Adam | 3-0 | 4 | 4 | +12
-2026-10-02 | Jadczyk Marcin | Kuzmicz Jakub | 3-0 | 4 | 4 | Pending
-2026-10-02 | Kwapis Jakub | Michna Dawid | 3-2 | 4 | 4 | Pending
-2026-10-02 | Rutkowski Mateusz | Jendrzejewski Patryk | 3-2 | 4 | 4 | Pending
-2026-10-02 | Wisniewski Karol | Zochniak Jakub | 3-0 | 4 | 4 | Pending
+2026-10-02 | Jadczyk Marcin | Kuzmicz Jakub | 3-0 | 4 | 4 | +9
+2026-10-02 | Kwapis Jakub | Michna Dawid | 3-2 | 4 | 4 | +11
+2026-10-02 | Rutkowski Mateusz | Jendrzejewski Patryk | 3-2 | 4 | 4 | +8
+2026-10-02 | Wisniewski Karol | Zochniak Jakub | 3-0 | 4 | 4 | +16
 2026-10-02 | Kufel Karol | Stapor Rafal | 3-2 | 4 | 4 | +7
 2026-10-02 | Warpas Blazej | Krcil Frantisek | 3-1 | 4 | 4 | +15
 2026-10-02 | Kurek Pawel | Guzik Michal | 3-1 | 4 | 7 | +11
 2026-10-02 | Fomin Yurij | Adamus Mariusz | 3-0 | 4 | 4 | +14
-2026-10-02 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-1 | 4 | 4 | Pending
-2026-10-02 | Kapik Krzysztof | Kolek Maciej | 3-0 | 4 | 4 | Pending
+2026-10-02 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-1 | 4 | 4 | +9
+2026-10-02 | Kapik Krzysztof | Kolek Maciej | 3-0 | 4 | 4 | +17
 2026-10-02 | Skotniczny Rafal | Jadach Oskar | 3-1 | 4 | 4 | +8
 2026-10-02 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 | 4 | 4 | +13
 2026-10-02 | Urban Wojciech | Cesarz Milosz | 3-1 | 4 | 4 | +6
+2026-10-02 | Wiciok Piotr | Hetnar Krzysztof | 3-1 | 4 | 4 | Pending
 2026-10-02 | Fomin Andriej | Guzik Michal | 3-0 | 5 | 4 | +23
 2026-10-02 | Zielinski Marcin | Lewczuk Miroslaw | 3-2 | 5 | 4 | +7
 2026-10-02 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 4 | +8
 2026-10-02 | Lebek Marian | Adamus Mariusz | 3-1 | 5 | 3 | +5
-2026-10-02 | Kwapis Jakub | Jadczyk Marcin | 3-2 | 5 | 5 | Pending
-2026-10-02 | Wloczko Krzysztof | Michna Dawid | 3-1 | 5 | 5 | Pending
-2026-10-02 | Rutkowski Mateusz | Zochniak Jakub | 3-0 | 5 | 5 | Pending
-2026-10-02 | Kufel Karol | Lukaszewski Mikolaj | 3-2 | 5 | 5 | Pending
-2026-10-02 | Stapor Rafal | Krcil Frantisek | 3-1 | 5 | 5 | Pending
+2026-10-02 | Kwapis Jakub | Jadczyk Marcin | 3-2 | 5 | 5 | +12
+2026-10-02 | Wloczko Krzysztof | Michna Dawid | 3-1 | 5 | 5 | +14
+2026-10-02 | Rutkowski Mateusz | Zochniak Jakub | 3-0 | 5 | 5 | +11
+2026-10-02 | Kufel Karol | Lukaszewski Mikolaj | 3-2 | 5 | 5 | +4
+2026-10-02 | Stapor Rafal | Krcil Frantisek | 3-1 | 5 | 5 | +11
 2026-10-02 | Adamus Mariusz | Guzik Michal | 3-2 | 5 | 8 | +11
+2026-10-02 | Poliniewicz Grzegorz | Kuzmicz Jakub | 3-2 | 5 | 5 | +10
+2026-10-02 | Jendrzejewski Patryk | Kapik Krzysztof | 3-1 | 5 | 5 | +11
+2026-10-02 | Wisniewski Karol | Kolek Maciej | 3-1 | 5 | 5 | +13
+2026-10-02 | Skotniczny Rafal | Schaniel Krzysztof | 3-0 | 5 | 5 | Pending
+2026-10-02 | Fomin Yurij | Lebek Marian | 3-1 | 5 | 8 | +18
+2026-10-02 | Warpas Blazej | Przewlocki Jacek | 3-2 | 5 | 5 | +7
+2026-10-02 | Jadach Oskar | Cesarz Milosz | 3-1 | 5 | 5 | Pending
+2026-10-02 | Adamus Pawel | Urban Wojciech | 3-2 | 5 | 5 | Pending
 2026-10-02 | Guzik Michal | Sokolowski Oliwier | 3-1 | 6 | 6 | +11
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 6 | 7 | +6
+2026-10-02 | Wisniewski Karol | Kosmal Dawid | 3-1 | 6 | 1 | Pending
+2026-10-02 | Krcil Frantisek | Czerwinski Bartosz | 3-1 | 6 | 1 | Pending
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 7 | 8 | +6
+2026-10-02 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 9 | 5 | +16
