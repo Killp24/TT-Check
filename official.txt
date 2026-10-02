@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-02T13:36Z
+# updated 2026-10-02T14:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9002,6 +9002,7 @@
 2026-10-02 | Bernacki Lukasz | Wichowski Grzegorz | 3-1 | 4 | 4 | +18
 2026-10-02 | Pelka Jerzy | Slosarczyk Pawel | 3-0 | 4 | 4 | +12
 2026-10-02 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 4 | 9 | Pending
+2026-10-02 | Kolodziej Krystian | Kuzmicz Jakub | 3-2 | 4 | 9 | Pending
 2026-10-02 | Fomin Andriej | Guzik Michal | 3-0 | 5 | 4 | +23
 2026-10-02 | Zielinski Marcin | Lewczuk Miroslaw | 3-2 | 5 | 4 | +7
 2026-10-02 | Zmijewski Artur | Wolny Michal | 3-0 | 5 | 4 | +8
@@ -9040,6 +9041,7 @@
 2026-10-02 | Pelka Jerzy | Bernacki Lukasz | 3-2 | 6 | 6 | +6
 2026-10-02 | Hetnar Krzysztof | Wichowski Grzegorz | 3-1 | 6 | 6 | Pending
 2026-10-02 | Wichowski Grzegorz | Pelka Jerzy | 3-1 | 7 | 7 | Pending
+2026-10-02 | Hetnar Krzysztof | Slosarczyk Pawel | 3-0 | 7 | 7 | Pending
 2026-10-02 | Lebek Marian | Sokolowski Oliwier | 3-1 | 7 | 8 | +6
 2026-10-02 | Krcil Frantisek | Warpas Blazej | 3-0 | 7 | 7 | Pending
 2026-10-02 | Kapik Krzysztof | Rutkowski Mateusz | 3-0 | 7 | 7 | Pending
@@ -9053,6 +9055,7 @@
 2026-10-02 | Kuzmicz Jakub | Michna Dawid | 3-1 | 7 | 7 | Pending
 2026-10-02 | Urban Wojciech | Skotniczny Rafal | 3-1 | 7 | 7 | +19
 2026-10-02 | Bernacki Lukasz | Wiciok Piotr | 3-0 | 7 | 7 | Pending
+2026-10-02 | Bernacki Lukasz | Hetnar Krzysztof | 3-1 | 8 | 8 | Pending
 2026-10-02 | Wisniewski Karol | Jendrzejewski Patryk | 3-0 | 8 | 8 | Pending
 2026-10-02 | Zochniak Jakub | Krcil Frantisek | 3-1 | 8 | 8 | Pending
 2026-10-02 | Kufel Karol | Przewlocki Jacek | 3-1 | 8 | 8 | Pending
@@ -9062,9 +9065,17 @@
 2026-10-02 | Kuzmicz Jakub | Wloczko Krzysztof | 3-1 | 8 | 8 | Pending
 2026-10-02 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-0 | 8 | 8 | Pending
 2026-10-02 | Urban Wojciech | Adamus Pawel | 3-2 | 8 | 8 | +9
-2026-10-02 | Krcil Frantisek | Przewlocki Jacek | 3-2 |  | 9 | 
+2026-10-02 | Jadczyk Marcin | Kwapis Jakub | 3-2 | 8 | 8 | Pending
+2026-10-02 | Wiciok Piotr | Pelka Jerzy | 3-1 | 8 | 8 | Pending
+2026-10-02 | Krcil Frantisek | Przewlocki Jacek | 3-2 | 9 | 9 | Pending
 2026-10-02 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 9 | 5 | +16
 2026-10-02 | Kapik Krzysztof | Jendrzejewski Patryk | 3-0 | 9 | 9 | Pending
 2026-10-02 | Zochniak Jakub | Warpas Blazej | 3-1 | 9 | 9 | Pending
 2026-10-02 | Jadach Oskar | Skotniczny Rafal | 3-2 | 9 | 9 | +10
 2026-10-02 | Cesarz Milosz | Adamus Pawel | 3-1 | 9 | 9 | +18
+2026-10-02 | Rutkowski Mateusz | Wisniewski Karol | 3-1 | 9 | 9 | Pending
+2026-10-02 | Kufel Karol | Czerwinski Bartosz | 3-0 | 9 | 4 | Pending
+2026-10-02 | Schaniel Krzysztof | Urban Wojciech | 3-1 | 9 | 9 | +14
+2026-10-02 | Jadach Oskar | Adamus Pawel | 3-1 | 10 | 10 | +9
+2026-10-02 | Poliniewicz Grzegorz | Jendrzejewski Patryk | 3-1 | 10 | 10 | Pending
+2026-10-02 | Warpas Blazej | Przewlocki Jacek | 3-1 | 10 | 10 | Pending
