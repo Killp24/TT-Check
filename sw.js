@@ -1,4 +1,4 @@
-const CACHE = "tt-check-v57";
+const CACHE = "tt-check-v60";
 const SHELL = ["./", "index.html", "settle.js", "manifest.json", "icon.png"];
 
 self.addEventListener("install", e => {
