@@ -799,6 +799,28 @@ function parseBetBackup(text) {
   return arr.filter(b => b && typeof b === "object" && b.id);
 }
 
+function impliedProb(odds) {
+  const n = Number(odds);
+  if (!Number.isFinite(n) || Math.abs(n) < 100) return null;
+  return n < 0 ? (-n) / (-n + 100) : 100 / (n + 100);
+}
+
+// The book has the higher rating as the underdog. Display only. It does not move the win chance.
+// Higher Elo wins. At the same Elo, the better rank (the lower rank number) wins.
+function bookFadesRating(a, b, oa, ob) {
+  if (!a || !b) return null;
+  const ia = impliedProb(oa), ib = impliedProb(ob);
+  if (ia == null || ib == null || ia === ib) return null;
+  const bookFav = ia > ib ? "A" : "B";
+  let rateFav = null, reason = "";
+  if (a.elo !== b.elo) { rateFav = a.elo > b.elo ? "A" : "B"; reason = "elo"; }
+  else if (a.rank != null && b.rank != null && a.rank !== b.rank) { rateFav = a.rank < b.rank ? "A" : "B"; reason = "rank"; }
+  if (!rateFav || rateFav === bookFav) return null;
+  const hi = rateFav === "A" ? a : b;
+  const lo = rateFav === "A" ? b : a;
+  return { dog: hi.name, fav: lo.name, dogElo: hi.elo, favElo: lo.elo, dogRank: hi.rank, favRank: lo.rank, reason };
+}
+
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
   const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);

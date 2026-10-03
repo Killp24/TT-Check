@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -482,6 +482,23 @@ test("the results list is stale once it is past 40 minutes", () => {
   assert.equal(old.stale, true);
   assert.equal(resultsAge("", now), null);
   assert.equal(resultsAge("nope", now), null);
+});
+
+test("the higher rating as the underdog is a caution, and it is quiet when the book agrees", () => {
+  const hi = { name: "Sawicki Grzegorz", elo: 646, rank: 40 };
+  const lo = { name: "Szymik Robert", elo: 482, rank: 90 };
+  const fade = bookFadesRating(hi, lo, 160, -200);
+  assert.equal(fade.dog, "Sawicki Grzegorz");
+  assert.equal(fade.fav, "Szymik Robert");
+  assert.equal(fade.reason, "elo");
+  assert.equal(bookFadesRating(hi, lo, -200, 160), null);
+  assert.equal(bookFadesRating(lo, hi, -200, 160).dog, "Sawicki Grzegorz");
+  const sameA = { name: "A", elo: 500, rank: 10 };
+  const sameB = { name: "B", elo: 500, rank: 20 };
+  assert.equal(bookFadesRating(sameA, sameB, 150, -150).reason, "rank");
+  assert.equal(bookFadesRating(sameA, sameB, -150, 150), null);
+  assert.equal(bookFadesRating(hi, lo, -110, -110), null);
+  assert.equal(bookFadesRating(hi, lo, null, -200), null);
 });
 
 test("today's bets are the ones logged on this phone's day, and a backup round-trips", () => {
