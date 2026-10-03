@@ -184,6 +184,11 @@ html.lock,html.lock body{overflow:hidden}
 .stag{font-size:.74rem;font-weight:600;padding:1px 6px;border-radius:3px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
 .stag.w{background:var(--ball);color:#1b1b1b;border-color:var(--ball)}
 .stag.t1{background:#8e1f1a;color:#fff;border-color:#8e1f1a}.stag.t2{background:var(--ban);color:#fff;border-color:var(--ban)}.stag.t3{background:#d9665f;color:#fff;border-color:#d9665f}
+.stag.datap{color:#146c43;background:#e7f6ee;border-color:#2d7a4b}
+.stag.datan{color:#9a3412;background:#fff4e8;border-color:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}:root:not([data-theme="light"]) .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}}
+:root[data-theme="dark"] .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}
+:root[data-theme="dark"] .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}
 .rch{font-size:1rem;margin:16px 0 6px}
 .rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 .minfo{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;margin:0 0 10px}
@@ -646,8 +651,9 @@ function computeStats(){
  const tacc={},racc={},cal=[],sides=[],seenPair=new Map();
  const sacc={};              // losing streak length -> [n, wins, sum predicted]
  const dayOrder=new Map();   // player|date -> [[match number, predicted, won]]
- const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
+ const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map(),moN:0,moW:0,moE:0});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);
+ const month=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
  for(const [m,ew] of PRE){
   cal.push([ew,1]);cal.push([1-ew,0]);
   {const k=m.date+"|"+[m.w,m.l].sort().join("|"),prev=seenPair.get(k);
@@ -658,7 +664,8 @@ function computeStats(){
    const idx=(m.w===n?m.iw:m.il);
    if(idx){const k=n+"|"+m.date,arr=dayOrder.get(k)||[];arr.push([idx,e,won]);dayOrder.set(k,arr)}
    const s=st(n);
-   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e])}
+   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e]);
+    if(m.date>=month){s.moN++;s.moW+=won;s.moE+=e}}
    else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
    const t=BAN.has(n)?tierOfName(n):0;
    if(t&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
@@ -765,6 +772,11 @@ function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
  return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favB}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogB}}
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
+function dataTag(p){
+ const m=dataMark(STATS.get(p.name),isBan(p));
+ if(!m)return "";
+ return `<span class="stag ${m.sign>0?"datap":"datan"}">${esc(sur(p.name))} Data ${m.sign>0?"+":"−"}</span>`;
+}
 function formEdge(name){
  const q=RECENT.get(name);if(!q||q.length<8)return null;
  const mode=FORM_MODE==="off"?"plain":FORM_MODE;
@@ -1292,8 +1304,10 @@ function renderBan(){
  $("banList").innerHTML=names.map(n=>{const p=byName.get(n);const r=BANORDER.indexOf(n)+1,t=r<=5?1:r<=10?2:3,hd=r===1?'<li class="tierhd">Tier 1: worst</li>':r===6?'<li class="tierhd">Tier 2</li>':r===11?'<li class="tierhd">Tier 3</li>':"";
   const s=STATS.get(n),dd=s&&s.favN>=5?`<span class="${favDiff(n)<=-1?"neg":favDiff(n)>=1?"pos":""}">${sgn(favDiff(n))}</span> · `:"";
   return hd+(p?`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span>${dd}Elo ${p.elo}</span></li>`:`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span class="gone">Not in ratings</span></li>`)}).join("")||"<li>No players yet.</li>";
- const flagged=[...STATS.entries()].filter(([n,s])=>!BAN.has(n)&&s.favN>=10&&(s.favW-s.favE)/s.favN<=-0.2).sort((x,y)=>(x[1].favW-x[1].favE)/x[1].favN-(y[1].favW-y[1].favE)/y[1].favN).slice(0,10);
- $("banList").innerHTML+=`<li class="tierhd">Flagged by data, not on your list</li>`+(flagged.map(([n,s])=>`<li><span class="bn">${esc(n)}</span><span><span class="neg">${sgn(s.favW-s.favE)}</span> · ${s.favW}–${s.favN-s.favW} as fav</span></li>`).join("")||`<li><span class="muted">None yet</span></li>`)+`<li class="muted" style="border-top:0;display:block">Numbers show wins above or below what Elo expected when the player was favorite, over the last 6 months. Small samples are noisy.</li>`;
+ const marked=[...STATS.entries()].map(([n,s])=>{const m=dataMark(s,BAN.has(n));return m?{n,m}:null}).filter(Boolean).sort((a,b)=>b.m.rate-a.m.rate);
+ const up=marked.filter(x=>x.m.sign>0),down=marked.filter(x=>x.m.sign<0);
+ const row=x=>`<li><span class="bn">${esc(x.n)}</span><span><span class="${x.m.sign>0?"pos":"neg"}">${sgn(x.m.diff)}</span> · ${x.m.w}–${x.m.n-x.m.w} as fav</span></li>`;
+ $("banList").innerHTML+=`<li class="tierhd">Flagged by data, not on your list</li>`+(up.length?`<li class="tierhd">Playing above Elo</li>`+up.map(row).join(""):"")+(down.length?`<li class="tierhd">Playing below Elo</li>`+down.map(row).join(""):"")+(!marked.length?`<li><span class="muted">None yet</span></li>`:"")+`<li class="muted" style="border-top:0;display:block">Past month, as favorite, versus what Elo expected. At least 8 favorites, and about 20% off the number. This does not change the win chance or the ban list.</li>`;
 }
 function renderForm(){
  const rows=[];
@@ -1387,6 +1401,7 @@ function renderSched(opt){
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
    if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
+   for(const p of [a,b]){const t=dataTag(p);if(t){flag=true;tags+=t}}
    if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));

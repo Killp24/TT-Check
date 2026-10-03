@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -470,6 +470,17 @@ test("any list in that copied shape is read, and yesterday's clock does not take
   const finished = fixtures.map(f => Object.assign({}, f, { done: f.date === "2026-10-03" && f.time === "23:25" }));
   const still = pickFixture(parsed.matches[1], finished, aligned.off, aligned.date);
   assert.equal(still.date + " " + still.time, "2026-10-03 23:25");
+});
+
+test("a month of favorite results flags playing above or below Elo, and skips the ban list", () => {
+  const cold = dataMark({ moN: 10, moW: 3, moE: 7.4 }, false);
+  assert.equal(cold.sign, -1);
+  assert.equal(cold.n, 10);
+  const hot = dataMark({ moN: 12, moW: 10, moE: 6.2 }, false);
+  assert.equal(hot.sign, 1);
+  assert.equal(dataMark({ moN: 10, moW: 3, moE: 7.4 }, true), null);
+  assert.equal(dataMark({ moN: 7, moW: 1, moE: 5 }, false), null);
+  assert.equal(dataMark({ moN: 10, moW: 6, moE: 5.5 }, false), null);
 });
 
 test("a short paste keeps the sportsbook clock from the last full list", () => {

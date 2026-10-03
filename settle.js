@@ -713,6 +713,19 @@ function alignPasteTimes(matches, fixtures, opts) {
   return { off: pick.off, hits: pick.hits, date: pick.date, unique: tiedOff.length === 1 };
 }
 
+// Favorite record over the recent window, for a display flag only. It does not move the win chance.
+// sign 1 is playing above Elo, sign -1 is playing below. Ban-list players keep their own flag.
+function dataMark(s, onBan) {
+  if (onBan || !s) return null;
+  const n = s.moN || 0;
+  if (n < 8) return null;
+  const diff = (s.moW || 0) - (s.moE || 0);
+  const rate = diff / n;
+  if (rate <= -0.2) return { sign: -1, n, w: s.moW, diff, rate };
+  if (rate >= 0.2) return { sign: 1, n, w: s.moW, diff, rate };
+  return null;
+}
+
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
   const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);
