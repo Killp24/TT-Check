@@ -240,6 +240,8 @@ html.lock,html.lock body{overflow:hidden}
 .cmpstats .num.pos{color:var(--ok)}
 .cmpstats .num.neg{color:var(--ban)}
 .cmpstats .num.even{color:var(--muted);font-weight:600}
+.cmpstats .sub{display:block;font-size:.78rem;font-weight:700;line-height:1.25;margin-top:2px}
+.cmpstats .sub.even{color:var(--muted);font-weight:600}
 .cmpread{margin:12px 0 0;font-weight:600}
 </style></head><body><main>
 <button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
@@ -777,6 +779,16 @@ function eloBefore(name,date){
  const e=snap.r.get(name);
  return e===undefined?null:e;
 }
+// The rating carried into the match. The day before is the clean one. The same day's
+// list is only used when the history has not started yet, and the current rating after that.
+function eloAt(name,date){
+ const prior=eloBefore(name,date);
+ if(prior!=null)return prior;
+ const same=HIST.find(h=>h.date===date);
+ if(same&&same.r.has(name))return same.r.get(name);
+ const p=players.find(x=>x.name===name);
+ return p?p.elo:null;
+}
 function chooseCurve(){
  const hold=CAL_HOLD||[],train=CAL_TRAIN||[];
  const k=KCAL.k||0.85;
@@ -928,20 +940,35 @@ function update(){
  renderTrust();
 }
 function recentRows(name){
- return matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,15).map(m=>({won:m.w===name,score:m.score}));
+ return matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,15).map(m=>{
+  const opp=m.w===name?m.l:m.w;
+  return {won:m.w===name,score:m.score,own:eloAt(name,m.date),opp:eloAt(opp,m.date)};
+ });
+}
+function sessionText(s){return s&&s.n?`${s.w}–${s.n-s.w}`:"none yet"}
+function bookLine(a,b){
+ const oa=readOdds("A"),ob=readOdds("B");
+ if(typeof bothPrices!=="function"||!bothPrices(oa,ob))return "";
+ const fair=fairPair(oa,ob);if(!fair)return "";
+ const aPct=Math.round(fair[0]*100),bPct=Math.round(fair[1]*100);
+ const fav=aPct>=bPct?a:b,pct=Math.max(aPct,bPct);
+ return ` The book has ${sur(fav.name)} at ${pct}%, ${sur(a.name)} ${fmtO(oa)} and ${sur(b.name)} ${fmtO(ob)}.`;
 }
 function renderCompare(a,b){
  const box=$("cmp");
  if(!box)return;
  if(!a||!b||a===b){box.innerHTML="";return}
- const rows=recentStatRows(recentShape(recentRows(a.name)),recentShape(recentRows(b.name)));
- const lead=recentLead(rows);
- const col=(p,k)=>`<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">${rows.map(r=>{
-  const cls=r.side===""?"even":r.side===k?"pos":"neg";
-  const word=r.side===""?"Tied":r.side===k?"Ahead":"Behind";
-  return `<li><span class="lab">${esc(r.label)}</span><span class="num ${cls}" title="${word}">${esc(r[k])}</span></li>`;
+ const rowsA=recentRows(a.name),rowsB=recentRows(b.name);
+ const counted=recentStatRows(recentShape(rowsA),recentShape(rowsB)).concat(fieldStat(fieldShape(rowsA),fieldShape(rowsB)));
+ const shown=counted.concat({key:"session",label:"This session",plain:true,side:"",A:sessionText(sessionOf(a.name)),B:sessionText(sessionOf(b.name))});
+ const lead=recentLead(counted);
+ const col=(p,k)=>`<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">${shown.map(r=>{
+  const cls=r.plain?"even":r.side===""?"even":r.side===k?"pos":"neg";
+  const word=r.plain?"Shown either way":r.side===""?"Tied":r.side===k?"Ahead":"Behind";
+  const sub=r[k==="A"?"subA":"subB"];
+  return `<li><span class="lab">${esc(r.label)}</span><span class="num ${cls}" title="${word}">${esc(r[k])}</span>${sub?`<span class="sub ${cls}">${esc(sub)}</span>`:""}</li>`;
  }).join("")}</ul></div>`;
- const na=recentRows(a.name).length,nb=recentRows(b.name).length;
+ const na=rowsA.length,nb=rowsB.length;
  const ahead=lead.a===lead.b?null:lead.a>lead.b?a:b, behind=ahead===a?b:a;
  const n=Math.max(lead.a,lead.b), other=Math.min(lead.a,lead.b);
  let read;
@@ -949,9 +976,10 @@ function renderCompare(a,b){
  else if(!ahead) read=lead.a?`Recent form splits ${lead.a}–${lead.b}. Elo and the price still separate them.`:"These two are level on the recent stats that have enough matches. Elo and the price still separate them.";
  else{
   const withElo=ahead.elo>=behind.elo;
-  read=`${sur(ahead.name)} leads ${n} of ${rows.length} recent stats${other?`, ${sur(behind.name)} leads ${other}`:""}. ${withElo?"The rating points the same way.":sur(ahead.name)+" has the lower Elo, so recent form and the rating point different ways."}`;
+  read=`${sur(ahead.name)} leads ${n} of ${counted.length} recent stats${other?`, ${sur(behind.name)} leads ${other}`:""}. ${withElo?"The rating points the same way.":sur(ahead.name)+" has the lower Elo, so recent form and the rating point different ways."}`;
  }
- box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green leads that stat. Red is the lower number for the other player. A tie stays plain. Clean wins are 3–0 or 3–1. Deciders are 3–2. This can disagree with Elo. The win chance above stays as it is.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
+ read+=bookLine(a,b);
+ box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green leads that stat. Red is the lower number. Vs higher is the record against better-rated opponents, with how far above they were and the strongest win. This session stays plain. A typed price shows in the line below.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
 }
 function renderTrust(){
  const el=$("trustInfo");if(!el)return;
@@ -1040,7 +1068,7 @@ function oddsCalc(a,b,pa){
  const oa=readOdds("A"),ob=readOdds("B");
  rememberOdds(a,b);
  const model={A:pa,B:1-pa};
- if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;return}
+ if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
@@ -1059,6 +1087,7 @@ function oddsCalc(a,b,pa){
  $("bfSave").onclick=()=>logBet(a,b,model);
  $("bfAdd").onclick=()=>addLeg(a,b,model);
  renderSlip();
+ renderCompare(a,b);
 }
 
 

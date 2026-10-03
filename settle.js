@@ -381,3 +381,51 @@ function recentLead(rows) {
   }
   return { a, b };
 }
+
+// Last-15 rows with the rating each player carried into the match: { won, own, opp }.
+// "Higher" means the opponent was rated above this player that day.
+function fieldShape(rows) {
+  const list = (Array.isArray(rows) ? rows : []).filter(r => r && Number.isFinite(r.own) && Number.isFinite(r.opp));
+  const above = list.filter(r => r.opp > r.own);
+  let best = null;
+  for (const r of list) if (r.won && (!best || r.opp > best.opp)) best = r;
+  const avg = xs => xs.length ? Math.round(xs.reduce((s, n) => s + n, 0) / xs.length) : null;
+  return {
+    known: list.length,
+    aboveN: above.length,
+    aboveW: above.filter(r => r.won).length,
+    avgGap: above.length ? Math.round(above.reduce((s, r) => s + (r.opp - r.own), 0) / above.length) : null,
+    best: best ? best.opp : null,
+    bestGap: best ? best.opp - best.own : null,
+    avgField: avg(list.map(r => r.opp))
+  };
+}
+
+function fmtGap(n) { return n > 0 ? "+" + n : n < 0 ? "−" + (-n) : "0"; }
+
+function fieldLines(f) {
+  const main = f.aboveN ? fmtRec(f.aboveW, f.aboveN) : "none";
+  const parts = [];
+  if (f.aboveN && f.avgGap != null) parts.push("+" + f.avgGap + " Elo avg");
+  if (f.best != null) parts.push("best win " + f.best + " (" + fmtGap(f.bestGap) + ")");
+  if (f.avgField != null) parts.push("opponents " + f.avgField);
+  return { main, sub: parts.join(" · ") };
+}
+
+// A winning record against stronger opponents leads. A losing one does not,
+// and a single upset is too thin to color.
+function fieldSide(a, b) {
+  const rateA = a.aboveN ? a.aboveW / a.aboveN : null;
+  const rateB = b.aboveN ? b.aboveW / b.aboveN : null;
+  if (a.aboveN >= 3 && b.aboveN >= 3) return formEdgeSide(rateA, rateB, a.aboveN, b.aboveN, 3);
+  if (a.aboveN >= 3 && b.aboveN === 0 && rateA > 0.5) return "A";
+  if (b.aboveN >= 3 && a.aboveN === 0 && rateB > 0.5) return "B";
+  return "";
+}
+
+function fieldStat(a, b) {
+  a = a && a.aboveN != null ? a : fieldShape(a);
+  b = b && b.aboveN != null ? b : fieldShape(b);
+  const la = fieldLines(a), lb = fieldLines(b);
+  return { key: "higher", label: "Vs higher", side: fieldSide(a, b), A: la.main, B: lb.main, subA: la.sub, subB: lb.sub };
+}
