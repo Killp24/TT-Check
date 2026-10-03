@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-03T07:46Z
+# updated 2026-10-03T08:40Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9248,6 +9248,7 @@
 2026-10-03 | Bernacki Lukasz | Sokolowski Oskar | 3-1 | 2 | 2 | Pending
 2026-10-03 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 | 2 | 2 | Pending
 2026-10-03 | Swider Dariusz | Wojcik Rafal | 3-2 | 2 | 2 | Pending
+2026-10-03 | Gumulinski Piotr | Morawiec Daniel | 3-1 | 2 | 2 | Pending
 2026-10-03 | Glanowski Jakub | Sulkowski Karol | 3-1 | 3 | 2 | +6
 2026-10-03 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 3 | 2 | +7
 2026-10-03 | Lamperski Jakub | Poloszczanski Dawid | 3-0 | 3 | 2 | +10
@@ -9275,6 +9276,7 @@
 2026-10-03 | Sojka Stanislaw | Sokolowski Oskar | 3-0 | 3 | 3 | Pending
 2026-10-03 | Lojtek Tomasz | Adamus Kacper | 3-2 | 3 | 3 | +7
 2026-10-03 | Koczyba Mariusz | Mecik Patryk | 3-0 | 3 | 3 | +14
+2026-10-03 | Idaczyk Rafal | Wojcik Rafal | 3-2 | 3 | 3 | Pending
 2026-10-03 | Wiza Roman | Kowalski Kamil | 3-0 | 4 | 3 | +7
 2026-10-03 | Zielinski Marcin | Oracz Jacek | 3-2 | 4 | 3 | +9
 2026-10-03 | Vincenec Oliver | Sawicki Grzegorz | 3-2 | 4 | 4 | +7
@@ -9296,6 +9298,18 @@
 2026-10-03 | Lukaszewski Mikolaj | Poloszczanski Dawid | 3-1 | 4 | 6 | +13
 2026-10-03 | Lojtek Tomasz | Koczyba Mariusz | 3-1 | 4 | 4 | +10
 2026-10-03 | Sokolowski Oskar | Jesiek Jakub | 3-1 | 4 | 4 | Pending
+2026-10-03 | Linek Adam | Mleczko Bartlomiej | 3-0 | 4 | 4 | Pending
+2026-10-03 | Sinicki Maciej | Myszewski Adrian | 3-2 | 4 | 4 | +10
+2026-10-03 | Polok Pawel | Adamus Kacper | 3-1 | 4 | 4 | +8
+2026-10-03 | Pytlas Wojciech | Mecik Patryk | 3-2 | 4 | 4 | +6
 2026-10-03 | Pawlik Cezary | Oracz Jacek | 3-0 | 5 | 4 | +18
 2026-10-03 | Sawicki Grzegorz | Sokolowski Oskar | 3-2 | 5 | 1 | Pending
 2026-10-03 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 5 | 3 | +10
+2026-10-03 | Kufel Karol | Marchlewski Marcin | 3-2 | 5 | 5 | Pending
+2026-10-03 | Linek Adam | Misiak Mateusz | 3-0 |  | 5 | 
+2026-10-03 | Maruszak Piotr | Wrobel Dariusz | 3-0 | 5 | 5 | +14
+2026-10-03 | Koczyba Mariusz | Polok Pawel | 3-1 | 5 | 5 | +17
+2026-10-03 | Zwolinski Mariusz | Lukaszewski Mikolaj | 3-2 | 5 | 5 | +7
+2026-10-03 | Krukar Piotr | Poloszczanski Dawid | 3-2 | 5 | 7 | +8
+2026-10-03 | Sojka Stanislaw | Sawicki Grzegorz | 3-0 | 5 | 9 | Pending
+2026-10-03 | Jesiek Jakub | Bernacki Lukasz | 3-0 | 5 | 5 | Pending
