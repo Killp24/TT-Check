@@ -301,7 +301,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
-<p class="sub" id="assistLead">Type two player names.</p>
+<p class="sub" id="assistLead">Search two player names.</p>
 <div class="pairbar"><div id="matchInfo" class="minfo" hidden></div><div class="pairacts"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
 <section class="court" id="court">
  <div class="sides">
@@ -374,7 +374,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 </div>
 <p class="note foot">Win odds start from the Elo formula, then use the calibration that has been more accurate on past matches. Form, head-to-head, and how many matches a player has already played today are added only when that has lowered the error. A saved book price is mixed in only after priced results show that the mix is closer. None of this edits the ban list. Tap a player's ban list tag to add or remove them.</p>
 </main>
-<nav class="dock" aria-label="Home, signals, assist"><div class="dockin"><button class="btn on" id="schedBtn" type="button" aria-current="page">Home</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">Signals</button><button class="btn" id="assistBtn" type="button">Assist</button></div></nav>
+<nav class="dock" aria-label="Home, signals, search"><div class="dockin"><button class="btn on" id="schedBtn" type="button" aria-current="page">Home</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">Signals</button><button class="btn" id="assistBtn" type="button">Search</button></div></nav>
 <script src="settle.js"></script>
 <script>const $=id=>document.getElementById(id);
 function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
@@ -1626,7 +1626,7 @@ function renderSignals(){
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
-  return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Assist.</li>`;
+  return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
 }
 $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;openListedMatch(SCHED[+b.dataset.i],{kind:"signals"})});
 function openSheet(id, opt){
