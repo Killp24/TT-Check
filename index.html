@@ -331,7 +331,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <p class="edgeline" id="edgeLine" hidden></p>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
-<div id="bookPanel" hidden><div class="panel"><h2>Other books</h2><p class="help">Add the price from each sportsbook. Every price is saved with this match. Once enough of those matches have a result, the books can get a vote in the win chance.</p><div id="bookBox"></div></div></div>
+<div id="bookPanel" hidden><div class="panel"><h2>Other books</h2><p class="help">Add each book in this order: DraftKings, FanDuel, bet365, MGM, Fanatics. Every price is saved with this match. The line under the list says how far those prices sit apart.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
 </div>
 <div id="paneStandings" hidden></div>
@@ -1132,8 +1132,17 @@ let pushTimer=0;
 let OHIST=load("tt-odds")||{};
 let ODDS={};   // "Player A|Player B" -> [oddsA, oddsB], newest first
 const okey=(x,y,slot)=>[x,y].sort().join("|")+(slot?"@"+slot:"");
-const BOOKS=["DraftKings","bet365","FanDuel","BetMGM","Fanatics","Other"];
+const BOOKS=["DraftKings","FanDuel","bet365","MGM","Fanatics"];
 const MAINBOOK="DraftKings";
+function bookLabel(name){
+ const n=String(name||MAINBOOK).trim().toLowerCase().replace(/\s+/g,"");
+ if(n==="draftkings")return "DraftKings";
+ if(n==="fanduel")return "FanDuel";
+ if(n==="bet365"||n==="bets365")return "bet365";
+ if(n==="mgm"||n==="betmgm")return "MGM";
+ if(n==="fanatics")return "Fanatics";
+ return String(name||MAINBOOK).trim()||MAINBOOK;
+}
 // Each scheduled meeting keeps its own odds, so a rematch later the same day starts blank
 const slotOf=(a,b)=>{const r=CURMATCH&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;return r?r.date+" "+r.time:""};
 function sortedSnap(a,b,oa,ob,pa){
@@ -1706,8 +1715,18 @@ const saveBets=()=>save("tt-bets",BETS);
 // The newest price each book has shown for this exact match
 function booksFor(key){
  const arr=OHIST[key]||[],out=new Map();
- for(const v of arr){const b=v.book||MAINBOOK;const prev=out.get(b);if(!prev||v.at>prev.at)out.set(b,v)}
+ for(const v of arr){const b=bookLabel(v.book||MAINBOOK);const prev=out.get(b);if(!prev||v.at>prev.at)out.set(b,v)}
  return out;
+}
+// One line on how far the saved books sit apart, after each book's cut is removed.
+function bookGapText(rows,a){
+ const priced=rows.map(r=>{const fair=fairPair(r.oa,r.ob);return fair?{name:bookLabel(r.name),pa:fair[0]}:null}).filter(Boolean);
+ if(priced.length<2)return priced.length?`${priced[0].name} is the only book in so far. Add the next one and this line will compare them.`:"Add a second book and this line will say how far the prices sit apart.";
+ priced.sort((x,y)=>y.pa-x.pa);
+ const hi=priced[0],lo=priced[priced.length-1],gap=Math.round((hi.pa-lo.pa)*100);
+ const who=sur(a.name);
+ if(gap<=2)return `${priced.map(p=>p.name).join(", ")} are close on ${who}, within ${gap} percentage point${gap===1?"":"s"}.`;
+ return `${hi.name} has ${who} at ${Math.round(hi.pa*100)}%. ${lo.name} has ${who} at ${Math.round(lo.pa*100)}%. The books are ${gap} percentage points apart.`;
 }
 // Strip each book's cut, then average: a consensus of several books beats any one model
 function consensus(books,first){
@@ -1722,11 +1741,13 @@ function renderBooks(a,b){
  const box=$("bookBox");if(!box)return;
  const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
  const books=booksFor(key);
- const rows=[...books.entries()].map(([name,v])=>({name,oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
+ const rows=[...books.entries()].map(([name,v])=>({name:bookLabel(name),oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
+ rows.sort((x,y)=>(BOOKS.indexOf(x.name)<0?99:BOOKS.indexOf(x.name))-(BOOKS.indexOf(y.name)<0?99:BOOKS.indexOf(y.name)));
  const bestA=rows.filter(r=>r.oa!==null).sort((x,y)=>toProb(x.oa)-toProb(y.oa))[0];
  const bestB=rows.filter(r=>r.ob!==null).sort((x,y)=>toProb(x.ob)-toProb(y.ob))[0];
  const con=consensus(books,first);
- let html=`<div class="row"><select id="bkName" aria-label="Sportsbook">${BOOKS.map(n=>`<option${n===(load("tt-lastbook")||BOOKS[1])?" selected":""}>${n}</option>`).join("")}</select>
+ const picked=bookLabel(load("tt-lastbook")||BOOKS[0]);
+ let html=`<div class="row"><select id="bkName" aria-label="Sportsbook">${BOOKS.map(n=>`<option${n===picked?" selected":""}>${n}</option>`).join("")}</select>
    <button type="button" class="sign" id="bkSA">−</button><input id="bkA" class="bfstake" inputmode="numeric" aria-label="${esc(sur(a.name))} price" placeholder="${esc(sur(a.name))}">
    <button type="button" class="sign" id="bkSB">+</button><input id="bkB" class="bfstake" inputmode="numeric" aria-label="${esc(sur(b.name))} price" placeholder="${esc(sur(b.name))}">
    <button class="btn primary" id="bkAdd" type="button">Add</button></div><div class="msg" id="bkMsg" role="status"></div>`;
@@ -1737,9 +1758,9 @@ function renderBooks(a,b){
    const evA=bestA?con.p*profit(bestA.oa)-(1-con.p)*100:null;
    const evB=bestB?(1-con.p)*profit(bestB.ob)-con.p*100:null;
    const best=[[a,evA,bestA],[b,evB,bestB]].filter(x=>x[1]!==null).sort((x,y)=>y[1]-x[1])[0];
-   html+=`<p class="help" style="margin:8px 0 0">${con.n} books agree on about ${esc(sur(a.name))} ${Math.round(con.p*100)}% / ${esc(sur(b.name))} ${Math.round((1-con.p)*100)}%, with each book's cut removed. That consensus is usually a better guide than any single model.</p>`;
-   if(best)html+=`<div class="vv ${best[1]>=3?"pos":best[1]>0?"thin":"neg"}"><strong>${best[1]>=3?"Best price beats the consensus":best[1]>0?"Barely worth it":"No book is out of line"}</strong>${esc(best[0].name)} at ${fmtO(best[2]===bestA?bestA.oa:bestB.ob)} with ${esc(best[2].name)} is ${best[1]>=0?"+":"−"}$${Math.abs(best[1]).toFixed(2)} per $100 against the other books.</div>`;
-  }else html+=`<p class="help" style="margin:8px 0 0">Add a second book and the app will work out a consensus price and tell you which book is out of line.</p>`;
+   html+=`<p class="cmpread">${esc(bookGapText(rows,a))}</p>`;
+   if(best&&best[1]>=3)html+=`<div class="vv pos"><strong>Best price beats the other books</strong>${esc(best[0].name)} at ${fmtO(best[2]===bestA?bestA.oa:bestB.ob)} with ${esc(best[2].name)} is +$${best[1].toFixed(2)} per $100 against the other books.</div>`;
+  }else html+=`<p class="cmpread">${esc(bookGapText(rows,a))}</p>`;
  }
  box.innerHTML=html;
  const sa=$("bkSA"),sb=$("bkSB");let negA=true,negB=false;
@@ -1750,14 +1771,14 @@ function renderBooks(a,b){
   const na=parseInt(($("bkA").value||"").replace(/[^0-9]/g,""),10),nb=parseInt(($("bkB").value||"").replace(/[^0-9]/g,""),10);
   const oa=isNaN(na)?null:(negA?-na:na),ob=isNaN(nb)?null:(negB?-nb:nb);
   if(!bothPrices(oa,ob)){setMsg("bkMsg","err","Enter both prices.");return}
-  const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);row.book=name;
+  const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);row.book=bookLabel(name);
   (OHIST[key]||(OHIST[key]=[])).push(row);
   save("tt-lastbook",name);trimOdds();
   if(cfg.token)pushOdds();
   renderBooks(a,b);renderSched();
  };
  box.querySelectorAll("[data-bk]").forEach(btn=>btn.onclick=()=>{
-  const n=btn.dataset.bk;OHIST[key]=(OHIST[key]||[]).filter(v=>(v.book||MAINBOOK)!==n);trimOdds();
+  const n=bookLabel(btn.dataset.bk);OHIST[key]=(OHIST[key]||[]).filter(v=>bookLabel(v.book||MAINBOOK)!==n);trimOdds();
   if(cfg.token)pushOdds();renderBooks(a,b);renderSched();
  });
 }
