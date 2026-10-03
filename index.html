@@ -276,7 +276,7 @@ html.lock,html.lock body{overflow:hidden}
 <div class="msg" id="updMsg" role="status"></div>
 </div></details>
 <details id="flagDet"><summary>Flagged price pair</summary><div class="pad">
-<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned. A bet counts only when both prices were saved on it.</p>
+<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned. Older bets that only saved the plus number are included. A saved other price has to be this pair. New bets keep both prices.</p>
 <div class="row"><input id="flagA" class="bfstake" inputmode="numeric" aria-label="First price"><input id="flagB" class="bfstake" inputmode="numeric" aria-label="Second price"><button class="btn primary" id="flagSave" type="button">Save</button></div>
 <div class="msg" id="flagMsg" role="status"></div>
 </div></details>
@@ -1473,7 +1473,7 @@ function flagRoiHtml(){
  if(plus==null)return `<p class="help">Flagged pair ${pair} has no plus-money side, so that side isn't totaled.</p>`;
  const mine=roiOf(BETS.filter(b=>betOnFlaggedPlus(b,FLAGO.a,FLAGO.b)));
  const saved=roiOf(flaggedPlusHistory());
- const mineTxt=mine.n?`Your bets on ${fmtO(plus)}: ${roiLine(mine)}.`:`No bets on the ${fmtO(plus)} side yet. Log one from a match priced ${pair} and it counts here. A bet you already logged counts too, when both prices were saved.`;
+ const mineTxt=mine.n?`Your bets on ${fmtO(plus)}: ${roiLine(mine)}.`:`No bets on the ${fmtO(plus)} side yet. Log one from a match priced ${pair} and it counts here. An older bet that only saved ${fmtO(plus)} counts too.`;
  const savedTxt=saved.n?`Every saved match at ${pair}: the ${fmtO(plus)} side is ${roiLine(saved)}, staking $100 on each.`:`No saved match is priced ${pair} yet. Paste the odds and this fills in from the results.`;
  return `<div class="vv flagv"><strong>Betting ${fmtO(plus)}</strong>${mineTxt} ${savedTxt}</div>`;
 }
@@ -1484,7 +1484,7 @@ function renderBets(){
  const plusBets=plus==null?[]:all.filter(b=>betOnFlaggedPlus(b,FLAGO.a,FLAGO.b));
  const groups=[["All bets",all],...(plusBets.length?[[`Flagged ${fmtO(plus)}`,plusBets]]:[]),["Single bets",all.filter(b=>!b.parlay)],["Parlays",all.filter(b=>b.parlay)],["Value (green)",all.filter(b=>b.cat==="value")],["Thin (orange)",all.filter(b=>b.cat==="thin")],["No value (red)",all.filter(b=>b.cat==="none")],
   ["Vs ban list favorite",all.filter(b=>b.oppBan&&!b.pickFav)],["On ban list player",all.filter(b=>b.pickBan)],["No ban list player",all.filter(b=>!b.pickBan&&!b.oppBan)]];
- $("betSum").innerHTML=flagRoiHtml()+(all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. ROI is profit divided by the stake on bets that have won or lost. "est. wins" is how many the app expected you to win. It takes 100+ bets before these numbers mean much. Flagged ${plus==null?"plus":fmtO(plus)} counts only bets on that side of ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use "Log a bet" under Odds and value.</p>`);
+ $("betSum").innerHTML=flagRoiHtml()+(all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. ROI is profit divided by the stake on bets that have won or lost. "est. wins" is how many the app expected you to win. It takes 100+ bets before these numbers mean much. Flagged ${plus==null?"plus":fmtO(plus)} counts bets on that side of ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}. Older bets that only saved the plus number are included. A saved other price has to match.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use "Log a bet" under Odds and value.</p>`);
  const list=[...all].sort((x,y)=>(x.status==="pending")-(y.status==="pending")||y.made-x.made).sort((x,y)=>(y.status==="pending")-(x.status==="pending"));
  const visible=list.slice(0,betShown);
  $("betMoreBox").innerHTML=list.length>betShown?`<button class="btn" id="betMore" type="button">Show 10 more (${list.length-betShown} left)</button>`:(betShown>5&&list.length>5?`<button class="btn" id="betLess" type="button">Show fewer</button>`:"");

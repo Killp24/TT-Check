@@ -151,7 +151,7 @@ test("a saved line needs both prices, and +102 / −135 is not +102 / −136", (
   assert.equal(pricePairMatch(102, -135, 102, -136), false);
 });
 
-test("the plus side of +102 / −136 is the +102 bet, and only when both prices match", () => {
+test("the plus side of +102 / −136 counts, including older tickets that only saved +102", () => {
   assert.equal(pricePairMatch(-136, 102, 102, -136), true);
   assert.equal(pricePairMatch(102, -130, 102, -136), false);
   assert.equal(pairPlusOdds(102, -136), 102);
@@ -159,11 +159,26 @@ test("the plus side of +102 / −136 is the +102 bet, and only when both prices 
   const plus = { odds: 102, stake: 50, status: "won", snap: { o1: -136, o2: 102 } };
   const minus = { odds: -136, stake: 50, status: "won", snap: { o1: 102, o2: -136 } };
   const other = { odds: 102, stake: 50, status: "won", snap: { o1: 102, o2: -120 } };
-  const oneSided = { odds: 102, stake: 50, status: "won", snap: { o1: 102, o2: null } };
+  const oneSided = { odds: 102, stake: 39.74, status: "lost", snap: { o1: 102, o2: null } };
+  const plusOnly = { odds: 102, stake: 50, status: "won" };
+  const wrongPair = { odds: 102, stake: 20, status: "won", flagPair: [102, -120], snap: { o1: 102, o2: null } };
   assert.equal(betOnFlaggedPlus(plus, 102, -136), true);
   assert.equal(betOnFlaggedPlus(minus, 102, -136), false);
   assert.equal(betOnFlaggedPlus(other, 102, -136), false);
-  assert.equal(betOnFlaggedPlus(oneSided, 102, -136), false);
+  assert.equal(betOnFlaggedPlus(oneSided, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(plusOnly, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(wrongPair, 102, -136), false);
+  const confirmed = roiOf([
+    { odds: 102, stake: 100, status: "won", snap: { o1: 102, o2: -136 } },
+    oneSided,
+    plusOnly,
+    { odds: 102, stake: 30, status: "won", snap: { o1: 102 } },
+    { odds: 102, stake: 30, status: "won", snap: { o1: 102 } }
+  ]);
+  assert.equal(confirmed.won, 4);
+  assert.equal(confirmed.lost, 1);
+  assert.ok(Math.abs(confirmed.staked - 249.74) < 0.001);
+  assert.ok(Math.abs(confirmed.profit - 174.46) < 0.001);
   const s = roiOf([
     plus,
     { odds: 102, stake: 100, status: "lost", snap: { o1: 102, o2: -136 } },

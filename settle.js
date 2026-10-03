@@ -46,14 +46,18 @@ function pairPlusOdds(a, b) {
   return pos.length === 1 ? pos[0] : null;
 }
 
-// A single bet on the plus side of this exact pair. The other side has to be on the bet too.
+// A single bet on the plus side of this exact pair.
+// Older tickets sometimes stored only the plus number. Those count.
+// A second price that is not this pair stays out.
 function betOnFlaggedPlus(bet, a, b) {
   if (!bet || bet.parlay) return false;
   const plus = pairPlusOdds(a, b);
   if (plus == null || Number(bet.odds) !== plus) return false;
   const s = bet.snap;
-  if (s && s.o1 != null && s.o2 != null && pricePairMatch(s.o1, s.o2, a, b)) return true;
-  return Array.isArray(bet.flagPair) && pricePairMatch(bet.flagPair[0], bet.flagPair[1], a, b);
+  if (s && s.o1 != null && s.o2 != null) return pricePairMatch(s.o1, s.o2, a, b);
+  if (Array.isArray(bet.flagPair) && bet.flagPair[0] != null && bet.flagPair[1] != null)
+    return pricePairMatch(bet.flagPair[0], bet.flagPair[1], a, b);
+  return true;
 }
 
 // ROI is profit divided by stakes on bets that have won or lost. Pending stays out.
