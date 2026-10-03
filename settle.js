@@ -525,3 +525,26 @@ function trimBookList(list, perBook) {
   }
   return [...groups.values()].flat();
 }
+
+// The prices a bettor would rather have: the lower implied chance on that player.
+// A tie returns every book at that price.
+function bestBookSide(rows) {
+  const implied = (o) => {
+    const n = Number(o);
+    if (!Number.isFinite(n) || Math.abs(n) < 100) return null;
+    return n < 0 ? (-n) / (-n + 100) : 100 / (n + 100);
+  };
+  const pick = (key) => {
+    let bestP = Infinity;
+    let hits = [];
+    for (const r of rows || []) {
+      const o = Number(r[key]);
+      const p = implied(o);
+      if (p === null) continue;
+      if (p < bestP - 1e-9) { bestP = p; hits = [{ name: r.name, o }]; }
+      else if (Math.abs(p - bestP) <= 1e-9) hits.push({ name: r.name, o });
+    }
+    return hits;
+  };
+  return { a: pick("oa"), b: pick("ob") };
+}

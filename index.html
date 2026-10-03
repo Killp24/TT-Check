@@ -116,6 +116,10 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .orow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .bkrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center;padding:8px 0;border-top:1px solid var(--border)}
 .bkn{grid-column:1 / -1;font-weight:700;font-size:.9rem}
+.bkbest{margin-left:6px;font-size:.72rem;font-weight:700;color:var(--ok)}
+.bkhead{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 0}
+.bkhead span{text-align:center;font-size:.75rem;font-weight:700;color:var(--muted)}
+#bookRead:empty,#bookGap:empty{display:none}
 .bksaved{grid-column:1 / -1;font-size:.75rem;color:var(--muted)}
 .bksaved.on{color:var(--ok);font-weight:700}
 .bksaved.flag{color:#6b21a8;font-weight:700}
@@ -243,7 +247,7 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .mtabs{display:flex;gap:6px;margin:0}
 .mtabs[hidden]{display:none}
 .mtabs .btn,.dock .btn{flex:1;text-align:center}
-.mtabs .btn{padding:8px 4px;font-size:.82rem}
+.mtabs .btn{padding:8px 2px;font-size:.78rem;white-space:nowrap}
 .mtabs .btn.on,.dock .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .tabsub:empty,.tabsub[hidden]{display:none}
@@ -315,7 +319,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:7}
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="matchstick" id="matchStick">
 <button class="listback" id="listBack" type="button" hidden>← Home</button>
-<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Odds</button></nav>
+<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Book Odds</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
 <p class="sub" id="assistLead">Search two player names.</p>
@@ -341,7 +345,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:7}
 <p class="edgeline" id="edgeLine" hidden></p>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
-<div id="bookPanel" hidden><div class="panel"><h2>Book odds</h2><p class="help">DraftKings, FanDuel, bet365, MGM, then Fanatics. Each book keeps its own prices. Entering one does not replace another. The list under the books is read back from this phone.</p><div id="bookBox"></div></div></div>
+<div id="bookPanel" hidden><div class="panel"><h2>Book Odds</h2><p class="help">DraftKings, FanDuel, bet365, MGM, Fanatics. Each book keeps its own prices. The best number on each player is marked.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
 </div>
 <div id="paneStandings" hidden></div>
@@ -1250,8 +1254,8 @@ function oddsCalc(a,b,pa,opts){
    :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`:"";
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
-  const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">Enter both DraftKings prices and the edge for that book shows here. Other books stay on their own lines.</p>`:"");
-  out.innerHTML=lead+(rows?flag+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
+  const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">DraftKings sets the edge and the logged bet. The other books stay on their own lines.</p>`:"");
+  out.innerHTML=lead+(rows?flag+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
@@ -1565,7 +1569,7 @@ function applyChrome(){
  const sub=$("tabSub");
  if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
- else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="Each book keeps its own price. Saved lines stay on this phone."}
+ else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="The best number is marked. Each book keeps its own line on this phone."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
  $("court").hidden=match;
@@ -1766,8 +1770,33 @@ function savedProofHtml(key,a,b){
   :`<p class="help">Nothing saved for this match yet. Fill in both prices for a book and that line shows up here, read back from this phone.</p>`;
  const older=arr.filter(v=>{const cur=latest.get(bookKey(v.book));return cur&&(v.o1!==cur.o1||v.o2!==cur.o2||v.at!==cur.at)}).sort((x,y)=>(y.at||0)-(x.at||0));
  const hist=older.length?`<h3 class="rch">Earlier prices still stored</h3><ul class="flist">${older.slice(0,16).map(v=>`<li><span class="fwho">${show(v)}</span></li>`).join("")}</ul>`:"";
- const note=savedNames.length?`${savedNames.length} of ${BOOKS.length} books saved for this match. `:"";
- return `<h3 class="rch">Saved on this phone</h3>${current}${hist}<p class="help">${note}This list is read back from this phone, so a book only appears after it is stored. Menu → Saved book prices lists every stored line. My bets stay in their own list on this phone. A connected sharing token also copies these lines to the shared odds file.</p>`;
+ const note=savedNames.length?`${savedNames.length} of ${BOOKS.length} books on this phone. `:"";
+ return `<h3 class="rch">Saved on this phone</h3>${current}${hist}<p class="help">${note}Read back from this phone. Menu → Saved book prices lists every match.</p>`;
+}
+function rowPrices(row){
+ const num=side=>{const raw=(row.querySelector(`input[data-side="${side}"]`).value||"").replace(/[^0-9]/g,"");const n=parseInt(raw,10);if(isNaN(n))return null;const neg=row.querySelector(`button[data-side="${side}"]`).textContent.includes("−");return neg?-n:n};
+ return {name:row.dataset.book,oa:num("A"),ob:num("B")};
+}
+function bestPriceSentence(hits,who){
+ if(hits.length!==1)return "";
+ return `${hits[0].name} ${fmtO(hits[0].o)} is the best number on ${who}.`;
+}
+function paintBookRead(box,a,b){
+ const read=$("bookRead"),gap=$("bookGap");if(!read||!gap)return;
+ const priced=[...box.querySelectorAll(".bkrow")].map(rowPrices).filter(r=>bothPrices(r.oa,r.ob));
+ const best=bestBookSide(priced);
+ box.querySelectorAll(".bkbest").forEach(el=>el.remove());
+ for(const row of box.querySelectorAll(".bkrow")){
+  const mine=priced.find(r=>r.name===row.dataset.book);
+  if(!mine)continue;
+  const who=[];
+  if(best.a.length===1&&best.a[0].name===mine.name)who.push(sur(a.name));
+  if(best.b.length===1&&best.b[0].name===mine.name)who.push(sur(b.name));
+  if(who.length)row.querySelector(".bkn").insertAdjacentHTML("beforeend",` <span class="bkbest">Best ${esc(who.join(" · "))}</span>`);
+ }
+ const lead=[bestPriceSentence(best.a,sur(a.name)),bestPriceSentence(best.b,sur(b.name))].filter(Boolean).join(" ");
+ read.textContent=lead;
+ gap.textContent=priced.length?bookGapText(priced,a):"";
 }
 function renderBooks(a,b){
  const box=$("bookBox");if(!box||!a||!b)return;
@@ -1775,7 +1804,7 @@ function renderBooks(a,b){
  const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
  const latest=latestByBook((load("tt-odds")||{})[key]||OHIST[key]||[]);
  const pa=EST?EST.pa:null;
- let html=`<p class="help">Each book keeps its own price. Entering one book does not change the others.</p>`;
+ let html=`<p class="cmpread" id="bookRead"></p><p class="cmpread" id="bookGap"></p><div class="bkhead"><span>${esc(sur(a.name))}</span><span>${esc(sur(b.name))}</span></div>`;
  html+=BOOKS.map(name=>{
   const v=latest.get(name);
   const oa=v?(first?v.o1:v.o2):null;
@@ -1789,15 +1818,16 @@ function renderBooks(a,b){
    <div class="orow"><button type="button" class="sign ${cb}" data-side="B">${ob!==null&&ob<0?"−":ob!==null?"+":"+"}</button><input class="oval ${cb}" data-side="B" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${ob!==null?Math.abs(ob):""}" aria-label="${esc(name)} price for ${esc(sur(b.name))}" placeholder="${esc(sur(b.name))}"></div>
    <div class="bksaved${v?" on":""}${flagged?" flag":""}">${esc(stamp)}</div></div>`;
  }).join("");
- const priced=[...latest.values()].map(v=>({name:v.book,oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
- html+=`<div class="saveproof" id="saveProof">${savedProofHtml(key,a,b)}</div><p class="cmpread">${esc(bookGapText(priced,a))}</p>`;
+ html+=`<div class="saveproof" id="saveProof">${savedProofHtml(key,a,b)}</div>`;
  box.innerHTML=html;
+ paintBookRead(box,a,b);
  box.querySelectorAll(".bkrow").forEach(row=>{
   const commit=()=>{
    const name=row.dataset.book;
    const num=side=>{const raw=(row.querySelector(`input[data-side="${side}"]`).value||"").replace(/[^0-9]/g,"");const n=parseInt(raw,10);if(isNaN(n))return null;const neg=row.querySelector(`button[data-side="${side}"]`).textContent.includes("−");return neg?-n:n};
    const oa=num("A"),ob=num("B"),stamp=row.querySelector(".bksaved");
    paintBookRow(row,oa,ob,pa);
+   paintBookRead(box,a,b);
    clearTimeout(row._saveT);
    if(!bothPrices(oa,ob)){stamp.classList.remove("on","flag");stamp.textContent=oa===null&&ob===null?"Not saved yet":"Enter both prices";return}
    stamp.classList.remove("on","flag");stamp.textContent="Saving…";
@@ -1822,12 +1852,7 @@ function renderBooks(a,b){
 function paintSaveProof(key,a,b){
  const el=$("saveProof");if(!el)return;
  el.innerHTML=savedProofHtml(key,a,b);
- const note=el.parentElement&&el.parentElement.querySelector(".cmpread");
- if(note){
-  const first=a.name<b.name,latest=latestByBook((load("tt-odds")||{})[key]||[]);
-  const priced=[...latest.values()].map(v=>({name:v.book,oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
-  note.textContent=bookGapText(priced,a);
- }
+ const box=$("bookBox");if(box)paintBookRead(box,a,b);
 }
 function renderSavedPrices(){
  const sum=$("savedOddsSum"),list=$("savedOddsList"),where=$("savedOddsWhere");if(!sum||!list)return;
@@ -1842,7 +1867,7 @@ function renderSavedPrices(){
  }
  lines.sort((x,y)=>y.at-x.at);
  sum.textContent=`Saved book prices (${lines.length})`;
- if(where)where.textContent=lines.length?`${lines.length} stored price line${lines.length===1?"":"s"} across ${matches} match${matches===1?"":"es"}, read back from this phone. Each sportsbook is its own line, so entering one book does not replace another. Logged bets are separate, under My bets, also only on this phone. A connected sharing token copies the same book lines to the shared odds file.`:"No book prices stored on this phone yet. Prices you enter on a match's Odds tab are saved here. Logged bets stay under My bets, on this phone only.";
+ if(where)where.textContent=lines.length?`${lines.length} stored price line${lines.length===1?"":"s"} across ${matches} match${matches===1?"":"es"}, read back from this phone. Each sportsbook is its own line, so entering one book does not replace another. Logged bets are separate, under My bets, also only on this phone. A connected sharing token copies the same book lines to the shared odds file.`:"No book prices stored on this phone yet. Prices you enter on a match's Book Odds tab are saved here. Logged bets stay under My bets, on this phone only.";
  list.innerHTML=lines.slice(0,80).map(v=>`<li><span class="bn">${esc(v.book)}</span><span>${esc(String(v.names).replace("|"," vs "))} ${fmtO(v.o1)} / ${fmtO(v.o2)}${v.slot?` · ${esc(v.slot)}`:""} · ${esc(ago(v.at))}</span></li>`).join("")||`<li><span class="muted">None yet</span></li>`;
 }
 

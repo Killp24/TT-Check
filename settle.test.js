@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -362,4 +362,23 @@ test("saving one sportsbook leaves the other books in place", () => {
   assert.equal(latestByBook(kept).get("MGM").o2, 115);
   assert.equal(latestByBook(kept).get("DraftKings").o2, 129);
   assert.ok(kept.filter(v => bookKey(v.book) === "DraftKings").length <= 4);
+});
+
+test("the best number is the price a bettor would rather take", () => {
+  const best = bestBookSide([
+    { name: "DraftKings", oa: -136, ob: 102 },
+    { name: "FanDuel", oa: -150, ob: 120 },
+    { name: "MGM", oa: -145, ob: 115 }
+  ]);
+  assert.equal(best.a.length, 1);
+  assert.equal(best.a[0].name, "DraftKings");
+  assert.equal(best.a[0].o, -136);
+  assert.equal(best.b[0].name, "FanDuel");
+  assert.equal(best.b[0].o, 120);
+  const tied = bestBookSide([
+    { name: "DraftKings", oa: -136, ob: 102 },
+    { name: "FanDuel", oa: -136, ob: 102 }
+  ]);
+  assert.equal(tied.a.length, 2);
+  assert.equal(tied.b.length, 2);
 });
