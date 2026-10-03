@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-03T03:40Z
+# updated 2026-10-03T04:34Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9206,6 +9206,15 @@
 2026-10-03 | Myszewski Adrian | Piotrowski Tadeusz | 3-2 | 1 | 1 | +6
 2026-10-03 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-1 | 1 | 1 | Pending
 2026-10-03 | Suchecki Waclaw | Krukar Piotr | 3-2 | 1 | 1 | +10
+2026-10-03 | Marchlewski Marcin | Misiak Mateusz | 3-1 | 1 | 1 | Pending
+2026-10-03 | Kufel Karol | Mleczko Bartlomiej | 3-1 | 1 | 1 | Pending
+2026-10-03 | Maruszak Piotr | Makowski Kacper | 3-2 | 1 | 1 | +8
+2026-10-03 | Wrobel Dariusz | Sinicki Maciej | 3-1 | 1 | 1 | +14
+2026-10-03 | Lojtek Tomasz | Polok Pawel | 3-0 | 1 | 1 | Pending
+2026-10-03 | Rolak Jaroslaw | Lukaszewski Mikolaj | 3-1 | 1 | 1 | +13
+2026-10-03 | Sojka Stanislaw | Bernacki Lukasz | 3-1 | 1 | 1 | Pending
+2026-10-03 | Mecik Patryk | Adamus Kacper | 3-1 | 1 | 1 | Pending
+2026-10-03 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | Pending
 2026-10-03 | Zielinski Marcin | Malcher Krzysztof | 3-1 | 2 | 1 | +5
 2026-10-03 | Vincenec Oliver | Baron Mariusz | 3-0 | 2 | 2 | +16
 2026-10-03 | Pawlik Cezary | Kocik Tomasz | 3-0 | 2 | 1 | +19
@@ -9219,6 +9228,9 @@
 2026-10-03 | Ruszkiewicz Adam | Fira Damian | 3-1 | 2 | 2 | +12
 2026-10-03 | Michalski Jakub | Tkaczyk Henryk | 3-1 | 2 | 1 | +18
 2026-10-03 | Tkaczyk Henryk | Wiza Roman | 3-0 | 2 | 3 | +15
+2026-10-03 | Wojtaszczyk Wojciech | Sawicki Grzegorz | 3-2 | 2 | 6 | Pending
+2026-10-03 | Piotrowski Tadeusz | Wrobel Dariusz | 3-1 | 2 | 2 | +12
+2026-10-03 | Suchecki Waclaw | Lukaszewski Mikolaj | 3-0 | 2 | 2 | +18
 2026-10-03 | Glanowski Jakub | Sulkowski Karol | 3-1 | 3 | 2 | +6
 2026-10-03 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 3 | 2 | +7
 2026-10-03 | Lamperski Jakub | Poloszczanski Dawid | 3-0 | 3 | 2 | +10
@@ -9230,7 +9242,9 @@
 2026-10-03 | Kocik Tomasz | Malcher Krzysztof | 3-2 | 3 | 3 | +3
 2026-10-03 | Michalski Jakub | Kowalski Kamil | 3-0 | 3 | 2 | +12
 2026-10-03 | Fira Damian | Michalski Jakub | 3-1 | 3 | 4 | +6
-2026-10-03 | Wiza Roman | Kowalski Kamil | 3-0 |  | 3 | 
+2026-10-03 | Poloszczanski Dawid | Zwolinski Mariusz | 3-2 | 3 | 1 | +9
+2026-10-03 | Tkaczyk Henryk | Ruszkiewicz Adam | 3-0 | 3 | 3 | Pending
+2026-10-03 | Wiza Roman | Kowalski Kamil | 3-0 | 4 | 3 | +7
 2026-10-03 | Zielinski Marcin | Oracz Jacek | 3-2 | 4 | 3 | +9
 2026-10-03 | Vincenec Oliver | Sawicki Grzegorz | 3-2 | 4 | 4 | +7
 2026-10-03 | Baron Mariusz | Nowak Jakub | 3-2 | 4 | 4 | +7
@@ -9238,3 +9252,4 @@
 2026-10-03 | Kocik Tomasz | Zielinski Marcin | 3-0 | 4 | 5 | +16
 2026-10-03 | Wozniczka Marcin | Malcher Krzysztof | 3-0 | 4 | 4 | +14
 2026-10-03 | Pawlik Cezary | Oracz Jacek | 3-0 | 5 | 4 | +18
+2026-10-03 | Sawicki Grzegorz | Sokolowski Oskar | 3-2 | 5 | 1 | Pending
