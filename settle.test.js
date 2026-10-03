@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -139,6 +139,16 @@ test("session shifts need a real sample and ignore the first match of the day", 
   const shift = fitSessionShifts(rows, 80, 150);
   assert.ok(shift[3] < 0);
   assert.equal(shift[0], undefined);
+});
+
+test("a saved line needs both prices, and +102 / −135 is not +102 / −136", () => {
+  assert.equal(bothPrices(102, -135), true);
+  assert.equal(bothPrices(-136, 102), true);
+  assert.equal(bothPrices(102, null), false);
+  assert.equal(bothPrices(null, -136), false);
+  assert.equal(bothPrices(102, undefined), false);
+  assert.equal(bothPrices(99, -136), false);
+  assert.equal(pricePairMatch(102, -135, 102, -136), false);
 });
 
 test("the plus side of +102 / −136 is the +102 bet, and only when both prices match", () => {

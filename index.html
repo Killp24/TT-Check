@@ -276,7 +276,7 @@ html.lock,html.lock body{overflow:hidden}
 <div class="msg" id="updMsg" role="status"></div>
 </div></details>
 <details id="flagDet"><summary>Flagged price pair</summary><div class="pad">
-<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned.</p>
+<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned. A bet counts only when both prices were saved on it.</p>
 <div class="row"><input id="flagA" class="bfstake" inputmode="numeric" aria-label="First price"><input id="flagB" class="bfstake" inputmode="numeric" aria-label="Second price"><button class="btn primary" id="flagSave" type="button">Save</button></div>
 <div class="msg" id="flagMsg" role="status"></div>
 </div></details>
@@ -883,7 +883,7 @@ function sortedSnap(a,b,oa,ob,pa){
   edge1:first?snap.edge1:snap.edge2,edge2:first?snap.edge2:snap.edge1};
 }
 function rememberOdds(a,b){const k=okey(a.name,b.name,slotOf(a,b)),oa=readOdds("A"),ob=readOdds("B");
- if(oa===null&&ob===null)return;
+ if(!bothPrices(oa,ob))return;
  clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typing
  const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);
  const arr=OHIST[k]||(OHIST[k]=[]),last=arr[arr.length-1];
@@ -911,7 +911,7 @@ function renderOdds(a,b,pa,est){EST=est||null;
   set("A",so?so.o1:null);set("B",so?so.o2:null);
  }
  const inp=k=>`<div class="oin"><span class="olbl">${esc(sur((k==="A"?a:b).name))}</span><div class="orow"><button type="button" class="sign" data-s="${k}" aria-label="Switch plus or minus">${odds[k].neg?"−":"+"}</button><input class="oval" data-o="${k}" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 150" value="${esc(odds[k].v)}" aria-label="Odds for ${esc((k==="A"?a:b).name)}"></div></div>`;
- box.innerHTML=`<div class="panel"><h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter the bookmaker's American odds. Tap −/+ to switch the sign.</p><div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
+ box.innerHTML=`<div class="panel"><h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p><div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
  box.querySelectorAll(".oval").forEach(i=>i.addEventListener("input",()=>{odds[i.dataset.o].v=i.value.replace(/[^0-9.]/g,"");oddsCalc(a,b,pa)}));
  box.querySelectorAll(".sign").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.s;odds[k].neg=!odds[k].neg;btn.textContent=odds[k].neg?"−":"+";oddsCalc(a,b,pa)}));
  oddsCalc(a,b,pa);
@@ -1332,8 +1332,8 @@ function renderBooks(a,b){
  $("bkAdd").onclick=()=>{
   const name=$("bkName").value;
   const na=parseInt(($("bkA").value||"").replace(/[^0-9]/g,""),10),nb=parseInt(($("bkB").value||"").replace(/[^0-9]/g,""),10);
-  if(isNaN(na)&&isNaN(nb)){setMsg("bkMsg","err","Enter at least one price.");return}
   const oa=isNaN(na)?null:(negA?-na:na),ob=isNaN(nb)?null:(negB?-nb:nb);
+  if(!bothPrices(oa,ob)){setMsg("bkMsg","err","Enter both prices.");return}
   const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);row.book=name;
   (OHIST[key]||(OHIST[key]=[])).push(row);
   save("tt-lastbook",name);trimOdds();
@@ -1350,17 +1350,18 @@ function renderBooks(a,b){
 let SLIP=load("tt-slip")||[];
 const saveSlip=()=>save("tt-slip",SLIP);
 function legFrom(a,b,model){
- const k=$("bfPick").value,o=readOdds(k);
- if(o===null)return null;
+ const k=$("bfPick").value,oa=readOdds("A"),ob=readOdds("B");
+ if(!bothPrices(oa,ob))return null;
+ const o=k==="A"?oa:ob;
  const pick=k==="A"?a:b,opp=k==="A"?b:a,pe=EST?(k==="A"?EST.pe:1-EST.pe):model[k];
  const r=CURMATCH&&!CURMATCH.fin&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;
- const snap=decisionSnapshot(o,null,model[k],null);
- return{pick:pick.name,opp:opp.name,odds:o,p:model[k],pe,date:r?r.date:warsawToday(),time:r?r.time:"",tour:r?r.tour:"",
+ const snap=decisionSnapshot(oa,ob,model.A,model.B);
+ return{pick:pick.name,opp:opp.name,odds:o,side:k,p:model[k],pe,date:r?r.date:warsawToday(),time:r?r.time:"",tour:r?r.tour:"",
   pickBan:isBan(pick)?tierOf(pick):0,oppBan:isBan(opp)?tierOf(opp):0,snap};
 }
 function addLeg(a,b,model){
  const leg=legFrom(a,b,model);
- if(!leg){setMsg("bfMsg","err","Enter the odds for that player first.");return}
+ if(!leg){setMsg("bfMsg","err","Enter both prices. The bet keeps each side.");return}
  if(SLIP.some(x=>[x.pick,x.opp].sort().join("|")===[leg.pick,leg.opp].sort().join("|")&&x.time===leg.time)){setMsg("bfMsg","err","That match is already in the parlay.");return}
  SLIP.push(leg);saveSlip();renderSlip();setMsg("bfMsg","ok",`${leg.pick} added. ${SLIP.length} pick${SLIP.length>1?"s":""} in the parlay.`);
 }
@@ -1370,7 +1371,7 @@ function renderSlip(){
  const dec=SLIP.reduce((s,l)=>s*decOf(l.odds),1),p=SLIP.reduce((s,l)=>s*l.p,1);
  const am=amOf(dec),ev=p*(dec-1)*100-(1-p)*100;
  box.innerHTML=`<div class="slip"><b>Parlay: ${SLIP.length} pick${SLIP.length>1?"s":""}</b>
-  <ul class="sleg">${SLIP.map((l,i)=>`<li><span>${esc(l.pick)} <span class="muted">${l.odds>0?"+":""}${l.odds} · ${Math.round(l.p*100)}%</span></span><button type="button" class="mini" data-leg="${i}" aria-label="Remove ${esc(l.pick)}">✕</button></li>`).join("")}</ul>
+  <ul class="sleg">${SLIP.map((l,i)=>`<li><span>${esc(l.pick)} <span class="muted">${l.snap&&l.snap.o1!=null&&l.snap.o2!=null?`${fmtO(l.snap.o1)} / ${fmtO(l.snap.o2)}`:((l.odds>0?"+":"")+l.odds)} · ${Math.round(l.p*100)}%</span></span><button type="button" class="mini" data-leg="${i}" aria-label="Remove ${esc(l.pick)}">✕</button></li>`).join("")}</ul>
   <div class="bm">Combined ${am>0?"+":""}${am} · all win ${(p*100).toFixed(1)}% · <span class="${ev>=3?"pos":ev>0?"thin":"neg"}">EV ${money(ev)}</span> per $100</div>
   <div class="row"><span class="dollar">$</span><input id="slStake" class="bfstake" inputmode="decimal" aria-label="Parlay stake" placeholder="Stake" value="${esc(String(load("tt-pstake")||""))}"><button class="btn primary" id="slSave" type="button">Log parlay</button><button class="btn" id="slClear" type="button">Clear</button></div>
   <div class="msg" id="slMsg" role="status"></div></div>`;
@@ -1391,18 +1392,19 @@ function renderSlip(){
 }
 
 function logBet(a,b,model){
- const k=$("bfPick").value,o=readOdds(k),stake=parseFloat(($("bfStake").value||"").replace(/[^0-9.]/g,""));
+ const k=$("bfPick").value,stake=parseFloat(($("bfStake").value||"").replace(/[^0-9.]/g,""));
  if(!(stake>0)){setMsg("bfMsg","err","Enter a stake first.");return}
- if(o===null){setMsg("bfMsg","err","Enter the odds for that player first.");return}
+ const oa=readOdds("A"),ob=readOdds("B");
+ if(!bothPrices(oa,ob)){setMsg("bfMsg","err","Enter both prices. The bet keeps each side.");return}
+ const o=k==="A"?oa:ob;
  const pick=k==="A"?a:b,opp=k==="A"?b:a,p=model[k],pe=EST?(k==="A"?EST.pe:1-EST.pe):p,ev=p*profit(o)-(1-p)*100;
  const r=CURMATCH&&!CURMATCH.fin&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;
- const oa=readOdds("A"),ob=readOdds("B");
  const bet={id:Date.now().toString(36),made:Date.now(),date:r?r.date:warsawToday(),time:r?r.time:"",tour:r?r.tour:"",pick:pick.name,opp:opp.name,odds:o,stake,p,pe,ev,
   cat:ev>=3?"value":ev>0?"thin":"none",pickBan:isBan(pick)?tierOf(pick):0,oppBan:isBan(opp)?tierOf(opp):0,pickFav:pe>0.5,status:"pending",
   flagPair:isFlagPair(oa,ob)?[oa,ob]:null,
   snap:decisionSnapshot(oa,ob,model.A,model.B)};
  BETS.push(bet);saveBets();save("tt-stake",stake);
- setMsg("bfMsg","ok",`Logged: $${stake} on ${pick.name} at ${o>0?"+":""}${o}${r?` (${r.time} Polish time)`:""}. See 💵 Bets.`);
+ setMsg("bfMsg","ok",`Logged: $${stake} on ${pick.name} at ${fmtO(o)} (line ${fmtO(oa)} / ${fmtO(ob)})${r?` (${r.time} Polish time)`:""}. See 💵 Bets.`);
  settleBets();
 }
 function settleBets(){
@@ -1490,15 +1492,16 @@ function renderBets(){
  if($("betLess"))$("betLess").onclick=()=>{betShown=5;renderBets()};
  const legMark=l=>l.status==="won"?"✓":l.status==="lost"?"✕":l.status==="void"?"○":"·";
  const snapText=b=>{const s=b.snap;if(!s||!s.at)return "";
-  let app=s.app1,edge=s.edge1,odds=s.o1;
-  if(!b.parlay&&b.odds===s.o2&&b.odds!==s.o1){app=s.app2;edge=s.edge2;odds=s.o2}
-  return `<div class="bm muted">Snapshot ${ago(s.at)}${odds!=null?` · book ${fmtO(odds)}`:""}${app!=null?` · app ${Math.round(app*100)}%`:""}${edge!=null?` · edge ${money(edge)}`:""}</div>`};
+  let app=s.app1,edge=s.edge1;
+  if(!b.parlay&&s.o2!=null&&b.odds===s.o2&&b.odds!==s.o1){app=s.app2;edge=s.edge2}
+  const book=s.o1!=null&&s.o2!=null?`${fmtO(s.o1)} / ${fmtO(s.o2)}`:s.o1!=null?fmtO(s.o1):"";
+  return `<div class="bm muted">Snapshot ${ago(s.at)}${book?` · book ${book}`:""}${app!=null?` · app ${Math.round(app*100)}%`:""}${edge!=null?` · edge ${money(edge)}`:""}</div>`};
  $("betList").innerHTML=visible.map(b=>{
   const voids=b.parlay&&b.legs.some(l=>l.status==="void");
   const price=b.parlay?parlayPayoutOdds(b):b.odds;
   const onPlus=betOnFlaggedPlus(b,FLAGO.a,FLAGO.b);
   return `<li class="bet ${b.status}"><div class="bt">${b.parlay?`<b>${b.legs.length}-pick parlay</b>`:`<b>${esc(b.pick)}</b> <span class="muted">vs ${esc(b.opp)}</span>`}${onPlus?` <span class="stag flagp">⚑ ${fmtO(pairPlusOdds(FLAGO.a,FLAGO.b))}</span>`:""}</div>
-  ${b.parlay?`<ul class="sleg">${b.legs.map((l,i)=>`<li class="${l.status}"><span>${legMark(l)} ${esc(l.pick)} <span class="muted">vs ${esc(sur(l.opp))} ${l.odds>0?"+":""}${l.odds}${l.score?" · "+esc(l.score):""}${l.snap&&l.snap.app1!=null?` · app ${Math.round(l.snap.app1*100)}%`:""}</span></span><span class="bb"><button type="button" class="mini" data-leg="won" data-id="${b.id}" data-li="${i}">Won</button><button type="button" class="mini" data-leg="lost" data-id="${b.id}" data-li="${i}">Lost</button><button type="button" class="mini" data-leg="void" data-id="${b.id}" data-li="${i}">Void</button></span></li>`).join("")}</ul>`:""}
+  ${b.parlay?`<ul class="sleg">${b.legs.map((l,i)=>`<li class="${l.status}"><span>${legMark(l)} ${esc(l.pick)} <span class="muted">vs ${esc(sur(l.opp))} ${l.odds>0?"+":""}${l.odds}${l.score?" · "+esc(l.score):""}${l.snap&&(l.side==="B"?l.snap.app2:l.snap.app1)!=null?` · app ${Math.round((l.side==="B"?l.snap.app2:l.snap.app1)*100)}%`:""}${l.snap&&l.snap.o1!=null&&l.snap.o2!=null?` · ${fmtO(l.snap.o1)} / ${fmtO(l.snap.o2)}`:""}</span></span><span class="bb"><button type="button" class="mini" data-leg="won" data-id="${b.id}" data-li="${i}">Won</button><button type="button" class="mini" data-leg="lost" data-id="${b.id}" data-li="${i}">Lost</button><button type="button" class="mini" data-leg="void" data-id="${b.id}" data-li="${i}">Void</button></span></li>`).join("")}</ul>`:""}
   <div class="bm">${price>0?"+":""}${price} · $${b.stake} · est ${Math.round(b.p*100)}% · <span class="${b.cat==="value"?"pos":b.cat==="thin"?"thin":"neg"}">EV ${money(b.ev)}</span>${voids?" · price drops the void legs":""}</div>
   ${snapText(b)}
   <div class="bm muted">${esc(nice(b.date))}${b.time?` ${esc(b.time)} PL`:""}${b.tour?` · ${esc(b.tour)}`:""}</div>

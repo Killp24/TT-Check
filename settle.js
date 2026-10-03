@@ -32,6 +32,12 @@ function pricePairMatch(o1, o2, a, b) {
   return x[0] === y[0] && x[1] === y[1];
 }
 
+// Both American prices have to be real numbers of at least 100. One side is not a line.
+function bothPrices(o1, o2) {
+  const nums = [Number(o1), Number(o2)];
+  return nums.every(n => Number.isFinite(n) && Math.abs(n) >= 100);
+}
+
 // The plus-money number in a two-sided price. +102 / −136 returns 102.
 function pairPlusOdds(a, b) {
   const nums = [Number(a), Number(b)];
