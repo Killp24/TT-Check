@@ -467,4 +467,25 @@ test("any list in that copied shape is read, and yesterday's clock does not take
   assert.equal(kuk.date + " " + kuk.time, "2026-10-03 23:25");
   const sul = pickFixture(parsed.matches[2], fixtures, aligned.off, aligned.date);
   assert.equal(sul.date + " " + sul.time, "2026-10-03 23:30");
+  const finished = fixtures.map(f => Object.assign({}, f, { done: f.date === "2026-10-03" && f.time === "23:25" }));
+  const still = pickFixture(parsed.matches[1], finished, aligned.off, aligned.date);
+  assert.equal(still.date + " " + still.time, "2026-10-03 23:25");
+});
+
+test("a short paste keeps the sportsbook clock from the last full list", () => {
+  const players = ["Kolek Maciej", "Makajew Maciej"].map(name => ({ name }));
+  const parsed = parseBookPaste([
+    "Maciej Kolek", "vs", "Maciej Makajew", "", "\u2212215", "", "+150", "Today 2:00 PM", "More Bets"
+  ].join("\n"), players);
+  const now = Date.parse("2026-10-03T20:40:00Z");
+  const fixtures = [
+    { p1: "Makajew Maciej", p2: "Kolek Maciej", date: "2026-10-03", minutes: 22 * 60 + 30, at: Date.parse("2026-10-03T20:30:00Z"), time: "22:30" },
+    { p1: "Kolek Maciej", p2: "Makajew Maciej", date: "2026-10-03", minutes: 23 * 60, at: Date.parse("2026-10-03T21:00:00Z"), time: "23:00" }
+  ];
+  const nearer = alignPasteTimes(parsed.matches, fixtures, { now });
+  assert.equal(nearer.unique, false);
+  assert.equal(nearer.off, 8 * 60 + 30);
+  const remembered = alignPasteTimes(parsed.matches, fixtures, { now, preferOff: 9 * 60 });
+  assert.equal(remembered.off, 9 * 60);
+  assert.equal(pickFixture(parsed.matches[0], fixtures, remembered.off, remembered.date).time, "23:00");
 });

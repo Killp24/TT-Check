@@ -653,8 +653,11 @@ function parseBookPaste(text, players) {
 
 // The copied clock is the sportsbook's clock. Find the hour shift that lands those times on the schedule.
 // date is the schedule day most of the paste agrees on, so yesterday's same clock is not the match.
-function alignPasteTimes(matches, fixtures) {
-  let best = { off: 0, hits: -1, date: null };
+// When several shifts fit, prefer the one already used for this sportsbook, then the meetings closest to now.
+function alignPasteTimes(matches, fixtures, opts) {
+  const now = typeof opts === "number" ? opts : (opts && opts.now != null ? opts.now : Date.now());
+  const preferOff = opts && typeof opts === "object" && opts.preferOff != null ? opts.preferOff : null;
+  const ranked = [];
   for (let off = -14 * 60; off <= 14 * 60; off += 15) {
     let hits = 0;
     const byDate = new Map();
@@ -673,6 +676,7 @@ function alignPasteTimes(matches, fixtures) {
       hits++;
       for (const d of dates) byDate.set(d, (byDate.get(d) || 0) + 1);
     }
+    if (!hits) continue;
     let date = null;
     let dateHits = 0;
     let tied = false;
@@ -681,16 +685,43 @@ function alignPasteTimes(matches, fixtures) {
       else if (n === dateHits) tied = true;
     }
     if (tied) date = null;
-    if (hits > best.hits) best = { off, hits, date };
+    let lag = 0;
+    let used = 0;
+    for (const m of matches || []) {
+      if (m.minutes == null) continue;
+      const target = (m.minutes + off + 1440) % 1440;
+      const pair = [m.p1, m.p2].sort().join("|");
+      let bestLag = Infinity;
+      for (const f of fixtures || []) {
+        if ([f.p1, f.p2].sort().join("|") !== pair || Math.abs(f.minutes - target) > 10) continue;
+        if (date && f.date && f.date !== date) continue;
+        if (f.at == null) continue;
+        const dt = f.at - now;
+        const row = dt >= -15 * 60000 ? Math.abs(dt) : 1e12 + Math.abs(dt);
+        if (row < bestLag) bestLag = row;
+      }
+      if (bestLag < Infinity) { lag += bestLag; used++; }
+    }
+    if (!used) lag = Infinity;
+    ranked.push({ off, hits, date, lag });
   }
-  return best;
+  if (!ranked.length) return { off: 0, hits: 0, date: null, unique: false };
+  const top = Math.max(...ranked.map(r => r.hits));
+  const tiedOff = ranked.filter(r => r.hits === top);
+  const preferred = preferOff == null ? null : tiedOff.find(r => r.off === preferOff);
+  const pick = preferred || tiedOff.reduce((a, b) => b.lag < a.lag ? b : a);
+  return { off: pick.off, hits: pick.hits, date: pick.date, unique: tiedOff.length === 1 };
 }
 
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
-  const cands = (fixtures || []).filter(f => !f.done && [f.p1, f.p2].sort().join("|") === pair);
+  const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);
   if (!cands.length) return null;
-  const soonest = cands.slice().sort((a, b) => (a.at || 0) - (b.at || 0))[0];
+  const now = Date.now();
+  const soonest = cands.slice().sort((a, b) => {
+    if (!!a.done !== !!b.done) return a.done ? 1 : -1;
+    return Math.abs((a.at || 0) - now) - Math.abs((b.at || 0) - now);
+  })[0];
   if (match.minutes == null || offsetMin == null) return soonest;
   const target = (match.minutes + offsetMin + 1440) % 1440;
   const near = [];
@@ -700,13 +731,17 @@ function pickFixture(match, fixtures, offsetMin, slateDate) {
     if (diff <= 20) near.push(f);
   }
   if (!near.length) return soonest;
+  const clock = f => {
+    let d = Math.abs(f.minutes - target);
+    if (d > 720) d = 1440 - d;
+    return d;
+  };
   near.sort((a, b) => {
     const as = slateDate && a.date === slateDate ? 0 : 1;
     const bs = slateDate && b.date === slateDate ? 0 : 1;
     if (as !== bs) return as - bs;
-    let da = Math.abs(a.minutes - target); if (da > 720) da = 1440 - da;
-    let db = Math.abs(b.minutes - target); if (db > 720) db = 1440 - db;
-    if (da !== db) return da - db;
+    if (clock(a) !== clock(b)) return clock(a) - clock(b);
+    if (!!a.done !== !!b.done) return a.done ? 1 : -1;
     return (b.at || 0) - (a.at || 0);
   });
   return near[0];

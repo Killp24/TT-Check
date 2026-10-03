@@ -2130,11 +2130,13 @@ async function pushOdds(){
 function applyPastedOdds(text){
  const chosen=bookKey($("pasteBook")&&$("pasteBook").value);
  const parsed=parseBookPaste(text,players);
- const fixtures=SCHED.filter(r=>!r.res&&!r.fin).map(r=>{
+ const fixtures=SCHED.map(r=>{
   const [hh,mm]=String(r.time||"0:0").split(":").map(Number);
-  return {p1:r.p1,p2:r.p2,minutes:(hh||0)*60+(mm||0),at:r.at?r.at.getTime():0,done:false,date:r.date,r};
+  return {p1:r.p1,p2:r.p2,minutes:(hh||0)*60+(mm||0),at:r.at?r.at.getTime():0,done:!!(r.res||r.fin),date:r.date,r};
  });
- const aligned=alignPasteTimes(parsed.matches,fixtures);
+ const remembered=load("tt-pasteoff");
+ const aligned=alignPasteTimes(parsed.matches,fixtures,{preferOff:remembered&&Number.isFinite(+remembered.off)?+remembered.off:null});
+ if(aligned.unique)save("tt-pasteoff",{off:aligned.off,at:Date.now()});
  const offset=aligned.hits?aligned.off:null;
  const rows=[];const unmatched=[];let matched=0;
  for(const m of parsed.matches){
