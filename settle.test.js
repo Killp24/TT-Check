@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -482,6 +482,33 @@ test("the results list is stale once it is past 40 minutes", () => {
   assert.equal(old.stale, true);
   assert.equal(resultsAge("", now), null);
   assert.equal(resultsAge("nope", now), null);
+});
+
+test("a manual flag lasts for the time you pick, or until you clear it", () => {
+  const now = Date.parse("2026-10-03T21:00:00Z");
+  const live = activePlayerFlag({ reason: "  rushing the score  ", until: now + 2 * 3600000, at: now }, now);
+  assert.equal(live.reason, "rushing the score");
+  assert.equal(live.until, now + 2 * 3600000);
+  assert.equal(activePlayerFlag({ reason: "rushing", until: now, at: now }, now), null);
+  assert.equal(activePlayerFlag({ reason: "   ", until: 0 }, now), null);
+  assert.equal(activePlayerFlag(null, now), null);
+  const keep = activePlayerFlag({ reason: "tilt", until: 0, at: now }, now + 9 * 86400000);
+  assert.equal(keep.reason, "tilt");
+  assert.equal(keep.until, 0);
+  const long = "x".repeat(100);
+  assert.equal(activePlayerFlag({ reason: long, until: 0 }, now).reason.length, 80);
+  const pruned = prunePlayerFlags({
+    "Trela Jakub": { reason: "tilt", until: 0, at: now },
+    "Kolek Maciej": { reason: "old", until: now - 1000, at: now },
+    "Nobody": { reason: "  ", until: 0 }
+  }, now);
+  assert.deepEqual(Object.keys(pruned), ["Trela Jakub"]);
+  assert.equal(flagLeft(0, now), "until you clear it");
+  assert.equal(flagLeft(now + 45 * 60000, now), "45 min left");
+  assert.equal(flagLeft(now + 2 * 3600000, now), "2 h left");
+  assert.equal(flagLeft(now + 26 * 3600000, now), "26 h left");
+  assert.equal(flagLeft(now + 72 * 3600000, now), "3 days left");
+  assert.equal(flagLeft(now - 1000, now), "");
 });
 
 test("a month of favorite results flags playing above or below Elo, and skips the ban list", () => {

@@ -735,6 +735,43 @@ function resultsAge(updatedAt, nowMs) {
   return { mins, stale: mins > 40 };
 }
 
+// A flag you set by hand. until 0 means it stays until you clear it. It never moves the win chance.
+function activePlayerFlag(flag, nowMs) {
+  if (!flag || typeof flag !== "object") return null;
+  const reason = String(flag.reason == null ? "" : flag.reason).trim().slice(0, 80);
+  if (!reason) return null;
+  const now = nowMs == null ? Date.now() : nowMs;
+  const until = Number(flag.until);
+  const open = !Number.isFinite(until) || until <= 0;
+  if (!open && until <= now) return null;
+  return { reason, until: open ? 0 : until, at: Number(flag.at) || 0 };
+}
+
+function prunePlayerFlags(flags, nowMs) {
+  const out = {};
+  if (!flags || typeof flags !== "object") return out;
+  const now = nowMs == null ? Date.now() : nowMs;
+  for (const name of Object.keys(flags)) {
+    const live = activePlayerFlag(flags[name], now);
+    if (live) out[name] = { reason: live.reason, until: live.until, at: live.at };
+  }
+  return out;
+}
+
+function flagLeft(until, nowMs) {
+  const n = Number(until);
+  if (!Number.isFinite(n) || n <= 0) return "until you clear it";
+  const now = nowMs == null ? Date.now() : nowMs;
+  const ms = n - now;
+  if (ms <= 0) return "";
+  const mins = Math.max(1, Math.round(ms / 60000));
+  if (mins < 60) return mins === 1 ? "1 min left" : mins + " min left";
+  const hours = Math.round(mins / 60);
+  if (hours < 48) return hours === 1 ? "1 h left" : hours + " h left";
+  const days = Math.max(2, Math.round(hours / 24));
+  return days + " days left";
+}
+
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
   const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);

@@ -186,9 +186,11 @@ html.lock,html.lock body{overflow:hidden}
 .stag.t1{background:#8e1f1a;color:#fff;border-color:#8e1f1a}.stag.t2{background:var(--ban);color:#fff;border-color:var(--ban)}.stag.t3{background:#d9665f;color:#fff;border-color:#d9665f}
 .stag.datap{color:#146c43;background:#e7f6ee;border-color:#2d7a4b}
 .stag.datan{color:#9a3412;background:#fff4e8;border-color:#c2410c}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}:root:not([data-theme="light"]) .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}}
+.stag.mine{color:#1e3a8a;background:#e8f0fe;border-color:#1d4ed8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}:root:not([data-theme="light"]) .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}:root:not([data-theme="light"]) .stag.mine{color:#dbeafe;background:#1e3a5f;border-color:#60a5fa}}
 :root[data-theme="dark"] .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}
 :root[data-theme="dark"] .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}
+:root[data-theme="dark"] .stag.mine{color:#dbeafe;background:#1e3a5f;border-color:#60a5fa}
 .rch{font-size:1rem;margin:16px 0 6px}
 .rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 .minfo{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;margin:0 0 10px}
@@ -316,10 +318,19 @@ body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:c
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
 body[data-view="match"] #paneDetails > #edgeLine{order:3}
-body[data-view="match"] #paneDetails > #recentForm{order:4}
-body[data-view="match"] #paneDetails > #cmp{order:5}
-body[data-view="match"] #paneDetails > #bookPanel{order:6}
-body[data-view="match"] #paneDetails > #oddsBox{order:7}
+body[data-view="match"] #paneDetails > #playerFlags{order:4}
+body[data-view="match"] #paneDetails > #recentForm{order:5}
+body[data-view="match"] #paneDetails > #cmp{order:6}
+body[data-view="match"] #paneDetails > #bookPanel{order:7}
+body[data-view="match"] #paneDetails > #oddsBox{order:8}
+.flagpanel label{display:flex;flex-direction:column;gap:4px;margin-top:8px;font-size:.78rem;font-weight:700}
+.flagwhy,.flagfor{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--ink)}
+.flagrow{padding-top:10px;margin-top:10px;border-top:1px solid var(--border)}
+.flagrow:first-of-type{border-top:0;padding-top:0;margin-top:0}
+.flagacts{display:flex;gap:8px;margin-top:8px}
+.flagon{margin:4px 0 0;font-weight:600}
+.flagmsg{min-height:0;margin:6px 0 0;color:var(--ban);font-size:.82rem;font-weight:600}
+.flagmsg:empty{display:none}
 </style></head><body data-view="home"><main>
 <div class="appbar">
  <div class="corner"><button class="btn js-menu" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
@@ -352,6 +363,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:7}
 </div>
 <div id="verdict"></div>
 <p class="edgeline" id="edgeLine" hidden></p>
+<div id="playerFlags"></div>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Book Odds</h2><p class="help">DraftKings, FanDuel, bet365, MGM, Fanatics. Each book keeps its own prices. The best number on each player is marked.</p><div id="bookBox"></div></div></div>
@@ -780,6 +792,13 @@ function dataTag(p){
  if(!m)return "";
  return `<span class="stag ${m.sign>0?"datap":"datan"}">${esc(sur(p.name))} Data ${m.sign>0?"+":"−"}</span>`;
 }
+function mineTag(name){
+ const f=activePlayerFlag(FLAGS[name]);
+ if(!f)return "";
+ let why=f.reason;
+ if(why.length>32)why=why.slice(0,31)+"…";
+ return `<span class="stag mine">${esc(sur(name))} · ${esc(why)}</span>`;
+}
 function formEdge(name){
  const q=RECENT.get(name);if(!q||q.length<8)return null;
  const mode=FORM_MODE==="off"?"plain":FORM_MODE;
@@ -988,7 +1007,7 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderRecentForm(a,b);renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderPlayerFlags();renderRecentForm(a,b);renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
  renderOdds(a,b,pa,est);$("bookPanel").hidden=!(VIEW==="match"&&MTAB==="odds");renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
@@ -1042,6 +1061,7 @@ function update(){
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
  renderCompare(a,b);
+ renderPlayerFlags();
  renderRecentForm(a,b);
  renderStandings(a,b);
  renderTrust();
@@ -1068,6 +1088,64 @@ function renderRecentForm(a,b){
   return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
  };
  box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the opponent, and who won.</p>${resultsListNote()}<div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
+}
+const FLAG_HOURS={"2h":2,"6h":6,"12h":12,"1d":24,"3d":72};
+function flagUntil(code,now){const h=FLAG_HOURS[code];return h?now+h*36e5:0}
+function freshFlags(){
+ const next=prunePlayerFlags(FLAGS);
+ const prev=Object.keys(FLAGS),keys=Object.keys(next);
+ const same=prev.length===keys.length&&keys.every(k=>FLAGS[k]&&FLAGS[k].reason===next[k].reason&&FLAGS[k].until===next[k].until);
+ FLAGS=next;
+ if(!same)save("tt-flags",FLAGS);
+}
+function renderPlayerFlags(){
+ const box=$("playerFlags");if(!box)return;
+ freshFlags();
+ const names=VIEW==="match"&&MATCH?[MATCH.p1,MATCH.p2].filter(Boolean):[];
+ const pair=names.join("\n");
+ if(names.length<2||names[0]===names[1]){box.innerHTML="";delete box.dataset.pair;return}
+ const draft=new Map();
+ if(box.dataset.pair===pair){
+  for(const row of box.querySelectorAll(".flagrow")){
+   const name=row.getAttribute("data-player");
+   const why=row.querySelector(".flagwhy"),dur=row.querySelector(".flagfor");
+   draft.set(name,{why:why?why.value:"",dur:dur?dur.value:"0",focus:document.activeElement===why||document.activeElement===dur,which:document.activeElement===dur?"dur":"why"});
+  }
+ }
+ const opts=[["2h","2 hours"],["6h","6 hours"],["12h","12 hours"],["1d","1 day"],["3d","3 days"],["0","Until I clear it"]];
+ box.innerHTML=`<div class="panel flagpanel"><h2>Your flags</h2><p class="help">Saved on this phone. A flag shows on this player's other matches until it runs out or you clear it. It does not change the win chance.</p>${names.map(name=>{
+  const live=activePlayerFlag(FLAGS[name]);
+  const status=live?`<p class="flagon">${esc(live.reason)} · ${esc(flagLeft(live.until))}</p>`:"";
+  return `<div class="flagrow" data-player="${esc(name)}"><div class="cmpname">${esc(name)}</div>${status}<label>Reason<input class="flagwhy" maxlength="80" placeholder="Why you're flagging them" autocomplete="off"></label><label>How long<select class="flagfor">${opts.map(([v,lab])=>`<option value="${v}">${lab}</option>`).join("")}</select></label><div class="flagacts"><button class="btn primary" type="button" data-flag-set="${esc(name)}">Flag</button>${live?`<button class="btn" type="button" data-flag-clear="${esc(name)}">Clear</button>`:""}</div><p class="flagmsg" role="status"></p></div>`;
+ }).join("")}</div>`;
+ box.dataset.pair=pair;
+ for(const row of box.querySelectorAll(".flagrow")){
+  const name=row.getAttribute("data-player");
+  const d=draft.get(name),live=activePlayerFlag(FLAGS[name]);
+  const why=row.querySelector(".flagwhy"),dur=row.querySelector(".flagfor");
+  why.value=d?d.why:(live?live.reason:"");
+  dur.value=d&&opts.some(o=>o[0]===d.dur)?d.dur:"0";
+  if(d&&d.focus)(d.which==="dur"?dur:why).focus();
+ }
+}
+function bindPlayerFlags(){
+ const box=$("playerFlags");if(!box||box.dataset.bound)return;
+ box.dataset.bound="1";
+ box.addEventListener("click",e=>{
+  const set=e.target.closest("[data-flag-set]"),clear=e.target.closest("[data-flag-clear]");
+  if(!set&&!clear)return;
+  const name=set?set.getAttribute("data-flag-set"):clear.getAttribute("data-flag-clear");
+  if(!name)return;
+  if(clear){delete FLAGS[name];save("tt-flags",FLAGS);renderPlayerFlags();renderSched({keep:true});return}
+  const row=set.closest(".flagrow");
+  const why=row.querySelector(".flagwhy").value.trim().slice(0,80);
+  const msg=row.querySelector(".flagmsg");
+  if(!why){msg.textContent="Add a reason first.";return}
+  FLAGS[name]={reason:why,until:flagUntil(row.querySelector(".flagfor").value,Date.now()),at:Date.now()};
+  save("tt-flags",FLAGS);
+  renderPlayerFlags();
+  renderSched({keep:true});
+ });
 }
 function resultsListNote(){
  const age=resultsAge(offAt);
@@ -1388,6 +1466,7 @@ function plToDate(d,t){const [y,m,da]=d.split("-").map(Number),[h,mi]=t.split(":
   return new Date(guess-(Date.UTC(+g.year,+g.month-1,+g.day,+g.hour%24,+g.minute)-guess))}catch(e){return new Date(guess-2*36e5)}}
 const byNameP=n=>players.find(p=>p.name===n);
 function renderSched(opt){
+ freshFlags();
  const now=Date.now(),showDone=$("showDone").checked,onlyFlag=$("onlyFlag").checked,onlyEV=$("onlyEV").checked;
  const q=norm($("schFind").value||"").split(" ").filter(Boolean),onlyFav=$("onlyFav").checked;
  const sheet=$("sched"),keep=!!(opt&&opt.keep);
@@ -1420,6 +1499,7 @@ function renderSched(opt){
     else tags+=`<span class="stag">Best EV ${top.ev>=0?"+":"−"}$${Math.abs(top.ev).toFixed(0)} at your odds</span>`;
    }
   }else tags+=`<span class="stag">Player not in ratings</span>`;
+  for(const n of [r.p1,r.p2]){const t=mineTag(n);if(t){flag=true;tags+=t}}
   if(onlyFav&&!isFav(r.p1,r.p2)&&!isFavM(r))continue;
   if(q.length&&!q.every(w=>norm(r.p1+" "+r.p2+" "+r.tour).includes(w)))continue;
   if(onlyEV&&!/stag ev/.test(tags))continue;
@@ -1742,6 +1822,12 @@ setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
 // ---------- bet tracker (private, stored on this phone) ----------
 let BETS=load("tt-bets")||[];
 const saveBets=()=>save("tt-bets",BETS);
+let FLAGS=load("tt-flags")||{};
+{
+ const next=prunePlayerFlags(FLAGS);
+ if(JSON.stringify(next)!==JSON.stringify(FLAGS)){FLAGS=next;save("tt-flags",FLAGS)}
+ else FLAGS=next;
+}
 
 
 // ---------- comparing books ----------
@@ -2343,7 +2429,7 @@ document.querySelectorAll(".js-bets").forEach(b=>b.onclick=()=>{betShown=5;settl
 $("favsClose").onclick=()=>{closeSheet("favs");focusTool("saved")};
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");focusTool("saved")}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
-applyChrome();setup("A");setup("B");apply();showHome({force:true});loadOfficial().then(apply);refresh(false);
+applyChrome();setup("A");setup("B");bindPlayerFlags();apply();showHome({force:true});loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
 $("refreshBtn").onclick=()=>refreshResults();
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
