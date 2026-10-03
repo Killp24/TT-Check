@@ -280,7 +280,7 @@ body[data-view="match"] .foot{display:none}
 .flist .fres.w{color:var(--ok)}
 .flist .fres.l{color:var(--ban)}
 .flist .fwho{overflow-wrap:break-word}
-body[data-view="match"] #paneDetails{display:flex;flex-direction:column}
+body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:column}
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
 body[data-view="match"] #paneDetails > #edgeLine{order:3}
