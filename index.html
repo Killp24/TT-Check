@@ -113,12 +113,14 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .field input{padding-right:34px}
 .x{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:none;color:#5b6b78;font-size:15px;cursor:pointer;border-radius:4px}
 .x:focus-visible{outline:3px solid var(--ball)}
-.orow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.bkrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center;padding:8px 0;border-top:1px solid var(--border)}
+.orow2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.orow2>.oin,.orow2 .orow{min-width:0}
+.orow2 .oval{flex:1 1 0;width:0;min-width:0;padding:10px 8px}
+.bkrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;align-items:center;padding:10px 0;border-top:1px solid var(--border)}
 .bkn{grid-column:1 / -1;font-weight:700;font-size:.9rem}
 .bkbest{margin-left:6px;font-size:.72rem;font-weight:700;color:var(--ok)}
-.bkhead{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 0}
-.bkhead span{text-align:center;font-size:.75rem;font-weight:700;color:var(--muted)}
+.bkhead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:4px 0 0}
+.bkhead span{text-align:center;font-size:.75rem;font-weight:700;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #bookRead:empty,#bookGap:empty{display:none}
 .bksaved{grid-column:1 / -1;font-size:.75rem;color:var(--muted)}
 .bksaved.on{color:var(--ok);font-weight:700}
@@ -126,15 +128,17 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .saveproof{margin-top:12px;padding-top:8px;border-top:1px solid var(--border)}
 .saveproof li{padding:4px 0;border-top:1px solid var(--border);font-size:.84rem}
 .olbl{display:block;font-size:.85rem;color:var(--muted);margin-bottom:3px}
-.orow{display:flex;gap:6px}
+.orow{display:flex;gap:6px;min-width:0}
 .sign{flex:none;width:42px;font:inherit;font-size:1.2rem;font-weight:700;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink);cursor:pointer}
 .sign:focus-visible,.oval:focus{outline:3px solid var(--ball);outline-offset:1px}
 .oval{background:var(--bg);color:var(--ink);border:1px solid var(--border);min-width:0}
-.bkrow .oval{flex:1;width:auto}
+.bkrow .orow{min-width:0}
+.bkrow .sign{width:40px;padding:8px 0}
+.bkrow .oval{flex:1 1 0;width:0;min-width:0;padding:8px 6px}
 .otab{overflow-x:auto;margin-top:10px}
 .otab table{width:100%;border-collapse:collapse;font-size:.88rem}
 .otab th{text-align:left;color:var(--muted);font-weight:600;padding:4px 6px 4px 0;white-space:nowrap}
-.otab td{padding:6px 6px 6px 0;vertical-align:top;border-top:1px solid var(--border);white-space:nowrap}
+.otab td{padding:6px 6px 6px 0;vertical-align:top;border-top:1px solid var(--border)}
 .pos{color:var(--ok);font-weight:700}.neg{color:var(--ban);font-weight:700}.thin{color:var(--ball);font-weight:700}
 .vv{margin-top:10px;padding:10px 12px;border-radius:4px;border-left:6px solid var(--muted);background:var(--bg)}
 .vv strong{display:block}
@@ -199,8 +203,8 @@ html.lock,html.lock body{overflow:hidden}
 .tb{flex-wrap:wrap}
 .topbar .btn{padding:6px 10px}
 .betform{margin-top:12px;border-top:1px solid var(--border);padding-top:4px}
-.betform .row{display:flex;gap:6px;align-items:center;flex-wrap:nowrap}
-.betform select{flex:1;min-width:0}
+.betform .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.betform select{flex:1 1 100%;min-width:0}
 .dollar{color:var(--muted);font-weight:600}
 .bfstake{width:80px;flex:none;background:var(--bg);color:var(--ink);border:1px solid var(--border)}
 .bet{background:var(--card);border:1px solid var(--border);border-left:6px solid var(--muted);border-radius:4px;padding:10px 12px;margin-bottom:8px}
@@ -232,6 +236,7 @@ html.lock,html.lock body{overflow:hidden}
 .stag.flagp{background:#6b21a8;color:#fff;border-color:#6b21a8}
 .vv.flagv{border-left-color:#6b21a8}
 #bookBox .row{flex-wrap:wrap;gap:6px}
+#bookPanel .panel,#oddsBox .panel{min-width:0;max-width:100%}
 #bookBox select,#pasteBook{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
 #pasteBook{display:block;width:100%;margin:6px 0 8px}
 #bookBox .bfstake{width:72px}
@@ -266,11 +271,9 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .edgeline{margin:8px 0 0;font-weight:600}
 .edgeline[hidden]{display:none}
 body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly{display:none}
-body[data-view="match"]:not([data-tab="odds"]) #oddsBox,body[data-view="match"]:not([data-tab="odds"]) #bookPanel{display:none}
-body[data-view="match"][data-tab="odds"] #paneDetails > :not(#oddsBox):not(#bookPanel){display:none}
+body[data-view="match"]:not([data-tab="odds"]) #bookPanel{display:none}
+body[data-view="match"][data-tab="odds"] #paneDetails > :not(#bookPanel){display:none}
 body[data-view="match"][data-tab="odds"] #bookPanel{display:block}
-body[data-view="match"][data-tab="odds"] #oddsBox .orow2,
-body[data-view="match"][data-tab="odds"] #oddsBox h2{display:none}
 .mi0 .vs{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--muted)}
 body[data-view="match"] h1,body[data-view="match"] #assistLead{display:none}
 body[data-view="match"] .foot{display:none}
@@ -1288,7 +1291,7 @@ function renderOdds(a,b,pa,est){EST=est||null;
   set("A",so?so.o1:null);set("B",so?so.o2:null);
  }
  const inp=k=>`<div class="oin"><span class="olbl">${esc(sur((k==="A"?a:b).name))}</span><div class="orow"><button type="button" class="sign" data-s="${k}" aria-label="Switch plus or minus">${odds[k].neg?"−":"+"}</button><input class="oval" data-o="${k}" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 150" value="${esc(odds[k].v)}" aria-label="Odds for ${esc((k==="A"?a:b).name)}"></div></div>`;
- const head=VIEW==="match"?"<h2>Book odds</h2>":`<h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p>`;
+ const head=VIEW==="match"?`<h2>Quick odds</h2><p class="help" style="margin:0 0 8px">Both prices, for a fast check. This line is DraftKings. Book Odds keeps each sportsbook on its own.</p>`:`<h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p>`;
  box.innerHTML=`<div class="panel">${head}<div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
  box.querySelectorAll(".oval").forEach(i=>i.addEventListener("input",()=>{odds[i.dataset.o].v=i.value.replace(/[^0-9.]/g,"");oddsCalc(a,b,pa)}));
  box.querySelectorAll(".sign").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.s;odds[k].neg=!odds[k].neg;btn.textContent=odds[k].neg?"−":"+";oddsCalc(a,b,pa)}));
@@ -1726,7 +1729,10 @@ function showAssistPair(n1,n2){
  closeLists();restoreAssist();scrollTo(0,0);
 }
 function backFromMatch(){showHome()}
-function setMatchTab(tab){MTAB=tab;applyChrome();renderMatchInfo()}
+function setMatchTab(tab){
+ MTAB=tab;applyChrome();renderMatchInfo();
+ if(tab==="odds"&&sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
+}
 function renderSignals(){
  linkResults();
  const now=Date.now();
