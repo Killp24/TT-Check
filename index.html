@@ -1561,7 +1561,7 @@ function renderMatchInfo(){
  const day=r.at.toDateString()===new Date().toDateString()?"Today":r.at.toDateString()===new Date(now+864e5).toDateString()?"Tomorrow":r.at.toLocaleDateString([],{weekday:"short",day:"numeric",month:"short"});
  const status=r.fin?`Finished: ${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:mins<=-20?"Result pending":mins<=0?"Starting now":mins<60?`Starts in ${mins} min`:`Starts in ${Math.floor(mins/60)} h ${mins%60} min`;
  const more=next.filter(x=>x!==r).length;
- box.innerHTML=names+`<span class="mi1">📅 ${day} ${r.at.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})} · <b>${status}</b></span><span class="mi2">${esc(r.tour)}${more?` · they meet ${more} more time${more>1?"s":""} in the next 30 h`:""}</span>`;
+ box.innerHTML=names+`<span class="mi1">${day} ${r.at.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})} · <b>${status}</b></span><span class="mi2">${esc(r.tour)}${more?` · they meet ${more} more time${more>1?"s":""} in the next 30 h`:""}</span>`;
  box.hidden=false;
 }
 setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
