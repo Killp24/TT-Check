@@ -779,6 +779,16 @@ function eloBefore(name,date){
  const e=snap.r.get(name);
  return e===undefined?null:e;
 }
+// The rating carried into the match. The day before is the clean one. The same day's
+// list is only used when the history has not started yet, and the current rating after that.
+function eloAt(name,date){
+ const prior=eloBefore(name,date);
+ if(prior!=null)return prior;
+ const same=HIST.find(h=>h.date===date);
+ if(same&&same.r.has(name))return same.r.get(name);
+ const p=players.find(x=>x.name===name);
+ return p?p.elo:null;
+}
 function chooseCurve(){
  const hold=CAL_HOLD||[],train=CAL_TRAIN||[];
  const k=KCAL.k||0.85;
@@ -932,7 +942,7 @@ function update(){
 function recentRows(name){
  return matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,15).map(m=>{
   const opp=m.w===name?m.l:m.w;
-  return {won:m.w===name,score:m.score,own:eloBefore(name,m.date),opp:eloBefore(opp,m.date)};
+  return {won:m.w===name,score:m.score,own:eloAt(name,m.date),opp:eloAt(opp,m.date)};
  });
 }
 function sessionText(s){return s&&s.n?`${s.w}–${s.n-s.w}`:"none yet"}
