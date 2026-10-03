@@ -257,6 +257,9 @@ body[data-view="match"] .foot{display:none}
 .sheethd h2{flex:1;text-align:center}
 #sched .sheethd{grid-template-columns:1fr auto}
 #sched .sheethd h2{text-align:left}
+.sheettools{grid-column:1 / -1;justify-content:flex-start;margin-top:6px}
+.hdacts{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+#menu,#favs,#bets{z-index:40}
 .schedmore{margin:0 0 8px;background:transparent;border:0}
 .schedmore summary{padding:0;font-weight:600;font-size:.9rem;color:var(--muted)}
 .schedmark{list-style:none;margin:4px 0 8px;padding:8px 0 0;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
@@ -293,7 +296,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:6}
 body[data-view="match"] #paneDetails > #bookPanel{order:7}
 </style></head><body data-view="home"><main>
 <div class="appbar">
- <div class="corner"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
+ <div class="corner"><button class="btn js-menu" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
  <div class="brand"><h1>TT matchup check</h1><p class="srcline"><span class="src" id="srcInfo">Loading data…</span><button class="mini" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p></div>
 </div>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
@@ -335,9 +338,9 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
 <div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
 <details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
-<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span></div>
+<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
 <div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div><button class="totop" id="sigTop" type="button" hidden>Top</button></div>
-<div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></div>
+<div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><span class="hdacts"><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
 <div class="tools"><div class="field schfield"><input id="schFind" autocomplete="off" placeholder="Search a player or tournament"><button class="x" type="button" id="schClear" aria-label="Clear search">✕</button></div><details class="schedmore"><summary>More filters</summary><div class="schedopts"><label><input type="checkbox" id="onlyFav"> Saved only</label><label><input type="checkbox" id="onlyEV"> Value only</label><label><input type="checkbox" id="onlyFlag"> Flagged only</label></div></details><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div><button class="totop" id="schedTop" type="button" hidden>Top</button></div>
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><button class="btn" id="menuClose" type="button">Back</button><h2 id="menuTitle">Menu</h2><span></span></div>
 <div class="tools">
@@ -1646,6 +1649,7 @@ $("sigClose").onclick=()=>showHome();
 $("assistBtn").onclick=()=>{captureHome();closeLists();restoreAssist();scrollTo(0,0);$("inA").focus()};
 $("matchTabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;setMatchTab(b.dataset.tab)});
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;
+ if(!$("menu").hidden||!$("favs").hidden||!$("bets").hidden)return;
  if(!$("signals").hidden)showHome()});
 
 
@@ -1923,8 +1927,8 @@ $("betList").addEventListener("click",e=>{const t=e.target.closest(".mini");if(!
  saveBets();renderBets()});
 $("betCopy").onclick=async()=>{const txt=JSON.stringify(BETS);try{await navigator.clipboard.writeText(txt);setMsg("betMsg","ok",`Copied ${BETS.length} bets. Paste them somewhere safe, like Notes.`)}catch(e){$("betRestoreTxt").value=txt;setMsg("betMsg","ok","Couldn't copy automatically, so the backup is in the box above. Select all and copy it.")}};
 $("betRestore").onclick=()=>{try{const arr=JSON.parse($("betRestoreTxt").value);if(!Array.isArray(arr))throw 0;const ids=new Set(BETS.map(b=>b.id));let n=0;for(const b of arr)if(b&&b.id&&!ids.has(b.id)){BETS.push(b);n++}saveBets();renderBets();setMsg("betMsg","ok",`Restored ${n} bet${n===1?"":"s"}.`);$("betRestoreTxt").value=""}catch(e){setMsg("betMsg","err","That doesn't look like a backup. Paste the whole text you copied.")}};
-$("betsBtn").onclick=()=>{betShown=5;settleBets();renderBets();openSheet("bets")};$("betsClose").onclick=()=>{closeSheet("bets");$("betsBtn").focus()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");$("betsBtn").focus()}});
+$("betsClose").onclick=()=>{closeSheet("bets");focusTool("bets")};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");focusTool("bets")}});
 
 
 
@@ -2224,8 +2228,19 @@ function wireFavs(box){
 }
 
 // ---------- menu sheet ----------
+function focusTool(kind){
+ for(const id of ["signals","sched"]){
+  const s=$(id);if(!s||s.hidden)continue;
+  const b=s.querySelector(".js-"+kind);if(b){b.focus();return}
+ }
+ const b=document.querySelector(".appbar .js-"+kind);if(b)b.focus();
+}
 function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
-function closeMenu(){$("menu").hidden=true;document.documentElement.classList.remove("lock");$("menuBtn").focus()}
+function closeMenu(){
+ $("menu").hidden=true;
+ if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock");
+ focusTool("menu");
+}
 $("flagA").value=fmtO(FLAGO.a);$("flagB").value=fmtO(FLAGO.b);
 $("flagSave").onclick=()=>{
  const a=parseInt(($("flagA").value||"").replace(/[^0-9+\-]/g,""),10),b=parseInt(($("flagB").value||"").replace(/[^0-9+\-]/g,""),10);
@@ -2233,10 +2248,11 @@ $("flagSave").onclick=()=>{
  FLAGO={a,b};save("tt-flago",FLAGO);$("flagA").value=fmtO(a);$("flagB").value=fmtO(b);
  setMsg("flagMsg","ok",`Watching for ${fmtO(a)} / ${fmtO(b)}.`);renderSched();update();renderBets();
 };
-$("menuBtn").onclick=openMenu;
-$("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
-$("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");$("favsBtn").focus()}});$("menuClose").onclick=closeMenu;
+document.querySelectorAll(".js-menu").forEach(b=>b.onclick=openMenu);
+document.querySelectorAll(".js-saved").forEach(b=>b.onclick=()=>{renderFavs();openSheet("favs")});
+document.querySelectorAll(".js-bets").forEach(b=>b.onclick=()=>{betShown=5;settleBets();renderBets();openSheet("bets")});
+$("favsClose").onclick=()=>{closeSheet("favs");focusTool("saved")};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");focusTool("saved")}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 applyChrome();setup("A");setup("B");apply();showHome({force:true});loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
