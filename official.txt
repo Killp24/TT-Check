@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-03T10:38Z
+# updated 2026-10-03T14:53Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -6966,7 +6966,7 @@
 2026-09-25 | Juzek Sebastian | Gumulinski Piotr | 3-2 | 6 |  | +13
 2026-09-25 | Lebek Marian | Nowak Jakub | 3-0 | 6 | 7 | +10
 2026-09-25 | Adamus Pawel | Nowak Jakub | 3-0 | 6 | 6 | +9
-2026-09-25 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-1 | 6 | 3 | +12
+2026-09-25 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-1 | 6 | 3 | +13
 2026-09-25 | Badura Jaroslaw | Bernacki Lukasz | 3-1 | 6 | 6 | +10
 2026-09-25 | Eliasz Adrian | Gluszek Wojciech | 3-0 | 6 | 6 | +17
 2026-09-25 | Juszczyk Krzysztof | Baron Mariusz | 3-2 | 6 |  | +5
@@ -7382,7 +7382,7 @@
 2026-09-27 | Sinicki Maciej | Rolak Jaroslaw | 3-2 | 1 | 1 | +6
 2026-09-27 | Sobkow Zbigniew | Wojtaszczyk Wojciech | 3-0 | 1 | 1 | +20
 2026-09-27 | Szostok Sebastian | Cichocki Aleksander | 3-2 | 1 | 1 | +10
-2026-09-27 | Skorski Michal | Suchecki Waclaw | 3-2 | 1 | 1 | +6
+2026-09-27 | Skorski Michal | Suchecki Waclaw | 3-2 | 1 | 1 | +7
 2026-09-27 | Polok Pawel | Wieczerzak Jacek | 3-0 | 1 | 1 | +15
 2026-09-27 | Adamus Pawel | Urban Wojciech | 3-0 | 1 | 1 | +13
 2026-09-27 | Ruszkiewicz Adam | Krupa Sebastian | 3-1 | 1 | 1 | +14
@@ -9215,9 +9215,9 @@
 2026-10-03 | Sojka Stanislaw | Bernacki Lukasz | 3-1 | 1 | 1 | +11
 2026-10-03 | Mecik Patryk | Adamus Kacper | 3-1 | 1 | 1 | +15
 2026-10-03 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | +11
-2026-10-03 | Gumulinski Piotr | Idaczyk Rafal | 3-2 | 1 | 1 | Pending
-2026-10-03 | Jedrzejak Patryk | Wojcik Rafal | 3-1 | 1 | 1 | Pending
-2026-10-03 | Swider Dariusz | Morawiec Daniel | 3-1 | 1 | 1 | Pending
+2026-10-03 | Gumulinski Piotr | Idaczyk Rafal | 3-2 | 1 | 1 | +3
+2026-10-03 | Jedrzejak Patryk | Wojcik Rafal | 3-1 | 1 | 1 | +9
+2026-10-03 | Swider Dariusz | Morawiec Daniel | 3-1 | 1 | 1 | +11
 2026-10-03 | Eliasz Adrian | Rolak Jaroslaw | 3-1 | 1 | 6 | +12
 2026-10-03 | Zielinski Marcin | Malcher Krzysztof | 3-1 | 2 | 1 | +5
 2026-10-03 | Vincenec Oliver | Baron Mariusz | 3-0 | 2 | 2 | +16
@@ -9247,9 +9247,10 @@
 2026-10-03 | Pytlas Wojciech | Lojtek Tomasz | 3-2 | 2 | 2 | +9
 2026-10-03 | Adamus Kacper | Koczyba Mariusz | 3-1 | 2 | 2 | +11
 2026-10-03 | Bernacki Lukasz | Sokolowski Oskar | 3-1 | 2 | 2 | +9
-2026-10-03 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 | 2 | 2 | Pending
-2026-10-03 | Swider Dariusz | Wojcik Rafal | 3-2 | 2 | 2 | Pending
-2026-10-03 | Gumulinski Piotr | Morawiec Daniel | 3-1 | 2 | 2 | Pending
+2026-10-03 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 | 2 | 2 | +8
+2026-10-03 | Swider Dariusz | Wojcik Rafal | 3-2 | 2 | 2 | +6
+2026-10-03 | Gumulinski Piotr | Morawiec Daniel | 3-1 | 2 | 2 | +1
+2026-10-03 | Durda Michal | Rolak Jaroslaw | 3-2 | 2 | 9 | Pending
 2026-10-03 | Glanowski Jakub | Sulkowski Karol | 3-1 | 3 | 2 | +6
 2026-10-03 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 3 | 2 | +7
 2026-10-03 | Lamperski Jakub | Poloszczanski Dawid | 3-0 | 3 | 2 | +10
@@ -9277,9 +9278,10 @@
 2026-10-03 | Sojka Stanislaw | Sokolowski Oskar | 3-0 | 3 | 3 | +9
 2026-10-03 | Lojtek Tomasz | Adamus Kacper | 3-2 | 3 | 3 | +7
 2026-10-03 | Koczyba Mariusz | Mecik Patryk | 3-0 | 3 | 3 | +14
-2026-10-03 | Idaczyk Rafal | Wojcik Rafal | 3-2 | 3 | 3 | Pending
-2026-10-03 | Gumulinski Piotr | Swider Dariusz | 3-2 | 3 | 3 | Pending
-2026-10-03 | Jedrzejak Patryk | Morawiec Daniel | 3-1 | 3 | 3 | Pending
+2026-10-03 | Idaczyk Rafal | Wojcik Rafal | 3-2 | 3 | 3 | +8
+2026-10-03 | Gumulinski Piotr | Swider Dariusz | 3-2 | 3 | 3 | +1
+2026-10-03 | Jedrzejak Patryk | Morawiec Daniel | 3-1 | 3 | 3 | +8
+2026-10-03 | Eliasz Adrian | Krukar Piotr | 3-2 | 3 | 9 | Pending
 2026-10-03 | Wiza Roman | Kowalski Kamil | 3-0 | 4 | 3 | +7
 2026-10-03 | Zielinski Marcin | Oracz Jacek | 3-2 | 4 | 3 | +9
 2026-10-03 | Vincenec Oliver | Sawicki Grzegorz | 3-2 | 4 | 4 | +7
@@ -9305,9 +9307,11 @@
 2026-10-03 | Sinicki Maciej | Myszewski Adrian | 3-2 | 4 | 4 | +10
 2026-10-03 | Polok Pawel | Adamus Kacper | 3-1 | 4 | 4 | +8
 2026-10-03 | Pytlas Wojciech | Mecik Patryk | 3-2 | 4 | 4 | +6
-2026-10-03 | Idaczyk Rafal | Morawiec Daniel | 3-2 | 4 | 4 | Pending
-2026-10-03 | Wojcik Rafal | Gumulinski Piotr | 3-2 | 4 | 4 | Pending
-2026-10-03 | Swider Dariusz | Jedrzejak Patryk | 3-2 | 4 | 4 | Pending
+2026-10-03 | Idaczyk Rafal | Morawiec Daniel | 3-2 | 4 | 4 | +8
+2026-10-03 | Wojcik Rafal | Gumulinski Piotr | 3-2 | 4 | 4 | +13
+2026-10-03 | Swider Dariusz | Jedrzejak Patryk | 3-2 | 4 | 4 | +10
+2026-10-03 | Eliasz Adrian | Durda Michal | 3-1 | 4 | 1 | Pending
+2026-10-03 | Durda Michal | Krukar Piotr | 3-1 | 4 |  | Pending
 2026-10-03 | Pawlik Cezary | Oracz Jacek | 3-0 | 5 | 4 | +18
 2026-10-03 | Sawicki Grzegorz | Sokolowski Oskar | 3-2 | 5 | 1 | +7
 2026-10-03 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 5 | 3 | +10
@@ -9326,16 +9330,63 @@
 2026-10-03 | Rolak Jaroslaw | Suchecki Waclaw | 3-0 | 5 | 5 | +14
 2026-10-03 | Mecik Patryk | Lojtek Tomasz | 3-2 | 5 | 5 | +11
 2026-10-03 | Pytlas Wojciech | Adamus Kacper | 3-0 | 5 | 5 | +15
-2026-10-03 | Dabrowski Igor | Misiak Mateusz | 3-2 | 6 | 6 | Pending
-2026-10-03 | Linek Adam | Marchlewski Marcin | 3-2 | 6 | 6 | Pending
+2026-10-03 | Jedrzejak Patryk | Gumulinski Piotr | 3-2 | 5 | 5 | +11
+2026-10-03 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 5 | 10 | +11
+2026-10-03 | Swider Dariusz | Idaczyk Rafal | 3-1 | 5 | 5 | +10
+2026-10-03 | Morawiec Daniel | Wojcik Rafal | 3-1 | 5 | 5 | +12
+2026-10-03 | Dabrowski Igor | Misiak Mateusz | 3-2 | 6 | 6 | +6
+2026-10-03 | Linek Adam | Marchlewski Marcin | 3-2 | 6 | 6 | +10
 2026-10-03 | Makowski Kacper | Skorski Michal | 3-1 | 6 | 1 | +11
 2026-10-03 | Zwolinski Mariusz | Krukar Piotr | 3-2 | 6 | 6 | +7
 2026-10-03 | Jesiek Jakub | Sojka Stanislaw | 3-1 | 6 | 6 | Pending
-2026-10-03 | Myszewski Adrian | Mleczko Bartlomiej | 3-2 | 6 | 6 | Pending
+2026-10-03 | Myszewski Adrian | Mleczko Bartlomiej | 3-2 | 6 | 6 | +8
 2026-10-03 | Maruszak Piotr | Piotrowski Tadeusz | 3-2 | 6 | 6 | +8
 2026-10-03 | Polok Pawel | Wojtaszczyk Wojciech | 3-2 | 6 | 6 | Pending
 2026-10-03 | Lukaszewski Mikolaj | Sinicki Maciej | 3-0 | 6 | 6 | +19
 2026-10-03 | Bernacki Lukasz | Sokolowski Oskar | 3-2 | 6 | 6 | Pending
-2026-10-03 | Marchlewski Marcin | Dabrowski Igor | 3-2 | 7 | 7 | Pending
+2026-10-03 | Gumulinski Piotr | Idaczyk Rafal | 3-1 | 6 | 6 | +5
+2026-10-03 | Jedrzejak Patryk | Morawiec Daniel | 3-0 | 6 | 6 | +10
+2026-10-03 | Wojcik Rafal | Swider Dariusz | 3-2 | 6 | 6 | +10
+2026-10-03 | Jedrzejak Patryk | Wojcik Rafal | 3-1 | 7 | 7 | Pending
+2026-10-03 | Piotrowski Tadeusz | Makowski Kacper | 3-0 | 7 | 7 | +17
+2026-10-03 | Marchlewski Marcin | Dabrowski Igor | 3-2 | 7 | 7 | +5
 2026-10-03 | Sojka Stanislaw | Bernacki Lukasz | 3-0 | 7 | 7 | Pending
-2026-10-03 | Zwolinski Mariusz | Rolak Jaroslaw | 3-2 |  | 7 | 
+2026-10-03 | Zwolinski Mariusz | Rolak Jaroslaw | 3-2 | 7 | 7 | +7
+2026-10-03 | Linek Adam | Mleczko Bartlomiej | 3-2 | 7 | 7 | +6
+2026-10-03 | Myszewski Adrian | Misiak Mateusz | 3-1 | 7 | 7 | +9
+2026-10-03 | Swider Dariusz | Gumulinski Piotr | 3-0 | 7 | 7 | Pending
+2026-10-03 | Maruszak Piotr | Lukaszewski Mikolaj | 3-0 | 7 | 7 | +12
+2026-10-03 | Jesiek Jakub | Wojtaszczyk Wojciech | 3-2 | 7 | 7 | Pending
+2026-10-03 | Polok Pawel | Sokolowski Oskar | 3-2 | 7 | 7 | Pending
+2026-10-03 | Sinicki Maciej | Skorski Michal | 3-2 | 7 | 2 | +9
+2026-10-03 | Krukar Piotr | Suchecki Waclaw | 3-0 | 7 | 6 | +13
+2026-10-03 | Suchecki Waclaw | Eliasz Adrian | 3-1 | 7 | 2 | Pending
+2026-10-03 | Morawiec Daniel | Idaczyk Rafal | 3-2 | 7 | 7 | Pending
+2026-10-03 | Dabrowski Igor | Linek Adam | 3-1 | 8 | 8 | +14
+2026-10-03 | Zwolinski Mariusz | Suchecki Waclaw | 3-2 | 8 | 8 | Pending
+2026-10-03 | Rolak Jaroslaw | Krukar Piotr | 3-1 | 8 | 8 | Pending
+2026-10-03 | Jesiek Jakub | Bernacki Lukasz | 3-0 | 8 | 8 | Pending
+2026-10-03 | Marchlewski Marcin | Myszewski Adrian | 3-0 | 8 | 8 | Pending
+2026-10-03 | Piotrowski Tadeusz | Skorski Michal | 3-0 | 8 | 3 | +13
+2026-10-03 | Gumulinski Piotr | Wojcik Rafal | 3-2 | 8 | 8 | Pending
+2026-10-03 | Mleczko Bartlomiej | Misiak Mateusz | 3-2 | 8 | 8 | Pending
+2026-10-03 | Sinicki Maciej | Maruszak Piotr | 3-2 | 8 | 8 | +10
+2026-10-03 | Lukaszewski Mikolaj | Makowski Kacper | 3-0 | 8 | 8 | +21
+2026-10-03 | Wojtaszczyk Wojciech | Sokolowski Oskar | 3-0 | 8 | 8 | Pending
+2026-10-03 | Polok Pawel | Sojka Stanislaw | 3-1 | 8 | 8 | Pending
+2026-10-03 | Sojka Stanislaw | Wojtaszczyk Wojciech | 3-1 | 9 | 9 | Pending
+2026-10-03 | Linek Adam | Misiak Mateusz | 3-0 | 9 | 9 | Pending
+2026-10-03 | Mleczko Bartlomiej | Marchlewski Marcin | 3-1 | 9 | 9 | Pending
+2026-10-03 | Dabrowski Igor | Myszewski Adrian | 3-1 | 9 | 9 | Pending
+2026-10-03 | Piotrowski Tadeusz | Lukaszewski Mikolaj | 3-0 | 9 | 9 | +11
+2026-10-03 | Maruszak Piotr | Skorski Michal | 3-2 | 9 | 4 | +7
+2026-10-03 | Makowski Kacper | Sinicki Maciej | 3-1 | 9 | 9 | +11
+2026-10-03 | Zwolinski Mariusz | Durda Michal | 3-2 | 9 | 3 | Pending
+2026-10-03 | Polok Pawel | Bernacki Lukasz | 3-1 | 9 | 9 | Pending
+2026-10-03 | Suchecki Waclaw | Rolak Jaroslaw | 3-1 | 9 | 10 | Pending
+2026-10-03 | Jesiek Jakub | Sokolowski Oskar | 3-1 | 9 | 9 | Pending
+2026-10-03 | Myszewski Adrian | Linek Adam | 3-1 | 10 | 10 | Pending
+2026-10-03 | Mleczko Bartlomiej | Dabrowski Igor | 3-0 | 10 | 10 | Pending
+2026-10-03 | Piotrowski Tadeusz | Sinicki Maciej | 3-0 | 10 | 10 | +12
+2026-10-03 | Wojtaszczyk Wojciech | Bernacki Lukasz | 3-1 | 10 | 10 | Pending
+2026-10-03 | Polok Pawel | Jesiek Jakub | 3-1 |  | 10 | 
