@@ -466,3 +466,62 @@ function sessionStat(s) {
   if (run >= 3) sub += ", lost " + run + " in a row";
   return { n, w, main: fmtRec(w, n), sub };
 }
+
+// One label for a sportsbook, so BetMGM and MGM are the same line.
+function bookKey(name) {
+  const n = String(name || "DraftKings").trim().toLowerCase().replace(/\s+/g, "");
+  if (n === "draftkings") return "DraftKings";
+  if (n === "fanduel") return "FanDuel";
+  if (n === "bet365" || n === "bets365") return "bet365";
+  if (n === "mgm" || n === "betmgm") return "MGM";
+  if (n === "fanatics") return "Fanatics";
+  const raw = String(name || "DraftKings").trim();
+  return raw || "DraftKings";
+}
+
+// Updating one book replaces only that book's current price.
+// Every other book stays, and a changed price stays in the history behind the new one.
+function upsertBookPrice(list, row) {
+  const arr = Array.isArray(list) ? list.slice() : [];
+  const book = bookKey(row && row.book);
+  const next = Object.assign({}, row, { book });
+  let seen = false;
+  const out = [];
+  for (let i = 0; i < arr.length; i++) {
+    const v = arr[i];
+    if (bookKey(v.book) !== book) { out.push(v); continue; }
+    const last = arr.slice(i + 1).every(x => bookKey(x.book) !== book);
+    if (!last) { out.push(v); continue; }
+    seen = true;
+    if (v.o1 === next.o1 && v.o2 === next.o2) out.push(Object.assign({}, v, next, { at: v.at || next.at }));
+    else { out.push(v); out.push(next); }
+  }
+  if (!seen) out.push(next);
+  return out;
+}
+
+// The price on screen for each book. A later line for the same book wins.
+function latestByBook(list) {
+  const map = new Map();
+  for (const v of list || []) {
+    const book = bookKey(v.book);
+    const prev = map.get(book);
+    if (!prev || (v.at || 0) >= (prev.at || 0)) map.set(book, Object.assign({}, v, { book }));
+  }
+  return map;
+}
+
+// Cap how many old prices one book can keep, without dropping a different book.
+function trimBookList(list, perBook) {
+  const keep = perBook || 4;
+  const groups = new Map();
+  for (const v of list || []) {
+    const book = bookKey(v.book);
+    const g = groups.get(book) || [];
+    const prev = g[g.length - 1];
+    if (prev && prev.o1 === v.o1 && prev.o2 === v.o2) continue;
+    g.push(Object.assign({}, v, { book }));
+    groups.set(book, g.slice(-keep));
+  }
+  return [...groups.values()].flat();
+}

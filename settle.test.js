@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -334,4 +334,32 @@ test("form shift shrinks a small sample toward zero", () => {
   assert.ok(big > small);
   assert.ok(small > 0);
   assert.equal(shrunkShift(0, 0, 0, 80), 0);
+});
+
+test("saving one sportsbook leaves the other books in place", () => {
+  let list = [];
+  list = upsertBookPrice(list, { book: "DraftKings", o1: -136, o2: 102, at: 1 });
+  list = upsertBookPrice(list, { book: "FanDuel", o1: -150, o2: 120, at: 2 });
+  list = upsertBookPrice(list, { book: "BetMGM", o1: -145, o2: 115, at: 3 });
+  const latest = latestByBook(list);
+  assert.equal(latest.get("DraftKings").o1, -136);
+  assert.equal(latest.get("FanDuel").o2, 120);
+  assert.equal(latest.get("MGM").o1, -145);
+  list = upsertBookPrice(list, { book: "FanDuel", o1: -155, o2: 125, at: 4 });
+  const again = latestByBook(list);
+  assert.equal(again.get("DraftKings").o1, -136);
+  assert.equal(again.get("DraftKings").o2, 102);
+  assert.equal(again.get("FanDuel").o1, -155);
+  assert.equal(again.get("MGM").o1, -145);
+  const oldFan = list.filter(v => bookKey(v.book) === "FanDuel");
+  assert.equal(oldFan.length, 2);
+  assert.equal(oldFan[0].o1, -150);
+  const flooded = [];
+  let hist = list.slice();
+  for (let i = 0; i < 30; i++) hist = upsertBookPrice(hist, { book: "DraftKings", o1: -130 - i, o2: 100 + i, at: 10 + i });
+  const kept = trimBookList(hist, 4);
+  assert.equal(latestByBook(kept).get("FanDuel").o1, -155);
+  assert.equal(latestByBook(kept).get("MGM").o2, 115);
+  assert.equal(latestByBook(kept).get("DraftKings").o2, 129);
+  assert.ok(kept.filter(v => bookKey(v.book) === "DraftKings").length <= 4);
 });
