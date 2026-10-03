@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -190,6 +190,49 @@ test("the plus side of +102 / −136 counts, including older tickets that only s
   assert.equal(s.staked, 150);
   assert.equal(s.profit, -49);
   assert.ok(Math.abs(s.roi - (-49 / 150)) < 1e-9);
+});
+
+test("last-15 form colors the better number and leaves a thin sample plain", () => {
+  const sets = setsFromScore("3-1");
+  assert.equal(sets.won, 3);
+  assert.equal(sets.lost, 1);
+  assert.equal(setsFromScore("1-3"), null);
+  assert.equal(setsFromScore(""), null);
+  const hot = [];
+  for (let i = 0; i < 5; i++) hot.push({ won: true, score: "3-0" });
+  for (let i = 0; i < 5; i++) hot.push({ won: true, score: "3-1" });
+  for (let i = 0; i < 5; i++) hot.push({ won: i < 2, score: i < 2 ? "3-2" : "3-0" });
+  const cold = [];
+  for (let i = 0; i < 5; i++) cold.push({ won: false, score: "3-1" });
+  for (let i = 0; i < 4; i++) cold.push({ won: false, score: "3-2" });
+  for (let i = 0; i < 6; i++) cold.push({ won: true, score: "3-2" });
+  const rows = recentStatRows(recentShape(hot), recentShape(cold));
+  const by = Object.fromEntries(rows.map(r => [r.key, r]));
+  assert.equal(by.wins.side, "A");
+  assert.equal(by.wins.A, "12–3");
+  assert.equal(by.wins.B, "6–9");
+  assert.equal(by.margin.side, "A");
+  assert.equal(by.clean.side, "A");
+  assert.equal(by.hot.A, "5–0");
+  assert.equal(by.hot.side, "A");
+  assert.equal(recentLead(rows).a, 4);
+  const sameWins = recentStatRows(
+    recentShape([{ won: true, score: "3-0" }, { won: true, score: "3-0" }, { won: true, score: "3-0" }, { won: false, score: "3-0" }, { won: false, score: "3-1" }]),
+    recentShape([{ won: true, score: "3-2" }, { won: true, score: "3-2" }, { won: true, score: "3-2" }, { won: false, score: "3-2" }, { won: false, score: "3-0" }])
+  );
+  const tied = Object.fromEntries(sameWins.map(r => [r.key, r]));
+  assert.equal(tied.wins.side, "");
+  assert.equal(tied.margin.side, "A");
+  assert.equal(tied.margin.B.startsWith("−") || tied.margin.B.startsWith("-"), true);
+  const thin = recentStatRows(recentShape([{ won: true, score: "3-0" }, { won: true, score: "3-0" }]), recentShape(cold));
+  assert.equal(thin.every(r => r.side === ""), true);
+  const dec = recentStatRows(
+    recentShape([{ won: true, score: "3-2" }, { won: true, score: "3-2" }, { won: true, score: "3-2" }, { won: false, score: "3-2" }].concat(hot.slice(0, 11))),
+    recentShape([{ won: false, score: "3-2" }, { won: false, score: "3-2" }, { won: false, score: "3-2" }, { won: true, score: "3-2" }].concat(cold.slice(0, 11)))
+  );
+  assert.equal(dec.find(r => r.key === "decider").side, "A");
+  assert.equal(formEdgeSide(0.5, 0.5, 10, 10, 5), "");
+  assert.equal(formEdgeSide(0.8, 0.4, 4, 15, 5), "");
 });
 
 test("form shift shrinks a small sample toward zero", () => {
