@@ -240,6 +240,12 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .tabsub:empty,.tabsub[hidden]{display:none}
 .mi0{display:block;font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.45rem;font-weight:700;line-height:1.1}
+.picknames{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.45rem;font-weight:700;line-height:1.1;margin:0 0 8px}
+.picknames[hidden]{display:none}
+.pickline{margin:10px 0 0;font-weight:600}
+.edgeline{margin:8px 0 0;font-weight:600}
+.edgeline[hidden]{display:none}
+body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly,body[data-view="match"] #bookPanel{display:none}
 .mi0 .vs{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--muted)}
 body[data-view="match"] h1,body[data-view="match"] #assistLead{display:none}
 body[data-view="match"] .foot{display:none}
@@ -289,6 +295,7 @@ body[data-view="match"] .foot{display:none}
 </section>
 <div id="paneDetails">
 <div id="odds" class="panel wc" hidden>
+ <p class="picknames" id="pickNames" hidden></p>
  <h2>Win chance</h2>
  <div class="wcrow">
   <div class="wcp"><span class="wcn"><i class="dot a"></i><span id="nA"></span></span><b id="pA"></b></div>
@@ -298,6 +305,7 @@ body[data-view="match"] .foot{display:none}
  <div class="eloOnly" id="eloOnly"></div>
 </div>
 <div id="verdict"></div>
+<p class="edgeline" id="edgeLine" hidden></p>
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
@@ -922,12 +930,13 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderStandings(a,b);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
- renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ renderOdds(a,b,pa,est);$("bookPanel").hidden=VIEW==="match";if(VIEW!=="match")renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
+ const pn=$("pickNames");if(pn){pn.hidden=VIEW!=="match";pn.textContent=VIEW==="match"?`${a.name} vs ${b.name}`:""}
  $("pA").classList.toggle("lead",pa>=.5);$("pB").classList.toggle("lead",pa<.5);
  $("barImg").setAttribute("aria-label",`${a.name} ${Math.round(pa*100)}%, ${b.name} ${Math.round((1-pa)*100)}%`);
  $("eloOnly").innerHTML=[
@@ -969,7 +978,7 @@ function update(){
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favB).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
    else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favB)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
- v.innerHTML=`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
+ v.innerHTML=VIEW==="match"?`<p class="pickline">${body}</p>`:`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
  const hx=est.h2h,h2hEdgeTxt=hx&&H2H_ON?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
@@ -1121,7 +1130,8 @@ function renderOdds(a,b,pa,est){EST=est||null;
   set("A",so?so.o1:null);set("B",so?so.o2:null);
  }
  const inp=k=>`<div class="oin"><span class="olbl">${esc(sur((k==="A"?a:b).name))}</span><div class="orow"><button type="button" class="sign" data-s="${k}" aria-label="Switch plus or minus">${odds[k].neg?"−":"+"}</button><input class="oval" data-o="${k}" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 150" value="${esc(odds[k].v)}" aria-label="Odds for ${esc((k==="A"?a:b).name)}"></div></div>`;
- box.innerHTML=`<div class="panel"><h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p><div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
+ const head=VIEW==="match"?"<h2>Prices</h2>":`<h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p>`;
+ box.innerHTML=`<div class="panel">${head}<div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
  box.querySelectorAll(".oval").forEach(i=>i.addEventListener("input",()=>{odds[i.dataset.o].v=i.value.replace(/[^0-9.]/g,"");oddsCalc(a,b,pa)}));
  box.querySelectorAll(".sign").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.s;odds[k].neg=!odds[k].neg;btn.textContent=odds[k].neg?"−":"+";oddsCalc(a,b,pa)}));
  oddsCalc(a,b,pa);
@@ -1133,11 +1143,34 @@ function snapLine(a,b){
  const edge=(so.edge1!=null||so.edge2!=null)?`, edge ${so.edge1!=null?money(so.edge1):"–"} / ${so.edge2!=null?money(so.edge2):"–"} per $100`:"";
  return `<p class="help" style="margin:4px 0 0">Decision snapshot ${ago(so.at)}: book ${so.o1!=null?fmtO(so.o1):"–"} / ${so.o2!=null?fmtO(so.o2):"–"}${app}${edge}.</p>`;
 }
+function showEdgeLine(a,b,pa){
+ const el=$("edgeLine");if(!el)return;
+ const oa=a&&b?readOdds("A"):null,ob=a&&b?readOdds("B"):null;
+ if(VIEW!=="match"||!a||!b||!bothPrices(oa,ob)){el.hidden=true;el.textContent="";return}
+ const snap=decisionSnapshot(oa,ob,pa,1-pa);
+ el.hidden=false;
+ el.textContent=`App ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
+}
+function betFormHtml(a,b,oa,ob,model){
+ const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
+ if(!betSides.length)return "";
+ const bestK=betSides.map(([k,p,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
+ return `<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button><button class="btn" id="bfAdd" type="button">Add to parlay</button></div><div class="msg" id="bfMsg" role="status"></div><div id="slipBox"></div></div>`;
+}
+function wireBetForm(a,b,model){
+ if($("bfSave"))$("bfSave").onclick=()=>logBet(a,b,model);
+ if($("bfAdd"))$("bfAdd").onclick=()=>addLeg(a,b,model);
+ renderSlip();
+}
 function oddsCalc(a,b,pa){
  const out=$("oddsOut");if(!out)return;
  const oa=readOdds("A"),ob=readOdds("B");
  rememberOdds(a,b);
  const model={A:pa,B:1-pa};
+ showEdgeLine(a,b,pa);
+ if(VIEW==="match"){
+  out.innerHTML=bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):`<p class="help" style="margin:8px 0 0">Enter both prices and the edge shows above.</p>`;
+  wireBetForm(a,b,model);renderCompare(a,b);return}
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
@@ -1417,7 +1450,7 @@ function applyChrome(){
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
- $("court").hidden=match&&MTAB!=="details";
+ $("court").hidden=match;
  $("paneDetails").hidden=match&&MTAB!=="details";
  $("paneH2h").hidden=match&&MTAB!=="h2h";
  $("paneStandings").hidden=!(match&&MTAB==="standings");
