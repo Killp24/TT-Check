@@ -314,3 +314,70 @@ function bestBlendWeight(rows) {
   const ready = scored >= 15 && wf < app - 1e-6;
   return { w: ready ? fitted.w : 0, n: rows.length, scored, appLoss: app, bookLoss: book, blendLoss: wf, ready };
 }
+
+// Winner-first match score, such as "3-1". Anything else is left out of the set stats.
+function setsFromScore(score) {
+  const m = /^(\d+)\s*-\s*(\d+)$/.exec(String(score || "").trim());
+  if (!m) return null;
+  const won = +m[1], lost = +m[2];
+  if (won < lost || won < 1) return null;
+  return { won, lost };
+}
+
+// Newest matches first. Each row is { won, score }.
+// Clean wins are 3–0 and 3–1. A decider is a match the loser took to the last game.
+function recentShape(rows) {
+  const list = Array.isArray(rows) ? rows : [];
+  let setsFor = 0, setsAgainst = 0, clean = 0, decW = 0, decN = 0, scored = 0;
+  for (const row of list) {
+    const s = setsFromScore(row && row.score);
+    if (!s) continue;
+    scored++;
+    const mine = row.won ? s.won : s.lost;
+    const theirs = row.won ? s.lost : s.won;
+    setsFor += mine;
+    setsAgainst += theirs;
+    if (s.lost === s.won - 1) {
+      decN++;
+      if (row.won) decW++;
+    } else if (row.won) clean++;
+  }
+  const w = list.reduce((n, row) => n + (row && row.won ? 1 : 0), 0);
+  const last = list.slice(0, 5);
+  const hotW = last.reduce((n, row) => n + (row && row.won ? 1 : 0), 0);
+  return { n: list.length, w, scored, setsFor, setsAgainst, setDiff: setsFor - setsAgainst, clean, decW, decN, hotN: last.length, hotW };
+}
+
+// Higher value wins. A thin sample on either side stays uncolored.
+function formEdgeSide(av, bv, aN, bN, minN) {
+  if (!(aN >= minN) || !(bN >= minN)) return "";
+  if (av === bv) return "";
+  return av > bv ? "A" : "B";
+}
+
+function fmtRec(w, n) { return n ? w + "–" + (n - w) : "none"; }
+function fmtMargin(d) { return d > 0 ? "+" + d : d < 0 ? "−" + (-d) : "0"; }
+const rate = (w, n) => n ? w / n : 0;
+
+// Five reads of the same window. side is "A", "B", or "" when they tie or the sample is thin.
+function recentStatRows(a, b) {
+  a = a || recentShape([]);
+  b = b || recentShape([]);
+  const per = s => s.scored ? s.setDiff / s.scored : 0;
+  return [
+    { key: "wins", label: "Wins", side: formEdgeSide(rate(a.w, a.n), rate(b.w, b.n), a.n, b.n, 5), A: fmtRec(a.w, a.n), B: fmtRec(b.w, b.n) },
+    { key: "margin", label: "Set margin", side: formEdgeSide(per(a), per(b), a.scored, b.scored, 5), A: a.scored ? fmtMargin(a.setDiff) : "none", B: b.scored ? fmtMargin(b.setDiff) : "none" },
+    { key: "clean", label: "Clean wins", side: formEdgeSide(rate(a.clean, a.scored), rate(b.clean, b.scored), a.scored, b.scored, 5), A: a.scored ? a.clean + " of " + a.scored : "none", B: b.scored ? b.clean + " of " + b.scored : "none" },
+    { key: "decider", label: "Deciders", side: formEdgeSide(rate(a.decW, a.decN), rate(b.decW, b.decN), a.decN, b.decN, 3), A: fmtRec(a.decW, a.decN), B: fmtRec(b.decW, b.decN) },
+    { key: "hot", label: "Last 5", side: formEdgeSide(rate(a.hotW, a.hotN), rate(b.hotW, b.hotN), a.hotN, b.hotN, 5), A: fmtRec(a.hotW, a.hotN), B: fmtRec(b.hotW, b.hotN) }
+  ];
+}
+
+function recentLead(rows) {
+  let a = 0, b = 0;
+  for (const r of rows || []) {
+    if (r.side === "A") a++;
+    else if (r.side === "B") b++;
+  }
+  return { a, b };
+}

@@ -231,6 +231,16 @@ html.lock,html.lock body{overflow:hidden}
 .totop:focus-visible{outline:3px solid var(--ball)}
 .sleg li.void{color:var(--muted)}
 .sleg .bb{flex:none}
+.cmpgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.cmpname{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.25rem;font-weight:700;line-height:1.1;word-break:break-word}
+.cmpstats{list-style:none;margin:8px 0 0;padding:0}
+.cmpstats li{padding:7px 0;border-top:1px solid var(--border)}
+.cmpstats .lab{display:block;color:var(--muted);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.cmpstats .num{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.35rem;font-weight:700;line-height:1.1}
+.cmpstats .num.pos{color:var(--ok)}
+.cmpstats .num.neg{color:var(--ban)}
+.cmpstats .num.even{color:var(--muted);font-weight:600}
+.cmpread{margin:12px 0 0;font-weight:600}
 </style></head><body><main>
 <button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
 <h1>TT matchup check</h1>
@@ -260,6 +270,7 @@ html.lock,html.lock body{overflow:hidden}
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
 <div id="h2h"></div>
+<div id="cmp"></div>
 <div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><button class="btn" id="favsClose" type="button">Back</button><h2 id="favTitle">Favourites</h2><span></span></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
@@ -861,7 +872,7 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
  renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
@@ -913,7 +924,34 @@ function update(){
  const hx=est.h2h,h2hEdgeTxt=hx&&H2H_ON?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
+ renderCompare(a,b);
  renderTrust();
+}
+function recentRows(name){
+ return matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,15).map(m=>({won:m.w===name,score:m.score}));
+}
+function renderCompare(a,b){
+ const box=$("cmp");
+ if(!box)return;
+ if(!a||!b||a===b){box.innerHTML="";return}
+ const rows=recentStatRows(recentShape(recentRows(a.name)),recentShape(recentRows(b.name)));
+ const lead=recentLead(rows);
+ const col=(p,k)=>`<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">${rows.map(r=>{
+  const cls=r.side===""?"even":r.side===k?"pos":"neg";
+  const word=r.side===""?"Tied":r.side===k?"Ahead":"Behind";
+  return `<li><span class="lab">${esc(r.label)}</span><span class="num ${cls}" title="${word}">${esc(r[k])}</span></li>`;
+ }).join("")}</ul></div>`;
+ const na=recentRows(a.name).length,nb=recentRows(b.name).length;
+ const ahead=lead.a===lead.b?null:lead.a>lead.b?a:b, behind=ahead===a?b:a;
+ const n=Math.max(lead.a,lead.b), other=Math.min(lead.a,lead.b);
+ let read;
+ if(na<5||nb<5) read="One side has fewer than 5 results on file, so the colors stay off.";
+ else if(!ahead) read=lead.a?`Recent form splits ${lead.a}–${lead.b}. Elo and the price still separate them.`:"These two are level on the recent stats that have enough matches. Elo and the price still separate them.";
+ else{
+  const withElo=ahead.elo>=behind.elo;
+  read=`${sur(ahead.name)} leads ${n} of ${rows.length} recent stats${other?`, ${sur(behind.name)} leads ${other}`:""}. ${withElo?"The rating points the same way.":sur(ahead.name)+" has the lower Elo, so recent form and the rating point different ways."}`;
+ }
+ box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green leads that stat. Red is the lower number for the other player. A tie stays plain. Clean wins are 3–0 or 3–1. Deciders are 3–2. This can disagree with Elo. The win chance above stays as it is.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
 }
 function renderTrust(){
  const el=$("trustInfo");if(!el)return;
