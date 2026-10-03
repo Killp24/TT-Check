@@ -87,7 +87,11 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .btn:focus-visible{outline:3px solid var(--ball)}
 .msg{margin-top:10px;font-size:.92rem}.msg.err{color:var(--ban)}.msg.ok{color:var(--ok)}
 .help{color:var(--muted);font-size:.88rem;margin:0 0 10px}
-.src{color:var(--muted);font-size:.88rem;margin:-8px 0 14px}
+.src{color:var(--muted);font-size:.88rem;margin:-8px 0 8px}
+.srcact{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.srcact .btn{flex:none}
+.srcact .msg{margin:0}
+.srcact .msg:empty{display:none}
 .tag{border:0;font-family:inherit;cursor:pointer}
 .banlist .gone{color:var(--ban)}
 .form{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
@@ -232,6 +236,7 @@ html.lock,html.lock body{overflow:hidden}
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players.</p>
 <p class="src" id="srcInfo">Loading data…</p>
+<p class="srcact"><button class="btn" id="refreshBtn" type="button">Refresh</button><span class="msg" id="refreshMsg" role="status"></span></p>
 <nav class="flow" aria-label="Today, signals, assist"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">1 Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">2 Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="step">3 Assist</button></nav>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><div class="tb"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
@@ -409,10 +414,26 @@ async function syncPending(){
 let busy=false;
 async function refresh(showMsg){
  if(busy)return;busy=true;
- try{if(navigator.onLine){await syncPending();await fetchAll();await loadOfficial()}
-  if(showMsg)setMsg("setupMsg","ok","Synced.")}
- catch(e){if(showMsg||!data)setMsg("setupMsg","err",e.message);else console.warn(e)}
- finally{busy=false;apply()}
+ const btn=$("refreshBtn");
+ if(btn){btn.disabled=true;btn.textContent="Refreshing…"}
+ const stamp=()=>[offAt||"",official.length,SCHED.length].join("|");
+ const before=stamp();
+ let note="",cls="ok";
+ try{
+  if(!navigator.onLine){note="You're offline. Showing the last saved results.";cls="err"}
+  else{
+   await syncPending();await fetchAll();await loadOfficial();
+   note=stamp()===before?"Checked. These are the latest results.":"Updated with the latest results.";
+  }
+  if(showMsg)setMsg("setupMsg",cls==="err"?"err":"ok",note);
+ }catch(e){
+  note=e.message;cls="err";
+  if(showMsg||!data)setMsg("setupMsg","err",e.message);else console.warn(e);
+ }finally{
+  busy=false;apply();
+  if(btn){btn.disabled=false;btn.textContent="Refresh"}
+  const m=$("refreshMsg");if(m&&note){m.className="msg "+cls;m.textContent=note}
+ }
 }
 function setMsg(id,cls,t){const m=$(id);m.className="msg "+cls;m.textContent=t}
 
@@ -1801,6 +1822,6 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
-document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh(false)});
+$("refreshBtn").onclick=()=>refresh(false);
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script></body></html>
