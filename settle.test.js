@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -482,6 +482,30 @@ test("the results list is stale once it is past 40 minutes", () => {
   assert.equal(old.stale, true);
   assert.equal(resultsAge("", now), null);
   assert.equal(resultsAge("nope", now), null);
+});
+
+test("today's bets are the ones logged on this phone's day, and a backup round-trips", () => {
+  const now = Date.parse("2026-10-03T21:00:00Z");
+  const day = localDayKey(now);
+  const yesterday = localDayKey(now - 24 * 3600000);
+  assert.notEqual(day, yesterday);
+  assert.equal(localDayKey("nope"), "");
+  const bets = [
+    { id: "a", made: now, pick: "A" },
+    { id: "b", made: now - 24 * 3600000, pick: "B" },
+    { id: "c", pick: "C" }
+  ];
+  assert.deepEqual(betsOnDay(bets, day).map(b => b.id), ["a"]);
+  assert.deepEqual(betsOnDay(bets, yesterday).map(b => b.id), ["b"]);
+  assert.equal(betsOnDay(bets, "").length, 0);
+  const text = betBackupText(bets, now);
+  const back = parseBetBackup(text);
+  assert.equal(back.length, 3);
+  assert.equal(back[0].id, "a");
+  assert.equal(parseBetBackup(JSON.stringify(bets)).length, 3);
+  assert.equal(parseBetBackup("nope"), null);
+  assert.equal(parseBetBackup(""), null);
+  assert.equal(parseBetBackup(JSON.stringify([{ nope: 1 }])).length, 0);
 });
 
 test("a manual flag lasts for the time you pick, or until you clear it", () => {

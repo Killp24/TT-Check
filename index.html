@@ -257,6 +257,11 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .listback{display:flex;align-items:center;width:calc(100% + 32px);margin:0 -16px 8px;padding:12px 16px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:var(--card);color:var(--ink);font:inherit;font-weight:700;text-align:left;cursor:pointer}
 .listback[hidden]{display:none}
 .listback:focus-visible{outline:3px solid var(--ball);outline-offset:-3px}
+.btabs{display:flex;gap:6px;margin:0 0 8px}
+.btabs .btn{flex:1;text-align:center}
+.btabs .btn.on{background:var(--table);border-color:var(--table);color:#fff}
+.btns label.btn{display:inline-flex;align-items:center}
+.btns label.btn input{display:none}
 .mtabs{display:flex;gap:6px;margin:0}
 .mtabs[hidden]{display:none}
 .mtabs .btn,.dock .btn{flex:1;text-align:center}
@@ -377,8 +382,8 @@ body[data-view="match"] #paneDetails > #oddsBox{order:8}
 <div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><button class="btn" id="favsClose" type="button">Back</button><h2 id="favTitle">Favourites</h2><span></span></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
-<div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
-<details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
+<div class="tools"><div class="btabs" id="betPages" role="tablist" aria-label="Bet pages"><button class="btn on" type="button" role="tab" id="betToday" data-betpage="today" aria-selected="true">Today</button><button class="btn" type="button" role="tab" id="betCareer" data-betpage="career" aria-selected="false">Career</button></div><p class="help" id="betPageHelp">Today is this phone's day, through midnight. Career keeps every bet.</p><div id="betSum"></div><h3 class="rch" id="betListHead">Today</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
+<details id="betBackupDet"><summary id="betBackupSum">Backup and restore</summary><div class="pad"><p class="help" id="betStoreNote">Every bet is stored on this phone. Download a backup, or copy it into Notes, so you can restore it if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button><button class="btn" id="betDownload" type="button">Download backup</button><label class="btn">Restore from file<input id="betFile" type="file" accept="application/json,.json,.txt"></label></div><textarea id="betRestoreTxt" placeholder="Or paste a backup here"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore pasted backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
 <div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
 <div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div><button class="totop" id="sigTop" type="button" hidden>Top</button></div>
 <div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><span class="hdacts"><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
@@ -1822,12 +1827,13 @@ function renderMatchInfo(){
  box.innerHTML=names+`<span class="mi1">${day} ${r.at.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})} · <b>${status}</b></span><span class="mi2">${esc(r.tour)}${more?` · they meet ${more} more time${more>1?"s":""} in the next 30 h`:""}</span>`;
  box.hidden=false;
 }
-setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
+setInterval(()=>{if(document.hidden)return;renderMatchInfo();const day=localDayKey(Date.now());if(day!==betDay){betDay=day;if(!$("bets").hidden)renderBets()}},30000);
 
 
 // ---------- bet tracker (private, stored on this phone) ----------
-let BETS=load("tt-bets")||[];
-const saveBets=()=>save("tt-bets",BETS);
+let BETS=load("tt-bets");
+if(!Array.isArray(BETS)){const bak=load("tt-bets-bak");BETS=bak&&Array.isArray(bak.bets)?bak.bets:[];if(BETS.length)save("tt-bets",BETS)}
+const saveBets=()=>{save("tt-bets",BETS);save("tt-bets-bak",{at:Date.now(),bets:BETS})};
 let FLAGS=load("tt-flags")||{};
 {
  const next=prunePlayerFlags(FLAGS);
@@ -2122,15 +2128,41 @@ function flagRoiHtml(){
  const savedTxt=saved.n?`Every saved match at ${pair}: the ${fmtO(plus)} side is ${roiLine(saved)}, staking $100 on each.`:`No saved match is priced ${pair} yet. Paste the odds and this fills in from the results.`;
  return `<div class="vv flagv"><strong>Betting ${fmtO(plus)}</strong>${mineTxt} ${savedTxt}</div>`;
 }
-let betShown=5;
+let BETPAGE="today",betShown=5,betDay=localDayKey(Date.now());
+function mergeBets(arr){
+ const ids=new Set(BETS.map(b=>b.id));
+ let n=0;
+ for(const b of arr)if(b&&b.id&&!ids.has(b.id)){BETS.push(b);ids.add(b.id);n++}
+ saveBets();renderBets();
+ setMsg("betMsg","ok",n?`Restored ${n} bet${n===1?"":"s"}. They stay on this phone.`:"No new bets in that backup. The ones already here were left as they are.");
+}
 function renderBets(){
+ const day=localDayKey(Date.now());
+ betDay=day;
+ const today=betsOnDay(BETS,day),career=BETPAGE==="career",shown=career?BETS:today;
+ const todayBtn=$("betToday"),careerBtn=$("betCareer");
+ if(todayBtn){todayBtn.classList.toggle("on",!career);todayBtn.setAttribute("aria-selected",String(!career))}
+ if(careerBtn){careerBtn.classList.toggle("on",career);careerBtn.setAttribute("aria-selected",String(career))}
+ const help=$("betPageHelp");
+ if(help)help.textContent=career
+  ?`Career is every bet stored on this phone. ${BETS.length} in all. Results settle from the official list, and you can mark them yourself.`
+  :`Today is this phone's day, through midnight. ${today.length} logged today, ${BETS.length} kept on Career. At midnight this list starts fresh. Nothing is deleted.`;
+ const head=$("betListHead");if(head)head.textContent=career?"Career":"Today";
+ const bak=load("tt-bets-bak"),sum=$("betBackupSum"),note=$("betStoreNote");
+ if(sum)sum.textContent=`Backup and restore · ${BETS.length} stored`;
+ if(note)note.textContent=`Every bet is stored on this phone${bak&&bak.at?`, and a second copy was saved ${ago(bak.at)}`:""}. Download a backup, or copy it into Notes, so you can restore it if the app's data is cleared. Restoring adds bets that aren't already here.`;
  const all=BETS;
  const plus=pairPlusOdds(FLAGO.a,FLAGO.b);
  const plusBets=plus==null?[]:all.filter(b=>betOnFlaggedPlus(b,FLAGO.a,FLAGO.b));
  const groups=[["All bets",all],...(plusBets.length?[[`Flagged ${fmtO(plus)}`,plusBets]]:[]),["Single bets",all.filter(b=>!b.parlay)],["Parlays",all.filter(b=>b.parlay)],["Value (green)",all.filter(b=>b.cat==="value")],["Thin (orange)",all.filter(b=>b.cat==="thin")],["No value (red)",all.filter(b=>b.cat==="none")],
   ["Vs ban list favorite",all.filter(b=>b.oppBan&&!b.pickFav)],["On ban list player",all.filter(b=>b.pickBan)],["No ban list player",all.filter(b=>!b.pickBan&&!b.oppBan)]];
- $("betSum").innerHTML=flagRoiHtml()+(all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. ROI is profit divided by the stake on bets that have won or lost. "est. wins" is how many the app expected you to win. It takes 100+ bets before these numbers mean much. Flagged ${plus==null?"plus":fmtO(plus)} counts bets on that side of ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}. Older bets that only saved the plus number are included. A saved other price has to match.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use "Log a bet" under Odds and value.</p>`);
- const list=[...all].sort((x,y)=>(x.status==="pending")-(y.status==="pending")||y.made-x.made).sort((x,y)=>(y.status==="pending")-(x.status==="pending"));
+ if(career){
+  $("betSum").innerHTML=flagRoiHtml()+(all.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${groups.filter(g=>g[1].length).map(g=>sumRow(g[0],g[1])).join("")}</table></div><p class="help">"+N" = still pending. ROI is profit divided by the stake on bets that have won or lost. "est. wins" is how many the app expected you to win. It takes 100+ bets before these numbers mean much. Flagged ${plus==null?"plus":fmtO(plus)} counts bets on that side of ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}. Older bets that only saved the plus number are included. A saved other price has to match.</p>`:`<p class="help">No bets yet. Enter odds for a matchup, then use Log a bet under Quick odds.</p>`);
+ }else{
+  const pending=today.filter(b=>b.status==="pending").length;
+  $("betSum").innerHTML=today.length?`<div class="otab bsum"><table><tr><th></th><th>Settled</th><th>W–L</th><th>Profit</th></tr>${sumRow("Today",today)}</table></div><p class="help">${pending?pending+" still pending. ":""}At midnight this list starts fresh. These bets stay on Career.</p>`:`<p class="help">No bets logged today.${BETS.length?` Career still has ${BETS.length}.`:""} Log one from Quick odds or Book Odds.</p>`;
+ }
+ const list=[...shown].sort((x,y)=>(x.status==="pending")-(y.status==="pending")||y.made-x.made).sort((x,y)=>(y.status==="pending")-(x.status==="pending"));
  const visible=list.slice(0,betShown);
  $("betMoreBox").innerHTML=list.length>betShown?`<button class="btn" id="betMore" type="button">Show 10 more (${list.length-betShown} left)</button>`:(betShown>5&&list.length>5?`<button class="btn" id="betLess" type="button">Show fewer</button>`:"");
  if($("betMore"))$("betMore").onclick=()=>{betShown+=10;renderBets()};
@@ -2160,8 +2192,22 @@ $("betList").addEventListener("click",e=>{const t=e.target.closest(".mini");if(!
  if(t.dataset.act==="del"){if(!confirm(`Delete this bet on ${b.pick}?`))return;BETS=BETS.filter(x=>x!==b)}
  else if(!b.parlay){b.status=t.dataset.act;b.manual=true;if(b.status!=="won"&&b.status!=="lost")b.score=""}
  saveBets();renderBets()});
-$("betCopy").onclick=async()=>{const txt=JSON.stringify(BETS);try{await navigator.clipboard.writeText(txt);setMsg("betMsg","ok",`Copied ${BETS.length} bets. Paste them somewhere safe, like Notes.`)}catch(e){$("betRestoreTxt").value=txt;setMsg("betMsg","ok","Couldn't copy automatically, so the backup is in the box above. Select all and copy it.")}};
-$("betRestore").onclick=()=>{try{const arr=JSON.parse($("betRestoreTxt").value);if(!Array.isArray(arr))throw 0;const ids=new Set(BETS.map(b=>b.id));let n=0;for(const b of arr)if(b&&b.id&&!ids.has(b.id)){BETS.push(b);n++}saveBets();renderBets();setMsg("betMsg","ok",`Restored ${n} bet${n===1?"":"s"}.`);$("betRestoreTxt").value=""}catch(e){setMsg("betMsg","err","That doesn't look like a backup. Paste the whole text you copied.")}};
+$("betPages").addEventListener("click",e=>{const b=e.target.closest("[data-betpage]");if(!b)return;BETPAGE=b.dataset.betpage;betShown=5;renderBets()});
+$("betCopy").onclick=async()=>{const txt=betBackupText(BETS,Date.now());try{await navigator.clipboard.writeText(txt);setMsg("betMsg","ok",`Copied ${BETS.length} bets. Paste them somewhere safe, like Notes.`)}catch(e){$("betRestoreTxt").value=txt;$("betBackupDet").open=true;setMsg("betMsg","ok","Couldn't copy automatically, so the backup is in the box. Select all and copy it.")}};
+$("betDownload").onclick=()=>{
+ const txt=betBackupText(BETS,Date.now()),blob=new Blob([txt],{type:"application/json"}),a=document.createElement("a");
+ a.href=URL.createObjectURL(blob);a.download=`tt-bets-${localDayKey(Date.now())}.json`;
+ document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+ setMsg("betMsg","ok",`Downloaded ${BETS.length} bets. Keep that file. Restore from file puts them back.`);
+};
+$("betFile").onchange=()=>{
+ const f=$("betFile").files&&$("betFile").files[0];if(!f)return;
+ const reader=new FileReader();
+ reader.onload=()=>{const arr=parseBetBackup(String(reader.result||""));$("betFile").value="";if(!arr){setMsg("betMsg","err","That file isn't a bet backup.");return}mergeBets(arr)};
+ reader.readAsText(f);
+};
+$("betRestore").onclick=()=>{const arr=parseBetBackup($("betRestoreTxt").value);if(!arr){setMsg("betMsg","err","That doesn't look like a backup. Paste the whole text you copied.");return}$("betRestoreTxt").value="";mergeBets(arr)};
 $("betsClose").onclick=()=>{closeSheet("bets");focusTool("bets")};
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");focusTool("bets")}});
 

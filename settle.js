@@ -772,6 +772,33 @@ function flagLeft(until, nowMs) {
   return days + " days left";
 }
 
+// The phone's own calendar day, so Today starts over at local midnight.
+function localDayKey(ms) {
+  const d = new Date(ms);
+  if (!Number.isFinite(d.getTime())) return "";
+  const p = n => String(n).padStart(2, "0");
+  return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+}
+
+function betsOnDay(bets, dayKey) {
+  if (!dayKey) return [];
+  return (bets || []).filter(b => b && localDayKey(b.made) === dayKey);
+}
+
+function betBackupText(bets, savedAt) {
+  const at = savedAt == null ? Date.now() : savedAt;
+  return JSON.stringify({ v: 1, saved: new Date(at).toISOString(), bets: Array.isArray(bets) ? bets : [] });
+}
+
+function parseBetBackup(text) {
+  let data;
+  try { data = JSON.parse(text); }
+  catch (e) { return null; }
+  const arr = Array.isArray(data) ? data : (data && Array.isArray(data.bets) ? data.bets : null);
+  if (!arr) return null;
+  return arr.filter(b => b && typeof b === "object" && b.id);
+}
+
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
   const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);
