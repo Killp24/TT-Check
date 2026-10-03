@@ -121,7 +121,10 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .bkbest{margin-left:6px;font-size:.72rem;font-weight:700;color:var(--ok)}
 .bkhead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin:4px 0 0}
 .bkhead span{text-align:center;font-size:.75rem;font-weight:700;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#bookRead:empty,#bookGap:empty{display:none}
+#bookRead:empty,#bookGap:empty,#bookFade:empty{display:none}
+#bookFade{color:#92400e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) #bookFade{color:#fde68a}}
+:root[data-theme="dark"] #bookFade{color:#fde68a}
 .bksaved{grid-column:1 / -1;font-size:.75rem;color:var(--muted)}
 .bksaved.on{color:var(--ok);font-weight:700}
 .bksaved.flag{color:#6b21a8;font-weight:700}
@@ -191,10 +194,17 @@ html.lock,html.lock body{overflow:hidden}
 .stag.datap{color:#146c43;background:#e7f6ee;border-color:#2d7a4b}
 .stag.datan{color:#9a3412;background:#fff4e8;border-color:#c2410c}
 .stag.mine{color:#1e3a8a;background:#e8f0fe;border-color:#1d4ed8}
+.stag.fade{color:#92400e;background:#fef3c7;border-color:#d97706}
+.vv.fadev{border-left-color:#d97706;background:#fffbeb}
+.bksaved.fade{color:#92400e;font-weight:700}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}:root:not([data-theme="light"]) .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}:root:not([data-theme="light"]) .stag.mine{color:#dbeafe;background:#1e3a5f;border-color:#60a5fa}}
 :root[data-theme="dark"] .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}
 :root[data-theme="dark"] .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}
 :root[data-theme="dark"] .stag.mine{color:#dbeafe;background:#1e3a5f;border-color:#60a5fa}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.fade{color:#fde68a;background:#3a2e10;border-color:#fbbf24}:root:not([data-theme="light"]) .vv.fadev{background:#2a230f;color:var(--ink)}:root:not([data-theme="light"]) .bksaved.fade{color:#fde68a}}
+:root[data-theme="dark"] .stag.fade{color:#fde68a;background:#3a2e10;border-color:#fbbf24}
+:root[data-theme="dark"] .vv.fadev{background:#2a230f;color:var(--ink)}
+:root[data-theme="dark"] .bksaved.fade{color:#fde68a}
 .rch{font-size:1rem;margin:16px 0 6px}
 .rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 .minfo{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;margin:0 0 10px}
@@ -326,11 +336,12 @@ body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:c
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
 body[data-view="match"] #paneDetails > #edgeLine{order:3}
-body[data-view="match"] #paneDetails > #playerFlags{order:4}
-body[data-view="match"] #paneDetails > #recentForm{order:5}
-body[data-view="match"] #paneDetails > #cmp{order:6}
-body[data-view="match"] #paneDetails > #bookPanel{order:7}
-body[data-view="match"] #paneDetails > #oddsBox{order:8}
+body[data-view="match"] #paneDetails > #fadeLine{order:4}
+body[data-view="match"] #paneDetails > #playerFlags{order:5}
+body[data-view="match"] #paneDetails > #recentForm{order:6}
+body[data-view="match"] #paneDetails > #cmp{order:7}
+body[data-view="match"] #paneDetails > #bookPanel{order:8}
+body[data-view="match"] #paneDetails > #oddsBox{order:9}
 .flagpanel label{display:flex;flex-direction:column;gap:4px;margin-top:8px;font-size:.78rem;font-weight:700}
 .flagwhy,.flagfor{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--ink)}
 .flagrow{padding-top:10px;margin-top:10px;border-top:1px solid var(--border)}
@@ -371,6 +382,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:8}
 </div>
 <div id="verdict"></div>
 <p class="edgeline" id="edgeLine" hidden></p>
+<div id="fadeLine" hidden></div>
 <div id="playerFlags"></div>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
@@ -1288,7 +1300,7 @@ const readOdds=k=>{const n=parseFloat(odds[k].v);return n>=100?(odds[k].neg?-n:n
 let EST=null;
 function renderOdds(a,b,pa,est){EST=est||null;
  const box=$("oddsBox");
- if(!a||!b||a===b){box.innerHTML="";oddsPair="";return}
+ if(!a||!b||a===b){box.innerHTML="";oddsPair="";showFadeLine(null);return}
  const pair=a.name+"|"+b.name;
  const slot=slotOf(a,b),key=pair+"@"+slot;
  if(key!==oddsPair){oddsPair=key;
@@ -1322,6 +1334,23 @@ function edgeSummary(a,b,pa){
 }
 // Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
 function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
+function fadeOf(a,b,oa,ob){
+ if(!a||!b)return null;
+ return bookFadesRating({name:a.name,elo:a.elo,rank:a.rank},{name:b.name,elo:b.elo,rank:b.rank},oa,ob);
+}
+function fadeHtml(a,b,oa,ob){
+ const f=fadeOf(a,b,oa,ob);if(!f)return "";
+ const line=f.reason==="rank"
+  ?`${esc(sur(f.dog))} has the better rank (#${f.dogRank} vs #${f.favRank}) at the same Elo, and the book has him as the underdog.`
+  :`${esc(sur(f.dog))} has the higher Elo (${f.dogElo} vs ${f.favElo})${f.dogRank&&f.favRank?` and the better rank (#${f.dogRank} vs #${f.favRank})`:""}, and the book has him as the underdog.`;
+ return `<div class="vv fadev"><strong>Caution</strong>${line} This does not change the win chance.</div>`;
+}
+function showFadeLine(a,b,oa,ob){
+ const el=$("fadeLine");if(!el)return;
+ const html=a&&b?fadeHtml(a,b,oa,ob):"";
+ if(VIEW==="match"&&html){el.hidden=false;el.innerHTML=html;return}
+ el.hidden=true;el.innerHTML="";
+}
 function paintPrices(model){
  for(const k of ["A","B"]){
   const o=readOdds(k);
@@ -1365,10 +1394,13 @@ function oddsCalc(a,b,pa,opts){
    :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`:"";
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
+  const caution=fadeHtml(a,b,oa,ob);
+  showFadeLine(a,b,oa,ob);
   const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">DraftKings sets the edge and the logged bet. The other books stay on their own lines.</p>`:"");
-  out.innerHTML=lead+(rows?flag+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
+  out.innerHTML=lead+(rows?flag+caution+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
+ showFadeLine(a,b,oa,ob);
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
@@ -1382,7 +1414,7 @@ function oddsCalc(a,b,pa,opts){
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
  const flagged=isFlagPair(oa,ob);
- out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
+ out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
  out.insertAdjacentHTML("beforeend",`<div class="betform"><h3 class="rch">Log a bet</h3><div class="row"><select id="bfPick" aria-label="Your pick">${betSides.map(([k,p,o])=>`<option value="${k}"${k===bestK?" selected":""}>${esc(sur(p.name))} ${o>0?"+":""}${o}</option>`).join("")}</select><span class="dollar">$</span><input id="bfStake" class="bfstake" inputmode="decimal" aria-label="Stake in dollars" value="${esc(String(load("tt-stake")||""))}" placeholder="Stake"><button class="btn primary" id="bfSave" type="button">Log bet</button><button class="btn" id="bfAdd" type="button">Add to parlay</button></div><div class="msg" id="bfMsg" role="status"></div><div id="slipBox"></div></div>`);
  $("bfSave").onclick=()=>logBet(a,b,model);
@@ -1500,6 +1532,11 @@ function renderSched(opt){
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
    for(const p of [a,b]){const t=dataTag(p);if(t){flag=true;tags+=t}}
    if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
+   {const first=a.name<b.name,key=okey(a.name,b.name,r.date+" "+r.time);
+    let fade=null;
+    for(const v of latestByBook(OHIST[key]||[]).values()){fade=fadeOf(a,b,first?v.o1:v.o2,first?v.o2:v.o1);if(fade)break}
+    if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
+    if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
@@ -1922,6 +1959,10 @@ function paintBookRead(box,a,b){
  }
  const lead=[bestPriceSentence(best.a,sur(a.name)),bestPriceSentence(best.b,sur(b.name))].filter(Boolean).join(" ");
  read.textContent=lead;
+ const note=$("bookFade");
+ const faded=priced.filter(r=>fadeOf(a,b,r.oa,r.ob));
+ const one=faded[0]&&fadeOf(a,b,faded[0].oa,faded[0].ob);
+ if(note)note.textContent=one?`Caution: ${sur(one.dog)} is the higher rating and the underdog at ${faded.map(r=>r.name).join(", ")}. This does not change the win chance.`:"";
  gap.textContent=priced.length?bookGapText(priced,a):"";
 }
 function renderBooks(a,b){
@@ -1930,19 +1971,20 @@ function renderBooks(a,b){
  const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
  const latest=latestByBook((load("tt-odds")||{})[key]||OHIST[key]||[]);
  const pa=EST?EST.pa:null;
- let html=`<p class="cmpread" id="bookRead"></p><p class="cmpread" id="bookGap"></p><div class="bkhead"><span>${esc(sur(a.name))}</span><span>${esc(sur(b.name))}</span></div>`;
+ let html=`<p class="cmpread" id="bookRead"></p><p class="cmpread fade" id="bookFade"></p><p class="cmpread" id="bookGap"></p><div class="bkhead"><span>${esc(sur(a.name))}</span><span>${esc(sur(b.name))}</span></div>`;
  html+=BOOKS.map(name=>{
   const v=latest.get(name);
   const oa=v?(first?v.o1:v.o2):null;
   const ob=v?(first?v.o2:v.o1):null;
   const flagged=bothPrices(oa,ob)&&isFlagPair(oa,ob);
-  const stamp=v&&v.at?(flagged?"⚑ Flagged pair · ":"")+`Saved ${ago(v.at)}`:"Not saved yet";
+  const faded=!!fadeOf(a,b,oa,ob);
+  const stamp=v&&v.at?(flagged?"⚑ Flagged pair · ":"")+(faded?"Caution · ":"")+`Saved ${ago(v.at)}`:faded?"Caution · higher rating is the dog":"Not saved yet";
   const ca=bothPrices(oa,ob)?bookSideClass(oa,pa):"";
   const cb=bothPrices(oa,ob)?bookSideClass(ob,pa===null?null:1-pa):"";
   return `<div class="bkrow" data-book="${esc(name)}"><div class="bkn">${esc(name)}</div>
    <div class="orow"><button type="button" class="sign ${ca}" data-side="A">${oa!==null&&oa<0?"−":oa!==null?"+":"−"}</button><input class="oval ${ca}" data-side="A" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${oa!==null?Math.abs(oa):""}" aria-label="${esc(name)} price for ${esc(sur(a.name))}" placeholder="${esc(sur(a.name))}"></div>
    <div class="orow"><button type="button" class="sign ${cb}" data-side="B">${ob!==null&&ob<0?"−":ob!==null?"+":"+"}</button><input class="oval ${cb}" data-side="B" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${ob!==null?Math.abs(ob):""}" aria-label="${esc(name)} price for ${esc(sur(b.name))}" placeholder="${esc(sur(b.name))}"></div>
-   <div class="bksaved${v?" on":""}${flagged?" flag":""}">${esc(stamp)}</div></div>`;
+   <div class="bksaved${v?" on":""}${flagged?" flag":""}${faded?" fade":""}">${esc(stamp)}</div></div>`;
  }).join("");
  html+=`<div class="saveproof" id="saveProof">${savedProofHtml(key,a,b)}</div>`;
  box.innerHTML=html;
@@ -1955,8 +1997,10 @@ function renderBooks(a,b){
    paintBookRow(row,oa,ob,pa);
    paintBookRead(box,a,b);
    clearTimeout(row._saveT);
-   if(!bothPrices(oa,ob)){stamp.classList.remove("on","flag");stamp.textContent=oa===null&&ob===null?"Not saved yet":"Enter both prices";return}
-   stamp.classList.remove("on","flag");stamp.textContent="Saving…";
+   const faded=!!fadeOf(a,b,oa,ob);
+   stamp.classList.toggle("fade",faded);
+   if(!bothPrices(oa,ob)){stamp.classList.remove("on","flag");stamp.textContent=oa===null&&ob===null?"Not saved yet":faded?"Caution · enter both prices":"Enter both prices";return}
+   stamp.classList.remove("on","flag");stamp.textContent=(faded?"Caution · ":"")+"Saving…";
    row._saveT=setTimeout(()=>{
     const rec=sortedSnap(a,b,oa,ob,EST?EST.pa:null);rec.book=name;
     OHIST[key]=upsertBookPrice(OHIST[key]||[],rec);
@@ -1964,8 +2008,8 @@ function renderBooks(a,b){
     clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);
     const back=latestByBook((load("tt-odds")||{})[key]||[]).get(name);
     const flagged=isFlagPair(oa,ob);
-    stamp.classList.add("on");stamp.classList.toggle("flag",flagged);
-    stamp.textContent=(flagged?"⚑ Flagged pair · ":"")+(back?`Saved ${ago(back.at)}`:"Saved");
+    stamp.classList.add("on");stamp.classList.toggle("flag",flagged);stamp.classList.toggle("fade",!!fadeOf(a,b,oa,ob));
+    stamp.textContent=(flagged?"⚑ Flagged pair · ":"")+(fadeOf(a,b,oa,ob)?"Caution · ":"")+(back?`Saved ${ago(back.at)}`:"Saved");
     if(name===MAINBOOK){odds.A={v:String(Math.abs(oa)),neg:oa<0};odds.B={v:String(Math.abs(ob)),neg:ob<0};oddsCalc(a,b,EST?EST.pa:0.5,{save:false})}
     paintSaveProof(key,a,b);
     renderSavedPrices();
