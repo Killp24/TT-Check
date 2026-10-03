@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -381,4 +381,90 @@ test("the best number is the price a bettor would rather take", () => {
   ]);
   assert.equal(tied.a.length, 2);
   assert.equal(tied.b.length, 2);
+});
+
+test("a copied sportsbook page keeps each matchup and can name the book", () => {
+  const players = [
+    "Kolek Maciej", "Makajew Maciej", "Pyrek Dawid", "Karpiuk Mateusz", "Szymik Robert", "Sawicki Grzegorz",
+    "Trela Mateusz", "Mugowski Arkadiusz", "Baran Mateusz", "Baran Sebastian", "Kubiak Artur", "Gesiarz Piotr",
+    "Fomin Andriej", "Fomin Yurij", "Kukawka Milosz", "Brud Szymon", "Sulkowski Karol", "Sulkowski Bartek",
+    "Poloszczanski Dawid", "Maszczynski Dariusz", "Mucha Grzegorz"
+  ].map(name => ({ name }));
+  const text = [
+    "FanDuel",
+    "Maciej Kolek", "vs", "Maciej Makajew", "", "\u2212215", "", "+150", "Today 2:00 PM", "More Bets",
+    "Dawid Pyrek", "vs", "Mateusz Karpiuk", "", "+125", "", "\u2212185", "Today 2:00 PM", "More Bets",
+    "Robert Szymik", "vs", "Grzegorz Sawicki", "", "\u2212575", "", "+350", "Today 2:05 PM", "More Bets",
+    "Mateusz Trela", "vs", "Arkadiusz Mugowski", "", "+140", "", "\u2212200", "Today 2:05 PM", "More Bets",
+    "Mateusz Baran", "vs", "Artur Kubiak", "", "+110", "", "\u2212165", "Today 2:10 PM", "More Bets",
+    "Piotr Gesiarz", "vs", "Andriej Fomin", "", "+150", "", "\u2212215", "Today 2:20 PM", "More Bets",
+    "Milosz Kukawka", "vs", "Szymon Brud", "", "\u2212105", "", "\u2212135", "Today 2:25 PM", "More Bets",
+    "Karol Sulkowski", "vs", "Dawid Poloszczanski", "", "\u2212165", "", "+110", "Today 2:30 PM", "More Bets",
+    "Dariusz Maszczynski", "vs", "Grzegorz Mucha", "", "+350", "", "\u2212575", "Today 2:45 PM", "More Bets"
+  ].join("\n");
+  const parsed = parseBookPaste(text, players);
+  assert.equal(parsed.missed.length, 0);
+  assert.equal(parsed.matches.length, 9);
+  assert.equal(parsed.matches[0].p1, "Kolek Maciej");
+  assert.equal(parsed.matches[0].p2, "Makajew Maciej");
+  assert.equal(parsed.matches[0].o1, -215);
+  assert.equal(parsed.matches[0].o2, 150);
+  assert.equal(parsed.matches[0].minutes, 14 * 60);
+  assert.equal(parsed.matches[0].book, "FanDuel");
+  assert.equal(parsed.matches[4].p1, "Baran Mateusz");
+  assert.equal(parsed.matches[4].p2, "Kubiak Artur");
+  assert.equal(parsed.matches[6].o1, -105);
+  assert.equal(parsed.matches[6].o2, -135);
+  assert.equal(parsed.matches[7].p1, "Sulkowski Karol");
+  assert.equal(matchPlayerName("Maciej Kolek", players), "Kolek Maciej");
+  assert.equal(matchPlayerName("Maciej", players), null);
+  const fixtures = [
+    { p1: "Makajew Maciej", p2: "Kolek Maciej", minutes: 22 * 60 + 30, at: 1 },
+    { p1: "Kolek Maciej", p2: "Makajew Maciej", minutes: 23 * 60, at: 2 },
+    { p1: "Pyrek Dawid", p2: "Karpiuk Mateusz", minutes: 23 * 60, at: 2 },
+    { p1: "Szymik Robert", p2: "Sawicki Grzegorz", minutes: 23 * 60 + 5, at: 3 }
+  ];
+  const aligned = alignPasteTimes(parsed.matches.slice(0, 3), fixtures);
+  assert.equal(aligned.hits, 3);
+  assert.equal(aligned.off, 9 * 60);
+  const picked = pickFixture(parsed.matches[0], fixtures, aligned.off);
+  assert.equal(picked.minutes, 23 * 60);
+});
+
+test("any list in that copied shape is read, and yesterday's clock does not take the slate", () => {
+  const players = [
+    "Nowak Adam", "Kowal Ewa", "Kolek Maciej", "Makajew Maciej", "Kukawka Milosz", "Brud Szymon",
+    "Sulkowski Karol", "Poloszczanski Dawid"
+  ].map(name => ({ name }));
+  const one = parseBookPaste([
+    "Adam Nowak", "vs", "Ewa Kowal", "", "+140", "", "\u2212180", "Today 4:10 PM", "More Bets"
+  ].join("\n"), players);
+  assert.equal(one.missed.length, 0);
+  assert.equal(one.matches.length, 1);
+  assert.equal(one.matches[0].p1, "Nowak Adam");
+  assert.equal(one.matches[0].p2, "Kowal Ewa");
+  assert.equal(one.matches[0].o1, 140);
+  assert.equal(one.matches[0].o2, -180);
+  assert.equal(one.matches[0].minutes, 16 * 60 + 10);
+  assert.equal(one.matches[0].book, null);
+  const parsed = parseBookPaste([
+    "Maciej Kolek", "vs", "Maciej Makajew", "", "\u2212215", "", "+150", "Today 2:00 PM", "More Bets",
+    "Milosz Kukawka", "vs", "Szymon Brud", "", "\u2212105", "", "\u2212135", "Today 2:25 PM", "More Bets",
+    "Karol Sulkowski", "vs", "Dawid Poloszczanski", "", "\u2212165", "", "+110", "Today 2:30 PM", "More Bets"
+  ].join("\n"), players);
+  const fixtures = [
+    { p1: "Kolek Maciej", p2: "Makajew Maciej", date: "2026-10-03", minutes: 23 * 60, at: 30, time: "23:00" },
+    { p1: "Kukawka Milosz", p2: "Brud Szymon", date: "2026-10-02", minutes: 23 * 60 + 20, at: 10, time: "23:20" },
+    { p1: "Kukawka Milosz", p2: "Brud Szymon", date: "2026-10-03", minutes: 23 * 60 + 25, at: 20, time: "23:25" },
+    { p1: "Sulkowski Karol", p2: "Poloszczanski Dawid", date: "2026-10-02", minutes: 23 * 60 + 30, at: 11, time: "23:30" },
+    { p1: "Sulkowski Karol", p2: "Poloszczanski Dawid", date: "2026-10-03", minutes: 23 * 60 + 30, at: 21, time: "23:30" },
+    { p1: "Sulkowski Karol", p2: "Poloszczanski Dawid", date: "2026-10-04", minutes: 23 * 60 + 30, at: 41, time: "23:30" }
+  ];
+  const aligned = alignPasteTimes(parsed.matches, fixtures);
+  assert.equal(aligned.off, 9 * 60);
+  assert.equal(aligned.date, "2026-10-03");
+  const kuk = pickFixture(parsed.matches[1], fixtures, aligned.off, aligned.date);
+  assert.equal(kuk.date + " " + kuk.time, "2026-10-03 23:25");
+  const sul = pickFixture(parsed.matches[2], fixtures, aligned.off, aligned.date);
+  assert.equal(sul.date + " " + sul.time, "2026-10-03 23:30");
 });

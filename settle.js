@@ -548,3 +548,166 @@ function bestBookSide(rows) {
   };
   return { a: pick("oa"), b: pick("ob") };
 }
+
+function foldName(s) {
+  return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z']+/g, " ").trim();
+}
+
+// "Maciej Kolek" and "Kolek Maciej" are the same player. A first name shared by two players does not match.
+function matchPlayerName(raw, players) {
+  const t = foldName(raw);
+  const words = t.split(" ").filter(Boolean);
+  if (words.length < 2 || words.length > 4) return null;
+  const list = players || [];
+  const exact = list.filter(p => foldName(p.name) === t);
+  if (exact.length === 1) return exact[0].name;
+  const rev = words.slice().reverse().join(" ");
+  const flipped = list.filter(p => foldName(p.name) === rev);
+  if (flipped.length === 1) return flipped[0].name;
+  const loose = list.filter(p => {
+    const n = foldName(p.name).split(" ").filter(Boolean);
+    return words.every(w => n.includes(w));
+  });
+  return loose.length === 1 ? loose[0].name : null;
+}
+
+function parseAmerican(raw) {
+  const m = String(raw || "").trim().match(/^([+\-\u2212\u2013\u2014])\s?(\d{2,4})$/);
+  if (!m) return null;
+  const n = +m[2];
+  if (!(n >= 100)) return null;
+  return (m[1] === "+" ? 1 : -1) * n;
+}
+
+function parsePasteClock(line) {
+  const m = String(line || "").trim().match(/^(today|tomorrow|tonight)?\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/i);
+  if (!m) return null;
+  let h = +m[2];
+  const min = m[3] ? +m[3] : 0;
+  const ap = m[4].toLowerCase();
+  if (ap === "pm" && h < 12) h += 12;
+  if (ap === "am" && h === 12) h = 0;
+  if (h > 23 || min > 59) return null;
+  return { day: (m[1] || "today").toLowerCase(), minutes: h * 60 + min };
+}
+
+// A copied sportsbook page: first name, vs, first name, the two prices, then "Today 2:00 PM".
+// A line that is only a book name starts a new book. One book never takes the other's prices.
+function parseBookPaste(text, players) {
+  const lines = String(text || "").split(/\r?\n/).map(l => l.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").trim()).filter(l => l && !/^https?:/i.test(l));
+  const known = { draftkings: "DraftKings", fanduel: "FanDuel", bet365: "bet365", bets365: "bet365", mgm: "MGM", betmgm: "MGM", fanatics: "Fanatics" };
+  const matches = [];
+  const missed = [];
+  let book = null;
+  let cur = null;
+  const flush = () => {
+    if (cur && cur.p1 && cur.p2 && cur.p1 !== cur.p2 && cur.o1 != null && cur.o2 != null) matches.push(Object.assign({ book }, cur));
+    cur = null;
+  };
+  const ensure = () => cur || (cur = { p1: null, p2: null, o1: null, o2: null, minutes: null, day: null });
+  for (const line of lines) {
+    const token = foldName(line).replace(/ /g, "");
+    if (known[token]) { book = known[token]; continue; }
+    if (/^more bets$/i.test(line)) { flush(); continue; }
+    if (/^vs\.?$/i.test(line)) continue;
+    const inline = line.match(/^(.*\S)\s+([+\-\u2212\u2013\u2014]\s?\d{2,4})$/);
+    if (inline) {
+      const who = matchPlayerName(inline[1], players);
+      const odd = parseAmerican(inline[2]);
+      if (who && odd != null) {
+        const c = ensure();
+        if (!c.p1) { c.p1 = who; c.o1 = odd; }
+        else if (!c.p2) { c.p2 = who; c.o2 = odd; }
+        else { flush(); const n = ensure(); n.p1 = who; n.o1 = odd; }
+        continue;
+      }
+    }
+    const clock = parsePasteClock(line);
+    if (clock && !matchPlayerName(line, players)) {
+      const c = ensure();
+      c.minutes = clock.minutes;
+      c.day = clock.day;
+      continue;
+    }
+    const odd = parseAmerican(line);
+    if (odd != null) {
+      const c = ensure();
+      if (c.o1 == null) c.o1 = odd;
+      else if (c.o2 == null) c.o2 = odd;
+      else { flush(); const n = ensure(); n.o1 = odd; }
+      continue;
+    }
+    const name = matchPlayerName(line, players);
+    if (!name) {
+      if (!/^(today|tomorrow|tonight)\b/i.test(line)) missed.push(line);
+      continue;
+    }
+    const c = ensure();
+    if (!c.p1) c.p1 = name;
+    else if (!c.p2) c.p2 = name;
+    else { flush(); const n = ensure(); n.p1 = name; }
+  }
+  flush();
+  return { matches, missed };
+}
+
+// The copied clock is the sportsbook's clock. Find the hour shift that lands those times on the schedule.
+// date is the schedule day most of the paste agrees on, so yesterday's same clock is not the match.
+function alignPasteTimes(matches, fixtures) {
+  let best = { off: 0, hits: -1, date: null };
+  for (let off = -14 * 60; off <= 14 * 60; off += 15) {
+    let hits = 0;
+    const byDate = new Map();
+    for (const m of matches || []) {
+      if (m.minutes == null) continue;
+      const target = (m.minutes + off + 1440) % 1440;
+      const pair = [m.p1, m.p2].sort().join("|");
+      let matched = false;
+      const dates = new Set();
+      for (const f of fixtures || []) {
+        if ([f.p1, f.p2].sort().join("|") !== pair || Math.abs(f.minutes - target) > 10) continue;
+        matched = true;
+        if (f.date) dates.add(f.date);
+      }
+      if (!matched) continue;
+      hits++;
+      for (const d of dates) byDate.set(d, (byDate.get(d) || 0) + 1);
+    }
+    let date = null;
+    let dateHits = 0;
+    let tied = false;
+    for (const [d, n] of byDate) {
+      if (n > dateHits) { dateHits = n; date = d; tied = false; }
+      else if (n === dateHits) tied = true;
+    }
+    if (tied) date = null;
+    if (hits > best.hits) best = { off, hits, date };
+  }
+  return best;
+}
+
+function pickFixture(match, fixtures, offsetMin, slateDate) {
+  const pair = [match.p1, match.p2].sort().join("|");
+  const cands = (fixtures || []).filter(f => !f.done && [f.p1, f.p2].sort().join("|") === pair);
+  if (!cands.length) return null;
+  const soonest = cands.slice().sort((a, b) => (a.at || 0) - (b.at || 0))[0];
+  if (match.minutes == null || offsetMin == null) return soonest;
+  const target = (match.minutes + offsetMin + 1440) % 1440;
+  const near = [];
+  for (const f of cands) {
+    let diff = Math.abs(f.minutes - target);
+    if (diff > 720) diff = 1440 - diff;
+    if (diff <= 20) near.push(f);
+  }
+  if (!near.length) return soonest;
+  near.sort((a, b) => {
+    const as = slateDate && a.date === slateDate ? 0 : 1;
+    const bs = slateDate && b.date === slateDate ? 0 : 1;
+    if (as !== bs) return as - bs;
+    let da = Math.abs(a.minutes - target); if (da > 720) da = 1440 - da;
+    let db = Math.abs(b.minutes - target); if (db > 720) db = 1440 - db;
+    if (da !== db) return da - db;
+    return (b.at || 0) - (a.at || 0);
+  });
+  return near[0];
+}

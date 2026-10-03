@@ -225,7 +225,8 @@ html.lock,html.lock body{overflow:hidden}
 .stag.flagp{background:#6b21a8;color:#fff;border-color:#6b21a8}
 .vv.flagv{border-left-color:#6b21a8}
 #bookBox .row{flex-wrap:wrap;gap:6px}
-#bookBox select{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+#bookBox select,#pasteBook{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+#pasteBook{display:block;width:100%;margin:6px 0 8px}
 #bookBox .bfstake{width:72px}
 .appbar{display:flex;flex-direction:column;align-items:stretch;gap:6px;margin:0 0 8px}
 .corner{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap}
@@ -377,8 +378,10 @@ body[data-view="match"] #paneDetails > #oddsBox{order:7}
 <div class="msg" id="flagMsg" role="status"></div>
 </div></details>
 <details id="pasteDet"><summary>Paste odds from your sportsbook</summary><div class="pad">
-<p class="help">Copy the table tennis page from DraftKings (or anywhere) and paste it here. The app finds player names and American odds, matches them to upcoming matches, and fills in the EV for each one.</p>
-<textarea id="oddsPaste" placeholder="Paste here"></textarea>
+<p class="help">Paste any list you copied. Each match is a player, vs, the other player, the two prices, then a time like Today 2:00 PM. More Bets can sit between matches. Pick the sportsbook first. A later paste from another book keeps its own prices.</p>
+<label for="pasteBook">Sportsbook</label>
+<select id="pasteBook" aria-label="Sportsbook"><option>DraftKings</option><option>FanDuel</option><option>bet365</option><option>MGM</option><option>Fanatics</option></select>
+<textarea id="oddsPaste" placeholder="Paste one sportsbook here"></textarea>
 <div class="btns"><button class="btn primary" id="oddsSave" type="button">Read odds</button><button class="btn" id="oddsWipe" type="button">Clear saved odds</button></div>
 <div class="msg" id="oddsMsg" role="status"></div>
 <div id="gapBox"></div>
@@ -2122,117 +2125,62 @@ async function pushOdds(){
 }
 
 // ---------- reading a pasted odds page ----------
-// Sportsbook pages come out as loose lines: names on their own, prices on their own.
-// We walk the lines, collect names we recognise and the odds that follow them, then
-// pair them up with a scheduled match.
-function parsePastedOdds(text){
- const byWord=new Map();
- for(const p of players)for(const w of norm(p.name).split(" ")){if(!byWord.has(w))byWord.set(w,[]);byWord.get(w).push(p)}
- const find=raw=>{
-  let t=norm(raw).replace(/[^a-z .'-]/g," ").replace(/\s+/g," ").trim();
-  if(t.length<4||t.split(" ").length>4)return null;
-  let hit=players.filter(p=>norm(p.name)===t);
-  if(hit.length===1)return hit[0];
-  const w=t.split(" ");
-  if(w.length>=2){
-   hit=players.filter(p=>norm(p.name)===w.slice().reverse().join(" "));   // "Michal Olbrycht" -> "Olbrycht Michal"
-   if(hit.length===1)return hit[0];
-   const seen=new Set(),cands=[];
-   for(const x of w)for(const p of (byWord.get(x)||[]))if(!seen.has(p.name)){seen.add(p.name);cands.push(p)}
-   const m=cands.filter(p=>{const n=norm(p.name).split(" ");return w.every(x=>n.includes(x))});
-   if(m.length===1)return m[0];
-  }
-  return null;
- };
- // A pasted page arrives as markdown links and loose lines, so flatten it first
- const lines=[];
- for(let line of text.split(/\r?\n/)){
-  line=line.replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").trim();      // [Name](link) -> Name
-  if(!line||/^https?:/i.test(line))continue;
-  lines.push(line);
- }
- const ODDRE=/^[+\-\u2212\u2013]\s?(\d{2,4})$/;
- const toks=[];
- for(const line of lines){
-  const m=line.match(ODDRE);
-  if(m){toks.push({o:(/^[\-\u2212\u2013]/.test(line)?-1:1)*(+m[1])});continue}
-  const inline=line.match(/^(.*?)\s+([+\-\u2212\u2013]\s?\d{2,4})$/);
-  if(inline){const p=find(inline[1]);if(p){toks.push({p});toks.push({o:(/^[\-\u2212\u2013]/.test(inline[2].trim())?-1:1)*(+inline[2].replace(/[^\d]/g,""))});continue}}
-  const p=find(line);
-  if(p)toks.push({p});
- }
- // Each matchup is two names followed by their two prices, in that order
- const out=[];let names=[],odds=[];
- const flush=()=>{
-  if(names.length===2&&odds.length===2){out.push({name:names[0].name,o:odds[0]});out.push({name:names[1].name,o:odds[1]})}
-  names=[];odds=[];
- };
- for(const t of toks){
-  if(t.p){
-   if(odds.length)flush();
-   if(names.length===2)names=[];
-   names.push(t.p);
-  }else{
-   if(!names.length)continue;
-   odds.push(t.o);
-   if(odds.length===2)flush();
-  }
- }
- flush();
- return out;
-}
+// The copy is first name, vs, first name, two prices, then "Today 2:00 PM".
+// The clock is the sportsbook's clock, so we line it up with the schedule before saving.
 function applyPastedOdds(text){
- const picks=parsePastedOdds(text);
- // Consecutive picks form one matchup, so a price only ever lands on that pair's next match
- const pairs=[];
- for(let i=0;i+1<picks.length;i+=2){
-  const x=picks[i],y=picks[i+1];
-  if(!x||!y||x.name===y.name||(x.o===null&&y.o===null)){i-=1;continue}
-  pairs.push([x,y]);
- }
- const now=Date.now(),rows=[];let matched=0;const used=new Set();
- for(const [x,y] of pairs){
-  const key=[x.name,y.name].sort().join("|");
-  const r=SCHED.filter(r=>!r.res&&!r.fin&&[r.p1,r.p2].sort().join("|")===key
-      &&r.at.getTime()>now-30*60000&&r.at.getTime()<now+30*36e5&&!used.has(r.date+r.time+key))
-    .sort((a,b)=>a.at-b.at)[0];
-  if(!r)continue;
-  used.add(r.date+r.time+key);matched++;
-  const o1=r.p1===x.name?x.o:y.o,o2=r.p2===x.name?x.o:y.o;
+ const chosen=bookKey($("pasteBook")&&$("pasteBook").value);
+ const parsed=parseBookPaste(text,players);
+ const fixtures=SCHED.filter(r=>!r.res&&!r.fin).map(r=>{
+  const [hh,mm]=String(r.time||"0:0").split(":").map(Number);
+  return {p1:r.p1,p2:r.p2,minutes:(hh||0)*60+(mm||0),at:r.at?r.at.getTime():0,done:false,date:r.date,r};
+ });
+ const aligned=alignPasteTimes(parsed.matches,fixtures);
+ const offset=aligned.hits?aligned.off:null;
+ const rows=[];const unmatched=[];let matched=0;
+ for(const m of parsed.matches){
+  const hit=pickFixture(m,fixtures,offset,aligned.date);
+  if(!hit){unmatched.push(m);continue}
+  const r=hit.r,book=m.book||chosen;
+  const o1=r.p1===m.p1?m.o1:m.o2,o2=r.p2===m.p1?m.o1:m.o2;
   const slot=r.date+" "+r.time,k=okey(r.p1,r.p2,slot),first=r.p1<r.p2;
   const a=byNameP(r.p1),b=byNameP(r.p2);
-  let row={o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book:MAINBOOK};
+  let row={o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book};
   if(a&&b){const e=estimate(a,b,bookOpt(o1,o2)),snap=decisionSnapshot(o1,o2,e.pa,1-e.pa);
    row={...row,at:snap.at,app1:first?snap.app1:snap.app2,app2:first?snap.app2:snap.app1,edge1:first?snap.edge1:snap.edge2,edge2:first?snap.edge2:snap.edge1};}
   OHIST[k]=upsertBookPrice(OHIST[k]||[],row);
+  matched++;
   if(a&&b){const e=estimate(a,b,bookOpt(o1,o2));
    const sides=[[a,e.pa,o1],[b,1-e.pa,o2]].filter(z=>z[2]!==null&&z[2]!==undefined)
      .map(([p,pm,o])=>({p,o,pm,ev:pm*profit(o)-(1-pm)*100,imp:toProb(o)}));
-   if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,gap:top.pm-top.imp})}
-  }
+   if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,book,o1,o2,m})}
+  }else rows.push({r,top:null,book,o1,o2,m});
  }
  trimOdds();
- rows.sort((p,q)=>q.top.ev-p.top.ev);
- return{read:pairs.length,matched,rows};
+ rows.sort((p,q)=>((q.top?q.top.ev:0)-(p.top?p.top.ev:0)));
+ return {read:parsed.matches.length,matched,rows,missed:parsed.missed,unmatched,book:chosen};
 }
 function renderGaps(res){
  const box=$("gapBox");
- if(!res.rows.length){box.innerHTML="";return}
- const top=res.rows.slice(0,12);
- box.innerHTML=`<h3 class="rch">Biggest gaps vs the book</h3><ul class="slist">${top.map(({r,top:t,gap})=>
-  `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b></span><span class="smid"><span class="sp">${esc(t.p.name)} ${t.o>0?"+":""}${t.o}</span><small class="muted">book ${Math.round(t.imp*100)}% · app ${Math.round(t.pm*100)}% · ${esc(r.tour)}</small><span class="stags"><span class="stag ${t.ev>=3?"ev":""}">${t.ev>=0?"+":"−"}$${Math.abs(t.ev).toFixed(0)} per $100</span></span></span></button></li>`).join("")}</ul>
-  <p class="help">A big gap means the app and the book disagree. Those are the ones worth logging either way, so we can find out which of you is right.</p>`;
- box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"menu"})});
+ if(!box)return;
+ const saved=res.rows.map(({r,book,m})=>`<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(book)} ${fmtO(r.p1===m.p1?m.o1:m.o2)} / ${fmtO(r.p2===m.p1?m.o1:m.o2)} · saved on this phone</small></span></button></li>`).join("");
+ const missed=res.missed&&res.missed.length?`<p class="help">Not a player on file: ${res.missed.slice(0,8).map(esc).join(", ")}.</p>`:"";
+ const loose=res.unmatched&&res.unmatched.length?`<p class="help">Read, but not on the schedule: ${res.unmatched.slice(0,8).map(m=>esc(m.p1+" vs "+m.p2)).join(", ")}.</p>`:"";
+ box.innerHTML=(saved?`<h3 class="rch">Saved from this paste</h3><ul class="slist">${saved}</ul>`:"")+missed+loose+(saved?`<p class="help">Open a match and the Book Odds tab shows this sportsbook on its own line.</p>`:"");
+ box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"menu"});setMatchTab("odds")});
 }
+if($("pasteBook")){const saved=load("tt-pastebook");if(saved&&BOOKS.includes(bookKey(saved)))$("pasteBook").value=bookKey(saved);$("pasteBook").onchange=()=>save("tt-pastebook",$("pasteBook").value)}
 $("oddsSave").onclick=()=>{
  const t=$("oddsPaste").value;
  if(!t.trim()){setMsg("oddsMsg","err","Paste the page text first.");return}
+ save("tt-pastebook",$("pasteBook").value);
  const res=applyPastedOdds(t);
- if(!res.matched){setMsg("oddsMsg","err",`Found ${res.read} matchup${res.read===1?"":"s"} in the text but none of them are upcoming matches. Check the spelling, or that those matches haven't already been played.`);renderGaps(res);return}
- setMsg("oddsMsg","ok",`Read ${res.read} matchup${res.read===1?"":"s"}, filled in ${res.matched} upcoming match${res.matched===1?"":"es"}.`);
- renderGaps(res);renderSched();
- if(cfg.token)pushOdds().then(ok=>setMsg("oddsMsg",ok?"ok":"err",ok?`Read ${res.read} matchups, filled in ${res.matched} upcoming matches, and saved them for your other devices.`:`Read ${res.read} matchups, but couldn't save them to the shared file. They're still on this device.`));
- else setMsg("oddsMsg","ok",`Read ${res.read} matchups, filled in ${res.matched} upcoming matches. Add an access token in Sharing setup to share them with your other devices.`);
+ renderGaps(res);renderSched();renderSavedPrices();if(sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
+ const book=$("pasteBook").value;
+ if(!res.read){setMsg("oddsMsg","err","No matchups in that paste. Keep the player, vs, the other player, both prices, and the time.");return}
+ if(!res.matched){setMsg("oddsMsg","err",`Read ${res.read} matchup${res.read===1?"":"s"}, but none are on the schedule.`);return}
+ const note=`Saved ${res.matched} ${book} line${res.matched===1?"":"s"} on this phone.`;
+ setMsg("oddsMsg","ok",note);
+ if(cfg.token)pushOdds().then(ok=>setMsg("oddsMsg",ok?"ok":"err",ok?`${note} Copied to the shared file too.`:`${note} The shared file did not update.`));
 };
 $("oddsWipe").onclick=async()=>{OHIST={};ODDS={};save("tt-odds",OHIST);$("gapBox").innerHTML="";$("oddsPaste").value="";renderSched();renderSavedPrices();if(sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
  if(cfg.token&&navigator.onLine){try{await ghEdit("odds.txt",()=>oddsFileText(),"Clear odds");setMsg("oddsMsg","ok","Odds cleared on every device.")}catch(e){setMsg("oddsMsg","err","Cleared here, but the shared file didn't update.")}}
