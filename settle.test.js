@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -139,6 +139,32 @@ test("session shifts need a real sample and ignore the first match of the day", 
   const shift = fitSessionShifts(rows, 80, 150);
   assert.ok(shift[3] < 0);
   assert.equal(shift[0], undefined);
+});
+
+test("the plus side of +102 / −136 is the +102 bet, and only when both prices match", () => {
+  assert.equal(pricePairMatch(-136, 102, 102, -136), true);
+  assert.equal(pricePairMatch(102, -130, 102, -136), false);
+  assert.equal(pairPlusOdds(102, -136), 102);
+  assert.equal(pairPlusOdds(-110, -110), null);
+  const plus = { odds: 102, stake: 50, status: "won", snap: { o1: -136, o2: 102 } };
+  const minus = { odds: -136, stake: 50, status: "won", snap: { o1: 102, o2: -136 } };
+  const other = { odds: 102, stake: 50, status: "won", snap: { o1: 102, o2: -120 } };
+  const oneSided = { odds: 102, stake: 50, status: "won", snap: { o1: 102, o2: null } };
+  assert.equal(betOnFlaggedPlus(plus, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(minus, 102, -136), false);
+  assert.equal(betOnFlaggedPlus(other, 102, -136), false);
+  assert.equal(betOnFlaggedPlus(oneSided, 102, -136), false);
+  const s = roiOf([
+    plus,
+    { odds: 102, stake: 100, status: "lost", snap: { o1: 102, o2: -136 } },
+    { odds: 102, stake: 100, status: "pending", snap: { o1: 102, o2: -136 } }
+  ]);
+  assert.equal(s.won, 1);
+  assert.equal(s.lost, 1);
+  assert.equal(s.pending, 1);
+  assert.equal(s.staked, 150);
+  assert.equal(s.profit, -49);
+  assert.ok(Math.abs(s.roi - (-49 / 150)) < 1e-9);
 });
 
 test("form shift shrinks a small sample toward zero", () => {
