@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -139,6 +139,57 @@ test("session shifts need a real sample and ignore the first match of the day", 
   const shift = fitSessionShifts(rows, 80, 150);
   assert.ok(shift[3] < 0);
   assert.equal(shift[0], undefined);
+});
+
+test("a saved line needs both prices, and +102 / −135 is not +102 / −136", () => {
+  assert.equal(bothPrices(102, -135), true);
+  assert.equal(bothPrices(-136, 102), true);
+  assert.equal(bothPrices(102, null), false);
+  assert.equal(bothPrices(null, -136), false);
+  assert.equal(bothPrices(102, undefined), false);
+  assert.equal(bothPrices(99, -136), false);
+  assert.equal(pricePairMatch(102, -135, 102, -136), false);
+});
+
+test("the plus side of +102 / −136 counts, including older tickets that only saved +102", () => {
+  assert.equal(pricePairMatch(-136, 102, 102, -136), true);
+  assert.equal(pricePairMatch(102, -130, 102, -136), false);
+  assert.equal(pairPlusOdds(102, -136), 102);
+  assert.equal(pairPlusOdds(-110, -110), null);
+  const plus = { odds: 102, stake: 50, status: "won", snap: { o1: -136, o2: 102 } };
+  const minus = { odds: -136, stake: 50, status: "won", snap: { o1: 102, o2: -136 } };
+  const other = { odds: 102, stake: 50, status: "won", snap: { o1: 102, o2: -120 } };
+  const oneSided = { odds: 102, stake: 39.74, status: "lost", snap: { o1: 102, o2: null } };
+  const plusOnly = { odds: 102, stake: 50, status: "won" };
+  const wrongPair = { odds: 102, stake: 20, status: "won", flagPair: [102, -120], snap: { o1: 102, o2: null } };
+  assert.equal(betOnFlaggedPlus(plus, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(minus, 102, -136), false);
+  assert.equal(betOnFlaggedPlus(other, 102, -136), false);
+  assert.equal(betOnFlaggedPlus(oneSided, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(plusOnly, 102, -136), true);
+  assert.equal(betOnFlaggedPlus(wrongPair, 102, -136), false);
+  const confirmed = roiOf([
+    { odds: 102, stake: 100, status: "won", snap: { o1: 102, o2: -136 } },
+    oneSided,
+    plusOnly,
+    { odds: 102, stake: 30, status: "won", snap: { o1: 102 } },
+    { odds: 102, stake: 30, status: "won", snap: { o1: 102 } }
+  ]);
+  assert.equal(confirmed.won, 4);
+  assert.equal(confirmed.lost, 1);
+  assert.ok(Math.abs(confirmed.staked - 249.74) < 0.001);
+  assert.ok(Math.abs(confirmed.profit - 174.46) < 0.001);
+  const s = roiOf([
+    plus,
+    { odds: 102, stake: 100, status: "lost", snap: { o1: 102, o2: -136 } },
+    { odds: 102, stake: 100, status: "pending", snap: { o1: 102, o2: -136 } }
+  ]);
+  assert.equal(s.won, 1);
+  assert.equal(s.lost, 1);
+  assert.equal(s.pending, 1);
+  assert.equal(s.staked, 150);
+  assert.equal(s.profit, -49);
+  assert.ok(Math.abs(s.roi - (-49 / 150)) < 1e-9);
 });
 
 test("form shift shrinks a small sample toward zero", () => {

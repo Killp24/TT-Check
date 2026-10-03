@@ -23,6 +23,68 @@ function parlayPayoutOdds(bet) {
 
 function profitOf(o) { return o < 0 ? 100 * 100 / (-o) : o; }
 
+// True when the two prices are the same pair, in either order.
+function pricePairMatch(o1, o2, a, b) {
+  const nums = [o1, o2, a, b].map(Number);
+  if (nums.some(n => !Number.isFinite(n))) return false;
+  const x = [nums[0], nums[1]].sort((p, q) => p - q);
+  const y = [nums[2], nums[3]].sort((p, q) => p - q);
+  return x[0] === y[0] && x[1] === y[1];
+}
+
+// Both American prices have to be real numbers of at least 100. One side is not a line.
+function bothPrices(o1, o2) {
+  const nums = [Number(o1), Number(o2)];
+  return nums.every(n => Number.isFinite(n) && Math.abs(n) >= 100);
+}
+
+// The plus-money number in a two-sided price. +102 / −136 returns 102.
+function pairPlusOdds(a, b) {
+  const nums = [Number(a), Number(b)];
+  if (nums.some(n => !Number.isFinite(n))) return null;
+  const pos = nums.filter(n => n > 0);
+  return pos.length === 1 ? pos[0] : null;
+}
+
+// A single bet on the plus side of this exact pair.
+// Older tickets sometimes stored only the plus number. Those count.
+// A second price that is not this pair stays out.
+function betOnFlaggedPlus(bet, a, b) {
+  if (!bet || bet.parlay) return false;
+  const plus = pairPlusOdds(a, b);
+  if (plus == null || Number(bet.odds) !== plus) return false;
+  const s = bet.snap;
+  if (s && s.o1 != null && s.o2 != null) return pricePairMatch(s.o1, s.o2, a, b);
+  if (Array.isArray(bet.flagPair) && bet.flagPair[0] != null && bet.flagPair[1] != null)
+    return pricePairMatch(bet.flagPair[0], bet.flagPair[1], a, b);
+  return true;
+}
+
+// ROI is profit divided by stakes on bets that have won or lost. Pending stays out.
+function roiOf(rows) {
+  const list = rows || [];
+  const settled = list.filter(b => b && (b.status === "won" || b.status === "lost"));
+  let staked = 0, profit = 0, won = 0;
+  for (const b of settled) {
+    const stake = +b.stake || 0;
+    staked += stake;
+    if (b.status === "won") {
+      won++;
+      profit += stake * profitOf(+b.odds) / 100;
+    } else profit -= stake;
+  }
+  return {
+    n: list.length,
+    settled: settled.length,
+    pending: list.filter(b => b && b.status === "pending").length,
+    won,
+    lost: settled.length - won,
+    staked,
+    profit,
+    roi: staked ? profit / staked : null
+  };
+}
+
 // Book price, app win probability, EV per $100, and the time that read was taken.
 // o1/app1/edge1 belong to the first player in the caller's order.
 function decisionSnapshot(o1, o2, app1, app2, at) {
