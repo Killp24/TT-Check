@@ -12,7 +12,7 @@ python3 -m http.server 8080
 
 Open http://127.0.0.1:8080/
 
-Use **1 Today** for the schedule, **2 Signals** for ban-list, form, head-to-head, and price gaps, then **3 Assist** to compare the two players. The line under the steps says how old the Elo list, results, and any saved book price are.
+The app opens on **Home**, today's TT Elite match list. **Signals** lists ban-list, form, head-to-head, and price gaps. **Search** is where you type two player names. Home in the bottom bar returns to that list.
 
 Check the parlay and snapshot helpers:
 

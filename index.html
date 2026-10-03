@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en" class="lock"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>TT Matchup Check</title>
 <meta name="theme-color" content="#17456e">
@@ -255,6 +255,8 @@ body[data-view="match"] .foot{display:none}
 .trust{color:var(--muted);font-size:.82rem;margin:-4px 0 14px}
 .trust:empty,.trust[hidden]{display:none}
 .sheethd h2{flex:1;text-align:center}
+#sched .sheethd{grid-template-columns:1fr auto}
+#sched .sheethd h2{text-align:left}
 .schedmore{margin:0 0 8px;background:transparent;border:0}
 .schedmore summary{padding:0;font-weight:600;font-size:.9rem;color:var(--muted)}
 .schedmark{list-style:none;margin:4px 0 8px;padding:8px 0 0;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
@@ -280,6 +282,7 @@ body[data-view="match"] .foot{display:none}
 .flist .fres.w{color:var(--ok)}
 .flist .fres.l{color:var(--ban)}
 .flist .fwho{overflow-wrap:break-word}
+.flist .fscore{white-space:nowrap}
 body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:column}
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
@@ -288,18 +291,18 @@ body[data-view="match"] #paneDetails > #recentForm{order:4}
 body[data-view="match"] #paneDetails > #cmp{order:5}
 body[data-view="match"] #paneDetails > #oddsBox{order:6}
 body[data-view="match"] #paneDetails > #bookPanel{order:7}
-</style></head><body><main>
+</style></head><body data-view="home"><main>
 <div class="appbar">
  <div class="corner"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
  <div class="brand"><h1>TT matchup check</h1><p class="srcline"><span class="src" id="srcInfo">Loading data…</span><button class="mini" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p></div>
 </div>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="matchstick" id="matchStick">
-<button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
+<button class="listback" id="listBack" type="button" hidden>← Home</button>
 <nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
-<p class="sub" id="assistLead">Type two player names.</p>
+<p class="sub" id="assistLead">Search two player names.</p>
 <div class="pairbar"><div id="matchInfo" class="minfo" hidden></div><div class="pairacts"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
 <section class="court" id="court">
  <div class="sides">
@@ -334,7 +337,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
 <div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span></div>
 <div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div><button class="totop" id="sigTop" type="button" hidden>Top</button></div>
-<div class="sheet" id="sched" role="dialog" aria-modal="true" aria-labelledby="schedTitle" hidden><div class="sheethd"><button class="btn" id="schedClose" type="button">Back</button><h2 id="schedTitle">Today</h2><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></div>
+<div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></div>
 <div class="tools"><div class="field schfield"><input id="schFind" autocomplete="off" placeholder="Search a player or tournament"><button class="x" type="button" id="schClear" aria-label="Clear search">✕</button></div><details class="schedmore"><summary>More filters</summary><div class="schedopts"><label><input type="checkbox" id="onlyFav"> Saved only</label><label><input type="checkbox" id="onlyEV"> Value only</label><label><input type="checkbox" id="onlyFlag"> Flagged only</label></div></details><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div><button class="totop" id="schedTop" type="button" hidden>Top</button></div>
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><button class="btn" id="menuClose" type="button">Back</button><h2 id="menuTitle">Menu</h2><span></span></div>
 <div class="tools">
@@ -348,7 +351,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <div class="msg" id="updMsg" role="status"></div>
 </div></details>
 <details id="flagDet"><summary>Flagged price pair</summary><div class="pad">
-<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ in Today and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned. Older bets that only saved the plus number are included. A saved other price has to be this pair. New bets keep both prices.</p>
+<p class="help">Any match priced at exactly these two numbers, either way round, gets a ⚑ on Home and a note under the odds. The bets page totals what betting the plus-money side of this pair has returned. Older bets that only saved the plus number are included. A saved other price has to be this pair. New bets keep both prices.</p>
 <div class="row"><input id="flagA" class="bfstake" inputmode="numeric" aria-label="First price"><input id="flagB" class="bfstake" inputmode="numeric" aria-label="Second price"><button class="btn primary" id="flagSave" type="button">Save</button></div>
 <div class="msg" id="flagMsg" role="status"></div>
 </div></details>
@@ -372,7 +375,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 </div>
 <p class="note foot">Win odds start from the Elo formula, then use the calibration that has been more accurate on past matches. Form, head-to-head, and how many matches a player has already played today are added only when that has lowered the error. A saved book price is mixed in only after priced results show that the mix is closer. None of this edits the ban list. Tap a player's ban list tag to add or remove them.</p>
 </main>
-<nav class="dock" aria-label="Today, signals, assist"><div class="dockin"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="page">Assist</button></div></nav>
+<nav class="dock" aria-label="Home, signals, search"><div class="dockin"><button class="btn on" id="schedBtn" type="button" aria-current="page">Home</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">Signals</button><button class="btn" id="assistBtn" type="button">Search</button></div></nav>
 <script src="settle.js"></script>
 <script>const $=id=>document.getElementById(id);
 function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
@@ -421,7 +424,7 @@ async function loadOfficial(){
  }catch(e){}
 }
 function apply(){
- if(!data){$("srcInfo").textContent="No data yet. Open the app once while online.";return}
+ if(!data){$("srcInfo").textContent="No data yet. Open the app once while online.";if(VIEW==="home"&&!$("sched").hidden)renderSched({keep:!!HOME_SNAP});return}
  players=parseRatings(data.ratings).map(([r,n,e])=>({rank:r,name:n,elo:e}));
  BANORDER=parseBan(data.ban);BAN=new Set(BANORDER);
  mine=parseMatches(data.matches+"\n"+pending.join("\n"),"me");
@@ -439,6 +442,7 @@ function apply(){
   if(typed[k])typed[k]=players.find(p=>p.name===typed[k].name)||null;
  });
  update();renderBan();renderForm();renderRecent();renderSetup();
+ if(VIEW==="home"&&!$("sched").hidden)renderSched({keep:!!HOME_SNAP});
 }
 
 // ---------- GitHub ----------
@@ -887,7 +891,7 @@ function bookOpt(o1,o2){if(!(BOOK_W>0))return null;const fair=fairPair(o1,o2);re
 // ---------- matchup ----------
 const sel={A:null,B:null};
 const typed={A:null,B:null,tA:"",tB:""};
-let VIEW="assist",STEP="assist",MTAB="details",MATCH=null,MATCHFROM=null;
+let VIEW="home",STEP="home",MTAB="details",MATCH=null,MATCHFROM=null;
 const isBan=p=>BAN.has(p.name);
 const banRank=p=>BANORDER.indexOf(p.name)+1;
 const tierOfName=n=>{const r=BANORDER.indexOf(n)+1;return !r?0:r<=5?1:r<=10?2:3};
@@ -1013,14 +1017,14 @@ function recentRows(name){
 function sessionText(s){return s&&s.n?`${s.w}–${s.n-s.w}`:"none yet"}
 function renderRecentForm(a,b){
  const box=$("recentForm");if(!box)return;
- if(VIEW!=="match"){box.innerHTML="";return}
+ if(VIEW!=="match"&&VIEW!=="assist"){box.innerHTML="";return}
  const n1=a?a.name:(MATCH?MATCH.p1:""),n2=b?b.name:(MATCH?MATCH.p2:"");
  if(!n1||!n2||n1===n2){box.innerHTML="";return}
  const col=name=>{
   const last=matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,5);
   const items=last.length?last.map(m=>{
    const won=m.w===name,opp=won?m.l:m.w;
-   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?" · "+esc(m.score):""}</span></li>`;
+   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?` <span class="fscore">· ${esc(m.score)}</span>`:""}</span></li>`;
   }).join(""):`<li><span class="fwho muted">No recent matches</span></li>`;
   return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
  };
@@ -1379,7 +1383,7 @@ function renderSched(opt){
   html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
  }
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
- $("schedInfo").textContent=shown?`${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"";
+ $("schedInfo").textContent=shown?`TT Elite today · ${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"TT Elite today";
  if(anchor){
   const again=sheet.querySelector('.srow[data-i="'+anchor.i+'"]');
   const el=again||document.getElementById("schedNow");
@@ -1405,34 +1409,68 @@ function bindSheetTop(sheetId,btnId){
  sheet.addEventListener("scroll",()=>{btn.hidden=sheet.scrollTop<360});
  btn.onclick=()=>sheet.scrollTo({top:0,behavior:"smooth"});
 }
-let LISTBACK=null;
+let LISTBACK=null,HOME_SNAP=null;
+function captureHome(){
+ const sheet=$("sched");if(!sheet||sheet.hidden)return;
+ const head=sheet.querySelector(".sheethd");
+ const line=(head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top)+8;
+ const vis=[...sheet.querySelectorAll(".srow")].find(r=>r.getBoundingClientRect().bottom>line);
+ const wrap=vis?(vis.closest(".srowwrap")||vis):null;
+ HOME_SNAP={scroll:sheet.scrollTop,i:vis?vis.dataset.i:null,top:wrap?wrap.getBoundingClientRect().top:null};
+}
 function rememberToday(btn){
  const sheet=$("sched"),row=btn.closest(".srowwrap")||btn,head=sheet.querySelector(".sheethd");
  const line=head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top;
  LISTBACK={i:btn.dataset.i,offset:row.getBoundingClientRect().top-line};
+ captureHome();
  const back=$("listBack");if(back)back.hidden=false;
 }
-function restoreToday(){
- if(!LISTBACK)return;
- const back=LISTBACK;
- openSheet("sched",{keep:true});
- requestAnimationFrame(()=>{
-  const sheet=$("sched"),row=sheet.querySelector('.srow[data-i="'+back.i+'"]');
-  const head=sheet.querySelector(".sheethd");
-  const line=head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top;
-  if(row){
-   const wrap=row.closest(".srowwrap")||row;
-   sheet.scrollTop+=wrap.getBoundingClientRect().top-line-back.offset;
-   row.classList.add("here");
-   setTimeout(()=>row.classList.remove("here"),1600);
-   row.focus({preventScroll:true});
-  }
-  $("schedTop").hidden=sheet.scrollTop<360;
- });
+function restoreHomePos(row){
+ const sheet=$("sched");if(!sheet)return;
+ const head=sheet.querySelector(".sheethd");
+ const line=head?head.getBoundingClientRect().bottom:sheet.getBoundingClientRect().top;
+ if(row){
+  const el=sheet.querySelector('.srow[data-i="'+row.i+'"]');
+  if(el){
+   const wrap=el.closest(".srowwrap")||el;
+   sheet.scrollTop+=wrap.getBoundingClientRect().top-line-row.offset;
+   el.classList.add("here");
+   setTimeout(()=>el.classList.remove("here"),1600);
+   try{el.focus({preventScroll:true})}catch(e){}
+  }else if(HOME_SNAP)sheet.scrollTop=HOME_SNAP.scroll||0;
+ }else if(HOME_SNAP&&HOME_SNAP.i!=null&&HOME_SNAP.top!=null){
+  const el=sheet.querySelector('.srow[data-i="'+HOME_SNAP.i+'"]');
+  if(el){
+   const wrap=el.closest(".srowwrap")||el;
+   sheet.scrollTop+=wrap.getBoundingClientRect().top-HOME_SNAP.top;
+  }else sheet.scrollTop=HOME_SNAP.scroll||0;
+ }else if(HOME_SNAP)sheet.scrollTop=HOME_SNAP.scroll||0;
+ else sheet.scrollTop=$("showDone").checked?schedNowTop(sheet):0;
+ captureHome();
+ $("schedTop").hidden=sheet.scrollTop<360;
+}
+function showHome(opt){
+ const sheet=$("sched");
+ const onHome=VIEW==="home"&&sheet&&!sheet.hidden&&["signals","menu","favs","bets"].every(id=>$(id).hidden);
+ if(onHome&&!(opt&&opt.force))return;
+ const fromMatch=VIEW==="match";
+ const row=fromMatch&&MATCHFROM&&(MATCHFROM.kind==="home"||MATCHFROM.kind==="today")?LISTBACK:null;
+ ["signals","menu","favs","bets"].forEach(closeSheet);
+ sheet.hidden=false;
+ document.documentElement.classList.add("lock");
+ if(fromMatch){
+  MATCH=null;MATCHFROM=null;PICKED=null;MTAB="details";
+  sel.A=typed.A;sel.B=typed.B;
+  $("inA").value=typed.tA||"";$("inB").value=typed.tB||"";
+ }
+ VIEW="home";STEP="home";
+ renderSched();
+ restoreHomePos(row);
+ if(fromMatch)update();else applyChrome();
 }
 $("listBack").onclick=backFromMatch;
 $("schedList").addEventListener("click",e=>{const f=e.target.closest("[data-favm]");if(f){toggleFavM(SCHED[+f.dataset.favm]);return}
- const b=e.target.closest(".srow");if(!b)return;rememberToday(b);openListedMatch(SCHED[+b.dataset.i],{kind:"today"})});
+ const b=e.target.closest(".srow");if(!b)return;rememberToday(b);openListedMatch(SCHED[+b.dataset.i],{kind:"home"})});
 $("onlyFav").onchange=()=>renderSched({keep:true});$("onlyEV").onchange=()=>renderSched({keep:true});$("onlyFlag").onchange=()=>renderSched({keep:true});
 $("schFind").addEventListener("input",()=>renderSched({keep:true}));
 $("schClear").onclick=()=>{$("schFind").value="";renderSched({keep:true});$("schFind").focus()};
@@ -1495,8 +1533,8 @@ function reportCard(){
 
 function setFlow(which){
  STEP=which;
- for(const [id,k] of [["schedBtn","today"],["sigBtn","signals"],["assistBtn","assist"]]){
-  const b=$(id);if(!b)continue;const on=k===which;b.classList.toggle("on",on);
+ for(const [id,k] of [["schedBtn","home"],["sigBtn","signals"],["assistBtn","assist"]]){
+  const b=$(id);if(!b)continue;const on=!!which&&k===which;b.classList.toggle("on",on);
   if(on)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
  }
 }
@@ -1520,11 +1558,10 @@ function applyChrome(){
   b.classList.toggle("on",on);b.setAttribute("aria-selected",on?"true":"false");
  }
  const back=$("listBack");
- if(match&&MATCHFROM){
-  back.hidden=false;
-  back.textContent=MATCHFROM.kind==="today"?"← Back to Today":MATCHFROM.kind==="signals"?"← Back to Signals":MATCHFROM.kind==="favs"?"← Back to Saved":"← Back";
- }else back.hidden=true;
- setFlow(STEP);
+ if(match){back.hidden=false;back.textContent="← Home"}
+ else back.hidden=true;
+ const covered=!$("signals").hidden||!$("favs").hidden||!$("menu").hidden||!$("bets").hidden;
+ setFlow(match&&!covered?"":STEP);
 }
 function stashAssist(){
  if(VIEW!=="assist")return;
@@ -1543,10 +1580,10 @@ function openListedMatch(r,from){
  stashAssist();
  VIEW="match";MTAB="details";
  MATCH={p1:r.p1,p2:r.p2,r};
- MATCHFROM=from||{kind:"today"};
+ MATCHFROM=from||{kind:"home"};
  PICKED=r;
  sel.A=byNameP(r.p1)||null;sel.B=byNameP(r.p2)||null;
- setFlow(MATCHFROM.kind==="signals"?"signals":"today");
+ STEP="";
  closeLists();
  update();
  scrollTo(0,0);
@@ -1557,14 +1594,7 @@ function showAssistPair(n1,n2){
  typed.A=a;typed.B=b;typed.tA=a?a.name:n1;typed.tB=b?b.name:n2;
  closeLists();restoreAssist();scrollTo(0,0);
 }
-function backFromMatch(){
- const from=MATCHFROM;
- if(from&&from.kind==="today"&&LISTBACK){restoreToday();return}
- if(from&&from.kind==="signals"){openSheet("signals");return}
- if(from&&from.kind==="favs"){renderFavs();openSheet("favs");return}
- if(from&&from.kind==="menu"){openMenu();return}
- restoreAssist();
-}
+function backFromMatch(){showHome()}
 function setMatchTab(tab){MTAB=tab;applyChrome();renderMatchInfo()}
 function renderSignals(){
  linkResults();
@@ -1593,35 +1623,30 @@ function renderSignals(){
  items.sort((x,y)=>y.rank-x.rank||x.r.at-y.r.at);
  const shown=items.slice(0,40);
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
- $("sigInfo").textContent=`${shown.length===items.length?items.length+" signal"+(items.length===1?"":"s"):"40 strongest of "+items.length+" signals"}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Today still has every match.`;
+ $("sigInfo").textContent=`${shown.length===items.length?items.length+" signal"+(items.length===1?"":"s"):"40 strongest of "+items.length+" signals"}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
-  return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Today for the full schedule, or enter a book price in Assist.</li>`;
+  return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
 }
 $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;openListedMatch(SCHED[+b.dataset.i],{kind:"signals"})});
 function openSheet(id, opt){
+ if(id==="sched"){showHome();return}
  $(id).hidden=false;document.documentElement.classList.add("lock");
  const c=$(id+"Close");if(c&&!(opt&&opt.keep))c.focus();
- if(id==="sched"){setFlow("today");renderSched();
-  if(!(opt&&opt.keep))requestAnimationFrame(()=>{const s=$("sched");s.scrollTop=$("showDone").checked?schedNowTop(s):0;$("schedTop").hidden=s.scrollTop<360})}
  if(id==="signals"){setFlow("signals");renderSignals();const s=$("sigClose");if(s&&!(opt&&opt.keep))s.focus()}
 }
 function closeSheet(id){$(id).hidden=true;if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock")}
-$("schedBtn").onclick=()=>{
- if(VIEW==="match"&&MATCHFROM&&MATCHFROM.kind==="today"&&LISTBACK&&$("sched").hidden){restoreToday();return}
- if(!$("sched").hidden)return;
- ["signals","menu","favs","bets"].forEach(closeSheet);openSheet("sched")};
-$("schedClose").onclick=()=>{closeSheet("sched");restoreAssist();$("schedBtn").focus()};
+$("schedBtn").onclick=()=>showHome();
 $("sigBtn").onclick=()=>{
  if(!$("signals").hidden)return;
+ captureHome();
  ["sched","menu","favs","bets"].forEach(closeSheet);openSheet("signals")};
-$("sigClose").onclick=()=>{closeSheet("signals");restoreAssist();$("sigBtn").focus()};
-$("assistBtn").onclick=()=>{closeLists();restoreAssist();scrollTo(0,0);$("inA").focus()};
+$("sigClose").onclick=()=>showHome();
+$("assistBtn").onclick=()=>{captureHome();closeLists();restoreAssist();scrollTo(0,0);$("inA").focus()};
 $("matchTabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;setMatchTab(b.dataset.tab)});
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;
- if(!$("signals").hidden){closeSheet("signals");restoreAssist();$("sigBtn").focus()}
- else if(!$("sched").hidden){closeSheet("sched");restoreAssist();$("schedBtn").focus()}});
+ if(!$("signals").hidden)showHome()});
 
 
 
@@ -2166,7 +2191,7 @@ function bookScore(){
 function renderFavs(){
  const box=$("favBox");if(!box)return;
  tidyFavM();
- if(!FAVS.size&&!FAVM.size){box.innerHTML='<p class="help">Nothing saved yet. On a matchup, tap ☆ This match for one scheduled game, or ☆ Matchup to follow that pairing every time they meet. In Today, the star saves that match.</p>';return}
+ if(!FAVS.size&&!FAVM.size){box.innerHTML='<p class="help">Nothing saved yet. On a matchup, tap ☆ This match for one scheduled game, or ☆ Matchup to follow that pairing every time they meet. On Home, the star saves that match.</p>';return}
  const now=Date.now();
  const mrows=[...FAVM].map(k=>SCHED.find(r=>matchKey(r)===k)).filter(Boolean).sort((a,b)=>a.at-b.at);
  const mhtml=mrows.length?`<h3 class="rch">Matches</h3><ul class="slist">${mrows.map(r=>{
@@ -2213,7 +2238,7 @@ $("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
 $("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");$("favsBtn").focus()}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
-applyChrome();setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
+applyChrome();setup("A");setup("B");apply();showHome({force:true});loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
 $("refreshBtn").onclick=()=>refreshResults();
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
