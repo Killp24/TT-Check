@@ -282,6 +282,7 @@ body[data-view="match"] .foot{display:none}
 .flist .fres.w{color:var(--ok)}
 .flist .fres.l{color:var(--ban)}
 .flist .fwho{overflow-wrap:break-word}
+.flist .fscore{white-space:nowrap}
 body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:column}
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
@@ -1016,14 +1017,14 @@ function recentRows(name){
 function sessionText(s){return s&&s.n?`${s.w}–${s.n-s.w}`:"none yet"}
 function renderRecentForm(a,b){
  const box=$("recentForm");if(!box)return;
- if(VIEW!=="match"){box.innerHTML="";return}
+ if(VIEW!=="match"&&VIEW!=="assist"){box.innerHTML="";return}
  const n1=a?a.name:(MATCH?MATCH.p1:""),n2=b?b.name:(MATCH?MATCH.p2:"");
  if(!n1||!n2||n1===n2){box.innerHTML="";return}
  const col=name=>{
   const last=matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,5);
   const items=last.length?last.map(m=>{
    const won=m.w===name,opp=won?m.l:m.w;
-   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?" · "+esc(m.score):""}</span></li>`;
+   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?` <span class="fscore">· ${esc(m.score)}</span>`:""}</span></li>`;
   }).join(""):`<li><span class="fwho muted">No recent matches</span></li>`;
   return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
  };
