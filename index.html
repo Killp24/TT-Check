@@ -274,6 +274,20 @@ body[data-view="match"] .foot{display:none}
 .cmpstats .sub{display:block;font-size:.78rem;font-weight:700;line-height:1.25;margin-top:2px}
 .cmpstats .sub.even{color:var(--muted);font-weight:600}
 .cmpread{margin:12px 0 0;font-weight:600}
+.flist{list-style:none;margin:8px 0 0;padding:0}
+.flist li{display:flex;flex-direction:column;gap:1px;padding:6px 0;border-top:1px solid var(--border);font-size:.84rem;line-height:1.25}
+.flist .fres{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.flist .fres.w{color:var(--ok)}
+.flist .fres.l{color:var(--ban)}
+.flist .fwho{overflow-wrap:break-word}
+body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:column}
+body[data-view="match"] #paneDetails > #odds{order:1}
+body[data-view="match"] #paneDetails > #verdict{order:2}
+body[data-view="match"] #paneDetails > #edgeLine{order:3}
+body[data-view="match"] #paneDetails > #recentForm{order:4}
+body[data-view="match"] #paneDetails > #cmp{order:5}
+body[data-view="match"] #paneDetails > #oddsBox{order:6}
+body[data-view="match"] #paneDetails > #bookPanel{order:7}
 </style></head><body><main>
 <div class="appbar">
  <div class="corner"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
@@ -306,6 +320,7 @@ body[data-view="match"] .foot{display:none}
 </div>
 <div id="verdict"></div>
 <p class="edgeline" id="edgeLine" hidden></p>
+<div id="recentForm"></div>
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
@@ -930,7 +945,7 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderRecentForm(a,b);renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
  renderOdds(a,b,pa,est);$("bookPanel").hidden=VIEW==="match";if(VIEW!=="match")renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
@@ -984,6 +999,7 @@ function update(){
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
  renderCompare(a,b);
+ renderRecentForm(a,b);
  renderStandings(a,b);
  renderTrust();
  applyChrome();
@@ -995,6 +1011,21 @@ function recentRows(name){
  });
 }
 function sessionText(s){return s&&s.n?`${s.w}–${s.n-s.w}`:"none yet"}
+function renderRecentForm(a,b){
+ const box=$("recentForm");if(!box)return;
+ if(VIEW!=="match"){box.innerHTML="";return}
+ const n1=a?a.name:(MATCH?MATCH.p1:""),n2=b?b.name:(MATCH?MATCH.p2:"");
+ if(!n1||!n2||n1===n2){box.innerHTML="";return}
+ const col=name=>{
+  const last=matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,5);
+  const items=last.length?last.map(m=>{
+   const won=m.w===name,opp=won?m.l:m.w;
+   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?" · "+esc(m.score):""}</span></li>`;
+  }).join(""):`<li><span class="fwho muted">No recent matches</span></li>`;
+  return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
+ };
+ box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the opponent, and who won.</p><div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
+}
 function bookLine(a,b){
  const oa=readOdds("A"),ob=readOdds("B");
  if(typeof bothPrices!=="function"||!bothPrices(oa,ob))return "";
@@ -1034,30 +1065,30 @@ function renderStandings(a,b){
  const box=$("paneStandings");if(!box)return;
  const n1=a?a.name:(MATCH?MATCH.p1:""),n2=b?b.name:(MATCH?MATCH.p2:"");
  if(!n1||!n2||n1===n2){box.innerHTML="";return}
- const intro=`<div class="panel"><h2>Standings</h2><p class="help">Their place in the Elo ratings. This is not a league table.</p>`;
+ const intro=`<div class="panel"><h2>Standings</h2><p class="help">Their place in the Elo ratings. Favorite and underdog use the last 15 matches on file. This session is the matches in the last 12 hours, and it stays plain. This is not a league table.</p>`;
  if(!a||!b){box.innerHTML=intro+`<p class="help">${esc(!a?n1:n2)} is not in the ratings, so there is no place to show.</p></div>`;return}
  const rowsA=recentRows(a.name),rowsB=recentRows(b.name);
- const sa=recentShape(rowsA),sb=recentShape(rowsB);
- const counted=recentStatRows(sa,sb).concat(fieldStat(fieldShape(rowsA),fieldShape(rowsB)));
- const higher=counted.find(r=>r.key==="higher")||{side:"",A:"none",B:"none",subA:"",subB:""};
- const lead=recentLead(counted);
+ const fav=favoriteStat(favoriteShape(rowsA),favoriteShape(rowsB));
+ const dog=fieldStat(fieldShape(rowsA),fieldShape(rowsB));
+ const sesA=sessionStat(sessionOf(a.name)),sesB=sessionStat(sessionOf(b.name));
  const rec=p=>{const r=REC.get(p.name);return r?`${r.w}–${r.l}`:"no results yet"};
- const cls=(side,k)=>side===""?"even":side===k?"pos":"neg";
- let sum;
- if(rowsA.length<5||rowsB.length<5) sum="One side has fewer than 5 results on file, so the last-15 read stays off.";
- else if(lead.a===lead.b) sum=lead.a?`Last 15 splits ${lead.a}–${lead.b} on the stats with enough matches.`:"Last 15 is level on the stats with enough matches.";
- else{const ahead=lead.a>lead.b?a:b,n=Math.max(lead.a,lead.b),other=Math.min(lead.a,lead.b);
-  sum=`Last 15: ${sur(ahead.name)} leads ${n} of ${counted.length} stats${other?`, the other leads ${other}`:""}.`;}
+ const cls=(side,k)=>!side?"even":side===k?"pos":"neg";
  const eloSide=a.elo===b.elo?"":a.elo>b.elo?"A":"B";
  const rankSide=a.rank===b.rank?"":a.rank<b.rank?"A":"B";
- const winSide=formEdgeSide(sa.n?sa.w/sa.n:0,sb.n?sb.w/sb.n:0,sa.n,sb.n,5);
- const col=(p,k)=>`<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">
-  <li><span class="lab">Elo rank</span><span class="num ${cls(rankSide,k)}">#${p.rank}</span><span class="sub">of ${players.length}</span></li>
-  <li><span class="lab">Elo</span><span class="num ${cls(eloSide,k)}">${p.elo}</span></li>
-  <li><span class="lab">On file</span><span class="num even">${esc(rec(p))}</span></li>
-  <li><span class="lab">Vs higher</span><span class="num ${cls(higher.side,k)}">${esc(higher[k])}</span>${higher[k==="A"?"subA":"subB"]?`<span class="sub ${cls(higher.side,k)}">${esc(higher[k==="A"?"subA":"subB"])}</span>`:""}</li>
-  <li><span class="lab">Last 15</span><span class="num ${cls(winSide,k)}">${esc(fmtRec(k==="A"?sa.w:sb.w,k==="A"?sa.n:sb.n))}</span></li>
+ const cell=(lab,val,side,k,sub,subSide)=>`<li><span class="lab">${esc(lab)}</span><span class="num ${cls(side,k)}">${esc(val)}</span>${sub?`<span class="sub ${subSide==="plain"?"":cls(subSide==null?side:subSide,k)}">${esc(sub)}</span>`:""}</li>`;
+ const col=(p,k)=>{
+  const ses=k==="A"?sesA:sesB,dogSub=dog[k==="A"?"subA":"subB"];
+  return `<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">
+  ${cell("Rank","#"+p.rank,rankSide,k,"of "+players.length,"plain")}
+  ${cell("Elo",String(p.elo),eloSide,k,"")}
+  ${cell("On file",rec(p),"",k,"")}
+  ${cell("As the favorite",fav[k],fav.side,k,"")}
+  ${cell("As the underdog",dog[k],dog.side,k,dogSub)}
+  ${cell("This session",ses.main,"",k,ses.sub)}
  </ul></div>`;
+ };
+ const hi=a.rank<b.rank?a:b,lo=hi===a?b:a;
+ const sum=a.rank===b.rank?`Both are ranked #${a.rank}.`:`${sur(hi.name)} is ranked #${hi.rank}. ${sur(lo.name)} is #${lo.rank}.`;
  box.innerHTML=intro+`<div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(sum)}</p></div>`;
 }
 function renderTrust(){
@@ -1130,7 +1161,7 @@ function renderOdds(a,b,pa,est){EST=est||null;
   set("A",so?so.o1:null);set("B",so?so.o2:null);
  }
  const inp=k=>`<div class="oin"><span class="olbl">${esc(sur((k==="A"?a:b).name))}</span><div class="orow"><button type="button" class="sign" data-s="${k}" aria-label="Switch plus or minus">${odds[k].neg?"−":"+"}</button><input class="oval" data-o="${k}" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 150" value="${esc(odds[k].v)}" aria-label="Odds for ${esc((k==="A"?a:b).name)}"></div></div>`;
- const head=VIEW==="match"?"<h2>Prices</h2>":`<h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p>`;
+ const head=VIEW==="match"?"<h2>Book odds</h2>":`<h2>Odds and value</h2><p class="help" style="margin:0 0 8px">Enter both players' American odds. A logged bet keeps each side. Tap −/+ to switch the sign.</p>`;
  box.innerHTML=`<div class="panel">${head}<div class="orow2">${inp("A")}${inp("B")}</div><div id="oddsOut"></div></div>`;
  box.querySelectorAll(".oval").forEach(i=>i.addEventListener("input",()=>{odds[i.dataset.o].v=i.value.replace(/[^0-9.]/g,"");oddsCalc(a,b,pa)}));
  box.querySelectorAll(".sign").forEach(btn=>btn.addEventListener("click",()=>{const k=btn.dataset.s;odds[k].neg=!odds[k].neg;btn.textContent=odds[k].neg?"−":"+";oddsCalc(a,b,pa)}));
@@ -1143,13 +1174,27 @@ function snapLine(a,b){
  const edge=(so.edge1!=null||so.edge2!=null)?`, edge ${so.edge1!=null?money(so.edge1):"–"} / ${so.edge2!=null?money(so.edge2):"–"} per $100`:"";
  return `<p class="help" style="margin:4px 0 0">Decision snapshot ${ago(so.at)}: book ${so.o1!=null?fmtO(so.o1):"–"} / ${so.o2!=null?fmtO(so.o2):"–"}${app}${edge}.</p>`;
 }
-function showEdgeLine(a,b,pa){
+function showEdgeLine(){
  const el=$("edgeLine");if(!el)return;
- const oa=a&&b?readOdds("A"):null,ob=a&&b?readOdds("B"):null;
- if(VIEW!=="match"||!a||!b||!bothPrices(oa,ob)){el.hidden=true;el.textContent="";return}
+ el.hidden=true;el.textContent="";
+}
+function edgeSummary(a,b,pa){
+ const oa=readOdds("A"),ob=readOdds("B");
+ if(!a||!b||!bothPrices(oa,ob))return "";
  const snap=decisionSnapshot(oa,ob,pa,1-pa);
- el.hidden=false;
- el.textContent=`App ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
+ return `App ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
+}
+// Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
+function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
+function paintPrices(model){
+ for(const k of ["A","B"]){
+  const o=readOdds(k);
+  const cls=o===null?"":oddsTone(model[k]*profit(o)-(1-model[k])*100);
+  for(const node of document.querySelectorAll(`#oddsBox [data-o="${k}"], #oddsBox [data-s="${k}"]`)){
+   node.classList.remove("pos","thin","neg");
+   if(cls)node.classList.add(cls);
+  }
+ }
 }
 function betFormHtml(a,b,oa,ob,model){
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
@@ -1167,9 +1212,25 @@ function oddsCalc(a,b,pa){
  const oa=readOdds("A"),ob=readOdds("B");
  rememberOdds(a,b);
  const model={A:pa,B:1-pa};
- showEdgeLine(a,b,pa);
+ showEdgeLine();
+ paintPrices(model);
  if(VIEW==="match"){
-  out.innerHTML=bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):`<p class="help" style="margin:8px 0 0">Enter both prices and the edge shows above.</p>`;
+  const summary=edgeSummary(a,b,pa);
+  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
+  const margin=ia!==null&&ib!==null?ia+ib-1:null;
+  const sides=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null);
+  const rows=sides.map(([k,p,o,imp])=>{
+   const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
+   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
+  }).join("");
+  const best=sides.map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
+  const verdict=best?best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
+   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
+   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`:"";
+  const flagged=isFlagPair(oa,ob);
+  const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
+  const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">Enter both prices and the edge shows below.</p>`:"");
+  out.innerHTML=lead+(rows?flag+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;

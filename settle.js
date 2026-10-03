@@ -429,3 +429,40 @@ function fieldStat(a, b) {
   const la = fieldLines(a), lb = fieldLines(b);
   return { key: "higher", label: "Vs higher", side: fieldSide(a, b), A: la.main, B: lb.main, subA: la.sub, subB: lb.sub };
 }
+
+// Recent-window rows where this player carried the higher Elo into the match.
+// Even ratings are neither favorite nor underdog. Underdog stays on fieldShape.
+function favoriteShape(rows) {
+  const list = (Array.isArray(rows) ? rows : []).filter(r => r && Number.isFinite(r.own) && Number.isFinite(r.opp));
+  const fav = list.filter(r => r.own > r.opp);
+  return { favN: fav.length, favW: fav.filter(r => r.won).length };
+}
+
+function favoriteSide(a, b) {
+  if (!(a.favN >= 3) || !(b.favN >= 3)) return "";
+  return formEdgeSide(a.favW / a.favN, b.favW / b.favN, a.favN, b.favN, 3);
+}
+
+function favoriteStat(a, b) {
+  a = a && a.favN != null ? a : favoriteShape(a);
+  b = b && b.favN != null ? b : favoriteShape(b);
+  return {
+    key: "favorite",
+    label: "As the favorite",
+    side: favoriteSide(a, b),
+    A: a.favN ? fmtRec(a.favW, a.favN) : "none",
+    B: b.favN ? fmtRec(b.favW, b.favN) : "none"
+  };
+}
+
+// Session is counted elsewhere (the last 12 hours of matches). This only formats it.
+// main is the record. sub is how many matches, plus a losing run when one is already known.
+function sessionStat(s) {
+  const n = s && s.n ? s.n : 0;
+  const w = s && s.w ? s.w : 0;
+  const run = s && s.run ? s.run : 0;
+  if (!n) return { n: 0, w: 0, main: "none yet", sub: "" };
+  let sub = n + " played";
+  if (run >= 3) sub += ", lost " + run + " in a row";
+  return { n, w, main: fmtRec(w, n), sub };
+}
