@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-03T01:39Z
+# updated 2026-10-03T02:51Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9114,12 +9114,12 @@
 2026-10-02 | Kosmal Dawid | Kesik Gracjan | 3-1 | 6 | 1 | +7
 2026-10-02 | Glanowski Jakub | Sulkowski Karol | 3-1 | 6 | 4 | +8
 2026-10-02 | Baron Mariusz | Juszczyk Krzysztof | 3-2 | 6 | 6 | +8
-2026-10-02 | Staszczyk Konrad | Brud Szymon | 3-1 | 6 | 6 | Pending
+2026-10-02 | Staszczyk Konrad | Brud Szymon | 3-1 | 6 | 6 | +5
 2026-10-02 | Kocik Tomasz | Wozniczka Marcin | 3-2 | 6 | 6 | Pending
 2026-10-02 | Vincenec Oliver | Oracz Jacek | 3-1 | 6 | 7 | +13
 2026-10-02 | Malcher Krzysztof | Oracz Jacek | 3-2 | 6 | 6 | Pending
 2026-10-02 | Nowak Jakub | Sawicki Grzegorz | 3-2 | 6 | 1 | +9
-2026-10-02 | Kesik Gracjan | Makajew Maciej | 3-2 | 6 | 6 | Pending
+2026-10-02 | Kesik Gracjan | Makajew Maciej | 3-2 | 6 | 6 | +7
 2026-10-02 | Tkaczyk Henryk | Fira Damian | 3-0 | 6 | 6 | +18
 2026-10-02 | Ruszkiewicz Adam | Kowalski Kamil | 3-0 | 6 | 6 | +6
 2026-10-02 | Wichowski Grzegorz | Pelka Jerzy | 3-1 | 7 | 7 | +9
@@ -9141,8 +9141,8 @@
 2026-10-02 | Glanowski Jakub | Szlubowski Dariusz | 3-0 | 7 | 5 | +13
 2026-10-02 | Sulkowski Karol | Lamperski Jakub | 3-1 | 7 | 2 | +16
 2026-10-02 | Trela Mateusz | Poloszczanski Dawid | 3-2 | 7 | 2 | +8
-2026-10-02 | Kesik Gracjan | Kukawka Milosz | 3-2 | 7 | 6 | Pending
-2026-10-02 | Staszczyk Konrad | Makajew Maciej | 3-1 | 7 | 7 | Pending
+2026-10-02 | Kesik Gracjan | Kukawka Milosz | 3-2 | 7 | 6 | +8
+2026-10-02 | Staszczyk Konrad | Makajew Maciej | 3-1 | 7 | 7 | +3
 2026-10-02 | Bernacki Lukasz | Hetnar Krzysztof | 3-1 | 8 | 8 | +15
 2026-10-02 | Glanowski Jakub | Trela Mateusz | 3-1 | 8 | 6 | +7
 2026-10-02 | Wisniewski Karol | Jendrzejewski Patryk | 3-0 | 8 | 8 | +19
@@ -9158,8 +9158,8 @@
 2026-10-02 | Wiciok Piotr | Pelka Jerzy | 3-1 | 8 | 8 | +14
 2026-10-02 | Slosarczyk Pawel | Wichowski Grzegorz | 3-2 | 8 | 8 | +13
 2026-10-02 | Kosmal Dawid | Brud Szymon | 3-1 | 8 | 3 | +7
-2026-10-02 | Staszczyk Konrad | Kukawka Milosz | 3-0 | 8 | 7 | Pending
-2026-10-02 | Makajew Maciej | Brud Szymon | 3-1 | 8 | 7 | Pending
+2026-10-02 | Staszczyk Konrad | Kukawka Milosz | 3-0 | 8 | 7 | +6
+2026-10-02 | Makajew Maciej | Brud Szymon | 3-1 | 8 | 7 | +15
 2026-10-02 | Krcil Frantisek | Przewlocki Jacek | 3-2 | 9 | 9 | +5
 2026-10-02 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 9 | 5 | +16
 2026-10-02 | Kapik Krzysztof | Jendrzejewski Patryk | 3-0 | 9 | 9 | +18
@@ -9198,10 +9198,10 @@
 2026-10-03 | Oracz Jacek | Wozniczka Marcin | 3-0 | 1 | 1 | Pending
 2026-10-03 | Sawicki Grzegorz | Baron Mariusz | 3-2 | 1 | 1 | +9
 2026-10-03 | Wiza Roman | Michalski Jakub | 3-1 | 1 | 1 | +7
-2026-10-03 | Staszczyk Konrad | Kesik Gracjan | 3-1 | 1 | 1 | Pending
-2026-10-03 | Kukawka Milosz | Brud Szymon | 3-1 | 1 | 1 | Pending
+2026-10-03 | Staszczyk Konrad | Kesik Gracjan | 3-1 | 1 | 1 | +4
+2026-10-03 | Kukawka Milosz | Brud Szymon | 3-1 | 1 | 1 | +12
 2026-10-03 | Fira Damian | Kowalski Kamil | 3-0 | 1 | 1 | +6
-2026-10-03 | Ruszkiewicz Adam | Wiza Roman | 3-1 | 1 | 2 | Pending
+2026-10-03 | Ruszkiewicz Adam | Wiza Roman | 3-1 | 1 | 2 | +11
 2026-10-03 | Zielinski Marcin | Malcher Krzysztof | 3-1 | 2 | 1 | Pending
 2026-10-03 | Vincenec Oliver | Baron Mariusz | 3-0 | 2 | 2 | +16
 2026-10-03 | Pawlik Cezary | Kocik Tomasz | 3-0 | 2 | 1 | Pending
@@ -9210,7 +9210,10 @@
 2026-10-03 | Oracz Lukasz | Sawicki Grzegorz | 3-0 | 2 | 2 | +14
 2026-10-03 | Oracz Jacek | Kocik Tomasz | 3-1 | 2 | 2 | Pending
 2026-10-03 | Juszczyk Krzysztof | Nowak Jakub | 3-1 | 2 | 2 | +9
-2026-10-03 | Kesik Gracjan | Brud Szymon | 3-1 | 2 | 2 | Pending
+2026-10-03 | Kesik Gracjan | Brud Szymon | 3-1 | 2 | 2 | +11
+2026-10-03 | Kukawka Milosz | Makajew Maciej | 3-1 | 2 | 1 | +10
+2026-10-03 | Ruszkiewicz Adam | Fira Damian | 3-1 | 2 | 2 | +12
+2026-10-03 | Michalski Jakub | Tkaczyk Henryk | 3-1 | 2 | 1 | +18
 2026-10-03 | Glanowski Jakub | Sulkowski Karol | 3-1 | 3 | 2 | +6
 2026-10-03 | Zielinski Marcin | Wozniczka Marcin | 3-0 | 3 | 2 | Pending
 2026-10-03 | Lamperski Jakub | Poloszczanski Dawid | 3-0 | 3 | 2 | +10
@@ -9218,4 +9221,10 @@
 2026-10-03 | Juszczyk Krzysztof | Sawicki Grzegorz | 3-1 | 3 | 3 | +11
 2026-10-03 | Pawlik Cezary | Malcher Krzysztof | 3-0 | 3 | 2 | Pending
 2026-10-03 | Wozniczka Marcin | Pawlik Cezary | 3-1 | 3 | 4 | Pending
+2026-10-03 | Oracz Lukasz | Baron Mariusz | 3-1 | 3 | 3 | +10
+2026-10-03 | Kocik Tomasz | Malcher Krzysztof | 3-2 | 3 | 3 | Pending
+2026-10-03 | Michalski Jakub | Kowalski Kamil | 3-0 | 3 | 2 | Pending
 2026-10-03 | Zielinski Marcin | Oracz Jacek | 3-2 | 4 | 3 | Pending
+2026-10-03 | Vincenec Oliver | Sawicki Grzegorz | 3-2 | 4 | 4 | +7
+2026-10-03 | Baron Mariusz | Nowak Jakub | 3-2 | 4 | 4 | Pending
+2026-10-03 | Pawlik Cezary | Oracz Jacek | 3-0 | 5 | 4 | Pending
