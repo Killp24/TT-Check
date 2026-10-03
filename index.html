@@ -19,7 +19,7 @@
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,system-ui,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45}
-main{max-width:640px;margin:0 auto;padding:16px}
+main{max-width:640px;margin:0 auto;padding:16px 16px calc(28px + env(safe-area-inset-bottom,0px) + 64px)}
 h1{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-weight:700;font-size:2rem;line-height:1;margin:8px 0 4px;letter-spacing:.01em}
 .sub{color:var(--muted);margin:0 0 16px;font-size:.95rem}
 .court{background:linear-gradient(var(--table),var(--table2));border:3px solid var(--line);border-radius:6px;position:relative;padding:14px;color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.15)}
@@ -136,7 +136,7 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .note{display:block;margin-top:6px;font-size:.93rem}
 .banlist .pos{color:var(--ok)}.banlist .neg{color:var(--ban)}
 .topbar{justify-content:space-between}
-.sheet{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;overflow-anchor:none;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 72px)}
+.sheet{position:fixed;inset:0;z-index:30;background:var(--bg);overflow-y:auto;overflow-anchor:none;-webkit-overflow-scrolling:touch;padding:calc(env(safe-area-inset-top,0px) + 12px) 16px calc(env(safe-area-inset-bottom,0px) + 88px)}
 .sheet .tools{max-width:640px;margin:0 auto}
 .sheethd{max-width:640px;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:8px;position:sticky;top:0;background:var(--bg);padding:4px 0 8px;z-index:1}
 .sheethd h2{font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.6rem;margin:0}
@@ -214,12 +214,36 @@ html.lock,html.lock body{overflow:hidden}
 #bookBox .row{flex-wrap:wrap;gap:6px}
 #bookBox select{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
 #bookBox .bfstake{width:72px}
-.flow{display:flex;gap:8px;margin:0 0 10px}
-.flow .btn{flex:1;text-align:center}
-.flow .btn.on{background:var(--table);border-color:var(--table);color:#fff}
-.listback{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;display:flex;align-items:center;width:calc(100% + 32px);margin:-16px -16px 12px;padding:12px 16px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:var(--card);color:var(--ink);font:inherit;font-weight:700;text-align:left;cursor:pointer}
+.appbar{display:flex;flex-direction:column;align-items:stretch;gap:6px;margin:0 0 8px}
+.corner{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap}
+.corner .btn{padding:6px 10px;font-size:.85rem}
+.brand h1{margin-top:0}
+.srcline{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0}
+.srcline .src{margin:0;flex:1 1 180px}
+.srcline .msg{margin:0}
+.srcline .msg:empty{display:none}
+.mini:disabled{opacity:.5}
+.pairbar{display:flex;flex-direction:column;gap:8px;margin:0 0 8px}
+.pairacts{display:flex;justify-content:flex-end;gap:8px}
+.pairacts .btn{padding:8px 12px}
+.matchstick{position:sticky;top:env(safe-area-inset-top,0px);z-index:16;background:var(--bg);margin:0 -16px;padding:0 16px 4px}
+body[data-view="assist"] .matchstick{position:static;background:transparent;margin:0;padding:0}
+.listback{display:flex;align-items:center;width:calc(100% + 32px);margin:0 -16px 8px;padding:12px 16px;border:0;border-bottom:1px solid var(--border);border-radius:0;background:var(--card);color:var(--ink);font:inherit;font-weight:700;text-align:left;cursor:pointer}
 .listback[hidden]{display:none}
 .listback:focus-visible{outline:3px solid var(--ball);outline-offset:-3px}
+.mtabs{display:flex;gap:6px;margin:0}
+.mtabs[hidden]{display:none}
+.mtabs .btn,.dock .btn{flex:1;text-align:center}
+.mtabs .btn{padding:8px 6px;font-size:.92rem}
+.mtabs .btn.on,.dock .btn.on{background:var(--table);border-color:var(--table);color:#fff}
+.tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
+.tabsub:empty,.tabsub[hidden]{display:none}
+.mi0{display:block;font-family:"Avenir Next Condensed","Arial Narrow",Impact,sans-serif;font-size:1.45rem;font-weight:700;line-height:1.1}
+.mi0 .vs{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--muted)}
+body[data-view="match"] h1,body[data-view="match"] #assistLead{display:none}
+body[data-view="match"] .foot{display:none}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);border-top:1px solid var(--border);padding:6px 12px calc(env(safe-area-inset-bottom,0px) + 6px)}
+.dockin{max-width:640px;margin:0 auto;display:flex;gap:6px}
 .srow.here{outline:3px solid var(--ball);outline-offset:1px}
 .trust{color:var(--muted);font-size:.82rem;margin:-4px 0 14px}
 .trust:empty,.trust[hidden]{display:none}
@@ -227,7 +251,7 @@ html.lock,html.lock body{overflow:hidden}
 .schedmore{margin:0 0 8px;background:transparent;border:0}
 .schedmore summary{padding:0;font-weight:600;font-size:.9rem;color:var(--muted)}
 .schedmark{list-style:none;margin:4px 0 8px;padding:8px 0 0;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.totop{position:fixed;right:max(16px,calc(50vw - 320px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:30;background:var(--table);color:#fff;border:0;border-radius:20px;padding:10px 16px;font:inherit;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
+.totop{position:fixed;right:max(16px,calc(50vw - 320px));bottom:calc(env(safe-area-inset-bottom,0px) + 76px);z-index:45;background:var(--table);color:#fff;border:0;border-radius:20px;padding:10px 16px;font:inherit;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
 .totop:focus-visible{outline:3px solid var(--ball)}
 .sleg li.void{color:var(--muted)}
 .sleg .bb{flex:none}
@@ -244,21 +268,25 @@ html.lock,html.lock body{overflow:hidden}
 .cmpstats .sub.even{color:var(--muted);font-weight:600}
 .cmpread{margin:12px 0 0;font-weight:600}
 </style></head><body><main>
-<button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
-<h1>TT matchup check</h1>
-<p class="sub">Pick two players.</p>
-<p class="src" id="srcInfo">Loading data…</p>
-<p class="srcact"><button class="btn" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p>
-<nav class="flow" aria-label="Today, signals, assist"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">1 Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">2 Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="step">3 Assist</button></nav>
+<div class="appbar">
+ <div class="corner"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
+ <div class="brand"><h1>TT matchup check</h1><p class="srcline"><span class="src" id="srcInfo">Loading data…</span><button class="mini" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p></div>
+</div>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
-<div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><div class="tb"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
-<div id="matchInfo" class="minfo" hidden></div>
-<section class="court">
+<div class="matchstick" id="matchStick">
+<button class="listback" id="listBack" type="button" hidden>← Back to Today</button>
+<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button></nav>
+<p class="tabsub" id="tabSub" hidden></p>
+</div>
+<p class="sub" id="assistLead">Type two player names.</p>
+<div class="pairbar"><div id="matchInfo" class="minfo" hidden></div><div class="pairacts"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
+<section class="court" id="court">
  <div class="sides">
-  <div class="side"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="A" aria-label="Clear player 1">✕</button><ul class="sugg" id="sgA"></ul></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
-  <div class="side"><label for="inB">Player 2</label><div class="field"><input id="inB" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="B" aria-label="Clear player 2">✕</button><ul class="sugg" id="sgB"></ul></div><div class="pcard" id="cardB"><div class="empty">No player picked</div></div></div>
+  <div class="side"><div class="seek" id="seekA"><label for="inA">Player 1</label><div class="field"><input id="inA" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="A" aria-label="Clear player 1">✕</button><ul class="sugg" id="sgA"></ul></div></div><div class="pcard" id="cardA"><div class="empty">No player picked</div></div></div>
+  <div class="side"><div class="seek" id="seekB"><label for="inB">Player 2</label><div class="field"><input id="inB" autocomplete="off" placeholder="Type a name"><button class="x" type="button" data-x="B" aria-label="Clear player 2">✕</button><ul class="sugg" id="sgB"></ul></div></div><div class="pcard" id="cardB"><div class="empty">No player picked</div></div></div>
  </div>
 </section>
+<div id="paneDetails">
 <div id="odds" class="panel wc" hidden>
  <h2>Win chance</h2>
  <div class="wcrow">
@@ -271,8 +299,10 @@ html.lock,html.lock body{overflow:hidden}
 <div id="verdict"></div>
 <div id="oddsBox"></div>
 <div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
-<div id="h2h"></div>
 <div id="cmp"></div>
+</div>
+<div id="paneStandings" hidden></div>
+<div id="paneH2h"><div id="h2h"></div></div>
 <div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><button class="btn" id="favsClose" type="button">Back</button><h2 id="favTitle">Favourites</h2><span></span></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
@@ -316,8 +346,9 @@ html.lock,html.lock body{overflow:hidden}
 </div></details>
 </div>
 </div>
-<p class="note">Win odds start from the Elo formula, then use the calibration that has been more accurate on past matches. Form, head-to-head, and how many matches a player has already played today are added only when that has lowered the error. A saved book price is mixed in only after priced results show that the mix is closer. None of this edits the ban list. Tap a player's ban list tag to add or remove them.</p>
+<p class="note foot">Win odds start from the Elo formula, then use the calibration that has been more accurate on past matches. Form, head-to-head, and how many matches a player has already played today are added only when that has lowered the error. A saved book price is mixed in only after priced results show that the mix is closer. None of this edits the ban list. Tap a player's ban list tag to add or remove them.</p>
 </main>
+<nav class="dock" aria-label="Today, signals, assist"><div class="dockin"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="page">Assist</button></div></nav>
 <script src="settle.js"></script>
 <script>const $=id=>document.getElementById(id);
 function load(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
@@ -379,7 +410,10 @@ function apply(){
  const when=new Date(data.at);
  const asOf=(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  $("srcInfo").textContent=(asOf?`Official Elo as of ${nice(asOf)}. `:"")+`${players.length} players, ${official.length} official matches${offAt?` (updated ${ago(offAt)})`:""}, ${mine.length} logged by you. Data from ${when.toLocaleDateString()} ${when.toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"})}`+(pending.length?`, ${pending.length} result${pending.length>1?"s":""} waiting to sync.`:".");
- ["A","B"].forEach(k=>{if(sel[k])sel[k]=players.find(p=>p.name===sel[k].name)||null});
+ ["A","B"].forEach(k=>{
+  if(sel[k])sel[k]=players.find(p=>p.name===sel[k].name)||null;
+  if(typed[k])typed[k]=players.find(p=>p.name===typed[k].name)||null;
+ });
  update();renderBan();renderForm();renderRecent();renderSetup();
 }
 
@@ -828,6 +862,8 @@ function bookOpt(o1,o2){if(!(BOOK_W>0))return null;const fair=fairPair(o1,o2);re
 
 // ---------- matchup ----------
 const sel={A:null,B:null};
+const typed={A:null,B:null,tA:"",tB:""};
+let VIEW="assist",STEP="assist",MTAB="details",MATCH=null,MATCHFROM=null;
 const isBan=p=>BAN.has(p.name);
 const banRank=p=>BANORDER.indexOf(p.name)+1;
 const tierOfName=n=>{const r=BANORDER.indexOf(n)+1;return !r?0:r<=5?1:r<=10?2:3};
@@ -867,11 +903,12 @@ function form(p){
  const w=ten.filter(m=>m.w===p.name).length;
  return `<div class="form">${last.map(m=>{const won=m.w===p.name,opp=won?m.l:m.w;return`<b class="${won?'w':'l'}" title="${won?'Beat':'Lost to'} ${esc(opp)} ${esc(m.score)}">${won?'W':'L'}</b>`}).join("")}<small>Last ${ten.length}: ${w}–${ten.length-w}</small>${honestLines(p)}${statLines(p)}${car}</div>`;
 }
-function card(p,k){if(!p)return'<div class="empty">No player picked</div>';
+function card(p,k){if(!p){const fb=VIEW==="match"&&MATCH?(k==="A"?MATCH.p1:MATCH.p2):"";return fb?`<div class="pname">${esc(fb)}</div><div class="empty">Not in the ratings</div>`:'<div class="empty">No player picked</div>'}
  return `<div class="pname">${esc(p.name)}</div><div class="elo">${p.elo}</div><div class="rank">Rank #${p.rank} of ${players.length}</div>`+
  `<button type="button" class="tag ${isBan(p)?'ban t'+tierOf(p):'clean'}" data-k="${k}">${isBan(p)?tierTxt(p):'Not on ban list'}</button>`+form(p)+`<a class="ext" href="https://www.tt-series.com/player/?player=${encodeURIComponent(p.name).replace(/%20/g,'+')}" target="_blank" rel="noopener">Official profile ↗</a>`}
 const sur=n=>n.split(" ")[0];
 function update(){
+ if(VIEW==="assist"){typed.A=sel.A;typed.B=sel.B;typed.tA=$("inA").value;typed.tB=$("inB").value}
  const a=sel.A,b=sel.B;
  renderMatchInfo();
  // One star. It saves the scheduled match when there is one, otherwise the pairing.
@@ -884,7 +921,7 @@ function update(){
  }else favB.hidden=true;
  $("cardA").innerHTML=card(a,"A");$("cardB").innerHTML=card(b,"B");
  const odds=$("odds"),v=$("verdict"),h=$("h2h");
- if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();return}
+ if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderStandings(a,b);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
  renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
@@ -937,7 +974,9 @@ function update(){
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
  h.innerHTML=`<div class="panel"><h2>Head-to-head</h2><div>${headline}</div>`+(meet.length?`<ul class="meet">${meet.slice(0,5).map(m=>`<li>${esc(sur(m.w))} beat ${esc(sur(m.l))}${m.score?" "+esc(m.score):""}<span>${esc(nice(m.date))}</span></li>`).join("")}</ul>`:"")+`<a class="ext dark" href="https://www.tt-series.com/h2h/" target="_blank" rel="noopener">Full official head-to-head ↗</a><p class="help" style="margin:4px 0 0">Opens tt-series.com. Pick ${esc(a.name)} and ${esc(b.name)} there and tap Show Matches.</p></div>`;
  renderCompare(a,b);
+ renderStandings(a,b);
  renderTrust();
+ applyChrome();
 }
 function recentRows(name){
  return matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,15).map(m=>{
@@ -980,6 +1019,36 @@ function renderCompare(a,b){
  }
  read+=bookLine(a,b);
  box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green leads that stat. Red is the lower number. Vs higher is the record against better-rated opponents, with how far above they were and the strongest win. This session stays plain. A typed price shows in the line below.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
+}
+function renderStandings(a,b){
+ const box=$("paneStandings");if(!box)return;
+ const n1=a?a.name:(MATCH?MATCH.p1:""),n2=b?b.name:(MATCH?MATCH.p2:"");
+ if(!n1||!n2||n1===n2){box.innerHTML="";return}
+ const intro=`<div class="panel"><h2>Standings</h2><p class="help">Their place in the Elo ratings. This is not a league table.</p>`;
+ if(!a||!b){box.innerHTML=intro+`<p class="help">${esc(!a?n1:n2)} is not in the ratings, so there is no place to show.</p></div>`;return}
+ const rowsA=recentRows(a.name),rowsB=recentRows(b.name);
+ const sa=recentShape(rowsA),sb=recentShape(rowsB);
+ const counted=recentStatRows(sa,sb).concat(fieldStat(fieldShape(rowsA),fieldShape(rowsB)));
+ const higher=counted.find(r=>r.key==="higher")||{side:"",A:"none",B:"none",subA:"",subB:""};
+ const lead=recentLead(counted);
+ const rec=p=>{const r=REC.get(p.name);return r?`${r.w}–${r.l}`:"no results yet"};
+ const cls=(side,k)=>side===""?"even":side===k?"pos":"neg";
+ let sum;
+ if(rowsA.length<5||rowsB.length<5) sum="One side has fewer than 5 results on file, so the last-15 read stays off.";
+ else if(lead.a===lead.b) sum=lead.a?`Last 15 splits ${lead.a}–${lead.b} on the stats with enough matches.`:"Last 15 is level on the stats with enough matches.";
+ else{const ahead=lead.a>lead.b?a:b,n=Math.max(lead.a,lead.b),other=Math.min(lead.a,lead.b);
+  sum=`Last 15: ${sur(ahead.name)} leads ${n} of ${counted.length} stats${other?`, the other leads ${other}`:""}.`;}
+ const eloSide=a.elo===b.elo?"":a.elo>b.elo?"A":"B";
+ const rankSide=a.rank===b.rank?"":a.rank<b.rank?"A":"B";
+ const winSide=formEdgeSide(sa.n?sa.w/sa.n:0,sb.n?sb.w/sb.n:0,sa.n,sb.n,5);
+ const col=(p,k)=>`<div><div class="cmpname">${esc(p.name)}</div><ul class="cmpstats">
+  <li><span class="lab">Elo rank</span><span class="num ${cls(rankSide,k)}">#${p.rank}</span><span class="sub">of ${players.length}</span></li>
+  <li><span class="lab">Elo</span><span class="num ${cls(eloSide,k)}">${p.elo}</span></li>
+  <li><span class="lab">On file</span><span class="num even">${esc(rec(p))}</span></li>
+  <li><span class="lab">Vs higher</span><span class="num ${cls(higher.side,k)}">${esc(higher[k])}</span>${higher[k==="A"?"subA":"subB"]?`<span class="sub ${cls(higher.side,k)}">${esc(higher[k==="A"?"subA":"subB"])}</span>`:""}</li>
+  <li><span class="lab">Last 15</span><span class="num ${cls(winSide,k)}">${esc(fmtRec(k==="A"?sa.w:sb.w,k==="A"?sa.n:sb.n))}</span></li>
+ </ul></div>`;
+ box.innerHTML=intro+`<div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(sum)}</p></div>`;
 }
 function renderTrust(){
  const el=$("trustInfo");if(!el)return;
@@ -1156,8 +1225,11 @@ $("saveSetup").onclick=async()=>{
 };
 $("syncNow").onclick=()=>refresh(true);
 $("forget").onclick=()=>{cfg.token="";save("tt-cfg",cfg);renderSetup();update();renderRecent();setMsg("setupMsg","ok","Token removed from this phone.")};
-$("clear").onclick=()=>{sel.A=sel.B=null;$("inA").value="";$("inB").value="";update();$("inA").focus()};
-document.querySelectorAll(".x").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.x;sel[k]=null;$("in"+k).value="";update();$("in"+k).focus()}));
+$("clear").onclick=()=>{
+ if(VIEW==="match"){backFromMatch();return}
+ typed.A=typed.B=null;typed.tA=typed.tB="";
+ sel.A=sel.B=null;$("inA").value="";$("inB").value="";update();$("inA").focus()};
+document.querySelectorAll(".x").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.x;if(!k||VIEW!=="assist")return;sel[k]=null;$("in"+k).value="";update();$("in"+k).focus()}));
 
 
 
@@ -1263,12 +1335,9 @@ function restoreToday(){
   $("schedTop").hidden=sheet.scrollTop<360;
  });
 }
-$("listBack").onclick=restoreToday;
+$("listBack").onclick=backFromMatch;
 $("schedList").addEventListener("click",e=>{const f=e.target.closest("[data-favm]");if(f){toggleFavM(SCHED[+f.dataset.favm]);return}
- const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
- rememberToday(b);
- PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
- closeSheet("sched");setFlow("assist");update();scrollTo(0,0);$("listBack").focus()});
+ const b=e.target.closest(".srow");if(!b)return;rememberToday(b);openListedMatch(SCHED[+b.dataset.i],{kind:"today"})});
 $("onlyFav").onchange=()=>renderSched({keep:true});$("onlyEV").onchange=()=>renderSched({keep:true});$("onlyFlag").onchange=()=>renderSched({keep:true});
 $("schFind").addEventListener("input",()=>renderSched({keep:true}));
 $("schClear").onclick=()=>{$("schFind").value="";renderSched({keep:true});$("schFind").focus()};
@@ -1330,11 +1399,78 @@ function reportCard(){
 }
 
 function setFlow(which){
+ STEP=which;
  for(const [id,k] of [["schedBtn","today"],["sigBtn","signals"],["assistBtn","assist"]]){
   const b=$(id);if(!b)continue;const on=k===which;b.classList.toggle("on",on);
-  if(on)b.setAttribute("aria-current","step");else b.removeAttribute("aria-current");
+  if(on)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
  }
 }
+function applyChrome(){
+ const match=VIEW==="match";
+ document.body.dataset.view=VIEW;
+ document.body.dataset.tab=match?MTAB:"";
+ $("assistLead").hidden=match;
+ $("matchTabs").hidden=!match;
+ const sub=$("tabSub");
+ if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
+ else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
+ else{sub.hidden=true;sub.textContent=""}
+ $("seekA").hidden=match;$("seekB").hidden=match;
+ $("court").hidden=match&&MTAB!=="details";
+ $("paneDetails").hidden=match&&MTAB!=="details";
+ $("paneH2h").hidden=match&&MTAB!=="h2h";
+ $("paneStandings").hidden=!(match&&MTAB==="standings");
+ for(const id of ["tabDetails","tabStandings","tabH2h"]){
+  const b=$(id);if(!b)continue;const on=b.dataset.tab===MTAB;
+  b.classList.toggle("on",on);b.setAttribute("aria-selected",on?"true":"false");
+ }
+ const back=$("listBack");
+ if(match&&MATCHFROM){
+  back.hidden=false;
+  back.textContent=MATCHFROM.kind==="today"?"← Back to Today":MATCHFROM.kind==="signals"?"← Back to Signals":MATCHFROM.kind==="favs"?"← Back to Saved":"← Back";
+ }else back.hidden=true;
+ setFlow(STEP);
+}
+function stashAssist(){
+ if(VIEW!=="assist")return;
+ typed.A=sel.A;typed.B=sel.B;typed.tA=$("inA").value;typed.tB=$("inB").value;
+}
+function restoreAssist(){
+ VIEW="assist";MATCH=null;MATCHFROM=null;PICKED=null;MTAB="details";
+ sel.A=typed.A;sel.B=typed.B;
+ $("inA").value=typed.tA||"";$("inB").value=typed.tB||"";
+ setFlow("assist");
+ update();
+}
+function closeLists(){["sched","signals","menu","favs","bets"].forEach(closeSheet)}
+function openListedMatch(r,from){
+ if(!r)return;
+ stashAssist();
+ VIEW="match";MTAB="details";
+ MATCH={p1:r.p1,p2:r.p2,r};
+ MATCHFROM=from||{kind:"today"};
+ PICKED=r;
+ sel.A=byNameP(r.p1)||null;sel.B=byNameP(r.p2)||null;
+ setFlow(MATCHFROM.kind==="signals"?"signals":"today");
+ closeLists();
+ update();
+ scrollTo(0,0);
+ const back=$("listBack");if(back)back.focus();
+}
+function showAssistPair(n1,n2){
+ const a=players.find(p=>p.name===n1)||null,b=players.find(p=>p.name===n2)||null;
+ typed.A=a;typed.B=b;typed.tA=a?a.name:n1;typed.tB=b?b.name:n2;
+ closeLists();restoreAssist();scrollTo(0,0);
+}
+function backFromMatch(){
+ const from=MATCHFROM;
+ if(from&&from.kind==="today"&&LISTBACK){restoreToday();return}
+ if(from&&from.kind==="signals"){openSheet("signals");return}
+ if(from&&from.kind==="favs"){renderFavs();openSheet("favs");return}
+ if(from&&from.kind==="menu"){openMenu();return}
+ restoreAssist();
+}
+function setMatchTab(tab){MTAB=tab;applyChrome();renderMatchInfo()}
 function renderSignals(){
  linkResults();
  const now=Date.now();
@@ -1362,29 +1498,35 @@ function renderSignals(){
  items.sort((x,y)=>y.rank-x.rank||x.r.at-y.r.at);
  const shown=items.slice(0,40);
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
- $("sigInfo").textContent=`${shown.length===items.length?items.length+" signal"+(items.length===1?"":"s"):"40 strongest of "+items.length+" signals"}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open it in Assist. Today still has every match.`;
+ $("sigInfo").textContent=`${shown.length===items.length?items.length+" signal"+(items.length===1?"":"s"):"40 strongest of "+items.length+" signals"}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Today still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
   return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Today for the full schedule, or enter a book price in Assist.</li>`;
 }
-$("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;const r=SCHED[+b.dataset.i];
- PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);sel.A=a||null;sel.B=c||null;$("inA").value=a?a.name:r.p1;$("inB").value=c?c.name:r.p2;
- closeSheet("signals");setFlow("assist");update();scrollTo(0,0)});
+$("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;openListedMatch(SCHED[+b.dataset.i],{kind:"signals"})});
 function openSheet(id, opt){
  $(id).hidden=false;document.documentElement.classList.add("lock");
  const c=$(id+"Close");if(c&&!(opt&&opt.keep))c.focus();
  if(id==="sched"){setFlow("today");renderSched();
   if(!(opt&&opt.keep))requestAnimationFrame(()=>{const s=$("sched");s.scrollTop=$("showDone").checked?schedNowTop(s):0;$("schedTop").hidden=s.scrollTop<360})}
- if(id==="signals"){setFlow("signals");renderSignals();const s=$("sigClose");if(s)s.focus()}
+ if(id==="signals"){setFlow("signals");renderSignals();const s=$("sigClose");if(s&&!(opt&&opt.keep))s.focus()}
 }
 function closeSheet(id){$(id).hidden=true;if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock")}
-$("schedBtn").onclick=()=>openSheet("sched");$("schedClose").onclick=()=>{closeSheet("sched");setFlow("assist");$("schedBtn").focus()};
-$("sigBtn").onclick=()=>openSheet("signals");$("sigClose").onclick=()=>{closeSheet("signals");setFlow("assist");$("sigBtn").focus()};
-$("assistBtn").onclick=()=>{["sched","signals","menu","favs","bets"].forEach(closeSheet);setFlow("assist");scrollTo(0,0);$("inA").focus()};
+$("schedBtn").onclick=()=>{
+ if(VIEW==="match"&&MATCHFROM&&MATCHFROM.kind==="today"&&LISTBACK&&$("sched").hidden){restoreToday();return}
+ if(!$("sched").hidden)return;
+ ["signals","menu","favs","bets"].forEach(closeSheet);openSheet("sched")};
+$("schedClose").onclick=()=>{closeSheet("sched");restoreAssist();$("schedBtn").focus()};
+$("sigBtn").onclick=()=>{
+ if(!$("signals").hidden)return;
+ ["sched","menu","favs","bets"].forEach(closeSheet);openSheet("signals")};
+$("sigClose").onclick=()=>{closeSheet("signals");restoreAssist();$("sigBtn").focus()};
+$("assistBtn").onclick=()=>{closeLists();restoreAssist();scrollTo(0,0);$("inA").focus()};
+$("matchTabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;setMatchTab(b.dataset.tab)});
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;
- if(!$("signals").hidden){closeSheet("signals");setFlow("assist");$("sigBtn").focus()}
- else if(!$("sched").hidden){closeSheet("sched");setFlow("assist");$("schedBtn").focus()}});
+ if(!$("signals").hidden){closeSheet("signals");restoreAssist();$("sigBtn").focus()}
+ else if(!$("sched").hidden){closeSheet("sched");restoreAssist();$("schedBtn").focus()}});
 
 
 
@@ -1404,19 +1546,22 @@ function linkResults(){
 function renderMatchInfo(){
  const box=$("matchInfo"),a=sel.A,b=sel.B;
  linkResults();
- if(!a||!b||a===b){box.hidden=true;CURMATCH=null;return}
- const pair=[a.name,b.name].sort().join("|"),now=Date.now();
+ const n1=a?a.name:(VIEW==="match"&&MATCH?MATCH.p1:"");
+ const n2=b?b.name:(VIEW==="match"&&MATCH?MATCH.p2:"");
+ if(!n1||!n2||n1===n2){box.hidden=true;CURMATCH=null;return}
+ const pair=[n1,n2].sort().join("|"),now=Date.now();
  const same=r=>[r.p1,r.p2].sort().join("|")===pair;
  let r=PICKED&&same(PICKED)?PICKED:null;
  const next=SCHED.filter(x=>same(x)&&!x.res&&!x.fin&&x.at.getTime()>now-20*60000).sort((x,y)=>x.at-y.at);
  if(!r)r=next[0]||null;
  CURMATCH=r;
- if(!r){box.hidden=true;return}
+ const names=VIEW==="match"&&MTAB!=="details"?`<span class="mi0">${esc(n1)} <span class="vs">vs</span> ${esc(n2)}</span>`:"";
+ if(!r){box.innerHTML=names;box.hidden=!names;return}
  const mins=Math.round((r.at-now)/60000);
  const day=r.at.toDateString()===new Date().toDateString()?"Today":r.at.toDateString()===new Date(now+864e5).toDateString()?"Tomorrow":r.at.toLocaleDateString([],{weekday:"short",day:"numeric",month:"short"});
  const status=r.fin?`Finished: ${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:mins<=-20?"Result pending":mins<=0?"Starting now":mins<60?`Starts in ${mins} min`:`Starts in ${Math.floor(mins/60)} h ${mins%60} min`;
  const more=next.filter(x=>x!==r).length;
- box.innerHTML=`<span class="mi1">📅 ${day} ${r.at.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})} · <b>${status}</b></span><span class="mi2">${esc(r.tour)}${more?` · they meet ${more} more time${more>1?"s":""} in the next 30 h`:""}</span>`;
+ box.innerHTML=names+`<span class="mi1">📅 ${day} ${r.at.toLocaleTimeString([],{hour:"numeric",minute:"2-digit"})} · <b>${status}</b></span><span class="mi2">${esc(r.tour)}${more?` · they meet ${more} more time${more>1?"s":""} in the next 30 h`:""}</span>`;
  box.hidden=false;
 }
 setInterval(()=>{if(!document.hidden)renderMatchInfo()},30000);
@@ -1839,11 +1984,7 @@ function renderGaps(res){
  box.innerHTML=`<h3 class="rch">Biggest gaps vs the book</h3><ul class="slist">${top.map(({r,top:t,gap})=>
   `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b></span><span class="smid"><span class="sp">${esc(t.p.name)} ${t.o>0?"+":""}${t.o}</span><small class="muted">book ${Math.round(t.imp*100)}% · app ${Math.round(t.pm*100)}% · ${esc(r.tour)}</small><span class="stags"><span class="stag ${t.ev>=3?"ev":""}">${t.ev>=0?"+":"−"}$${Math.abs(t.ev).toFixed(0)} per $100</span></span></span></button></li>`).join("")}</ul>
   <p class="help">A big gap means the app and the book disagree. Those are the ones worth logging either way, so we can find out which of you is right.</p>`;
- box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{
-  const r=SCHED[+btn.dataset.i];PICKED=r;const a=byNameP(r.p1),c=byNameP(r.p2);
-  sel.A=a||null;sel.B=c||null;$("inA").value=r.p1;$("inB").value=r.p2;
-  closeSheet("menu");update();scrollTo(0,0);
- });
+ box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"menu"})});
 }
 $("oddsSave").onclick=()=>{
  const t=$("oddsPaste").value;
@@ -1953,16 +2094,12 @@ if(!FAVS.size){box.innerHTML=mhtml;wireFavs(box);return}
 function wireFavs(box){
  box.querySelectorAll("[data-fav]").forEach(btn=>btn.onclick=()=>{const [x,y]=btn.dataset.fav.split("|");toggleFav(x,y)});
  box.querySelectorAll("[data-rmm]").forEach(btn=>btn.onclick=()=>{FAVM.delete(btn.dataset.rmm);save("tt-favm",[...FAVM]);renderSched();renderFavs()});
- box.querySelectorAll("[data-i]").forEach(btn=>btn.onclick=()=>{
-  const r=SCHED[+btn.dataset.i];PICKED=r;sel.A=players.find(p=>p.name===r.p1)||null;sel.B=players.find(p=>p.name===r.p2)||null;
-  $("inA").value=r.p1;$("inB").value=r.p2;closeSheet("favs");update();scrollTo(0,0);
- });
+ box.querySelectorAll("[data-i]").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"favs"})});
  box.querySelectorAll("[data-pair]").forEach(btn=>btn.onclick=()=>{
   const [x,y]=btn.dataset.pair.split("|");
   const r=SCHED.filter(z=>!z.res&&!z.fin&&favKey(z.p1,z.p2)===favKey(x,y)&&z.at.getTime()>Date.now()-30*60000).sort((p,q)=>p.at-q.at)[0];
-  PICKED=r||null;sel.A=players.find(p=>p.name===(r?r.p1:x))||null;sel.B=players.find(p=>p.name===(r?r.p2:y))||null;
-  $("inA").value=sel.A?sel.A.name:x;$("inB").value=sel.B?sel.B.name:y;
-  closeSheet("favs");update();scrollTo(0,0);
+  if(r){openListedMatch(r,{kind:"favs"});return}
+  showAssistPair(x,y);
  });
 }
 
@@ -1981,7 +2118,7 @@ $("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
 $("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");$("favsBtn").focus()}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
-setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
+applyChrome();setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
 $("refreshBtn").onclick=()=>refreshResults();
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
