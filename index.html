@@ -114,11 +114,23 @@ textarea:focus,.inp:focus,select:focus{outline:3px solid var(--ball);outline-off
 .x{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:32px;height:32px;border:0;background:none;color:#5b6b78;font-size:15px;cursor:pointer;border-radius:4px}
 .x:focus-visible{outline:3px solid var(--ball)}
 .orow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bkrow{display:grid;grid-template-columns:1fr 1fr;gap:6px;align-items:center;padding:8px 0;border-top:1px solid var(--border)}
+.bkn{grid-column:1 / -1;font-weight:700;font-size:.9rem}
+.bkbest{margin-left:6px;font-size:.72rem;font-weight:700;color:var(--ok)}
+.bkhead{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 0}
+.bkhead span{text-align:center;font-size:.75rem;font-weight:700;color:var(--muted)}
+#bookRead:empty,#bookGap:empty{display:none}
+.bksaved{grid-column:1 / -1;font-size:.75rem;color:var(--muted)}
+.bksaved.on{color:var(--ok);font-weight:700}
+.bksaved.flag{color:#6b21a8;font-weight:700}
+.saveproof{margin-top:12px;padding-top:8px;border-top:1px solid var(--border)}
+.saveproof li{padding:4px 0;border-top:1px solid var(--border);font-size:.84rem}
 .olbl{display:block;font-size:.85rem;color:var(--muted);margin-bottom:3px}
 .orow{display:flex;gap:6px}
 .sign{flex:none;width:42px;font:inherit;font-size:1.2rem;font-weight:700;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink);cursor:pointer}
 .sign:focus-visible,.oval:focus{outline:3px solid var(--ball);outline-offset:1px}
 .oval{background:var(--bg);color:var(--ink);border:1px solid var(--border);min-width:0}
+.bkrow .oval{flex:1;width:auto}
 .otab{overflow-x:auto;margin-top:10px}
 .otab table{width:100%;border-collapse:collapse;font-size:.88rem}
 .otab th{text-align:left;color:var(--muted);font-weight:600;padding:4px 6px 4px 0;white-space:nowrap}
@@ -172,6 +184,11 @@ html.lock,html.lock body{overflow:hidden}
 .stag{font-size:.74rem;font-weight:600;padding:1px 6px;border-radius:3px;background:var(--bg);color:var(--muted);border:1px solid var(--border)}
 .stag.w{background:var(--ball);color:#1b1b1b;border-color:var(--ball)}
 .stag.t1{background:#8e1f1a;color:#fff;border-color:#8e1f1a}.stag.t2{background:var(--ban);color:#fff;border-color:var(--ban)}.stag.t3{background:#d9665f;color:#fff;border-color:#d9665f}
+.stag.datap{color:#146c43;background:#e7f6ee;border-color:#2d7a4b}
+.stag.datan{color:#9a3412;background:#fff4e8;border-color:#c2410c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}:root:not([data-theme="light"]) .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}}
+:root[data-theme="dark"] .stag.datap{color:#b6f0cf;background:#143524;border-color:#5cc189}
+:root[data-theme="dark"] .stag.datan{color:#ffd7a8;background:#3a2612;border-color:#e09a3e}
 .rch{font-size:1rem;margin:16px 0 6px}
 .rcv{font-weight:600;margin:0}.rcv.pos{color:var(--ok)}.rcv.neg{color:var(--ban)}
 .minfo{display:flex;flex-direction:column;gap:2px;background:var(--card);border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;margin:0 0 10px}
@@ -213,7 +230,8 @@ html.lock,html.lock body{overflow:hidden}
 .stag.flagp{background:#6b21a8;color:#fff;border-color:#6b21a8}
 .vv.flagv{border-left-color:#6b21a8}
 #bookBox .row{flex-wrap:wrap;gap:6px}
-#bookBox select{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+#bookBox select,#pasteBook{flex:1 1 100%;font:inherit;font-size:16px;padding:8px;border-radius:4px;border:1px solid var(--border);background:var(--bg);color:var(--ink)}
+#pasteBook{display:block;width:100%;margin:6px 0 8px}
 #bookBox .bfstake{width:72px}
 .appbar{display:flex;flex-direction:column;align-items:stretch;gap:6px;margin:0 0 8px}
 .corner{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap}
@@ -235,7 +253,7 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .mtabs{display:flex;gap:6px;margin:0}
 .mtabs[hidden]{display:none}
 .mtabs .btn,.dock .btn{flex:1;text-align:center}
-.mtabs .btn{padding:8px 6px;font-size:.92rem}
+.mtabs .btn{padding:8px 2px;font-size:.78rem;white-space:nowrap}
 .mtabs .btn.on,.dock .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .tabsub:empty,.tabsub[hidden]{display:none}
@@ -245,7 +263,12 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .pickline{margin:10px 0 0;font-weight:600}
 .edgeline{margin:8px 0 0;font-weight:600}
 .edgeline[hidden]{display:none}
-body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly,body[data-view="match"] #bookPanel{display:none}
+body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly{display:none}
+body[data-view="match"]:not([data-tab="odds"]) #oddsBox,body[data-view="match"]:not([data-tab="odds"]) #bookPanel{display:none}
+body[data-view="match"][data-tab="odds"] #paneDetails > :not(#oddsBox):not(#bookPanel){display:none}
+body[data-view="match"][data-tab="odds"] #bookPanel{display:block}
+body[data-view="match"][data-tab="odds"] #oddsBox .orow2,
+body[data-view="match"][data-tab="odds"] #oddsBox h2{display:none}
 .mi0 .vs{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--muted)}
 body[data-view="match"] h1,body[data-view="match"] #assistLead{display:none}
 body[data-view="match"] .foot{display:none}
@@ -257,6 +280,9 @@ body[data-view="match"] .foot{display:none}
 .sheethd h2{flex:1;text-align:center}
 #sched .sheethd{grid-template-columns:1fr auto}
 #sched .sheethd h2{text-align:left}
+.sheettools{grid-column:1 / -1;justify-content:flex-start;margin-top:6px}
+.hdacts{display:flex;align-items:center;gap:8px;justify-content:flex-end}
+#menu,#favs,#bets{z-index:40}
 .schedmore{margin:0 0 8px;background:transparent;border:0}
 .schedmore summary{padding:0;font-weight:600;font-size:.9rem;color:var(--muted)}
 .schedmark{list-style:none;margin:4px 0 8px;padding:8px 0 0;color:var(--muted);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
@@ -289,17 +315,17 @@ body[data-view="match"] #paneDetails > #verdict{order:2}
 body[data-view="match"] #paneDetails > #edgeLine{order:3}
 body[data-view="match"] #paneDetails > #recentForm{order:4}
 body[data-view="match"] #paneDetails > #cmp{order:5}
-body[data-view="match"] #paneDetails > #oddsBox{order:6}
-body[data-view="match"] #paneDetails > #bookPanel{order:7}
+body[data-view="match"] #paneDetails > #bookPanel{order:6}
+body[data-view="match"] #paneDetails > #oddsBox{order:7}
 </style></head><body data-view="home"><main>
 <div class="appbar">
- <div class="corner"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
+ <div class="corner"><button class="btn js-menu" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div>
  <div class="brand"><h1>TT matchup check</h1><p class="srcline"><span class="src" id="srcInfo">Loading data…</span><button class="mini" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p></div>
 </div>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="matchstick" id="matchStick">
 <button class="listback" id="listBack" type="button" hidden>← Home</button>
-<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button></nav>
+<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Book Odds</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
 <p class="sub" id="assistLead">Search two player names.</p>
@@ -325,7 +351,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <p class="edgeline" id="edgeLine" hidden></p>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
-<div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
+<div id="bookPanel" hidden><div class="panel"><h2>Book Odds</h2><p class="help">DraftKings, FanDuel, bet365, MGM, Fanatics. Each book keeps its own prices. The best number on each player is marked.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
 </div>
 <div id="paneStandings" hidden></div>
@@ -335,12 +361,13 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
 <div class="tools"><p class="help">Saved only on this phone. Bets settle automatically from the official results; you can also mark them yourself.</p><div id="betSum"></div><h3 class="rch">Bets</h3><ul class="slist" id="betList"></ul><div class="btns" id="betMoreBox"></div>
 <details><summary>Backup and restore</summary><div class="pad"><p class="help">Your bets live only on this phone. Copy a backup now and then (e.g. into Notes) so you don't lose them if the app's data is cleared.</p><div class="btns"><button class="btn primary" id="betCopy" type="button">Copy backup</button></div><textarea id="betRestoreTxt" placeholder="Paste a backup here to restore"></textarea><div class="btns"><button class="btn" id="betRestore" type="button">Restore from backup</button></div><div class="msg" id="betMsg" role="status"></div></div></details></div></div>
-<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span></div>
+<div class="sheet" id="signals" role="dialog" aria-modal="true" aria-labelledby="sigTitle" hidden><div class="sheethd"><button class="btn" id="sigClose" type="button">Back</button><h2 id="sigTitle">Signals</h2><span></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
 <div class="tools"><p class="help" id="sigInfo"></p><ul class="slist" id="sigList"></ul></div><button class="totop" id="sigTop" type="button" hidden>Top</button></div>
-<div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></div>
+<div class="sheet" id="sched" aria-labelledby="schedTitle"><div class="sheethd"><h2 id="schedTitle">Home</h2><span class="hdacts"><button class="btn" id="schedJump" type="button">Now</button><label class="schedshow"><input type="checkbox" id="showDone"> Show finished</label></span><div class="corner sheettools"><button class="btn js-menu" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn js-saved" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn js-bets" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div></div>
 <div class="tools"><div class="field schfield"><input id="schFind" autocomplete="off" placeholder="Search a player or tournament"><button class="x" type="button" id="schClear" aria-label="Clear search">✕</button></div><details class="schedmore"><summary>More filters</summary><div class="schedopts"><label><input type="checkbox" id="onlyFav"> Saved only</label><label><input type="checkbox" id="onlyEV"> Value only</label><label><input type="checkbox" id="onlyFlag"> Flagged only</label></div></details><p class="help" id="schedInfo"></p><ul class="slist" id="schedList"></ul></div><button class="totop" id="schedTop" type="button" hidden>Top</button></div>
 <div class="sheet" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden><div class="sheethd"><button class="btn" id="menuClose" type="button">Back</button><h2 id="menuTitle">Menu</h2><span></span></div>
 <div class="tools">
+<details id="savedOddsDet"><summary id="savedOddsSum">Saved book prices</summary><div class="pad"><p class="help" id="savedOddsWhere">Book prices you enter are stored on this phone. Logged bets are a separate list, also only on this phone, under My bets. Favourites stay under Saved.</p><ul class="banlist" id="savedOddsList"></ul></div></details>
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
 <details><summary id="formSum">Hot and cold form</summary><ul class="banlist" id="formList"></ul></details>
 <details><summary id="recSum">Recent results</summary><ul class="banlist" id="recList"></ul></details>
@@ -356,8 +383,10 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <div class="msg" id="flagMsg" role="status"></div>
 </div></details>
 <details id="pasteDet"><summary>Paste odds from your sportsbook</summary><div class="pad">
-<p class="help">Copy the table tennis page from DraftKings (or anywhere) and paste it here. The app finds player names and American odds, matches them to upcoming matches, and fills in the EV for each one.</p>
-<textarea id="oddsPaste" placeholder="Paste here"></textarea>
+<p class="help">Paste any list you copied. Each match is a player, vs, the other player, the two prices, then a time like Today 2:00 PM. More Bets can sit between matches. Pick the sportsbook first. A later paste from another book keeps its own prices.</p>
+<label for="pasteBook">Sportsbook</label>
+<select id="pasteBook" aria-label="Sportsbook"><option>DraftKings</option><option>FanDuel</option><option>bet365</option><option>MGM</option><option>Fanatics</option></select>
+<textarea id="oddsPaste" placeholder="Paste one sportsbook here"></textarea>
 <div class="btns"><button class="btn primary" id="oddsSave" type="button">Read odds</button><button class="btn" id="oddsWipe" type="button">Clear saved odds</button></div>
 <div class="msg" id="oddsMsg" role="status"></div>
 <div id="gapBox"></div>
@@ -622,8 +651,9 @@ function computeStats(){
  const tacc={},racc={},cal=[],sides=[],seenPair=new Map();
  const sacc={};              // losing streak length -> [n, wins, sum predicted]
  const dayOrder=new Map();   // player|date -> [[match number, predicted, won]]
- const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map()});return STATS.get(n)};
+ const st=n=>{if(!STATS.has(n))STATS.set(n,{favN:0,favW:0,favE:0,favB:0,dogN:0,dogW:0,dogE:0,dogB:0,days:new Map(),moN:0,moW:0,moE:0});return STATS.get(n)};
  const since=new Date(Date.now()-180*864e5).toISOString().slice(0,10);
+ const month=new Date(Date.now()-30*864e5).toISOString().slice(0,10);
  for(const [m,ew] of PRE){
   cal.push([ew,1]);cal.push([1-ew,0]);
   {const k=m.date+"|"+[m.w,m.l].sort().join("|"),prev=seenPair.get(k);
@@ -634,7 +664,8 @@ function computeStats(){
    const idx=(m.w===n?m.iw:m.il);
    if(idx){const k=n+"|"+m.date,arr=dayOrder.get(k)||[];arr.push([idx,e,won]);dayOrder.set(k,arr)}
    const s=st(n);
-   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e])}
+   if(e>0.55){s.favN++;s.favW+=won;s.favE+=e;sides.push([s,"favB",e]);
+    if(m.date>=month){s.moN++;s.moW+=won;s.moE+=e}}
    else if(e<0.45){s.dogN++;s.dogW+=won;s.dogE+=e;sides.push([s,"dogB",e])}
    const t=BAN.has(n)?tierOfName(n):0;
    if(t&&e!==0.5){const k=t+"|"+(e>0.5?"fav":"dog");const a=tacc[k]||(tacc[k]=[0,0,0]);a[0]++;a[1]+=won;a[2]+=e}
@@ -741,6 +772,11 @@ function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
  return role==="fav"?{n:s.favN,w:s.favW,diff:s.favW-s.favB}:{n:s.dogN,w:s.dogW,diff:s.dogW-s.dogB}}
 const skipTxt=k=>`${esc(sur(k.p.name))}'s ban list adjustment isn't applied: as ${k.role==="fav"?"favorite":"underdog"} he's ${k.o.w}–${k.o.n-k.o.w}, ${sgn(k.o.diff)} wins vs expected, so his own data doesn't back it`;
 const favDiff=n=>{const s=STATS.get(n);return s&&s.favN?s.favW-s.favB:0};
+function dataTag(p){
+ const m=dataMark(STATS.get(p.name),isBan(p));
+ if(!m)return "";
+ return `<span class="stag ${m.sign>0?"datap":"datan"}">${esc(sur(p.name))} Data ${m.sign>0?"+":"−"}</span>`;
+}
 function formEdge(name){
  const q=RECENT.get(name);if(!q||q.length<8)return null;
  const mode=FORM_MODE==="off"?"plain":FORM_MODE;
@@ -952,7 +988,7 @@ function update(){
  if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderRecentForm(a,b);renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
- renderOdds(a,b,pa,est);$("bookPanel").hidden=VIEW==="match";if(VIEW!=="match")renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ renderOdds(a,b,pa,est);$("bookPanel").hidden=!(VIEW==="match"&&MTAB==="odds");renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
  const pn=$("pickNames");if(pn){pn.hidden=VIEW!=="match";pn.textContent=VIEW==="match"?`${a.name} vs ${b.name}`:""}
@@ -1126,8 +1162,9 @@ let pushTimer=0;
 let OHIST=load("tt-odds")||{};
 let ODDS={};   // "Player A|Player B" -> [oddsA, oddsB], newest first
 const okey=(x,y,slot)=>[x,y].sort().join("|")+(slot?"@"+slot:"");
-const BOOKS=["DraftKings","bet365","FanDuel","BetMGM","Fanatics","Other"];
+const BOOKS=["DraftKings","FanDuel","bet365","MGM","Fanatics"];
 const MAINBOOK="DraftKings";
+function bookLabel(name){return bookKey(name)}
 // Each scheduled meeting keeps its own odds, so a rematch later the same day starts blank
 const slotOf=(a,b)=>{const r=CURMATCH&&[CURMATCH.p1,CURMATCH.p2].sort().join("|")===[a.name,b.name].sort().join("|")?CURMATCH:null;return r?r.date+" "+r.time:""};
 function sortedSnap(a,b,oa,ob,pa){
@@ -1138,11 +1175,9 @@ function sortedSnap(a,b,oa,ob,pa){
 }
 function rememberOdds(a,b){const k=okey(a.name,b.name,slotOf(a,b)),oa=readOdds("A"),ob=readOdds("B");
  if(!bothPrices(oa,ob))return;
- clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);   // save to the shared file shortly after typing
+ clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);
  const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);
- const arr=OHIST[k]||(OHIST[k]=[]),last=arr[arr.length-1];
- if(last&&(last.book||MAINBOOK)===MAINBOOK&&last.o1===row.o1&&last.o2===row.o2&&row.at-(last.at||0)<15000)Object.assign(last,row);
- else arr.push(row);
+ OHIST[k]=upsertBookPrice(OHIST[k]||[],row);
  trimOdds();
 }
 function storedOdds(n1,n2,slot){const v=ODDS[okey(n1,n2,slot)];if(!v)return null;const first=n1<n2;
@@ -1178,8 +1213,9 @@ function snapLine(a,b){
  const edge=(so.edge1!=null||so.edge2!=null)?`, edge ${so.edge1!=null?money(so.edge1):"–"} / ${so.edge2!=null?money(so.edge2):"–"} per $100`:"";
  return `<p class="help" style="margin:4px 0 0">Decision snapshot ${ago(so.at)}: book ${so.o1!=null?fmtO(so.o1):"–"} / ${so.o2!=null?fmtO(so.o2):"–"}${app}${edge}.</p>`;
 }
-function showEdgeLine(){
+function showEdgeLine(text){
  const el=$("edgeLine");if(!el)return;
+ if(VIEW==="match"&&text){el.hidden=false;el.textContent=text;return}
  el.hidden=true;el.textContent="";
 }
 function edgeSummary(a,b,pa){
@@ -1211,15 +1247,15 @@ function wireBetForm(a,b,model){
  if($("bfAdd"))$("bfAdd").onclick=()=>addLeg(a,b,model);
  renderSlip();
 }
-function oddsCalc(a,b,pa){
+function oddsCalc(a,b,pa,opts){
  const out=$("oddsOut");if(!out)return;
  const oa=readOdds("A"),ob=readOdds("B");
- rememberOdds(a,b);
+ if(!(opts&&opts.save===false))rememberOdds(a,b);
  const model={A:pa,B:1-pa};
- showEdgeLine();
  paintPrices(model);
  if(VIEW==="match"){
   const summary=edgeSummary(a,b,pa);
+  showEdgeLine(summary);
   const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
   const margin=ia!==null&&ib!==null?ia+ib-1:null;
   const sides=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null);
@@ -1233,9 +1269,10 @@ function oddsCalc(a,b,pa){
    :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`:"";
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
-  const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">Enter both prices and the edge shows below.</p>`:"");
-  out.innerHTML=lead+(rows?flag+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
+  const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">DraftKings sets the edge and the logged bet. The other books stay on their own lines.</p>`:"");
+  out.innerHTML=lead+(rows?flag+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
+ showEdgeLine("");
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
@@ -1267,8 +1304,10 @@ function renderBan(){
  $("banList").innerHTML=names.map(n=>{const p=byName.get(n);const r=BANORDER.indexOf(n)+1,t=r<=5?1:r<=10?2:3,hd=r===1?'<li class="tierhd">Tier 1: worst</li>':r===6?'<li class="tierhd">Tier 2</li>':r===11?'<li class="tierhd">Tier 3</li>':"";
   const s=STATS.get(n),dd=s&&s.favN>=5?`<span class="${favDiff(n)<=-1?"neg":favDiff(n)>=1?"pos":""}">${sgn(favDiff(n))}</span> · `:"";
   return hd+(p?`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span>${dd}Elo ${p.elo}</span></li>`:`<li><span class="bn"><b class="rk t${t}">${r}</b>${esc(n)}</span><span class="gone">Not in ratings</span></li>`)}).join("")||"<li>No players yet.</li>";
- const flagged=[...STATS.entries()].filter(([n,s])=>!BAN.has(n)&&s.favN>=10&&(s.favW-s.favE)/s.favN<=-0.2).sort((x,y)=>(x[1].favW-x[1].favE)/x[1].favN-(y[1].favW-y[1].favE)/y[1].favN).slice(0,10);
- $("banList").innerHTML+=`<li class="tierhd">Flagged by data, not on your list</li>`+(flagged.map(([n,s])=>`<li><span class="bn">${esc(n)}</span><span><span class="neg">${sgn(s.favW-s.favE)}</span> · ${s.favW}–${s.favN-s.favW} as fav</span></li>`).join("")||`<li><span class="muted">None yet</span></li>`)+`<li class="muted" style="border-top:0;display:block">Numbers show wins above or below what Elo expected when the player was favorite, over the last 6 months. Small samples are noisy.</li>`;
+ const marked=[...STATS.entries()].map(([n,s])=>{const m=dataMark(s,BAN.has(n));return m?{n,m}:null}).filter(Boolean).sort((a,b)=>b.m.rate-a.m.rate);
+ const up=marked.filter(x=>x.m.sign>0),down=marked.filter(x=>x.m.sign<0);
+ const row=x=>`<li><span class="bn">${esc(x.n)}</span><span><span class="${x.m.sign>0?"pos":"neg"}">${sgn(x.m.diff)}</span> · ${x.m.w}–${x.m.n-x.m.w} as fav</span></li>`;
+ $("banList").innerHTML+=`<li class="tierhd">Flagged by data, not on your list</li>`+(up.length?`<li class="tierhd">Playing above Elo</li>`+up.map(row).join(""):"")+(down.length?`<li class="tierhd">Playing below Elo</li>`+down.map(row).join(""):"")+(!marked.length?`<li><span class="muted">None yet</span></li>`:"")+`<li class="muted" style="border-top:0;display:block">Past month, as favorite, versus what Elo expected. At least 8 favorites, and about 20% off the number. This does not change the win chance or the ban list.</li>`;
 }
 function renderForm(){
  const rows=[];
@@ -1362,6 +1401,7 @@ function renderSched(opt){
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
    if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
+   for(const p of [a,b]){const t=dataTag(p);if(t){flag=true;tags+=t}}
    if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
@@ -1547,13 +1587,14 @@ function applyChrome(){
  const sub=$("tabSub");
  if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
+ else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="The best number is marked. Each book keeps its own line on this phone."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
  $("court").hidden=match;
- $("paneDetails").hidden=match&&MTAB!=="details";
+ $("paneDetails").hidden=match&&MTAB!=="details"&&MTAB!=="odds";
  $("paneH2h").hidden=match&&MTAB!=="h2h";
  $("paneStandings").hidden=!(match&&MTAB==="standings");
- for(const id of ["tabDetails","tabStandings","tabH2h"]){
+ for(const id of ["tabDetails","tabStandings","tabH2h","tabOdds"]){
   const b=$(id);if(!b)continue;const on=b.dataset.tab===MTAB;
   b.classList.toggle("on",on);b.setAttribute("aria-selected",on?"true":"false");
  }
@@ -1646,6 +1687,7 @@ $("sigClose").onclick=()=>showHome();
 $("assistBtn").onclick=()=>{captureHome();closeLists();restoreAssist();scrollTo(0,0);$("inA").focus()};
 $("matchTabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;setMatchTab(b.dataset.tab)});
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;
+ if(!$("menu").hidden||!$("favs").hidden||!$("bets").hidden)return;
  if(!$("signals").hidden)showHome()});
 
 
@@ -1696,8 +1738,18 @@ const saveBets=()=>save("tt-bets",BETS);
 // The newest price each book has shown for this exact match
 function booksFor(key){
  const arr=OHIST[key]||[],out=new Map();
- for(const v of arr){const b=v.book||MAINBOOK;const prev=out.get(b);if(!prev||v.at>prev.at)out.set(b,v)}
+ for(const v of arr){const b=bookLabel(v.book||MAINBOOK);const prev=out.get(b);if(!prev||v.at>prev.at)out.set(b,v)}
  return out;
+}
+// One line on how far the saved books sit apart, after each book's cut is removed.
+function bookGapText(rows,a){
+ const priced=rows.map(r=>{const fair=fairPair(r.oa,r.ob);return fair?{name:bookLabel(r.name),pa:fair[0]}:null}).filter(Boolean);
+ if(priced.length<2)return priced.length?`${priced[0].name} is the only book in so far. Add the next one and this line will compare them.`:"Add a second book and this line will say how far the prices sit apart.";
+ priced.sort((x,y)=>y.pa-x.pa);
+ const hi=priced[0],lo=priced[priced.length-1],gap=Math.round((hi.pa-lo.pa)*100);
+ const who=sur(a.name);
+ if(gap<=2)return `${priced.map(p=>p.name).join(", ")} are close on ${who}, within ${gap} percentage point${gap===1?"":"s"}.`;
+ return `${hi.name} has ${who} at ${Math.round(hi.pa*100)}%. ${lo.name} has ${who} at ${Math.round(lo.pa*100)}%. The books are ${gap} percentage points apart.`;
 }
 // Strip each book's cut, then average: a consensus of several books beats any one model
 function consensus(books,first){
@@ -1708,48 +1760,133 @@ function consensus(books,first){
  }
  return ps.length?{p:ps.reduce((s,x)=>s+x,0)/ps.length,n:ps.length}:null;
 }
-function renderBooks(a,b){
- const box=$("bookBox");if(!box)return;
- const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
- const books=booksFor(key);
- const rows=[...books.entries()].map(([name,v])=>({name,oa:first?v.o1:v.o2,ob:first?v.o2:v.o1}));
- const bestA=rows.filter(r=>r.oa!==null).sort((x,y)=>toProb(x.oa)-toProb(y.oa))[0];
- const bestB=rows.filter(r=>r.ob!==null).sort((x,y)=>toProb(x.ob)-toProb(y.ob))[0];
- const con=consensus(books,first);
- let html=`<div class="row"><select id="bkName" aria-label="Sportsbook">${BOOKS.map(n=>`<option${n===(load("tt-lastbook")||BOOKS[1])?" selected":""}>${n}</option>`).join("")}</select>
-   <button type="button" class="sign" id="bkSA">−</button><input id="bkA" class="bfstake" inputmode="numeric" aria-label="${esc(sur(a.name))} price" placeholder="${esc(sur(a.name))}">
-   <button type="button" class="sign" id="bkSB">+</button><input id="bkB" class="bfstake" inputmode="numeric" aria-label="${esc(sur(b.name))} price" placeholder="${esc(sur(b.name))}">
-   <button class="btn primary" id="bkAdd" type="button">Add</button></div><div class="msg" id="bkMsg" role="status"></div>`;
- if(rows.length){
-  html+=`<div class="otab"><table><tr><th>Book</th><th>${esc(sur(a.name))}</th><th>${esc(sur(b.name))}</th><th></th></tr>${
-   rows.map(r=>`<tr><td>${esc(r.name)}</td><td class="${bestA&&r===bestA?"pos":""}">${r.oa===null?"–":fmtO(r.oa)}</td><td class="${bestB&&r===bestB?"pos":""}">${r.ob===null?"–":fmtO(r.ob)}</td><td><button type="button" class="mini del2" data-bk="${esc(r.name)}" aria-label="Remove ${esc(r.name)}">✕</button></td></tr>`).join("")}</table></div>`;
-  if(con&&con.n>=2){
-   const evA=bestA?con.p*profit(bestA.oa)-(1-con.p)*100:null;
-   const evB=bestB?(1-con.p)*profit(bestB.ob)-con.p*100:null;
-   const best=[[a,evA,bestA],[b,evB,bestB]].filter(x=>x[1]!==null).sort((x,y)=>y[1]-x[1])[0];
-   html+=`<p class="help" style="margin:8px 0 0">${con.n} books agree on about ${esc(sur(a.name))} ${Math.round(con.p*100)}% / ${esc(sur(b.name))} ${Math.round((1-con.p)*100)}%, with each book's cut removed. That consensus is usually a better guide than any single model.</p>`;
-   if(best)html+=`<div class="vv ${best[1]>=3?"pos":best[1]>0?"thin":"neg"}"><strong>${best[1]>=3?"Best price beats the consensus":best[1]>0?"Barely worth it":"No book is out of line"}</strong>${esc(best[0].name)} at ${fmtO(best[2]===bestA?bestA.oa:bestB.ob)} with ${esc(best[2].name)} is ${best[1]>=0?"+":"−"}$${Math.abs(best[1]).toFixed(2)} per $100 against the other books.</div>`;
-  }else html+=`<p class="help" style="margin:8px 0 0">Add a second book and the app will work out a consensus price and tell you which book is out of line.</p>`;
- }
- box.innerHTML=html;
- const sa=$("bkSA"),sb=$("bkSB");let negA=true,negB=false;
- sa.onclick=()=>{negA=!negA;sa.textContent=negA?"−":"+"};
- sb.onclick=()=>{negB=!negB;sb.textContent=negB?"−":"+"};
- $("bkAdd").onclick=()=>{
-  const name=$("bkName").value;
-  const na=parseInt(($("bkA").value||"").replace(/[^0-9]/g,""),10),nb=parseInt(($("bkB").value||"").replace(/[^0-9]/g,""),10);
-  const oa=isNaN(na)?null:(negA?-na:na),ob=isNaN(nb)?null:(negB?-nb:nb);
-  if(!bothPrices(oa,ob)){setMsg("bkMsg","err","Enter both prices.");return}
-  const row=sortedSnap(a,b,oa,ob,EST?EST.pa:null);row.book=name;
-  (OHIST[key]||(OHIST[key]=[])).push(row);
-  save("tt-lastbook",name);trimOdds();
-  if(cfg.token)pushOdds();
-  renderBooks(a,b);renderSched();
+function bookSideClass(o,p){
+ if(o===null||p===null||p===undefined)return "";
+ return oddsTone(p*profit(o)-(1-p)*100);
+}
+function paintBookRow(row,oa,ob,pa){
+ const put=(side,cls)=>{
+  for(const node of row.querySelectorAll(`[data-side="${side}"]`)){
+   node.classList.remove("pos","thin","neg");
+   if(cls)node.classList.add(cls);
+  }
  };
- box.querySelectorAll("[data-bk]").forEach(btn=>btn.onclick=()=>{
-  const n=btn.dataset.bk;OHIST[key]=(OHIST[key]||[]).filter(v=>(v.book||MAINBOOK)!==n);trimOdds();
-  if(cfg.token)pushOdds();renderBooks(a,b);renderSched();
+ if(!bothPrices(oa,ob)||pa===null||pa===undefined){put("A","");put("B","");return}
+ put("A",bookSideClass(oa,pa));
+ put("B",bookSideClass(ob,1-pa));
+}
+function savedProofHtml(key,a,b){
+ const first=a.name<b.name;
+ const arr=(load("tt-odds")||{})[key]||[];
+ const latest=latestByBook(arr);
+ const savedNames=BOOKS.filter(name=>latest.has(name));
+ const show=v=>{
+  const oa=first?v.o1:v.o2,ob=first?v.o2:v.o1;
+  return `${isFlagPair(oa,ob)?"⚑ ":""}${esc(bookKey(v.book))} ${fmtO(oa)} / ${fmtO(ob)} · ${esc(ago(v.at))}`;
+ };
+ const current=savedNames.length?`<ul class="flist">${savedNames.map(name=>`<li><span class="fres w">Saved</span><span class="fwho">${show(latest.get(name))}</span></li>`).join("")}</ul>`
+  :`<p class="help">Nothing saved for this match yet. Fill in both prices for a book and that line shows up here, read back from this phone.</p>`;
+ const older=arr.filter(v=>{const cur=latest.get(bookKey(v.book));return cur&&(v.o1!==cur.o1||v.o2!==cur.o2||v.at!==cur.at)}).sort((x,y)=>(y.at||0)-(x.at||0));
+ const hist=older.length?`<h3 class="rch">Earlier prices still stored</h3><ul class="flist">${older.slice(0,16).map(v=>`<li><span class="fwho">${show(v)}</span></li>`).join("")}</ul>`:"";
+ const note=savedNames.length?`${savedNames.length} of ${BOOKS.length} books on this phone. `:"";
+ return `<h3 class="rch">Saved on this phone</h3>${current}${hist}<p class="help">${note}Read back from this phone. Menu → Saved book prices lists every match.</p>`;
+}
+function rowPrices(row){
+ const num=side=>{const raw=(row.querySelector(`input[data-side="${side}"]`).value||"").replace(/[^0-9]/g,"");const n=parseInt(raw,10);if(isNaN(n))return null;const neg=row.querySelector(`button[data-side="${side}"]`).textContent.includes("−");return neg?-n:n};
+ return {name:row.dataset.book,oa:num("A"),ob:num("B")};
+}
+function bestPriceSentence(hits,who){
+ if(hits.length!==1)return "";
+ return `${hits[0].name} ${fmtO(hits[0].o)} is the best number on ${who}.`;
+}
+function paintBookRead(box,a,b){
+ const read=$("bookRead"),gap=$("bookGap");if(!read||!gap)return;
+ const priced=[...box.querySelectorAll(".bkrow")].map(rowPrices).filter(r=>bothPrices(r.oa,r.ob));
+ const best=bestBookSide(priced);
+ box.querySelectorAll(".bkbest").forEach(el=>el.remove());
+ for(const row of box.querySelectorAll(".bkrow")){
+  const mine=priced.find(r=>r.name===row.dataset.book);
+  if(!mine)continue;
+  const who=[];
+  if(best.a.length===1&&best.a[0].name===mine.name)who.push(sur(a.name));
+  if(best.b.length===1&&best.b[0].name===mine.name)who.push(sur(b.name));
+  if(who.length)row.querySelector(".bkn").insertAdjacentHTML("beforeend",` <span class="bkbest">Best ${esc(who.join(" · "))}</span>`);
+ }
+ const lead=[bestPriceSentence(best.a,sur(a.name)),bestPriceSentence(best.b,sur(b.name))].filter(Boolean).join(" ");
+ read.textContent=lead;
+ gap.textContent=priced.length?bookGapText(priced,a):"";
+}
+function renderBooks(a,b){
+ const box=$("bookBox");if(!box||!a||!b)return;
+ if(document.activeElement&&document.activeElement.closest&&document.activeElement.closest("#bookBox"))return;
+ const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
+ const latest=latestByBook((load("tt-odds")||{})[key]||OHIST[key]||[]);
+ const pa=EST?EST.pa:null;
+ let html=`<p class="cmpread" id="bookRead"></p><p class="cmpread" id="bookGap"></p><div class="bkhead"><span>${esc(sur(a.name))}</span><span>${esc(sur(b.name))}</span></div>`;
+ html+=BOOKS.map(name=>{
+  const v=latest.get(name);
+  const oa=v?(first?v.o1:v.o2):null;
+  const ob=v?(first?v.o2:v.o1):null;
+  const flagged=bothPrices(oa,ob)&&isFlagPair(oa,ob);
+  const stamp=v&&v.at?(flagged?"⚑ Flagged pair · ":"")+`Saved ${ago(v.at)}`:"Not saved yet";
+  const ca=bothPrices(oa,ob)?bookSideClass(oa,pa):"";
+  const cb=bothPrices(oa,ob)?bookSideClass(ob,pa===null?null:1-pa):"";
+  return `<div class="bkrow" data-book="${esc(name)}"><div class="bkn">${esc(name)}</div>
+   <div class="orow"><button type="button" class="sign ${ca}" data-side="A">${oa!==null&&oa<0?"−":oa!==null?"+":"−"}</button><input class="oval ${ca}" data-side="A" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${oa!==null?Math.abs(oa):""}" aria-label="${esc(name)} price for ${esc(sur(a.name))}" placeholder="${esc(sur(a.name))}"></div>
+   <div class="orow"><button type="button" class="sign ${cb}" data-side="B">${ob!==null&&ob<0?"−":ob!==null?"+":"+"}</button><input class="oval ${cb}" data-side="B" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${ob!==null?Math.abs(ob):""}" aria-label="${esc(name)} price for ${esc(sur(b.name))}" placeholder="${esc(sur(b.name))}"></div>
+   <div class="bksaved${v?" on":""}${flagged?" flag":""}">${esc(stamp)}</div></div>`;
+ }).join("");
+ html+=`<div class="saveproof" id="saveProof">${savedProofHtml(key,a,b)}</div>`;
+ box.innerHTML=html;
+ paintBookRead(box,a,b);
+ box.querySelectorAll(".bkrow").forEach(row=>{
+  const commit=()=>{
+   const name=row.dataset.book;
+   const num=side=>{const raw=(row.querySelector(`input[data-side="${side}"]`).value||"").replace(/[^0-9]/g,"");const n=parseInt(raw,10);if(isNaN(n))return null;const neg=row.querySelector(`button[data-side="${side}"]`).textContent.includes("−");return neg?-n:n};
+   const oa=num("A"),ob=num("B"),stamp=row.querySelector(".bksaved");
+   paintBookRow(row,oa,ob,pa);
+   paintBookRead(box,a,b);
+   clearTimeout(row._saveT);
+   if(!bothPrices(oa,ob)){stamp.classList.remove("on","flag");stamp.textContent=oa===null&&ob===null?"Not saved yet":"Enter both prices";return}
+   stamp.classList.remove("on","flag");stamp.textContent="Saving…";
+   row._saveT=setTimeout(()=>{
+    const rec=sortedSnap(a,b,oa,ob,EST?EST.pa:null);rec.book=name;
+    OHIST[key]=upsertBookPrice(OHIST[key]||[],rec);
+    trimOdds();
+    clearTimeout(pushTimer);pushTimer=setTimeout(()=>pushOdds(),4000);
+    const back=latestByBook((load("tt-odds")||{})[key]||[]).get(name);
+    const flagged=isFlagPair(oa,ob);
+    stamp.classList.add("on");stamp.classList.toggle("flag",flagged);
+    stamp.textContent=(flagged?"⚑ Flagged pair · ":"")+(back?`Saved ${ago(back.at)}`:"Saved");
+    if(name===MAINBOOK){odds.A={v:String(Math.abs(oa)),neg:oa<0};odds.B={v:String(Math.abs(ob)),neg:ob<0};oddsCalc(a,b,EST?EST.pa:0.5,{save:false})}
+    paintSaveProof(key,a,b);
+    renderSavedPrices();
+   },450);
+  };
+  row.querySelectorAll(".sign").forEach(btn=>btn.onclick=()=>{btn.textContent=btn.textContent.includes("−")?"+":"−";commit()});
+  row.querySelectorAll("input").forEach(inp=>inp.addEventListener("input",()=>{inp.value=inp.value.replace(/[^0-9]/g,"");commit()}));
  });
+}
+function paintSaveProof(key,a,b){
+ const el=$("saveProof");if(!el)return;
+ el.innerHTML=savedProofHtml(key,a,b);
+ const box=$("bookBox");if(box)paintBookRead(box,a,b);
+}
+function renderSavedPrices(){
+ const sum=$("savedOddsSum"),list=$("savedOddsList"),where=$("savedOddsWhere");if(!sum||!list)return;
+ const raw=load("tt-odds")||{};
+ const lines=[];
+ let matches=0;
+ for(const [k,arr] of Object.entries(raw)){
+  if(!arr||!arr.length)continue;
+  matches++;
+  const at=k.indexOf("@"),names=at<0?k:k.slice(0,at),slot=at<0?"":k.slice(at+1);
+  for(const v of arr)lines.push({names,slot,book:bookKey(v.book),o1:v.o1,o2:v.o2,at:v.at||0});
+ }
+ lines.sort((x,y)=>y.at-x.at);
+ sum.textContent=`Saved book prices (${lines.length})`;
+ if(where)where.textContent=lines.length?`${lines.length} stored price line${lines.length===1?"":"s"} across ${matches} match${matches===1?"":"es"}, read back from this phone. Each sportsbook is its own line, so entering one book does not replace another. Logged bets are separate, under My bets, also only on this phone. A connected sharing token copies the same book lines to the shared odds file.`:"No book prices stored on this phone yet. Prices you enter on a match's Book Odds tab are saved here. Logged bets stay under My bets, on this phone only.";
+ list.innerHTML=lines.slice(0,80).map(v=>`<li><span class="bn">${esc(v.book)}</span><span>${esc(String(v.names).replace("|"," vs "))} ${fmtO(v.o1)} / ${fmtO(v.o2)}${v.slot?` · ${esc(v.slot)}`:""} · ${esc(ago(v.at))}</span></li>`).join("")||`<li><span class="muted">None yet</span></li>`;
 }
 
 // ---------- parlays ----------
@@ -1923,8 +2060,8 @@ $("betList").addEventListener("click",e=>{const t=e.target.closest(".mini");if(!
  saveBets();renderBets()});
 $("betCopy").onclick=async()=>{const txt=JSON.stringify(BETS);try{await navigator.clipboard.writeText(txt);setMsg("betMsg","ok",`Copied ${BETS.length} bets. Paste them somewhere safe, like Notes.`)}catch(e){$("betRestoreTxt").value=txt;setMsg("betMsg","ok","Couldn't copy automatically, so the backup is in the box above. Select all and copy it.")}};
 $("betRestore").onclick=()=>{try{const arr=JSON.parse($("betRestoreTxt").value);if(!Array.isArray(arr))throw 0;const ids=new Set(BETS.map(b=>b.id));let n=0;for(const b of arr)if(b&&b.id&&!ids.has(b.id)){BETS.push(b);n++}saveBets();renderBets();setMsg("betMsg","ok",`Restored ${n} bet${n===1?"":"s"}.`);$("betRestoreTxt").value=""}catch(e){setMsg("betMsg","err","That doesn't look like a backup. Paste the whole text you copied.")}};
-$("betsBtn").onclick=()=>{betShown=5;settleBets();renderBets();openSheet("bets")};$("betsClose").onclick=()=>{closeSheet("bets");$("betsBtn").focus()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");$("betsBtn").focus()}});
+$("betsClose").onclick=()=>{closeSheet("bets");focusTool("bets")};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("bets").hidden){closeSheet("bets");focusTool("bets")}});
 
 
 
@@ -1973,9 +2110,8 @@ function mergeOdds(remote){
 }
 function trimOdds(){
  const ks=Object.keys(OHIST).sort((x,y)=>(latestOf(OHIST[y])||{at:0}).at-(latestOf(OHIST[x])||{at:0}).at).slice(0,600);
- OHIST=Object.fromEntries(ks.map(x=>[x,OHIST[x].slice(-24)]));
- // ODDS holds the newest price from the main book, which is what the EV panel uses
- ODDS={};for(const k of ks){const main=OHIST[k].filter(v=>(v.book||MAINBOOK)===MAINBOOK),v=latestOf(main.length?main:OHIST[k]);if(v)ODDS[k]=v}
+ OHIST=Object.fromEntries(ks.map(x=>[x,trimBookList(OHIST[x],4)]));
+ ODDS={};for(const k of ks){const main=(OHIST[k]||[]).filter(v=>bookKey(v.book)===MAINBOOK),v=latestOf(main);if(v)ODDS[k]=v}
  save("tt-odds",OHIST);
 }
 // The price just before a match starts is the market's final word on it
@@ -2004,119 +2140,66 @@ async function pushOdds(){
 }
 
 // ---------- reading a pasted odds page ----------
-// Sportsbook pages come out as loose lines: names on their own, prices on their own.
-// We walk the lines, collect names we recognise and the odds that follow them, then
-// pair them up with a scheduled match.
-function parsePastedOdds(text){
- const byWord=new Map();
- for(const p of players)for(const w of norm(p.name).split(" ")){if(!byWord.has(w))byWord.set(w,[]);byWord.get(w).push(p)}
- const find=raw=>{
-  let t=norm(raw).replace(/[^a-z .'-]/g," ").replace(/\s+/g," ").trim();
-  if(t.length<4||t.split(" ").length>4)return null;
-  let hit=players.filter(p=>norm(p.name)===t);
-  if(hit.length===1)return hit[0];
-  const w=t.split(" ");
-  if(w.length>=2){
-   hit=players.filter(p=>norm(p.name)===w.slice().reverse().join(" "));   // "Michal Olbrycht" -> "Olbrycht Michal"
-   if(hit.length===1)return hit[0];
-   const seen=new Set(),cands=[];
-   for(const x of w)for(const p of (byWord.get(x)||[]))if(!seen.has(p.name)){seen.add(p.name);cands.push(p)}
-   const m=cands.filter(p=>{const n=norm(p.name).split(" ");return w.every(x=>n.includes(x))});
-   if(m.length===1)return m[0];
-  }
-  return null;
- };
- // A pasted page arrives as markdown links and loose lines, so flatten it first
- const lines=[];
- for(let line of text.split(/\r?\n/)){
-  line=line.replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").trim();      // [Name](link) -> Name
-  if(!line||/^https?:/i.test(line))continue;
-  lines.push(line);
- }
- const ODDRE=/^[+\-\u2212\u2013]\s?(\d{2,4})$/;
- const toks=[];
- for(const line of lines){
-  const m=line.match(ODDRE);
-  if(m){toks.push({o:(/^[\-\u2212\u2013]/.test(line)?-1:1)*(+m[1])});continue}
-  const inline=line.match(/^(.*?)\s+([+\-\u2212\u2013]\s?\d{2,4})$/);
-  if(inline){const p=find(inline[1]);if(p){toks.push({p});toks.push({o:(/^[\-\u2212\u2013]/.test(inline[2].trim())?-1:1)*(+inline[2].replace(/[^\d]/g,""))});continue}}
-  const p=find(line);
-  if(p)toks.push({p});
- }
- // Each matchup is two names followed by their two prices, in that order
- const out=[];let names=[],odds=[];
- const flush=()=>{
-  if(names.length===2&&odds.length===2){out.push({name:names[0].name,o:odds[0]});out.push({name:names[1].name,o:odds[1]})}
-  names=[];odds=[];
- };
- for(const t of toks){
-  if(t.p){
-   if(odds.length)flush();
-   if(names.length===2)names=[];
-   names.push(t.p);
-  }else{
-   if(!names.length)continue;
-   odds.push(t.o);
-   if(odds.length===2)flush();
-  }
- }
- flush();
- return out;
-}
+// The copy is first name, vs, first name, two prices, then "Today 2:00 PM".
+// The clock is the sportsbook's clock, so we line it up with the schedule before saving.
 function applyPastedOdds(text){
- const picks=parsePastedOdds(text);
- // Consecutive picks form one matchup, so a price only ever lands on that pair's next match
- const pairs=[];
- for(let i=0;i+1<picks.length;i+=2){
-  const x=picks[i],y=picks[i+1];
-  if(!x||!y||x.name===y.name||(x.o===null&&y.o===null)){i-=1;continue}
-  pairs.push([x,y]);
- }
- const now=Date.now(),rows=[];let matched=0;const used=new Set();
- for(const [x,y] of pairs){
-  const key=[x.name,y.name].sort().join("|");
-  const r=SCHED.filter(r=>!r.res&&!r.fin&&[r.p1,r.p2].sort().join("|")===key
-      &&r.at.getTime()>now-30*60000&&r.at.getTime()<now+30*36e5&&!used.has(r.date+r.time+key))
-    .sort((a,b)=>a.at-b.at)[0];
-  if(!r)continue;
-  used.add(r.date+r.time+key);matched++;
-  const o1=r.p1===x.name?x.o:y.o,o2=r.p2===x.name?x.o:y.o;
+ const chosen=bookKey($("pasteBook")&&$("pasteBook").value);
+ const parsed=parseBookPaste(text,players);
+ const fixtures=SCHED.map(r=>{
+  const [hh,mm]=String(r.time||"0:0").split(":").map(Number);
+  return {p1:r.p1,p2:r.p2,minutes:(hh||0)*60+(mm||0),at:r.at?r.at.getTime():0,done:!!(r.res||r.fin),date:r.date,r};
+ });
+ const remembered=load("tt-pasteoff");
+ const aligned=alignPasteTimes(parsed.matches,fixtures,{preferOff:remembered&&Number.isFinite(+remembered.off)?+remembered.off:null});
+ if(aligned.unique)save("tt-pasteoff",{off:aligned.off,at:Date.now()});
+ const offset=aligned.hits?aligned.off:null;
+ const rows=[];const unmatched=[];let matched=0;
+ for(const m of parsed.matches){
+  const hit=pickFixture(m,fixtures,offset,aligned.date);
+  if(!hit){unmatched.push(m);continue}
+  const r=hit.r,book=m.book||chosen;
+  const o1=r.p1===m.p1?m.o1:m.o2,o2=r.p2===m.p1?m.o1:m.o2;
   const slot=r.date+" "+r.time,k=okey(r.p1,r.p2,slot),first=r.p1<r.p2;
   const a=byNameP(r.p1),b=byNameP(r.p2);
-  let row={o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book:MAINBOOK};
+  let row={o1:first?o1:o2,o2:first?o2:o1,at:Date.now(),book};
   if(a&&b){const e=estimate(a,b,bookOpt(o1,o2)),snap=decisionSnapshot(o1,o2,e.pa,1-e.pa);
    row={...row,at:snap.at,app1:first?snap.app1:snap.app2,app2:first?snap.app2:snap.app1,edge1:first?snap.edge1:snap.edge2,edge2:first?snap.edge2:snap.edge1};}
-  (OHIST[k]||(OHIST[k]=[])).push(row);
+  OHIST[k]=upsertBookPrice(OHIST[k]||[],row);
+  matched++;
   if(a&&b){const e=estimate(a,b,bookOpt(o1,o2));
    const sides=[[a,e.pa,o1],[b,1-e.pa,o2]].filter(z=>z[2]!==null&&z[2]!==undefined)
      .map(([p,pm,o])=>({p,o,pm,ev:pm*profit(o)-(1-pm)*100,imp:toProb(o)}));
-   if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,gap:top.pm-top.imp})}
-  }
+   if(sides.length){const top=sides.sort((u,v)=>v.ev-u.ev)[0];rows.push({r,top,book,o1,o2,m})}
+  }else rows.push({r,top:null,book,o1,o2,m});
  }
  trimOdds();
- rows.sort((p,q)=>q.top.ev-p.top.ev);
- return{read:pairs.length,matched,rows};
+ rows.sort((p,q)=>((q.top?q.top.ev:0)-(p.top?p.top.ev:0)));
+ return {read:parsed.matches.length,matched,rows,missed:parsed.missed,unmatched,book:chosen};
 }
 function renderGaps(res){
  const box=$("gapBox");
- if(!res.rows.length){box.innerHTML="";return}
- const top=res.rows.slice(0,12);
- box.innerHTML=`<h3 class="rch">Biggest gaps vs the book</h3><ul class="slist">${top.map(({r,top:t,gap})=>
-  `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b></span><span class="smid"><span class="sp">${esc(t.p.name)} ${t.o>0?"+":""}${t.o}</span><small class="muted">book ${Math.round(t.imp*100)}% · app ${Math.round(t.pm*100)}% · ${esc(r.tour)}</small><span class="stags"><span class="stag ${t.ev>=3?"ev":""}">${t.ev>=0?"+":"−"}$${Math.abs(t.ev).toFixed(0)} per $100</span></span></span></button></li>`).join("")}</ul>
-  <p class="help">A big gap means the app and the book disagree. Those are the ones worth logging either way, so we can find out which of you is right.</p>`;
- box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"menu"})});
+ if(!box)return;
+ const saved=res.rows.map(({r,book,m})=>`<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(book)} ${fmtO(r.p1===m.p1?m.o1:m.o2)} / ${fmtO(r.p2===m.p1?m.o1:m.o2)} · saved on this phone</small></span></button></li>`).join("");
+ const missed=res.missed&&res.missed.length?`<p class="help">Not a player on file: ${res.missed.slice(0,8).map(esc).join(", ")}.</p>`:"";
+ const loose=res.unmatched&&res.unmatched.length?`<p class="help">Read, but not on the schedule: ${res.unmatched.slice(0,8).map(m=>esc(m.p1+" vs "+m.p2)).join(", ")}.</p>`:"";
+ box.innerHTML=(saved?`<h3 class="rch">Saved from this paste</h3><ul class="slist">${saved}</ul>`:"")+missed+loose+(saved?`<p class="help">Open a match and the Book Odds tab shows this sportsbook on its own line.</p>`:"");
+ box.querySelectorAll(".srow").forEach(btn=>btn.onclick=()=>{openListedMatch(SCHED[+btn.dataset.i],{kind:"menu"});setMatchTab("odds")});
 }
+if($("pasteBook")){const saved=load("tt-pastebook");if(saved&&BOOKS.includes(bookKey(saved)))$("pasteBook").value=bookKey(saved);$("pasteBook").onchange=()=>save("tt-pastebook",$("pasteBook").value)}
 $("oddsSave").onclick=()=>{
  const t=$("oddsPaste").value;
  if(!t.trim()){setMsg("oddsMsg","err","Paste the page text first.");return}
+ save("tt-pastebook",$("pasteBook").value);
  const res=applyPastedOdds(t);
- if(!res.matched){setMsg("oddsMsg","err",`Found ${res.read} matchup${res.read===1?"":"s"} in the text but none of them are upcoming matches. Check the spelling, or that those matches haven't already been played.`);renderGaps(res);return}
- setMsg("oddsMsg","ok",`Read ${res.read} matchup${res.read===1?"":"s"}, filled in ${res.matched} upcoming match${res.matched===1?"":"es"}.`);
- renderGaps(res);renderSched();
- if(cfg.token)pushOdds().then(ok=>setMsg("oddsMsg",ok?"ok":"err",ok?`Read ${res.read} matchups, filled in ${res.matched} upcoming matches, and saved them for your other devices.`:`Read ${res.read} matchups, but couldn't save them to the shared file. They're still on this device.`));
- else setMsg("oddsMsg","ok",`Read ${res.read} matchups, filled in ${res.matched} upcoming matches. Add an access token in Sharing setup to share them with your other devices.`);
+ renderGaps(res);renderSched();renderSavedPrices();if(sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
+ const book=$("pasteBook").value;
+ if(!res.read){setMsg("oddsMsg","err","No matchups in that paste. Keep the player, vs, the other player, both prices, and the time.");return}
+ if(!res.matched){setMsg("oddsMsg","err",`Read ${res.read} matchup${res.read===1?"":"s"}, but none are on the schedule.`);return}
+ const note=`Saved ${res.matched} ${book} line${res.matched===1?"":"s"} on this phone.`;
+ setMsg("oddsMsg","ok",note);
+ if(cfg.token)pushOdds().then(ok=>setMsg("oddsMsg",ok?"ok":"err",ok?`${note} Copied to the shared file too.`:`${note} The shared file did not update.`));
 };
-$("oddsWipe").onclick=async()=>{OHIST={};ODDS={};save("tt-odds",OHIST);$("gapBox").innerHTML="";$("oddsPaste").value="";renderSched();
+$("oddsWipe").onclick=async()=>{OHIST={};ODDS={};save("tt-odds",OHIST);$("gapBox").innerHTML="";$("oddsPaste").value="";renderSched();renderSavedPrices();if(sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
  if(cfg.token&&navigator.onLine){try{await ghEdit("odds.txt",()=>oddsFileText(),"Clear odds");setMsg("oddsMsg","ok","Odds cleared on every device.")}catch(e){setMsg("oddsMsg","err","Cleared here, but the shared file didn't update.")}}
  else setMsg("oddsMsg","ok","Odds cleared on this device.")};
 
@@ -2224,8 +2307,19 @@ function wireFavs(box){
 }
 
 // ---------- menu sheet ----------
-function openMenu(){$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
-function closeMenu(){$("menu").hidden=true;document.documentElement.classList.remove("lock");$("menuBtn").focus()}
+function focusTool(kind){
+ for(const id of ["signals","sched"]){
+  const s=$(id);if(!s||s.hidden)continue;
+  const b=s.querySelector(".js-"+kind);if(b){b.focus();return}
+ }
+ const b=document.querySelector(".appbar .js-"+kind);if(b)b.focus();
+}
+function openMenu(){renderSavedPrices();$("menu").hidden=false;document.documentElement.classList.add("lock");$("menuClose").focus()}
+function closeMenu(){
+ $("menu").hidden=true;
+ if(![...document.querySelectorAll(".sheet")].some(s=>!s.hidden))document.documentElement.classList.remove("lock");
+ focusTool("menu");
+}
 $("flagA").value=fmtO(FLAGO.a);$("flagB").value=fmtO(FLAGO.b);
 $("flagSave").onclick=()=>{
  const a=parseInt(($("flagA").value||"").replace(/[^0-9+\-]/g,""),10),b=parseInt(($("flagB").value||"").replace(/[^0-9+\-]/g,""),10);
@@ -2233,10 +2327,11 @@ $("flagSave").onclick=()=>{
  FLAGO={a,b};save("tt-flago",FLAGO);$("flagA").value=fmtO(a);$("flagB").value=fmtO(b);
  setMsg("flagMsg","ok",`Watching for ${fmtO(a)} / ${fmtO(b)}.`);renderSched();update();renderBets();
 };
-$("menuBtn").onclick=openMenu;
-$("favsBtn").onclick=()=>{renderFavs();openSheet("favs")};
-$("favsClose").onclick=()=>{closeSheet("favs");$("favsBtn").focus()};
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");$("favsBtn").focus()}});$("menuClose").onclick=closeMenu;
+document.querySelectorAll(".js-menu").forEach(b=>b.onclick=openMenu);
+document.querySelectorAll(".js-saved").forEach(b=>b.onclick=()=>{renderFavs();openSheet("favs")});
+document.querySelectorAll(".js-bets").forEach(b=>b.onclick=()=>{betShown=5;settleBets();renderBets();openSheet("bets")});
+$("favsClose").onclick=()=>{closeSheet("favs");focusTool("saved")};
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){closeSheet("favs");focusTool("saved")}});$("menuClose").onclick=closeMenu;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 applyChrome();setup("A");setup("B");apply();showHome({force:true});loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));

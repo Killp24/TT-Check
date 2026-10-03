@@ -466,3 +466,296 @@ function sessionStat(s) {
   if (run >= 3) sub += ", lost " + run + " in a row";
   return { n, w, main: fmtRec(w, n), sub };
 }
+
+// One label for a sportsbook, so BetMGM and MGM are the same line.
+function bookKey(name) {
+  const n = String(name || "DraftKings").trim().toLowerCase().replace(/\s+/g, "");
+  if (n === "draftkings") return "DraftKings";
+  if (n === "fanduel") return "FanDuel";
+  if (n === "bet365" || n === "bets365") return "bet365";
+  if (n === "mgm" || n === "betmgm") return "MGM";
+  if (n === "fanatics") return "Fanatics";
+  const raw = String(name || "DraftKings").trim();
+  return raw || "DraftKings";
+}
+
+// Updating one book replaces only that book's current price.
+// Every other book stays, and a changed price stays in the history behind the new one.
+function upsertBookPrice(list, row) {
+  const arr = Array.isArray(list) ? list.slice() : [];
+  const book = bookKey(row && row.book);
+  const next = Object.assign({}, row, { book });
+  let seen = false;
+  const out = [];
+  for (let i = 0; i < arr.length; i++) {
+    const v = arr[i];
+    if (bookKey(v.book) !== book) { out.push(v); continue; }
+    const last = arr.slice(i + 1).every(x => bookKey(x.book) !== book);
+    if (!last) { out.push(v); continue; }
+    seen = true;
+    if (v.o1 === next.o1 && v.o2 === next.o2) out.push(Object.assign({}, v, next, { at: v.at || next.at }));
+    else { out.push(v); out.push(next); }
+  }
+  if (!seen) out.push(next);
+  return out;
+}
+
+// The price on screen for each book. A later line for the same book wins.
+function latestByBook(list) {
+  const map = new Map();
+  for (const v of list || []) {
+    const book = bookKey(v.book);
+    const prev = map.get(book);
+    if (!prev || (v.at || 0) >= (prev.at || 0)) map.set(book, Object.assign({}, v, { book }));
+  }
+  return map;
+}
+
+// Cap how many old prices one book can keep, without dropping a different book.
+function trimBookList(list, perBook) {
+  const keep = perBook || 4;
+  const groups = new Map();
+  for (const v of list || []) {
+    const book = bookKey(v.book);
+    const g = groups.get(book) || [];
+    const prev = g[g.length - 1];
+    if (prev && prev.o1 === v.o1 && prev.o2 === v.o2) continue;
+    g.push(Object.assign({}, v, { book }));
+    groups.set(book, g.slice(-keep));
+  }
+  return [...groups.values()].flat();
+}
+
+// The prices a bettor would rather have: the lower implied chance on that player.
+// A tie returns every book at that price.
+function bestBookSide(rows) {
+  const implied = (o) => {
+    const n = Number(o);
+    if (!Number.isFinite(n) || Math.abs(n) < 100) return null;
+    return n < 0 ? (-n) / (-n + 100) : 100 / (n + 100);
+  };
+  const pick = (key) => {
+    let bestP = Infinity;
+    let hits = [];
+    for (const r of rows || []) {
+      const o = Number(r[key]);
+      const p = implied(o);
+      if (p === null) continue;
+      if (p < bestP - 1e-9) { bestP = p; hits = [{ name: r.name, o }]; }
+      else if (Math.abs(p - bestP) <= 1e-9) hits.push({ name: r.name, o });
+    }
+    return hits;
+  };
+  return { a: pick("oa"), b: pick("ob") };
+}
+
+function foldName(s) {
+  return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z']+/g, " ").trim();
+}
+
+// "Maciej Kolek" and "Kolek Maciej" are the same player. A first name shared by two players does not match.
+function matchPlayerName(raw, players) {
+  const t = foldName(raw);
+  const words = t.split(" ").filter(Boolean);
+  if (words.length < 2 || words.length > 4) return null;
+  const list = players || [];
+  const exact = list.filter(p => foldName(p.name) === t);
+  if (exact.length === 1) return exact[0].name;
+  const rev = words.slice().reverse().join(" ");
+  const flipped = list.filter(p => foldName(p.name) === rev);
+  if (flipped.length === 1) return flipped[0].name;
+  const loose = list.filter(p => {
+    const n = foldName(p.name).split(" ").filter(Boolean);
+    return words.every(w => n.includes(w));
+  });
+  return loose.length === 1 ? loose[0].name : null;
+}
+
+function parseAmerican(raw) {
+  const m = String(raw || "").trim().match(/^([+\-\u2212\u2013\u2014])\s?(\d{2,4})$/);
+  if (!m) return null;
+  const n = +m[2];
+  if (!(n >= 100)) return null;
+  return (m[1] === "+" ? 1 : -1) * n;
+}
+
+function parsePasteClock(line) {
+  const m = String(line || "").trim().match(/^(today|tomorrow|tonight)?\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)\b/i);
+  if (!m) return null;
+  let h = +m[2];
+  const min = m[3] ? +m[3] : 0;
+  const ap = m[4].toLowerCase();
+  if (ap === "pm" && h < 12) h += 12;
+  if (ap === "am" && h === 12) h = 0;
+  if (h > 23 || min > 59) return null;
+  return { day: (m[1] || "today").toLowerCase(), minutes: h * 60 + min };
+}
+
+// A copied sportsbook page: first name, vs, first name, the two prices, then "Today 2:00 PM".
+// A line that is only a book name starts a new book. One book never takes the other's prices.
+function parseBookPaste(text, players) {
+  const lines = String(text || "").split(/\r?\n/).map(l => l.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").trim()).filter(l => l && !/^https?:/i.test(l));
+  const known = { draftkings: "DraftKings", fanduel: "FanDuel", bet365: "bet365", bets365: "bet365", mgm: "MGM", betmgm: "MGM", fanatics: "Fanatics" };
+  const matches = [];
+  const missed = [];
+  let book = null;
+  let cur = null;
+  const flush = () => {
+    if (cur && cur.p1 && cur.p2 && cur.p1 !== cur.p2 && cur.o1 != null && cur.o2 != null) matches.push(Object.assign({ book }, cur));
+    cur = null;
+  };
+  const ensure = () => cur || (cur = { p1: null, p2: null, o1: null, o2: null, minutes: null, day: null });
+  for (const line of lines) {
+    const token = foldName(line).replace(/ /g, "");
+    if (known[token]) { book = known[token]; continue; }
+    if (/^more bets$/i.test(line)) { flush(); continue; }
+    if (/^vs\.?$/i.test(line)) continue;
+    const inline = line.match(/^(.*\S)\s+([+\-\u2212\u2013\u2014]\s?\d{2,4})$/);
+    if (inline) {
+      const who = matchPlayerName(inline[1], players);
+      const odd = parseAmerican(inline[2]);
+      if (who && odd != null) {
+        const c = ensure();
+        if (!c.p1) { c.p1 = who; c.o1 = odd; }
+        else if (!c.p2) { c.p2 = who; c.o2 = odd; }
+        else { flush(); const n = ensure(); n.p1 = who; n.o1 = odd; }
+        continue;
+      }
+    }
+    const clock = parsePasteClock(line);
+    if (clock && !matchPlayerName(line, players)) {
+      const c = ensure();
+      c.minutes = clock.minutes;
+      c.day = clock.day;
+      continue;
+    }
+    const odd = parseAmerican(line);
+    if (odd != null) {
+      const c = ensure();
+      if (c.o1 == null) c.o1 = odd;
+      else if (c.o2 == null) c.o2 = odd;
+      else { flush(); const n = ensure(); n.o1 = odd; }
+      continue;
+    }
+    const name = matchPlayerName(line, players);
+    if (!name) {
+      if (!/^(today|tomorrow|tonight)\b/i.test(line)) missed.push(line);
+      continue;
+    }
+    const c = ensure();
+    if (!c.p1) c.p1 = name;
+    else if (!c.p2) c.p2 = name;
+    else { flush(); const n = ensure(); n.p1 = name; }
+  }
+  flush();
+  return { matches, missed };
+}
+
+// The copied clock is the sportsbook's clock. Find the hour shift that lands those times on the schedule.
+// date is the schedule day most of the paste agrees on, so yesterday's same clock is not the match.
+// When several shifts fit, prefer the one already used for this sportsbook, then the meetings closest to now.
+function alignPasteTimes(matches, fixtures, opts) {
+  const now = typeof opts === "number" ? opts : (opts && opts.now != null ? opts.now : Date.now());
+  const preferOff = opts && typeof opts === "object" && opts.preferOff != null ? opts.preferOff : null;
+  const ranked = [];
+  for (let off = -14 * 60; off <= 14 * 60; off += 15) {
+    let hits = 0;
+    const byDate = new Map();
+    for (const m of matches || []) {
+      if (m.minutes == null) continue;
+      const target = (m.minutes + off + 1440) % 1440;
+      const pair = [m.p1, m.p2].sort().join("|");
+      let matched = false;
+      const dates = new Set();
+      for (const f of fixtures || []) {
+        if ([f.p1, f.p2].sort().join("|") !== pair || Math.abs(f.minutes - target) > 10) continue;
+        matched = true;
+        if (f.date) dates.add(f.date);
+      }
+      if (!matched) continue;
+      hits++;
+      for (const d of dates) byDate.set(d, (byDate.get(d) || 0) + 1);
+    }
+    if (!hits) continue;
+    let date = null;
+    let dateHits = 0;
+    let tied = false;
+    for (const [d, n] of byDate) {
+      if (n > dateHits) { dateHits = n; date = d; tied = false; }
+      else if (n === dateHits) tied = true;
+    }
+    if (tied) date = null;
+    let lag = 0;
+    let used = 0;
+    for (const m of matches || []) {
+      if (m.minutes == null) continue;
+      const target = (m.minutes + off + 1440) % 1440;
+      const pair = [m.p1, m.p2].sort().join("|");
+      let bestLag = Infinity;
+      for (const f of fixtures || []) {
+        if ([f.p1, f.p2].sort().join("|") !== pair || Math.abs(f.minutes - target) > 10) continue;
+        if (date && f.date && f.date !== date) continue;
+        if (f.at == null) continue;
+        const dt = f.at - now;
+        const row = dt >= -15 * 60000 ? Math.abs(dt) : 1e12 + Math.abs(dt);
+        if (row < bestLag) bestLag = row;
+      }
+      if (bestLag < Infinity) { lag += bestLag; used++; }
+    }
+    if (!used) lag = Infinity;
+    ranked.push({ off, hits, date, lag });
+  }
+  if (!ranked.length) return { off: 0, hits: 0, date: null, unique: false };
+  const top = Math.max(...ranked.map(r => r.hits));
+  const tiedOff = ranked.filter(r => r.hits === top);
+  const preferred = preferOff == null ? null : tiedOff.find(r => r.off === preferOff);
+  const pick = preferred || tiedOff.reduce((a, b) => b.lag < a.lag ? b : a);
+  return { off: pick.off, hits: pick.hits, date: pick.date, unique: tiedOff.length === 1 };
+}
+
+// Favorite record over the recent window, for a display flag only. It does not move the win chance.
+// sign 1 is playing above Elo, sign -1 is playing below. Ban-list players keep their own flag.
+function dataMark(s, onBan) {
+  if (onBan || !s) return null;
+  const n = s.moN || 0;
+  if (n < 8) return null;
+  const diff = (s.moW || 0) - (s.moE || 0);
+  const rate = diff / n;
+  if (rate <= -0.2) return { sign: -1, n, w: s.moW, diff, rate };
+  if (rate >= 0.2) return { sign: 1, n, w: s.moW, diff, rate };
+  return null;
+}
+
+function pickFixture(match, fixtures, offsetMin, slateDate) {
+  const pair = [match.p1, match.p2].sort().join("|");
+  const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);
+  if (!cands.length) return null;
+  const now = Date.now();
+  const soonest = cands.slice().sort((a, b) => {
+    if (!!a.done !== !!b.done) return a.done ? 1 : -1;
+    return Math.abs((a.at || 0) - now) - Math.abs((b.at || 0) - now);
+  })[0];
+  if (match.minutes == null || offsetMin == null) return soonest;
+  const target = (match.minutes + offsetMin + 1440) % 1440;
+  const near = [];
+  for (const f of cands) {
+    let diff = Math.abs(f.minutes - target);
+    if (diff > 720) diff = 1440 - diff;
+    if (diff <= 20) near.push(f);
+  }
+  if (!near.length) return soonest;
+  const clock = f => {
+    let d = Math.abs(f.minutes - target);
+    if (d > 720) d = 1440 - d;
+    return d;
+  };
+  near.sort((a, b) => {
+    const as = slateDate && a.date === slateDate ? 0 : 1;
+    const bs = slateDate && b.date === slateDate ? 0 : 1;
+    if (as !== bs) return as - bs;
+    if (clock(a) !== clock(b)) return clock(a) - clock(b);
+    if (!!a.done !== !!b.done) return a.done ? 1 : -1;
+    return (b.at || 0) - (a.at || 0);
+  });
+  return near[0];
+}
