@@ -951,7 +951,7 @@ function renderCompare(a,b){
   const withElo=ahead.elo>=behind.elo;
   read=`${sur(ahead.name)} leads ${n} of ${rows.length} recent stats${other?`, ${sur(behind.name)} leads ${other}`:""}. ${withElo?"The rating points the same way.":sur(ahead.name)+" has the lower Elo, so recent form and the rating point different ways."}`;
  }
- box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green is the better number from each player's last 15 results. Red is that same stat for the other player. A tie, or fewer than 5 results, stays plain. Wins are the record. Set margin is sets won minus sets lost. Clean wins finished 3–0 or 3–1. Deciders are the 3–2 matches, colored once each player has 3 of them. Last 5 is the newest part of the 15. This can disagree with Elo. It leaves the win chance alone.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
+ box.innerHTML=`<div class="panel"><h2>Last 15, side by side</h2><p class="help">Green leads that stat. Red is the lower number for the other player. A tie stays plain. Clean wins are 3–0 or 3–1. Deciders are 3–2. This can disagree with Elo. The win chance above stays as it is.</p><div class="cmpgrid">${col(a,"A")}${col(b,"B")}</div><p class="cmpread">${esc(read)}</p></div>`;
 }
 function renderTrust(){
  const el=$("trustInfo");if(!el)return;
