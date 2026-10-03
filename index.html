@@ -235,7 +235,7 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .mtabs{display:flex;gap:6px;margin:0}
 .mtabs[hidden]{display:none}
 .mtabs .btn,.dock .btn{flex:1;text-align:center}
-.mtabs .btn{padding:8px 6px;font-size:.92rem}
+.mtabs .btn{padding:8px 4px;font-size:.82rem}
 .mtabs .btn.on,.dock .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .tabsub:empty,.tabsub[hidden]{display:none}
@@ -245,7 +245,10 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .pickline{margin:10px 0 0;font-weight:600}
 .edgeline{margin:8px 0 0;font-weight:600}
 .edgeline[hidden]{display:none}
-body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly,body[data-view="match"] #bookPanel{display:none}
+body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly{display:none}
+body[data-view="match"]:not([data-tab="odds"]) #oddsBox,body[data-view="match"]:not([data-tab="odds"]) #bookPanel{display:none}
+body[data-view="match"][data-tab="odds"] #paneDetails > :not(#oddsBox):not(#bookPanel){display:none}
+body[data-view="match"][data-tab="odds"] #bookPanel{display:block}
 .mi0 .vs{font-family:-apple-system,system-ui,sans-serif;font-size:.8rem;font-weight:600;color:var(--muted)}
 body[data-view="match"] h1,body[data-view="match"] #assistLead{display:none}
 body[data-view="match"] .foot{display:none}
@@ -302,7 +305,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="matchstick" id="matchStick">
 <button class="listback" id="listBack" type="button" hidden>← Home</button>
-<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button></nav>
+<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Odds</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
 <p class="sub" id="assistLead">Search two player names.</p>
@@ -328,7 +331,7 @@ body[data-view="match"] #paneDetails > #bookPanel{order:7}
 <p class="edgeline" id="edgeLine" hidden></p>
 <div id="recentForm"></div>
 <div id="oddsBox"></div>
-<div id="bookPanel" hidden><div class="panel"><h2>Compare books</h2><p class="help">Add what the other books are showing for this match. With two or more, the app works out a consensus price.</p><div id="bookBox"></div></div></div>
+<div id="bookPanel" hidden><div class="panel"><h2>Other books</h2><p class="help">Add the price from each sportsbook. Every price is saved with this match. Once enough of those matches have a result, the books can get a vote in the win chance.</p><div id="bookBox"></div></div></div>
 <div id="cmp"></div>
 </div>
 <div id="paneStandings" hidden></div>
@@ -955,7 +958,7 @@ function update(){
  if(!a||!b||a===b){renderOdds(null,null,0);odds.hidden=true;$("bookPanel").hidden=true;h.innerHTML="";$("cmp").innerHTML="";renderRecentForm(a,b);renderStandings(a,b);const pn0=$("pickNames");if(pn0){pn0.hidden=true;pn0.textContent=""}showEdgeLine(null,null,0);v.innerHTML=a&&a===b?'<div class="verdict"><strong>Same player twice</strong>Pick two different players.</div>':"";renderTrust();applyChrome();return}
  const soNow=storedOdds(a.name,b.name,slotOf(a,b));
  const est=estimate(a,b,soNow?bookOpt(soNow.o1,soNow.o2):null),pa=est.pa;
- renderOdds(a,b,pa,est);$("bookPanel").hidden=VIEW==="match";if(VIEW!=="match")renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
+ renderOdds(a,b,pa,est);$("bookPanel").hidden=false;renderBooks(a,b);odds.hidden=false;$("barA").style.width=(pa*100)+"%";$("barB").style.width=((1-pa)*100)+"%";
  $("pA").textContent=Math.round(pa*100)+"%";$("pB").textContent=Math.round((1-pa)*100)+"%";
  $("nA").textContent=sur(a.name);$("nB").textContent=sur(b.name);
  const pn=$("pickNames");if(pn){pn.hidden=VIEW!=="match";pn.textContent=VIEW==="match"?`${a.name} vs ${b.name}`:""}
@@ -1181,8 +1184,9 @@ function snapLine(a,b){
  const edge=(so.edge1!=null||so.edge2!=null)?`, edge ${so.edge1!=null?money(so.edge1):"–"} / ${so.edge2!=null?money(so.edge2):"–"} per $100`:"";
  return `<p class="help" style="margin:4px 0 0">Decision snapshot ${ago(so.at)}: book ${so.o1!=null?fmtO(so.o1):"–"} / ${so.o2!=null?fmtO(so.o2):"–"}${app}${edge}.</p>`;
 }
-function showEdgeLine(){
+function showEdgeLine(text){
  const el=$("edgeLine");if(!el)return;
+ if(VIEW==="match"&&text){el.hidden=false;el.textContent=text;return}
  el.hidden=true;el.textContent="";
 }
 function edgeSummary(a,b,pa){
@@ -1219,10 +1223,10 @@ function oddsCalc(a,b,pa){
  const oa=readOdds("A"),ob=readOdds("B");
  rememberOdds(a,b);
  const model={A:pa,B:1-pa};
- showEdgeLine();
  paintPrices(model);
  if(VIEW==="match"){
   const summary=edgeSummary(a,b,pa);
+  showEdgeLine(summary);
   const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
   const margin=ia!==null&&ib!==null?ia+ib-1:null;
   const sides=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null);
@@ -1239,6 +1243,7 @@ function oddsCalc(a,b,pa){
   const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">Enter both prices and the edge shows below.</p>`:"");
   out.innerHTML=lead+(rows?flag+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
+ showEdgeLine("");
  if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
@@ -1550,13 +1555,14 @@ function applyChrome(){
  const sub=$("tabSub");
  if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
+ else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="The main price, then each sportsbook. Saved prices stay with this match."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
  $("court").hidden=match;
- $("paneDetails").hidden=match&&MTAB!=="details";
+ $("paneDetails").hidden=match&&MTAB!=="details"&&MTAB!=="odds";
  $("paneH2h").hidden=match&&MTAB!=="h2h";
  $("paneStandings").hidden=!(match&&MTAB==="standings");
- for(const id of ["tabDetails","tabStandings","tabH2h"]){
+ for(const id of ["tabDetails","tabStandings","tabH2h","tabOdds"]){
   const b=$(id);if(!b)continue;const on=b.dataset.tab===MTAB;
   b.classList.toggle("on",on);b.setAttribute("aria-selected",on?"true":"false");
  }
