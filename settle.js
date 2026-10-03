@@ -726,6 +726,15 @@ function dataMark(s, onBan) {
   return null;
 }
 
+// How old the official results list is. Past 40 minutes, the last match may not be in it yet.
+function resultsAge(updatedAt, nowMs) {
+  const t = new Date(updatedAt).getTime();
+  if (!updatedAt || !Number.isFinite(t)) return null;
+  const now = nowMs == null ? Date.now() : nowMs;
+  const mins = Math.max(0, Math.round((now - t) / 60000));
+  return { mins, stale: mins > 40 };
+}
+
 function pickFixture(match, fixtures, offsetMin, slateDate) {
   const pair = [match.p1, match.p2].sort().join("|");
   const cands = (fixtures || []).filter(f => [f.p1, f.p2].sort().join("|") === pair);

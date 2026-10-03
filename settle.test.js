@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -470,6 +470,18 @@ test("any list in that copied shape is read, and yesterday's clock does not take
   const finished = fixtures.map(f => Object.assign({}, f, { done: f.date === "2026-10-03" && f.time === "23:25" }));
   const still = pickFixture(parsed.matches[1], finished, aligned.off, aligned.date);
   assert.equal(still.date + " " + still.time, "2026-10-03 23:25");
+});
+
+test("the results list is stale once it is past 40 minutes", () => {
+  const now = Date.parse("2026-10-03T21:00:00Z");
+  const fresh = resultsAge("2026-10-03T20:20:00Z", now);
+  assert.equal(fresh.mins, 40);
+  assert.equal(fresh.stale, false);
+  const old = resultsAge("2026-10-03T20:19:00Z", now);
+  assert.equal(old.mins, 41);
+  assert.equal(old.stale, true);
+  assert.equal(resultsAge("", now), null);
+  assert.equal(resultsAge("nope", now), null);
 });
 
 test("a month of favorite results flags playing above or below Elo, and skips the ban list", () => {

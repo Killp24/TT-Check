@@ -309,6 +309,9 @@ body[data-view="match"] .foot{display:none}
 .flist .fres.l{color:var(--ban)}
 .flist .fwho{overflow-wrap:break-word}
 .flist .fscore{white-space:nowrap}
+.help.stale{color:#9a3412;font-weight:600}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .help.stale{color:#ffd7a8}}
+:root[data-theme="dark"] .help.stale{color:#ffd7a8}
 body[data-view="match"] #paneDetails:not([hidden]){display:flex;flex-direction:column}
 body[data-view="match"] #paneDetails > #odds{order:1}
 body[data-view="match"] #paneDetails > #verdict{order:2}
@@ -1064,7 +1067,14 @@ function renderRecentForm(a,b){
   }).join(""):`<li><span class="fwho muted">No recent matches</span></li>`;
   return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
  };
- box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the opponent, and who won.</p><div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
+ box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the opponent, and who won.</p>${resultsListNote()}<div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
+}
+function resultsListNote(){
+ const age=resultsAge(offAt);
+ if(!age)return `<p class="help stale">Results list time is not on file. The last match may be missing.</p>`;
+ const clock=new Date(offAt).toLocaleTimeString([],{hour:"numeric",minute:"2-digit"});
+ const warn=age.stale?" Past 40 minutes, so the last match may be missing.":"";
+ return `<p class="help${age.stale?" stale":""}">Results list updated ${esc(clock)}, ${esc(ago(offAt)||"just now")}.${esc(warn)}</p>`;
 }
 function bookLine(a,b){
  const oa=readOdds("A"),ob=readOdds("B");
