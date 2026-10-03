@@ -236,7 +236,7 @@ html.lock,html.lock body{overflow:hidden}
 <h1>TT matchup check</h1>
 <p class="sub">Pick two players.</p>
 <p class="src" id="srcInfo">Loading data…</p>
-<p class="srcact"><button class="btn" id="refreshBtn" type="button">Refresh</button><span class="msg" id="refreshMsg" role="status"></span></p>
+<p class="srcact"><button class="btn" id="refreshBtn" type="button" aria-label="Update official results so form is current">Update results</button><span class="msg" id="refreshMsg" role="status"></span></p>
 <nav class="flow" aria-label="Today, signals, assist"><button class="btn" id="schedBtn" type="button" aria-haspopup="dialog" aria-controls="sched">1 Today</button><button class="btn" id="sigBtn" type="button" aria-haspopup="dialog" aria-controls="signals">2 Signals</button><button class="btn on" id="assistBtn" type="button" aria-current="step">3 Assist</button></nav>
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="topbar"><div class="tb"><button class="btn" id="menuBtn" type="button" aria-haspopup="dialog" aria-controls="menu">☰ Menu</button><button class="btn" id="favsBtn" type="button" aria-haspopup="dialog" aria-controls="favs">★ Saved</button><button class="btn" id="betsBtn" type="button" aria-haspopup="dialog" aria-controls="bets">💵 Bets</button></div><div class="tb"><button class="btn star" id="favBtn" type="button" hidden aria-pressed="false">☆ Save</button><button class="btn" id="clear" type="button">Clear</button></div></div>
@@ -412,27 +412,80 @@ async function syncPending(){
  data.matches=text;data.at=Date.now();save("tt-data",data);
 }
 let busy=false;
+async function reloadOfficialFiles(){
+ const [o,sc]=await Promise.all(["official.txt","schedule.txt"].map(getData));
+ if(!o)throw new Error("Couldn't download the official results.");
+ if(sc)SCHED=parseSched(sc);
+ TIMEIX=null;
+ official=parseMatches(o,"off");
+ offAt=(o.match(/# updated (\S+)/)||[])[1]||null;
+}
+function resultsNote(before){
+ const added=official.length-before, when=offAt?ago(offAt):"recently";
+ return added>0?`Form updated with ${added} new official result${added===1?"":"s"}, saved ${when}.`:`Form is up to date. Official results were already current, saved ${when}.`;
+}
+function sayResults(note,cls){const m=$("refreshMsg");if(m&&note){m.className="msg "+(cls||"ok");m.textContent=note}}
+// The full player sweep runs once an hour. This only asks for today's tournament pages, and only when one is not already running.
+async function workflowBusy(file){
+ const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/actions/workflows/${file}/runs?per_page=5`;
+ const r=await fetch(url,{headers:hdr()});
+ if(r.status===401||r.status===403)return "noperm";
+ if(!r.ok)return "error";
+ const j=await r.json();
+ return (j.workflow_runs||[]).some(x=>x.status==="queued"||x.status==="in_progress");
+}
+async function collectToday(){
+ if(!cfg.token)return "notoken";
+ if(Date.now()-(load("tt-collect-at")||0)<10*60*1000)return "recent";
+ const hourly=await workflowBusy("update-ratings.yml");
+ if(hourly==="noperm"||hourly==="error")return hourly;
+ const fast=await workflowBusy("fast-update.yml");
+ if(fast==="noperm"||fast==="error")return fast;
+ if(hourly||fast)return "running";
+ const r=await fetch(`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/actions/workflows/fast-update.yml/dispatches`,{method:"POST",headers:{...hdr(),"Content-Type":"application/json"},body:JSON.stringify({ref:"main"})});
+ if(r.status===204){save("tt-collect-at",Date.now());return "started"}
+ if(r.status===401||r.status===403)return "noperm";
+ return "error";
+}
 async function refresh(showMsg){
  if(busy)return;busy=true;
+ const btn=$("refreshBtn");if(btn)btn.disabled=true;
+ try{if(navigator.onLine){await syncPending();await fetchAll();await loadOfficial()}
+  if(showMsg)setMsg("setupMsg","ok","Synced.")}
+ catch(e){if(showMsg||!data)setMsg("setupMsg","err",e.message);else console.warn(e)}
+ finally{busy=false;apply();if(btn)btn.disabled=false}
+}
+async function refreshResults(){
+ if(busy)return;busy=true;
  const btn=$("refreshBtn");
- if(btn){btn.disabled=true;btn.textContent="Refreshing…"}
- const stamp=()=>[offAt||"",official.length,SCHED.length].join("|");
- const before=stamp();
+ if(btn){btn.disabled=true;btn.textContent="Updating…"}
+ const before=official.length;
  let note="",cls="ok";
  try{
-  if(!navigator.onLine){note="You're offline. Showing the last saved results.";cls="err"}
+  if(!navigator.onLine){note="You're offline. Form is using the last saved official results.";cls="err"}
   else{
-   await syncPending();await fetchAll();await loadOfficial();
-   note=stamp()===before?"Checked. These are the latest results.":"Updated with the latest results.";
+   await reloadOfficialFiles();
+   const when=offAt?ago(offAt):"recently", how=await collectToday();
+   if(how==="started"){
+    sayResults("Collecting today's official results. Form will update when they land.","ok");
+    const mark=(offAt||"")+"|"+official.length, deadline=Date.now()+4*60*1000;
+    while(Date.now()<deadline){
+     await new Promise(r=>setTimeout(r,15000));
+     await reloadOfficialFiles();
+     if((offAt||"")+"|"+official.length!==mark){apply();break}
+    }
+    note=official.length>before?resultsNote(before):`Today's results were requested. Form is using the official list saved ${offAt?ago(offAt):when}.`;
+   }else if(how==="running") note=`The hourly results collection is already running. Form is using official results saved ${when}.`;
+   else if(how==="recent") note=`Form is up to date. Official results were checked a few minutes ago, saved ${when}.`;
+   else if(how==="notoken") note=`Form is using official results saved ${when}. New results are collected about once an hour. Add a token in Sharing setup to collect today's results sooner.`;
+   else if(how==="noperm") note=`Form is using official results saved ${when}. This token can't start a collection, so new results still arrive about once an hour.`;
+   else note=resultsNote(before);
   }
-  if(showMsg)setMsg("setupMsg",cls==="err"?"err":"ok",note);
- }catch(e){
-  note=e.message;cls="err";
-  if(showMsg||!data)setMsg("setupMsg","err",e.message);else console.warn(e);
- }finally{
+ }catch(e){note=e.message;cls="err";console.warn(e)}
+ finally{
   busy=false;apply();
-  if(btn){btn.disabled=false;btn.textContent="Refresh"}
-  const m=$("refreshMsg");if(m&&note){m.className="msg "+cls;m.textContent=note}
+  if(btn){btn.disabled=false;btn.textContent="Update results"}
+  sayResults(note,cls);
  }
 }
 function setMsg(id,cls,t){const m=$(id);m.className="msg "+cls;m.textContent=t}
@@ -1822,6 +1875,6 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("favs").hidden){
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("menu").hidden)closeMenu()});
 setup("A");setup("B");apply();loadOfficial().then(apply);refresh(false);
 addEventListener("online",()=>refresh(false));
-$("refreshBtn").onclick=()=>refresh(false);
+$("refreshBtn").onclick=()=>refreshResults();
 if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{})}
 </script></body></html>
