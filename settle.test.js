@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -233,6 +233,51 @@ test("last-15 form colors the better number and leaves a thin sample plain", () 
   assert.equal(dec.find(r => r.key === "decider").side, "A");
   assert.equal(formEdgeSide(0.5, 0.5, 10, 10, 5), "");
   assert.equal(formEdgeSide(0.8, 0.4, 4, 15, 5), "");
+});
+
+test("vs higher names how strong the opponents were", () => {
+  const up = [
+    { won: true, own: 1200, opp: 1400 },
+    { won: true, own: 1200, opp: 1400 },
+    { won: true, own: 1200, opp: 1400 },
+    { won: false, own: 1200, opp: 1500 }
+  ];
+  for (let i = 0; i < 4; i++) up.push({ won: true, own: 1200, opp: 1000 });
+  const soft = [];
+  for (let i = 0; i < 8; i++) soft.push({ won: true, own: 1200, opp: 900 });
+  const fa = fieldShape(up), fb = fieldShape(soft);
+  assert.equal(fa.aboveW, 3);
+  assert.equal(fa.aboveN, 4);
+  assert.equal(fa.best, 1400);
+  assert.equal(fa.bestGap, 200);
+  assert.equal(fb.aboveN, 0);
+  assert.equal(fb.best, 900);
+  const row = fieldStat(fa, fb);
+  assert.equal(row.side, "A");
+  assert.equal(row.A, "3–1");
+  assert.equal(row.B, "none");
+  assert.equal(row.subA.includes("+225 Elo avg"), true);
+  assert.equal(row.subA.includes("best win 1400 (+200)"), true);
+  assert.equal(row.subB.includes("best win 900"), true);
+  assert.equal(row.subB.includes("opponents 900"), true);
+  const fought = fieldShape([
+    { won: true, own: 1200, opp: 1300 },
+    { won: true, own: 1200, opp: 1300 },
+    { won: false, own: 1200, opp: 1300 },
+    { won: false, own: 1200, opp: 1300 },
+    { won: false, own: 1200, opp: 1300 }
+  ]);
+  assert.equal(fieldSide(fa, fought), "A");
+  const one = fieldShape([{ won: true, own: 1000, opp: 1100 }]);
+  assert.equal(fieldSide(one, fb), "");
+  const lose = fieldShape([
+    { won: false, own: 1200, opp: 1400 },
+    { won: false, own: 1200, opp: 1400 },
+    { won: false, own: 1200, opp: 1400 },
+    { won: true, own: 1200, opp: 1400 }
+  ]);
+  assert.equal(fieldSide(lose, fb), "");
+  assert.equal(fieldShape([{ won: true, own: null, opp: 1400 }]).known, 0);
 });
 
 test("form shift shrinks a small sample toward zero", () => {
