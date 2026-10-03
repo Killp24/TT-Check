@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -278,6 +278,54 @@ test("vs higher names how strong the opponents were", () => {
   ]);
   assert.equal(fieldSide(lose, fb), "");
   assert.equal(fieldShape([{ won: true, own: null, opp: 1400 }]).known, 0);
+});
+
+test("favorite record uses the recent window when Elo was higher", () => {
+  const rows = [
+    { won: true, own: 1500, opp: 1400 },
+    { won: true, own: 1500, opp: 1400 },
+    { won: false, own: 1500, opp: 1400 },
+    { won: true, own: 1400, opp: 1500 },
+    { won: true, own: 1500, opp: 1500 }
+  ];
+  const shape = favoriteShape(rows);
+  assert.equal(shape.favN, 3);
+  assert.equal(shape.favW, 2);
+  assert.equal(favoriteShape([{ won: true, own: null, opp: 1400 }]).favN, 0);
+  const none = favoriteShape([
+    { won: true, own: 1000, opp: 1200 },
+    { won: false, own: 1000, opp: 1200 },
+    { won: true, own: 1000, opp: 1200 }
+  ]);
+  const thin = favoriteStat(shape, none);
+  assert.equal(thin.label, "As the favorite");
+  assert.equal(thin.A, "2–1");
+  assert.equal(thin.B, "none");
+  assert.equal(thin.side, "");
+  const hotter = favoriteShape([
+    { won: true, own: 1600, opp: 1400 },
+    { won: true, own: 1600, opp: 1400 },
+    { won: true, own: 1600, opp: 1400 },
+    { won: false, own: 1600, opp: 1400 }
+  ]);
+  const lead = favoriteStat(hotter, shape);
+  assert.equal(lead.A, "3–1");
+  assert.equal(lead.B, "2–1");
+  assert.equal(lead.side, "A");
+  assert.equal(favoriteSide(shape, none), "");
+});
+
+test("session line counts the matches and keeps the record", () => {
+  const s = sessionStat({ n: 5, w: 3, run: 0 });
+  assert.equal(s.n, 5);
+  assert.equal(s.main, "3–2");
+  assert.equal(s.sub, "5 played");
+  const cold = sessionStat({ n: 4, w: 1, run: 3 });
+  assert.equal(cold.main, "1–3");
+  assert.equal(cold.sub, "4 played, lost 3 in a row");
+  assert.equal(sessionStat(null).main, "none yet");
+  assert.equal(sessionStat(null).sub, "");
+  assert.equal(sessionStat({ n: 0, w: 0, run: 4 }).main, "none yet");
 });
 
 test("form shift shrinks a small sample toward zero", () => {
