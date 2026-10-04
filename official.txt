@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-04T18:33Z
+# updated 2026-10-04T21:11Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9497,6 +9497,7 @@
 2026-10-03 | Pawlik Cezary | Szurgot Andrzej | 3-0 | 10 | 5 | +7
 2026-10-03 | Poloszczanski Dawid | Sulkowski Karol | 3-0 | 13 | 7 | +20
 2026-10-03 | Sawicki Grzegorz | Sikon Mateusz | 3-1 | 14 | 5 | +18
+2026-10-03 | Sulkowski Karol | Skorski Michal | 3-1 |  |  | 
 2026-10-04 | Kolek Maciej | Kukawka Milosz | 3-2 | 1 | 1 | +5
 2026-10-04 | Sulkowski Bartek | Brud Szymon | 3-1 | 1 | 1 | +15
 2026-10-04 | Poloszczanski Dawid | Mugowski Arkadiusz | 3-1 | 1 | 1 | +17
@@ -9745,3 +9746,41 @@
 2026-10-04 | Szostok Sebastian | Szymanski Igor | 3-1 | 10 | 10 | +5
 2026-10-04 | Oracz Michal | Malecha Maciej | 3-1 | 10 | 10 | +9
 2026-10-04 | Buczynski Witold | Idaczyk Rafal | 3-0 | 10 | 10 | +17
+2026-10-04 | Sulkowski Bartek | Kapik Krzysztof | 3-0 |  |  | 
+2026-10-04 | Brud Szymon | Nadolny Jakub | 3-0 |  |  | 
+2026-10-04 | Kapik Krzysztof | Zochniak Jakub | 3-0 |  |  | 
+2026-10-04 | Nadolny Jakub | Pietraszko Lukasz | 3-2 |  |  | 
+2026-10-04 | Brud Szymon | Sulkowski Bartek | 3-2 |  |  | 
+2026-10-04 | Nadolny Jakub | Kapik Krzysztof | 3-1 |  |  | 
+2026-10-04 | Zochniak Jakub | Sulkowski Bartek | 3-1 |  |  | 
+2026-10-04 | Pietraszko Lukasz | Brud Szymon | 3-2 |  |  | 
+2026-10-04 | Mucha Grzegorz | Nocun Zbigniew | 3-1 |  |  | 
+2026-10-04 | Tkaczyk Henryk | Kwiatkowski Kacper | 3-2 |  |  | 
+2026-10-04 | Staniczek Adam | Szurgot Andrzej | 3-0 |  |  | 
+2026-10-04 | Linek Adam | Kukawka Milosz | 3-2 |  |  | 
+2026-10-04 | Rudomina Kamil | Sulkowski Karol | 3-0 |  |  | 
+2026-10-04 | Glanowski Jakub | Stapor Rafal | 3-2 |  |  | 
+2026-10-04 | Sulkowski Karol | Kukawka Milosz | 3-1 |  |  | 
+2026-10-04 | Glanowski Jakub | Linek Adam | 3-1 |  |  | 
+2026-10-04 | Stapor Rafal | Rudomina Kamil | 3-1 |  |  | 
+2026-10-04 | Ostachowski Piotr | Guzik Michal | 3-2 |  |  | 
+2026-10-04 | Sawicki Grzegorz | Adamus Mariusz | 3-0 |  |  | 
+2026-10-04 | Guzik Michal | Sikon Mateusz | 3-1 |  |  | 
+2026-10-04 | Ostachowski Piotr | Ruszkiewicz Adam | 3-1 |  |  | 
+2026-10-04 | Sawicki Grzegorz | Guzik Michal | 3-1 |  |  | 
+2026-10-04 | Adamus Mariusz | Ruszkiewicz Adam | 3-1 |  |  | 
+2026-10-04 | Dytko Dawid | Kowalski Kamil | 3-1 |  |  | 
+2026-10-04 | Kurek Pawel | Nowak Jakub | 3-1 |  |  | 
+2026-10-04 | Urban Wojciech | Dytko Dawid | 3-0 |  |  | 
+2026-10-04 | Kowalski Kamil | Gumulinski Piotr | 3-1 |  |  | 
+2026-10-04 | Urban Wojciech | Nowak Jakub | 3-1 |  |  | 
+2026-10-04 | Kowalski Kamil | Kurek Pawel | 3-2 |  |  | 
+2026-10-04 | Gumulinski Piotr | Dytko Dawid | 3-2 |  |  | 
+2026-10-04 | Durda Michal | Sikon Mateusz | 3-1 |  |  | 
+2026-10-04 | Badura Jaroslaw | Szymik Robert | 3-0 |  |  | 
+2026-10-04 | Makajew Maciej | Brud Szymon | 3-1 |  |  | 
+2026-10-04 | Makajew Maciej | Sulkowski Bartek | 3-1 |  |  | 
+2026-10-04 | Brud Szymon | Kolek Maciej | 3-1 |  |  | 
+2026-10-04 | Makajew Maciej | Kukawka Milosz | 3-0 |  |  | 
+2026-10-04 | Kolek Maciej | Sulkowski Bartek | 3-1 |  |  | 
+2026-10-04 | Stapor Rafal | Mugowski Arkadiusz | 3-1 |  |  | 
