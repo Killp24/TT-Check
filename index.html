@@ -329,6 +329,8 @@ body[data-view="match"] .foot{display:none}
 .flist .fres.l{color:var(--ban)}
 .flist .fwho{overflow-wrap:break-word}
 .flist .fscore{white-space:nowrap}
+.flist .fmeta{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.flist .fdate{color:var(--muted);font-size:.72rem;font-weight:600;white-space:nowrap}
 .help.stale{color:#9a3412;font-weight:600}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .help.stale{color:#ffd7a8}}
 :root[data-theme="dark"] .help.stale{color:#ffd7a8}
@@ -451,6 +453,7 @@ const b64d=s=>decodeURIComponent(escape(atob(s.replace(/\n/g,""))));
 const today=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const ago=t=>{if(!t)return"";const m=Math.round((Date.now()-new Date(t))/60000);return m<1?"just now":m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago"};
 const nice=d=>{if(!d)return"";const x=new Date(d+"T12:00:00");return isNaN(x)?d:x.toLocaleDateString(undefined,{day:"numeric",month:"short"})};
+const formDate=d=>{if(!d)return"";const x=new Date(d+"T12:00:00");if(isNaN(x))return d;const opts={day:"numeric",month:"short"};if(d.slice(0,4)!==today().slice(0,4))opts.year="numeric";return x.toLocaleDateString(undefined,opts)};
 
 // ---------- settings ----------
 const guessOwner=location.hostname.endsWith(".github.io")?location.hostname.split(".")[0]:"Killp24";
@@ -1103,11 +1106,11 @@ function renderRecentForm(a,b){
   const last=matches.filter(m=>m.w===name||m.l===name).sort(sortFor(name)).slice(0,5);
   const items=last.length?last.map(m=>{
    const won=m.w===name,opp=won?m.l:m.w;
-   return `<li><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?` <span class="fscore">· ${esc(m.score)}</span>`:""}</span></li>`;
+   return `<li><span class="fmeta"><span class="fres ${won?"w":"l"}">${won?"Won":"Lost"}</span>${m.date?`<span class="fdate">${esc(formDate(m.date))}</span>`:""}</span><span class="fwho">${won?"beat":"lost to"} ${esc(opp)}${m.score?` <span class="fscore">· ${esc(m.score)}</span>`:""}</span></li>`;
   }).join(""):`<li><span class="fwho muted">No recent matches</span></li>`;
   return `<div><div class="cmpname">${esc(name)}</div><ul class="flist">${items}</ul></div>`;
  };
- box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the opponent, and who won.</p>${resultsListNote()}<div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
+ box.innerHTML=`<div class="panel"><h2>Recent form</h2><p class="help">Last 5 matches, the date, the opponent, and who won.</p>${resultsListNote()}<div class="cmpgrid">${col(n1)}${col(n2)}</div></div>`;
 }
 const FLAG_HOURS={"2h":2,"6h":6,"12h":12,"1d":24,"3d":72};
 function flagUntil(code,now){const h=FLAG_HOURS[code];return h?now+h*36e5:0}
