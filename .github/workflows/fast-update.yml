@@ -2,14 +2,18 @@ name: Fast update (schedule)
 
 on:
   schedule:
-    - cron: "20 */2 * * *"
+    # Every 30 minutes, off the top of the hour so a busy :00 slot is not the only chance.
+    - cron: "8,38 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
 
+# Separate from the ratings sweep. That pass takes longer than 30 minutes and
+# used to hold this one, so today's results sat for hours.
 concurrency:
-  group: data-update
+  group: fast-results
+  cancel-in-progress: false
 
 jobs:
   fast:
@@ -17,17 +21,23 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Refresh the schedule
+        with:
+          fetch-depth: 50
+      - name: Refresh today's results
         run: python3 fast_update.py
       - name: Save if changed
         run: |
+          git config user.name "data-bot"
+          git config user.email "data-bot@users.noreply.github.com"
+          git config merge.collect.name "union collected results"
+          git config merge.collect.driver "python3 blend_driver.py %A %B"
+          mkdir -p .git/info
+          printf 'official.txt merge=collect\nschedule.txt merge=collect\n' > .git/info/attributes
           git add schedule.txt official.txt
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git config user.name "data-bot"
-            git config user.email "data-bot@users.noreply.github.com"
-            git commit -m "Refresh schedule"
-            git pull --rebase --autostash || true
+            git commit -m "Update official results and schedule"
+            git pull --rebase --autostash origin main
             git push
           fi
