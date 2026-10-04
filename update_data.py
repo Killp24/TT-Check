@@ -169,6 +169,8 @@ def fix_name(raw):
     return canon.get(raw.lower(), raw.title())
 
 
+from fast_update import match_date, parse_sets
+
 posts = []
 for pg in range(1, 7):
     lst = get(BASE + "category/turnieje/" + (f"page/{pg}/" if pg > 1 else ""))
@@ -190,14 +192,15 @@ for url, day, slug in posts:
     page = get(url)
     title = re.search(r"Result [\d.]+\s*[–-]\s*([^<|]+?)\s*(?:<|\|| – International)", html.unescape(page))
     tname = title.group(1).strip() if title else slug
+    night = "night" in slug.lower() or "night" in tname.lower()
     first = None
     for c in table_rows(page):
         if len(c) >= 4 and re.fullmatch(r"\d{1,2}:\d{2}", c[0]) and "," in c[2] and "," in c[3]:
             t = c[0].zfill(5)
             first = first or t
-            date = day + timedelta(days=1) if t < first else day   # night sessions run past midnight
-            res = re.sub(r"\s", "", c[4]) if len(c) > 4 else ""
-            res = res if re.fullmatch(r"\d:\d", res) else ""
+            date = match_date(day, t, first, night)
+            sets = parse_sets(c[4] if len(c) > 4 else "")
+            res = f"{sets[0]}:{sets[1]}" if sets else ""
             sched.append((date.isoformat(), t, tname, fix_name(c[2]), fix_name(c[3]), res))
     time.sleep(0.3)
 

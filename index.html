@@ -567,7 +567,7 @@ function resultsNote(before){
  return added>0?`Form updated with ${added} new official result${added===1?"":"s"}, saved ${when}.`:`Form is up to date. Official results were already current, saved ${when}.`;
 }
 function sayResults(note,cls){const m=$("refreshMsg");if(m&&note){m.className="msg "+(cls||"ok");m.textContent=note}}
-// The full player sweep runs once an hour. This only asks for today's tournament pages, and only when one is not already running.
+// Official results are collected about every 30 minutes. This asks for today's tournament pages when a collection is not already running.
 async function workflowBusy(file){
  const url=`https://api.github.com/repos/${encodeURIComponent(cfg.owner)}/${encodeURIComponent(cfg.repo)}/actions/workflows/${file}/runs?per_page=5`;
  const r=await fetch(url,{headers:hdr()});
@@ -617,10 +617,10 @@ async function refreshResults(){
      if((offAt||"")+"|"+official.length!==mark){apply();break}
     }
     note=official.length>before?resultsNote(before):`Today's results were requested. Form is using the official list saved ${offAt?ago(offAt):when}.`;
-   }else if(how==="running") note=`The hourly results collection is already running. Form is using official results saved ${when}.`;
+   }else if(how==="running") note=`A results collection is already running. Form is using official results saved ${when}.`;
    else if(how==="recent") note=`Form is up to date. Official results were checked a few minutes ago, saved ${when}.`;
-   else if(how==="notoken") note=`Form is using official results saved ${when}. New results are collected about once an hour. Add a token in Sharing setup to collect today's results sooner.`;
-   else if(how==="noperm") note=`Form is using official results saved ${when}. This token can't start a collection, so new results still arrive about once an hour.`;
+   else if(how==="notoken") note=`Form is using official results saved ${when}. New results are collected about every 30 minutes. Add a token in Sharing setup to collect today's results sooner.`;
+   else if(how==="noperm") note=`Form is using official results saved ${when}. This token can't start a collection, so new results still arrive about every 30 minutes.`;
    else note=resultsNote(before);
   }
  }catch(e){note=e.message;cls="err";console.warn(e)}
@@ -1560,7 +1560,7 @@ function renderSched(opt){
   const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-30?"No result on file":mins<=0?"Started":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
   html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
  }
- $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next hourly update."}</li>`;
+ $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next update, which runs about every 30 minutes."}</li>`;
  $("schedInfo").textContent=shown?`TT Elite today · ${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"TT Elite today";
  if(anchor){
   const again=sheet.querySelector('.srow[data-i="'+anchor.i+'"]');
@@ -1842,7 +1842,7 @@ function linkResults(){
  for(const v of res.values())v.sort((x,y)=>(x.iw||x.il||50)-(y.iw||y.il||50)||x.order-y.order);
  const games=new Map();
  for(const r of SCHED){r.fin=null;const k=key(r.date,r.p1,r.p2);if(!games.has(k))games.set(k,[]);games.get(k).push(r)}
- for(const [k,rs] of games){rs.sort((x,y)=>x.at-y.at);const ms=res.get(k)||[];rs.forEach((r,i)=>{if(!r.res&&ms[i])r.fin=ms[i]})}
+ for(const [k,rs] of games){rs.sort((x,y)=>x.at-y.at);const ms=res.get(k)||[];rs.forEach((r,i)=>{if(ms[i])r.fin=ms[i]})}
 }
 
 // ---------- scheduled time for the selected pair ----------
