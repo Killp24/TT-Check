@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T22:52Z
+# updated 2026-10-05T22:55Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10126,16 +10126,18 @@
 2026-10-05 | Glanowski Jakub | Trela Mateusz | 3-0 | 7 | 6 | Pending
 2026-10-05 | Linek Adam | Gromek Artur | 3-2 | 7 | 6 | Pending
 2026-10-05 | Kwodawski Bartosz | Golaszewski Kuba | 3-0 | 6 | 6 | Pending
-2026-10-05 | Linek Adam | Staszczyk Konrad | 3-2 | 8 |  | Pending
+2026-10-05 | Linek Adam | Staszczyk Konrad | 3-2 | 8 | 1 | Pending
 2026-10-05 | Kwodawski Bartosz | Przewlocki Jacek | 3-0 | 7 | 6 | Pending
 2026-10-05 | Cyndera Jakub | Staniczek Adam | 3-2 | 6 | 12 | Pending
-2026-10-05 | Oracz Lukasz | Dytko Dawid | 3-2 |  |  | 
+2026-10-05 | Oracz Lukasz | Dytko Dawid | 3-2 | 4 | 9 | Pending
 2026-10-05 | Michalik Jerzy | Zmijewski Artur | 3-0 | 5 | 6 | Pending
-2026-10-05 | Gromek Artur | Trela Mateusz | 3-0 |  | 7 | 
-2026-10-05 | Gumulinski Piotr | Urban Wojciech | 3-0 |  |  | 
+2026-10-05 | Gromek Artur | Trela Mateusz | 3-0 | 7 | 7 | Pending
+2026-10-05 | Gumulinski Piotr | Urban Wojciech | 3-0 | 9 | 9 | Pending
+2026-10-05 | Machelski Michal | Cyndera Jakub | 3-2 | 2 | 7 | Pending
+2026-10-05 | Adamus Kacper | Dytko Dawid | 3-2 | 5 | 10 | Pending
 2026-10-06 | Gromek Artur | Trela Mateusz | 3-0 |  |  | 
-2026-10-06 | Kowalczyk Marcin | Golaszewski Kuba | 3-1 |  |  | 
-2026-10-06 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 |  |  | 
+2026-10-06 | Kowalczyk Marcin | Golaszewski Kuba | 3-1 | 1 | 1 | Pending
+2026-10-06 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 | 1 | 2 | Pending
 2026-10-06 | Michalik Jerzy | Zmijewski Artur | 3-0 |  |  | 
 2026-10-06 | Machelski Michal | Cyndera Jakub | 3-2 |  |  | 
 2026-10-06 | Adamus Kacper | Dytko Dawid | 3-2 |  |  | 
