@@ -407,6 +407,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:9}
 <details id="savedOddsDet"><summary id="savedOddsSum">Saved book prices</summary><div class="pad"><p class="help" id="savedOddsWhere">Book prices you enter are stored on this phone. Logged bets are a separate list, also only on this phone, under My bets. Favourites stay under Saved.</p><ul class="banlist" id="savedOddsList"></ul></div></details>
 <details><summary id="banSum">Ban list</summary><ul class="banlist" id="banList"></ul></details>
 <details><summary id="formSum">Hot and cold form</summary><ul class="banlist" id="formList"></ul></details>
+<details><summary id="slateSum">Cold slates</summary><ul class="banlist" id="slateList"></ul></details>
 <details><summary id="recSum">Recent results</summary><ul class="banlist" id="recList"></ul></details>
 <details><summary>Update Elo ratings</summary><div class="pad">
 <p class="help">Paste the new ratings list. Each line needs a name and an Elo number, like "1 Folwarski Jakub 1506". Saving updates the list for everyone using the app.</p>
@@ -508,7 +509,7 @@ function apply(){
   if(sel[k])sel[k]=players.find(p=>p.name===sel[k].name)||null;
   if(typed[k])typed[k]=players.find(p=>p.name===typed[k].name)||null;
  });
- update();renderBan();renderForm();renderRecent();renderSetup();
+ update();renderBan();renderForm();renderSlates();renderRecent();renderSetup();
  if(VIEW==="home"&&!$("sched").hidden)renderSched({keep:!!HOME_SNAP});
 }
 
@@ -1448,6 +1449,12 @@ function renderForm(){
  const li=r=>`<li><span class="bn">${esc(r.name)}</span><span class="${r.diff>=0?"pos":"neg"}">${r.w}–${r.n-r.w} · ${sgn(r.diff)} vs Elo</span></li>`;
  $("formSum").textContent=`Hot and cold form (${hot.length} hot, ${cold.length} cold)`;
  $("formList").innerHTML=`<li class="tierhd">Hot</li>`+(hot.map(li).join("")||`<li><span class="muted">None clear of Elo yet</span></li>`)+`<li class="tierhd">Cold</li>`+(cold.map(li).join("")||`<li><span class="muted">None clear of Elo yet</span></li>`)+`<li class="muted" style="border-top:0;display:block">Last 12 results on file, compared with Elo. This list does not change the ban list.</li>`;
+}
+function renderSlates(){
+ const rows=coldSlates([...STATS.entries()].map(([name,s])=>({name,days:s&&s.days})),warsawToday(),21);
+ $("slateSum").textContent=`Cold slates (${rows.length})`;
+ const li=r=>`<li><span class="bn">${esc(r.name)}<br><span class="muted">${esc(nice(r.date))}</span></span><span class="neg">${r.w}–${r.n-r.w} · ${sgn(r.gap)} vs Elo · ${r.favL} favorite loss${r.favL===1?"":"es"}</span></li>`;
+ $("slateList").innerHTML=(rows.length?rows.map(li).join(""):`<li><span class="muted">No cold slate in the last 3 weeks</span></li>`)+`<li class="muted" style="border-top:0;display:block">One day with 6 or more matches and 5 losses as a favorite. A favorite here is over 55% by Elo, about -122 or shorter. This does not change the win chance.</li>`;
 }
 function renderRecent(){
  const list=[...mine].sort(sortNew).slice(0,30);

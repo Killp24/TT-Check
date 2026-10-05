@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -579,4 +579,33 @@ test("a short paste keeps the sportsbook clock from the last full list", () => {
   const remembered = alignPasteTimes(parsed.matches, fixtures, { now, preferOff: 9 * 60 });
   assert.equal(remembered.off, 9 * 60);
   assert.equal(pickFixture(parsed.matches[0], fixtures, remembered.off, remembered.date).time, "23:00");
+});
+
+test("a cold slate is one bad day, and an ordinary day stays off the list", () => {
+  const days = (rows) => new Map(rows);
+  const rows = coldSlates([
+    { name: "Pruszkowski Jakub", days: days([
+      ["2026-09-24", { n: 8, w: 8, e: 5.2, favL: 0 }],
+      ["2026-09-29", { n: 12, w: 6, e: 7.5, favL: 6 }]
+    ]) },
+    { name: "Gumulinski Piotr", days: days([
+      ["2026-09-25", { n: 10, w: 3, e: 6.7, favL: 7 }]
+    ]) },
+    { name: "Old Cold", days: days([
+      ["2026-08-01", { n: 10, w: 1, e: 6, favL: 6 }]
+    ]) },
+    { name: "Short Day", days: days([
+      ["2026-09-29", { n: 5, w: 0, e: 4, favL: 5 }]
+    ]) },
+    { name: "Dog Sweep", days: days([
+      ["2026-09-29", { n: 10, w: 1, e: 5.5, favL: 1 }]
+    ]) }
+  ], "2026-10-05", 21);
+  assert.equal(rows.length, 2);
+  assert.equal(rows[0].name, "Gumulinski Piotr");
+  assert.equal(rows[0].date, "2026-09-25");
+  assert.equal(rows[1].name, "Pruszkowski Jakub");
+  assert.equal(rows[1].date, "2026-09-29");
+  assert.equal(rows[1].favL, 6);
+  assert.ok(rows[1].gap < -1 && rows[1].gap > -2);
 });
