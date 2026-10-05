@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T04:29Z
+# updated 2026-10-05T04:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9889,8 +9889,9 @@
 2026-10-05 | Kolek Maciej | Wisniewski Bartlomiej | 3-0 | 1 | 1 | +3
 2026-10-05 | Kordaszewski Tomasz | Janus Slawomir | 3-2 | 1 | 1 | Pending
 2026-10-05 | Kurek Pawel | Dytko Dawid | 3-2 | 4 | 4 | Pending
-2026-10-05 | Jadczyk Marcin | Felkel Grzegorz | 3-2 |  |  | 
-2026-10-05 | Badura Jaroslaw | Vincenec Oliver | 3-0 |  |  | 
-2026-10-05 | Warpas Blazej | Sobel Artur | 3-0 |  |  | 
-2026-10-05 | Maszczynski Dariusz | Lamer Maciej | 3-2 |  |  | 
-2026-10-05 | Urban Wojciech | Gumulinski Piotr | 3-2 |  |  | 
+2026-10-05 | Jadczyk Marcin | Felkel Grzegorz | 3-2 | 1 | 1 | +8
+2026-10-05 | Badura Jaroslaw | Vincenec Oliver | 3-0 | 1 | 1 | +13
+2026-10-05 | Warpas Blazej | Sobel Artur | 3-0 | 1 | 1 | +27
+2026-10-05 | Maszczynski Dariusz | Lamer Maciej | 3-2 | 1 | 1 | Pending
+2026-10-05 | Urban Wojciech | Gumulinski Piotr | 3-2 | 4 | 4 | +8
+2026-10-05 | Kurek Pawel | Nowak Jakub | 3-0 |  | 5 | 
