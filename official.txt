@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T00:37Z
+# updated 2026-10-05T00:39Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9814,6 +9814,9 @@
 2026-10-04 | Michalik Jerzy | Szurgot Andrzej | 3-2 |  |  | 
 2026-10-04 | Nocun Zbigniew | Staniczek Adam | 3-2 |  |  | 
 2026-10-04 | Mucha Grzegorz | Kwiatkowski Kacper | 3-2 |  |  | 
+2026-10-04 | Ruszkiewicz Adam | Sawicki Grzegorz | 3-1 | 8 | 13 | Pending
+2026-10-04 | Pietraszko Lukasz | Brud Szymon | 3-2 | 9 | 9 | Pending
+2026-10-04 | Glanowski Jakub | Linek Adam | 3-2 | 8 | 8 | Pending
 2026-10-05 | Pietraszko Lukasz | Nadolny Jakub | 3-0 |  |  | 
 2026-10-05 | Sulkowski Karol | Rudomina Kamil | 3-2 |  |  | 
 2026-10-05 | Linek Adam | Rudomina Kamil | 3-1 |  |  | 
@@ -9830,16 +9833,17 @@
 2026-10-05 | Rudomina Kamil | Stapor Rafal | 3-1 |  |  | 
 2026-10-05 | Ostachowski Piotr | Sikon Mateusz | 3-1 |  |  | 
 2026-10-05 | Gumulinski Piotr | Kurek Pawel | 3-2 |  |  | 
-2026-10-05 | Nowak Jakub | Gumulinski Piotr | 3-0 |  |  | 
-2026-10-05 | Kurek Pawel | Kowalski Kamil | 3-1 |  |  | 
-2026-10-05 | Sulkowski Bartek | Kukawka Milosz | 3-1 |  |  | 
-2026-10-05 | Sulkowski Bartek | Brud Szymon | 3-2 |  |  | 
+2026-10-05 | Nowak Jakub | Gumulinski Piotr | 3-0 | 1 | 1 | Pending
+2026-10-05 | Kurek Pawel | Kowalski Kamil | 3-1 | 1 | 1 | Pending
+2026-10-05 | Sulkowski Bartek | Kukawka Milosz | 3-1 | 1 | 1 | Pending
+2026-10-05 | Sulkowski Bartek | Brud Szymon | 3-2 | 2 | 1 | Pending
 2026-10-05 | Nocun Zbigniew | Michalik Jerzy | 3-2 |  |  | 
 2026-10-05 | Kwiatkowski Kacper | Szurgot Andrzej | 3-0 |  |  | 
 2026-10-05 | Staniczek Adam | Mucha Grzegorz | 3-2 |  |  | 
 2026-10-05 | Szurgot Andrzej | Nocun Zbigniew | 3-2 |  |  | 
 2026-10-05 | Michalik Jerzy | Mucha Grzegorz | 3-2 |  |  | 
 2026-10-05 | Glanowski Jakub | Linek Adam | 3-2 |  |  | 
-2026-10-05 | Stapor Rafal | Glanowski Jakub | 3-1 |  |  | 
+2026-10-05 | Stapor Rafal | Glanowski Jakub | 3-1 | 1 | 1 | Pending
 2026-10-05 | Ruszkiewicz Adam | Sawicki Grzegorz | 3-1 |  |  | 
-2026-10-05 | Sikon Mateusz | Guzik Michal | 3-1 |  |  | 
+2026-10-05 | Sikon Mateusz | Guzik Michal | 3-1 | 1 | 1 | Pending
+2026-10-05 | Kurek Pawel | Kowalski Kamil | 3-1 | 2 | 2 | Pending
