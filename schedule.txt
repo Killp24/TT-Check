@@ -326,11 +326,11 @@
 2026-10-05 | 20:00 | evening tournament Blachownia | Zmijewski Artur | Gesiarz Piotr | 3:2
 2026-10-05 | 20:05 | evening tournament HSC | Trela Mateusz | Linek Adam | 3:0
 2026-10-05 | 20:10 | evening tournament OSP | Zielinski Marcin | Krezel Andrzej | 3:2
-2026-10-05 | 20:10 | evening tournament OSP2 (WB) | Strus Piotr | Kowalczyk Marcin | 
+2026-10-05 | 20:10 | evening tournament OSP2 (WB) | Strus Piotr | Kowalczyk Marcin | 3:2
 2026-10-05 | 20:20 | evening tournament Poczesna | Kowalski Kamil | Dytko Dawid | 
 2026-10-05 | 20:25 | evening tournament Blachownia | Maszczynski Dariusz | Staniczek Adam | 
 2026-10-05 | 20:30 | evening tournament HSC | Stapor Rafal | Gromek Artur | 
-2026-10-05 | 20:30 | evening tournament OSP | Kumor Michal | Leczycki Mariusz | 
+2026-10-05 | 20:30 | evening tournament OSP | Kumor Michal | Leczycki Mariusz | 0:3
 2026-10-05 | 20:30 | evening tournament OSP2 (WB) | Przewlocki Jacek | Golaszewski Kuba | 
 2026-10-05 | 20:45 | evening tournament Blachownia | Cyndera Jakub | Gesiarz Piotr | 
 2026-10-05 | 20:45 | evening tournament Poczesna | Oracz Lukasz | Adamus Kacper | 
@@ -697,26 +697,41 @@
 2026-10-07 | 01:20 | night tournament HSC | Gromek Artur | Linek Adam | 
 2026-10-07 | 01:20 | night tournament OSP | Badura Jaroslaw | Schaniel Krzysztof | 
 2026-10-07 | 01:20 | night tournament OSP2 (WB) | Skorski Michal | Rolak Jaroslaw | 
+2026-10-07 | 01:30 | night tournament Poczesna | Tkaczyk Henryk | Fomin Andriej | 
 2026-10-07 | 01:35 | night tournament Blachownia | Tkocz Marek | Nowak Jakub | 
 2026-10-07 | 01:45 | night tournament HSC | Blocho Przemyslaw | Staszczyk Konrad | 
 2026-10-07 | 01:45 | night tournament OSP | Kurek Pawel | Durak Kamil | 
 2026-10-07 | 01:45 | night tournament OSP2 (WB) | Golaszewski Kuba | Mrugala Bartlomiej | 
+2026-10-07 | 01:55 | night tournament Poczesna | Machelski Michal | Zielinski Marcin | 
 2026-10-07 | 02:00 | night tournament Blachownia | Burkacki Adrian | Adamus Mariusz | 
 2026-10-07 | 02:10 | night tournament HSC | Gromek Artur | Blocho Przemyslaw | 
 2026-10-07 | 02:10 | night tournament OSP | Szymanski Igor | Baron Mariusz | 
 2026-10-07 | 02:10 | night tournament OSP2 (WB) | Skorski Michal | Golaszewski Kuba | 
+2026-10-07 | 02:20 | night tournament Poczesna | Bartosik Dominik | Brunner Marian | 
 2026-10-07 | 02:25 | night tournament Blachownia | Jurowicz Grzegorz | Adamus Pawel | 
 2026-10-07 | 02:35 | night tournament HSC | Staszczyk Konrad | Pietraszko Lukasz | 
 2026-10-07 | 02:35 | night tournament OSP | Badura Jaroslaw | Durak Kamil | 
 2026-10-07 | 02:35 | night tournament OSP2 (WB) | Mrugala Bartlomiej | Myszewski Adrian | 
 2026-10-07 | 02:45 | night tournament Blachownia | Tkocz Marek | Adamus Mariusz | 
+2026-10-07 | 02:45 | night tournament Poczesna | Tkaczyk Henryk | Machelski Michal | 
 2026-10-07 | 03:00 | night tournament OSP | Kurek Pawel | Szymanski Igor | 
 2026-10-07 | 03:10 | night tournament Blachownia | Burkacki Adrian | Jurowicz Grzegorz | 
+2026-10-07 | 03:10 | night tournament Poczesna | Brunner Marian | Fomin Andriej | 
 2026-10-07 | 03:25 | night tournament OSP | Baron Mariusz | Schaniel Krzysztof | 
+2026-10-07 | 03:30 | night tournament Poczesna | Bartosik Dominik | Zielinski Marcin | 
 2026-10-07 | 03:35 | night tournament Blachownia | Adamus Pawel | Nowak Jakub | 
 2026-10-07 | 03:45 | night tournament OSP | Badura Jaroslaw | Szymanski Igor | 
+2026-10-07 | 03:55 | night tournament Poczesna | Machelski Michal | Fomin Andriej | 
 2026-10-07 | 04:00 | night tournament Blachownia | Tkocz Marek | Jurowicz Grzegorz | 
 2026-10-07 | 04:10 | night tournament OSP | Durak Kamil | Schaniel Krzysztof | 
 2026-10-07 | 04:20 | night tournament Blachownia | Adamus Mariusz | Nowak Jakub | 
+2026-10-07 | 04:20 | night tournament Poczesna | Tkaczyk Henryk | Bartosik Dominik | 
 2026-10-07 | 04:35 | night tournament OSP | Kurek Pawel | Baron Mariusz | 
 2026-10-07 | 04:45 | night tournament Blachownia | Burkacki Adrian | Adamus Pawel | 
+2026-10-07 | 04:45 | night tournament Poczesna | Brunner Marian | Zielinski Marcin | 
+2026-10-07 | 05:05 | night tournament Poczesna | Machelski Michal | Bartosik Dominik | 
+2026-10-07 | 05:30 | night tournament Poczesna | Tkaczyk Henryk | Brunner Marian | 
+2026-10-07 | 05:55 | night tournament Poczesna | Zielinski Marcin | Fomin Andriej | 
+2026-10-07 | 06:20 | night tournament Poczesna | Machelski Michal | Brunner Marian | 
+2026-10-07 | 06:40 | night tournament Poczesna | Bartosik Dominik | Fomin Andriej | 
+2026-10-07 | 07:05 | night tournament Poczesna | Tkaczyk Henryk | Zielinski Marcin | 
