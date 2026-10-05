@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T03:29Z
+# updated 2026-10-05T03:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9875,9 +9875,10 @@
 2026-10-05 | Szurgot Andrzej | Mucha Grzegorz | 3-2 | 1 | 1 | +12
 2026-10-05 | Michalik Jerzy | Szurgot Andrzej | 3-2 | 1 | 2 | Pending
 2026-10-05 | Mucha Grzegorz | Kwiatkowski Kacper | 3-2 | 2 | 2 | Pending
-2026-10-05 | Kurek Pawel | Gumulinski Piotr | 3-0 | 3 |  | Pending
+2026-10-05 | Kurek Pawel | Gumulinski Piotr | 3-0 | 3 | 3 | Pending
 2026-10-05 | David Petr | Wloczko Krzysztof | 3-2 |  |  | 
 2026-10-05 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 |  |  | 
-2026-10-05 | Lukaszewski Mikolaj | Zwolinski Mariusz | 3-0 |  |  | 
-2026-10-05 | Kowalski Kamil | Nowak Jakub | 3-2 |  |  | 
-2026-10-05 | Ostachowski Piotr | Guzik Michal | 3-1 |  |  | 
+2026-10-05 | Lukaszewski Mikolaj | Zwolinski Mariusz | 3-0 | 1 | 1 | +21
+2026-10-05 | Kowalski Kamil | Nowak Jakub | 3-2 | 4 | 4 | +12
+2026-10-05 | Ostachowski Piotr | Guzik Michal | 3-1 | 3 | 3 | +11
+2026-10-05 | Wolny Michal | Stechly Witold | 3-2 | 1 | 1 | Pending
