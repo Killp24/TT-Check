@@ -896,6 +896,24 @@ function eloMove(pa, pe) {
   return { side: diff > 0 ? "A" : "B", pts };
 }
 
+// Pair one day's schedule rows with that day's official results, both in play order.
+// A row takes the next result only after its start time. A rematch that is still
+// ahead stays open, so an earlier score cannot land on it once the first listing
+// has left the schedule.
+function attachPairResults(rows, results, now) {
+  const rs = (rows || []).slice().sort((a, b) => (a.at || 0) - (b.at || 0));
+  const ms = results || [];
+  const out = new Map();
+  let j = 0;
+  const t = now == null ? Date.now() : now;
+  for (const r of rs) {
+    if (!r || !(r.at <= t) || !ms[j]) continue;
+    out.set(r, ms[j]);
+    j++;
+  }
+  return out;
+}
+
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
 function blendShifts(p, shifts) {
   if (p == null || p !== p || p <= 0 || p >= 1) return null;
