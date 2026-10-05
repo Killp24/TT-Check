@@ -895,3 +895,15 @@ function eloMove(pa, pe) {
   if (Math.abs(diff) < 0.04 || pts < 1) return null;
   return { side: diff > 0 ? "A" : "B", pts };
 }
+
+// Add logit shifts to a win probability. An empty list leaves the probability alone.
+function blendShifts(p, shifts) {
+  if (p == null || p !== p || p <= 0 || p >= 1) return null;
+  let z = Math.log(p / (1 - p));
+  for (const s of shifts || []) {
+    if (s == null || s !== s) continue;
+    z += s;
+  }
+  const out = 1 / (1 + Math.exp(-z));
+  return Math.min(0.97, Math.max(0.03, out));
+}
