@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T09:55Z
+# updated 2026-10-05T10:21Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9957,12 +9957,12 @@
 2026-10-05 | Szostok Sebastian | Badura Jaroslaw | 3-1 | 5 | 5 | +11
 2026-10-05 | Olbrycht Michal | Kostal Daniel | 3-0 | 5 | 5 | +13
 2026-10-05 | Sobel Artur | Wisniewski Bartlomiej | 3-0 | 5 | 5 | +5
-2026-10-05 | Kuzmicz Jakub | Felkel Grzegorz | 3-0 |  |  | 
+2026-10-05 | Kuzmicz Jakub | Felkel Grzegorz | 3-0 | 1 | 6 | +20
 2026-10-05 | Slawinski Kacper | Vincenec Oliver | 3-1 | 6 | 6 | +7
-2026-10-05 | Malachowski Michal | Kostal Daniel | 3-0 |  |  | 
-2026-10-05 | Sobel Artur | Solilo Dominik | 3-1 |  |  | 
+2026-10-05 | Malachowski Michal | Kostal Daniel | 3-0 | 6 | 6 | Pending
+2026-10-05 | Sobel Artur | Solilo Dominik | 3-1 | 6 | 1 | +12
 2026-10-05 | Felkel Grzegorz | Wloczko Krzysztof | 3-1 | 5 | 5 | +10
-2026-10-05 | David Petr | Wiecek Adrian | 3-2 |  | 5 | 
+2026-10-05 | David Petr | Wiecek Adrian | 3-2 | 5 | 5 | +6
 2026-10-05 | Przewlocki Piotr | Pruszkowski Jakub | 3-2 | 5 | 5 | +9
 2026-10-05 | Kapik Krzysztof | Malachowski Michal | 3-1 | 5 | 5 | +12
 2026-10-05 | Poliniewicz Grzegorz | Sklensky Miroslav | 3-2 | 5 | 5 | +10
@@ -9973,7 +9973,11 @@
 2026-10-05 | Wolny Michal | Kordaszewski Tomasz | 3-0 | 5 | 5 | +5
 2026-10-05 | Skotniczny Rafal | Wichowski Grzegorz | 3-1 | 3 | 3 | +11
 2026-10-05 | Kaczmarek Jakub | Pelka Jerzy | 3-2 | 3 | 3 | +10
-2026-10-05 | Kosowski Jakub | David Petr | 3-1 |  |  | 
-2026-10-05 | Szostok Sebastian | Pruszkowski Jakub | 3-2 |  |  | 
-2026-10-05 | Poliniewicz Grzegorz | Olbrycht Michal | 3-2 |  |  | 
-2026-10-05 | Skotniczny Rafal | Fomin Yurij | 3-1 |  |  | 
+2026-10-05 | Kosowski Jakub | David Petr | 3-1 | 6 | 6 | +12
+2026-10-05 | Szostok Sebastian | Pruszkowski Jakub | 3-2 | 6 | 6 | +7
+2026-10-05 | Poliniewicz Grzegorz | Olbrycht Michal | 3-2 | 6 | 6 | Pending
+2026-10-05 | Skotniczny Rafal | Fomin Yurij | 3-1 | 4 | 4 | +6
+2026-10-05 | Sulkowski Bartek | Zwolinski Mariusz | 3-0 | 3 | 6 | +9
+2026-10-05 | Wichowski Grzegorz | Pelka Jerzy | 3-2 | 4 | 4 | +6
+2026-10-05 | Polok Pawel | Kaczmarek Jakub | 3-0 |  | 4 | 
+2026-10-05 | Badura Jaroslaw | Przewlocki Piotr | 3-1 | 6 | 6 | +11
