@@ -814,9 +814,14 @@ function estimate(a,b,opt){
  if(opt&&opt.book!=null&&BOOK_W>0){book=opt.book;bookW=BOOK_W;pa=logitBlend(preBook,book,BOOK_W)}
  return{pe,pa,preBook,why,skipped,prev,banWhy,raw,formNotes,h2h:hx,book,bookW};
 }
-// A second call that uses the tendencies with a measured effect, on top of our price.
-// Head-to-head, a same-day 3-2, and a short losing run. Form and today's match count
-// stay out: on a few thousand matches they made the call worse. This does not change pa.
+// A second call on top of our price. Head-to-head, a same-day 3-2, a short losing run,
+// hot or cold form, and a cold slate. Today's match count stays out. This does not change pa.
+function coldSlateOf(name){
+ const s=STATS.get(name);
+ if(!s||!s.days)return null;
+ const rows=coldSlates([{name,days:s.days}],warsawToday(),21);
+ return rows.length?rows[0]:null;
+}
 function ambitiousRead(a,b,est){
  const shifts=[],notes=[];
  const hx=est&&est.h2h;
@@ -831,11 +836,28 @@ function ambitiousRead(a,b,est){
  }
  for(const [p,sign] of [[a,1],[b,-1]]){
   const st=streakToday(p.name);
-  if(st.run!==1&&st.run!==2)continue;
-  const x=SADJ[String(st.run)];
-  if(x&&x.n>=100&&Math.abs(x.shift)>0.02){
-   shifts.push(sign*x.shift);
-   notes.push(`${sur(p.name)} has lost ${st.run===1?"once":st.run+" in a row"} today`);
+  if(st.run===1||st.run===2){
+   const x=SADJ[String(st.run)];
+   if(x&&x.n>=100&&Math.abs(x.shift)>0.02){
+    shifts.push(sign*x.shift);
+    notes.push(`${sur(p.name)} has lost ${st.run===1?"once":st.run+" in a row"} today`);
+   }
+  }
+  const f=formEdge(p.name);
+  if(f&&Math.abs(f.diff)>=1.5){
+   const r=recentShift(RECENT.get(p.name),"plain",80);
+   if(r&&Math.abs(r.shift)>=0.02){
+    shifts.push(sign*r.shift);
+    notes.push(`${sur(p.name)} is ${f.diff>0?"hot":"cold"}, ${f.w}–${f.n-f.w}, ${sgn(f.diff)} vs Elo over the last ${f.n}`);
+   }
+  }
+  const slate=coldSlateOf(p.name);
+  if(slate){
+   const shift=shrunkShift(slate.n,slate.w,slate.e,80);
+   if(shift<=-0.02){
+    shifts.push(sign*shift);
+    notes.push(`${sur(p.name)} had a cold slate on ${nice(slate.date)}, ${slate.w}–${slate.n-slate.w} with ${slate.favL} favorite losses`);
+   }
   }
  }
  const pa=blendShifts(est.pa,shifts);
@@ -851,13 +873,15 @@ function showAmbitious(a,b,est){
  const amb=ambitiousRead(a,b,est),pa=amb.pa,pb=1-pa;
  const who=pa>=.5?a:b,pct=Math.round(Math.max(pa,pb)*100);
  const why=amb.notes.length?amb.notes.join(". ")+".":"Nothing else on file moves this match.";
- const priceWho=est.pa>=.5?a:b,pricePct=Math.round(Math.max(est.pa,1-est.pa)*100);
+ const aAmb=Math.round(pa*100),bAmb=Math.round(pb*100);
+ const aPrice=Math.round(est.pa*100),bPrice=Math.round((1-est.pa)*100);
+ const gap=(ambN,priceN)=>{const d=ambN-priceN;if(!d)return `<span class="muted">0</span>`;return `<span class="${d>0?"pos":"neg"}">${d>0?"+":"−"}${Math.abs(d)}</span>`};
  if(line){
   line.hidden=false;
-  line.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} This does not change our price.</span>`;
+  line.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} Our price is ${esc(sur(a.name))} ${aPrice}% and ${esc(sur(b.name))} ${bPrice}%. This does not change our price.</span>`;
  }
  if(!pane)return;
- pane.innerHTML=`<div class="panel wc"><h2>Ambitious</h2><div class="wcrow"><div class="wcp"><span class="wcn"><i class="dot a"></i><span>${esc(sur(a.name))}</span></span><b class="${pa>=.5?"lead":""}">${Math.round(pa*100)}%</b></div><div class="wcp r"><span class="wcn"><span>${esc(sur(b.name))}</span><i class="dot b"></i></span><b class="${pb>.5?"lead":""}">${Math.round(pb*100)}%</b></div></div><div class="bar" role="img" aria-label="${esc(a.name)} ${Math.round(pa*100)}%, ${esc(b.name)} ${Math.round(pb*100)}%"><div class="a" style="width:${pa*100}%"></div><div class="b" style="width:${pb*100}%"></div></div><p class="ambwhy">${esc(why)}</p><p class="help">Our price is ${esc(sur(priceWho.name))} ${pricePct}%. This read does not change it.</p></div>`;
+ pane.innerHTML=`<div class="panel wc"><h2>Ambitious</h2><div class="wcrow"><div class="wcp"><span class="wcn"><i class="dot a"></i><span>${esc(sur(a.name))}</span></span><b class="${pa>=.5?"lead":""}">${aAmb}%</b></div><div class="wcp r"><span class="wcn"><span>${esc(sur(b.name))}</span><i class="dot b"></i></span><b class="${pb>.5?"lead":""}">${bAmb}%</b></div></div><div class="bar" role="img" aria-label="${esc(a.name)} ${aAmb}%, ${esc(b.name)} ${bAmb}%"><div class="a" style="width:${pa*100}%"></div><div class="b" style="width:${pb*100}%"></div></div><div class="otab"><table><tr><th></th><th>Our price</th><th>Ambitious</th><th>Diff</th></tr><tr><td>${esc(sur(a.name))}</td><td>${aPrice}%</td><td>${aAmb}%</td><td>${gap(aAmb,aPrice)}</td></tr><tr><td>${esc(sur(b.name))}</td><td>${bPrice}%</td><td>${bAmb}%</td><td>${gap(bAmb,bPrice)}</td></tr></table></div><p class="ambwhy">${esc(why)}</p><p class="help">Diff is ambitious minus our price, in points. This read does not change our price.</p></div>`;
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
@@ -1796,7 +1820,7 @@ function applyChrome(){
  const sub=$("tabSub");
  if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
- else if(match&&MTAB==="ambitious"){sub.hidden=false;sub.textContent="A second read from head-to-head, a cold rematch, and a short losing run."}
+ else if(match&&MTAB==="ambitious"){sub.hidden=false;sub.textContent="A second read from head-to-head, hot and cold form, a cold slate, a cold rematch, and a short losing run."}
  else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="The best number is marked. Each book keeps its own line on this phone."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
