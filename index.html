@@ -179,6 +179,7 @@ html.lock,html.lock body{overflow:hidden}
 .amb[hidden]{display:none}
 body[data-view="match"] #ambLine{display:none}
 .ambwhy{margin:10px 0 0;font-weight:600}
+.ambdelta{display:block;margin-top:2px;font-size:1.05rem;line-height:1.1}
 #paneAmb[hidden]{display:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dot.b,:root:not([data-theme="light"]) .wc .bar .b{background:#5b9bd5}}
 :root[data-theme="dark"] .dot.b,:root[data-theme="dark"] .wc .bar .b{background:#5b9bd5}
@@ -875,13 +876,15 @@ function showAmbitious(a,b,est){
  const why=amb.notes.length?amb.notes.join(". ")+".":"Nothing else on file moves this match.";
  const aAmb=Math.round(pa*100),bAmb=Math.round(pb*100);
  const aPrice=Math.round(est.pa*100),bPrice=Math.round((1-est.pa)*100);
- const gap=(ambN,priceN)=>{const d=ambN-priceN;if(!d)return `<span class="muted">0</span>`;return `<span class="${d>0?"pos":"neg"}">${d>0?"+":"−"}${Math.abs(d)}</span>`};
+ const delta=(ambN,priceN)=>{const d=ambN-priceN;if(!d)return "";return `<span class="ambdelta ${d>0?"pos":"neg"}">${d>0?"+":"−"}${Math.abs(d)}</span>`};
+ const aDelta=aAmb-aPrice,bDelta=bAmb-bPrice;
+ const moved=aDelta?`${esc(sur(a.name))} ${aDelta>0?"+":"−"}${Math.abs(aDelta)}, ${esc(sur(b.name))} ${bDelta>0?"+":"−"}${Math.abs(bDelta)} from our price.`:"Same as our price.";
  if(line){
   line.hidden=false;
-  line.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} Our price is ${esc(sur(a.name))} ${aPrice}% and ${esc(sur(b.name))} ${bPrice}%. This does not change our price.</span>`;
+  line.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} ${moved} This does not change our price.</span>`;
  }
  if(!pane)return;
- pane.innerHTML=`<div class="panel wc"><h2>Ambitious</h2><div class="wcrow"><div class="wcp"><span class="wcn"><i class="dot a"></i><span>${esc(sur(a.name))}</span></span><b class="${pa>=.5?"lead":""}">${aAmb}%</b></div><div class="wcp r"><span class="wcn"><span>${esc(sur(b.name))}</span><i class="dot b"></i></span><b class="${pb>.5?"lead":""}">${bAmb}%</b></div></div><div class="bar" role="img" aria-label="${esc(a.name)} ${aAmb}%, ${esc(b.name)} ${bAmb}%"><div class="a" style="width:${pa*100}%"></div><div class="b" style="width:${pb*100}%"></div></div><div class="otab"><table><tr><th></th><th>Our price</th><th>Ambitious</th><th>Diff</th></tr><tr><td>${esc(sur(a.name))}</td><td>${aPrice}%</td><td>${aAmb}%</td><td>${gap(aAmb,aPrice)}</td></tr><tr><td>${esc(sur(b.name))}</td><td>${bPrice}%</td><td>${bAmb}%</td><td>${gap(bAmb,bPrice)}</td></tr></table></div><p class="ambwhy">${esc(why)}</p><p class="help">Diff is ambitious minus our price, in points. This read does not change our price.</p></div>`;
+ pane.innerHTML=`<div class="panel wc"><h2>Ambitious</h2><div class="wcrow"><div class="wcp"><span class="wcn"><i class="dot a"></i><span>${esc(sur(a.name))}</span></span><b class="${pa>=.5?"lead":""}">${aAmb}%</b>${delta(aAmb,aPrice)}</div><div class="wcp r"><span class="wcn"><span>${esc(sur(b.name))}</span><i class="dot b"></i></span><b class="${pb>.5?"lead":""}">${bAmb}%</b>${delta(bAmb,bPrice)}</div></div><div class="bar" role="img" aria-label="${esc(a.name)} ${aAmb}%, ${aDelta>0?"+":aDelta<0?"−":""}${Math.abs(aDelta)} from our price. ${esc(b.name)} ${bAmb}%, ${bDelta>0?"+":bDelta<0?"−":""}${Math.abs(bDelta)} from our price."><div class="a" style="width:${pa*100}%"></div><div class="b" style="width:${pb*100}%"></div></div><p class="ambwhy">${esc(why)}</p><p class="help">Green went up from our price. Red went down. This read does not change our price.</p></div>`;
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
