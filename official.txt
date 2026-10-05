@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T15:29Z
+# updated 2026-10-05T15:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10041,13 +10041,13 @@
 2026-10-05 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 10 | 10 | +10
 2026-10-05 | Rutkowski Mateusz | Kostal Daniel | 3-1 | 5 | 10 | Pending
 2026-10-05 | Kolek Maciej | Solilo Dominik | 3-1 | 10 | 5 | Pending
-2026-10-05 | Sulkowski Bartek | Sobel Artur | 3-1 | 7 |  | Pending
+2026-10-05 | Sulkowski Bartek | Sobel Artur | 3-1 | 7 | 10 | +16
 2026-10-05 | Pelka Jerzy | Skotniczny Rafal | 3-1 | 8 | 8 | Pending
-2026-10-05 | Rudomina Kamil | Glanowski Jakub | 3-2 |  |  | 
-2026-10-05 | Tkaczyk Henryk | Lewczuk Miroslaw | 3-2 |  |  | 
-2026-10-05 | Sulkowski Karol | Kwodawski Bartosz | 3-1 |  |  | 
-2026-10-05 | Kosowski Jakub | Felkel Grzegorz | 3-1 |  |  | 
-2026-10-05 | Olbrycht Michal | Malachowski Michal | 3-2 |  |  | 
-2026-10-05 | Kubiak Artur | Zmijewski Artur | 3-1 |  |  | 
-2026-10-05 | Kaczmarek Jakub | Wichowski Grzegorz | 3-1 |  |  | 
-2026-10-05 | Skotniczny Rafal | Fomin Yurij | 3-0 |  |  | 
+2026-10-05 | Rudomina Kamil | Glanowski Jakub | 3-2 | 1 | 2 | Pending
+2026-10-05 | Tkaczyk Henryk | Lewczuk Miroslaw | 3-2 | 1 | 1 | Pending
+2026-10-05 | Sulkowski Karol | Kwodawski Bartosz | 3-1 | 2 | 1 | Pending
+2026-10-05 | Kosowski Jakub | Felkel Grzegorz | 3-1 | 10 | 10 | +8
+2026-10-05 | Olbrycht Michal | Malachowski Michal | 3-2 | 10 | 10 | +8
+2026-10-05 | Kubiak Artur | Zmijewski Artur | 3-1 | 1 | 1 | +14
+2026-10-05 | Kaczmarek Jakub | Wichowski Grzegorz | 3-1 | 8 | 8 | Pending
+2026-10-05 | Skotniczny Rafal | Fomin Yurij | 3-0 | 9 | 9 | Pending
