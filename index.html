@@ -965,7 +965,9 @@ function fitBookBlend(){
  }
  rows.sort((a,b)=>a.date<b.date?-1:a.date>b.date?1:a.at-b.at);
  const fit=bestBlendWeight(rows);
- BOOK_W=fit.w;
+ // Saved book prices stay next to the win chance. A small edge on those
+ // prices is not a reason to replace Elo, so the weight is not applied.
+ BOOK_W=0;
  MODEL_REPORT.book=fit;
 }
 function bookOpt(o1,o2){if(!(BOOK_W>0))return null;const fair=fairPair(o1,o2);return fair?{book:fair[0]}:null}
@@ -1339,7 +1341,7 @@ function edgeSummary(a,b,pa){
  const oa=readOdds("A"),ob=readOdds("B");
  if(!a||!b||!bothPrices(oa,ob))return "";
  const snap=decisionSnapshot(oa,ob,pa,1-pa);
- return `App ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
+ return `Our price ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
 }
 // Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
 function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
@@ -2453,7 +2455,7 @@ function modelReportHtml(){
   !f.n||!formBest?"Form did not have enough matches to test.":f.mode==="off"?`Form is left out. On ${f.n.toLocaleString()} matches, ${formLabel(formBest[0])} was the closest and ${(f.base-formBest[1])/f.n>=0?"improved":"worsened"} the error by ${Math.abs((f.base-formBest[1])/f.n).toFixed(5)} per match. It is added only when that reaches 0.001.`:`Form is in, with ${formLabel(f.mode)}. Error on those ${f.n.toLocaleString()} matches went from ${per(f.base,f.n)} to ${per(f[f.mode],f.n)}.`,
   !h.n?"Head-to-head did not have enough matches to test.":h.on?`Head-to-head is in. Error on ${h.n.toLocaleString()} matches went from ${per(h.base,h.n)} to ${per(h.with,h.n)}.`:`Head-to-head is left out. On ${h.n.toLocaleString()} matches it did not lower the error enough.`,
   !s.n?"":s.on?`Matches already played today are in. Error on the test matches went from ${per(s.base,s.n)} to ${per(s.with,s.n)}.`:`Matches already played today are left out. On ${s.n.toLocaleString()} test matches that did not lower the error enough.`,
-  !b.n?`The book is not mixed in yet. That starts after 25 priced matches have a result and a rating saved from before the match.`:(b.ready?`The book, with the vig removed, has ${Math.round(b.w*100)}% of the say. On ${b.scored} later priced matches the mix error was ${per(b.blendLoss,b.scored)} against ${per(b.appLoss,b.scored)} for the app alone.`:`The book was tested on ${b.n} priced matches and left out, because mixing it in did not beat the app on the later ones.`)
+  !b.scored?`The book price is shown next to the win chance and does not change it.`:`The book price is shown next to the win chance and does not change it. On ${b.scored} later priced matches, the book error was ${per(b.bookLoss,b.scored)} and the Elo error was ${per(b.appLoss,b.scored)}.`
  ].filter(Boolean);
  return bits.map(t=>`<p class="help">${t}</p>`).join("");
 }
