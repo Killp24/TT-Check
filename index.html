@@ -1341,7 +1341,7 @@ function edgeSummary(a,b,pa){
  const oa=readOdds("A"),ob=readOdds("B");
  if(!a||!b||!bothPrices(oa,ob))return "";
  const snap=decisionSnapshot(oa,ob,pa,1-pa);
- return `App ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
+ return `Our price ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
 }
 // Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
 function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
