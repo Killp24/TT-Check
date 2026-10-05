@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, attachPairResults } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -626,4 +626,22 @@ test("an Elo move names the player who gained the points", () => {
   assert.equal(down.pts, 24);
   assert.equal(eloMove(0.47, 0.45), null);
   assert.equal(eloMove(null, 0.5), null);
+});
+
+test("a rematch that has not started does not inherit the earlier result", () => {
+  const now = Date.parse("2026-10-05T21:13:00Z");
+  const early = { at: Date.parse("2026-10-05T03:55:00Z") };
+  const later = { at: Date.parse("2026-10-05T21:55:00Z") };
+  const morning = { score: "3-2", w: "Urban" };
+  const second = { score: "3-1", w: "Urban" };
+  const onlyLater = attachPairResults([later], [morning], now);
+  assert.equal(onlyLater.get(later), undefined);
+  const both = attachPairResults([later, early], [morning, second], now);
+  assert.equal(both.get(early), morning);
+  assert.equal(both.get(later), undefined);
+  const done = attachPairResults([early, later], [morning, second], Date.parse("2026-10-05T22:30:00Z"));
+  assert.equal(done.get(early), morning);
+  assert.equal(done.get(later), second);
+  assert.equal(attachPairResults([], [morning], now).size, 0);
+  assert.equal(attachPairResults([early], [], now).size, 0);
 });
