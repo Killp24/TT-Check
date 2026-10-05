@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T23:24Z
+# updated 2026-10-05T23:29Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10135,6 +10135,11 @@
 2026-10-05 | Gumulinski Piotr | Urban Wojciech | 3-0 | 9 | 9 | Pending
 2026-10-05 | Machelski Michal | Cyndera Jakub | 3-2 | 2 | 7 | Pending
 2026-10-05 | Adamus Kacper | Dytko Dawid | 3-2 | 5 | 10 | Pending
+2026-10-05 | Staszczyk Konrad | Trela Mateusz | 3-1 | 2 | 8 | Pending
+2026-10-05 | Michalik Jerzy | Staniczek Adam | 3-1 | 6 | 13 | +8
+2026-10-05 | Oracz Lukasz | Gumulinski Piotr | 3-0 | 5 | 10 | +17
+2026-10-05 | Zmijewski Artur | Kubiak Artur | 3-1 | 7 | 7 | Pending
+2026-10-05 | Urban Wojciech | Kowalski Kamil | 3-1 | 10 | 10 | +3
 2026-10-06 | Gromek Artur | Trela Mateusz | 3-0 |  |  | 
 2026-10-06 | Kowalczyk Marcin | Golaszewski Kuba | 3-1 | 1 | 1 | Pending
 2026-10-06 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 | 1 | 2 | Pending
@@ -10142,7 +10147,7 @@
 2026-10-06 | Machelski Michal | Cyndera Jakub | 3-2 |  |  | 
 2026-10-06 | Adamus Kacper | Dytko Dawid | 3-2 |  |  | 
 2026-10-06 | Staszczyk Konrad | Trela Mateusz | 3-1 |  |  | 
-2026-10-06 | Golaszewski Kuba | Sulkowski Karol | 3-2 |  |  | 
+2026-10-06 | Golaszewski Kuba | Sulkowski Karol | 3-2 | 2 | 1 | Pending
 2026-10-06 | Zmijewski Artur | Kubiak Artur | 3-1 |  |  | 
 2026-10-06 | Urban Wojciech | Kowalski Kamil | 3-1 |  |  | 
 2026-10-06 | Oracz Lukasz | Gumulinski Piotr | 3-0 |  |  | 
