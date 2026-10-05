@@ -854,3 +854,34 @@ function pickFixture(match, fixtures, offsetMin, slateDate) {
   });
   return near[0];
 }
+
+// A single day of favorite losses. Display only. It does not move the win chance.
+// Crazy means 6+ matches and 5 or more losses while Elo had him over 55%.
+function coldSlates(players, todayIso, keepDays) {
+  const keep = keepDays == null ? 21 : keepDays;
+  const today = String(todayIso || "");
+  const cut = new Date(today + "T12:00:00Z");
+  if (isNaN(cut.getTime())) return [];
+  cut.setUTCDate(cut.getUTCDate() - keep);
+  const cutoff = cut.toISOString().slice(0, 10);
+  const out = [];
+  for (const row of players || []) {
+    if (!row || !row.name || !row.days) continue;
+    const list = typeof row.days.entries === "function" ? [...row.days.entries()] : Object.entries(row.days);
+    let best = null;
+    for (const [date, d] of list) {
+      if (!d || date < cutoff || date > today) continue;
+      const n = d.n || 0;
+      const w = d.w || 0;
+      const e = +d.e || 0;
+      const favL = d.favL || 0;
+      const gap = w - e;
+      if (n < 6 || favL < 5) continue;
+      const item = { name: row.name, date, n, w, e, favL, gap };
+      if (!best || item.date > best.date) best = item;
+    }
+    if (best) out.push(best);
+  }
+  out.sort((a, b) => b.favL - a.favL || a.gap - b.gap || (a.name < b.name ? -1 : 1));
+  return out.slice(0, 10);
+}
