@@ -177,6 +177,9 @@ html.lock,html.lock body{overflow:hidden}
 .amb{font-size:.9rem;font-weight:700;margin-top:8px}
 .amb .why{display:block;font-weight:500;color:var(--muted);margin-top:2px}
 .amb[hidden]{display:none}
+body[data-view="match"] #ambLine{display:none}
+.ambwhy{margin:10px 0 0;font-weight:600}
+#paneAmb[hidden]{display:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .dot.b,:root:not([data-theme="light"]) .wc .bar .b{background:#5b9bd5}}
 :root[data-theme="dark"] .dot.b,:root[data-theme="dark"] .wc .bar .b{background:#5b9bd5}
 .tb{display:flex;gap:8px}
@@ -275,10 +278,10 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .btabs .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .btns label.btn{display:inline-flex;align-items:center}
 .btns label.btn input{display:none}
-.mtabs{display:flex;gap:6px;margin:0}
+.mtabs{display:flex;gap:4px;margin:0}
 .mtabs[hidden]{display:none}
 .mtabs .btn,.dock .btn{flex:1;text-align:center}
-.mtabs .btn{padding:8px 2px;font-size:.78rem;white-space:nowrap}
+.mtabs .btn{flex:1 1 0;min-width:0;padding:8px 2px;font-size:.72rem;line-height:1.15;white-space:normal}
 .mtabs .btn.on,.dock .btn.on{background:var(--table);border-color:var(--table);color:#fff}
 .tabsub{color:var(--muted);font-size:.85rem;margin:6px 0 0}
 .tabsub:empty,.tabsub[hidden]{display:none}
@@ -363,7 +366,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:9}
 <p class="trust" id="trustInfo">Checking how fresh the lists are…</p>
 <div class="matchstick" id="matchStick">
 <button class="listback" id="listBack" type="button" hidden>← Home</button>
-<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Book Odds</button></nav>
+<nav class="mtabs" id="matchTabs" role="tablist" aria-label="Match" hidden><button class="btn on" type="button" role="tab" id="tabDetails" data-tab="details" aria-selected="true" aria-controls="paneDetails">Details</button><button class="btn" type="button" role="tab" id="tabStandings" data-tab="standings" aria-selected="false" aria-controls="paneStandings">Standings</button><button class="btn" type="button" role="tab" id="tabH2h" data-tab="h2h" aria-selected="false" aria-controls="paneH2h">Head to head</button><button class="btn" type="button" role="tab" id="tabAmb" data-tab="ambitious" aria-selected="false" aria-controls="paneAmb">Ambitious</button><button class="btn" type="button" role="tab" id="tabOdds" data-tab="odds" aria-selected="false" aria-controls="paneDetails">Book Odds</button></nav>
 <p class="tabsub" id="tabSub" hidden></p>
 </div>
 <p class="sub" id="assistLead">Search two player names.</p>
@@ -397,6 +400,7 @@ body[data-view="match"] #paneDetails > #oddsBox{order:9}
 </div>
 <div id="paneStandings" hidden></div>
 <div id="paneH2h"><div id="h2h"></div></div>
+<div id="paneAmb" hidden></div>
 <div class="sheet" id="favs" role="dialog" aria-modal="true" aria-labelledby="favTitle" hidden><div class="sheethd"><button class="btn" id="favsClose" type="button">Back</button><h2 id="favTitle">Favourites</h2><span></span></div>
 <div class="tools"><p class="help">A saved match is one scheduled game. A saved matchup follows that pairing every time those two meet.</p><div id="favBox"></div></div></div>
 <div class="sheet" id="bets" role="dialog" aria-modal="true" aria-labelledby="betsTitle" hidden><div class="sheethd"><button class="btn" id="betsClose" type="button">Back</button><h2 id="betsTitle">My bets</h2><span></span></div>
@@ -838,12 +842,22 @@ function ambitiousRead(a,b,est){
  return{pa:pa==null?est.pa:pa,notes};
 }
 function showAmbitious(a,b,est){
- const el=$("ambLine");if(!el)return;
- if(!a||!b||a===b||!est){el.hidden=true;el.innerHTML="";return}
- const amb=ambitiousRead(a,b,est),who=amb.pa>=.5?a:b,pct=Math.round(Math.max(amb.pa,1-amb.pa)*100);
+ const line=$("ambLine"),pane=$("paneAmb");
+ if(!a||!b||a===b||!est){
+  if(line){line.hidden=true;line.innerHTML=""}
+  if(pane)pane.innerHTML="";
+  return;
+ }
+ const amb=ambitiousRead(a,b,est),pa=amb.pa,pb=1-pa;
+ const who=pa>=.5?a:b,pct=Math.round(Math.max(pa,pb)*100);
  const why=amb.notes.length?amb.notes.join(". ")+".":"Nothing else on file moves this match.";
- el.hidden=false;
- el.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} This does not change our price.</span>`;
+ const priceWho=est.pa>=.5?a:b,pricePct=Math.round(Math.max(est.pa,1-est.pa)*100);
+ if(line){
+  line.hidden=false;
+  line.innerHTML=`Ambitious ${esc(sur(who.name))} ${pct}%.<span class="why">${esc(why)} This does not change our price.</span>`;
+ }
+ if(!pane)return;
+ pane.innerHTML=`<div class="panel wc"><h2>Ambitious</h2><div class="wcrow"><div class="wcp"><span class="wcn"><i class="dot a"></i><span>${esc(sur(a.name))}</span></span><b class="${pa>=.5?"lead":""}">${Math.round(pa*100)}%</b></div><div class="wcp r"><span class="wcn"><span>${esc(sur(b.name))}</span><i class="dot b"></i></span><b class="${pb>.5?"lead":""}">${Math.round(pb*100)}%</b></div></div><div class="bar" role="img" aria-label="${esc(a.name)} ${Math.round(pa*100)}%, ${esc(b.name)} ${Math.round(pb*100)}%"><div class="a" style="width:${pa*100}%"></div><div class="b" style="width:${pb*100}%"></div></div><p class="ambwhy">${esc(why)}</p><p class="help">Our price is ${esc(sur(priceWho.name))} ${pricePct}%. This read does not change it.</p></div>`;
 }
 // A player's own record in a role: wins vs what Elo expected (last 6 months)
 function ownRecord(n,role){const s=STATS.get(n);if(!s)return null;
@@ -1782,6 +1796,7 @@ function applyChrome(){
  const sub=$("tabSub");
  if(match&&MTAB==="standings"){sub.hidden=false;sub.textContent="Their place in the Elo ratings, not a league table."}
  else if(match&&MTAB==="h2h"){sub.hidden=false;sub.textContent="Meetings these two have on record."}
+ else if(match&&MTAB==="ambitious"){sub.hidden=false;sub.textContent="A second read from head-to-head, a cold rematch, and a short losing run."}
  else if(match&&MTAB==="odds"){sub.hidden=false;sub.textContent="The best number is marked. Each book keeps its own line on this phone."}
  else{sub.hidden=true;sub.textContent=""}
  $("seekA").hidden=match;$("seekB").hidden=match;
@@ -1789,7 +1804,8 @@ function applyChrome(){
  $("paneDetails").hidden=match&&MTAB!=="details"&&MTAB!=="odds";
  $("paneH2h").hidden=match&&MTAB!=="h2h";
  $("paneStandings").hidden=!(match&&MTAB==="standings");
- for(const id of ["tabDetails","tabStandings","tabH2h","tabOdds"]){
+ const ambPane=$("paneAmb");if(ambPane)ambPane.hidden=!(match&&MTAB==="ambitious");
+ for(const id of ["tabDetails","tabStandings","tabH2h","tabAmb","tabOdds"]){
   const b=$(id);if(!b)continue;const on=b.dataset.tab===MTAB;
   b.classList.toggle("on",on);b.setAttribute("aria-selected",on?"true":"false");
  }
@@ -1834,6 +1850,8 @@ function backFromMatch(){showHome()}
 function setMatchTab(tab){
  MTAB=tab;applyChrome();renderMatchInfo();
  if(tab==="odds"&&sel.A&&sel.B&&sel.A!==sel.B)renderBooks(sel.A,sel.B);
+ const on=$("matchTabs")&&$("matchTabs").querySelector(".btn.on");
+ if(on&&on.scrollIntoView)on.scrollIntoView({inline:"nearest",block:"nearest"});
 }
 function renderSignals(){
  linkResults();
