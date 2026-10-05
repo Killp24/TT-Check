@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -608,6 +608,13 @@ test("a cold slate is one bad day, and an ordinary day stays off the list", () =
   assert.equal(rows[1].date, "2026-09-29");
   assert.equal(rows[1].favL, 6);
   assert.ok(rows[1].gap < -1 && rows[1].gap > -2);
+});
+
+test("extra shifts move a probability and an empty list leaves it alone", () => {
+  assert.equal(blendShifts(0.46, []), 0.46);
+  assert.ok(blendShifts(0.46, [0.12]) > 0.46);
+  assert.ok(blendShifts(0.54, [-0.12]) < 0.54);
+  assert.equal(blendShifts(null, [0.2]), null);
 });
 
 test("an Elo move names the player who gained the points", () => {
