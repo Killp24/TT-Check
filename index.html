@@ -1907,10 +1907,13 @@ function renderSignals(){
   if(prev&&(prev.score==="3-0"||prev.score==="3-1"))sigs.push({cls:"rem",text:`Rematch ${prev.score} · ${sur(prev.w)} won`,rank:prev.score==="3-0"?36:32});
   if(sigs.length)items.push({r,e,sigs,so,best,rank:Math.max(...sigs.map(s=>s.rank||0))});
  }
- items.sort((x,y)=>y.rank-x.rank||x.r.at-y.r.at);
- const shown=items.slice(0,40);
+ const isRem=x=>x.sigs.some(s=>s.cls==="rem");
+ const remItems=items.filter(isRem).sort((a,b)=>a.r.at-b.r.at);
+ const rest=items.filter(x=>!isRem(x)).sort((a,b)=>b.rank-a.rank||a.r.at-b.r.at);
+ const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
- $("sigInfo").textContent=`${shown.length===items.length?items.length+" signal"+(items.length===1?"":"s"):"40 strongest of "+items.length+" signals"}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, a saved price is at least $3 per $100 off it, or these two already played today and it ended 3-0 or 3-1. Tap one to open the match. Home still has every match.`;
+ const more=items.length-shown.length;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
