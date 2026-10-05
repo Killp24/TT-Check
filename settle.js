@@ -885,3 +885,13 @@ function coldSlates(players, todayIso, keepDays) {
   out.sort((a, b) => b.favL - a.favL || a.gap - b.gap || (a.name < b.name ? -1 : 1));
   return out.slice(0, 10);
 }
+
+// Which player the win chance moved toward, in percentage points, versus Elo.
+// Side "A" means the first player's chance went up. Under 4 points stays quiet.
+function eloMove(pa, pe) {
+  if (pa == null || pe == null || pa !== pa || pe !== pe) return null;
+  const diff = pa - pe;
+  const pts = Math.round(Math.abs(diff) * 100);
+  if (Math.abs(diff) < 0.04 || pts < 1) return null;
+  return { side: diff > 0 ? "A" : "B", pts };
+}

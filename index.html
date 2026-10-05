@@ -285,7 +285,7 @@ body[data-view="assist"] .matchstick{position:static;background:transparent;marg
 .pickline{margin:10px 0 0;font-weight:600}
 .edgeline{margin:8px 0 0;font-weight:600}
 .edgeline[hidden]{display:none}
-body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo,body[data-view="match"] #eloOnly{display:none}
+body[data-view="match"] #srcInfo,body[data-view="match"] #trustInfo{display:none}
 body[data-view="match"]:not([data-tab="odds"]) #bookPanel{display:none}
 body[data-view="match"][data-tab="odds"] #paneDetails > :not(#bookPanel){display:none}
 body[data-view="match"][data-tab="odds"] #bookPanel{display:block}
@@ -1040,10 +1040,15 @@ function update(){
  const pn=$("pickNames");if(pn){pn.hidden=VIEW!=="match";pn.textContent=VIEW==="match"?`${a.name} vs ${b.name}`:""}
  $("pA").classList.toggle("lead",pa>=.5);$("pB").classList.toggle("lead",pa<.5);
  $("barImg").setAttribute("aria-label",`${a.name} ${Math.round(pa*100)}%, ${b.name} ${Math.round((1-pa)*100)}%`);
+ const move=eloMove(pa,est.pe),gained=move?(move.side==="A"?a:b):null;
+ const beforeBook=Math.round(est.pe*100)!==Math.round(est.preBook*100);
+ const adjWho=beforeBook?(est.preBook>=est.pe?a:b):null;
  $("eloOnly").innerHTML=[
+  gained?`${esc(sur(gained.name))} +${move.pts} pts from Elo.`:"",
   Math.round(est.raw*100)!==Math.round(est.pe*100)?(USE_CURVE?`Ratings alone say ${esc(sur(a.name))} ${Math.round(est.raw*100)}%. Players at that gap have won about ${Math.round(est.pe*100)}%, so the win chance starts there.`:`Ratings alone say ${esc(sur(a.name))} ${Math.round(est.raw*100)}%, but favourites win less often than that, so it's pulled in${KCAL.fitted?` (measured on ${KCAL.n.toLocaleString()} matches)`:""}.`):"",
-  Math.round(est.pe*100)!==Math.round(est.preBook*100)?`Adjustments move ${esc(sur(a.name))} from ${Math.round(est.pe*100)}% to ${Math.round(est.preBook*100)}%.`:"",
-  est.bookW?`The book, with the vig removed, says ${Math.round(est.book*100)}%. It has ${Math.round(est.bookW*100)}% of the say, so the win chance is ${Math.round(pa*100)}%.`:""].filter(Boolean).join(" ");
+  adjWho?`${esc(sur(adjWho.name))} moves from ${Math.round((adjWho===a?est.pe:1-est.pe)*100)}% to ${Math.round((adjWho===a?est.preBook:1-est.preBook)*100)}% before the book price.`:"",
+  est.bookW?`The book, with the vig removed, has ${esc(sur((est.book>=0.5?a:b).name))} at ${Math.round(Math.max(est.book,1-est.book)*100)}%. It has ${Math.round(est.bookW*100)}% of the say.`:"",
+  ...(est.why||[])].filter(Boolean).join(" ");
  const gap=Math.abs(a.elo-b.elo),fav=a.elo>=b.elo?a:b,dog=fav===a?b:a,fb=isBan(fav),db=isBan(dog);
  const meet=matches.filter(m=>(m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name)).sort(sortFor(a.name));
  const fw=meet.filter(m=>m.w===fav.name).length,dw=meet.length-fw;
@@ -1536,9 +1541,10 @@ function renderSched(opt){
   const a=byNameP(r.p1),b=byNameP(r.p2);
   let fav="",flag=false,tags="";
   if(a&&b){const so=storedOdds(a.name,b.name,r.date+" "+r.time);
-   const e=estimate(a,b,so?bookOpt(so.o1,so.o2):null),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa),diff=Math.abs(e.pa-e.pe);
+   const e=estimate(a,b,so?bookOpt(so.o1,so.o2):null),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa);
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
-   if(diff>=0.04){flag=true;tags+=`<span class="stag w">Adjusted ${Math.round(diff*100)} pts from Elo</span>`}
+   const move=eloMove(e.pa,e.pe);
+   if(move){flag=true;const who=move.side==="A"?a:b;tags+=`<span class="stag w">${esc(sur(who.name))} +${move.pts} pts from Elo</span>`}
    for(const p of [a,b])if(isBan(p)){flag=true;tags+=`<span class="stag t${tierOf(p)}">${esc(sur(p.name))} T${tierOf(p)}</span>`}
    for(const p of [a,b]){const t=dataTag(p);if(t){flag=true;tags+=t}}
    if(so&&isFlagPair(so.o1,so.o2)){flag=true;tags+=`<span class="stag flagp">⚑ ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}</span>`}
