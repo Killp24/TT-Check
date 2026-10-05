@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-05T14:57Z
+# updated 2026-10-05T15:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10019,7 +10019,7 @@
 2026-10-05 | Kolek Maciej | Zwolinski Mariusz | 3-1 | 9 | 9 | Pending
 2026-10-05 | Wichowski Grzegorz | Skotniczny Rafal | 3-2 | 6 | 6 | Pending
 2026-10-05 | Fomin Yurij | Pelka Jerzy | 3-0 | 7 | 7 | Pending
-2026-10-05 | Felkel Grzegorz | Wiecek Adrian | 3-1 |  |  | 
+2026-10-05 | Felkel Grzegorz | Wiecek Adrian | 3-1 | 9 | 11 | Pending
 2026-10-05 | Przewlocki Piotr | Vincenec Oliver | 3-2 | 9 | 9 | Pending
 2026-10-05 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2 | 4 | 9 | Pending
 2026-10-05 | Malachowski Michal | Sklensky Miroslav | 3-1 | 9 | 9 | Pending
@@ -10036,10 +10036,10 @@
 2026-10-05 | Zochniak Jakub | Zwolinski Mariusz | 3-1 | 5 | 10 | Pending
 2026-10-05 | Fomin Yurij | Polok Pawel | 3-0 | 8 | 8 | Pending
 2026-10-05 | Wiecek Adrian | David Petr | 3-2 | 10 | 10 | Pending
-2026-10-05 | Kolodziej Krystian | Kuzmicz Jakub | 3-1 |  |  | 
-2026-10-05 | Badura Jaroslaw | Slawinski Kacper | 3-2 |  |  | 
-2026-10-05 | Pruszkowski Jakub | Vincenec Oliver | 3-1 |  |  | 
-2026-10-05 | Rutkowski Mateusz | Kostal Daniel | 3-1 |  |  | 
-2026-10-05 | Kolek Maciej | Solilo Dominik | 3-1 |  |  | 
-2026-10-05 | Sulkowski Bartek | Sobel Artur | 3-1 |  |  | 
-2026-10-05 | Pelka Jerzy | Skotniczny Rafal | 3-1 |  |  | 
+2026-10-05 | Kolodziej Krystian | Kuzmicz Jakub | 3-1 | 4 | 5 | Pending
+2026-10-05 | Badura Jaroslaw | Slawinski Kacper | 3-2 | 10 | 10 | +10
+2026-10-05 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 10 | 10 | +10
+2026-10-05 | Rutkowski Mateusz | Kostal Daniel | 3-1 | 5 | 10 | Pending
+2026-10-05 | Kolek Maciej | Solilo Dominik | 3-1 | 10 | 5 | Pending
+2026-10-05 | Sulkowski Bartek | Sobel Artur | 3-1 | 7 |  | Pending
+2026-10-05 | Pelka Jerzy | Skotniczny Rafal | 3-1 | 8 | 8 | Pending
