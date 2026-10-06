@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-06T15:26Z
+# updated 2026-10-06T15:29Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10367,10 +10367,11 @@
 2026-10-06 | Braun Josef | Chodorski Piotr | 3-0 | 10 | 10 | Pending
 2026-10-06 | Buczynski Witold | Gajda Rafal | 3-2 | 11 | 10 | +9
 2026-10-06 | Kapik Krzysztof | Rutkowski Mateusz | 3-0 | 5 | 5 | Pending
-2026-10-06 | Kuzmicz Jakub | Kosmal Dawid | 3-1 |  |  | 
-2026-10-06 | Solilo Dominik | Czerwinski Bartosz | 3-0 |  |  | 
+2026-10-06 | Kuzmicz Jakub | Kosmal Dawid | 3-1 | 10 | 5 | +9
+2026-10-06 | Solilo Dominik | Czerwinski Bartosz | 3-0 | 5 | 5 | +17
 2026-10-06 | Madej Boguslaw | Rus Maksymilian | 3-1 | 8 | 8 | +6
-2026-10-06 | Blocho Przemyslaw | Linek Adam | 3-0 |  |  | 
-2026-10-06 | Slosarczyk Pawel | Glanowski Waldemar | 3-0 |  |  | 
-2026-10-06 | Stapor Rafal | Kolek Maciej | 3-1 |  |  | 
-2026-10-06 | Smolka Kamil | Jozefiak Michal | 3-2 |  |  | 
+2026-10-06 | Blocho Przemyslaw | Linek Adam | 3-0 | 1 | 3 | Pending
+2026-10-06 | Slosarczyk Pawel | Glanowski Waldemar | 3-0 | 10 | 10 | +17
+2026-10-06 | Stapor Rafal | Kolek Maciej | 3-1 | 5 | 5 | +18
+2026-10-06 | Smolka Kamil | Jozefiak Michal | 3-2 | 8 | 8 | +7
+2026-10-06 | Pytlas Wojciech | Adach Rafal | 3-0 | 1 | 1 | Pending
