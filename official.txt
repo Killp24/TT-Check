@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-06T02:27Z
+# updated 2026-10-06T02:53Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10145,6 +10145,9 @@
 2026-10-05 | Urban Wojciech | Dytko Dawid | 3-2 | 11 | 11 | Pending
 2026-10-05 | Gromek Artur | Glanowski Jakub | 3-2 | 8 | 8 | Pending
 2026-10-05 | Kubiak Artur | Cyndera Jakub | 3-1 | 8 | 8 | Pending
+2026-10-05 | Tkaczyk Henryk | Zielinski Marcin | 3-1 |  |  | 
+2026-10-05 | Krezel Andrzej | Kumor Michal | 3-1 |  |  | 
+2026-10-05 | Leczycki Mariusz | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-06 | Gromek Artur | Trela Mateusz | 3-0 |  |  | 
 2026-10-06 | Kowalczyk Marcin | Golaszewski Kuba | 3-1 | 1 | 1 | Pending
 2026-10-06 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 | 1 | 2 | Pending
@@ -10182,3 +10185,16 @@
 2026-10-06 | Gumulinski Piotr | Oracz Lukasz | 3-1 |  |  | 
 2026-10-06 | Kubiak Artur | Staniczek Adam | 3-0 | 1 | 2 | +9
 2026-10-06 | Zmijewski Artur | Cyndera Jakub | 3-0 | 3 | 2 | Pending
+2026-10-06 | Zielinski Marcin | Kumor Michal | 3-0 |  |  | 
+2026-10-06 | Lewczuk Miroslaw | Tkaczyk Henryk | 3-2 |  |  | 
+2026-10-06 | Leczycki Mariusz | Krezel Andrzej | 3-2 |  |  | 
+2026-10-06 | Tkaczyk Henryk | Kumor Michal | 3-0 |  |  | 
+2026-10-06 | Zielinski Marcin | Leczycki Mariusz | 3-2 |  |  | 
+2026-10-06 | Lewczuk Miroslaw | Krezel Andrzej | 3-1 |  |  | 
+2026-10-06 | Leczycki Mariusz | Kumor Michal | 3-1 |  |  | 
+2026-10-06 | Lewczuk Miroslaw | Zielinski Marcin | 3-0 |  |  | 
+2026-10-06 | Krezel Andrzej | Tkaczyk Henryk | 3-2 |  |  | 
+2026-10-06 | Kumor Michal | Lewczuk Miroslaw | 3-1 |  |  | 
+2026-10-06 | Tkaczyk Henryk | Leczycki Mariusz | 3-2 |  |  | 
+2026-10-06 | Krezel Andrzej | Zielinski Marcin | 3-0 |  |  | 
+2026-10-06 | Kubiak Artur | Michalik Jerzy | 3-0 |  |  | 
