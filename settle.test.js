@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worrySide, goSide } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -615,6 +615,27 @@ test("extra shifts move a probability and an empty list leaves it alone", () => 
   assert.ok(blendShifts(0.46, [0.12]) > 0.46);
   assert.ok(blendShifts(0.54, [-0.12]) < 0.54);
   assert.equal(blendShifts(null, [0.2]), null);
+});
+
+test("a price that shows as 55% with a $15 edge is the worry spot", () => {
+  assert.equal(worrySide(0.55, 15), true);
+  assert.equal(worrySide(0.5452, 36.3), true);
+  assert.equal(worrySide(0.62, 22), true);
+  assert.equal(worrySide(0.70, 14.5), true);
+  assert.equal(worrySide(0.544, 40), false);
+  assert.equal(worrySide(0.70, 14.4), false);
+  assert.equal(worrySide(0.50, 15), false);
+});
+
+test("an edge that shows as $3 to $14 is the go spot", () => {
+  assert.equal(goSide(0.52, 3), true);
+  assert.equal(goSide(0.61, 14.4), true);
+  assert.equal(goSide(0.40, 8), true);
+  assert.equal(goSide(0.52, 2.4), false);
+  assert.equal(goSide(0.52, 14.5), false);
+  assert.equal(goSide(0.62, 22), false);
+  assert.equal(worrySide(0.62, 22) && goSide(0.62, 22), false);
+  assert.equal(goSide(0.61, 10) && worrySide(0.61, 10), false);
 });
 
 test("an Elo move names the player who gained the points", () => {
