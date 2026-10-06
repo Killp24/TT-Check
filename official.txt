@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-06T04:27Z
+# updated 2026-10-06T04:28Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10215,11 +10215,13 @@
 2026-10-06 | Miastowski Maksymilian | Kosowski Jakub | 3-2 | 1 | 1 | +10
 2026-10-06 | Wiecek Adrian | Felkel Grzegorz | 3-1 |  |  | 
 2026-10-06 | Jadczyk Marcin | Braun Josef | 3-1 |  |  | 
-2026-10-06 | Gajda Rafal | Glanowski Waldemar | 3-2 |  |  | 
-2026-10-06 | Brozek Piotr | Przewlocki Piotr | 3-0 |  |  | 
-2026-10-06 | Warpas Blazej | Wrobel Dariusz | 3-0 |  |  | 
-2026-10-06 | Kukawka Milosz | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-06 | Skotniczny Rafal | Cesarz Milosz | 3-0 |  |  | 
-2026-10-06 | Vincenec Oliver | Ruszkiewicz Adam | 3-0 |  |  | 
-2026-10-06 | Oracz Lukasz | Dytko Dawid | 3-2 |  |  | 
-2026-10-06 | Gumulinski Piotr | Urban Wojciech | 3-0 |  |  | 
+2026-10-06 | Gajda Rafal | Glanowski Waldemar | 3-2 | 1 | 1 | Pending
+2026-10-06 | Brozek Piotr | Przewlocki Piotr | 3-0 | 2 | 3 | Pending
+2026-10-06 | Warpas Blazej | Wrobel Dariusz | 3-0 | 1 | 1 | Pending
+2026-10-06 | Kukawka Milosz | Lukaszewski Mikolaj | 3-0 | 1 | 1 | Pending
+2026-10-06 | Skotniczny Rafal | Cesarz Milosz | 3-0 | 1 | 1 | Pending
+2026-10-06 | Vincenec Oliver | Ruszkiewicz Adam | 3-0 | 1 | 1 | Pending
+2026-10-06 | Oracz Lukasz | Dytko Dawid | 3-2 | 4 | 3 | Pending
+2026-10-06 | Gumulinski Piotr | Urban Wojciech | 3-0 | 4 | 3 | Pending
+2026-10-06 | Kuzmicz Jakub | Chodorski Piotr | 3-2 | 1 | 1 | Pending
+2026-10-06 | Wloczko Krzysztof | Malachowski Michal | 3-1 | 1 | 1 | Pending
