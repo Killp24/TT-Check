@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-06T03:54Z
+# updated 2026-10-06T03:57Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10200,7 +10200,7 @@
 2026-10-06 | Krezel Andrzej | Zielinski Marcin | 3-0 | 6 | 5 | Pending
 2026-10-06 | Kubiak Artur | Michalik Jerzy | 3-0 | 2 | 3 | Pending
 2026-10-06 | Machelski Michal | Staniczek Adam | 3-0 | 3 | 3 | Pending
-2026-10-06 | Olbrycht Michal | Poliniewicz Grzegorz | 3-1 |  |  | 
+2026-10-06 | Olbrycht Michal | Poliniewicz Grzegorz | 3-1 | 1 | 1 | Pending
 2026-10-06 | Buczynski Witold | Przewlocki Piotr | 3-0 | 1 | 1 | Pending
 2026-10-06 | Buczynski Witold | Przewlocki Piotr | 3-0 | 2 | 2 | Pending
 2026-10-06 | Tkaczyk Henryk | Leczycki Mariusz | 3-0 | 1 | 1 | +10
@@ -10209,6 +10209,7 @@
 2026-10-06 | Tkaczyk Henryk | Zielinski Marcin | 3-1 | 2 | 1 | Pending
 2026-10-06 | Krezel Andrzej | Kumor Michal | 3-1 | 2 | 1 | Pending
 2026-10-06 | Leczycki Mariusz | Lewczuk Miroslaw | 3-1 | 2 | 2 | Pending
-2026-10-06 | Slosarczyk Pawel | Brozek Piotr | 3-1 |  |  | 
-2026-10-06 | Lamperski Jakub | Sobel Artur | 3-1 |  |  | 
-2026-10-06 | Adamus Kacper | Kowalski Kamil | 3-1 |  |  | 
+2026-10-06 | Slosarczyk Pawel | Brozek Piotr | 3-1 | 1 | 1 | Pending
+2026-10-06 | Lamperski Jakub | Sobel Artur | 3-1 | 1 | 1 | Pending
+2026-10-06 | Adamus Kacper | Kowalski Kamil | 3-1 | 4 | 4 | Pending
+2026-10-06 | Miastowski Maksymilian | Kosowski Jakub | 3-2 | 1 | 1 | +10
