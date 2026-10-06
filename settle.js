@@ -896,6 +896,14 @@ function eloMove(pa, pe) {
   return { side: diff > 0 ? "A" : "B", pts };
 }
 
+// Our price prints as 55% or higher and the edge prints as $15 or more per $100.
+// Logged singles in that spot won less often than the price and lost money.
+// The cut uses the same rounding as the row, so a 54.5% price that shows as 55% counts.
+// Display only. It does not move the win chance.
+function worrySide(p, ev) {
+  return Math.round(p * 100) >= 55 && Math.round(ev) >= 15;
+}
+
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
 function blendShifts(p, shifts) {
   if (p == null || p !== p || p <= 0 || p >= 1) return null;

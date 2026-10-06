@@ -236,6 +236,9 @@ body[data-view="match"] #ambLine{display:none}
 .thin{color:var(--ball);font-weight:700}
 .bsum td:first-child{white-space:normal;min-width:90px}.bsum td,.bsum th{padding-right:8px}.bsum td{font-size:.85rem}
 .stag.ev{background:var(--ok);color:#fff;border-color:var(--ok)}
+.srow.worry{border:2px solid var(--ban)}
+.stag.worry{background:var(--ban);color:#fff;border-color:var(--ban)}
+.vv.worryv{border:2px solid var(--ban);background:var(--banbg);color:var(--ink);font-weight:400}
 .stag.rem{color:#17456e;background:#e7f0f8;border-color:#8eb4d4}
 .smid small.muted{font-size:.8rem}
 .slip{margin-top:10px;border:1px solid var(--border);border-left:6px solid var(--ball);border-radius:4px;padding:10px 12px;background:var(--card)}
@@ -1427,6 +1430,10 @@ function edgeSummary(a,b,pa){
 }
 // Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
 function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
+function worryNote(best){
+ if(!best||!worrySide(best.pm,best.ev))return "";
+ return `<div class="vv worryv"><strong>Worry on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. A price of 55% or more with an edge of $15 or more has lost money. The win chance stays.</div>`;
+}
 function fadeOf(a,b,oa,ob){
  if(!a||!b)return null;
  return bookFadesRating({name:a.name,elo:a.elo,rank:a.rank},{name:b.name,elo:b.elo,rank:b.rank},oa,ob);
@@ -1481,10 +1488,10 @@ function oddsCalc(a,b,pa,opts){
    const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
    return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
   }).join("");
-  const best=sides.map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
-  const verdict=best?best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
+  const best=sides.map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
+  const verdict=worryNote(best)||(best?(best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
    :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
-   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`:"";
+   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`):"");
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
   const caution=fadeHtml(a,b,oa,ob);
@@ -1502,10 +1509,10 @@ function oddsCalc(a,b,pa,opts){
   const cls=ev>=3?"pos":ev>0?"thin":"neg";
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${cls}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
- const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
+ const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
+ const verdict=worryNote(best)||(best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
-  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
+  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`);
  const flagged=isFlagPair(oa,ob);
  out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
@@ -1623,7 +1630,7 @@ function renderSched(opt){
  let shown=0,html="",marked=false,finishedAbove=false;
  for(const r of rows){
   const a=byNameP(r.p1),b=byNameP(r.p2);
-  let fav="",flag=false,tags="";
+  let fav="",flag=false,tags="",worry=false;
   if(a&&b){const so=storedOdds(a.name,b.name,r.date+" "+r.time);
    const e=estimate(a,b,so?bookOpt(so.o1,so.o2):null),f=e.pa>=.5?a:b,pf=Math.max(e.pa,1-e.pa);
    fav=`${esc(sur(f.name))} ${Math.round(pf*100)}%`;
@@ -1640,8 +1647,9 @@ function renderSched(opt){
     if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
     if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
    if(so&&(so.o1!==null||so.o2!==null)){
-    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
+    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
+    if(worrySide(top.pm,top.ev)){worry=true;flag=true;tags+=`<span class="stag worry">Worry</span>`}
     if(top.ev>=3){flag=true;tags+=`<span class="stag ev">+$${top.ev.toFixed(0)} on ${esc(sur(top.p.name))} at ${top.o>0?"+":""}${top.o}</span>`}
     else tags+=`<span class="stag">Best EV ${top.ev>=0?"+":"−"}$${Math.abs(top.ev).toFixed(0)} at your odds</span>`;
    }
@@ -1657,7 +1665,7 @@ function renderSched(opt){
   if(!live)finishedAbove=true;
   shown++;
   const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-30?"No result on file":mins<=0?"Started":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
-  html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
+  html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${worry?" worry":""}${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
  }
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next update, which runs about every 30 minutes."}</li>`;
  $("schedInfo").textContent=shown?`TT Elite today · ${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"TT Elite today";
@@ -1899,8 +1907,8 @@ function renderSignals(){
   const so=so0;
   let best=null;
   if(so&&(so.o1!==null||so.o2!==null)){
-   const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,o,ev:pm*profit(o)-(1-pm)*100}));
-   if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];if(best.ev>=3)sigs.push({cls:"ev",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:best.ev})}
+   const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
+   if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];if(worrySide(best.pm,best.ev))sigs.push({cls:"worry",text:"Worry",rank:0});if(best.ev>=3)sigs.push({cls:"ev",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:best.ev})}
   }
   if(so&&isFlagPair(so.o1,so.o2))sigs.push({cls:"flagp",text:"Flagged price",rank:25});
   const prev=e.prev;
@@ -1913,11 +1921,11 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A red border means our price is 55% or more and the edge is $15 or more. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
-  return `<li><button type="button" class="srow" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
+  return `<li><button type="button" class="srow${sigs.some(s=>s.cls==="worry")?" worry":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
 }
 $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;openListedMatch(SCHED[+b.dataset.i],{kind:"signals"})});
 function openSheet(id, opt){
