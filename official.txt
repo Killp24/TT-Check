@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-06T04:54Z
+# updated 2026-10-06T04:56Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10213,8 +10213,8 @@
 2026-10-06 | Lamperski Jakub | Sobel Artur | 3-1 | 1 | 1 | Pending
 2026-10-06 | Adamus Kacper | Kowalski Kamil | 3-1 | 4 | 4 | Pending
 2026-10-06 | Miastowski Maksymilian | Kosowski Jakub | 3-2 | 1 | 1 | +10
-2026-10-06 | Wiecek Adrian | Felkel Grzegorz | 3-1 |  |  | 
-2026-10-06 | Jadczyk Marcin | Braun Josef | 3-1 |  |  | 
+2026-10-06 | Wiecek Adrian | Felkel Grzegorz | 3-1 | 1 | 1 | +11
+2026-10-06 | Jadczyk Marcin | Braun Josef | 3-1 | 1 | 1 | +9
 2026-10-06 | Gajda Rafal | Glanowski Waldemar | 3-2 | 1 | 1 | Pending
 2026-10-06 | Brozek Piotr | Przewlocki Piotr | 3-0 | 2 | 3 | Pending
 2026-10-06 | Warpas Blazej | Wrobel Dariusz | 3-0 | 1 | 1 | Pending
@@ -10225,9 +10225,10 @@
 2026-10-06 | Gumulinski Piotr | Urban Wojciech | 3-0 | 4 | 3 | Pending
 2026-10-06 | Kuzmicz Jakub | Chodorski Piotr | 3-2 | 1 | 1 | Pending
 2026-10-06 | Wloczko Krzysztof | Malachowski Michal | 3-1 | 1 | 1 | Pending
-2026-10-06 | Glanowski Waldemar | Buczynski Witold | 3-0 |  |  | 
+2026-10-06 | Glanowski Waldemar | Buczynski Witold | 3-0 | 2 | 3 | Pending
 2026-10-06 | Wloczko Krzysztof | Olbrycht Michal | 3-2 |  |  | 
 2026-10-06 | Chodorski Piotr | Poliniewicz Grzegorz | 3-1 |  |  | 
-2026-10-06 | Sobel Artur | Wrobel Dariusz | 3-2 |  |  | 
-2026-10-06 | Skotniczny Rafal | Kaczmarek Jakub | 3-0 |  |  | 
+2026-10-06 | Sobel Artur | Wrobel Dariusz | 3-2 | 2 | 2 | Pending
+2026-10-06 | Skotniczny Rafal | Kaczmarek Jakub | 3-0 | 2 | 2 | Pending
 2026-10-06 | Adamus Kacper | Oracz Lukasz | 3-0 |  |  | 
+2026-10-06 | Wiecek Adrian | Kosowski Jakub | 3-1 | 2 | 2 | +14
