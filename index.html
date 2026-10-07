@@ -1469,8 +1469,8 @@ function valueNote(best, worry){
  if(marked||!best)return marked;
  const price=Math.round(best.pm*100);
  if(price<50&&best.ev>=3)return `<div class="vv"><strong>Other side on ${esc(sur(best.p.name))}</strong>Our price is ${price}% and the edge is +$${best.ev.toFixed(0)} per $100. A price under 50% is the opposite of the favorite. The win chance stays.</div>`;
- if(best.ev>=3)return `<div class="vv pos"><strong>Possible value on ${esc(sur(best.p.name))}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`;
- if(best.ev>0)return `<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(sur(best.p.name))} is small enough to be noise in the estimate.</div>`;
+ if(best.ev>0&&best.ev<3)return `<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(sur(best.p.name))} is small enough to be noise in the estimate.</div>`;
+ if(best.ev>0)return "";
  return `<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
 }
 function fadeOf(a,b,oa,ob){
