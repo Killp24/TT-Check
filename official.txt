@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T00:38Z
+# updated 2026-10-07T00:40Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10473,6 +10473,9 @@
 2026-10-06 | Jurowicz Grzegorz | Nowak Jakub | 3-2 | 7 | 3 | +6
 2026-10-06 | Gromek Artur | Linek Adam | 3-1 | 9 | 11 | Pending
 2026-10-06 | Tkaczyk Henryk | Fomin Andriej | 3-1 | 12 | 6 | Pending
+2026-10-06 | Adamus Mariusz | Burkacki Adrian | 3-2 | 3 | 3 | +8
+2026-10-06 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 | 5 | 8 | Pending
+2026-10-06 | Zielinski Marcin | Machelski Michal | 3-0 | 11 | 9 | Pending
 2026-10-07 | Rolak Jaroslaw | Myszewski Adrian | 3-0 | 1 | 1 | Pending
 2026-10-07 | Rolak Jaroslaw | Mrugala Bartlomiej | 3-0 | 2 | 1 | Pending
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 |  |  | 
@@ -10492,7 +10495,7 @@
 2026-10-07 | Gromek Artur | Linek Adam | 3-1 |  |  | 
 2026-10-07 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 |  |  | 
 2026-10-07 | Gromek Artur | Blocho Przemyslaw | 3-2 |  |  | 
-2026-10-07 | Mrugala Bartlomiej | Golaszewski Kuba | 3-2 |  |  | 
-2026-10-07 | Golaszewski Kuba | Skorski Michal | 3-2 |  |  | 
+2026-10-07 | Mrugala Bartlomiej | Golaszewski Kuba | 3-2 | 2 | 2 | Pending
+2026-10-07 | Golaszewski Kuba | Skorski Michal | 3-2 | 3 | 2 | Pending
 2026-10-07 | Tkocz Marek | Nowak Jakub | 3-0 |  |  | 
 2026-10-07 | Adamus Mariusz | Burkacki Adrian | 3-2 |  |  | 
