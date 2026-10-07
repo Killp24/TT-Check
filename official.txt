@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T20:54Z
+# updated 2026-10-07T20:59Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10764,19 +10764,20 @@
 2026-10-07 | Fomin Andriej | Skupinski Arkadiusz | 3-2 | 6 | 2 | +3
 2026-10-07 | Staniczek Adam | Bartosik Dominik | 3-1 | 2 | 7 | Pending
 2026-10-07 | Nocun Zbigniew | Lewczuk Miroslaw | 3-0 | 5 | 5 | Pending
-2026-10-07 | Staszczyk Konrad | Myszewski Adrian | 3-0 |  |  | 
-2026-10-07 | Brud Szymon | Perzynski Przemyslaw | 3-0 |  |  | 
+2026-10-07 | Staszczyk Konrad | Myszewski Adrian | 3-0 | 6 | 8 | +2
+2026-10-07 | Brud Szymon | Perzynski Przemyslaw | 3-0 | 5 | 5 | +18
 2026-10-07 | Michalik Jerzy | Krezel Andrzej | 3-2 | 5 | 5 | Pending
 2026-10-07 | Strus Piotr | Kowalczyk Marcin | 3-2 | 5 | 5 | Pending
 2026-10-07 | Pytlas Wojciech | Baron Mariusz | 3-0 | 5 | 8 | +12
-2026-10-07 | Koczyba Mariusz | Krupa Sebastian | 3-2 |  |  | 
+2026-10-07 | Koczyba Mariusz | Krupa Sebastian | 3-2 | 5 | 5 | Pending
 2026-10-07 | Fomin Andriej | Gesiarz Piotr | 3-1 | 7 | 3 | Pending
-2026-10-07 | Blocho Przemyslaw | Rudomina Kamil | 3-1 |  |  | 
-2026-10-07 | Zelezik Jacek | Tkaczyk Henryk | 3-0 |  |  | 
-2026-10-07 | Krukar Piotr | Suchecki Waclaw | 3-1 |  |  | 
-2026-10-07 | Mrugala Bartlomiej | Trela Mateusz | 3-1 |  |  | 
-2026-10-07 | Baron Mariusz | Ruszkiewicz Adam | 3-1 |  |  | 
-2026-10-07 | Warzecha Miroslaw | Bartosik Dominik | 3-0 |  |  | 
+2026-10-07 | Blocho Przemyslaw | Rudomina Kamil | 3-1 | 6 | 5 | +9
+2026-10-07 | Zelezik Jacek | Tkaczyk Henryk | 3-0 | 5 | 9 | +1
+2026-10-07 | Krukar Piotr | Suchecki Waclaw | 3-1 | 5 | 5 | Pending
+2026-10-07 | Mrugala Bartlomiej | Trela Mateusz | 3-1 | 8 | 5 | Pending
+2026-10-07 | Baron Mariusz | Ruszkiewicz Adam | 3-1 | 9 | 6 | Pending
+2026-10-07 | Warzecha Miroslaw | Bartosik Dominik | 3-0 | 3 | 8 | Pending
+2026-10-07 | Staniczek Adam | Skupinski Arkadiusz | 3-0 | 3 | 3 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
