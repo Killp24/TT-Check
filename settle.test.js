@@ -625,6 +625,9 @@ test("a price that shows as 55% with a $15 edge is the worry spot", () => {
   assert.equal(worrySide(0.544, 40), false);
   assert.equal(worrySide(0.70, 14.4), false);
   assert.equal(worrySide(0.50, 15), false);
+  assert.equal(worrySide(0.49, 15), true);
+  assert.equal(worrySide(0.40, 40), true);
+  assert.equal(worrySide(0.21, 14), false);
 });
 
 test("a 50% price with an edge of $3 to $14 is the go spot", () => {

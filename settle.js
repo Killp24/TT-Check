@@ -896,12 +896,15 @@ function eloMove(pa, pe) {
   return { side: diff > 0 ? "A" : "B", pts };
 }
 
-// Our price prints as 55% or higher and the edge prints as $15 or more per $100.
-// Logged singles in that spot won less often than the price and lost money.
-// The cut uses the same rounding as the row, so a 54.5% price that shows as 55% counts.
-// Display only. It does not move the win chance.
+// Two spots get the red border. A price of 55% or more with an edge of $15 or more
+// has lost money in the log. A price under 50% with an edge of $15 or more is the
+// opposite of the favorite, and that side lost on the last priced slate.
+// A 50–54% price with a $15 edge stays plain. Display only. It does not move the win chance.
 function worrySide(p, ev) {
-  return Math.round(p * 100) >= 55 && Math.round(ev) >= 15;
+  const price = Math.round(p * 100);
+  const edge = Math.round(ev);
+  if (edge < 15) return false;
+  return price >= 55 || price < 50;
 }
 
 // Our price prints as 50% or more and the edge prints as $3 to $14 per $100.
