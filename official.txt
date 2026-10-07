@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T18:31Z
+# updated 2026-10-07T18:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10704,7 +10704,7 @@
 2026-10-07 | Zielinski Marcin | Machelski Michal | 3-0 |  |  | 
 2026-10-07 | Blocho Przemyslaw | Pietraszko Lukasz | 3-0 |  |  | 
 2026-10-07 | Gromek Artur | Linek Adam | 3-1 |  |  | 
-2026-10-07 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 |  |  | 
+2026-10-07 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 | 2 | 2 | Pending
 2026-10-07 | Tkocz Marek | Nowak Jakub | 3-0 |  |  | 
 2026-10-07 | Kapik Krzysztof | Kosmal Dawid | 3-2 |  |  | 
 2026-10-07 | Idaczyk Rafal | Kaczmarek Jakub | 3-2 |  |  | 
@@ -10719,32 +10719,33 @@
 2026-10-07 | Urban Wojciech | Sokolowski Oliwier | 3-0 | 10 | 10 | Pending
 2026-10-07 | Pytlas Wojciech | Ruszkiewicz Adam | 3-1 | 2 | 2 | +12
 2026-10-07 | Pytlas Wojciech | Ruszkiewicz Adam | 3-1 | 3 | 3 | +12
-2026-10-07 | Lewczuk Miroslaw | Krezel Andrzej | 3-2 |  |  | 
+2026-10-07 | Lewczuk Miroslaw | Krezel Andrzej | 3-2 | 3 | 3 | Pending
 2026-10-07 | Kowalczyk Marcin | Krukar Piotr | 3-1 | 3 | 3 | Pending
-2026-10-07 | Miastowski Maksymilian | Grela Artur | 3-1 | 8 |  | Pending
-2026-10-07 | Folwarski Jakub | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-07 | Chodorski Piotr | Miastowski Maksymilian | 3-0 |  |  | 
-2026-10-07 | Grela Artur | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-07 | Michna Dawid | Folwarski Jakub | 3-0 |  |  | 
-2026-10-07 | Chodorski Piotr | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-07 | Miastowski Maksymilian | Michna Dawid | 3-2 |  |  | 
-2026-10-07 | Grela Artur | Folwarski Jakub | 3-1 |  |  | 
+2026-10-07 | Miastowski Maksymilian | Grela Artur | 3-1 | 8 | 8 | +15
+2026-10-07 | Folwarski Jakub | Jadczyk Marcin | 3-1 | 3 | 8 | +5
+2026-10-07 | Chodorski Piotr | Miastowski Maksymilian | 3-0 | 9 | 9 | +17
+2026-10-07 | Grela Artur | Jadczyk Marcin | 3-1 | 9 | 9 | +12
+2026-10-07 | Michna Dawid | Folwarski Jakub | 3-0 | 9 | 4 | +27
+2026-10-07 | Chodorski Piotr | Jadczyk Marcin | 3-1 | 10 | 10 | +14
+2026-10-07 | Miastowski Maksymilian | Michna Dawid | 3-2 | 10 | 10 | +9
+2026-10-07 | Grela Artur | Folwarski Jakub | 3-1 | 10 | 5 | +18
 2026-10-07 | Koczyba Mariusz | Baron Mariusz | 3-1 | 3 | 7 | Pending
-2026-10-07 | Brud Szymon | Rudomina Kamil | 3-1 |  |  | 
+2026-10-07 | Brud Szymon | Rudomina Kamil | 3-1 | 1 | 1 | Pending
 2026-10-07 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 |  |  | 
-2026-10-07 | Perzynski Przemyslaw | Myszewski Adrian | 3-0 |  |  | 
-2026-10-07 | Staszczyk Konrad | Rudomina Kamil | 3-0 |  |  | 
-2026-10-07 | Brud Szymon | Myszewski Adrian | 3-2 |  |  | 
-2026-10-07 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-1 |  |  | 
-2026-10-07 | Staszczyk Konrad | Brud Szymon | 3-2 |  |  | 
-2026-10-07 | Rudomina Kamil | Perzynski Przemyslaw | 3-1 |  |  | 
-2026-10-07 | Blocho Przemyslaw | Myszewski Adrian | 3-0 |  |  | 
-2026-10-07 | Zelezik Jacek | Michalik Jerzy | 3-0 |  |  | 
+2026-10-07 | Perzynski Przemyslaw | Myszewski Adrian | 3-0 | 1 | 4 | Pending
+2026-10-07 | Staszczyk Konrad | Rudomina Kamil | 3-0 | 3 | 2 | Pending
+2026-10-07 | Brud Szymon | Myszewski Adrian | 3-2 | 2 | 5 | Pending
+2026-10-07 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-1 | 2 | 3 | Pending
+2026-10-07 | Staszczyk Konrad | Brud Szymon | 3-2 | 4 | 3 | Pending
+2026-10-07 | Rudomina Kamil | Perzynski Przemyslaw | 3-1 | 3 | 3 | Pending
+2026-10-07 | Blocho Przemyslaw | Myszewski Adrian | 3-0 | 4 | 6 | Pending
+2026-10-07 | Zelezik Jacek | Michalik Jerzy | 3-0 |  | 3 | 
 2026-10-07 | Tkaczyk Henryk | Nocun Zbigniew | 3-2 |  |  | 
-2026-10-07 | Trela Mateusz | Suchecki Waclaw | 3-1 |  |  | 
-2026-10-07 | Strus Piotr | Mrugala Bartlomiej | 3-1 |  |  | 
-2026-10-07 | Warzecha Miroslaw | Fomin Andriej | 3-2 |  |  | 
-2026-10-07 | Gesiarz Piotr | Staniczek Adam | 3-0 |  |  | 
+2026-10-07 | Trela Mateusz | Suchecki Waclaw | 3-1 | 3 | 3 | Pending
+2026-10-07 | Strus Piotr | Mrugala Bartlomiej | 3-1 | 3 | 6 | Pending
+2026-10-07 | Warzecha Miroslaw | Fomin Andriej | 3-2 | 1 | 5 | +6
+2026-10-07 | Gesiarz Piotr | Staniczek Adam | 3-0 | 1 | 1 | +11
+2026-10-07 | Wrzalik Tomasz | Ruszkiewicz Adam | 3-2 | 3 | 4 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
