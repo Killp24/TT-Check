@@ -1441,7 +1441,7 @@ function worryNote(best){
 }
 function goNote(best){
  if(!best||!goSide(best.pm,best.ev))return "";
- return `<div class="vv gov"><strong>Go on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. An edge of $3 to $14 has won more often than the price. The win chance stays.</div>`;
+ return `<div class="vv gov"><strong>Go on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. A price of 50% or more with an edge of $3 to $14 has won more often than the price. The win chance stays.</div>`;
 }
 function fadeOf(a,b,oa,ob){
  if(!a||!b)return null;
@@ -1931,7 +1931,7 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A green border means the edge is $3 to $14. A red border means our price is 55% or more and the edge is $15 or more. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A green border means our price is 50% or more and the edge is $3 to $14. A red border means our price is 55% or more and the edge is $15 or more. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
