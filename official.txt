@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T15:38Z
+# updated 2026-10-07T15:41Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10603,7 +10603,7 @@
 2026-10-07 | Sulkowski Bartek | Sulkowski Karol | 3-0 | 4 | 4 | +6
 2026-10-07 | Lamperski Jakub | Lukaszewski Mikolaj | 3-1 | 4 | 4 | +6
 2026-10-07 | Kukawka Milosz | Sulkowski Karol | 3-0 | 4 | 9 | +11
-2026-10-07 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-2 |  | 4 | 
+2026-10-07 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-2 | 9 | 4 | +5
 2026-10-07 | Solilo Dominik | Stapor Rafal | 3-2 | 4 | 4 | +7
 2026-10-07 | Czerwinski Bartosz | Minda Michal | 3-0 | 4 | 4 | +13
 2026-10-07 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +13
@@ -10672,7 +10672,7 @@
 2026-10-07 | Oracz Lukasz | Pruszkowski Jakub | 3-0 | 10 | 10 | +19
 2026-10-07 | Stecyszyn Jakub | Rutkowski Mateusz | 3-0 | 10 | 10 | +7
 2026-10-07 | Vincenec Oliver | Slosarczyk Pawel | 3-2 | 10 | 10 | +6
-2026-10-07 | Wloczko Krzysztof | Stecyszyn Jakub | 3-0 |  | 11 | 
+2026-10-07 | Wloczko Krzysztof | Stecyszyn Jakub | 3-0 | 10 | 11 | +18
 2026-10-07 | Rutkowski Mateusz | Kapik Krzysztof | 3-1 | 11 | 9 | +15
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 |  |  | 
 2026-10-07 | Zielinski Marcin | Brunner Marian | 3-0 |  |  | 
@@ -10695,9 +10695,9 @@
 2026-10-07 | Adamus Pawel | Nowak Jakub | 3-2 |  |  | 
 2026-10-07 | Michna Dawid | Chodorski Piotr | 3-2 |  |  | 
 2026-10-07 | Zelezik Jacek | Krezel Andrzej | 3-1 |  |  | 
-2026-10-07 | Trela Mateusz | Krukar Piotr | 3-0 |  |  | 
-2026-10-07 | Baron Mariusz | Wrzalik Tomasz | 3-1 |  |  | 
-2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-0 |  |  | 
+2026-10-07 | Trela Mateusz | Krukar Piotr | 3-0 | 1 | 1 | Pending
+2026-10-07 | Baron Mariusz | Wrzalik Tomasz | 3-1 | 5 | 1 | Pending
+2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-0 | 9 | 9 | +9
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
