@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T03:56Z
+# updated 2026-10-07T04:01Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10479,6 +10479,7 @@
 2026-10-06 | Kurek Pawel | Schaniel Krzysztof | 3-1 | 6 | 6 | Pending
 2026-10-06 | Badura Jaroslaw | Baron Mariusz | 3-0 | 6 | 6 | Pending
 2026-10-06 | Durak Kamil | Szymanski Igor | 3-1 | 6 | 6 | Pending
+2026-10-06 | Kapik Krzysztof | Kosmal Dawid | 3-2 | 6 | 11 | Pending
 2026-10-07 | Rolak Jaroslaw | Myszewski Adrian | 3-0 | 1 | 1 | Pending
 2026-10-07 | Rolak Jaroslaw | Mrugala Bartlomiej | 3-0 | 2 | 1 | Pending
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 | 1 | 1 | Pending
@@ -10486,7 +10487,7 @@
 2026-10-07 | Staszczyk Konrad | Linek Adam | 3-0 |  |  | 
 2026-10-07 | Myszewski Adrian | Golaszewski Kuba | 3-1 | 2 | 1 | Pending
 2026-10-07 | Fomin Andriej | Bartosik Dominik | 3-2 |  |  | 
-2026-10-07 | Zielinski Marcin | Brunner Marian | 3-0 |  |  | 
+2026-10-07 | Zielinski Marcin | Brunner Marian | 3-0 | 2 | 3 | Pending
 2026-10-07 | Tkaczyk Henryk | Fomin Andriej | 3-1 |  |  | 
 2026-10-07 | Skorski Michal | Rolak Jaroslaw | 3-0 | 1 | 3 | Pending
 2026-10-07 | Adamus Mariusz | Jurowicz Grzegorz | 3-1 |  |  | 
@@ -10528,15 +10529,18 @@
 2026-10-07 | Adamus Mariusz | Nowak Jakub | 3-0 | 2 | 2 | +10
 2026-10-07 | Michna Dawid | Chodorski Piotr | 3-1 | 1 | 1 | Pending
 2026-10-07 | Kapik Krzysztof | Kosmal Dawid | 3-2 |  |  | 
-2026-10-07 | Bartosik Dominik | Tkaczyk Henryk | 3-2 |  |  | 
+2026-10-07 | Bartosik Dominik | Tkaczyk Henryk | 3-2 | 3 | 2 | Pending
 2026-10-07 | Baron Mariusz | Kurek Pawel | 3-0 | 4 | 4 | Pending
 2026-10-07 | Adamus Pawel | Burkacki Adrian | 3-1 | 3 | 2 | +10
 2026-10-07 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 | 1 | 1 | Pending
 2026-10-07 | Nowak Jakub | Kaczmarek Jakub | 3-0 | 3 | 1 | Pending
-2026-10-07 | Miastowski Maksymilian | Grela Artur | 3-2 |  |  | 
-2026-10-07 | Pruszkowski Jakub | Przewlocki Piotr | 3-2 |  |  | 
-2026-10-07 | Rutkowski Mateusz | Zochniak Jakub | 3-1 |  |  | 
+2026-10-07 | Miastowski Maksymilian | Grela Artur | 3-2 | 1 | 1 | Pending
+2026-10-07 | Pruszkowski Jakub | Przewlocki Piotr | 3-2 | 1 | 1 | Pending
+2026-10-07 | Rutkowski Mateusz | Zochniak Jakub | 3-1 | 1 | 1 | Pending
 2026-10-07 | Zielinski Marcin | Brunner Marian | 3-0 |  |  | 
-2026-10-07 | Bartosik Dominik | Machelski Michal | 3-0 |  |  | 
+2026-10-07 | Bartosik Dominik | Machelski Michal | 3-0 | 4 | 3 | Pending
+2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 1 | 1 | Pending
+2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 2 | 2 | Pending
+2026-10-07 | Slawinski Kacper | Slosarczyk Pawel | 3-2 |  | 1 | 
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
