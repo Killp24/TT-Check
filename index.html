@@ -1433,15 +1433,45 @@ function edgeSummary(a,b,pa){
  const snap=decisionSnapshot(oa,ob,pa,1-pa);
  return `Our price ${sur(a.name)} ${Math.round(pa*100)}%. Book ${fmtO(oa)} / ${fmtO(ob)}. Edge ${money(snap.edge1)} / ${money(snap.edge2)}.`;
 }
-// Same cut the odds table has always used: $3 or more is value, a smaller plus is thin, zero or worse is no value.
-function oddsTone(ev){return ev>=3?"pos":ev>0?"thin":"neg"}
-function worryNote(best){
- if(!best||!worrySide(best.pm,best.ev))return "";
- return `<div class="vv worryv"><strong>Worry on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. A price of 55% or more with an edge of $15 or more has lost money. The win chance stays.</div>`;
+// Green is only the go spot. A plus that is not that spot stays plain, including a $15 edge.
+// A minus stays red. The red worry mark is the opponent, not this number.
+function oddsTone(ev, pm, quiet){
+ if(!quiet&&pm!=null&&goSide(pm,ev))return "pos";
+ if(ev<0)return "neg";
+ if(ev>0&&ev<3)return "thin";
+ return "";
+}
+function formAhead(n){
+ const r=Math.round(n*10)/10;
+ return Number.isInteger(r)?String(r):r.toFixed(1);
+}
+// The other player is at least 100 Elo higher and at least 2 wins ahead on recent form.
+// Thin form stays unmarked. Display only. It does not move the win chance.
+function worryPair(a, b){
+ if(!a||!b||a.elo==null||b.elo==null)return null;
+ const fa=formEdge(a.name),fb=formEdge(b.name);
+ if(!fa||!fb)return null;
+ if(worryPlayer(b.elo-a.elo, fb.diff-fa.diff))return {weak:a,strong:b,gap:b.elo-a.elo,form:fb.diff-fa.diff};
+ if(worryPlayer(a.elo-b.elo, fa.diff-fb.diff))return {weak:b,strong:a,gap:a.elo-b.elo,form:fa.diff-fb.diff};
+ return null;
+}
+function worryNote(w){
+ if(!w)return "";
+ return `<div class="vv worryv"><strong>Worry on ${esc(sur(w.weak.name))}</strong>${esc(sur(w.strong.name))} is ${w.gap} Elo higher and ${formAhead(w.form)} wins ahead of him on recent form. The win chance stays.</div>`;
 }
 function goNote(best){
  if(!best||!goSide(best.pm,best.ev))return "";
- return `<div class="vv gov"><strong>Go on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. An edge of $3 to $14 has won more often than the price. The win chance stays.</div>`;
+ return `<div class="vv gov"><strong>Go on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. A price of 50% or more with an edge of $3 to $14 has won more often than the price. The win chance stays.</div>`;
+}
+function valueNote(best, worry){
+ if(worry)return worry;
+ const marked=goNote(best);
+ if(marked||!best)return marked;
+ const price=Math.round(best.pm*100);
+ if(price<50&&best.ev>=3)return `<div class="vv"><strong>Other side on ${esc(sur(best.p.name))}</strong>Our price is ${price}% and the edge is +$${best.ev.toFixed(0)} per $100. A price under 50% is the opposite of the favorite. The win chance stays.</div>`;
+ if(best.ev>0&&best.ev<3)return `<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(sur(best.p.name))} is small enough to be noise in the estimate.</div>`;
+ if(best.ev>0)return "";
+ return `<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`;
 }
 function fadeOf(a,b,oa,ob){
  if(!a||!b)return null;
@@ -1460,10 +1490,10 @@ function showFadeLine(a,b,oa,ob){
  if(VIEW==="match"&&html){el.hidden=false;el.innerHTML=html;return}
  el.hidden=true;el.innerHTML="";
 }
-function paintPrices(model){
+function paintPrices(model, quiet){
  for(const k of ["A","B"]){
   const o=readOdds(k);
-  const cls=o===null?"":oddsTone(model[k]*profit(o)-(1-model[k])*100);
+  const cls=o===null?"":oddsTone(model[k]*profit(o)-(1-model[k])*100, model[k], quiet);
   for(const node of document.querySelectorAll(`#oddsBox [data-o="${k}"], #oddsBox [data-s="${k}"]`)){
    node.classList.remove("pos","thin","neg");
    if(cls)node.classList.add(cls);
@@ -1486,7 +1516,8 @@ function oddsCalc(a,b,pa,opts){
  const oa=readOdds("A"),ob=readOdds("B");
  if(!(opts&&opts.save===false))rememberOdds(a,b);
  const model={A:pa,B:1-pa};
- paintPrices(model);
+ const quiet=!!worryPair(a,b);
+ paintPrices(model, quiet);
  if(VIEW==="match"){
   const summary=edgeSummary(a,b,pa);
   showEdgeLine(summary);
@@ -1495,33 +1526,29 @@ function oddsCalc(a,b,pa,opts){
   const sides=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null);
   const rows=sides.map(([k,p,o,imp])=>{
    const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
-   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
+   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
   }).join("");
   const best=sides.map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
-  const verdict=worryNote(best)||goNote(best)||(best?(best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
-   :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
-   :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`):"");
+  const worry=worryNote(worryPair(a,b));
+  const verdict=valueNote(best, worry);
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
   const caution=fadeHtml(a,b,oa,ob);
   showFadeLine(a,b,oa,ob);
   const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">DraftKings sets the edge and the logged bet. The other books stay on their own lines.</p>`:"");
-  out.innerHTML=lead+(rows?flag+caution+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
+  out.innerHTML=lead+(rows?flag+caution+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:worry)+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
  showFadeLine(a,b,oa,ob);
- if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
+ if(oa===null&&ob===null){out.innerHTML=worryNote(worryPair(a,b))+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
   const pm=model[k],ev=pm*profit(o)-(1-pm)*100,fair=margin!==null?imp/(ia+ib):null;
-  const cls=ev>=3?"pos":ev>0?"thin":"neg";
-  return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${cls}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
+  return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=worryNote(best)||goNote(best)||(best.ev>=3?`<div class="vv pos"><strong>Possible value on ${esc(best.p.name)}</strong>About +$${best.ev.toFixed(2)} expected per $100 if the estimate is right.</div>`
-  :best.ev>0?`<div class="vv thin"><strong>Thin edge only</strong>+$${best.ev.toFixed(2)} per $100 on ${esc(best.p.name)} is small enough to be noise in the estimate.</div>`
-  :`<div class="vv neg"><strong>No value at these odds</strong>The bookmaker's price is better than the estimate supports.</div>`);
+ const verdict=valueNote(best, worryNote(worryPair(a,b)));
  const flagged=isFlagPair(oa,ob);
  out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
@@ -1655,12 +1682,14 @@ function renderSched(opt){
     for(const v of latestByBook(OHIST[key]||[]).values()){fade=fadeOf(a,b,first?v.o1:v.o2,first?v.o2:v.o1);if(fade)break}
     if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
     if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
+   const wp=worryPair(a,b);
+   if(wp){worry=true;flag=true;tags+=`<span class="stag worry">Worry · ${esc(sur(wp.strong.name))}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
-    if(worrySide(top.pm,top.ev)){worry=true;flag=true;tags+=`<span class="stag worry">Worry</span>`}
-    else if(goSide(top.pm,top.ev)){go=true;flag=true;tags+=`<span class="stag go">Go</span>`}
-    if(top.ev>=3){flag=true;tags+=`<span class="stag ev">+$${top.ev.toFixed(0)} on ${esc(sur(top.p.name))} at ${top.o>0?"+":""}${top.o}</span>`}
+    const goHere=!worry&&goSide(top.pm,top.ev);
+    if(goHere){go=true;flag=true;tags+=`<span class="stag go">Go</span>`}
+    if(top.ev>=3){flag=true;tags+=`<span class="stag${goHere?" ev":""}">+$${top.ev.toFixed(0)} on ${esc(sur(top.p.name))} at ${top.o>0?"+":""}${top.o}</span>`}
     else tags+=`<span class="stag">Best EV ${top.ev>=0?"+":"−"}$${Math.abs(top.ev).toFixed(0)} at your odds</span>`;
    }
   }else tags+=`<span class="stag">Player not in ratings</span>`;
@@ -1916,9 +1945,11 @@ function renderSignals(){
   if(H2H_ON&&hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03&&Math.abs(hx.diff)>=2)sigs.push({cls:"w",text:`H2H ${hx.aw}–${hx.bw} (${sgn(hx.diff)})`,rank:Math.abs(toElo(hx.shift))});
   const so=so0;
   let best=null;
+  const wp=worryPair(a,b);
+  if(wp)sigs.push({cls:"worry",text:`Worry · ${sur(wp.strong.name)}`,rank:24});
   if(so&&(so.o1!==null||so.o2!==null)){
    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
-   if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];if(worrySide(best.pm,best.ev))sigs.push({cls:"worry",text:"Worry",rank:0});else if(goSide(best.pm,best.ev))sigs.push({cls:"go",text:"Go",rank:0});if(best.ev>=3)sigs.push({cls:"ev",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:best.ev})}
+   if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];const goHere=!wp&&goSide(best.pm,best.ev);if(goHere)sigs.push({cls:"go",text:"Go",rank:0});if(best.ev>=3)sigs.push({cls:goHere?"ev":"",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:goHere?best.ev:0})}
   }
   if(so&&isFlagPair(so.o1,so.o2))sigs.push({cls:"flagp",text:"Flagged price",rank:25});
   const prev=e.prev;
@@ -1931,7 +1962,7 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A green border means the edge is $3 to $14. A red border means our price is 55% or more and the edge is $15 or more. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
@@ -2034,11 +2065,11 @@ function consensus(books,first){
  }
  return ps.length?{p:ps.reduce((s,x)=>s+x,0)/ps.length,n:ps.length}:null;
 }
-function bookSideClass(o,p){
+function bookSideClass(o,p,quiet){
  if(o===null||p===null||p===undefined)return "";
- return oddsTone(p*profit(o)-(1-p)*100);
+ return oddsTone(p*profit(o)-(1-p)*100, p, quiet);
 }
-function paintBookRow(row,oa,ob,pa){
+function paintBookRow(row,oa,ob,pa,quiet){
  const put=(side,cls)=>{
   for(const node of row.querySelectorAll(`[data-side="${side}"]`)){
    node.classList.remove("pos","thin","neg");
@@ -2046,8 +2077,8 @@ function paintBookRow(row,oa,ob,pa){
   }
  };
  if(!bothPrices(oa,ob)||pa===null||pa===undefined){put("A","");put("B","");return}
- put("A",bookSideClass(oa,pa));
- put("B",bookSideClass(ob,1-pa));
+ put("A",bookSideClass(oa,pa,quiet));
+ put("B",bookSideClass(ob,1-pa,quiet));
 }
 function savedProofHtml(key,a,b){
  const first=a.name<b.name;
@@ -2100,6 +2131,7 @@ function renderBooks(a,b){
  const slot=slotOf(a,b),key=okey(a.name,b.name,slot),first=a.name<b.name;
  const latest=latestByBook((load("tt-odds")||{})[key]||OHIST[key]||[]);
  const pa=EST?EST.pa:null;
+ const quiet=!!worryPair(a,b);
  let html=`<p class="cmpread" id="bookRead"></p><p class="cmpread fade" id="bookFade"></p><p class="cmpread" id="bookGap"></p><div class="bkhead"><span>${esc(sur(a.name))}</span><span>${esc(sur(b.name))}</span></div>`;
  html+=BOOKS.map(name=>{
   const v=latest.get(name);
@@ -2108,8 +2140,8 @@ function renderBooks(a,b){
   const flagged=bothPrices(oa,ob)&&isFlagPair(oa,ob);
   const faded=!!fadeOf(a,b,oa,ob);
   const stamp=v&&v.at?(flagged?"⚑ Flagged pair · ":"")+(faded?"Caution · ":"")+`Saved ${ago(v.at)}`:faded?"Caution · higher rating is the dog":"Not saved yet";
-  const ca=bothPrices(oa,ob)?bookSideClass(oa,pa):"";
-  const cb=bothPrices(oa,ob)?bookSideClass(ob,pa===null?null:1-pa):"";
+  const ca=bothPrices(oa,ob)?bookSideClass(oa,pa,quiet):"";
+  const cb=bothPrices(oa,ob)?bookSideClass(ob,pa===null?null:1-pa,quiet):"";
   return `<div class="bkrow" data-book="${esc(name)}"><div class="bkn">${esc(name)}</div>
    <div class="orow"><button type="button" class="sign ${ca}" data-side="A">${oa!==null&&oa<0?"−":oa!==null?"+":"−"}</button><input class="oval ${ca}" data-side="A" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${oa!==null?Math.abs(oa):""}" aria-label="${esc(name)} price for ${esc(sur(a.name))}" placeholder="${esc(sur(a.name))}"></div>
    <div class="orow"><button type="button" class="sign ${cb}" data-side="B">${ob!==null&&ob<0?"−":ob!==null?"+":"+"}</button><input class="oval ${cb}" data-side="B" inputmode="numeric" pattern="[0-9]*" autocomplete="off" value="${ob!==null?Math.abs(ob):""}" aria-label="${esc(name)} price for ${esc(sur(b.name))}" placeholder="${esc(sur(b.name))}"></div>
@@ -2123,7 +2155,7 @@ function renderBooks(a,b){
    const name=row.dataset.book;
    const num=side=>{const raw=(row.querySelector(`input[data-side="${side}"]`).value||"").replace(/[^0-9]/g,"");const n=parseInt(raw,10);if(isNaN(n))return null;const neg=row.querySelector(`button[data-side="${side}"]`).textContent.includes("−");return neg?-n:n};
    const oa=num("A"),ob=num("B"),stamp=row.querySelector(".bksaved");
-   paintBookRow(row,oa,ob,pa);
+   paintBookRow(row,oa,ob,pa,quiet);
    paintBookRead(box,a,b);
    clearTimeout(row._saveT);
    const faded=!!fadeOf(a,b,oa,ob);

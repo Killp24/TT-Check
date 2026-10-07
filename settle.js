@@ -896,20 +896,20 @@ function eloMove(pa, pe) {
   return { side: diff > 0 ? "A" : "B", pts };
 }
 
-// Our price prints as 55% or higher and the edge prints as $15 or more per $100.
-// Logged singles in that spot won less often than the price and lost money.
-// The cut uses the same rounding as the row, so a 54.5% price that shows as 55% counts.
-// Display only. It does not move the win chance.
-function worrySide(p, ev) {
-  return Math.round(p * 100) >= 55 && Math.round(ev) >= 15;
+// Red when the other player is clearly better and in better form.
+// eloGap is his Elo minus this player's. formGap is his recent wins-vs-Elo minus this player's.
+// A $15 price is not the reason. Display only. It does not move the win chance.
+function worryPlayer(eloGap, formGap) {
+  if (eloGap == null || formGap == null || eloGap !== eloGap || formGap !== formGap) return false;
+  return eloGap >= 100 && formGap >= 2;
 }
 
-// The edge prints as $3 to $14 per $100. Logged singles in that spot won more
-// often than the price. A $15 edge is outside it, and the worry spot stays separate.
+// Our price prints as 50% or more and the edge prints as $3 to $14 per $100.
+// Logged singles in that spot won more often than the price. A price under 50% stays plain.
 // Display only. It does not move the win chance.
 function goSide(p, ev) {
   const e = Math.round(ev);
-  return e >= 3 && e <= 14 && !worrySide(p, ev);
+  return Math.round(p * 100) >= 50 && e >= 3 && e <= 14;
 }
 
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
