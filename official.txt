@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T16:31Z
+# updated 2026-10-07T17:00Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10511,6 +10511,13 @@
 2026-10-07 | Minda Michal | Solilo Dominik | 3-1 | 1 | 1 | +15
 2026-10-07 | Folwarski Jakub | Chodorski Piotr | 3-2 | 1 | 6 | Pending
 2026-10-07 | Stapor Rafal | Kukawka Milosz | 3-1 | 1 | 1 | +11
+2026-10-07 | Zelezik Jacek | Krezel Andrzej | 3-1 | 1 | 1 | Pending
+2026-10-07 | Trela Mateusz | Krukar Piotr | 3-0 | 1 | 1 | Pending
+2026-10-07 | Kowalczyk Marcin | Mrugala Bartlomiej | 3-1 | 1 | 4 | Pending
+2026-10-07 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | Pending
+2026-10-07 | Nocun Zbigniew | Michalik Jerzy | 3-0 | 1 | 1 | Pending
+2026-10-07 | Strus Piotr | Suchecki Waclaw | 3-0 | 1 | 1 | Pending
+2026-10-07 | Ruszkiewicz Adam | Krupa Sebastian | 3-0 | 1 | 1 | Pending
 2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 2 | 2 | Pending
 2026-10-07 | Rolak Jaroslaw | Mrugala Bartlomiej | 3-0 | 2 | 1 | +18
 2026-10-07 | Myszewski Adrian | Golaszewski Kuba | 3-1 | 2 | 1 | +6
@@ -10545,6 +10552,8 @@
 2026-10-07 | Stapor Rafal | Minda Michal | 3-2 | 2 | 2 | Pending
 2026-10-07 | Folwarski Jakub | Miastowski Maksymilian | 3-2 | 2 | 7 | Pending
 2026-10-07 | Czerwinski Bartosz | Kukawka Milosz | 3-1 | 2 | 2 | +10
+2026-10-07 | Koczyba Mariusz | Wrzalik Tomasz | 3-0 | 2 | 2 | Pending
+2026-10-07 | Zelezik Jacek | Lewczuk Miroslaw | 3-1 | 2 | 2 | Pending
 2026-10-07 | Golaszewski Kuba | Skorski Michal | 3-2 | 3 | 2 | +11
 2026-10-07 | Adamus Mariusz | Burkacki Adrian | 3-2 | 3 | 3 | Pending
 2026-10-07 | Mrugala Bartlomiej | Myszewski Adrian | 3-1 | 3 | 3 | +16
@@ -10603,7 +10612,6 @@
 2026-10-07 | Sulkowski Bartek | Sulkowski Karol | 3-0 | 4 | 4 | +6
 2026-10-07 | Lamperski Jakub | Lukaszewski Mikolaj | 3-1 | 4 | 4 | +6
 2026-10-07 | Kukawka Milosz | Sulkowski Karol | 3-0 | 4 | 9 | +11
-2026-10-07 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-2 | 9 | 4 | +5
 2026-10-07 | Solilo Dominik | Stapor Rafal | 3-2 | 4 | 4 | +7
 2026-10-07 | Czerwinski Bartosz | Minda Michal | 3-0 | 4 | 4 | +13
 2026-10-07 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +13
@@ -10630,6 +10638,8 @@
 2026-10-07 | Poliniewicz Grzegorz | Kosmal Dawid | 3-1 | 5 | 9 | +10
 2026-10-07 | Czerwinski Bartosz | Solilo Dominik | 3-2 | 5 | 5 | +8
 2026-10-07 | Minda Michal | Kukawka Milosz | 3-1 | 5 | 5 | +12
+2026-10-07 | Baron Mariusz | Wrzalik Tomasz | 3-1 | 5 | 1 | Pending
+2026-10-07 | Tkaczyk Henryk | Lewczuk Miroslaw | 3-1 | 5 | 1 | Pending
 2026-10-07 | Stecyszyn Jakub | Poliniewicz Grzegorz | 3-0 | 6 | 1 | +10
 2026-10-07 | Grela Artur | Michna Dawid | 3-2 | 6 | 6 | Pending
 2026-10-07 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 6 | 6 | +9
@@ -10657,22 +10667,28 @@
 2026-10-07 | Vincenec Oliver | Oracz Lukasz | 3-1 | 8 | 8 | Pending
 2026-10-07 | Przewlocki Piotr | Slosarczyk Pawel | 3-2 | 8 | 8 | +6
 2026-10-07 | Stecyszyn Jakub | Kosmal Dawid | 3-1 | 8 | 7 | +6
-2026-10-07 | Wloczko Krzysztof | Rutkowski Mateusz | 3-0 | 8 | 8 | Pending
+2026-10-07 | Wloczko Krzysztof | Rutkowski Mateusz | 3-0 | 8 | 8 | +9
 2026-10-07 | Sulkowski Karol | Minda Michal | 3-1 | 8 | 3 | +18
 2026-10-07 | Kosmal Dawid | Kapik Krzysztof | 3-2 | 8 | 8 | +10
 2026-10-07 | Adamus Kacper | Sokolowski Oskar | 3-0 | 8 | 8 | +10
 2026-10-07 | Urban Wojciech | Niemiec Rafal | 3-2 | 8 | 8 | +11
 2026-10-07 | Sokolowski Oliwier | Gajda Rafal | 3-2 | 8 | 8 | +8
 2026-10-07 | Przewlocki Piotr | Vincenec Oliver | 3-2 | 9 | 9 | +7
+2026-10-07 | Wloczko Krzysztof | Poliniewicz Grzegorz | 3-2 | 9 | 4 | +5
 2026-10-07 | Vincenec Oliver | Oracz Lukasz | 3-1 |  | 9 | 
 2026-10-07 | Slawinski Kacper | Oracz Lukasz | 3-1 | 9 | 9 | +8
 2026-10-07 | Pruszkowski Jakub | Slosarczyk Pawel | 3-2 | 9 | 9 | +4
 2026-10-07 | Stecyszyn Jakub | Rutkowski Mateusz | 3-0 | 9 | 9 | +7
+2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-0 | 9 | 9 | +9
+2026-10-07 | Urban Wojciech | Gajda Rafal | 3-0 | 9 | 9 | +12
+2026-10-07 | Sokolowski Oskar | Sokolowski Oliwier | 3-0 | 9 | 9 | +22
+2026-10-07 | Stecyszyn Jakub | Rutkowski Mateusz | 3-0 | 10 | 10 | +7
 2026-10-07 | Przewlocki Piotr | Slawinski Kacper | 3-1 | 10 | 10 | +17
 2026-10-07 | Oracz Lukasz | Pruszkowski Jakub | 3-0 | 10 | 10 | +19
-2026-10-07 | Stecyszyn Jakub | Rutkowski Mateusz | 3-0 | 10 | 10 | +7
 2026-10-07 | Vincenec Oliver | Slosarczyk Pawel | 3-2 | 10 | 10 | +6
 2026-10-07 | Wloczko Krzysztof | Stecyszyn Jakub | 3-0 | 10 | 11 | +18
+2026-10-07 | Niemiec Rafal | Sokolowski Oskar | 3-0 | 10 | 10 | Pending
+2026-10-07 | Adamus Kacper | Gajda Rafal | 3-1 | 10 | 10 | +11
 2026-10-07 | Rutkowski Mateusz | Kapik Krzysztof | 3-1 | 11 | 9 | +15
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 |  |  | 
 2026-10-07 | Zielinski Marcin | Brunner Marian | 3-0 |  |  | 
@@ -10694,18 +10710,6 @@
 2026-10-07 | Idaczyk Rafal | Kaczmarek Jakub | 3-2 |  |  | 
 2026-10-07 | Adamus Pawel | Nowak Jakub | 3-2 |  |  | 
 2026-10-07 | Michna Dawid | Chodorski Piotr | 3-2 |  |  | 
-2026-10-07 | Zelezik Jacek | Krezel Andrzej | 3-1 | 1 | 1 | Pending
-2026-10-07 | Trela Mateusz | Krukar Piotr | 3-0 | 1 | 1 | Pending
-2026-10-07 | Baron Mariusz | Wrzalik Tomasz | 3-1 | 5 | 1 | Pending
-2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-0 | 9 | 9 | +9
-2026-10-07 | Tkaczyk Henryk | Lewczuk Miroslaw | 3-1 | 5 | 1 | Pending
-2026-10-07 | Kowalczyk Marcin | Mrugala Bartlomiej | 3-1 | 1 | 4 | Pending
-2026-10-07 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | Pending
-2026-10-07 | Urban Wojciech | Gajda Rafal | 3-0 | 9 | 9 | Pending
-2026-10-07 | Nocun Zbigniew | Michalik Jerzy | 3-0 |  |  | 
-2026-10-07 | Strus Piotr | Suchecki Waclaw | 3-0 | 1 | 1 | Pending
-2026-10-07 | Ruszkiewicz Adam | Krupa Sebastian | 3-0 | 1 | 1 | Pending
-2026-10-07 | Sokolowski Oskar | Sokolowski Oliwier | 3-0 | 9 | 9 | +22
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
