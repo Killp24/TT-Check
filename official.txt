@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T02:53Z
+# updated 2026-10-07T02:58Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10476,9 +10476,9 @@
 2026-10-06 | Adamus Mariusz | Burkacki Adrian | 3-2 | 3 | 3 | +8
 2026-10-06 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 | 5 | 8 | Pending
 2026-10-06 | Zielinski Marcin | Machelski Michal | 3-0 | 11 | 9 | Pending
-2026-10-06 | Kurek Pawel | Schaniel Krzysztof | 3-1 |  | 6 | 
+2026-10-06 | Kurek Pawel | Schaniel Krzysztof | 3-1 | 6 | 6 | Pending
 2026-10-06 | Badura Jaroslaw | Baron Mariusz | 3-0 | 6 | 6 | Pending
-2026-10-06 | Durak Kamil | Szymanski Igor | 3-1 |  | 6 | 
+2026-10-06 | Durak Kamil | Szymanski Igor | 3-1 | 6 | 6 | Pending
 2026-10-07 | Rolak Jaroslaw | Myszewski Adrian | 3-0 | 1 | 1 | Pending
 2026-10-07 | Rolak Jaroslaw | Mrugala Bartlomiej | 3-0 | 2 | 1 | Pending
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 | 1 | 1 | Pending
@@ -10504,25 +10504,25 @@
 2026-10-07 | Adamus Mariusz | Burkacki Adrian | 3-2 |  |  | 
 2026-10-07 | Bartosik Dominik | Brunner Marian | 3-1 | 1 | 1 | Pending
 2026-10-07 | Staszczyk Konrad | Pietraszko Lukasz | 3-0 | 1 | 1 | +9
-2026-10-07 | Badura Jaroslaw | Kurek Pawel | 3-0 |  |  | 
+2026-10-07 | Badura Jaroslaw | Kurek Pawel | 3-0 | 1 | 1 | Pending
 2026-10-07 | Szymanski Igor | Schaniel Krzysztof | 3-1 | 1 | 1 | Pending
-2026-10-07 | Durak Kamil | Baron Mariusz | 3-0 |  | 1 | 
-2026-10-07 | Schaniel Krzysztof | Badura Jaroslaw | 3-0 | 2 |  | Pending
-2026-10-07 | Durak Kamil | Kurek Pawel | 3-2 |  |  | 
-2026-10-07 | Baron Mariusz | Szymanski Igor | 3-2 |  | 2 | 
+2026-10-07 | Durak Kamil | Baron Mariusz | 3-0 | 1 | 1 | Pending
+2026-10-07 | Schaniel Krzysztof | Badura Jaroslaw | 3-0 | 2 | 2 | Pending
+2026-10-07 | Durak Kamil | Kurek Pawel | 3-2 | 2 | 2 | Pending
+2026-10-07 | Baron Mariusz | Szymanski Igor | 3-2 | 2 | 2 | Pending
 2026-10-07 | Mrugala Bartlomiej | Myszewski Adrian | 3-1 | 3 | 3 | +16
 2026-10-07 | Jurowicz Grzegorz | Adamus Pawel | 3-2 | 1 | 1 | Pending
 2026-10-07 | Tkaczyk Henryk | Machelski Michal | 3-2 |  |  | 
 2026-10-07 | Adamus Mariusz | Tkocz Marek | 3-0 | 1 | 1 | +23
 2026-10-07 | Jurowicz Grzegorz | Burkacki Adrian | 3-2 | 2 | 1 | +8
 2026-10-07 | Brunner Marian | Fomin Andriej | 3-2 | 2 | 1 | Pending
-2026-10-07 | Zielinski Marcin | Bartosik Dominik | 3-0 |  |  | 
-2026-10-07 | Durak Kamil | Badura Jaroslaw | 3-0 |  |  | 
-2026-10-07 | Kurek Pawel | Szymanski Igor | 3-0 |  | 3 | 
-2026-10-07 | Baron Mariusz | Schaniel Krzysztof | 3-0 |  |  | 
-2026-10-07 | Badura Jaroslaw | Szymanski Igor | 3-1 |  |  | 
+2026-10-07 | Zielinski Marcin | Bartosik Dominik | 3-0 | 1 | 2 | +1
+2026-10-07 | Durak Kamil | Badura Jaroslaw | 3-0 | 3 | 3 | Pending
+2026-10-07 | Kurek Pawel | Szymanski Igor | 3-0 | 3 | 3 | Pending
+2026-10-07 | Baron Mariusz | Schaniel Krzysztof | 3-0 | 3 | 3 | Pending
+2026-10-07 | Badura Jaroslaw | Szymanski Igor | 3-1 | 4 | 4 | Pending
 2026-10-07 | Nowak Jakub | Adamus Pawel | 3-2 | 1 | 2 | +11
 2026-10-07 | Jurowicz Grzegorz | Tkocz Marek | 3-0 | 3 | 2 | +23
-2026-10-07 | Fomin Andriej | Machelski Michal | 3-1 |  |  | 
-2026-10-07 | Schaniel Krzysztof | Durak Kamil | 3-0 |  |  | 
-2026-10-07 | Adamus Mariusz | Nowak Jakub | 3-0 |  |  | 
+2026-10-07 | Fomin Andriej | Machelski Michal | 3-1 | 2 | 2 | Pending
+2026-10-07 | Schaniel Krzysztof | Durak Kamil | 3-0 | 4 | 4 | Pending
+2026-10-07 | Adamus Mariusz | Nowak Jakub | 3-0 | 2 | 2 | +10
