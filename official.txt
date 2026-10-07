@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T19:52Z
+# updated 2026-10-07T19:56Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10756,13 +10756,14 @@
 2026-10-07 | Strus Piotr | Trela Mateusz | 3-1 | 4 | 4 | Pending
 2026-10-07 | Koczyba Mariusz | Ruszkiewicz Adam | 3-2 | 4 | 5 | Pending
 2026-10-07 | Warzecha Miroslaw | Gesiarz Piotr | 3-1 | 2 | 2 | +7
-2026-10-07 | Rudomina Kamil | Myszewski Adrian | 3-2 |  |  | 
-2026-10-07 | Blocho Przemyslaw | Brud Szymon | 3-1 |  |  | 
-2026-10-07 | Tkaczyk Henryk | Krezel Andrzej | 3-2 |  |  | 
-2026-10-07 | Krukar Piotr | Mrugala Bartlomiej | 3-2 |  |  | 
-2026-10-07 | Krupa Sebastian | Wrzalik Tomasz | 3-0 |  |  | 
-2026-10-07 | Fomin Andriej | Skupinski Arkadiusz | 3-2 |  |  | 
-2026-10-07 | Staniczek Adam | Bartosik Dominik | 3-1 |  |  | 
+2026-10-07 | Rudomina Kamil | Myszewski Adrian | 3-2 | 4 | 7 | Pending
+2026-10-07 | Blocho Przemyslaw | Brud Szymon | 3-1 | 5 | 4 | Pending
+2026-10-07 | Tkaczyk Henryk | Krezel Andrzej | 3-2 | 8 | 4 | Pending
+2026-10-07 | Krukar Piotr | Mrugala Bartlomiej | 3-2 | 4 | 7 | Pending
+2026-10-07 | Krupa Sebastian | Wrzalik Tomasz | 3-0 | 4 | 4 | Pending
+2026-10-07 | Fomin Andriej | Skupinski Arkadiusz | 3-2 | 6 | 2 | +3
+2026-10-07 | Staniczek Adam | Bartosik Dominik | 3-1 | 2 | 7 | Pending
+2026-10-07 | Nocun Zbigniew | Lewczuk Miroslaw | 3-0 | 5 | 5 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
