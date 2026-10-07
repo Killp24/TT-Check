@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T05:58Z
+# updated 2026-10-07T05:59Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10562,16 +10562,18 @@
 2026-10-07 | Vincenec Oliver | Pruszkowski Jakub | 3-0 | 2 | 2 | Pending
 2026-10-07 | Kaczmarek Jakub | Idaczyk Rafal | 3-2 | 2 | 2 | Pending
 2026-10-07 | Fomin Andriej | Bartosik Dominik | 3-0 | 4 | 5 | +18
-2026-10-07 | Stecyszyn Jakub | Miastowski Maksymilian | 3-1 |  |  | 
-2026-10-07 | Oracz Lukasz | Slosarczyk Pawel | 3-0 |  |  | 
-2026-10-07 | Kuzmicz Jakub | Rutkowski Mateusz | 3-2 |  |  | 
-2026-10-07 | Burkacki Adrian | Nowak Jakub | 3-1 |  |  | 
-2026-10-07 | Adamus Mariusz | Adamus Pawel | 3-0 |  |  | 
-2026-10-07 | Tkaczyk Henryk | Zielinski Marcin | 3-2 |  |  | 
+2026-10-07 | Stecyszyn Jakub | Miastowski Maksymilian | 3-1 | 2 | 2 | Pending
+2026-10-07 | Oracz Lukasz | Slosarczyk Pawel | 3-0 | 2 | 2 | Pending
+2026-10-07 | Kuzmicz Jakub | Rutkowski Mateusz | 3-2 | 2 | 2 | Pending
+2026-10-07 | Burkacki Adrian | Nowak Jakub | 3-1 | 4 | 4 | Pending
+2026-10-07 | Adamus Mariusz | Adamus Pawel | 3-0 | 4 | 5 | Pending
+2026-10-07 | Tkaczyk Henryk | Zielinski Marcin | 3-2 | 4 | 4 | +9
 2026-10-07 | Grela Artur | Michna Dawid | 3-1 |  |  | 
-2026-10-07 | Slawinski Kacper | Pruszkowski Jakub | 3-1 |  |  | 
+2026-10-07 | Slawinski Kacper | Pruszkowski Jakub | 3-1 |  | 3 | 
 2026-10-07 | Zochniak Jakub | Kosmal Dawid | 3-1 |  |  | 
-2026-10-07 | Gajda Rafal | Sokolowski Oskar | 3-2 |  |  | 
+2026-10-07 | Gajda Rafal | Sokolowski Oskar | 3-2 | 1 | 1 | +5
+2026-10-07 | Lamperski Jakub | Warpas Blazej | 3-1 | 2 | 2 | Pending
+2026-10-07 | Wisniewski Bartlomiej | Lukaszewski Mikolaj | 3-1 | 3 | 3 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
