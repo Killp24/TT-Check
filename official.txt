@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T04:29Z
+# updated 2026-10-07T04:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10541,13 +10541,15 @@
 2026-10-07 | Bartosik Dominik | Machelski Michal | 3-0 | 4 | 3 | Pending
 2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 1 | 1 | Pending
 2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 2 | 2 | Pending
-2026-10-07 | Slawinski Kacper | Slosarczyk Pawel | 3-2 |  | 1 | 
-2026-10-07 | Stecyszyn Jakub | Jadczyk Marcin | 3-1 |  |  | 
+2026-10-07 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 1 | 1 | Pending
+2026-10-07 | Stecyszyn Jakub | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
 2026-10-07 | Grela Artur | Chodorski Piotr | 3-1 |  |  | 
-2026-10-07 | Oracz Lukasz | Vincenec Oliver | 3-0 |  |  | 
-2026-10-07 | Wloczko Krzysztof | Kuzmicz Jakub | 3-0 |  |  | 
-2026-10-07 | Kapik Krzysztof | Zochniak Jakub | 3-2 |  |  | 
-2026-10-07 | Tkaczyk Henryk | Brunner Marian | 3-1 |  |  | 
+2026-10-07 | Oracz Lukasz | Vincenec Oliver | 3-0 | 1 | 1 | Pending
+2026-10-07 | Wloczko Krzysztof | Kuzmicz Jakub | 3-0 | 1 | 1 | Pending
+2026-10-07 | Kapik Krzysztof | Zochniak Jakub | 3-2 | 1 | 2 | Pending
+2026-10-07 | Tkaczyk Henryk | Brunner Marian | 3-1 |  | 4 | 
+2026-10-07 | Sulkowski Bartek | Warpas Blazej | 3-1 | 1 | 1 | Pending
+2026-10-07 | Wisniewski Bartlomiej | Sulkowski Karol | 3-2 | 2 | 2 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
