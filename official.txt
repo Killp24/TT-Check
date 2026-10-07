@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-07T10:56Z
+# updated 2026-10-07T10:58Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10629,23 +10629,24 @@
 2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-2 | 4 | 4 | +5
 2026-10-07 | Gajda Rafal | Urban Wojciech | 3-2 | 4 | 4 | +9
 2026-10-07 | Miastowski Maksymilian | Jadczyk Marcin | 3-2 | 6 | 6 | Pending
-2026-10-07 | Chodorski Piotr | Grela Artur | 3-1 |  |  | 
+2026-10-07 | Chodorski Piotr | Grela Artur | 3-1 | 7 | 7 | Pending
 2026-10-07 | Oracz Lukasz | Przewlocki Piotr | 3-0 | 6 | 6 | Pending
 2026-10-07 | Kosmal Dawid | Rutkowski Mateusz | 3-1 | 5 | 6 | Pending
-2026-10-07 | Stecyszyn Jakub | Kapik Krzysztof | 3-1 |  |  | 
+2026-10-07 | Stecyszyn Jakub | Kapik Krzysztof | 3-1 | 7 | 6 | Pending
 2026-10-07 | Stapor Rafal | Kukawka Milosz | 3-1 | 1 | 1 | Pending
-2026-10-07 | Solilo Dominik | Sulkowski Karol | 3-2 |  |  | 
+2026-10-07 | Solilo Dominik | Sulkowski Karol | 3-2 | 2 | 7 | Pending
 2026-10-07 | Sokolowski Oskar | Sokolowski Oliwier | 3-2 | 4 | 4 | +11
 2026-10-07 | Sulkowski Bartek | Sulkowski Karol | 3-0 | 4 | 4 | +6
 2026-10-07 | Lamperski Jakub | Lukaszewski Mikolaj | 3-1 | 4 | 4 | +6
 2026-10-07 | Sulkowski Bartek | Wisniewski Bartlomiej | 3-1 | 5 | 5 | +5
 2026-10-07 | Lamperski Jakub | Sulkowski Karol | 3-0 | 5 | 5 | +9
 2026-10-07 | Warpas Blazej | Lukaszewski Mikolaj | 3-0 | 5 | 5 | +12
-2026-10-07 | Jadczyk Marcin | Michna Dawid | 3-0 |  |  | 
-2026-10-07 | Vincenec Oliver | Slawinski Kacper | 3-1 |  |  | 
+2026-10-07 | Jadczyk Marcin | Michna Dawid | 3-0 | 7 | 7 | Pending
+2026-10-07 | Vincenec Oliver | Slawinski Kacper | 3-1 | 7 | 7 | Pending
 2026-10-07 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-2 |  |  | 
 2026-10-07 | Minda Michal | Stapor Rafal | 3-2 |  |  | 
-2026-10-07 | Urban Wojciech | Adamus Kacper | 3-0 |  |  | 
+2026-10-07 | Urban Wojciech | Adamus Kacper | 3-0 | 5 | 5 | +13
+2026-10-07 | Stapor Rafal | Minda Michal | 3-2 | 2 | 2 | Pending
 2026-10-08 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  |  | 
 2026-10-08 | Sulkowski Bartek | Warpas Blazej | 3-1 |  |  | 
