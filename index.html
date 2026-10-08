@@ -1179,8 +1179,9 @@ function update(){
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favB).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
    else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favB)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
+ const worryHtml=worryNote(worryPair(a,b));
  const legendHtml=legendaryNote(legendaryShown(a,b));
- v.innerHTML=(VIEW==="match"?`<p class="pickline">${body}</p>`:`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`)+legendHtml;
+ v.innerHTML=worryHtml+legendHtml+(VIEW==="match"?`<p class="pickline">${body}</p>`:`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`);
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
  const hx=est.h2h,h2hEdgeTxt=hx&&H2H_ON?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
  const headline=!meet.length?"No meetings found yet":aw===bw?`Level at ${aw}–${bw}`:`${esc(sur(aw>bw?a.name:b.name))} leads ${Math.max(aw,bw)}–${Math.min(aw,bw)}`+` <span class="muted">(${meet.length} meeting${meet.length>1?"s":""} on record)</span>`+h2hEdgeTxt;
@@ -1496,7 +1497,7 @@ function goNote(best){
  return `<div class="vv gov"><strong>Go on ${esc(sur(best.p.name))}</strong>Our price is ${Math.round(best.pm*100)}% and the edge is +$${best.ev.toFixed(0)} per $100. A price of 50% or more with an edge of $3 to $14 has won more often than the price. The win chance stays.</div>`;
 }
 function valueNote(best, worry){
- if(worry)return worry;
+ if(worry)return "";
  const marked=goNote(best);
  if(marked||!best)return marked;
  const price=Math.round(best.pm*100);
@@ -1561,18 +1562,17 @@ function oddsCalc(a,b,pa,opts){
    return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
   }).join("");
   const best=sides.map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
-  const worry=worryNote(worryPair(a,b));
-  const verdict=valueNote(best, worry);
+  const verdict=valueNote(best, worryPair(a,b));
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
   const caution=fadeHtml(a,b,oa,ob);
   showFadeLine(a,b,oa,ob);
   const lead=summary?`<p class="edgeline">${esc(summary)}</p>`:(oa===null&&ob===null?`<p class="help" style="margin:8px 0 0">DraftKings sets the edge and the logged bet. The other books stay on their own lines.</p>`:"");
-  out.innerHTML=lead+(rows?flag+caution+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:worry)+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
+  out.innerHTML=lead+(rows?flag+caution+`<h3 class="rch">DraftKings edge</h3><div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict:"")+(bothPrices(oa,ob)?betFormHtml(a,b,oa,ob,model):"");
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
  showFadeLine(a,b,oa,ob);
- if(oa===null&&ob===null){out.innerHTML=worryNote(worryPair(a,b))+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
+ if(oa===null&&ob===null){out.innerHTML=`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
@@ -1580,7 +1580,7 @@ function oddsCalc(a,b,pa,opts){
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=valueNote(best, worryNote(worryPair(a,b)));
+ const verdict=valueNote(best, worryPair(a,b));
  const flagged=isFlagPair(oa,ob);
  out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
@@ -1715,7 +1715,7 @@ function renderSched(opt){
     if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
     if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
    const wp=worryPair(a,b);
-   if(wp){worry=true;flag=true;tags+=`<span class="stag worry">Worry · ${esc(sur(wp.strong.name))}</span>`}
+   if(wp){worry=true;flag=true;tags+=`<span class="stag worry">Worry on ${esc(sur(wp.weak.name))}</span>`}
    const lg=legendaryShown(a,b);
    if(lg){legend=true;flag=true;tags+=`<span class="stag legend">Legendary</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
@@ -1980,7 +1980,7 @@ function renderSignals(){
   const so=so0;
   let best=null;
   const wp=worryPair(a,b);
-  if(wp)sigs.push({cls:"worry",text:`Worry · ${sur(wp.strong.name)}`,rank:24});
+  if(wp)sigs.push({cls:"worry",text:`Worry on ${sur(wp.weak.name)}`,rank:24});
   if(legendaryShown(a,b))sigs.push({cls:"legend",text:"Legendary",rank:30});
   if(so&&(so.o1!==null||so.o2!==null)){
    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
@@ -1997,7 +1997,7 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match: one player is hot and the other is cold, each at least 1.5 wins off Elo, and the rating gap is under 100. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match: one player is hot and the other is cold, each at least 1.5 wins off Elo, and the rating gap is under 100. A green border means our price is 50% or more and the edge is $3 to $14. A red border means worry on the player who is outmatched: the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
