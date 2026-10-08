@@ -941,6 +941,35 @@ function legendaryHigh(p) {
   return p != null && p === p && p >= 0.70;
 }
 
+// Meetings for the head-to-head list. extraRows is the official page, which
+// still has games that fell off each player's last 30. The same date, winner,
+// loser, and score is kept once per list, then the longer count is used, so
+// two identical scores on one day both stay. Display only. It does not move
+// the win chance.
+function unionMeetings(officialRows, extraRows) {
+  function tally(rows) {
+    const m = new Map();
+    for (const row of rows || []) {
+      if (!row || !row.date || !row.w || !row.l) continue;
+      const k = [row.date, row.w, row.l, row.score || ""].join("|");
+      const cur = m.get(k);
+      if (cur) cur.n += 1;
+      else m.set(k, { row, n: 1 });
+    }
+    return m;
+  }
+  const left = tally(officialRows);
+  const right = tally(extraRows);
+  const out = [];
+  for (const k of new Set([...left.keys(), ...right.keys()])) {
+    const a = left.get(k), b = right.get(k);
+    const n = Math.max(a ? a.n : 0, b ? b.n : 0);
+    const row = (a && a.row) || b.row;
+    for (let i = 0; i < n; i++) out.push(row);
+  }
+  return out;
+}
+
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
 function blendShifts(p, shifts) {
   if (p == null || p !== p || p <= 0 || p >= 1) return null;
