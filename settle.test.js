@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -666,6 +666,27 @@ test("a 50% price with an edge of $3 to $14 is the go spot", () => {
   assert.equal(goSide(0.52, 14.5), false);
   assert.equal(goSide(0.62, 22), false);
   assert.equal(goSide(0.61, 10), true);
+});
+
+test("the head-to-head list keeps older meetings without doubling the ones already saved", () => {
+  const saved = [
+    { date: "2026-09-23", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-1" },
+    { date: "2026-09-23", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-2" },
+    { date: "2026-09-25", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-1" }
+  ];
+  const older = saved.concat([
+    { date: "2026-09-10", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-1" },
+    { date: "2026-09-10", w: "Urban Wojciech", l: "Slawinski Kacper", score: "3-2" },
+    { date: "2025-10-15", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-1" },
+    { date: "2025-09-03", w: "Slawinski Kacper", l: "Urban Wojciech", score: "3-1" }
+  ]);
+  const meet = unionMeetings(saved, older);
+  assert.equal(meet.length, 7);
+  const twice = unionMeetings(
+    [{ date: "2026-09-10", w: "A", l: "B", score: "3-0" }, { date: "2026-09-10", w: "A", l: "B", score: "3-0" }],
+    [{ date: "2026-09-10", w: "A", l: "B", score: "3-0" }]
+  );
+  assert.equal(twice.length, 2);
 });
 
 test("an Elo move names the player who gained the points", () => {

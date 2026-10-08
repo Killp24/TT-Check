@@ -31,7 +31,7 @@ jobs:
           git config merge.collect.driver "python3 blend_driver.py %A %B"
           mkdir -p .git/info
           printf 'official.txt merge=collect\nschedule.txt merge=collect\n' > .git/info/attributes
-          git add ratings.txt official.txt players.txt schedule.txt ratings_history.txt
+          git add ratings.txt official.txt players.txt schedule.txt ratings_history.txt h2h.txt
           if git diff --cached --quiet; then
             echo "No changes."
           else

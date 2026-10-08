@@ -222,3 +222,11 @@ except FileNotFoundError:
 open("ratings_history.txt", "w", encoding="utf-8").writelines(kept + [snap])
 subprocess.run(["git", "add", "ratings_history.txt"], check=False)
 print(f"Ratings history: {len(kept)} earlier days on file")
+
+# Full head-to-head for pairs on the schedule. A few dozen per run, so this
+# pass stays short. The match page reads h2h.txt. The win chance does not.
+try:
+    from h2h_fetch import refresh_h2h
+    refresh_h2h()
+except Exception as e:
+    print("Head-to-head refresh failed:", e)
