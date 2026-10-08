@@ -1463,6 +1463,10 @@ function worryNote(w){
  if(!w)return "";
  return `<div class="vv worryv"><strong>Worry on ${esc(sur(w.weak.name))}</strong>${esc(sur(w.strong.name))} is ${w.gap} Elo higher and ${formAhead(w.form)} wins ahead of him on recent form. The win chance stays.</div>`;
 }
+function worryShown(a,b){
+ if(legendaryShown(a,b))return "";
+ return worryNote(worryPair(a,b));
+}
 // Same cut the ambitious read uses for hot and cold. Plain recent form, even when form stays out of the price.
 function formRead(name){
  const f=formEdge(name);
@@ -1563,7 +1567,7 @@ function oddsCalc(a,b,pa,opts){
    return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
   }).join("");
   const best=sides.map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
-  const worry=worryNote(worryPair(a,b));
+  const worry=worryShown(a,b);
   const verdict=valueNote(best, worry);
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
@@ -1574,7 +1578,7 @@ function oddsCalc(a,b,pa,opts){
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
  showFadeLine(a,b,oa,ob);
- if(oa===null&&ob===null){out.innerHTML=worryNote(worryPair(a,b))+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
+ if(oa===null&&ob===null){out.innerHTML=worryShown(a,b)+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
@@ -1582,7 +1586,7 @@ function oddsCalc(a,b,pa,opts){
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=valueNote(best, worryNote(worryPair(a,b)));
+ const verdict=valueNote(best, worryShown(a,b));
  const flagged=isFlagPair(oa,ob);
  out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
