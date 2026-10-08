@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T13:03Z
+# updated 2026-10-08T13:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11002,15 +11002,16 @@
 2026-10-08 | Nowak Jakub | Slosarczyk Pawel | 3-1 | 6 | 6 | +13
 2026-10-08 | Michna Dawid | Zandecki Jan | 3-2 | 8 | 8 | Pending
 2026-10-08 | Pruszkowski Jakub | Urban Wojciech | 3-2 | 8 | 8 | Pending
-2026-10-08 | Pelka Jerzy | Szostok Sebastian | 3-2 |  |  | 
+2026-10-08 | Pelka Jerzy | Szostok Sebastian | 3-2 | 8 | 8 | Pending
 2026-10-08 | Mitas Jacek | Kapik Krzysztof | 3-1 | 8 | 3 | +12
-2026-10-08 | Poliniewicz Grzegorz | Jendrzejewski Patryk | 3-2 |  |  | 
+2026-10-08 | Poliniewicz Grzegorz | Jendrzejewski Patryk | 3-2 | 8 | 8 | +8
 2026-10-08 | Czerwinski Bartosz | Klocek Kamil | 3-0 | 3 | 3 | +8
-2026-10-08 | Minda Michal | Zochniak Jakub | 3-1 |  |  | 
+2026-10-08 | Minda Michal | Zochniak Jakub | 3-1 | 2 | 3 | +17
 2026-10-08 | Schaniel Krzysztof | Badura Jaroslaw | 3-1 | 6 | 5 | +16
-2026-10-08 | David Petr | Folwarski Jakub | 3-2 |  |  | 
+2026-10-08 | David Petr | Folwarski Jakub | 3-2 | 8 | 8 | Pending
 2026-10-08 | Pruszkowski Jakub | Sokolowski Oliwier | 3-0 |  |  | 
-2026-10-08 | Kapik Krzysztof | Stecyszyn Jakub | 3-2 |  |  | 
-2026-10-08 | Klocek Kamil | Solilo Dominik | 3-0 |  |  | 
-2026-10-08 | Glanowski Waldemar | Kaczmarek Jakub | 3-2 |  |  | 
-2026-10-08 | Badura Jaroslaw | Nowak Jakub | 3-1 |  |  | 
+2026-10-08 | Kapik Krzysztof | Stecyszyn Jakub | 3-2 | 4 | 9 | +12
+2026-10-08 | Klocek Kamil | Solilo Dominik | 3-0 | 4 | 4 | +23
+2026-10-08 | Glanowski Waldemar | Kaczmarek Jakub | 3-2 | 6 | 6 | +9
+2026-10-08 | Badura Jaroslaw | Nowak Jakub | 3-1 |  | 7 | 
+2026-10-08 | Pruszkowski Jakub | Sokolowski Lukasz | 3-0 | 9 | 1 | Pending
