@@ -488,7 +488,7 @@ let data=load("tt-data");                   // {ratings,ban,matches,at}
 let SADJ={},KCAL={k:0.85,n:0,fitted:false},HIST=[],MODEL={n:0},CURMATCH=null,PICKED=null,SCHED=[],offAt=null,STATS=new Map(),LEAGUE=0,TADJ={},RADJ={},CAL=[];
 let players=[],BAN=new Set(),BANORDER=[],matches=[],official=[],career=new Map(),mine=[];
 let RECENT=new Map(),H2H=new Map(),REC=new Map(),H2HEXTRA=[];
-let CAL_TRAIN=[],CAL_HOLD=[],USE_CURVE=false,WIN_CURVE=null,FORM_MODE="off",H2H_ON=false,SESSION_ON=false,SESSION_SHIFT={},LEAD_ON=false,LEAD_SHIFT=0,BOOK_W=0,MODEL_REPORT={};
+let CAL_TRAIN=[],CAL_HOLD=[],USE_CURVE=false,WIN_CURVE=null,FORM_MODE="off",H2H_ON=false,SESSION_ON=false,SESSION_SHIFT={},LEAD_ON=false,LEAD_SHIFT=0,SWEEP_ON=false,SWEEP_SHIFT=0,BOOK_W=0,MODEL_REPORT={};
 function parseRatings(text){
  const rows=[];
  for(let line of text.split(/\r?\n/)){
@@ -679,7 +679,7 @@ function computeStats(){
  const dayCount=new Map(),sessionRows=[];
  const formLoss={base:0,plain:0,margin:0,decay:0,both:0},formModes=["plain","margin","decay","both"];
  let formN=0,h2hN=0,h2hBase=0,h2hWith=0;
- const seriesHist=new Map(),extraLead=new Map(),leadRows=[];
+ const seriesHist=new Map(),extraLead=new Map(),leadRows=[],sweepRows=[];
  for(const row of H2HEXTRA){const k=[row.w,row.l].sort().join("|");const arr=extraLead.get(k);if(arr)arr.push(row);else extraLead.set(k,[row])}
  const sideShift=(rows,mode)=>{const r=recentShift(rows,mode,80);return r&&rows.length>=8&&Math.abs(r.shift)>=0.03?r.shift:0};
  const addRec=(n,exp,won,score)=>{const r=REC.get(n)||{w:0,l:0};if(won)r.w++;else r.l++;REC.set(n,r);const q=RECENT.get(n)||[];q.push({e:exp,won:won?1:0,score:score||""});if(q.length>12)q.shift();RECENT.set(n,q)};
@@ -699,9 +699,18 @@ function computeStats(){
     const pairKey=[m.w,m.l].sort().join("|"),prior=(H2H.get(pairKey)||[]).filter(x=>x.date!==m.date);
     const hx=h2hShiftFrom(prior,m.w===pairKey.slice(0,pairKey.indexOf("|")));
     if(hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03){h2hN++;h2hBase+=logLoss(e,1);h2hWith+=logLoss(sigmoid(logit(e)+hx.shift),1)}
-    const pk=[m.w,m.l].sort().join("|");
-    const lead=seriesLead(unionMeetings((seriesHist.get(pk)||[]).filter(x=>x.date<m.date),(extraLead.get(pk)||[]).filter(x=>x.date<m.date)));
-    if(lead){const pL=lead.leader===m.w?e:1-e;leadRows.push({hold:m.date>=cutoff,p:sigmoid(0.85*logit(pL)),y:lead.leader===m.w?1:0})}
+   }
+   const pk=[m.w,m.l].sort().join("|");
+   const priorMeet=unionMeetings((seriesHist.get(pk)||[]).filter(x=>x.date<m.date),(extraLead.get(pk)||[]).filter(x=>x.date<m.date));
+   const playedToday=(seriesHist.get(pk)||[]).some(x=>x.date===m.date);
+   const lead=seriesLead(priorMeet);
+   if(lead){const pL=lead.leader===m.w?e:1-e;leadRows.push({hold:m.date>=cutoff,p:sigmoid(0.85*logit(pL)),y:lead.leader===m.w?1:0})}
+   if(!playedToday){
+    const sweep=lastSweep(priorMeet);
+    if(sweep){
+     const pW=sweep.winner===m.w?e:1-e;
+     sweepRows.push({hold:m.date>=cutoff,p0:sigmoid(0.85*logit(pW)),y:sweep.winner===m.w?1:0,leadSign:lead?(lead.leader===sweep.winner?1:-1):0});
+    }
    }
    sessionRows.push({hold:m.date>=cutoff,e,bw:sessionBin(cw),bl:sessionBin(cl)});
   }
@@ -773,12 +782,19 @@ function computeStats(){
  H2H_ON=h2hN>=150&&(h2hBase-h2hWith)/h2hN>=0.001;
  const leadFit=seriesLeadGate(leadRows);
  LEAD_ON=leadFit.on;LEAD_SHIFT=leadFit.shift;
+ const sweepIn=sweepRows.map(r=>{
+  let p=r.p0;
+  if(LEAD_ON&&r.leadSign&&LEAD_SHIFT>=0.02)p=sigmoid(logit(r.p0)+r.leadSign*LEAD_SHIFT);
+  return {hold:r.hold,p:Math.min(0.97,Math.max(0.03,p)),y:r.y};
+ });
+ const sweepFit=seriesLeadGate(sweepIn);
+ SWEEP_ON=sweepFit.on;SWEEP_SHIFT=sweepFit.shift;
  const fittedS=fitSessionShifts(sessionRows.filter(r=>!r.hold),80,150);
  let sb=0,sw=0,sn=0;
  for(const r of sessionRows)if(r.hold){const d=(fittedS[r.bw]||0)-(fittedS[r.bl]||0);sb+=logLoss(r.e,1);sw+=logLoss(sigmoid(logit(r.e)+d),1);sn++}
  SESSION_ON=sn>=150&&(sb-sw)/sn>=0.001;
  SESSION_SHIFT=SESSION_ON?fittedS:{};
- MODEL_REPORT={form:{n:formN,base:formLoss.base,plain:formLoss.plain,margin:formLoss.margin,decay:formLoss.decay,both:formLoss.both,mode:FORM_MODE},h2h:{n:h2hN,base:h2hBase,with:h2hWith,on:H2H_ON},lead:{n:leadFit.n,gain:leadFit.gain,on:LEAD_ON,shift:LEAD_SHIFT},session:{n:sn,base:sb,with:sw,on:SESSION_ON,shift:SESSION_SHIFT}};
+ MODEL_REPORT={form:{n:formN,base:formLoss.base,plain:formLoss.plain,margin:formLoss.margin,decay:formLoss.decay,both:formLoss.both,mode:FORM_MODE},h2h:{n:h2hN,base:h2hBase,with:h2hWith,on:H2H_ON},lead:{n:leadFit.n,gain:leadFit.gain,on:LEAD_ON,shift:LEAD_SHIFT},sweep:{n:sweepFit.n,gain:sweepFit.gain,on:SWEEP_ON,shift:SWEEP_SHIFT},session:{n:sn,base:sb,with:sw,on:SESSION_ON,shift:SESSION_SHIFT}};
 }
 const toElo=x=>Math.round(x*400/Math.LN10);
 function estimate(a,b,opt){
@@ -815,15 +831,23 @@ function estimate(a,b,opt){
   formNotes.push(line);why.push(line);
  }
  const today=warsawToday();
- const lead=seriesLead(unionMeetings(official.filter(m=>((m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name))&&m.date<today),H2HEXTRA.filter(m=>((m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name))&&m.date<today)));
+ const priorMeet=unionMeetings(official.filter(m=>((m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name))&&m.date<today),H2HEXTRA.filter(m=>((m.w===a.name&&m.l===b.name)||(m.w===b.name&&m.l===a.name))&&m.date<today));
+ const lead=seriesLead(priorMeet);
  if(LEAD_ON&&lead&&LEAD_SHIFT>=0.02){
   adj+=(lead.leader===a.name?1:-1)*LEAD_SHIFT;
   const line=`${esc(sur(lead.leader))} leads the meetings ${lead.w}–${lead.n-lead.w}. A lead of 3 or more has beaten the price, so ${lead.leader===a.name?"+":"−"}${Math.abs(toElo(LEAD_SHIFT))} Elo.`;
   formNotes.push(line);why.push(line);
  }
- // Rematch: these two already played today, and that result carries more
- // information than the rating change gives it.
- const prev=earlierToday(a,b),rx=prev?RADJ[prev.score]:null;
+ // The last meeting's score. A 3-0 still shows up in the next meeting, after
+ // the rating has already moved. A same-day rematch keeps its own rule.
+ const prev=earlierToday(a,b);
+ const sweep=lastSweep(priorMeet);
+ if(SWEEP_ON&&!prev&&sweep&&SWEEP_SHIFT>=0.02){
+  adj+=(sweep.winner===a.name?1:-1)*SWEEP_SHIFT;
+  const line=`${esc(sur(sweep.winner))} won the last meeting 3–0. That score has beaten the price the next time they play, so ${sweep.winner===a.name?"+":"−"}${Math.abs(toElo(SWEEP_SHIFT))} Elo.`;
+  formNotes.push(line);why.push(line);
+ }
+ const rx=prev?RADJ[prev.score]:null;
  if(prev&&rx&&rx.n>=40&&rx.shift>=0.05){   // 3-0 is already priced into the rating change
   adj+=(prev.w===a.name?1:-1)*rx.shift;
   why.push(`${esc(sur(prev.w))} beat ${esc(sur(prev.l))} ${esc(prev.score)} earlier today; after a same-day ${esc(prev.score)} win the winner takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time (${rx.won} of ${rx.n}), more than the new ratings allow for, so +${Math.abs(toElo(rx.shift))} Elo`);
@@ -2658,6 +2682,7 @@ function modelReportHtml(){
   !f.n||!formBest?"Form did not have enough matches to test.":f.mode==="off"?`Form is left out. On ${f.n.toLocaleString()} matches, ${formLabel(formBest[0])} was the closest and ${(f.base-formBest[1])/f.n>=0?"improved":"worsened"} the error by ${Math.abs((f.base-formBest[1])/f.n).toFixed(5)} per match. It is added only when that reaches 0.001.`:`Form is in, with ${formLabel(f.mode)}. Error on those ${f.n.toLocaleString()} matches went from ${per(f.base,f.n)} to ${per(f[f.mode],f.n)}.`,
   !h.n?"Head-to-head did not have enough matches to test.":h.on?`Head-to-head is in. Error on ${h.n.toLocaleString()} matches went from ${per(h.base,h.n)} to ${per(h.with,h.n)}.`:`Head-to-head is left out. On ${h.n.toLocaleString()} matches it did not lower the error enough.`,
   !(r.lead&&r.lead.n)?"A series lead did not have enough matches to test.":r.lead.on?`A lead of 3 or more meetings is in the win chance. On ${r.lead.n.toLocaleString()} later matches it lowered the error by ${r.lead.gain.toFixed(3)} per match.`:`A lead of 3 or more meetings is left out. On ${r.lead.n.toLocaleString()} later matches it did not lower the error enough.`,
+  !(r.sweep&&r.sweep.n)?"A last meeting of 3–0 did not have enough matches to test.":r.sweep.on?`A last meeting of 3–0 is in the win chance. On ${r.sweep.n.toLocaleString()} later matches it lowered the error by ${r.sweep.gain.toFixed(3)} per match.`:`A last meeting of 3–0 is left out. On ${r.sweep.n.toLocaleString()} later matches it did not lower the error enough.`,
   !s.n?"":s.on?`Matches already played today are in. Error on the test matches went from ${per(s.base,s.n)} to ${per(s.with,s.n)}.`:`Matches already played today are left out. On ${s.n.toLocaleString()} test matches that did not lower the error enough.`,
   !b.scored?`The book price is shown next to the win chance and does not change it.`:`The book price is shown next to the win chance and does not change it. On ${b.scored} later priced matches, the book error was ${per(b.bookLoss,b.scored)} and the Elo error was ${per(b.appLoss,b.scored)}.`
  ].filter(Boolean);
