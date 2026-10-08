@@ -6,7 +6,7 @@ Adamus Kacper | 1296 | 1053
 Adamus Mariusz | 1653 | 1792
 Adamus Pawel | 709 | 725
 Baca Jaroslav | 169 | 155
-Badura Jaroslaw | 376 | 330
+Badura Jaroslaw | 376 | 331
 Baggaley Andrew | 94 | 40
 Bak Daniel | 434 | 341
 Balcerzak Marcin | 1064 | 1530
@@ -57,7 +57,7 @@ Fabis Adrian | 1993 | 1798
 Felkel Grzegorz | 2747 | 1710
 Filbrandt Tomasz | 2437 | 1912
 Fira Damian | 471 | 745
-Folwarski Jakub | 693 | 321
+Folwarski Jakub | 694 | 321
 Fomin Andriej | 614 | 437
 Fomin Yurij | 600 | 765
 Gabrys Dariusz | 0 | 20
@@ -68,7 +68,7 @@ Gasiorski Pawel | 736 | 179
 Gawlas Michal | 131 | 174
 Gesiarz Piotr | 174 | 196
 Glanowski Jakub | 2102 | 2240
-Glanowski Waldemar | 999 | 735
+Glanowski Waldemar | 1000 | 735
 Glazowski Kacper | 800 | 858
 Glica Rafal | 74 | 91
 Gluszek Wojciech | 2396 | 2723
@@ -76,7 +76,7 @@ Golaszewski Kuba | 427 | 591
 Golebiowski Mateusz | 3070 | 1594
 Gorak Daniel | 47 | 48
 Gorski Przemyslaw | 35 | 275
-Grela Artur | 1486 | 1529
+Grela Artur | 1486 | 1530
 Grela Pawel | 367 | 582
 Gromek Artur | 64 | 111
 Gronowski Wojciech | 499 | 653
@@ -231,7 +231,7 @@ Panczyk Adrian | 193 | 342
 Paszkiewicz Michal | 475 | 422
 Pawlik Cezary | 414 | 289
 Pawlowski Krzysztof | 858 | 656
-Pelka Jerzy | 859 | 989
+Pelka Jerzy | 859 | 990
 Perzynski Przemyslaw | 639 | 549
 Petas Kacper | 2045 | 1964
 Piechnik Roman | 24 | 46
@@ -243,7 +243,7 @@ Piotrowski Tadeusz | 1645 | 1078
 Pisarczyk Tomasz | 199 | 311
 Pokorny Adam | 18 | 44
 Polanski Pawel | 786 | 744
-Poliniewicz Grzegorz | 4084 | 2893
+Poliniewicz Grzegorz | 4084 | 2894
 Polok Pawel | 184 | 110
 Poloszczanski Dawid | 1215 | 2103
 Prokopcov Dimitrij | 112 | 134
@@ -266,7 +266,7 @@ Rutkowski Mateusz | 2193 | 2335
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
 Sawicki Grzegorz | 735 | 1074
-Schaniel Krzysztof | 2049 | 2187
+Schaniel Krzysztof | 2049 | 2188
 Scigany Dariusz | 1155 | 500
 Seroka Szymon | 2079 | 1485
 Sikon Mateusz | 206 | 289
@@ -283,16 +283,16 @@ Skupinski Arkadiusz | 377 | 596
 Skuril Michal | 25 | 35
 Skwierz Jakub | 6 | 26
 Slawinski Kacper | 2053 | 1461
-Slosarczyk Pawel | 437 | 825
+Slosarczyk Pawel | 438 | 825
 Smolka Kamil | 237 | 222
 Sobel Artur | 1798 | 1295
 Sobel Bartosz | 4 | 11
 Sobkow Zbigniew | 66 | 74
 Sojka Stanislaw | 145 | 76
 Sokolowski Lukasz | 89 | 77
-Sokolowski Oliwier | 278 | 381
+Sokolowski Oliwier | 279 | 381
 Sokolowski Oskar | 146 | 293
-Solilo Dominik | 293 | 309
+Solilo Dominik | 294 | 309
 Spanik Tibor | 263 | 212
 Sporek Szymon | 1217 | 1155
 Spychala Adrian | 2198 | 3233
@@ -301,7 +301,7 @@ Staniszewski Piotr | 900 | 1183
 Stapor Rafal | 735 | 575
 Staszczyk Konrad | 1374 | 1176
 Stechly Witold | 108 | 521
-Stecyszyn Jakub | 257 | 343
+Stecyszyn Jakub | 258 | 343
 Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
 Strowski Karol | 1582 | 1035
@@ -370,5 +370,5 @@ Zelezik Jacek | 431 | 344
 Zemla Piotr | 97 | 43
 Zielinski Marcin | 38 | 13
 Zmijewski Artur | 111 | 79
-Zochniak Jakub | 4202 | 3643
+Zochniak Jakub | 4202 | 3644
 Zwolinski Mariusz | 295 | 487
