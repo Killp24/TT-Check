@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T21:28Z
+# updated 2026-10-08T21:29Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11110,14 +11110,16 @@
 2026-10-08 | Krukar Piotr | Kowalczyk Marcin | 3-1 | 8 | 5 | Pending
 2026-10-08 | Krezel Andrzej | Wolny Michal | 3-1 | 7 | 3 | Pending
 2026-10-08 | Brud Szymon | Mugowski Arkadiusz | 3-1 | 7 | 7 | Pending
-2026-10-08 | Zmijewski Artur | Tkaczyk Henryk | 3-2 |  |  | 
+2026-10-08 | Zmijewski Artur | Tkaczyk Henryk | 3-2 | 5 | 9 | +9
 2026-10-08 | Skorski Michal | Poloszczanski Dawid | 3-1 | 5 | 5 | +9
 2026-10-08 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 5 | 8 | +14
 2026-10-08 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 | 7 | 5 | Pending
 2026-10-08 | Tkocz Marek | Komandzik Rafal | 3-0 | 5 | 5 | Pending
 2026-10-08 | Machelski Michal | Michalik Jerzy | 3-0 | 3 | 7 | Pending
-2026-10-08 | Guzik Michal | Nocun Zbigniew | 3-0 |  |  | 
-2026-10-08 | Skorski Michal | Rolak Jaroslaw | 3-1 |  |  | 
-2026-10-08 | Adamus Kacper | Pytlas Wojciech | 3-2 |  |  | 
-2026-10-08 | Molenda Dariusz | Zelezik Jacek | 3-0 |  |  | 
-2026-10-08 | Krezel Andrzej | Machelski Michal | 3-2 |  |  | 
+2026-10-08 | Guzik Michal | Nocun Zbigniew | 3-0 | 1 | 10 | Pending
+2026-10-08 | Skorski Michal | Rolak Jaroslaw | 3-1 | 6 | 6 | Pending
+2026-10-08 | Adamus Kacper | Pytlas Wojciech | 3-2 | 5 | 5 | +9
+2026-10-08 | Molenda Dariusz | Zelezik Jacek | 3-0 | 3 | 7 | Pending
+2026-10-08 | Krezel Andrzej | Machelski Michal | 3-2 | 8 | 4 | Pending
+2026-10-08 | Vincenec Oliver | Komandzik Rafal | 3-1 |  | 6 | 
+2026-10-08 | Brud Szymon | Perzynski Przemyslaw | 3-2 | 8 | 7 | Pending
