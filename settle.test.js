@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -636,6 +636,23 @@ test("a hot player against a cold player is the legendary match", () => {
   assert.equal(legendarySide(2, 0.019, -2, -0.04), "");
   assert.equal(legendarySide(2, 0.04, -2, null), "");
   assert.equal(legendarySide(null, 0.04, -2, -0.04), "");
+});
+
+test("gold is the hot player up at least 100 Elo", () => {
+  assert.equal(legendaryGold(1700, 1600), true);
+  assert.equal(legendaryGold(1740, 1566), true);
+  assert.equal(legendaryGold(1699, 1600), false);
+  assert.equal(legendaryGold(1500, 1600), false);
+  assert.equal(legendaryGold(null, 1600), false);
+  assert.equal(legendaryGold(1600, null), false);
+});
+
+test("a gold match at 70% or more is the stronger win", () => {
+  assert.equal(legendaryHigh(0.70), true);
+  assert.equal(legendaryHigh(0.86), true);
+  assert.equal(legendaryHigh(0.699), false);
+  assert.equal(legendaryHigh(0.60), false);
+  assert.equal(legendaryHigh(null), false);
 });
 
 test("a 50% price with an edge of $3 to $14 is the go spot", () => {

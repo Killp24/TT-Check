@@ -929,6 +929,18 @@ function legendarySide(aDiff, aShift, bDiff, bShift) {
   return "";
 }
 
+// Gold is the higher win chance: the hot player is at least 100 Elo above the cold player.
+// A closer hot-against-cold match stays off the gold border. Display only.
+function legendaryGold(hotElo, coldElo) {
+  if (hotElo == null || coldElo == null || hotElo !== hotElo || coldElo !== coldElo) return false;
+  return hotElo - coldElo >= 100;
+}
+
+// Among those gold matches, 70% or more is the stronger win. Display only.
+function legendaryHigh(p) {
+  return p != null && p === p && p >= 0.70;
+}
+
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
 function blendShifts(p, shifts) {
   if (p == null || p !== p || p <= 0 || p >= 1) return null;

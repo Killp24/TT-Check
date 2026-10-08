@@ -242,9 +242,9 @@ body[data-view="match"] #ambLine{display:none}
 .srow.go{border:2px solid var(--ok)}
 .stag.go{background:var(--ok);color:#fff;border-color:var(--ok)}
 .vv.gov{border:2px solid var(--ok);background:#e8f6ee;color:var(--ink);font-weight:400}
-.srow.legend{border:2px solid var(--gold)}
-.stag.legend{background:var(--gold);color:#1b1404;border-color:var(--gold)}
-.vv.legendv{border:2px solid var(--gold);background:var(--goldbg);color:var(--ink);font-weight:400}
+.srow.legend{border:3px solid var(--gold);background:var(--goldbg)}
+.stag.legend{background:var(--gold);color:#1b1404;border-color:var(--gold);font-weight:700}
+.vv.legendv{border:3px solid var(--gold);background:var(--goldbg);color:var(--ink);font-weight:400}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .vv.gov{background:#143024;color:var(--ink)}}
 :root[data-theme="dark"] .vv.gov{background:#143024;color:var(--ink)}
 .stag.rem{color:#17456e;background:#e7f0f8;border-color:#8eb4d4}
@@ -1179,7 +1179,7 @@ function update(){
    if(pm<=-0.12){notes.push(`Data: ${esc(sur(fav.name))} has won ${Math.abs(s.favW-s.favB).toFixed(1)} fewer matches than expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
    else if(pm>=0.08&&isBan(fav)&&!est.skipped.some(k=>k.p===fav))notes.push(`Data doesn't back the ban list here: ${esc(sur(fav.name))} is ${sgn(s.favW-s.favB)} wins vs expected as favorite (${s.favW}–${s.favN-s.favW}).`)}
   if(s&&s.play>=5&&LEAGUE&&s.bad/s.play>=Math.max(1.5*LEAGUE,0.15))notes.push(`${esc(sur(fav.name))} has bad days often: ${s.bad} of ${s.play} match days (league ${Math.round(LEAGUE*100)}%).`)}
- const legendHtml=legendaryNote(legendaryShown(a,b));
+ const legendHtml=legendaryNote(legendaryShown(a,b,pa));
  v.innerHTML=(VIEW==="match"?`<p class="pickline">${body}</p>`:`<div class="${cls}"><strong>${title}</strong>${body}${notes.map(n=>`<span class="note">${n}</span>`).join("")}</div>`)+legendHtml;
  const aw=meet.filter(m=>m.w===a.name).length,bw=meet.length-aw;
  const hx=est.h2h,h2hEdgeTxt=hx&&H2H_ON?` <span class="muted">Form edge ${sgn(hx.diff)} vs Elo${Math.abs(hx.shift)<0.03?" · not enough to move the estimate":""}.</span>`:"";
@@ -1463,6 +1463,10 @@ function worryNote(w){
  if(!w)return "";
  return `<div class="vv worryv"><strong>Worry on ${esc(sur(w.weak.name))}</strong>${esc(sur(w.strong.name))} is ${w.gap} Elo higher and ${formAhead(w.form)} wins ahead of him on recent form. The win chance stays.</div>`;
 }
+function worryShown(a,b,pa){
+ if(legendaryShown(a,b,pa))return "";
+ return worryNote(worryPair(a,b));
+}
 // Same cut the ambitious read uses for hot and cold. Plain recent form, even when form stays out of the price.
 function formRead(name){
  const f=formEdge(name);
@@ -1481,15 +1485,20 @@ function legendaryPair(a,b){
  const hot=side==="A"?a:b,cold=side==="A"?b:a,hf=side==="A"?fa:fb,cf=side==="A"?fb:fa;
  return {hot,cold,hotDiff:hf.diff,coldDiff:cf.diff,hotW:hf.w,hotN:hf.n,coldW:cf.w,coldN:cf.n};
 }
-// A 100 Elo gap on this same form is already the red worry. Gold stays off that row.
-function legendaryShown(a,b){
- if(worryPair(a,b))return null;
- return legendaryPair(a,b);
+// Gold is a win we want: hot against cold, the hot player at least 100 Elo higher, and our price at least 70%.
+function legendaryShown(a,b,pa){
+ const g=legendaryPair(a,b);
+ if(!g||pa==null||!legendaryGold(g.hot.elo,g.cold.elo))return null;
+ const pHot=g.hot===a?pa:1-pa;
+ if(!legendaryHigh(pHot))return null;
+ g.pct=Math.round(pHot*100);
+ return g;
 }
 function legendaryNote(g){
  if(!g)return "";
  const rec=(w,n)=>`${w}–${n-w}`;
- return `<div class="vv legendv"><strong>Legendary match</strong>${esc(sur(g.hot.name))} is hot, ${rec(g.hotW,g.hotN)}, ${sgn(g.hotDiff)} vs Elo. ${esc(sur(g.cold.name))} is cold, ${rec(g.coldW,g.coldN)}, ${sgn(g.coldDiff)} vs Elo. The win chance stays.</div>`;
+ const gap=Math.round(g.hot.elo-g.cold.elo);
+ return `<div class="vv legendv"><strong>Legendary ${g.pct}%</strong>${esc(sur(g.hot.name))} is hot, ${rec(g.hotW,g.hotN)}, ${sgn(g.hotDiff)} vs Elo, and ${gap} Elo higher. ${esc(sur(g.cold.name))} is cold, ${rec(g.coldW,g.coldN)}, ${sgn(g.coldDiff)} vs Elo. The win chance stays.</div>`;
 }
 function goNote(best){
  if(!best||!goSide(best.pm,best.ev))return "";
@@ -1561,7 +1570,7 @@ function oddsCalc(a,b,pa,opts){
    return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`;
   }).join("");
   const best=sides.map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
-  const worry=worryNote(worryPair(a,b));
+  const worry=worryShown(a,b,pa);
   const verdict=valueNote(best, worry);
   const flagged=isFlagPair(oa,ob);
   const flag=flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"";
@@ -1572,7 +1581,7 @@ function oddsCalc(a,b,pa,opts){
   wireBetForm(a,b,model);renderCompare(a,b);return}
  showEdgeLine("");
  showFadeLine(a,b,oa,ob);
- if(oa===null&&ob===null){out.innerHTML=worryNote(worryPair(a,b))+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
+ if(oa===null&&ob===null){out.innerHTML=worryShown(a,b,pa)+`<p class="help" style="margin:8px 0 0">Break-even odds from the estimate: ${esc(sur(a.name))} ${fairAm(pa)}, ${esc(sur(b.name))} ${fairAm(1-pa)}. Odds better than these would be value.</p>`;renderCompare(a,b);return}
  const ia=oa!==null?toProb(oa):null,ib=ob!==null?toProb(ob):null;
  const margin=ia!==null&&ib!==null?ia+ib-1:null;
  const rows=[["A",a,oa,ia],["B",b,ob,ib]].filter(r=>r[2]!==null).map(([k,p,o,imp])=>{
@@ -1580,7 +1589,7 @@ function oddsCalc(a,b,pa,opts){
   return `<tr><td>${esc(sur(p.name))}<br><span class="muted">${o>0?"+":""}${o}</span></td><td>${Math.round(imp*100)}%${fair!==null?`<br><span class="muted">${Math.round(fair*100)}% fair</span>`:""}</td><td>${Math.round(pm*100)}%</td><td class="${oddsTone(ev,pm,quiet)}">${ev>=0?"+":"−"}$${Math.abs(ev).toFixed(2)}</td></tr>`}).join("");
  const betSides=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null);
  const best=[["A",a,oa],["B",b,ob]].filter(r=>r[2]!==null).map(([k,p,o])=>({p,pm:model[k],ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0];
- const verdict=valueNote(best, worryNote(worryPair(a,b)));
+ const verdict=valueNote(best, worryShown(a,b,pa));
  const flagged=isFlagPair(oa,ob);
  out.innerHTML=(flagged?`<div class="vv flagv"><strong>⚑ Flagged price pair</strong>This match is listed at ${fmtO(FLAGO.a)} / ${fmtO(FLAGO.b)}, the pair you asked to watch for.</div>`:"")+fadeHtml(a,b,oa,ob)+`<div class="otab"><table><tr><th>Player</th><th>Book</th><th>Est.</th><th>EV per $100</th></tr>${rows}</table></div>`+(margin!==null?`<p class="help" style="margin:6px 0 0">Bookmaker margin: ${(margin*100).toFixed(1)}%</p>`:"")+verdict+`${EST&&EST.why.length?`<p class="help" style="margin:8px 0 0">Estimate = Elo adjusted for: ${EST.why.join("; ")}.</p>`:`<p class="help" style="margin:8px 0 0">Estimate = Elo. No ban list adjustment applies to this matchup.</p>`}${EST&&EST.skipped.length?`<p class="help" style="margin:4px 0 0">${EST.skipped.map(skipTxt).join(". ")}.</p>`:""}<p class="help" style="margin:4px 0 0">Ban list adjustments are unchanged. Form and head-to-head move the estimate only when the record on file is clearly off Elo. Same-day rematches and long losing runs are measured separately.</p>${snapLine(a,b)}`;
  const bestK=[["A",oa],["B",ob]].filter(r=>r[1]!==null).map(([k,o])=>({k,ev:model[k]*profit(o)-(1-model[k])*100})).sort((x,y)=>y.ev-x.ev)[0].k;
@@ -1714,10 +1723,10 @@ function renderSched(opt){
     for(const v of latestByBook(OHIST[key]||[]).values()){fade=fadeOf(a,b,first?v.o1:v.o2,first?v.o2:v.o1);if(fade)break}
     if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
     if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
+   const lg=legendaryShown(a,b,e.pa);
    const wp=worryPair(a,b);
-   if(wp){worry=true;flag=true;tags+=`<span class="stag worry">Worry · ${esc(sur(wp.strong.name))}</span>`}
-   const lg=legendaryShown(a,b);
-   if(lg){legend=true;flag=true;tags+=`<span class="stag legend">Legendary</span>`}
+   if(lg){legend=true;flag=true;tags+=`<span class="stag legend">Legendary ${lg.pct}%</span>`}
+   else if(wp){worry=true;flag=true;tags+=`<span class="stag worry">Worry · ${esc(sur(wp.strong.name))}</span>`}
    if(so&&(so.o1!==null||so.o2!==null)){
     const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
     const top=sides.sort((x,y)=>y.ev-x.ev)[0];
@@ -1738,7 +1747,7 @@ function renderSched(opt){
   if(!live)finishedAbove=true;
   shown++;
   const mins=Math.round((r.at-now)/60000),when=r.fin?`${esc(sur(r.fin.w))} won ${esc(r.fin.score)}`:r.res?`Final ${esc(r.res)}`:mins<-30?"No result on file":mins<=0?"Started":mins<60?`in ${mins} min`:`in ${Math.floor(mins/60)} h ${mins%60} min`;
-  html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${worry?" worry":legend?" legend":go?" go":""}${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
+  html+=`<li class="srowwrap"${isNow?' id="schedNow"':""}><button type="button" class="favtog${isFavM(r)?" on":isFav(r.p1,r.p2)?" pair":""}" data-favm="${SCHED.indexOf(r)}" aria-label="${isFavM(r)?"Remove this match from saved":"Save this match"}">${isFavM(r)?"★":isFav(r.p1,r.p2)?"☆":"☆"}</button><button type="button" class="srow${legend?" legend":worry?" worry":go?" go":""}${r.res||r.fin?" done":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${when}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)}${fav?` · Est: ${fav}`:""}</small>${tags?`<span class="stags">${tags}</span>`:""}</span></button></li>`;
  }
  $("schedList").innerHTML=html||`<li class="muted" style="padding:12px 0">${SCHED.length?"No matches to show. Try the filters.":"No schedule yet. It appears after the next update, which runs about every 30 minutes."}</li>`;
  $("schedInfo").textContent=shown?`TT Elite today · ${shown} match${shown===1?"":"es"}${showDone&&finishedAbove?" · earlier results are above Up next":""}`:"TT Elite today";
@@ -1979,9 +1988,10 @@ function renderSignals(){
   if(H2H_ON&&hx&&hx.n>=5&&Math.abs(hx.shift)>=0.03&&Math.abs(hx.diff)>=2)sigs.push({cls:"w",text:`H2H ${hx.aw}–${hx.bw} (${sgn(hx.diff)})`,rank:Math.abs(toElo(hx.shift))});
   const so=so0;
   let best=null;
+  const lg=legendaryShown(a,b,e.pa);
   const wp=worryPair(a,b);
-  if(wp)sigs.push({cls:"worry",text:`Worry · ${sur(wp.strong.name)}`,rank:24});
-  if(legendaryShown(a,b))sigs.push({cls:"legend",text:"Legendary",rank:30});
+  if(lg)sigs.push({cls:"legend",text:`Legendary ${lg.pct}%`,rank:40});
+  else if(wp)sigs.push({cls:"worry",text:`Worry · ${sur(wp.strong.name)}`,rank:24});
   if(so&&(so.o1!==null||so.o2!==null)){
    const sides=[[a,e.pa,so.o1],[b,1-e.pa,so.o2]].filter(x=>x[2]!==null).map(([p,pm,o])=>({p,pm,o,ev:pm*profit(o)-(1-pm)*100}));
    if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];const goHere=!wp&&goSide(best.pm,best.ev);if(goHere)sigs.push({cls:"go",text:"Go",rank:0});if(best.ev>=3)sigs.push({cls:goHere?"ev":"",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:goHere?best.ev:0})}
@@ -1997,11 +2007,11 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match: one player is hot and the other is cold, each at least 1.5 wins off Elo, and the rating gap is under 100. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match at 70% or more: one player is hot and at least 100 Elo higher, and the other is cold. Each side is at least 1.5 wins off Elo. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
-  return `<li><button type="button" class="srow${sigs.some(s=>s.cls==="worry")?" worry":sigs.some(s=>s.cls==="legend")?" legend":sigs.some(s=>s.cls==="go")?" go":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
+  return `<li><button type="button" class="srow${sigs.some(s=>s.cls==="legend")?" legend":sigs.some(s=>s.cls==="worry")?" worry":sigs.some(s=>s.cls==="go")?" go":""}" data-i="${SCHED.indexOf(r)}"><span class="stime"><b>${r.at.toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"})}</b><small>${esc(fresh)}</small></span><span class="smid"><span class="sp">${esc(r.p1)} <span class="muted">vs</span> ${esc(r.p2)}</span><small class="muted">${esc(r.tour)} · Est: ${esc(sur(fav))} ${pf}%</small><span class="stags">${sigs.map(s=>`<span class="stag ${s.cls}">${esc(s.text)}</span>`).join("")}</span></span></button></li>`}).join("")||`<li class="muted" style="padding:12px 0">No signals right now. Check Home for the full schedule, or enter a book price in Search.</li>`;
 }
 $("sigList").addEventListener("click",e=>{const b=e.target.closest(".srow");if(!b)return;openListedMatch(SCHED[+b.dataset.i],{kind:"signals"})});
 function openSheet(id, opt){
