@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T20:56Z
+# updated 2026-10-08T20:59Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11097,9 +11097,9 @@
 2026-10-08 | Krukar Piotr | Trela Mateusz | 3-1 | 7 | 7 | Pending
 2026-10-08 | Tkaczyk Henryk | Nocun Zbigniew | 3-0 | 8 | 8 | Pending
 2026-10-08 | Rolak Jaroslaw | Skorski Michal | 3-2 | 4 | 4 | Pending
-2026-10-08 | Tkocz Marek | Koczyba Mariusz | 3-1 |  |  | 
-2026-10-08 | Adamus Kacper | Jurowicz Grzegorz | 3-0 |  |  | 
-2026-10-08 | Pytlas Wojciech | Komandzik Rafal | 3-0 |  |  | 
+2026-10-08 | Tkocz Marek | Koczyba Mariusz | 3-1 | 4 | 6 | Pending
+2026-10-08 | Adamus Kacper | Jurowicz Grzegorz | 3-0 | 4 | 4 | Pending
+2026-10-08 | Pytlas Wojciech | Komandzik Rafal | 3-0 | 4 | 4 | Pending
 2026-10-08 | Molenda Dariusz | Wolny Michal | 3-0 | 2 | 2 | Pending
 2026-10-08 | Zelezik Jacek | Machelski Michal | 3-2 | 6 | 2 | Pending
 2026-10-08 | Perzynski Przemyslaw | Mugowski Arkadiusz | 3-0 | 5 | 6 | Pending
@@ -11109,10 +11109,10 @@
 2026-10-08 | Kubiak Artur | Nocun Zbigniew | 3-0 | 5 | 9 | +15
 2026-10-08 | Krukar Piotr | Kowalczyk Marcin | 3-1 | 8 | 5 | Pending
 2026-10-08 | Krezel Andrzej | Wolny Michal | 3-1 | 7 | 3 | Pending
-2026-10-08 | Brud Szymon | Mugowski Arkadiusz | 3-1 |  |  | 
+2026-10-08 | Brud Szymon | Mugowski Arkadiusz | 3-1 | 7 | 7 | Pending
 2026-10-08 | Zmijewski Artur | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-08 | Skorski Michal | Poloszczanski Dawid | 3-1 |  |  | 
-2026-10-08 | Rolak Jaroslaw | Trela Mateusz | 3-1 |  |  | 
-2026-10-08 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 |  |  | 
-2026-10-08 | Tkocz Marek | Komandzik Rafal | 3-0 |  |  | 
-2026-10-08 | Machelski Michal | Michalik Jerzy | 3-0 |  |  | 
+2026-10-08 | Skorski Michal | Poloszczanski Dawid | 3-1 | 5 | 5 | +9
+2026-10-08 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 5 | 8 | +14
+2026-10-08 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 | 7 | 5 | Pending
+2026-10-08 | Tkocz Marek | Komandzik Rafal | 3-0 | 5 | 5 | Pending
+2026-10-08 | Machelski Michal | Michalik Jerzy | 3-0 | 3 | 7 | Pending
