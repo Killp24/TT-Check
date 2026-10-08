@@ -912,23 +912,6 @@ function goSide(p, ev) {
   return Math.round(p * 100) >= 50 && e >= 3 && e <= 14;
 }
 
-// Hot recent form against cold recent form.
-// diff is wins minus Elo. shift is the shrunk recent-form move.
-// Hot is at least 1.5 wins above Elo with a shift of 0.02. Cold is the mirror.
-// Returns "A" or "B" for the hot player. Display only. It does not move the win chance.
-function formTemper(diff, shift) {
-  if (diff == null || shift == null || diff !== diff || shift !== shift) return "";
-  if (Math.abs(diff) < 1.5 || Math.abs(shift) < 0.02) return "";
-  return diff > 0 ? "hot" : "cold";
-}
-function legendarySide(aDiff, aShift, bDiff, bShift) {
-  const a = formTemper(aDiff, aShift);
-  const b = formTemper(bDiff, bShift);
-  if (a === "hot" && b === "cold") return "A";
-  if (b === "hot" && a === "cold") return "B";
-  return "";
-}
-
 // Add logit shifts to a win probability. An empty list leaves the probability alone.
 function blendShifts(p, shifts) {
   if (p == null || p !== p || p <= 0 || p >= 1) return null;

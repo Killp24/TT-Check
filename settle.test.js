@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -625,17 +625,6 @@ test("a clearly better player who is also ahead on form is the worry", () => {
   assert.equal(worryPlayer(-120, 4), false);
   assert.equal(worryPlayer(120, null), false);
   assert.equal(worryPlayer(null, 3), false);
-});
-
-test("a hot player against a cold player is the legendary match", () => {
-  assert.equal(legendarySide(2.4, 0.04, -1.8, -0.03), "A");
-  assert.equal(legendarySide(-2.1, -0.05, 1.6, 0.02), "B");
-  assert.equal(legendarySide(2.4, 0.04, 1.8, 0.03), "");
-  assert.equal(legendarySide(-2.4, -0.04, -1.8, -0.03), "");
-  assert.equal(legendarySide(1.4, 0.04, -2, -0.04), "");
-  assert.equal(legendarySide(2, 0.019, -2, -0.04), "");
-  assert.equal(legendarySide(2, 0.04, -2, null), "");
-  assert.equal(legendarySide(null, 0.04, -2, -0.04), "");
 });
 
 test("a 50% price with an edge of $3 to $14 is the go spot", () => {
