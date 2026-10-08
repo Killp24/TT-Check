@@ -941,6 +941,50 @@ function legendaryHigh(p) {
   return p != null && p === p && p >= 0.70;
 }
 
+// The player who is ahead by 3 or more meetings, not counting today.
+// A one-match lead is not enough. Returns null when nobody is ahead by 3.
+function seriesLead(rows) {
+  if (!rows || rows.length < 3) return null;
+  const wins = new Map();
+  let n = 0;
+  for (const row of rows) {
+    if (!row || !row.w) continue;
+    n++;
+    wins.set(row.w, (wins.get(row.w) || 0) + 1);
+  }
+  if (n < 3) return null;
+  let leader = null, top = 0, second = 0;
+  for (const [name, count] of wins) {
+    if (count > top) { second = top; top = count; leader = name; }
+    else if (count > second) second = count;
+  }
+  const lead = top - second;
+  if (!leader || lead < 3) return null;
+  return { leader, lead, n, w: top };
+}
+
+// rows are {hold, p, y} in date order. p is the leader's price before this layer.
+// The shift is fit only on earlier rows, then scored on the held-out rows.
+// It turns on when that later slice is large and the error drops by 0.001 per match.
+function seriesLeadGate(rows, prior) {
+  prior = prior == null ? 150 : prior;
+  let n = 0, w = 0, exp = 0, hn = 0, base = 0, withS = 0;
+  for (const row of rows || []) {
+    if (row.hold && n >= 80) {
+      const shift = shrunkShift(n, w, exp, prior);
+      hn++;
+      base += logLoss(row.p, row.y);
+      withS += logLoss(sigmoid(logit(row.p) + shift), row.y);
+    }
+    n++;
+    w += row.y;
+    exp += row.p;
+  }
+  const gain = hn ? (base - withS) / hn : 0;
+  const on = hn >= 150 && gain >= 0.001;
+  return { on, n: hn, gain, shift: on ? shrunkShift(n, w, exp, prior) : 0 };
+}
+
 // Meetings for the head-to-head list. extraRows is the official page, which
 // still has games that fell off each player's last 30. The same date, winner,
 // loser, and score is kept once per list, then the longer count is used, so

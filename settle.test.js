@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -666,6 +666,37 @@ test("a 50% price with an edge of $3 to $14 is the go spot", () => {
   assert.equal(goSide(0.52, 14.5), false);
   assert.equal(goSide(0.62, 22), false);
   assert.equal(goSide(0.61, 10), true);
+});
+
+test("a series lead counts only when one player is ahead by 3 or more", () => {
+  const row = (w) => ({ w });
+  assert.equal(seriesLead([row("A"), row("A")]), null);
+  assert.equal(seriesLead([row("A"), row("A"), row("B")]), null);
+  const sweep = seriesLead([row("A"), row("A"), row("A")]);
+  assert.equal(sweep.leader, "A");
+  assert.equal(sweep.lead, 3);
+  assert.equal(sweep.w, 3);
+  assert.equal(sweep.n, 3);
+  assert.equal(seriesLead([row("A"), row("B"), row("A"), row("A"), row("B"), row("A")]), null);
+  const long = seriesLead([row("A"), row("A"), row("B"), row("A"), row("A"), row("B"), row("A")]);
+  assert.equal(long.leader, "A");
+  assert.equal(long.lead, 3);
+  assert.equal(long.w, 5);
+  assert.equal(long.n, 7);
+});
+
+test("a series lead is added only when later matches get less wrong", () => {
+  const rows = [];
+  for (let i = 0; i < 100; i++) rows.push({ hold: false, p: 0.55, y: i % 5 === 0 ? 0 : 1 });
+  for (let i = 0; i < 200; i++) rows.push({ hold: true, p: 0.55, y: i % 5 === 0 ? 0 : 1 });
+  const on = seriesLeadGate(rows);
+  assert.equal(on.on, true);
+  assert.ok(on.shift > 0);
+  assert.ok(on.gain >= 0.001);
+  const flat = [];
+  for (let i = 0; i < 100; i++) flat.push({ hold: false, p: 0.5, y: i % 2 });
+  for (let i = 0; i < 200; i++) flat.push({ hold: true, p: 0.5, y: i % 2 });
+  assert.equal(seriesLeadGate(flat).on, false);
 });
 
 test("the head-to-head list keeps older meetings without doubling the ones already saved", () => {
