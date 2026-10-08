@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T23:53Z
+# updated 2026-10-08T23:55Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11144,11 +11144,17 @@
 2026-10-08 | Stapor Rafal | Brud Szymon | 3-0 | 2 | 9 | Pending
 2026-10-08 | Skorski Michal | Poloszczanski Dawid | 3-1 | 7 | 8 | Pending
 2026-10-08 | Poloszczanski Dawid | Rolak Jaroslaw | 3-0 | 7 | 7 | Pending
-2026-10-08 | Komandzik Rafal | Adamus Kacper | 3-2 | 7 |  | Pending
+2026-10-08 | Komandzik Rafal | Adamus Kacper | 3-2 | 7 | 7 | +13
 2026-10-08 | Perzynski Przemyslaw | Stapor Rafal | 3-1 | 8 | 3 | Pending
 2026-10-08 | Zelezik Jacek | Michalik Jerzy | 3-0 | 9 | 9 | Pending
 2026-10-08 | Krukar Piotr | Rolak Jaroslaw | 3-1 | 10 | 8 | Pending
 2026-10-08 | Tkaczyk Henryk | Kubiak Artur | 3-1 | 11 | 7 | Pending
+2026-10-08 | Skupinski Arkadiusz | Nocun Zbigniew | 3-0 | 8 | 12 | Pending
+2026-10-08 | Wolny Michal | Barton Aleksander | 3-0 | 6 | 5 | Pending
+2026-10-08 | Tkocz Marek | Kurek Pawel | 3-1 | 7 | 10 | +10
+2026-10-08 | Jurowicz Grzegorz | Komandzik Rafal | 3-1 | 9 | 8 | +10
+2026-10-08 | Mugowski Arkadiusz | Brud Szymon | 3-0 | 10 | 11 | Pending
+2026-10-08 | Trela Mateusz | Rolak Jaroslaw | 3-0 | 11 | 9 | Pending
 2026-10-09 | Guzik Michal | Skupinski Arkadiusz | 3-0 |  |  | 
 2026-10-09 | Stapor Rafal | Brud Szymon | 3-0 |  |  | 
 2026-10-09 | Zmijewski Artur | Nocun Zbigniew | 3-0 |  |  | 
