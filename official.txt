@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T01:02Z
+# updated 2026-10-08T01:07Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10842,7 +10842,7 @@
 2026-10-08 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-08 | Blocho Przemyslaw | Rudomina Kamil | 3-2 | 1 | 1 | Pending
 2026-10-08 | Brud Szymon | Mugowski Arkadiusz | 3-2 | 1 | 1 | Pending
-2026-10-08 | Brud Szymon | Blocho Przemyslaw | 3-1 |  |  | 
+2026-10-08 | Brud Szymon | Blocho Przemyslaw | 3-1 | 2 | 2 | +13
 2026-10-08 | Michalik Jerzy | Nocun Zbigniew | 3-2 | 2 | 2 | Pending
 2026-10-08 | Zelezik Jacek | Tkaczyk Henryk | 3-2 | 2 | 2 | Pending
 2026-10-08 | Myszewski Adrian | Krukar Piotr | 3-2 | 2 | 2 | Pending
@@ -10850,8 +10850,8 @@
 2026-10-08 | Kurek Pawel | Burkacki Adrian | 3-0 |  |  | 
 2026-10-08 | Baron Mariusz | Koczyba Mariusz | 3-0 |  |  | 
 2026-10-08 | Gumulinski Piotr | Burkacki Adrian | 3-2 | 1 | 1 | Pending
-2026-10-08 | Bartosik Dominik | Warzecha Miroslaw | 3-1 |  |  | 
-2026-10-08 | Mugowski Arkadiusz | Perzynski Przemyslaw | 3-2 |  |  | 
-2026-10-08 | Michalik Jerzy | Lewczuk Miroslaw | 3-2 |  |  | 
-2026-10-08 | Myszewski Adrian | Suchecki Waclaw | 3-2 |  |  | 
-2026-10-08 | Kurek Pawel | Wrzalik Tomasz | 3-1 |  |  | 
+2026-10-08 | Bartosik Dominik | Warzecha Miroslaw | 3-1 | 1 | 1 | Pending
+2026-10-08 | Mugowski Arkadiusz | Perzynski Przemyslaw | 3-2 | 2 | 1 | +13
+2026-10-08 | Michalik Jerzy | Lewczuk Miroslaw | 3-2 | 3 | 3 | Pending
+2026-10-08 | Myszewski Adrian | Suchecki Waclaw | 3-2 | 3 | 3 | +4
+2026-10-08 | Kurek Pawel | Wrzalik Tomasz | 3-1 | 1 | 1 | Pending
