@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T13:31Z
+# updated 2026-10-08T13:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11013,10 +11013,11 @@
 2026-10-08 | Kapik Krzysztof | Stecyszyn Jakub | 3-2 | 4 | 9 | +12
 2026-10-08 | Klocek Kamil | Solilo Dominik | 3-0 | 4 | 4 | +23
 2026-10-08 | Glanowski Waldemar | Kaczmarek Jakub | 3-2 | 6 | 6 | +9
-2026-10-08 | Badura Jaroslaw | Nowak Jakub | 3-1 |  | 7 | 
+2026-10-08 | Badura Jaroslaw | Nowak Jakub | 3-1 | 7 | 7 | +5
 2026-10-08 | Pruszkowski Jakub | Sokolowski Lukasz | 3-0 | 9 | 1 | Pending
-2026-10-08 | Grela Artur | Michna Dawid | 3-1 |  |  | 
-2026-10-08 | Folwarski Jakub | Zandecki Jan | 3-1 |  |  | 
-2026-10-08 | Pelka Jerzy | Urban Wojciech | 3-0 |  |  | 
-2026-10-08 | Poliniewicz Grzegorz | Mitas Jacek | 3-0 |  |  | 
-2026-10-08 | Zochniak Jakub | Czerwinski Bartosz | 3-0 |  |  | 
+2026-10-08 | Grela Artur | Michna Dawid | 3-1 | 9 | 9 | Pending
+2026-10-08 | Folwarski Jakub | Zandecki Jan | 3-1 | 9 | 9 | Pending
+2026-10-08 | Pelka Jerzy | Urban Wojciech | 3-0 | 9 | 9 | Pending
+2026-10-08 | Poliniewicz Grzegorz | Mitas Jacek | 3-0 | 9 | 9 | +15
+2026-10-08 | Zochniak Jakub | Czerwinski Bartosz | 3-0 | 4 | 4 | Pending
+2026-10-08 | Slosarczyk Pawel | Kaczmarek Jakub | 3-2 | 7 | 7 | +9
