@@ -985,6 +985,24 @@ function seriesLeadGate(rows, prior) {
   return { on, n: hn, gain, shift: on ? shrunkShift(n, w, exp, prior) : 0 };
 }
 
+// Winner of the last meeting when that match was 3-0.
+// A 3-1 did not beat the price. A 3-2 pointed the other way, but the later
+// matches were too close to the price to move it. Rows can arrive in any order.
+function lastSweep(rows) {
+  const list = [];
+  for (const row of rows || []) {
+    if (row && row.date && row.w) list.push(row);
+  }
+  if (!list.length) return null;
+  list.sort((a, b) => {
+    if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+    return (a.iw || a.il || a.order || 0) - (b.iw || b.il || b.order || 0);
+  });
+  const last = list[list.length - 1];
+  if (String(last.score || "").trim() !== "3-0") return null;
+  return { winner: last.w, score: "3-0" };
+}
+
 // Meetings for the head-to-head list. extraRows is the official page, which
 // still has games that fell off each player's last 30. The same date, winner,
 // loser, and score is kept once per list, then the longer count is used, so

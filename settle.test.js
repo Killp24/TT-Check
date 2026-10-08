@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate, lastSweep } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -697,6 +697,30 @@ test("a series lead is added only when later matches get less wrong", () => {
   for (let i = 0; i < 100; i++) flat.push({ hold: false, p: 0.5, y: i % 2 });
   for (let i = 0; i < 200; i++) flat.push({ hold: true, p: 0.5, y: i % 2 });
   assert.equal(seriesLeadGate(flat).on, false);
+});
+
+test("the last meeting moves the price only when it was 3-0", () => {
+  const m = (date, w, score, iw) => ({ date, w, l: w === "A" ? "B" : "A", score, iw: iw || 0 });
+  assert.equal(lastSweep([]), null);
+  assert.equal(lastSweep([m("2026-10-01", "A", "3-1")]), null);
+  assert.equal(lastSweep([m("2026-10-01", "A", "3-2")]), null);
+  assert.equal(lastSweep([m("2026-10-01", "A", "3-0")]).winner, "A");
+  assert.equal(lastSweep([
+    m("2026-10-01", "A", "3-0", 1),
+    m("2026-10-02", "B", "3-1", 1)
+  ]), null);
+  assert.equal(lastSweep([
+    m("2026-10-01", "A", "3-0", 1),
+    m("2026-10-01", "B", "3-2", 2)
+  ]), null);
+  assert.equal(lastSweep([
+    m("2026-10-01", "B", "3-2", 1),
+    m("2026-10-01", "A", "3-0", 2)
+  ]).winner, "A");
+  assert.equal(lastSweep([
+    m("2026-10-03", "A", "3-0", 1),
+    m("2026-09-01", "B", "3-2", 1)
+  ]).winner, "A");
 });
 
 test("the head-to-head list keeps older meetings without doubling the ones already saved", () => {
