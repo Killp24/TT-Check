@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-08T07:00Z
+# updated 2026-10-08T07:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10143,7 +10143,7 @@
 2026-10-05 | Ruszkiewicz Adam | Sawicki Grzegorz | 3-1 |  |  | 
 2026-10-05 | Michalik Jerzy | Kwiatkowski Kacper | 3-1 |  |  | 
 2026-10-05 | Kordaszewski Tomasz | Janus Slawomir | 3-0 |  |  | 
-2026-10-05 | Kolodziej Krystian | David Petr | 3-2 |  |  | 
+2026-10-05 | Kolodziej Krystian | David Petr | 3-2 | 5 | 10 | +12
 2026-10-05 | Leczycki Mariusz | Kumor Michal | 3-0 |  |  | 
 2026-10-05 | Tkaczyk Henryk | Leczycki Mariusz | 3-0 |  |  | 
 2026-10-05 | Krezel Andrzej | Lewczuk Miroslaw | 3-1 |  |  | 
@@ -10924,8 +10924,8 @@
 2026-10-08 | Hetnar Krzysztof | Gumulinski Piotr | 3-0 | 3 | 6 | Pending
 2026-10-08 | Kurek Pawel | Cesarz Milosz | 3-1 | 6 | 3 | Pending
 2026-10-08 | Badura Jaroslaw | Schaniel Krzysztof | 3-2 | 1 | 1 | +5
-2026-10-08 | David Petr | Zandecki Jan | 3-2 |  |  | 
-2026-10-08 | Pruszkowski Jakub | Sokolowski Oliwier | 3-2 |  |  | 
-2026-10-08 | Wloczko Krzysztof | Mitas Jacek | 3-0 |  |  | 
-2026-10-08 | Burkacki Adrian | Sokolowski Oskar | 3-1 |  |  | 
-2026-10-08 | Nowak Jakub | Glanowski Waldemar | 3-2 |  |  | 
+2026-10-08 | David Petr | Zandecki Jan | 3-2 | 4 | 4 | Pending
+2026-10-08 | Pruszkowski Jakub | Sokolowski Oliwier | 3-2 | 4 | 4 | Pending
+2026-10-08 | Wloczko Krzysztof | Mitas Jacek | 3-0 | 4 | 4 | +9
+2026-10-08 | Burkacki Adrian | Sokolowski Oskar | 3-1 | 6 | 3 | Pending
+2026-10-08 | Nowak Jakub | Glanowski Waldemar | 3-2 | 1 | 1 | +10
