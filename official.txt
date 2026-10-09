@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T04:28Z
+# updated 2026-10-09T04:30Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11216,18 +11216,19 @@
 2026-10-09 | Machelski Michal | Krezel Andrzej | 3-1 | 4 | 3 | Pending
 2026-10-09 | Vincenec Oliver | Kurek Pawel | 3-0 | 2 | 3 | +19
 2026-10-09 | Michna Dawid | David Petr | 3-1 | 1 | 1 | +17
-2026-10-09 | Wederlich Damian | Zandecki Jan | 3-1 |  |  | 
+2026-10-09 | Wederlich Damian | Zandecki Jan | 3-1 | 1 | 1 | +14
 2026-10-09 | Idaczyk Rafal | Jozefiak Michal | 3-0 | 1 | 1 | Pending
 2026-10-09 | Kuzmicz Jakub | Kapik Krzysztof | 3-0 | 1 | 1 | Pending
-2026-10-09 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 |  | 1 | 
+2026-10-09 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 1 | 1 | Pending
 2026-10-09 | Sokolowski Oliwier | Fomin Yurij | 3-1 | 1 | 1 | Pending
 2026-10-09 | Michalik Jerzy | Barton Aleksander | 3-0 | 4 | 3 | Pending
-2026-10-09 | Jadczyk Marcin | Witkowski Antoni | 3-0 |  |  | 
+2026-10-09 | Jadczyk Marcin | Witkowski Antoni | 3-0 | 1 | 1 | +15
 2026-10-09 | Oracz Lukasz | Sobkow Zbigniew | 3-0 |  |  | 
-2026-10-09 | Idaczyk Rafal | Kaczmarek Jakub | 3-1 |  |  | 
-2026-10-09 | Braun Josef | Klos Patrik | 3-2 |  |  | 
+2026-10-09 | Idaczyk Rafal | Kaczmarek Jakub | 3-1 | 2 | 2 | Pending
+2026-10-09 | Braun Josef | Klos Patrik | 3-2 | 1 | 1 | Pending
 2026-10-09 | Jendrzejewski Patryk | Kapik Krzysztof | 3-1 |  |  | 
-2026-10-09 | Wrobel Dariusz | Krcil Frantisek | 3-1 |  |  | 
-2026-10-09 | Ruszkiewicz Adam | Paszkiewicz Michal | 3-1 |  |  | 
-2026-10-09 | Kurek Pawel | Vincenec Oliver | 3-0 |  |  | 
-2026-10-09 | Zelezik Jacek | Wolny Michal | 3-1 |  |  | 
+2026-10-09 | Wrobel Dariusz | Krcil Frantisek | 3-1 | 1 | 1 | Pending
+2026-10-09 | Ruszkiewicz Adam | Paszkiewicz Michal | 3-1 | 1 | 1 | Pending
+2026-10-09 | Kurek Pawel | Vincenec Oliver | 3-0 | 4 | 3 | Pending
+2026-10-09 | Zelezik Jacek | Wolny Michal | 3-1 | 3 | 3 | Pending
+2026-10-09 | Oracz Jacek | Sobkow Zbigniew | 3-0 | 1 | 1 | Pending
