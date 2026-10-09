@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-09T02:29Z
+# updated 2026-10-09T02:59Z
 # pair | Adach Rafal | Cesarz Milosz | 2026-10-09T02:28Z
 2025-09-01 | Adach Rafal | Cesarz Milosz | 3-0
 # pair | Adach Rafal | Jadach Oskar | 2026-10-09T02:28Z
@@ -1616,7 +1616,7 @@
 2026-03-29 | Badura Jaroslaw | Kaczmarek Jakub | 3-1
 2026-05-10 | Badura Jaroslaw | Kaczmarek Jakub | 3-1
 2026-08-26 | Badura Jaroslaw | Kaczmarek Jakub | 3-0
-# pair | Badura Jaroslaw | Lojtek Tomasz | 2026-10-08T04:49Z
+# pair | Badura Jaroslaw | Lojtek Tomasz | 2026-10-09T02:58Z
 # pair | Badura Jaroslaw | Michalski Jakub | 2026-10-09T02:28Z
 2025-08-01 | Michalski Jakub | Badura Jaroslaw | 3-0
 2025-08-01 | Michalski Jakub | Badura Jaroslaw | 3-1
@@ -2115,7 +2115,7 @@
 2026-08-05 | Idaczyk Rafal | Baron Mariusz | 3-2
 2026-10-01 | Baron Mariusz | Idaczyk Rafal | 3-0
 2026-10-01 | Idaczyk Rafal | Baron Mariusz | 3-1
-# pair | Baron Mariusz | Jozefiak Michal | 2026-10-08T04:49Z
+# pair | Baron Mariusz | Jozefiak Michal | 2026-10-09T02:58Z
 # pair | Baron Mariusz | Kaczmarek Jakub | 2026-10-09T01:32Z
 2023-11-08 | Baron Mariusz | Kaczmarek Jakub | 3-2
 2023-11-13 | Baron Mariusz | Kaczmarek Jakub | 3-2
@@ -5935,7 +5935,7 @@
 2025-05-16 | Krcil Frantisek | Filbrandt Tomasz | 3-2
 2025-05-20 | Filbrandt Tomasz | Krcil Frantisek | 3-1
 2025-10-23 | Filbrandt Tomasz | Krcil Frantisek | 3-0
-# pair | Filbrandt Tomasz | Kukawka Milosz | 2026-10-08T04:49Z
+# pair | Filbrandt Tomasz | Kukawka Milosz | 2026-10-09T02:58Z
 # pair | Filbrandt Tomasz | Lamperski Jakub | 2026-10-08T23:01Z
 # pair | Filbrandt Tomasz | Marchlewski Marcin | 2026-10-09T01:59Z
 2023-08-16 | Filbrandt Tomasz | Marchlewski Marcin | 3-0
@@ -7995,7 +7995,8 @@
 2026-09-20 | Guzik Michal | Nocun Zbigniew | 3-0
 2026-09-21 | Guzik Michal | Nocun Zbigniew | 3-0
 2026-10-08 | Guzik Michal | Nocun Zbigniew | 3-0
-# pair | Guzik Michal | Skupinski Arkadiusz | 2026-10-08T04:49Z
+# pair | Guzik Michal | Skupinski Arkadiusz | 2026-10-09T02:58Z
+2026-10-08 | Guzik Michal | Skupinski Arkadiusz | 3-0
 # pair | Guzik Michal | Tkaczyk Henryk | 2026-10-09T01:32Z
 2026-07-16 | Tkaczyk Henryk | Guzik Michal | 3-0
 2026-07-16 | Tkaczyk Henryk | Guzik Michal | 3-0
@@ -8085,7 +8086,7 @@
 2026-09-18 | Hetnar Krzysztof | Szymanski Igor | 3-1
 2026-09-22 | Hetnar Krzysztof | Szymanski Igor | 3-2
 2026-09-28 | Hetnar Krzysztof | Szymanski Igor | 3-2
-# pair | Idaczyk Rafal | Jozefiak Michal | 2026-10-08T04:49Z
+# pair | Idaczyk Rafal | Jozefiak Michal | 2026-10-09T02:58Z
 # pair | Idaczyk Rafal | Kaczmarek Jakub | 2026-10-09T01:32Z
 2023-11-30 | Kaczmarek Jakub | Idaczyk Rafal | 3-2
 2024-07-21 | Idaczyk Rafal | Kaczmarek Jakub | 3-0
@@ -10235,14 +10236,14 @@
 2026-07-26 | Jesiek Jakub | Pytlas Wojciech | 3-2
 2026-09-05 | Pytlas Wojciech | Jesiek Jakub | 3-2
 # pair | Jesiek Jakub | Szymanski Igor | 2026-10-08T23:01Z
-# pair | Jozefiak Michal | Kaczmarek Jakub | 2026-10-08T04:49Z
+# pair | Jozefiak Michal | Kaczmarek Jakub | 2026-10-09T02:58Z
 # pair | Jozefiak Michal | Oracz Lukasz | 2026-10-09T01:32Z
 2026-09-24 | Oracz Lukasz | Jozefiak Michal | 3-0
 2026-09-24 | Oracz Lukasz | Jozefiak Michal | 3-0
 2026-10-01 | Jozefiak Michal | Oracz Lukasz | 3-1
 2026-10-01 | Oracz Lukasz | Jozefiak Michal | 3-2
-# pair | Jozefiak Michal | Sobkow Zbigniew | 2026-10-08T04:49Z
-# pair | Jozefiak Michal | Sokolowski Oskar | 2026-10-08T04:49Z
+# pair | Jozefiak Michal | Sobkow Zbigniew | 2026-10-09T02:58Z
+# pair | Jozefiak Michal | Sokolowski Oskar | 2026-10-09T02:58Z
 # pair | Jurowicz Grzegorz | Koczyba Mariusz | 2026-10-09T01:09Z
 2025-12-23 | Koczyba Mariusz | Jurowicz Grzegorz | 3-1
 2025-12-23 | Koczyba Mariusz | Jurowicz Grzegorz | 3-1
@@ -11134,7 +11135,7 @@
 2026-08-05 | Kaczmarek Jakub | Slosarczyk Pawel | 3-0
 2026-08-05 | Slosarczyk Pawel | Kaczmarek Jakub | 3-2
 2026-09-10 | Kaczmarek Jakub | Slosarczyk Pawel | 3-1
-# pair | Kaczmarek Jakub | Sobkow Zbigniew | 2026-10-08T04:49Z
+# pair | Kaczmarek Jakub | Sobkow Zbigniew | 2026-10-09T02:58Z
 # pair | Kaczmarek Jakub | Sokolowski Oskar | 2026-10-09T01:59Z
 2025-12-14 | Sokolowski Oskar | Kaczmarek Jakub | 3-2
 2025-12-21 | Kaczmarek Jakub | Sokolowski Oskar | 3-2
@@ -12435,7 +12436,8 @@
 2026-06-02 | Wloczko Krzysztof | Klos Patrik | 3-1
 2026-06-18 | Klos Patrik | Wloczko Krzysztof | 3-0
 2026-09-22 | Wloczko Krzysztof | Klos Patrik | 3-0
-# pair | Koczyba Mariusz | Komandzik Rafal | 2026-10-08T04:49Z
+# pair | Koczyba Mariusz | Komandzik Rafal | 2026-10-09T02:58Z
+2026-10-08 | Koczyba Mariusz | Komandzik Rafal | 3-1
 # pair | Koczyba Mariusz | Krupa Sebastian | 2026-10-08T04:39Z
 2025-04-11 | Koczyba Mariusz | Krupa Sebastian | 3-1
 2025-06-06 | Krupa Sebastian | Koczyba Mariusz | 3-0
@@ -13550,12 +13552,15 @@
 2026-07-16 | Kolodziej Krystian | Sporek Szymon | 3-2
 2026-08-28 | Sporek Szymon | Kolodziej Krystian | 3-1
 2026-08-29 | Kolodziej Krystian | Sporek Szymon | 3-1
-# pair | Komandzik Rafal | Kurek Pawel | 2026-10-08T04:49Z
-# pair | Komandzik Rafal | Pytlas Wojciech | 2026-10-08T04:49Z
+# pair | Komandzik Rafal | Kurek Pawel | 2026-10-09T02:58Z
+2026-10-09 | Kurek Pawel | Komandzik Rafal | 3-1
+# pair | Komandzik Rafal | Pytlas Wojciech | 2026-10-09T02:58Z
+2026-10-08 | Pytlas Wojciech | Komandzik Rafal | 3-0
 # pair | Komandzik Rafal | Tkocz Marek | 2026-10-09T01:09Z
 2026-09-11 | Tkocz Marek | Komandzik Rafal | 3-1
 2026-10-08 | Tkocz Marek | Komandzik Rafal | 3-0
-# pair | Komandzik Rafal | Vincenec Oliver | 2026-10-08T04:49Z
+# pair | Komandzik Rafal | Vincenec Oliver | 2026-10-09T02:58Z
+2026-10-08 | Vincenec Oliver | Komandzik Rafal | 3-1
 # pair | Kosmal Dawid | Kuzmicz Jakub | 2026-10-08T04:39Z
 2026-02-06 | Kuzmicz Jakub | Kosmal Dawid | 3-0
 2026-03-18 | Kuzmicz Jakub | Kosmal Dawid | 3-2
@@ -14521,7 +14526,7 @@
 2026-10-08 | Trela Mateusz | Kowalczyk Marcin | 3-0
 # pair | Krcil Frantisek | Kukawka Milosz | 2026-10-09T01:59Z
 2026-09-29 | Krcil Frantisek | Kukawka Milosz | 3-1
-# pair | Krcil Frantisek | Lamperski Jakub | 2026-10-08T04:49Z
+# pair | Krcil Frantisek | Lamperski Jakub | 2026-10-09T02:58Z
 # pair | Krcil Frantisek | Sulkowski Bartek | 2026-10-09T01:59Z
 2026-01-18 | Krcil Frantisek | Sulkowski Bartek | 3-1
 2026-09-10 | Sulkowski Bartek | Krcil Frantisek | 3-1
@@ -14532,7 +14537,7 @@
 2026-09-17 | Wisniewski Bartlomiej | Krcil Frantisek | 3-2
 2026-09-21 | Krcil Frantisek | Wisniewski Bartlomiej | 3-1
 2026-09-24 | Wisniewski Bartlomiej | Krcil Frantisek | 3-0
-# pair | Krcil Frantisek | Wrobel Dariusz | 2026-10-08T04:49Z
+# pair | Krcil Frantisek | Wrobel Dariusz | 2026-10-09T02:58Z
 # pair | Krcil Frantisek | Zochniak Jakub | 2026-10-09T01:59Z
 2024-02-20 | Krcil Frantisek | Zochniak Jakub | 3-2
 2024-03-06 | Zochniak Jakub | Krcil Frantisek | 3-2
@@ -14634,7 +14639,9 @@
 2026-10-06 | Krezel Andrzej | Tkaczyk Henryk | 3-2
 2026-10-07 | Tkaczyk Henryk | Krezel Andrzej | 3-2
 2026-10-08 | Tkaczyk Henryk | Krezel Andrzej | 3-2
-# pair | Krezel Andrzej | Wolny Michal | 2026-10-08T04:49Z
+# pair | Krezel Andrzej | Wolny Michal | 2026-10-09T02:58Z
+2026-10-08 | Krezel Andrzej | Wolny Michal | 3-1
+2026-10-09 | Wolny Michal | Krezel Andrzej | 3-2
 # pair | Krezel Andrzej | Zelezik Jacek | 2026-10-09T01:09Z
 2026-08-25 | Zelezik Jacek | Krezel Andrzej | 3-0
 2026-08-25 | Zelezik Jacek | Krezel Andrzej | 3-2
@@ -14748,7 +14755,7 @@
 2026-08-11 | Wrzalik Tomasz | Krupa Sebastian | 3-1
 2026-08-12 | Wrzalik Tomasz | Krupa Sebastian | 3-0
 2026-10-07 | Krupa Sebastian | Wrzalik Tomasz | 3-0
-# pair | Krutak Michal | Malcher Krzysztof | 2026-10-08T04:49Z
+# pair | Krutak Michal | Malcher Krzysztof | 2026-10-09T02:58Z
 # pair | Krutak Michal | Oracz Jacek | 2026-10-09T02:28Z
 2026-01-30 | Oracz Jacek | Krutak Michal | 3-1
 2026-01-30 | Oracz Jacek | Krutak Michal | 3-2
@@ -16112,7 +16119,7 @@
 2025-05-12 | Lojtek Tomasz | Szymik Robert | 3-1
 2025-05-16 | Lojtek Tomasz | Szymik Robert | 3-1
 2025-05-16 | Lojtek Tomasz | Szymik Robert | 3-2
-# pair | Lojtek Tomasz | Wiza Roman | 2026-10-08T04:49Z
+# pair | Lojtek Tomasz | Wiza Roman | 2026-10-09T02:58Z
 # pair | Lukaszewski Mikolaj | Poloszczanski Dawid | 2026-10-09T02:28Z
 2025-08-16 | Poloszczanski Dawid | Lukaszewski Mikolaj | 3-0
 2025-12-17 | Lukaszewski Mikolaj | Poloszczanski Dawid | 3-2
@@ -20309,7 +20316,7 @@
 2026-08-10 | Wichowski Grzegorz | Nowak Jakub | 3-2
 2026-08-24 | Nowak Jakub | Wichowski Grzegorz | 3-0
 2026-08-24 | Wichowski Grzegorz | Nowak Jakub | 3-0
-# pair | Nowak Jakub | Wiciok Piotr | 2026-10-08T04:49Z
+# pair | Nowak Jakub | Wiciok Piotr | 2026-10-09T02:58Z
 # pair | Nowak Jakub | Wrzalik Tomasz | 2026-10-09T01:32Z
 2024-11-11 | Nowak Jakub | Wrzalik Tomasz | 3-0
 2024-11-11 | Nowak Jakub | Wrzalik Tomasz | 3-2
@@ -24048,7 +24055,7 @@
 2026-09-21 | Wichowski Grzegorz | Skotniczny Rafal | 3-1
 2026-10-05 | Skotniczny Rafal | Wichowski Grzegorz | 3-1
 2026-10-05 | Wichowski Grzegorz | Skotniczny Rafal | 3-2
-# pair | Skotniczny Rafal | Wiciok Piotr | 2026-10-08T04:49Z
+# pair | Skotniczny Rafal | Wiciok Piotr | 2026-10-09T02:58Z
 # pair | Skotniczny Rafal | Wrzalik Tomasz | 2026-10-09T01:59Z
 2024-11-29 | Skotniczny Rafal | Wrzalik Tomasz | 3-1
 2024-11-29 | Skotniczny Rafal | Wrzalik Tomasz | 3-1
@@ -25818,7 +25825,7 @@
 2026-08-21 | Wichowski Grzegorz | Wrzalik Tomasz | 3-2
 2026-08-28 | Wichowski Grzegorz | Wrzalik Tomasz | 3-2
 2026-08-28 | Wichowski Grzegorz | Wrzalik Tomasz | 3-2
-# pair | Wiciok Piotr | Wrzalik Tomasz | 2026-10-08T04:49Z
+# pair | Wiciok Piotr | Wrzalik Tomasz | 2026-10-09T02:58Z
 # pair | Wieczerzak Jacek | Wojtaszczyk Wojciech | 2026-10-08T23:01Z
 2026-07-19 | Wojtaszczyk Wojciech | Wieczerzak Jacek | 3-0
 2026-07-19 | Wojtaszczyk Wojciech | Wieczerzak Jacek | 3-1
