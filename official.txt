@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T17:54Z
+# updated 2026-10-09T17:58Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11401,13 +11401,14 @@
 2026-10-09 | Wichowski Grzegorz | Wrzalik Tomasz | 3-1 | 10 | 10 | +5
 2026-10-09 | Skotniczny Rafal | Wiciok Piotr | 3-2 | 10 | 10 | +5
 2026-10-09 | Skorski Michal | Strus Piotr | 3-0 | 3 | 2 | Pending
-2026-10-09 | Marchlewski Marcin | Filbrandt Tomasz | 3-1 |  |  | 
+2026-10-09 | Marchlewski Marcin | Filbrandt Tomasz | 3-1 | 1 | 6 | +15
 2026-10-09 | Cesarz Milosz | Jadach Oskar | 3-0 | 2 | 2 | Pending
 2026-10-09 | Lukaszewski Mikolaj | Eliasz Adrian | 3-2 | 2 | 2 | +9
 2026-10-09 | Jedrzejowski Oskar | Krutak Michal | 3-2 | 2 | 2 | Pending
 2026-10-09 | Dlugaj Rafal | Nowak Jakub | 3-0 | 10 | 10 | +7
-2026-10-09 | Staszczyk Konrad | Wozniak Jakub | 3-1 |  |  | 
-2026-10-09 | Schaniel Krzysztof | Adach Rafal | 3-0 |  |  | 
-2026-10-09 | Warpas Blazej | Skorski Michal | 3-1 |  |  | 
-2026-10-09 | Skorupa Jakub | Malcher Krzysztof | 3-1 |  |  | 
-2026-10-09 | Badura Jaroslaw | Wiza Roman | 3-1 |  |  | 
+2026-10-09 | Staszczyk Konrad | Wozniak Jakub | 3-1 | 3 | 2 | +2
+2026-10-09 | Schaniel Krzysztof | Adach Rafal | 3-0 | 3 | 3 | Pending
+2026-10-09 | Warpas Blazej | Skorski Michal | 3-1 | 3 | 4 | Pending
+2026-10-09 | Skorupa Jakub | Malcher Krzysztof | 3-1 | 2 | 2 | Pending
+2026-10-09 | Badura Jaroslaw | Wiza Roman | 3-1 | 1 | 1 | Pending
+2026-10-09 | Jedrzejowski Oskar | Oracz Jacek | 3-0 | 3 |  | Pending
