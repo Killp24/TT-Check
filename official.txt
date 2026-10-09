@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T12:33Z
+# updated 2026-10-09T12:34Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11336,10 +11336,10 @@
 2026-10-09 | Jendrzejewski Patryk | Rutkowski Mateusz | 3-0 | 8 | 3 | Pending
 2026-10-09 | Czerwinski Bartosz | Sulkowski Bartek | 3-2 | 3 | 3 | Pending
 2026-10-09 | Dlugaj Rafal | Wiciok Piotr | 3-2 | 6 | 6 | Pending
-2026-10-09 | Michna Dawid | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-09 | Oracz Lukasz | Sobkow Zbigniew | 3-1 |  |  | 
-2026-10-09 | Kaczmarek Jakub | Jozefiak Michal | 3-0 |  |  | 
-2026-10-09 | Kolodziej Krystian | Braun Josef | 3-1 |  |  | 
-2026-10-09 | Kuzmicz Jakub | Klos Patrik | 3-1 |  |  | 
-2026-10-09 | Kukawka Milosz | Krcil Frantisek | 3-0 |  |  | 
-2026-10-09 | Wrzalik Tomasz | Nowak Jakub | 3-0 |  |  | 
+2026-10-09 | Michna Dawid | Jadczyk Marcin | 3-1 | 7 | 7 | +12
+2026-10-09 | Oracz Lukasz | Sobkow Zbigniew | 3-1 | 7 | 8 | Pending
+2026-10-09 | Kaczmarek Jakub | Jozefiak Michal | 3-0 | 8 | 8 | Pending
+2026-10-09 | Kolodziej Krystian | Braun Josef | 3-1 | 3 | 8 | Pending
+2026-10-09 | Kuzmicz Jakub | Klos Patrik | 3-1 | 8 | 8 | Pending
+2026-10-09 | Kukawka Milosz | Krcil Frantisek | 3-0 | 3 | 8 | Pending
+2026-10-09 | Wrzalik Tomasz | Nowak Jakub | 3-0 | 6 | 6 | Pending
