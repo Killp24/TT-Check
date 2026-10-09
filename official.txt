@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T10:30Z
+# updated 2026-10-09T10:32Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11307,14 +11307,14 @@
 2026-10-09 | Ruszkiewicz Adam | Fomin Yurij | 3-1 | 5 | 5 | +13
 2026-10-09 | Skotniczny Rafal | Wrzalik Tomasz | 3-2 | 4 | 4 | Pending
 2026-10-09 | Jozefiak Michal | Sokolowski Oskar | 3-2 | 6 | 1 | Pending
-2026-10-09 | Filbrandt Tomasz | Czerwinski Bartosz | 3-2 |  |  | 
+2026-10-09 | Filbrandt Tomasz | Czerwinski Bartosz | 3-2 | 1 | 1 | Pending
 2026-10-09 | Rutkowski Mateusz | Braun Josef | 3-1 | 1 | 6 | Pending
 2026-10-09 | Klos Patrik | Jendrzejewski Patryk | 3-2 | 6 | 6 | Pending
 2026-10-09 | Michna Dawid | Witkowski Antoni | 3-1 |  |  | 
-2026-10-09 | Kaczmarek Jakub | Sobkow Zbigniew | 3-2 |  |  | 
-2026-10-09 | Sokolowski Oskar | Oracz Lukasz | 3-1 |  |  | 
+2026-10-09 | Kaczmarek Jakub | Sobkow Zbigniew | 3-2 | 6 | 6 | Pending
+2026-10-09 | Sokolowski Oskar | Oracz Lukasz | 3-1 | 2 | 6 | Pending
 2026-10-09 | Rutkowski Mateusz | Braun Josef | 3-2 |  |  | 
-2026-10-09 | Kuzmicz Jakub | Kolodziej Krystian | 3-1 |  |  | 
-2026-10-09 | Zochniak Jakub | Kukawka Milosz | 3-0 |  |  | 
-2026-10-09 | Wichowski Grzegorz | Dlugaj Rafal | 3-2 |  |  | 
-2026-10-09 | Wiciok Piotr | Nowak Jakub | 3-0 |  |  | 
+2026-10-09 | Kuzmicz Jakub | Kolodziej Krystian | 3-1 | 6 | 1 | Pending
+2026-10-09 | Zochniak Jakub | Kukawka Milosz | 3-0 | 1 | 1 | Pending
+2026-10-09 | Wichowski Grzegorz | Dlugaj Rafal | 3-2 | 4 | 4 | +5
+2026-10-09 | Wiciok Piotr | Nowak Jakub | 3-0 | 4 | 4 | +11
