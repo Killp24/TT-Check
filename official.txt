@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T11:28Z
+# updated 2026-10-09T11:32Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -10990,7 +10990,7 @@
 2026-10-08 | Badura Jaroslaw | Nowak Jakub | 3-2 | 5 | 5 | Pending
 2026-10-08 | Slosarczyk Pawel | Glanowski Waldemar | 3-1 | 5 | 4 | Pending
 2026-10-08 | Pruszkowski Jakub | Szostok Sebastian | 3-1 | 7 | 7 | Pending
-2026-10-08 | Zochniak Jakub | Sulkowski Bartek | 3-2 |  |  | 
+2026-10-08 | Zochniak Jakub | Sulkowski Bartek | 3-2 | 5 | 10 | Pending
 2026-10-08 | Klocek Kamil | Minda Michal | 3-0 | 2 | 1 | +21
 2026-10-08 | Schaniel Krzysztof | Kaczmarek Jakub | 3-1 | 5 | 5 | Pending
 2026-10-08 | Kapik Krzysztof | Jendrzejewski Patryk | 3-1 | 2 | 7 | +13
@@ -11318,16 +11318,16 @@
 2026-10-09 | Zochniak Jakub | Kukawka Milosz | 3-0 | 1 | 1 | Pending
 2026-10-09 | Wichowski Grzegorz | Dlugaj Rafal | 3-2 | 4 | 4 | +5
 2026-10-09 | Wiciok Piotr | Nowak Jakub | 3-0 | 4 | 4 | +11
-2026-10-09 | Wederlich Damian | David Petr | 3-1 |  |  | 
+2026-10-09 | Wederlich Damian | David Petr | 3-1 | 6 | 6 | +13
 2026-10-09 | Jendrzejewski Patryk | Braun Josef | 3-2 | 7 | 7 | Pending
-2026-10-09 | Kuzmicz Jakub | Rutkowski Mateusz | 3-0 |  |  | 
+2026-10-09 | Kuzmicz Jakub | Rutkowski Mateusz | 3-0 | 7 | 2 | Pending
 2026-10-09 | Czerwinski Bartosz | Krcil Frantisek | 3-2 | 2 | 7 | Pending
-2026-10-09 | Zochniak Jakub | Sulkowski Bartek | 3-2 |  |  | 
+2026-10-09 | Zochniak Jakub | Sulkowski Bartek | 3-2 | 2 | 2 | Pending
 2026-10-09 | Skotniczny Rafal | Dlugaj Rafal | 3-0 | 5 | 5 | Pending
 2026-10-09 | Wrzalik Tomasz | Wiciok Piotr | 3-0 | 5 | 5 | Pending
 2026-10-09 | Zandecki Jan | Jadczyk Marcin | 3-2 |  |  | 
-2026-10-09 | Kaczmarek Jakub | Baron Mariusz | 3-2 |  |  | 
-2026-10-09 | Jozefiak Michal | Sobkow Zbigniew | 3-1 |  |  | 
-2026-10-09 | Klos Patrik | Kolodziej Krystian | 3-1 |  |  | 
-2026-10-09 | Filbrandt Tomasz | Kukawka Milosz | 3-0 |  |  | 
-2026-10-09 | Wichowski Grzegorz | Nowak Jakub | 3-0 |  |  | 
+2026-10-09 | Kaczmarek Jakub | Baron Mariusz | 3-2 | 7 | 7 | Pending
+2026-10-09 | Jozefiak Michal | Sobkow Zbigniew | 3-1 | 7 | 7 | Pending
+2026-10-09 | Klos Patrik | Kolodziej Krystian | 3-1 | 7 | 2 | Pending
+2026-10-09 | Filbrandt Tomasz | Kukawka Milosz | 3-0 | 2 | 2 | Pending
+2026-10-09 | Wichowski Grzegorz | Nowak Jakub | 3-0 | 5 | 5 | +5
