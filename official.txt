@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T02:25Z
+# updated 2026-10-09T02:27Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11201,5 +11201,6 @@
 2026-10-09 | Machelski Michal | Zelezik Jacek | 3-2 | 2 | 1 | Pending
 2026-10-09 | Nocun Zbigniew | Tkaczyk Henryk | 3-2 | 1 | 2 | +12
 2026-10-09 | Adamus Kacper | Vincenec Oliver | 3-0 | 2 | 1 | Pending
-2026-10-09 | Wolny Michal | Krezel Andrzej | 3-2 |  |  | 
-2026-10-09 | Zmijewski Artur | Skupinski Arkadiusz | 3-0 |  |  | 
+2026-10-09 | Wolny Michal | Krezel Andrzej | 3-2 | 2 | 2 | Pending
+2026-10-09 | Zmijewski Artur | Skupinski Arkadiusz | 3-0 | 3 | 2 | Pending
+2026-10-09 | Kurek Pawel | Komandzik Rafal | 3-1 | 2 | 1 | +6
