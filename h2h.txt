@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-09T18:01Z
+# updated 2026-10-09T18:31Z
 # pair | Adach Rafal | Cesarz Milosz | 2026-10-09T02:28Z
 2025-09-01 | Adach Rafal | Cesarz Milosz | 3-0
 # pair | Adach Rafal | Jadach Oskar | 2026-10-09T02:28Z
@@ -5219,7 +5219,7 @@
 2026-09-30 | Grela Artur | David Petr | 3-1
 2026-10-08 | Grela Artur | David Petr | 3-1
 2026-10-08 | Grela Artur | David Petr | 3-2
-# pair | David Petr | Jadczyk Marcin | 2026-10-08T23:57Z
+# pair | David Petr | Jadczyk Marcin | 2026-10-09T18:31Z
 2022-10-24 | David Petr | Jadczyk Marcin | 3-2
 2022-10-25 | David Petr | Jadczyk Marcin | 3-0
 2022-10-31 | Jadczyk Marcin | David Petr | 3-2
@@ -5434,6 +5434,8 @@
 2026-10-04 | David Petr | Jadczyk Marcin | 3-1
 2026-10-05 | Jadczyk Marcin | David Petr | 3-0
 2026-10-08 | Jadczyk Marcin | David Petr | 3-2
+2026-10-09 | David Petr | Jadczyk Marcin | 3-2
+2026-10-09 | Jadczyk Marcin | David Petr | 3-2
 # pair | David Petr | Michna Dawid | 2026-10-09T00:42Z
 2024-08-21 | David Petr | Michna Dawid | 3-0
 2024-08-21 | David Petr | Michna Dawid | 3-2
@@ -5474,7 +5476,7 @@
 2026-09-03 | David Petr | Michna Dawid | 3-1
 2026-09-03 | Michna Dawid | David Petr | 3-1
 2026-10-08 | Michna Dawid | David Petr | 3-1
-# pair | David Petr | Wederlich Damian | 2026-10-08T23:57Z
+# pair | David Petr | Wederlich Damian | 2026-10-09T18:31Z
 2023-12-27 | David Petr | Wederlich Damian | 3-2
 2023-12-28 | Wederlich Damian | David Petr | 3-1
 2023-12-28 | Wederlich Damian | David Petr | 3-2
@@ -5538,6 +5540,8 @@
 2026-07-01 | Wederlich Damian | David Petr | 3-1
 2026-10-08 | David Petr | Wederlich Damian | 3-0
 2026-10-08 | David Petr | Wederlich Damian | 3-1
+2026-10-09 | Wederlich Damian | David Petr | 3-1
+2026-10-09 | Wederlich Damian | David Petr | 3-2
 # pair | David Petr | Witkowski Antoni | 2026-10-09T01:32Z
 2022-10-24 | David Petr | Witkowski Antoni | 3-1
 2022-10-24 | David Petr | Witkowski Antoni | 3-2
@@ -5596,7 +5600,7 @@
 2026-06-11 | David Petr | Witkowski Antoni | 3-1
 2026-06-12 | David Petr | Witkowski Antoni | 3-0
 2026-06-12 | Witkowski Antoni | David Petr | 3-0
-# pair | David Petr | Zandecki Jan | 2026-10-08T23:57Z
+# pair | David Petr | Zandecki Jan | 2026-10-09T18:31Z
 2022-12-05 | Zandecki Jan | David Petr | 3-2
 2022-12-08 | David Petr | Zandecki Jan | 3-0
 2022-12-08 | David Petr | Zandecki Jan | 3-2
@@ -5702,6 +5706,8 @@
 2026-09-29 | Zandecki Jan | David Petr | 3-0
 2026-10-08 | David Petr | Zandecki Jan | 3-1
 2026-10-08 | David Petr | Zandecki Jan | 3-2
+2026-10-09 | David Petr | Zandecki Jan | 3-1
+2026-10-09 | David Petr | Zandecki Jan | 3-2
 # pair | Dlugaj Rafal | Nowak Jakub | 2026-10-09T01:59Z
 # pair | Dlugaj Rafal | Skotniczny Rafal | 2026-10-09T01:59Z
 # pair | Dlugaj Rafal | Wichowski Grzegorz | 2026-10-09T01:59Z
@@ -9393,7 +9399,7 @@
 2026-09-19 | Jadczyk Marcin | Stecyszyn Jakub | 3-1
 2026-09-19 | Stecyszyn Jakub | Jadczyk Marcin | 3-1
 2026-10-07 | Stecyszyn Jakub | Jadczyk Marcin | 3-1
-# pair | Jadczyk Marcin | Wederlich Damian | 2026-10-08T23:57Z
+# pair | Jadczyk Marcin | Wederlich Damian | 2026-10-09T18:31Z
 2022-11-24 | Wederlich Damian | Jadczyk Marcin | 3-0
 2022-11-26 | Jadczyk Marcin | Wederlich Damian | 3-1
 2022-12-13 | Wederlich Damian | Jadczyk Marcin | 3-1
@@ -9526,6 +9532,8 @@
 2026-09-19 | Jadczyk Marcin | Wederlich Damian | 3-1
 2026-09-19 | Wederlich Damian | Jadczyk Marcin | 3-2
 2026-10-08 | Jadczyk Marcin | Wederlich Damian | 3-0
+2026-10-09 | Wederlich Damian | Jadczyk Marcin | 3-1
+2026-10-09 | Wederlich Damian | Jadczyk Marcin | 3-2
 # pair | Jadczyk Marcin | Witkowski Antoni | 2026-10-09T01:32Z
 2022-10-24 | Witkowski Antoni | Jadczyk Marcin | 3-2
 2022-10-25 | Jadczyk Marcin | Witkowski Antoni | 3-1
@@ -9674,7 +9682,7 @@
 2026-06-12 | Jadczyk Marcin | Witkowski Antoni | 3-0
 2026-07-09 | Witkowski Antoni | Jadczyk Marcin | 3-1
 2026-07-10 | Jadczyk Marcin | Witkowski Antoni | 3-0
-# pair | Jadczyk Marcin | Zandecki Jan | 2026-10-08T23:57Z
+# pair | Jadczyk Marcin | Zandecki Jan | 2026-10-09T18:31Z
 2022-12-05 | Zandecki Jan | Jadczyk Marcin | 3-1
 2022-12-06 | Zandecki Jan | Jadczyk Marcin | 3-1
 2022-12-22 | Zandecki Jan | Jadczyk Marcin | 3-0
@@ -9840,6 +9848,8 @@
 2026-09-17 | Zandecki Jan | Jadczyk Marcin | 3-1
 2026-09-23 | Zandecki Jan | Jadczyk Marcin | 3-2
 2026-10-08 | Zandecki Jan | Jadczyk Marcin | 3-2
+2026-10-09 | Zandecki Jan | Jadczyk Marcin | 3-0
+2026-10-09 | Zandecki Jan | Jadczyk Marcin | 3-2
 # pair | Jedrzejowski Oskar | Karpiuk Mateusz | 2026-10-09T18:00Z
 # pair | Jedrzejowski Oskar | Krutak Michal | 2026-10-09T01:59Z
 2026-04-04 | Jedrzejowski Oskar | Krutak Michal | 3-1
@@ -10283,10 +10293,11 @@
 2023-02-12 | Stecyszyn Jakub | Jendrzejewski Patryk | 3-0
 2026-10-08 | Stecyszyn Jakub | Jendrzejewski Patryk | 3-1
 2026-10-08 | Stecyszyn Jakub | Jendrzejewski Patryk | 3-1
-# pair | Jendrzejewski Patryk | Wloczko Krzysztof | 2026-10-08T23:57Z
+# pair | Jendrzejewski Patryk | Wloczko Krzysztof | 2026-10-09T18:31Z
 2026-09-21 | Wloczko Krzysztof | Jendrzejewski Patryk | 3-2
 2026-09-22 | Wloczko Krzysztof | Jendrzejewski Patryk | 3-2
 2026-10-08 | Jendrzejewski Patryk | Wloczko Krzysztof | 3-0
+2026-10-09 | Wloczko Krzysztof | Jendrzejewski Patryk | 3-2
 # pair | Jesiek Jakub | Koczyba Mariusz | 2026-10-09T16:31Z
 2025-10-30 | Jesiek Jakub | Koczyba Mariusz | 3-0
 2025-10-30 | Jesiek Jakub | Koczyba Mariusz | 3-1
@@ -15851,9 +15862,10 @@
 2026-10-06 | Warpas Blazej | Lamperski Jakub | 3-0
 2026-10-07 | Lamperski Jakub | Warpas Blazej | 3-1
 2026-10-08 | Lamperski Jakub | Warpas Blazej | 3-1
-# pair | Lamperski Jakub | Wisniewski Bartlomiej | 2026-10-08T23:57Z
+# pair | Lamperski Jakub | Wisniewski Bartlomiej | 2026-10-09T18:31Z
 2026-10-07 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0
 2026-10-08 | Lamperski Jakub | Wisniewski Bartlomiej | 3-1
+2026-10-09 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0
 # pair | Lamperski Jakub | Wrobel Dariusz | 2026-10-09T01:32Z
 2026-10-01 | Lamperski Jakub | Wrobel Dariusz | 3-0
 2026-10-06 | Lamperski Jakub | Wrobel Dariusz | 3-2
@@ -16466,7 +16478,7 @@
 2026-10-01 | Sulkowski Karol | Lukaszewski Mikolaj | 3-0
 2026-10-07 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1
 2026-10-08 | Lukaszewski Mikolaj | Sulkowski Karol | 3-0
-# pair | Lukaszewski Mikolaj | Warpas Blazej | 2026-10-08T23:57Z
+# pair | Lukaszewski Mikolaj | Warpas Blazej | 2026-10-09T18:31Z
 2026-02-15 | Warpas Blazej | Lukaszewski Mikolaj | 3-0
 2026-03-15 | Lukaszewski Mikolaj | Warpas Blazej | 3-1
 2026-03-19 | Warpas Blazej | Lukaszewski Mikolaj | 3-0
@@ -25317,7 +25329,7 @@
 2026-10-01 | Sulkowski Karol | Warpas Blazej | 3-0
 2026-10-07 | Warpas Blazej | Sulkowski Karol | 3-1
 2026-10-08 | Warpas Blazej | Sulkowski Karol | 3-0
-# pair | Sulkowski Karol | Wisniewski Bartlomiej | 2026-10-08T23:57Z
+# pair | Sulkowski Karol | Wisniewski Bartlomiej | 2026-10-09T18:31Z
 2025-12-29 | Wisniewski Bartlomiej | Sulkowski Karol | 3-2
 2026-01-03 | Wisniewski Bartlomiej | Sulkowski Karol | 3-0
 2026-01-06 | Sulkowski Karol | Wisniewski Bartlomiej | 3-0
@@ -25343,6 +25355,7 @@
 2026-09-10 | Wisniewski Bartlomiej | Sulkowski Karol | 3-2
 2026-10-07 | Wisniewski Bartlomiej | Sulkowski Karol | 3-2
 2026-10-08 | Sulkowski Karol | Wisniewski Bartlomiej | 3-0
+2026-10-09 | Wisniewski Bartlomiej | Sulkowski Karol | 3-0
 # pair | Sulkowski Karol | Wrobel Dariusz | 2026-10-09T01:32Z
 2026-01-27 | Sulkowski Karol | Wrobel Dariusz | 3-1
 2026-01-27 | Sulkowski Karol | Wrobel Dariusz | 3-1
