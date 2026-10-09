@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T18:57Z
+# updated 2026-10-09T19:03Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11417,10 +11417,13 @@
 2026-10-09 | Poloszczanski Dawid | Lukaszewski Mikolaj | 3-2 | 4 | 3 | Pending
 2026-10-09 | Pawlik Cezary | Skorupa Jakub | 3-0 | 3 | 3 | Pending
 2026-10-09 | Szymik Robert | Michalski Jakub | 3-0 | 1 | 1 | Pending
-2026-10-09 | Marchlewski Marcin | Rudomina Kamil | 3-2 |  |  | 
-2026-10-09 | Kolek Maciej | Wozniak Jakub | 3-0 |  |  | 
-2026-10-09 | Cesarz Milosz | Sokolowski Oskar | 3-0 |  |  | 
-2026-10-09 | Jadach Oskar | Schaniel Krzysztof | 3-1 |  |  | 
-2026-10-09 | Strus Piotr | Eliasz Adrian | 3-2 |  |  | 
-2026-10-09 | Lukaszewski Mikolaj | Warpas Blazej | 3-0 |  |  | 
-2026-10-09 | Adamus Mariusz | Lojtek Tomasz | 3-2 |  |  | 
+2026-10-09 | Marchlewski Marcin | Rudomina Kamil | 3-2 | 2 | 2 | +6
+2026-10-09 | Kolek Maciej | Wozniak Jakub | 3-0 | 3 | 3 | +4
+2026-10-09 | Cesarz Milosz | Sokolowski Oskar | 3-0 | 3 | 8 | Pending
+2026-10-09 | Jadach Oskar | Schaniel Krzysztof | 3-1 | 4 | 4 | Pending
+2026-10-09 | Strus Piotr | Eliasz Adrian | 3-2 | 3 | 3 | Pending
+2026-10-09 | Lukaszewski Mikolaj | Warpas Blazej | 3-0 | 4 | 4 | Pending
+2026-10-09 | Adamus Mariusz | Lojtek Tomasz | 3-2 | 1 | 1 | Pending
+2026-10-09 | Szymik Robert | Wiza Roman | 3-1 |  | 2 | 
+2026-10-09 | Malcher Krzysztof | Krutak Michal | 3-2 | 3 | 3 | Pending
+2026-10-09 | Oracz Jacek | Skorupa Jakub | 3-0 | 5 | 4 | Pending
