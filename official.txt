@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T15:56Z
+# updated 2026-10-09T15:59Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11379,8 +11379,11 @@
 2026-10-09 | Wichowski Grzegorz | Nowak Jakub | 3-2 | 8 | 8 | Pending
 2026-10-09 | Skorski Michal | Poloszczanski Dawid | 3-2 | 2 | 2 | Pending
 2026-10-09 | Schaniel Krzysztof | Cesarz Milosz | 3-1 |  |  | 
-2026-10-09 | David Petr | Jadczyk Marcin | 3-2 |  |  | 
+2026-10-09 | David Petr | Jadczyk Marcin | 3-2 | 10 | 10 | +6
 2026-10-09 | Zandecki Jan | Michna Dawid | 3-1 |  |  | 
-2026-10-09 | Pawlik Cezary | Jedrzejowski Oskar | 3-1 |  |  | 
-2026-10-09 | Oracz Jacek | Malcher Krzysztof | 3-0 |  |  | 
-2026-10-09 | Skotniczny Rafal | Wrzalik Tomasz | 3-0 |  |  | 
+2026-10-09 | Pawlik Cezary | Jedrzejowski Oskar | 3-1 | 1 | 1 | Pending
+2026-10-09 | Oracz Jacek | Malcher Krzysztof | 3-0 | 2 | 1 | Pending
+2026-10-09 | Skotniczny Rafal | Wrzalik Tomasz | 3-0 | 9 | 9 | Pending
+2026-10-09 | Warpas Blazej | Eliasz Adrian | 3-1 | 1 | 1 | Pending
+2026-10-09 | Dlugaj Rafal | Wichowski Grzegorz | 3-1 | 9 |  | Pending
+2026-10-09 | Michna Dawid | Zandecki Jan | 3-1 | 10 | 10 | +13
