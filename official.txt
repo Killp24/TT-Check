@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-09T23:53Z
+# updated 2026-10-09T23:56Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11477,6 +11477,9 @@
 2026-10-09 | Wiza Roman | Michalski Jakub | 3-0 | 5 | 5 | Pending
 2026-10-09 | Rudomina Kamil | Wozniak Jakub | 3-0 | 7 | 6 | Pending
 2026-10-09 | Cesarz Milosz | Jadach Oskar | 3-2 | 7 | 7 | Pending
+2026-10-09 | Badura Jaroslaw | Lojtek Tomasz | 3-1 | 6 | 6 | Pending
+2026-10-09 | Staszczyk Konrad | Marchlewski Marcin | 3-1 | 8 | 7 | Pending
+2026-10-09 | Adach Rafal | Schaniel Krzysztof | 3-2 | 8 | 8 | Pending
 2026-10-10 | Schaniel Krzysztof | Sawicki Grzegorz | 3-0 |  |  | 
 2026-10-10 | Skorupa Jakub | Pawlik Cezary | 3-1 | 1 | 1 | Pending
 2026-10-10 | Staszczyk Konrad | Kolek Maciej | 3-1 |  |  | 
@@ -11495,5 +11498,5 @@
 2026-10-10 | Badura Jaroslaw | Lojtek Tomasz | 3-1 |  |  | 
 2026-10-10 | Staszczyk Konrad | Marchlewski Marcin | 3-1 |  |  | 
 2026-10-10 | Adach Rafal | Schaniel Krzysztof | 3-2 |  |  | 
-2026-10-10 | Eliasz Adrian | Poloszczanski Dawid | 3-2 |  |  | 
-2026-10-10 | Jedrzejowski Oskar | Oracz Jacek | 3-1 |  |  | 
+2026-10-10 | Eliasz Adrian | Poloszczanski Dawid | 3-2 | 1 | 3 | Pending
+2026-10-10 | Jedrzejowski Oskar | Oracz Jacek | 3-1 | 2 | 2 | Pending
