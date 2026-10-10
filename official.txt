@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T08:26Z
+# updated 2026-10-10T08:28Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11611,10 +11611,10 @@
 2026-10-10 | Pytlas Wojciech | Adamus Kacper | 3-2 | 4 | 4 | Pending
 2026-10-10 | Cichocki Aleksander | Buczynski Witold | 3-2 | 2 | 2 | Pending
 2026-10-10 | Gumulinski Piotr | Swider Dariusz | 3-1 | 2 | 2 | Pending
-2026-10-10 | Cyrnek Piotr | Michna Dawid | 3-2 |  |  | 
-2026-10-10 | Lach Marcin | Sawicki Grzegorz | 3-0 |  |  | 
-2026-10-10 | Piotrowski Tadeusz | Zochniak Jakub | 3-1 |  |  | 
-2026-10-10 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 |  |  | 
-2026-10-10 | Hetnar Krzysztof | Jesiek Jakub | 3-0 |  |  | 
-2026-10-10 | Pytlas Wojciech | Koczyba Mariusz | 3-2 |  |  | 
-2026-10-10 | Morawiec Daniel | Buczynski Witold | 3-0 |  |  | 
+2026-10-10 | Cyrnek Piotr | Michna Dawid | 3-2 | 5 | 5 | Pending
+2026-10-10 | Lach Marcin | Sawicki Grzegorz | 3-0 | 5 | 7 | Pending
+2026-10-10 | Piotrowski Tadeusz | Zochniak Jakub | 3-1 | 5 | 5 | Pending
+2026-10-10 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 | 5 | 5 | +12
+2026-10-10 | Hetnar Krzysztof | Jesiek Jakub | 3-0 | 4 | 4 | Pending
+2026-10-10 | Pytlas Wojciech | Koczyba Mariusz | 3-2 | 5 | 5 | Pending
+2026-10-10 | Morawiec Daniel | Buczynski Witold | 3-0 | 3 | 3 | Pending
