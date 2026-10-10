@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T14:52Z
+# updated 2026-10-10T14:54Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11689,14 +11689,15 @@
 2026-10-10 | Kukawka Milosz | Szoltysek Artur | 3-0 | 4 | 9 | Pending
 2026-10-10 | Gumulinski Piotr | Swider Dariusz | 3-1 | 7 | 7 | Pending
 2026-10-10 | Szostok Sebastian | Wojtaszczyk Wojciech | 3-1 | 9 | 9 | +12
-2026-10-10 | Lach Marcin | Sobkow Zbigniew | 3-0 |  | 10 | 
+2026-10-10 | Lach Marcin | Sobkow Zbigniew | 3-0 | 10 | 10 | +6
 2026-10-10 | Piotrowski Tadeusz | Kostyk Kamil | 3-2 | 9 | 9 | Pending
 2026-10-10 | Mleczko Bartlomiej | Lamperski Jakub | 3-2 | 10 | 5 | Pending
 2026-10-10 | Iwasyszyn Wojciech | Kukawka Milosz | 3-1 | 10 | 5 | +17
 2026-10-10 | Morawiec Daniel | Buczynski Witold | 3-1 | 8 | 8 | Pending
-2026-10-10 | Petas Kacper | Spanik Tibor | 3-0 |  |  | 
-2026-10-10 | Kolodziej Krystian | Kolasa Szymon | 3-2 |  |  | 
-2026-10-10 | Wojtaszczyk Wojciech | Szymanski Igor | 3-0 |  |  | 
-2026-10-10 | Kostyk Kamil | Minda Michal | 3-0 |  |  | 
-2026-10-10 | Filbrandt Tomasz | Piotrowski Tadeusz | 3-1 |  |  | 
-2026-10-10 | Szoltysek Artur | Dabrowski Igor | 3-2 |  |  | 
+2026-10-10 | Petas Kacper | Spanik Tibor | 3-0 | 10 | 10 | +13
+2026-10-10 | Kolodziej Krystian | Kolasa Szymon | 3-2 | 5 | 10 | +9
+2026-10-10 | Wojtaszczyk Wojciech | Szymanski Igor | 3-0 | 10 | 10 | +7
+2026-10-10 | Kostyk Kamil | Minda Michal | 3-0 | 10 | 5 | +19
+2026-10-10 | Filbrandt Tomasz | Piotrowski Tadeusz | 3-1 |  | 10 | 
+2026-10-10 | Szoltysek Artur | Dabrowski Igor | 3-2 | 10 | 10 | +11
+2026-10-10 | Swider Dariusz | Cichocki Aleksander | 3-2 | 8 | 8 | Pending
