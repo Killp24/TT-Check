@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T22:25Z
+# updated 2026-10-10T22:27Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11790,11 +11790,12 @@
 2026-10-10 | Oracz Jacek | Mucha Grzegorz | 3-2 | 10 | 6 | Pending
 2026-10-10 | Juszczyk Krzysztof | Szymik Robert | 3-2 | 7 | 8 | Pending
 2026-10-10 | Wiza Roman | Sikon Mateusz | 3-1 | 9 | 4 | Pending
-2026-10-10 | Kolek Maciej | Jadam Dawid | 3-2 |  |  | 
+2026-10-10 | Kolek Maciej | Jadam Dawid | 3-2 | 9 | 6 | Pending
 2026-10-10 | Gesiarz Piotr | Lewczuk Miroslaw | 3-1 |  |  | 
-2026-10-10 | Solilo Dominik | Poloszczanski Dawid | 3-1 |  |  | 
-2026-10-10 | Poloszczanski Dawid | Klocek Kamil | 3-0 |  |  | 
-2026-10-10 | Jadach Oskar | Sawicki Grzegorz | 3-2 |  |  | 
+2026-10-10 | Solilo Dominik | Poloszczanski Dawid | 3-1 | 6 | 9 | Pending
+2026-10-10 | Poloszczanski Dawid | Klocek Kamil | 3-0 | 10 | 6 | Pending
+2026-10-10 | Jadach Oskar | Sawicki Grzegorz | 3-2 | 6 | 11 | Pending
 2026-10-11 | Mlynarski Filip | Chmielowski Jakub | 3-1 |  |  | 
-2026-10-11 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 |  |  | 
-2026-10-11 | Pawlik Cezary | Skorupa Jakub | 3-1 |  |  | 
+2026-10-11 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 1 | 1 | Pending
+2026-10-11 | Pawlik Cezary | Skorupa Jakub | 3-1 | 1 | 1 | Pending
+2026-10-11 | Gesiarz Piotr | Lewczuk Miroslaw | 3-1 | 1 | 1 | Pending
