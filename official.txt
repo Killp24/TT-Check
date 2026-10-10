@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T23:53Z
+# updated 2026-10-10T23:54Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11803,8 +11803,11 @@
 2026-10-10 | Marchlewski Marcin | Solilo Dominik | 3-0 | 8 | 7 | Pending
 2026-10-10 | Solilo Dominik | Kotwica Dawid | 3-1 | 8 | 7 | Pending
 2026-10-10 | Marchlewski Marcin | Klocek Kamil | 3-0 | 9 | 7 | Pending
-2026-10-10 | Jadach Oskar | Wiza Roman | 3-1 |  | 10 | 
+2026-10-10 | Jadach Oskar | Wiza Roman | 3-1 | 7 | 10 | +6
 2026-10-10 | Sawicki Grzegorz | Juszczyk Krzysztof | 3-2 | 12 | 8 | Pending
+2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 | 10 | 11 | +3
+2026-10-10 | Chmielowski Jakub | Kolek Maciej | 3-0 | 9 | 10 | Pending
+2026-10-10 | Sawicki Grzegorz | Sikon Mateusz | 3-2 | 13 | 6 | +10
 2026-10-11 | Mlynarski Filip | Chmielowski Jakub | 3-1 |  |  | 
 2026-10-11 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 1 | 1 | Pending
 2026-10-11 | Pawlik Cezary | Skorupa Jakub | 3-1 | 1 | 1 | Pending
@@ -11824,6 +11827,6 @@
 2026-10-11 | Jadach Oskar | Wiza Roman | 3-1 |  |  | 
 2026-10-11 | Sawicki Grzegorz | Sikon Mateusz | 3-2 |  |  | 
 2026-10-11 | Chmielowski Jakub | Kolek Maciej | 3-0 |  |  | 
-2026-10-11 | Fomin Andriej | Maszczynski Dariusz | 3-1 |  |  | 
+2026-10-11 | Fomin Andriej | Maszczynski Dariusz | 3-1 | 2 | 2 | Pending
 2026-10-11 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 |  |  | 
-2026-10-11 | Oracz Jacek | Jedrzejowski Oskar | 3-0 |  |  | 
+2026-10-11 | Oracz Jacek | Jedrzejowski Oskar | 3-0 | 2 | 2 | Pending
