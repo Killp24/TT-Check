@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T05:26Z
+# updated 2026-10-10T05:28Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11566,11 +11566,11 @@
 2026-10-10 | Szymik Robert | Wiza Roman | 3-1 | 4 | 5 | Pending
 2026-10-10 | Badura Jaroslaw | Adamus Mariusz | 3-0 | 4 | 5 | Pending
 2026-10-10 | Petas Kacper | Michna Dawid | 3-0 | 2 | 2 | Pending
-2026-10-10 | Kolasa Szymon | Cyrnek Piotr | 3-0 |  |  | 
-2026-10-10 | Spanik Tibor | Adamiak Grzegorz | 3-1 |  |  | 
-2026-10-10 | Wieczerzak Jacek | Szostok Sebastian | 3-2 |  |  | 
-2026-10-10 | Mleczko Bartlomiej | Klocek Kamil | 3-2 |  |  | 
-2026-10-10 | Wisniewski Bartlomiej | Szoltysek Artur | 3-1 |  |  | 
-2026-10-10 | Rolak Jaroslaw | Iwasyszyn Wojciech | 3-1 |  |  | 
-2026-10-10 | Pytlas Wojciech | Jesiek Jakub | 3-1 |  |  | 
-2026-10-10 | Michalski Jakub | Lojtek Tomasz | 3-2 |  |  | 
+2026-10-10 | Kolasa Szymon | Cyrnek Piotr | 3-0 | 2 | 2 | Pending
+2026-10-10 | Spanik Tibor | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-10 | Wieczerzak Jacek | Szostok Sebastian | 3-2 | 2 | 2 | Pending
+2026-10-10 | Mleczko Bartlomiej | Klocek Kamil | 3-2 | 2 | 2 | Pending
+2026-10-10 | Wisniewski Bartlomiej | Szoltysek Artur | 3-1 | 2 | 2 | +13
+2026-10-10 | Rolak Jaroslaw | Iwasyszyn Wojciech | 3-1 | 2 | 2 | +16
+2026-10-10 | Pytlas Wojciech | Jesiek Jakub | 3-1 | 2 | 2 | Pending
+2026-10-10 | Michalski Jakub | Lojtek Tomasz | 3-2 | 4 | 4 | +12
