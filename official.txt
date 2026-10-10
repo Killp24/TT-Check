@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T18:27Z
+# updated 2026-10-10T18:29Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11740,8 +11740,11 @@
 2026-10-10 | Skorupa Jakub | Mucha Grzegorz | 3-2 | 7 | 2 | Pending
 2026-10-10 | Wiza Roman | Sawicki Grzegorz | 3-1 | 6 | 8 | Pending
 2026-10-10 | Jedrzejowski Oskar | Oracz Jacek | 3-1 | 7 | 7 | Pending
-2026-10-10 | Mlynarski Filip | Sporek Szymon | 3-1 |  |  | 
-2026-10-10 | Jadam Dawid | Kolek Maciej | 3-1 |  |  | 
-2026-10-10 | Marchlewski Marcin | Filbrandt Tomasz | 3-2 |  |  | 
-2026-10-10 | Pawlik Cezary | Skorupa Jakub | 3-0 |  |  | 
-2026-10-10 | Jadach Oskar | Szymik Robert | 3-1 |  |  | 
+2026-10-10 | Mlynarski Filip | Sporek Szymon | 3-1 | 3 | 3 | Pending
+2026-10-10 | Jadam Dawid | Kolek Maciej | 3-1 | 3 | 5 | Pending
+2026-10-10 | Marchlewski Marcin | Filbrandt Tomasz | 3-2 | 4 | 8 | +10
+2026-10-10 | Pawlik Cezary | Skorupa Jakub | 3-0 | 8 | 8 | Pending
+2026-10-10 | Jadach Oskar | Szymik Robert | 3-1 | 3 | 5 | Pending
+2026-10-10 | Fomin Andriej | Maszczynski Dariusz | 3-1 | 3 | 3 | +3
+2026-10-10 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1 | 3 | 3 | +14
+2026-10-10 | Kukawka Milosz | Poloszczanski Dawid | 3-1 | 8 | 6 | Pending
