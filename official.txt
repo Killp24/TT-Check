@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-10T20:52Z
+# updated 2026-10-10T20:54Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11767,14 +11767,15 @@
 2026-10-10 | Juszczyk Krzysztof | Jadach Oskar | 3-1 | 5 | 4 | Pending
 2026-10-10 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 5 | 5 | +12
 2026-10-10 | Poloszczanski Dawid | Kotwica Dawid | 3-1 | 7 | 4 | Pending
-2026-10-10 | Kolek Maciej | Chmielowski Jakub | 3-0 |  |  | 
-2026-10-10 | Kolodziej Krystian | Mlynarski Filip | 3-1 |  |  | 
+2026-10-10 | Kolek Maciej | Chmielowski Jakub | 3-0 | 7 | 5 | Pending
+2026-10-10 | Kolodziej Krystian | Mlynarski Filip | 3-1 | 10 | 5 | Pending
 2026-10-10 | Solilo Dominik | Kukawka Milosz | 3-1 | 5 | 10 | Pending
 2026-10-10 | Oracz Jacek | Karpiuk Mateusz | 3-0 | 9 | 5 | Pending
 2026-10-10 | Szymik Robert | Sawicki Grzegorz | 3-0 | 7 | 10 | Pending
 2026-10-10 | Fomin Andriej | Lewczuk Miroslaw | 3-0 | 5 | 5 | Pending
 2026-10-10 | Jadam Dawid | Sporek Szymon | 3-2 |  |  | 
-2026-10-10 | Filbrandt Tomasz | Kotwica Dawid | 3-2 |  |  | 
-2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 |  |  | 
-2026-10-10 | Skorupa Jakub | Jedrzejowski Oskar | 3-1 |  |  | 
-2026-10-10 | Juszczyk Krzysztof | Wiza Roman | 3-1 |  |  | 
+2026-10-10 | Filbrandt Tomasz | Kotwica Dawid | 3-2 | 10 | 5 | +2
+2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 | 6 | 8 | +3
+2026-10-10 | Skorupa Jakub | Jedrzejowski Oskar | 3-1 | 10 | 9 | Pending
+2026-10-10 | Juszczyk Krzysztof | Wiza Roman | 3-1 | 6 | 8 | Pending
+2026-10-10 | Gesiarz Piotr | Pyrek Dawid | 3-2 | 5 | 5 | Pending
