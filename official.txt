@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-11T10:53Z
+# updated 2026-10-11T10:55Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11973,10 +11973,10 @@
 2026-10-11 | Wieczerzak Jacek | Sobkow Zbigniew | 3-0 | 6 | 6 | Pending
 2026-10-11 | Petas Kacper | Cyrnek Piotr | 3-0 | 6 | 6 | Pending
 2026-10-11 | Petas Kacper | Cyrnek Piotr | 3-1 |  |  | 
-2026-10-11 | Kolodziej Krystian | Adamiak Grzegorz | 3-1 |  |  | 
-2026-10-11 | Kolasa Szymon | Cyrnek Piotr | 3-2 |  |  | 
-2026-10-11 | Polok Pawel | Lach Marcin | 3-2 |  |  | 
-2026-10-11 | Kostyk Kamil | Piotrowski Tadeusz | 3-1 |  |  | 
-2026-10-11 | Minda Michal | Lamperski Jakub | 3-1 |  |  | 
-2026-10-11 | Sinicki Maciej | Iwasyszyn Wojciech | 3-2 |  |  | 
-2026-10-11 | Wojcik Rafal | Wojtaszczyk Wojciech | 3-2 |  |  | 
+2026-10-11 | Kolodziej Krystian | Adamiak Grzegorz | 3-1 | 2 | 7 | Pending
+2026-10-11 | Kolasa Szymon | Cyrnek Piotr | 3-2 | 7 | 7 | Pending
+2026-10-11 | Polok Pawel | Lach Marcin | 3-2 | 7 | 7 | Pending
+2026-10-11 | Kostyk Kamil | Piotrowski Tadeusz | 3-1 | 7 | 7 | Pending
+2026-10-11 | Minda Michal | Lamperski Jakub | 3-1 | 7 | 7 | Pending
+2026-10-11 | Sinicki Maciej | Iwasyszyn Wojciech | 3-2 | 7 | 7 | Pending
+2026-10-11 | Wojcik Rafal | Wojtaszczyk Wojciech | 3-2 | 5 | 5 | +11
