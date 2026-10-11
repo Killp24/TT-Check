@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-11T11:25Z
+# updated 2026-10-11T11:26Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11980,9 +11980,9 @@
 2026-10-11 | Minda Michal | Lamperski Jakub | 3-1 | 7 | 7 | Pending
 2026-10-11 | Sinicki Maciej | Iwasyszyn Wojciech | 3-2 | 7 | 7 | Pending
 2026-10-11 | Wojcik Rafal | Wojtaszczyk Wojciech | 3-2 | 5 | 5 | +11
-2026-10-11 | Spanik Tibor | Petas Kacper | 3-0 |  |  | 
-2026-10-11 | Cichocki Aleksander | Sobkow Zbigniew | 3-2 |  |  | 
-2026-10-11 | Kukawka Milosz | Solilo Dominik | 3-1 |  |  | 
-2026-10-11 | Eliasz Adrian | Staniszewski Piotr | 3-2 |  |  | 
-2026-10-11 | Sojka Stanislaw | Schaniel Krzysztof | 3-1 |  |  | 
-2026-10-11 | Oracz Michal | Szostok Sebastian | 3-1 |  |  | 
+2026-10-11 | Spanik Tibor | Petas Kacper | 3-0 | 7 | 7 | Pending
+2026-10-11 | Cichocki Aleksander | Sobkow Zbigniew | 3-2 | 7 | 7 | Pending
+2026-10-11 | Kukawka Milosz | Solilo Dominik | 3-1 | 2 | 3 | Pending
+2026-10-11 | Eliasz Adrian | Staniszewski Piotr | 3-2 | 7 | 7 | +6
+2026-10-11 | Sojka Stanislaw | Schaniel Krzysztof | 3-1 | 5 | 5 | +9
+2026-10-11 | Oracz Michal | Szostok Sebastian | 3-1 | 5 | 5 | +8
