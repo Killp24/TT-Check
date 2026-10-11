@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-11T05:30Z
+# updated 2026-10-11T06:35Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-10T16:57Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -4826,7 +4826,7 @@
 2026-05-30 | Jadam Dawid | Chmielowski Jakub | 3-2
 2026-10-10 | Chmielowski Jakub | Jadam Dawid | 3-0
 2026-10-10 | Chmielowski Jakub | Jadam Dawid | 3-2
-# pair | Chmielowski Jakub | Kolek Maciej | 2026-10-10T12:31Z
+# pair | Chmielowski Jakub | Kolek Maciej | 2026-10-11T06:35Z
 2026-02-09 | Chmielowski Jakub | Kolek Maciej | 3-2
 2026-02-09 | Kolek Maciej | Chmielowski Jakub | 3-2
 2026-02-10 | Kolek Maciej | Chmielowski Jakub | 3-1
@@ -4851,7 +4851,9 @@
 2026-09-10 | Kolek Maciej | Chmielowski Jakub | 3-1
 2026-09-21 | Chmielowski Jakub | Kolek Maciej | 3-1
 2026-09-21 | Kolek Maciej | Chmielowski Jakub | 3-1
-# pair | Chmielowski Jakub | Kolodziej Krystian | 2026-10-10T12:31Z
+2026-10-10 | Chmielowski Jakub | Kolek Maciej | 3-0
+2026-10-10 | Kolek Maciej | Chmielowski Jakub | 3-0
+# pair | Chmielowski Jakub | Kolodziej Krystian | 2026-10-11T06:35Z
 2025-07-07 | Kolodziej Krystian | Chmielowski Jakub | 3-0
 2025-07-07 | Kolodziej Krystian | Chmielowski Jakub | 3-2
 2025-07-08 | Kolodziej Krystian | Chmielowski Jakub | 3-0
@@ -4906,7 +4908,8 @@
 2026-08-29 | Kolodziej Krystian | Chmielowski Jakub | 3-0
 2026-08-30 | Kolodziej Krystian | Chmielowski Jakub | 3-0
 2026-09-10 | Kolodziej Krystian | Chmielowski Jakub | 3-0
-# pair | Chmielowski Jakub | Mlynarski Filip | 2026-10-10T12:31Z
+2026-10-10 | Kolodziej Krystian | Chmielowski Jakub | 3-0
+# pair | Chmielowski Jakub | Mlynarski Filip | 2026-10-11T06:35Z
 2026-08-22 | Chmielowski Jakub | Mlynarski Filip | 3-2
 2026-08-22 | Mlynarski Filip | Chmielowski Jakub | 3-2
 2026-08-23 | Chmielowski Jakub | Mlynarski Filip | 3-2
@@ -4914,7 +4917,9 @@
 2026-08-29 | Chmielowski Jakub | Mlynarski Filip | 3-1
 2026-08-29 | Chmielowski Jakub | Mlynarski Filip | 3-2
 2026-08-31 | Mlynarski Filip | Chmielowski Jakub | 3-2
-# pair | Chmielowski Jakub | Sporek Szymon | 2026-10-10T12:31Z
+2026-10-10 | Chmielowski Jakub | Mlynarski Filip | 3-2
+2026-10-10 | Mlynarski Filip | Chmielowski Jakub | 3-1
+# pair | Chmielowski Jakub | Sporek Szymon | 2026-10-11T06:35Z
 2025-07-17 | Chmielowski Jakub | Sporek Szymon | 3-2
 2025-12-12 | Chmielowski Jakub | Sporek Szymon | 3-0
 2025-12-12 | Sporek Szymon | Chmielowski Jakub | 3-0
@@ -4945,6 +4950,8 @@
 2026-06-18 | Sporek Szymon | Chmielowski Jakub | 3-1
 2026-08-29 | Chmielowski Jakub | Sporek Szymon | 3-2
 2026-08-29 | Sporek Szymon | Chmielowski Jakub | 3-0
+2026-10-10 | Sporek Szymon | Chmielowski Jakub | 3-0
+2026-10-10 | Sporek Szymon | Chmielowski Jakub | 3-2
 # pair | Chmielowski Jakub | Staszczyk Konrad | 2026-10-11T01:57Z
 2026-05-15 | Chmielowski Jakub | Staszczyk Konrad | 3-2
 2026-05-16 | Staszczyk Konrad | Chmielowski Jakub | 3-2
@@ -8135,7 +8142,7 @@
 2026-06-14 | Kostyk Kamil | Filbrandt Tomasz | 3-2
 2026-07-25 | Filbrandt Tomasz | Kostyk Kamil | 3-1
 2026-10-10 | Filbrandt Tomasz | Kostyk Kamil | 3-2
-# pair | Filbrandt Tomasz | Kotwica Dawid | 2026-10-10T12:31Z
+# pair | Filbrandt Tomasz | Kotwica Dawid | 2026-10-11T06:35Z
 2023-06-26 | Kotwica Dawid | Filbrandt Tomasz | 3-2
 2023-06-29 | Kotwica Dawid | Filbrandt Tomasz | 3-2
 2023-06-30 | Filbrandt Tomasz | Kotwica Dawid | 3-0
@@ -8171,6 +8178,7 @@
 2025-07-27 | Filbrandt Tomasz | Kotwica Dawid | 3-0
 2025-09-02 | Filbrandt Tomasz | Kotwica Dawid | 3-0
 2026-09-26 | Filbrandt Tomasz | Kotwica Dawid | 3-0
+2026-10-10 | Filbrandt Tomasz | Kotwica Dawid | 3-2
 # pair | Filbrandt Tomasz | Krcil Frantisek | 2026-10-09T20:29Z
 2024-03-06 | Filbrandt Tomasz | Krcil Frantisek | 3-1
 2024-03-06 | Krcil Frantisek | Filbrandt Tomasz | 3-2
@@ -8406,7 +8414,7 @@
 2025-05-18 | Filbrandt Tomasz | Piotrowski Tadeusz | 3-2
 2026-09-26 | Filbrandt Tomasz | Piotrowski Tadeusz | 3-2
 2026-10-10 | Filbrandt Tomasz | Piotrowski Tadeusz | 3-1
-# pair | Filbrandt Tomasz | Poloszczanski Dawid | 2026-10-10T12:31Z
+# pair | Filbrandt Tomasz | Poloszczanski Dawid | 2026-10-11T06:35Z
 2023-09-02 | Filbrandt Tomasz | Poloszczanski Dawid | 3-1
 2023-09-02 | Filbrandt Tomasz | Poloszczanski Dawid | 3-1
 2023-09-03 | Filbrandt Tomasz | Poloszczanski Dawid | 3-0
@@ -8419,6 +8427,7 @@
 2025-03-01 | Filbrandt Tomasz | Poloszczanski Dawid | 3-0
 2026-07-25 | Filbrandt Tomasz | Poloszczanski Dawid | 3-0
 2026-09-26 | Filbrandt Tomasz | Poloszczanski Dawid | 3-0
+2026-10-10 | Filbrandt Tomasz | Poloszczanski Dawid | 3-0
 # pair | Filbrandt Tomasz | Rudomina Kamil | 2026-10-09T21:04Z
 2023-09-18 | Rudomina Kamil | Filbrandt Tomasz | 3-2
 2023-09-19 | Filbrandt Tomasz | Rudomina Kamil | 3-0
@@ -8478,10 +8487,11 @@
 2026-08-27 | Filbrandt Tomasz | Rudomina Kamil | 3-2
 2026-09-25 | Filbrandt Tomasz | Rudomina Kamil | 3-0
 2026-10-09 | Filbrandt Tomasz | Rudomina Kamil | 3-1
-# pair | Filbrandt Tomasz | Solilo Dominik | 2026-10-10T12:31Z
+# pair | Filbrandt Tomasz | Solilo Dominik | 2026-10-11T06:35Z
 2025-12-28 | Filbrandt Tomasz | Solilo Dominik | 3-1
 2025-12-30 | Solilo Dominik | Filbrandt Tomasz | 3-0
 2026-04-04 | Filbrandt Tomasz | Solilo Dominik | 3-0
+2026-10-10 | Filbrandt Tomasz | Solilo Dominik | 3-1
 # pair | Filbrandt Tomasz | Staszczyk Konrad | 2026-10-09T21:04Z
 2023-01-23 | Staszczyk Konrad | Filbrandt Tomasz | 3-0
 2023-06-01 | Staszczyk Konrad | Filbrandt Tomasz | 3-2
@@ -9061,7 +9071,7 @@
 2026-09-24 | Fomin Andriej | Kwiatkowski Kacper | 3-1
 2026-09-29 | Kwiatkowski Kacper | Fomin Andriej | 3-0
 2026-09-30 | Fomin Andriej | Kwiatkowski Kacper | 3-1
-# pair | Fomin Andriej | Lewczuk Miroslaw | 2026-10-10T12:31Z
+# pair | Fomin Andriej | Lewczuk Miroslaw | 2026-10-11T06:35Z
 2025-09-13 | Fomin Andriej | Lewczuk Miroslaw | 3-1
 2025-09-13 | Lewczuk Miroslaw | Fomin Andriej | 3-1
 2025-11-03 | Lewczuk Miroslaw | Fomin Andriej | 3-0
@@ -9089,7 +9099,9 @@
 2026-09-10 | Fomin Andriej | Lewczuk Miroslaw | 3-0
 2026-09-16 | Fomin Andriej | Lewczuk Miroslaw | 3-0
 2026-09-16 | Fomin Andriej | Lewczuk Miroslaw | 3-0
-# pair | Fomin Andriej | Maszczynski Dariusz | 2026-10-10T12:31Z
+2026-10-10 | Fomin Andriej | Lewczuk Miroslaw | 3-0
+2026-10-11 | Lewczuk Miroslaw | Fomin Andriej | 3-1
+# pair | Fomin Andriej | Maszczynski Dariusz | 2026-10-11T06:35Z
 2025-11-08 | Fomin Andriej | Maszczynski Dariusz | 3-1
 2025-11-10 | Fomin Andriej | Maszczynski Dariusz | 3-0
 2025-11-22 | Fomin Andriej | Maszczynski Dariusz | 3-1
@@ -9109,6 +9121,8 @@
 2026-08-31 | Fomin Andriej | Maszczynski Dariusz | 3-1
 2026-10-03 | Fomin Andriej | Maszczynski Dariusz | 3-2
 2026-10-04 | Fomin Andriej | Maszczynski Dariusz | 3-0
+2026-10-10 | Fomin Andriej | Maszczynski Dariusz | 3-1
+2026-10-11 | Fomin Andriej | Maszczynski Dariusz | 3-1
 # pair | Fomin Andriej | Mucha Grzegorz | 2026-10-10T16:57Z
 2026-06-18 | Fomin Andriej | Mucha Grzegorz | 3-0
 2026-06-18 | Fomin Andriej | Mucha Grzegorz | 3-1
@@ -9124,7 +9138,7 @@
 2026-09-30 | Mucha Grzegorz | Fomin Andriej | 3-1
 2026-10-03 | Mucha Grzegorz | Fomin Andriej | 3-0
 2026-10-04 | Mucha Grzegorz | Fomin Andriej | 3-1
-# pair | Fomin Andriej | Pyrek Dawid | 2026-10-10T12:31Z
+# pair | Fomin Andriej | Pyrek Dawid | 2026-10-11T06:35Z
 2025-09-15 | Fomin Andriej | Pyrek Dawid | 3-0
 2025-09-29 | Pyrek Dawid | Fomin Andriej | 3-1
 2025-10-11 | Fomin Andriej | Pyrek Dawid | 3-1
@@ -9140,6 +9154,8 @@
 2026-09-20 | Fomin Andriej | Pyrek Dawid | 3-1
 2026-10-03 | Fomin Andriej | Pyrek Dawid | 3-2
 2026-10-04 | Fomin Andriej | Pyrek Dawid | 3-0
+2026-10-10 | Fomin Andriej | Pyrek Dawid | 3-0
+2026-10-11 | Pyrek Dawid | Fomin Andriej | 3-1
 # pair | Fomin Andriej | Skupinski Arkadiusz | 2026-10-08T04:39Z
 2025-09-22 | Fomin Andriej | Skupinski Arkadiusz | 3-1
 2025-10-06 | Fomin Andriej | Skupinski Arkadiusz | 3-2
@@ -9239,7 +9255,9 @@
 2026-09-28 | Fomin Andriej | Stechly Witold | 3-1
 2026-10-01 | Stechly Witold | Fomin Andriej | 3-2
 2026-10-08 | Fomin Andriej | Stechly Witold | 3-1
-# pair | Fomin Andriej | Szurgot Andrzej | 2026-10-10T12:31Z
+# pair | Fomin Andriej | Szurgot Andrzej | 2026-10-11T06:35Z
+2026-10-10 | Fomin Andriej | Szurgot Andrzej | 3-0
+2026-10-10 | Szurgot Andrzej | Fomin Andriej | 3-1
 # pair | Fomin Andriej | Warzecha Miroslaw | 2026-10-08T04:39Z
 2025-09-15 | Warzecha Miroslaw | Fomin Andriej | 3-1
 2025-09-22 | Warzecha Miroslaw | Fomin Andriej | 3-0
@@ -9548,7 +9566,7 @@
 2026-09-28 | Kubiak Artur | Gesiarz Piotr | 3-1
 2026-10-05 | Kubiak Artur | Gesiarz Piotr | 3-1
 2026-10-08 | Gesiarz Piotr | Kubiak Artur | 3-2
-# pair | Gesiarz Piotr | Lewczuk Miroslaw | 2026-10-10T12:31Z
+# pair | Gesiarz Piotr | Lewczuk Miroslaw | 2026-10-11T06:35Z
 2026-01-05 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1
 2026-01-12 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1
 2026-01-19 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1
@@ -9577,7 +9595,9 @@
 2026-08-15 | Gesiarz Piotr | Lewczuk Miroslaw | 3-2
 2026-08-16 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1
 2026-08-20 | Lewczuk Miroslaw | Gesiarz Piotr | 3-0
-# pair | Gesiarz Piotr | Maszczynski Dariusz | 2026-10-10T12:31Z
+2026-10-10 | Lewczuk Miroslaw | Gesiarz Piotr | 3-1
+2026-10-11 | Gesiarz Piotr | Lewczuk Miroslaw | 3-1
+# pair | Gesiarz Piotr | Maszczynski Dariusz | 2026-10-11T06:35Z
 2026-01-05 | Gesiarz Piotr | Maszczynski Dariusz | 3-2
 2026-01-12 | Gesiarz Piotr | Maszczynski Dariusz | 3-0
 2026-01-19 | Gesiarz Piotr | Maszczynski Dariusz | 3-2
@@ -9635,11 +9655,13 @@
 2026-10-03 | Gesiarz Piotr | Maszczynski Dariusz | 3-0
 2026-10-04 | Maszczynski Dariusz | Gesiarz Piotr | 3-2
 2026-10-05 | Gesiarz Piotr | Maszczynski Dariusz | 3-0
+2026-10-10 | Gesiarz Piotr | Maszczynski Dariusz | 3-1
+2026-10-11 | Gesiarz Piotr | Maszczynski Dariusz | 3-0
 # pair | Gesiarz Piotr | Nocun Zbigniew | 2026-10-09T00:42Z
 2026-08-19 | Nocun Zbigniew | Gesiarz Piotr | 3-1
 2026-08-19 | Nocun Zbigniew | Gesiarz Piotr | 3-2
 2026-10-08 | Gesiarz Piotr | Nocun Zbigniew | 3-0
-# pair | Gesiarz Piotr | Pyrek Dawid | 2026-10-10T12:31Z
+# pair | Gesiarz Piotr | Pyrek Dawid | 2026-10-11T06:35Z
 2026-01-19 | Pyrek Dawid | Gesiarz Piotr | 3-2
 2026-05-04 | Gesiarz Piotr | Pyrek Dawid | 3-0
 2026-05-11 | Pyrek Dawid | Gesiarz Piotr | 3-0
@@ -9647,6 +9669,8 @@
 2026-08-22 | Pyrek Dawid | Gesiarz Piotr | 3-1
 2026-10-03 | Pyrek Dawid | Gesiarz Piotr | 3-1
 2026-10-04 | Pyrek Dawid | Gesiarz Piotr | 3-1
+2026-10-10 | Gesiarz Piotr | Pyrek Dawid | 3-2
+2026-10-11 | Pyrek Dawid | Gesiarz Piotr | 3-1
 # pair | Gesiarz Piotr | Skupinski Arkadiusz | 2026-10-09T01:09Z
 2026-10-07 | Gesiarz Piotr | Skupinski Arkadiusz | 3-0
 2026-10-08 | Gesiarz Piotr | Skupinski Arkadiusz | 3-1
@@ -9683,9 +9707,11 @@
 2026-09-28 | Staniczek Adam | Gesiarz Piotr | 3-2
 2026-10-05 | Gesiarz Piotr | Staniczek Adam | 3-0
 2026-10-07 | Gesiarz Piotr | Staniczek Adam | 3-0
-# pair | Gesiarz Piotr | Szurgot Andrzej | 2026-10-10T12:31Z
+# pair | Gesiarz Piotr | Szurgot Andrzej | 2026-10-11T06:35Z
 2026-09-26 | Szurgot Andrzej | Gesiarz Piotr | 3-1
 2026-09-27 | Gesiarz Piotr | Szurgot Andrzej | 3-0
+2026-10-10 | Gesiarz Piotr | Szurgot Andrzej | 3-1
+2026-10-11 | Gesiarz Piotr | Szurgot Andrzej | 3-1
 # pair | Gesiarz Piotr | Tkaczyk Henryk | 2026-10-09T01:09Z
 2026-01-12 | Gesiarz Piotr | Tkaczyk Henryk | 3-0
 2026-06-22 | Tkaczyk Henryk | Gesiarz Piotr | 3-1
@@ -12328,11 +12354,13 @@
 2026-10-02 | Jadach Oskar | Schaniel Krzysztof | 3-0
 2026-10-02 | Schaniel Krzysztof | Jadach Oskar | 3-1
 2026-10-09 | Jadach Oskar | Schaniel Krzysztof | 3-1
-# pair | Jadach Oskar | Sikon Mateusz | 2026-10-10T12:31Z
+# pair | Jadach Oskar | Sikon Mateusz | 2026-10-11T06:35Z
 2026-09-06 | Jadach Oskar | Sikon Mateusz | 3-0
 2026-09-07 | Jadach Oskar | Sikon Mateusz | 3-0
 2026-09-07 | Jadach Oskar | Sikon Mateusz | 3-2
 2026-09-08 | Jadach Oskar | Sikon Mateusz | 3-1
+2026-10-10 | Jadach Oskar | Sikon Mateusz | 3-2
+2026-10-11 | Jadach Oskar | Sikon Mateusz | 3-0
 # pair | Jadach Oskar | Sokolowski Oskar | 2026-10-09T20:29Z
 2025-11-01 | Jadach Oskar | Sokolowski Oskar | 3-0
 2025-11-01 | Sokolowski Oskar | Jadach Oskar | 3-1
@@ -12343,7 +12371,7 @@
 2026-09-17 | Jadach Oskar | Sokolowski Oskar | 3-0
 2026-09-17 | Sokolowski Oskar | Jadach Oskar | 3-1
 2026-10-09 | Jadach Oskar | Sokolowski Oskar | 3-1
-# pair | Jadach Oskar | Szymik Robert | 2026-10-10T12:31Z
+# pair | Jadach Oskar | Szymik Robert | 2026-10-11T06:35Z
 2024-04-12 | Szymik Robert | Jadach Oskar | 3-0
 2024-07-14 | Jadach Oskar | Szymik Robert | 3-2
 2024-07-18 | Szymik Robert | Jadach Oskar | 3-1
@@ -12389,7 +12417,9 @@
 2026-05-01 | Szymik Robert | Jadach Oskar | 3-1
 2026-05-02 | Jadach Oskar | Szymik Robert | 3-0
 2026-05-02 | Szymik Robert | Jadach Oskar | 3-0
-# pair | Jadach Oskar | Wiza Roman | 2026-10-10T12:31Z
+2026-10-10 | Jadach Oskar | Szymik Robert | 3-1
+2026-10-10 | Jadach Oskar | Szymik Robert | 3-1
+# pair | Jadach Oskar | Wiza Roman | 2026-10-11T06:35Z
 2024-07-27 | Jadach Oskar | Wiza Roman | 3-0
 2024-08-10 | Jadach Oskar | Wiza Roman | 3-0
 2024-08-10 | Wiza Roman | Jadach Oskar | 3-1
@@ -12419,7 +12449,9 @@
 2026-05-01 | Wiza Roman | Jadach Oskar | 3-2
 2026-05-02 | Jadach Oskar | Wiza Roman | 3-0
 2026-05-02 | Jadach Oskar | Wiza Roman | 3-1
-# pair | Jadam Dawid | Kolek Maciej | 2026-10-10T12:31Z
+2026-10-10 | Jadach Oskar | Wiza Roman | 3-1
+2026-10-11 | Jadach Oskar | Wiza Roman | 3-1
+# pair | Jadam Dawid | Kolek Maciej | 2026-10-11T06:35Z
 2026-03-28 | Kolek Maciej | Jadam Dawid | 3-2
 2026-04-05 | Jadam Dawid | Kolek Maciej | 3-0
 2026-04-05 | Jadam Dawid | Kolek Maciej | 3-0
@@ -12432,7 +12464,9 @@
 2026-08-24 | Jadam Dawid | Kolek Maciej | 3-1
 2026-08-25 | Kolek Maciej | Jadam Dawid | 3-1
 2026-09-13 | Kolek Maciej | Jadam Dawid | 3-1
-# pair | Jadam Dawid | Kolodziej Krystian | 2026-10-10T12:31Z
+2026-10-10 | Jadam Dawid | Kolek Maciej | 3-1
+2026-10-10 | Kolek Maciej | Jadam Dawid | 3-2
+# pair | Jadam Dawid | Kolodziej Krystian | 2026-10-11T06:35Z
 2026-04-03 | Jadam Dawid | Kolodziej Krystian | 3-1
 2026-04-03 | Kolodziej Krystian | Jadam Dawid | 3-0
 2026-04-03 | Kolodziej Krystian | Jadam Dawid | 3-1
@@ -12458,7 +12492,8 @@
 2026-07-02 | Jadam Dawid | Kolodziej Krystian | 3-2
 2026-07-08 | Jadam Dawid | Kolodziej Krystian | 3-2
 2026-08-15 | Kolodziej Krystian | Jadam Dawid | 3-0
-# pair | Jadam Dawid | Mlynarski Filip | 2026-10-10T12:31Z
+2026-10-10 | Kolodziej Krystian | Jadam Dawid | 3-0
+# pair | Jadam Dawid | Mlynarski Filip | 2026-10-11T06:35Z
 2026-08-15 | Jadam Dawid | Mlynarski Filip | 3-2
 2026-08-15 | Mlynarski Filip | Jadam Dawid | 3-1
 2026-08-16 | Jadam Dawid | Mlynarski Filip | 3-2
@@ -12470,9 +12505,13 @@
 2026-09-13 | Jadam Dawid | Mlynarski Filip | 3-1
 2026-09-13 | Mlynarski Filip | Jadam Dawid | 3-0
 2026-09-13 | Mlynarski Filip | Jadam Dawid | 3-1
-# pair | Jadam Dawid | Sporek Szymon | 2026-10-10T12:31Z
+2026-10-10 | Mlynarski Filip | Jadam Dawid | 3-1
+2026-10-11 | Jadam Dawid | Mlynarski Filip | 3-1
+# pair | Jadam Dawid | Sporek Szymon | 2026-10-11T06:35Z
 2026-07-07 | Sporek Szymon | Jadam Dawid | 3-1
 2026-07-08 | Sporek Szymon | Jadam Dawid | 3-0
+2026-10-10 | Jadam Dawid | Sporek Szymon | 3-1
+2026-10-10 | Jadam Dawid | Sporek Szymon | 3-2
 # pair | Jadam Dawid | Staszczyk Konrad | 2026-10-11T01:57Z
 2026-09-13 | Jadam Dawid | Staszczyk Konrad | 3-0
 # pair | Jadczyk Marcin | Kolasa Szymon | 2026-10-11T01:57Z
@@ -13535,7 +13574,9 @@
 2026-10-08 | Zandecki Jan | Jadczyk Marcin | 3-2
 2026-10-09 | Zandecki Jan | Jadczyk Marcin | 3-0
 2026-10-09 | Zandecki Jan | Jadczyk Marcin | 3-2
-# pair | Jedrzejowski Oskar | Karpiuk Mateusz | 2026-10-10T12:31Z
+# pair | Jedrzejowski Oskar | Karpiuk Mateusz | 2026-10-11T06:35Z
+2026-10-10 | Jedrzejowski Oskar | Karpiuk Mateusz | 3-1
+2026-10-10 | Karpiuk Mateusz | Jedrzejowski Oskar | 3-2
 # pair | Jedrzejowski Oskar | Krutak Michal | 2026-10-09T20:29Z
 2026-04-04 | Jedrzejowski Oskar | Krutak Michal | 3-1
 2026-04-04 | Jedrzejowski Oskar | Krutak Michal | 3-1
@@ -13557,13 +13598,15 @@
 2026-09-12 | Malcher Krzysztof | Jedrzejowski Oskar | 3-1
 2026-09-13 | Jedrzejowski Oskar | Malcher Krzysztof | 3-0
 2026-10-09 | Malcher Krzysztof | Jedrzejowski Oskar | 3-1
-# pair | Jedrzejowski Oskar | Mucha Grzegorz | 2026-10-10T12:31Z
+# pair | Jedrzejowski Oskar | Mucha Grzegorz | 2026-10-11T06:35Z
 2026-08-15 | Mucha Grzegorz | Jedrzejowski Oskar | 3-1
 2026-08-16 | Jedrzejowski Oskar | Mucha Grzegorz | 3-2
 2026-08-22 | Jedrzejowski Oskar | Mucha Grzegorz | 3-1
 2026-08-23 | Mucha Grzegorz | Jedrzejowski Oskar | 3-1
 2026-09-05 | Jedrzejowski Oskar | Mucha Grzegorz | 3-0
 2026-09-05 | Jedrzejowski Oskar | Mucha Grzegorz | 3-1
+2026-10-10 | Mucha Grzegorz | Jedrzejowski Oskar | 3-0
+2026-10-11 | Mucha Grzegorz | Jedrzejowski Oskar | 3-2
 # pair | Jedrzejowski Oskar | Oracz Jacek | 2026-10-10T15:25Z
 2026-04-03 | Jedrzejowski Oskar | Oracz Jacek | 3-2
 2026-04-03 | Oracz Jacek | Jedrzejowski Oskar | 3-1
@@ -14266,10 +14309,12 @@
 2026-06-21 | Juszczyk Krzysztof | Schaniel Krzysztof | 3-0
 2026-08-15 | Juszczyk Krzysztof | Schaniel Krzysztof | 3-0
 2026-10-09 | Juszczyk Krzysztof | Schaniel Krzysztof | 3-1
-# pair | Juszczyk Krzysztof | Sikon Mateusz | 2026-10-10T12:31Z
+# pair | Juszczyk Krzysztof | Sikon Mateusz | 2026-10-11T06:35Z
 2026-06-30 | Sikon Mateusz | Juszczyk Krzysztof | 3-1
 2026-07-04 | Juszczyk Krzysztof | Sikon Mateusz | 3-1
 2026-07-05 | Sikon Mateusz | Juszczyk Krzysztof | 3-2
+2026-10-10 | Juszczyk Krzysztof | Sikon Mateusz | 3-0
+2026-10-11 | Juszczyk Krzysztof | Sikon Mateusz | 3-0
 # pair | Juszczyk Krzysztof | Sokolowski Oskar | 2026-10-09T21:04Z
 2026-04-18 | Juszczyk Krzysztof | Sokolowski Oskar | 3-2
 2026-04-26 | Juszczyk Krzysztof | Sokolowski Oskar | 3-1
@@ -14282,7 +14327,7 @@
 2026-08-02 | Sokolowski Oskar | Juszczyk Krzysztof | 3-1
 2026-09-27 | Juszczyk Krzysztof | Sokolowski Oskar | 3-1
 2026-10-09 | Juszczyk Krzysztof | Sokolowski Oskar | 3-0
-# pair | Juszczyk Krzysztof | Szymik Robert | 2026-10-10T12:31Z
+# pair | Juszczyk Krzysztof | Szymik Robert | 2026-10-11T06:35Z
 2024-08-17 | Szymik Robert | Juszczyk Krzysztof | 3-0
 2024-09-07 | Szymik Robert | Juszczyk Krzysztof | 3-0
 2024-09-20 | Szymik Robert | Juszczyk Krzysztof | 3-0
@@ -14396,7 +14441,9 @@
 2026-08-29 | Szymik Robert | Juszczyk Krzysztof | 3-1
 2026-09-05 | Juszczyk Krzysztof | Szymik Robert | 3-0
 2026-09-26 | Szymik Robert | Juszczyk Krzysztof | 3-1
-# pair | Juszczyk Krzysztof | Wiza Roman | 2026-10-10T12:31Z
+2026-10-10 | Juszczyk Krzysztof | Szymik Robert | 3-2
+2026-10-11 | Juszczyk Krzysztof | Szymik Robert | 3-1
+# pair | Juszczyk Krzysztof | Wiza Roman | 2026-10-11T06:35Z
 2023-11-18 | Wiza Roman | Juszczyk Krzysztof | 3-1
 2023-12-17 | Juszczyk Krzysztof | Wiza Roman | 3-2
 2024-07-01 | Wiza Roman | Juszczyk Krzysztof | 3-1
@@ -14665,6 +14712,8 @@
 2026-08-30 | Juszczyk Krzysztof | Wiza Roman | 3-1
 2026-09-05 | Juszczyk Krzysztof | Wiza Roman | 3-1
 2026-09-23 | Juszczyk Krzysztof | Wiza Roman | 3-2
+2026-10-10 | Juszczyk Krzysztof | Wiza Roman | 3-1
+2026-10-11 | Juszczyk Krzysztof | Wiza Roman | 3-1
 # pair | Kaczmarek Jakub | Nowak Jakub | 2026-10-08T04:39Z
 2022-10-16 | Kaczmarek Jakub | Nowak Jakub | 3-2
 2023-11-08 | Nowak Jakub | Kaczmarek Jakub | 3-0
@@ -16838,7 +16887,7 @@
 2026-10-02 | Zochniak Jakub | Kapik Krzysztof | 3-1
 2026-10-04 | Kapik Krzysztof | Zochniak Jakub | 3-0
 2026-10-07 | Kapik Krzysztof | Zochniak Jakub | 3-2
-# pair | Karpiuk Mateusz | Mucha Grzegorz | 2026-10-10T12:31Z
+# pair | Karpiuk Mateusz | Mucha Grzegorz | 2026-10-11T06:35Z
 2026-06-28 | Karpiuk Mateusz | Mucha Grzegorz | 3-1
 2026-06-28 | Mucha Grzegorz | Karpiuk Mateusz | 3-1
 2026-07-05 | Mucha Grzegorz | Karpiuk Mateusz | 3-1
@@ -16863,15 +16912,21 @@
 2026-09-14 | Mucha Grzegorz | Karpiuk Mateusz | 3-1
 2026-10-03 | Mucha Grzegorz | Karpiuk Mateusz | 3-2
 2026-10-04 | Mucha Grzegorz | Karpiuk Mateusz | 3-2
-# pair | Karpiuk Mateusz | Oracz Jacek | 2026-10-10T12:31Z
+2026-10-10 | Mucha Grzegorz | Karpiuk Mateusz | 3-2
+2026-10-11 | Karpiuk Mateusz | Mucha Grzegorz | 3-1
+# pair | Karpiuk Mateusz | Oracz Jacek | 2026-10-11T06:35Z
 2026-07-05 | Karpiuk Mateusz | Oracz Jacek | 3-2
 2026-07-06 | Oracz Jacek | Karpiuk Mateusz | 3-1
 2026-08-16 | Karpiuk Mateusz | Oracz Jacek | 3-0
 2026-08-16 | Oracz Jacek | Karpiuk Mateusz | 3-1
 2026-08-19 | Oracz Jacek | Karpiuk Mateusz | 3-1
 2026-08-20 | Oracz Jacek | Karpiuk Mateusz | 3-0
-# pair | Karpiuk Mateusz | Pawlik Cezary | 2026-10-10T12:31Z
-# pair | Karpiuk Mateusz | Skorupa Jakub | 2026-10-10T12:31Z
+2026-10-10 | Oracz Jacek | Karpiuk Mateusz | 3-0
+2026-10-11 | Karpiuk Mateusz | Oracz Jacek | 3-1
+# pair | Karpiuk Mateusz | Pawlik Cezary | 2026-10-11T06:35Z
+2026-10-10 | Pawlik Cezary | Karpiuk Mateusz | 3-0
+2026-10-11 | Pawlik Cezary | Karpiuk Mateusz | 3-0
+# pair | Karpiuk Mateusz | Skorupa Jakub | 2026-10-11T06:35Z
 2026-07-19 | Karpiuk Mateusz | Skorupa Jakub | 3-2
 2026-07-20 | Karpiuk Mateusz | Skorupa Jakub | 3-2
 2026-08-30 | Karpiuk Mateusz | Skorupa Jakub | 3-1
@@ -16882,16 +16937,19 @@
 2026-09-16 | Karpiuk Mateusz | Skorupa Jakub | 3-2
 2026-09-24 | Karpiuk Mateusz | Skorupa Jakub | 3-1
 2026-09-24 | Karpiuk Mateusz | Skorupa Jakub | 3-2
+2026-10-10 | Skorupa Jakub | Karpiuk Mateusz | 3-1
+2026-10-11 | Skorupa Jakub | Karpiuk Mateusz | 3-2
 # pair | Klocek Kamil | Kostyk Kamil | 2026-10-11T05:29Z
 2026-10-10 | Klocek Kamil | Kostyk Kamil | 3-1
 2026-10-11 | Kostyk Kamil | Klocek Kamil | 3-0
-# pair | Klocek Kamil | Kotwica Dawid | 2026-10-10T12:31Z
+# pair | Klocek Kamil | Kotwica Dawid | 2026-10-11T06:35Z
 2026-03-16 | Klocek Kamil | Kotwica Dawid | 3-2
 2026-04-28 | Kotwica Dawid | Klocek Kamil | 3-1
 2026-05-31 | Klocek Kamil | Kotwica Dawid | 3-1
 2026-05-31 | Kotwica Dawid | Klocek Kamil | 3-1
 2026-09-30 | Kotwica Dawid | Klocek Kamil | 3-0
 2026-09-30 | Kotwica Dawid | Klocek Kamil | 3-0
+2026-10-10 | Kotwica Dawid | Klocek Kamil | 3-1
 # pair | Klocek Kamil | Krcil Frantisek | 2026-10-09T20:29Z
 2026-09-17 | Krcil Frantisek | Klocek Kamil | 3-2
 2026-10-09 | Krcil Frantisek | Klocek Kamil | 3-2
@@ -16900,7 +16958,8 @@
 2026-09-30 | Lamperski Jakub | Klocek Kamil | 3-2
 2026-10-02 | Klocek Kamil | Lamperski Jakub | 3-1
 2026-10-09 | Klocek Kamil | Lamperski Jakub | 3-2
-# pair | Klocek Kamil | Marchlewski Marcin | 2026-10-10T12:31Z
+# pair | Klocek Kamil | Marchlewski Marcin | 2026-10-11T06:35Z
+2026-10-10 | Marchlewski Marcin | Klocek Kamil | 3-0
 # pair | Klocek Kamil | Minda Michal | 2026-10-11T01:57Z
 2026-07-22 | Minda Michal | Klocek Kamil | 3-0
 2026-07-22 | Minda Michal | Klocek Kamil | 3-1
@@ -16929,12 +16988,13 @@
 2026-02-14 | Piotrowski Tadeusz | Klocek Kamil | 3-1
 2026-02-15 | Klocek Kamil | Piotrowski Tadeusz | 3-2
 2026-10-10 | Piotrowski Tadeusz | Klocek Kamil | 3-2
-# pair | Klocek Kamil | Poloszczanski Dawid | 2026-10-10T12:31Z
+# pair | Klocek Kamil | Poloszczanski Dawid | 2026-10-11T06:35Z
 2026-04-17 | Klocek Kamil | Poloszczanski Dawid | 3-1
 2026-04-17 | Klocek Kamil | Poloszczanski Dawid | 3-2
 2026-06-12 | Klocek Kamil | Poloszczanski Dawid | 3-2
 2026-09-30 | Klocek Kamil | Poloszczanski Dawid | 3-0
 2026-09-30 | Klocek Kamil | Poloszczanski Dawid | 3-2
+2026-10-10 | Poloszczanski Dawid | Klocek Kamil | 3-0
 # pair | Klocek Kamil | Solilo Dominik | 2026-10-10T13:27Z
 2026-07-30 | Solilo Dominik | Klocek Kamil | 3-0
 2026-07-30 | Solilo Dominik | Klocek Kamil | 3-1
@@ -17575,7 +17635,7 @@
 2025-05-17 | Witkowski Antoni | Kolasa Szymon | 3-1
 2025-05-18 | Witkowski Antoni | Kolasa Szymon | 3-2
 2025-06-14 | Witkowski Antoni | Kolasa Szymon | 3-0
-# pair | Kolek Maciej | Kolodziej Krystian | 2026-10-10T12:31Z
+# pair | Kolek Maciej | Kolodziej Krystian | 2026-10-11T06:35Z
 2026-01-01 | Kolodziej Krystian | Kolek Maciej | 3-0
 2026-01-01 | Kolodziej Krystian | Kolek Maciej | 3-0
 2026-01-17 | Kolodziej Krystian | Kolek Maciej | 3-1
@@ -17603,6 +17663,7 @@
 2026-08-20 | Kolodziej Krystian | Kolek Maciej | 3-0
 2026-08-30 | Kolodziej Krystian | Kolek Maciej | 3-0
 2026-09-04 | Kolodziej Krystian | Kolek Maciej | 3-1
+2026-10-10 | Kolodziej Krystian | Kolek Maciej | 3-1
 # pair | Kolek Maciej | Kukawka Milosz | 2026-10-11T01:57Z
 2026-10-03 | Kolek Maciej | Kukawka Milosz | 3-1
 2026-10-04 | Kolek Maciej | Kukawka Milosz | 3-2
@@ -17638,7 +17699,7 @@
 2026-04-29 | Kolek Maciej | Marcinowski Krzysztof | 3-2
 2026-06-11 | Marcinowski Krzysztof | Kolek Maciej | 3-0
 2026-06-12 | Marcinowski Krzysztof | Kolek Maciej | 3-1
-# pair | Kolek Maciej | Mlynarski Filip | 2026-10-10T12:31Z
+# pair | Kolek Maciej | Mlynarski Filip | 2026-10-11T06:35Z
 2026-06-13 | Mlynarski Filip | Kolek Maciej | 3-1
 2026-06-14 | Mlynarski Filip | Kolek Maciej | 3-2
 2026-07-04 | Kolek Maciej | Mlynarski Filip | 3-0
@@ -17659,6 +17720,8 @@
 2026-09-26 | Mlynarski Filip | Kolek Maciej | 3-1
 2026-09-27 | Kolek Maciej | Mlynarski Filip | 3-2
 2026-09-27 | Mlynarski Filip | Kolek Maciej | 3-0
+2026-10-10 | Kolek Maciej | Mlynarski Filip | 3-2
+2026-10-10 | Mlynarski Filip | Kolek Maciej | 3-1
 # pair | Kolek Maciej | Rudomina Kamil | 2026-10-10T15:25Z
 2025-12-29 | Rudomina Kamil | Kolek Maciej | 3-1
 2025-12-31 | Kolek Maciej | Rudomina Kamil | 3-1
@@ -17725,8 +17788,10 @@
 2026-09-29 | Solilo Dominik | Kolek Maciej | 3-2
 2026-10-05 | Kolek Maciej | Solilo Dominik | 3-1
 2026-10-06 | Kolek Maciej | Solilo Dominik | 3-0
-# pair | Kolek Maciej | Sporek Szymon | 2026-10-10T12:31Z
+# pair | Kolek Maciej | Sporek Szymon | 2026-10-11T06:35Z
 2026-04-19 | Sporek Szymon | Kolek Maciej | 3-1
+2026-10-10 | Kolek Maciej | Sporek Szymon | 3-2
+2026-10-10 | Sporek Szymon | Kolek Maciej | 3-1
 # pair | Kolek Maciej | Stapor Rafal | 2026-10-11T01:57Z
 2026-06-07 | Kolek Maciej | Stapor Rafal | 3-2
 2026-06-10 | Stapor Rafal | Kolek Maciej | 3-2
@@ -17890,7 +17955,7 @@
 2026-10-02 | Kolodziej Krystian | Kuzmicz Jakub | 3-2
 2026-10-05 | Kolodziej Krystian | Kuzmicz Jakub | 3-1
 2026-10-09 | Kuzmicz Jakub | Kolodziej Krystian | 3-1
-# pair | Kolodziej Krystian | Mlynarski Filip | 2026-10-10T12:31Z
+# pair | Kolodziej Krystian | Mlynarski Filip | 2026-10-11T06:35Z
 2023-09-10 | Mlynarski Filip | Kolodziej Krystian | 3-1
 2023-11-06 | Mlynarski Filip | Kolodziej Krystian | 3-1
 2023-11-27 | Mlynarski Filip | Kolodziej Krystian | 3-0
@@ -17996,6 +18061,7 @@
 2026-08-29 | Kolodziej Krystian | Mlynarski Filip | 3-1
 2026-08-30 | Kolodziej Krystian | Mlynarski Filip | 3-1
 2026-08-31 | Kolodziej Krystian | Mlynarski Filip | 3-2
+2026-10-10 | Kolodziej Krystian | Mlynarski Filip | 3-1
 # pair | Kolodziej Krystian | Petas Kacper | 2026-10-11T05:29Z
 2023-10-20 | Kolodziej Krystian | Petas Kacper | 3-0
 2023-11-08 | Kolodziej Krystian | Petas Kacper | 3-2
@@ -18644,11 +18710,12 @@
 2026-07-12 | Kostyk Kamil | Zochniak Jakub | 3-0
 2026-07-13 | Zochniak Jakub | Kostyk Kamil | 3-1
 2026-10-10 | Zochniak Jakub | Kostyk Kamil | 3-0
-# pair | Kotwica Dawid | Kukawka Milosz | 2026-10-10T12:31Z
+# pair | Kotwica Dawid | Kukawka Milosz | 2026-10-11T06:35Z
 2026-03-16 | Kukawka Milosz | Kotwica Dawid | 3-0
 2026-05-03 | Kukawka Milosz | Kotwica Dawid | 3-2
 2026-05-18 | Kukawka Milosz | Kotwica Dawid | 3-1
 2026-06-14 | Kukawka Milosz | Kotwica Dawid | 3-0
+2026-10-10 | Kukawka Milosz | Kotwica Dawid | 3-2
 # pair | Kotwica Dawid | Marchlewski Marcin | 2026-10-11T05:29Z
 2023-10-14 | Marchlewski Marcin | Kotwica Dawid | 3-1
 2024-03-23 | Marchlewski Marcin | Kotwica Dawid | 3-0
@@ -18681,7 +18748,7 @@
 2026-06-05 | Marchlewski Marcin | Kotwica Dawid | 3-1
 2026-10-10 | Marchlewski Marcin | Kotwica Dawid | 3-0
 2026-10-10 | Marchlewski Marcin | Kotwica Dawid | 3-0
-# pair | Kotwica Dawid | Poloszczanski Dawid | 2026-10-10T12:31Z
+# pair | Kotwica Dawid | Poloszczanski Dawid | 2026-10-11T06:35Z
 2022-11-09 | Kotwica Dawid | Poloszczanski Dawid | 3-0
 2022-11-19 | Poloszczanski Dawid | Kotwica Dawid | 3-0
 2022-11-19 | Poloszczanski Dawid | Kotwica Dawid | 3-2
@@ -18831,9 +18898,13 @@
 2026-09-27 | Kotwica Dawid | Poloszczanski Dawid | 3-1
 2026-09-30 | Poloszczanski Dawid | Kotwica Dawid | 3-0
 2026-09-30 | Poloszczanski Dawid | Kotwica Dawid | 3-2
-# pair | Kotwica Dawid | Solilo Dominik | 2026-10-10T12:31Z
+2026-10-10 | Poloszczanski Dawid | Kotwica Dawid | 3-1
+2026-10-11 | Kotwica Dawid | Poloszczanski Dawid | 3-2
+# pair | Kotwica Dawid | Solilo Dominik | 2026-10-11T06:35Z
 2026-08-16 | Kotwica Dawid | Solilo Dominik | 3-2
 2026-08-17 | Kotwica Dawid | Solilo Dominik | 3-1
+2026-10-10 | Solilo Dominik | Kotwica Dawid | 3-0
+2026-10-10 | Solilo Dominik | Kotwica Dawid | 3-1
 # pair | Kowalczyk Marcin | Krukar Piotr | 2026-10-09T01:09Z
 2026-09-23 | Kowalczyk Marcin | Krukar Piotr | 3-2
 2026-09-23 | Kowalczyk Marcin | Krukar Piotr | 3-2
@@ -20153,8 +20224,9 @@
 2026-10-01 | Kukawka Milosz | Lukaszewski Mikolaj | 3-0
 2026-10-06 | Kukawka Milosz | Lukaszewski Mikolaj | 3-0
 2026-10-08 | Kukawka Milosz | Lukaszewski Mikolaj | 3-1
-# pair | Kukawka Milosz | Marchlewski Marcin | 2026-10-10T12:31Z
+# pair | Kukawka Milosz | Marchlewski Marcin | 2026-10-11T06:35Z
 2026-06-26 | Marchlewski Marcin | Kukawka Milosz | 3-1
+2026-10-10 | Kukawka Milosz | Marchlewski Marcin | 3-2
 # pair | Kukawka Milosz | Minda Michal | 2026-10-11T01:57Z
 2026-02-12 | Kukawka Milosz | Minda Michal | 3-1
 2026-06-14 | Kukawka Milosz | Minda Michal | 3-1
@@ -20170,7 +20242,7 @@
 2026-05-31 | Kukawka Milosz | Piotrowski Tadeusz | 3-0
 2026-06-27 | Kukawka Milosz | Piotrowski Tadeusz | 3-0
 2026-06-28 | Kukawka Milosz | Piotrowski Tadeusz | 3-2
-# pair | Kukawka Milosz | Poloszczanski Dawid | 2026-10-10T12:31Z
+# pair | Kukawka Milosz | Poloszczanski Dawid | 2026-10-11T06:35Z
 2026-02-28 | Kukawka Milosz | Poloszczanski Dawid | 3-1
 2026-02-28 | Kukawka Milosz | Poloszczanski Dawid | 3-2
 2026-03-01 | Kukawka Milosz | Poloszczanski Dawid | 3-1
@@ -20188,6 +20260,7 @@
 2026-06-02 | Kukawka Milosz | Poloszczanski Dawid | 3-1
 2026-06-02 | Poloszczanski Dawid | Kukawka Milosz | 3-1
 2026-06-03 | Kukawka Milosz | Poloszczanski Dawid | 3-2
+2026-10-10 | Kukawka Milosz | Poloszczanski Dawid | 3-1
 # pair | Kukawka Milosz | Przewlocki Jacek | 2026-10-11T05:29Z
 2026-02-13 | Kukawka Milosz | Przewlocki Jacek | 3-2
 2026-02-28 | Kukawka Milosz | Przewlocki Jacek | 3-0
@@ -21036,7 +21109,7 @@
 2026-10-01 | Lamperski Jakub | Wrobel Dariusz | 3-0
 2026-10-06 | Lamperski Jakub | Wrobel Dariusz | 3-2
 2026-10-09 | Lamperski Jakub | Wrobel Dariusz | 3-0
-# pair | Lewczuk Miroslaw | Maszczynski Dariusz | 2026-10-10T12:31Z
+# pair | Lewczuk Miroslaw | Maszczynski Dariusz | 2026-10-11T06:35Z
 2025-11-03 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-1
 2025-12-01 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-2
 2025-12-08 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-0
@@ -21075,6 +21148,8 @@
 2026-08-08 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-1
 2026-08-15 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-1
 2026-08-15 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-1
+2026-10-10 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-0
+2026-10-11 | Lewczuk Miroslaw | Maszczynski Dariusz | 3-0
 # pair | Lewczuk Miroslaw | Michalik Jerzy | 2026-10-08T04:39Z
 2024-06-18 | Lewczuk Miroslaw | Michalik Jerzy | 3-2
 2024-06-18 | Michalik Jerzy | Lewczuk Miroslaw | 3-2
@@ -21300,7 +21375,7 @@
 2026-10-01 | Lewczuk Miroslaw | Nocun Zbigniew | 3-2
 2026-10-07 | Nocun Zbigniew | Lewczuk Miroslaw | 3-0
 2026-10-08 | Lewczuk Miroslaw | Nocun Zbigniew | 3-1
-# pair | Lewczuk Miroslaw | Pyrek Dawid | 2026-10-10T12:31Z
+# pair | Lewczuk Miroslaw | Pyrek Dawid | 2026-10-11T06:35Z
 2024-10-08 | Lewczuk Miroslaw | Pyrek Dawid | 3-0
 2024-10-08 | Lewczuk Miroslaw | Pyrek Dawid | 3-1
 2024-11-13 | Lewczuk Miroslaw | Pyrek Dawid | 3-0
@@ -21339,9 +21414,13 @@
 2026-05-11 | Pyrek Dawid | Lewczuk Miroslaw | 3-2
 2026-06-18 | Lewczuk Miroslaw | Pyrek Dawid | 3-2
 2026-06-19 | Lewczuk Miroslaw | Pyrek Dawid | 3-0
-# pair | Lewczuk Miroslaw | Szurgot Andrzej | 2026-10-10T12:31Z
+2026-10-10 | Lewczuk Miroslaw | Pyrek Dawid | 3-1
+2026-10-11 | Lewczuk Miroslaw | Pyrek Dawid | 3-2
+# pair | Lewczuk Miroslaw | Szurgot Andrzej | 2026-10-11T06:35Z
 2026-09-27 | Lewczuk Miroslaw | Szurgot Andrzej | 3-1
 2026-09-28 | Lewczuk Miroslaw | Szurgot Andrzej | 3-1
+2026-10-10 | Lewczuk Miroslaw | Szurgot Andrzej | 3-0
+2026-10-11 | Szurgot Andrzej | Lewczuk Miroslaw | 3-2
 # pair | Lewczuk Miroslaw | Tkaczyk Henryk | 2026-10-08T04:39Z
 2025-07-25 | Lewczuk Miroslaw | Tkaczyk Henryk | 3-1
 2025-07-25 | Tkaczyk Henryk | Lewczuk Miroslaw | 3-1
@@ -22349,7 +22428,7 @@
 # pair | Malinowski Radoslaw | Stapor Rafal | 2026-10-10T22:56Z
 2026-08-08 | Malinowski Radoslaw | Stapor Rafal | 3-0
 2026-08-08 | Stapor Rafal | Malinowski Radoslaw | 3-2
-# pair | Marchlewski Marcin | Poloszczanski Dawid | 2026-10-10T12:31Z
+# pair | Marchlewski Marcin | Poloszczanski Dawid | 2026-10-11T06:35Z
 2023-10-13 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
 2023-10-14 | Marchlewski Marcin | Poloszczanski Dawid | 3-1
 2024-01-13 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
@@ -22371,6 +22450,8 @@
 2026-02-20 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
 2026-02-20 | Marchlewski Marcin | Poloszczanski Dawid | 3-1
 2026-08-23 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
+2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
+2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0
 # pair | Marchlewski Marcin | Rudomina Kamil | 2026-10-09T21:04Z
 2023-12-15 | Marchlewski Marcin | Rudomina Kamil | 3-0
 2023-12-16 | Marchlewski Marcin | Rudomina Kamil | 3-1
@@ -22408,7 +22489,9 @@
 2026-06-07 | Marchlewski Marcin | Rudomina Kamil | 3-0
 2026-06-14 | Marchlewski Marcin | Rudomina Kamil | 3-0
 2026-10-09 | Marchlewski Marcin | Rudomina Kamil | 3-2
-# pair | Marchlewski Marcin | Solilo Dominik | 2026-10-10T12:31Z
+# pair | Marchlewski Marcin | Solilo Dominik | 2026-10-11T06:35Z
+2026-10-10 | Marchlewski Marcin | Solilo Dominik | 3-0
+2026-10-10 | Marchlewski Marcin | Solilo Dominik | 3-1
 # pair | Marchlewski Marcin | Staszczyk Konrad | 2026-10-09T21:04Z
 2023-09-08 | Marchlewski Marcin | Staszczyk Konrad | 3-1
 2023-10-13 | Marchlewski Marcin | Staszczyk Konrad | 3-0
@@ -22833,7 +22916,7 @@
 2026-09-21 | Marud Grzegorz | Vincenec Oliver | 3-0
 # pair | Maszczynski Dariusz | Przebierala Tomasz | 2026-10-10T22:29Z
 2026-09-14 | Maszczynski Dariusz | Przebierala Tomasz | 3-0
-# pair | Maszczynski Dariusz | Pyrek Dawid | 2026-10-10T12:31Z
+# pair | Maszczynski Dariusz | Pyrek Dawid | 2026-10-11T06:35Z
 2025-11-29 | Pyrek Dawid | Maszczynski Dariusz | 3-1
 2026-01-19 | Pyrek Dawid | Maszczynski Dariusz | 3-1
 2026-05-04 | Pyrek Dawid | Maszczynski Dariusz | 3-0
@@ -22841,6 +22924,8 @@
 2026-07-13 | Pyrek Dawid | Maszczynski Dariusz | 3-0
 2026-10-03 | Pyrek Dawid | Maszczynski Dariusz | 3-2
 2026-10-04 | Maszczynski Dariusz | Pyrek Dawid | 3-2
+2026-10-10 | Pyrek Dawid | Maszczynski Dariusz | 3-0
+2026-10-10 | Pyrek Dawid | Maszczynski Dariusz | 3-2
 # pair | Maszczynski Dariusz | Staniczek Adam | 2026-10-10T23:29Z
 2025-10-06 | Staniczek Adam | Maszczynski Dariusz | 3-1
 2025-11-20 | Staniczek Adam | Maszczynski Dariusz | 3-1
@@ -22896,7 +22981,9 @@
 2026-09-14 | Stechly Witold | Maszczynski Dariusz | 3-2
 2026-09-21 | Stechly Witold | Maszczynski Dariusz | 3-2
 2026-10-05 | Maszczynski Dariusz | Stechly Witold | 3-1
-# pair | Maszczynski Dariusz | Szurgot Andrzej | 2026-10-10T12:31Z
+# pair | Maszczynski Dariusz | Szurgot Andrzej | 2026-10-11T06:35Z
+2026-10-10 | Szurgot Andrzej | Maszczynski Dariusz | 3-0
+2026-10-11 | Szurgot Andrzej | Maszczynski Dariusz | 3-0
 # pair | Maszczynski Dariusz | Warzecha Miroslaw | 2026-10-10T23:29Z
 2025-10-06 | Warzecha Miroslaw | Maszczynski Dariusz | 3-0
 2025-10-13 | Warzecha Miroslaw | Maszczynski Dariusz | 3-0
@@ -25858,7 +25945,7 @@
 2026-09-18 | Zochniak Jakub | Mleczko Bartlomiej | 3-1
 2026-09-26 | Zochniak Jakub | Mleczko Bartlomiej | 3-0
 2026-10-10 | Zochniak Jakub | Mleczko Bartlomiej | 3-2
-# pair | Mlynarski Filip | Sporek Szymon | 2026-10-10T12:31Z
+# pair | Mlynarski Filip | Sporek Szymon | 2026-10-11T06:35Z
 2023-07-03 | Mlynarski Filip | Sporek Szymon | 3-1
 2023-07-03 | Sporek Szymon | Mlynarski Filip | 3-0
 2023-07-15 | Mlynarski Filip | Sporek Szymon | 3-2
@@ -25915,6 +26002,8 @@
 2026-06-29 | Mlynarski Filip | Sporek Szymon | 3-2
 2026-08-29 | Sporek Szymon | Mlynarski Filip | 3-1
 2026-08-29 | Sporek Szymon | Mlynarski Filip | 3-2
+2026-10-10 | Mlynarski Filip | Sporek Szymon | 3-1
+2026-10-10 | Sporek Szymon | Mlynarski Filip | 3-0
 # pair | Mlynarski Filip | Staszczyk Konrad | 2026-10-11T01:57Z
 2023-02-21 | Mlynarski Filip | Staszczyk Konrad | 3-2
 2023-04-03 | Mlynarski Filip | Staszczyk Konrad | 3-0
@@ -26200,7 +26289,7 @@
 2026-09-30 | Nocun Zbigniew | Mucha Grzegorz | 3-2
 2026-10-04 | Mucha Grzegorz | Nocun Zbigniew | 3-1
 2026-10-05 | Nocun Zbigniew | Mucha Grzegorz | 3-1
-# pair | Mucha Grzegorz | Oracz Jacek | 2026-10-10T12:31Z
+# pair | Mucha Grzegorz | Oracz Jacek | 2026-10-11T06:35Z
 2026-06-17 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-06-18 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-06-21 | Oracz Jacek | Mucha Grzegorz | 3-1
@@ -26219,12 +26308,16 @@
 2026-09-20 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-09-26 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-09-27 | Oracz Jacek | Mucha Grzegorz | 3-2
-# pair | Mucha Grzegorz | Pawlik Cezary | 2026-10-10T12:31Z
+2026-10-10 | Oracz Jacek | Mucha Grzegorz | 3-2
+2026-10-10 | Oracz Jacek | Mucha Grzegorz | 3-2
+# pair | Mucha Grzegorz | Pawlik Cezary | 2026-10-11T06:35Z
 2026-08-01 | Pawlik Cezary | Mucha Grzegorz | 3-2
 2026-08-02 | Pawlik Cezary | Mucha Grzegorz | 3-2
 2026-09-26 | Mucha Grzegorz | Pawlik Cezary | 3-2
 2026-09-27 | Mucha Grzegorz | Pawlik Cezary | 3-1
-# pair | Mucha Grzegorz | Skorupa Jakub | 2026-10-10T12:31Z
+2026-10-10 | Mucha Grzegorz | Pawlik Cezary | 3-2
+2026-10-11 | Mucha Grzegorz | Pawlik Cezary | 3-1
+# pair | Mucha Grzegorz | Skorupa Jakub | 2026-10-11T06:35Z
 2026-07-08 | Mucha Grzegorz | Skorupa Jakub | 3-1
 2026-07-09 | Skorupa Jakub | Mucha Grzegorz | 3-1
 2026-09-06 | Skorupa Jakub | Mucha Grzegorz | 3-1
@@ -26237,6 +26330,8 @@
 2026-09-30 | Mucha Grzegorz | Skorupa Jakub | 3-1
 2026-09-30 | Mucha Grzegorz | Skorupa Jakub | 3-2
 2026-10-01 | Skorupa Jakub | Mucha Grzegorz | 3-0
+2026-10-10 | Skorupa Jakub | Mucha Grzegorz | 3-2
+2026-10-11 | Skorupa Jakub | Mucha Grzegorz | 3-0
 # pair | Mucha Grzegorz | Szurgot Andrzej | 2026-10-10T16:57Z
 2026-09-27 | Mucha Grzegorz | Szurgot Andrzej | 3-1
 2026-09-27 | Mucha Grzegorz | Szurgot Andrzej | 3-2
@@ -30659,7 +30754,9 @@
 2026-10-05 | Vincenec Oliver | Przewlocki Piotr | 3-2
 2026-10-07 | Przewlocki Piotr | Vincenec Oliver | 3-2
 2026-10-07 | Przewlocki Piotr | Vincenec Oliver | 3-2
-# pair | Pyrek Dawid | Szurgot Andrzej | 2026-10-10T12:31Z
+# pair | Pyrek Dawid | Szurgot Andrzej | 2026-10-11T06:35Z
+2026-10-10 | Szurgot Andrzej | Pyrek Dawid | 3-2
+2026-10-11 | Pyrek Dawid | Szurgot Andrzej | 3-1
 # pair | Pytlas Wojciech | Ruszkiewicz Adam | 2026-10-08T04:39Z
 2025-07-02 | Pytlas Wojciech | Ruszkiewicz Adam | 3-0
 2025-07-15 | Pytlas Wojciech | Ruszkiewicz Adam | 3-0
@@ -32284,7 +32381,7 @@
 2026-09-12 | Schaniel Krzysztof | Sawicki Grzegorz | 3-0
 2026-09-12 | Schaniel Krzysztof | Sawicki Grzegorz | 3-0
 2026-09-13 | Schaniel Krzysztof | Sawicki Grzegorz | 3-2
-# pair | Sawicki Grzegorz | Sikon Mateusz | 2026-10-10T12:31Z
+# pair | Sawicki Grzegorz | Sikon Mateusz | 2026-10-11T06:35Z
 2026-06-27 | Sawicki Grzegorz | Sikon Mateusz | 3-1
 2026-06-28 | Sawicki Grzegorz | Sikon Mateusz | 3-0
 2026-07-04 | Sawicki Grzegorz | Sikon Mateusz | 3-0
@@ -32295,6 +32392,8 @@
 2026-10-04 | Sawicki Grzegorz | Sikon Mateusz | 3-2
 2026-10-04 | Sikon Mateusz | Sawicki Grzegorz | 3-1
 2026-10-05 | Sikon Mateusz | Sawicki Grzegorz | 3-1
+2026-10-10 | Sawicki Grzegorz | Sikon Mateusz | 3-2
+2026-10-10 | Sikon Mateusz | Sawicki Grzegorz | 3-2
 # pair | Sawicki Grzegorz | Slosarczyk Pawel | 2026-10-10T17:27Z
 2025-05-24 | Sawicki Grzegorz | Slosarczyk Pawel | 3-2
 2025-05-24 | Slosarczyk Pawel | Sawicki Grzegorz | 3-2
@@ -32392,7 +32491,7 @@
 2026-08-08 | Sawicki Grzegorz | Szymanski Igor | 3-1
 2026-08-08 | Sawicki Grzegorz | Szymanski Igor | 3-2
 2026-09-14 | Sawicki Grzegorz | Szymanski Igor | 3-0
-# pair | Sawicki Grzegorz | Szymik Robert | 2026-10-10T12:31Z
+# pair | Sawicki Grzegorz | Szymik Robert | 2026-10-11T06:35Z
 2024-06-30 | Szymik Robert | Sawicki Grzegorz | 3-1
 2024-06-30 | Szymik Robert | Sawicki Grzegorz | 3-2
 2024-08-17 | Szymik Robert | Sawicki Grzegorz | 3-1
@@ -32458,12 +32557,14 @@
 2026-09-20 | Szymik Robert | Sawicki Grzegorz | 3-0
 2026-10-03 | Szymik Robert | Sawicki Grzegorz | 3-1
 2026-10-04 | Sawicki Grzegorz | Szymik Robert | 3-2
+2026-10-10 | Szymik Robert | Sawicki Grzegorz | 3-0
+2026-10-11 | Szymik Robert | Sawicki Grzegorz | 3-1
 # pair | Sawicki Grzegorz | Wieczerzak Jacek | 2026-10-11T04:59Z
 2026-07-04 | Sawicki Grzegorz | Wieczerzak Jacek | 3-1
 2026-07-18 | Sawicki Grzegorz | Wieczerzak Jacek | 3-0
 2026-09-05 | Wieczerzak Jacek | Sawicki Grzegorz | 3-1
 2026-10-10 | Wieczerzak Jacek | Sawicki Grzegorz | 3-0
-# pair | Sawicki Grzegorz | Wiza Roman | 2026-10-10T12:31Z
+# pair | Sawicki Grzegorz | Wiza Roman | 2026-10-11T06:35Z
 2023-11-18 | Sawicki Grzegorz | Wiza Roman | 3-1
 2023-11-18 | Wiza Roman | Sawicki Grzegorz | 3-2
 2024-06-30 | Sawicki Grzegorz | Wiza Roman | 3-0
@@ -32579,6 +32680,8 @@
 2026-09-13 | Wiza Roman | Sawicki Grzegorz | 3-2
 2026-10-03 | Wiza Roman | Sawicki Grzegorz | 3-0
 2026-10-04 | Wiza Roman | Sawicki Grzegorz | 3-1
+2026-10-10 | Wiza Roman | Sawicki Grzegorz | 3-1
+2026-10-11 | Sawicki Grzegorz | Wiza Roman | 3-2
 # pair | Sawicki Grzegorz | Wojtaszczyk Wojciech | 2026-10-11T04:59Z
 2025-12-06 | Wojtaszczyk Wojciech | Sawicki Grzegorz | 3-2
 2025-12-13 | Sawicki Grzegorz | Wojtaszczyk Wojciech | 3-1
@@ -32856,14 +32959,16 @@
 2026-09-03 | Sikon Mateusz | Szymanski Igor | 3-1
 2026-09-03 | Sikon Mateusz | Szymanski Igor | 3-2
 2026-09-23 | Sikon Mateusz | Szymanski Igor | 3-2
-# pair | Sikon Mateusz | Szymik Robert | 2026-10-10T12:31Z
+# pair | Sikon Mateusz | Szymik Robert | 2026-10-11T06:35Z
 2026-06-27 | Szymik Robert | Sikon Mateusz | 3-0
 2026-06-28 | Szymik Robert | Sikon Mateusz | 3-0
 2026-07-23 | Szymik Robert | Sikon Mateusz | 3-1
 2026-07-23 | Szymik Robert | Sikon Mateusz | 3-1
 2026-10-03 | Sikon Mateusz | Szymik Robert | 3-1
 2026-10-04 | Szymik Robert | Sikon Mateusz | 3-0
-# pair | Sikon Mateusz | Wiza Roman | 2026-10-10T12:31Z
+2026-10-10 | Szymik Robert | Sikon Mateusz | 3-0
+2026-10-11 | Szymik Robert | Sikon Mateusz | 3-1
+# pair | Sikon Mateusz | Wiza Roman | 2026-10-11T06:35Z
 2026-06-27 | Sikon Mateusz | Wiza Roman | 3-2
 2026-06-28 | Wiza Roman | Sikon Mateusz | 3-2
 2026-07-04 | Sikon Mateusz | Wiza Roman | 3-0
@@ -32872,6 +32977,8 @@
 2026-08-17 | Wiza Roman | Sikon Mateusz | 3-1
 2026-10-03 | Sikon Mateusz | Wiza Roman | 3-2
 2026-10-04 | Wiza Roman | Sikon Mateusz | 3-0
+2026-10-10 | Wiza Roman | Sikon Mateusz | 3-1
+2026-10-11 | Wiza Roman | Sikon Mateusz | 3-2
 # pair | Sinicki Maciej | Staniszewski Piotr | 2026-10-11T01:57Z
 2023-01-13 | Sinicki Maciej | Staniszewski Piotr | 3-0
 2023-01-14 | Sinicki Maciej | Staniszewski Piotr | 3-2
