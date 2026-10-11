@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-11T00:37Z
+# updated 2026-10-11T00:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11808,6 +11808,10 @@
 2026-10-10 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 | 10 | 11 | +3
 2026-10-10 | Chmielowski Jakub | Kolek Maciej | 3-0 | 9 | 10 | Pending
 2026-10-10 | Sawicki Grzegorz | Sikon Mateusz | 3-2 | 13 | 6 | +10
+2026-10-10 | Jadach Oskar | Szymik Robert | 3-1 | 8 | 10 | Pending
+2026-10-10 | Jadam Dawid | Sporek Szymon | 3-1 | 8 | 8 | Pending
+2026-10-10 | Kotwica Dawid | Klocek Kamil | 3-1 | 8 | 8 | Pending
+2026-10-10 | Sporek Szymon | Kolek Maciej | 3-1 | 9 | 11 | Pending
 2026-10-11 | Mlynarski Filip | Chmielowski Jakub | 3-1 |  |  | 
 2026-10-11 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 1 | 1 | Pending
 2026-10-11 | Pawlik Cezary | Skorupa Jakub | 3-1 | 1 | 1 | Pending
@@ -11831,11 +11835,11 @@
 2026-10-11 | Marchlewski Marcin | Poloszczanski Dawid | 3-0 |  |  | 
 2026-10-11 | Oracz Jacek | Jedrzejowski Oskar | 3-0 | 2 | 2 | Pending
 2026-10-11 | Jadach Oskar | Szymik Robert | 3-1 |  |  | 
-2026-10-11 | Juszczyk Krzysztof | Wiza Roman | 3-1 |  |  | 
+2026-10-11 | Juszczyk Krzysztof | Wiza Roman | 3-1 | 1 | 1 | Pending
 2026-10-11 | Jadam Dawid | Sporek Szymon | 3-1 |  |  | 
 2026-10-11 | Sporek Szymon | Kolek Maciej | 3-1 |  |  | 
-2026-10-11 | Szurgot Andrzej | Lewczuk Miroslaw | 3-2 |  |  | 
-2026-10-11 | Pyrek Dawid | Gesiarz Piotr | 3-1 |  |  | 
+2026-10-11 | Szurgot Andrzej | Lewczuk Miroslaw | 3-2 | 2 | 3 | Pending
+2026-10-11 | Pyrek Dawid | Gesiarz Piotr | 3-1 | 2 | 3 | Pending
 2026-10-11 | Kotwica Dawid | Klocek Kamil | 3-1 |  |  | 
 2026-10-11 | Kotwica Dawid | Poloszczanski Dawid | 3-2 |  |  | 
-2026-10-11 | Skorupa Jakub | Karpiuk Mateusz | 3-2 |  |  | 
+2026-10-11 | Skorupa Jakub | Karpiuk Mateusz | 3-2 | 3 | 2 | Pending
