@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-11T17:26Z
+# updated 2026-10-11T17:28Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12054,11 +12054,11 @@
 2026-10-11 | Wojcik Rafal | Oracz Michal | 3-2 | 10 | 10 | Pending
 2026-10-11 | Chmielowski Jakub | Staszczyk Konrad | 3-1 | 2 | 2 | Pending
 2026-10-11 | Kolodziej Krystian | Mlynarski Filip | 3-0 | 7 | 3 | Pending
-2026-10-11 | Sporek Szymon | Jadam Dawid | 3-1 |  |  | 
-2026-10-11 | Fomin Andriej | Kwiatkowski Kacper | 3-1 |  |  | 
-2026-10-11 | Szurgot Andrzej | Kwiatkowski Kacper | 3-1 |  |  | 
-2026-10-11 | Kolek Maciej | Rudomina Kamil | 3-2 |  |  | 
-2026-10-11 | Sikon Mateusz | Sawicki Grzegorz | 3-1 |  |  | 
-2026-10-11 | Szymanski Igor | Baron Mariusz | 3-1 |  |  | 
-2026-10-11 | Sojka Stanislaw | Schaniel Krzysztof | 3-2 |  |  | 
-2026-10-11 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 |  |  | 
+2026-10-11 | Sporek Szymon | Jadam Dawid | 3-1 | 2 | 3 | Pending
+2026-10-11 | Fomin Andriej | Kwiatkowski Kacper | 3-1 | 6 | 1 | +8
+2026-10-11 | Szurgot Andrzej | Kwiatkowski Kacper | 3-1 | 6 | 2 | +16
+2026-10-11 | Kolek Maciej | Rudomina Kamil | 3-2 | 2 | 2 | Pending
+2026-10-11 | Sikon Mateusz | Sawicki Grzegorz | 3-1 | 6 | 6 | Pending
+2026-10-11 | Szymanski Igor | Baron Mariusz | 3-1 | 2 | 2 | Pending
+2026-10-11 | Sojka Stanislaw | Schaniel Krzysztof | 3-2 | 10 | 10 | +6
+2026-10-11 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 | 10 | 10 | +14
