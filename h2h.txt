@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-11T23:32Z
+# updated 2026-10-11T23:56Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-11T11:27Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -160,7 +160,7 @@
 2026-09-01 | Zemla Piotr | Adach Rafal | 3-0
 2026-09-05 | Zemla Piotr | Adach Rafal | 3-0
 2026-10-11 | Zemla Piotr | Adach Rafal | 3-1
-# pair | Adamiak Grzegorz | Cyrnek Piotr | 2026-10-11T04:59Z
+# pair | Adamiak Grzegorz | Cyrnek Piotr | 2026-10-11T23:56Z
 2023-07-07 | Adamiak Grzegorz | Cyrnek Piotr | 3-1
 2024-03-05 | Cyrnek Piotr | Adamiak Grzegorz | 3-1
 2024-04-30 | Adamiak Grzegorz | Cyrnek Piotr | 3-0
@@ -182,6 +182,8 @@
 2026-07-03 | Cyrnek Piotr | Adamiak Grzegorz | 3-0
 2026-10-10 | Cyrnek Piotr | Adamiak Grzegorz | 3-0
 2026-10-10 | Cyrnek Piotr | Adamiak Grzegorz | 3-1
+2026-10-11 | Cyrnek Piotr | Adamiak Grzegorz | 3-1
+2026-10-11 | Cyrnek Piotr | Adamiak Grzegorz | 3-1
 # pair | Adamiak Grzegorz | Jadczyk Marcin | 2026-10-11T20:29Z
 2022-10-22 | Jadczyk Marcin | Adamiak Grzegorz | 3-1
 2022-11-28 | Adamiak Grzegorz | Jadczyk Marcin | 3-1
@@ -295,7 +297,7 @@
 2026-09-27 | Jadczyk Marcin | Adamiak Grzegorz | 3-0
 2026-09-27 | Jadczyk Marcin | Adamiak Grzegorz | 3-1
 2026-10-11 | Jadczyk Marcin | Adamiak Grzegorz | 3-0
-# pair | Adamiak Grzegorz | Kolasa Szymon | 2026-10-11T05:29Z
+# pair | Adamiak Grzegorz | Kolasa Szymon | 2026-10-11T23:56Z
 2023-06-16 | Adamiak Grzegorz | Kolasa Szymon | 3-0
 2023-09-01 | Adamiak Grzegorz | Kolasa Szymon | 3-0
 2023-09-02 | Adamiak Grzegorz | Kolasa Szymon | 3-2
@@ -342,7 +344,8 @@
 2026-10-10 | Kolasa Szymon | Adamiak Grzegorz | 3-2
 2026-10-10 | Kolasa Szymon | Adamiak Grzegorz | 3-2
 2026-10-11 | Kolasa Szymon | Adamiak Grzegorz | 3-0
-# pair | Adamiak Grzegorz | Kolodziej Krystian | 2026-10-11T05:29Z
+2026-10-11 | Kolasa Szymon | Adamiak Grzegorz | 3-0
+# pair | Adamiak Grzegorz | Kolodziej Krystian | 2026-10-11T23:56Z
 2023-10-28 | Adamiak Grzegorz | Kolodziej Krystian | 3-0
 2023-10-28 | Adamiak Grzegorz | Kolodziej Krystian | 3-1
 2024-04-22 | Adamiak Grzegorz | Kolodziej Krystian | 3-1
@@ -373,6 +376,7 @@
 2026-09-27 | Adamiak Grzegorz | Kolodziej Krystian | 3-0
 2026-09-27 | Adamiak Grzegorz | Kolodziej Krystian | 3-2
 2026-10-10 | Kolodziej Krystian | Adamiak Grzegorz | 3-2
+2026-10-11 | Kolodziej Krystian | Adamiak Grzegorz | 3-1
 # pair | Adamiak Grzegorz | Michna Dawid | 2026-10-11T03:29Z
 2023-07-08 | Michna Dawid | Adamiak Grzegorz | 3-0
 2023-08-21 | Adamiak Grzegorz | Michna Dawid | 3-2
@@ -1199,7 +1203,7 @@
 2026-09-12 | Sokolowski Oskar | Adamus Kacper | 3-2
 2026-10-07 | Adamus Kacper | Sokolowski Oskar | 3-0
 2026-10-07 | Adamus Kacper | Sokolowski Oskar | 3-1
-# pair | Adamus Kacper | Szymanski Igor | 2026-10-11T04:59Z
+# pair | Adamus Kacper | Szymanski Igor | 2026-10-11T23:56Z
 2026-08-10 | Adamus Kacper | Szymanski Igor | 3-1
 2026-08-11 | Adamus Kacper | Szymanski Igor | 3-0
 2026-09-14 | Adamus Kacper | Szymanski Igor | 3-0
@@ -5799,7 +5803,7 @@
 2026-08-27 | Sokolowski Oskar | Cesarz Milosz | 3-0
 2026-10-08 | Cesarz Milosz | Sokolowski Oskar | 3-1
 2026-10-09 | Cesarz Milosz | Sokolowski Oskar | 3-0
-# pair | Chmielowski Jakub | Jadam Dawid | 2026-10-11T05:29Z
+# pair | Chmielowski Jakub | Jadam Dawid | 2026-10-11T23:56Z
 2026-03-27 | Chmielowski Jakub | Jadam Dawid | 3-1
 2026-03-28 | Chmielowski Jakub | Jadam Dawid | 3-2
 2026-03-29 | Chmielowski Jakub | Jadam Dawid | 3-2
@@ -5821,6 +5825,7 @@
 2026-05-30 | Jadam Dawid | Chmielowski Jakub | 3-2
 2026-10-10 | Chmielowski Jakub | Jadam Dawid | 3-0
 2026-10-10 | Chmielowski Jakub | Jadam Dawid | 3-2
+2026-10-11 | Jadam Dawid | Chmielowski Jakub | 3-2
 # pair | Chmielowski Jakub | Kolek Maciej | 2026-10-11T06:35Z
 2026-02-09 | Chmielowski Jakub | Kolek Maciej | 3-2
 2026-02-09 | Kolek Maciej | Chmielowski Jakub | 3-2
@@ -6347,9 +6352,11 @@
 2026-09-27 | Cichocki Aleksander | Sobkow Zbigniew | 3-2
 2026-10-11 | Cichocki Aleksander | Sobkow Zbigniew | 3-2
 2026-10-11 | Cichocki Aleksander | Sobkow Zbigniew | 3-2
-# pair | Cichocki Aleksander | Swider Dariusz | 2026-10-11T04:59Z
+# pair | Cichocki Aleksander | Swider Dariusz | 2026-10-11T23:56Z
 2026-10-10 | Cichocki Aleksander | Swider Dariusz | 3-1
 2026-10-10 | Swider Dariusz | Cichocki Aleksander | 3-2
+2026-10-11 | Cichocki Aleksander | Swider Dariusz | 3-2
+2026-10-11 | Swider Dariusz | Cichocki Aleksander | 3-0
 # pair | Cichocki Aleksander | Wieczerzak Jacek | 2026-10-11T11:27Z
 2026-08-08 | Cichocki Aleksander | Wieczerzak Jacek | 3-1
 2026-08-08 | Cichocki Aleksander | Wieczerzak Jacek | 3-1
@@ -6750,7 +6757,7 @@
 2026-10-10 | Kolasa Szymon | Cyrnek Piotr | 3-0
 2026-10-11 | Kolasa Szymon | Cyrnek Piotr | 3-2
 2026-10-11 | Kolasa Szymon | Cyrnek Piotr | 3-2
-# pair | Cyrnek Piotr | Kolodziej Krystian | 2026-10-11T05:29Z
+# pair | Cyrnek Piotr | Kolodziej Krystian | 2026-10-11T23:56Z
 2024-04-12 | Cyrnek Piotr | Kolodziej Krystian | 3-0
 2024-04-30 | Cyrnek Piotr | Kolodziej Krystian | 3-1
 2024-07-10 | Cyrnek Piotr | Kolodziej Krystian | 3-0
@@ -6761,6 +6768,7 @@
 2026-09-01 | Cyrnek Piotr | Kolodziej Krystian | 3-2
 2026-09-02 | Cyrnek Piotr | Kolodziej Krystian | 3-1
 2026-10-10 | Kolodziej Krystian | Cyrnek Piotr | 3-1
+2026-10-11 | Cyrnek Piotr | Kolodziej Krystian | 3-2
 # pair | Cyrnek Piotr | Michna Dawid | 2026-10-11T03:29Z
 2024-08-30 | Michna Dawid | Cyrnek Piotr | 3-1
 2024-09-28 | Cyrnek Piotr | Michna Dawid | 3-0
@@ -6783,7 +6791,7 @@
 2025-12-08 | Cyrnek Piotr | Michna Dawid | 3-2
 2026-01-06 | Cyrnek Piotr | Michna Dawid | 3-1
 2026-10-10 | Cyrnek Piotr | Michna Dawid | 3-2
-# pair | Cyrnek Piotr | Petas Kacper | 2026-10-11T04:59Z
+# pair | Cyrnek Piotr | Petas Kacper | 2026-10-11T23:56Z
 2023-07-07 | Cyrnek Piotr | Petas Kacper | 3-0
 2023-07-07 | Cyrnek Piotr | Petas Kacper | 3-2
 2023-07-08 | Cyrnek Piotr | Petas Kacper | 3-1
@@ -6823,6 +6831,8 @@
 2026-09-01 | Petas Kacper | Cyrnek Piotr | 3-1
 2026-10-10 | Cyrnek Piotr | Petas Kacper | 3-1
 2026-10-10 | Petas Kacper | Cyrnek Piotr | 3-0
+2026-10-11 | Cyrnek Piotr | Petas Kacper | 3-1
+2026-10-11 | Petas Kacper | Cyrnek Piotr | 3-0
 # pair | Cyrnek Piotr | Spanik Tibor | 2026-10-11T23:31Z
 2026-04-26 | Cyrnek Piotr | Spanik Tibor | 3-2
 2026-04-26 | Spanik Tibor | Cyrnek Piotr | 3-1
@@ -18891,7 +18901,7 @@
 2026-09-24 | Karpiuk Mateusz | Skorupa Jakub | 3-2
 2026-10-10 | Skorupa Jakub | Karpiuk Mateusz | 3-1
 2026-10-11 | Skorupa Jakub | Karpiuk Mateusz | 3-2
-# pair | Klocek Kamil | Kostyk Kamil | 2026-10-11T05:29Z
+# pair | Klocek Kamil | Kostyk Kamil | 2026-10-11T23:56Z
 2026-10-10 | Klocek Kamil | Kostyk Kamil | 3-1
 2026-10-11 | Kostyk Kamil | Klocek Kamil | 3-0
 # pair | Klocek Kamil | Kotwica Dawid | 2026-10-11T06:35Z
@@ -19408,7 +19418,7 @@
 2026-07-28 | Wrzalik Tomasz | Koczyba Mariusz | 3-2
 2026-10-07 | Koczyba Mariusz | Wrzalik Tomasz | 3-0
 2026-10-08 | Koczyba Mariusz | Wrzalik Tomasz | 3-0
-# pair | Kolasa Szymon | Kolodziej Krystian | 2026-10-11T05:29Z
+# pair | Kolasa Szymon | Kolodziej Krystian | 2026-10-11T23:56Z
 2023-10-06 | Kolasa Szymon | Kolodziej Krystian | 3-0
 2023-10-21 | Kolasa Szymon | Kolodziej Krystian | 3-1
 2023-11-02 | Kolodziej Krystian | Kolasa Szymon | 3-0
@@ -19448,6 +19458,7 @@
 2026-09-23 | Kolodziej Krystian | Kolasa Szymon | 3-2
 2026-09-24 | Kolasa Szymon | Kolodziej Krystian | 3-1
 2026-10-10 | Kolodziej Krystian | Kolasa Szymon | 3-2
+2026-10-11 | Kolodziej Krystian | Kolasa Szymon | 3-1
 # pair | Kolasa Szymon | Michna Dawid | 2026-10-11T03:29Z
 2023-07-24 | Michna Dawid | Kolasa Szymon | 3-2
 2023-11-26 | Kolasa Szymon | Michna Dawid | 3-1
@@ -20042,7 +20053,7 @@
 2026-08-30 | Kolodziej Krystian | Mlynarski Filip | 3-1
 2026-08-31 | Kolodziej Krystian | Mlynarski Filip | 3-2
 2026-10-10 | Kolodziej Krystian | Mlynarski Filip | 3-1
-# pair | Kolodziej Krystian | Petas Kacper | 2026-10-11T05:29Z
+# pair | Kolodziej Krystian | Petas Kacper | 2026-10-11T23:56Z
 2023-10-20 | Kolodziej Krystian | Petas Kacper | 3-0
 2023-11-08 | Kolodziej Krystian | Petas Kacper | 3-2
 2023-11-10 | Kolodziej Krystian | Petas Kacper | 3-0
@@ -20090,6 +20101,7 @@
 2026-09-27 | Kolodziej Krystian | Petas Kacper | 3-0
 2026-09-27 | Kolodziej Krystian | Petas Kacper | 3-1
 2026-10-10 | Kolodziej Krystian | Petas Kacper | 3-1
+2026-10-11 | Petas Kacper | Kolodziej Krystian | 3-1
 # pair | Kolodziej Krystian | Rutkowski Mateusz | 2026-10-09T20:29Z
 2023-01-01 | Kolodziej Krystian | Rutkowski Mateusz | 3-0
 2023-01-01 | Kolodziej Krystian | Rutkowski Mateusz | 3-1
@@ -20247,7 +20259,7 @@
 2026-09-30 | Kolodziej Krystian | Rutkowski Mateusz | 3-0
 2026-10-01 | Kolodziej Krystian | Rutkowski Mateusz | 3-0
 2026-10-09 | Kolodziej Krystian | Rutkowski Mateusz | 3-0
-# pair | Kolodziej Krystian | Spanik Tibor | 2026-10-11T05:29Z
+# pair | Kolodziej Krystian | Spanik Tibor | 2026-10-11T23:56Z
 2026-08-02 | Spanik Tibor | Kolodziej Krystian | 3-1
 2026-08-03 | Kolodziej Krystian | Spanik Tibor | 3-0
 2026-08-03 | Spanik Tibor | Kolodziej Krystian | 3-0
@@ -20259,7 +20271,8 @@
 2026-09-27 | Spanik Tibor | Kolodziej Krystian | 3-1
 2026-09-27 | Spanik Tibor | Kolodziej Krystian | 3-2
 2026-10-10 | Kolodziej Krystian | Spanik Tibor | 3-1
-# pair | Kolodziej Krystian | Sporek Szymon | 2026-10-11T05:29Z
+2026-10-11 | Spanik Tibor | Kolodziej Krystian | 3-1
+# pair | Kolodziej Krystian | Sporek Szymon | 2026-10-11T23:56Z
 2023-07-04 | Sporek Szymon | Kolodziej Krystian | 3-1
 2023-07-05 | Kolodziej Krystian | Sporek Szymon | 3-0
 2023-07-06 | Sporek Szymon | Kolodziej Krystian | 3-2
@@ -20425,6 +20438,7 @@
 2026-08-28 | Sporek Szymon | Kolodziej Krystian | 3-1
 2026-08-29 | Kolodziej Krystian | Sporek Szymon | 3-1
 2026-10-10 | Sporek Szymon | Kolodziej Krystian | 3-0
+2026-10-11 | Kolodziej Krystian | Sporek Szymon | 3-0
 # pair | Kolodziej Krystian | Staszczyk Konrad | 2026-10-11T20:29Z
 2023-01-01 | Kolodziej Krystian | Staszczyk Konrad | 3-0
 2023-08-20 | Kolodziej Krystian | Staszczyk Konrad | 3-0
@@ -20711,11 +20725,13 @@
 2026-10-05 | Sklensky Miroslav | Kostal Daniel | 3-1
 # pair | Kostyk Kamil | Kukawka Milosz | 2026-10-11T20:29Z
 2026-10-11 | Kostyk Kamil | Kukawka Milosz | 3-2
-# pair | Kostyk Kamil | Lamperski Jakub | 2026-10-11T05:29Z
+# pair | Kostyk Kamil | Lamperski Jakub | 2026-10-11T23:56Z
 2026-09-14 | Lamperski Jakub | Kostyk Kamil | 3-1
 2026-09-15 | Kostyk Kamil | Lamperski Jakub | 3-0
 2026-10-10 | Kostyk Kamil | Lamperski Jakub | 3-0
-# pair | Kostyk Kamil | Minda Michal | 2026-10-11T05:29Z
+2026-10-11 | Kostyk Kamil | Lamperski Jakub | 3-1
+2026-10-11 | Kostyk Kamil | Lamperski Jakub | 3-1
+# pair | Kostyk Kamil | Minda Michal | 2026-10-11T23:56Z
 2025-10-18 | Kostyk Kamil | Minda Michal | 3-2
 2026-02-20 | Kostyk Kamil | Minda Michal | 3-1
 2026-02-20 | Minda Michal | Kostyk Kamil | 3-1
@@ -20725,6 +20741,8 @@
 2026-07-27 | Minda Michal | Kostyk Kamil | 3-1
 2026-09-21 | Minda Michal | Kostyk Kamil | 3-2
 2026-10-10 | Kostyk Kamil | Minda Michal | 3-0
+2026-10-11 | Kostyk Kamil | Minda Michal | 3-1
+2026-10-11 | Kostyk Kamil | Minda Michal | 3-2
 # pair | Kostyk Kamil | Mleczko Bartlomiej | 2026-10-11T04:59Z
 2025-10-19 | Kostyk Kamil | Mleczko Bartlomiej | 3-2
 2025-10-19 | Mleczko Bartlomiej | Kostyk Kamil | 3-2
@@ -23435,8 +23453,10 @@
 2026-10-07 | Lamperski Jakub | Lukaszewski Mikolaj | 3-1
 2026-10-08 | Lukaszewski Mikolaj | Lamperski Jakub | 3-1
 # pair | Lamperski Jakub | Malinowski Radoslaw | 2026-10-11T17:29Z
-# pair | Lamperski Jakub | Minda Michal | 2026-10-11T05:29Z
+# pair | Lamperski Jakub | Minda Michal | 2026-10-11T23:56Z
 2026-10-10 | Minda Michal | Lamperski Jakub | 3-1
+2026-10-11 | Lamperski Jakub | Minda Michal | 3-0
+2026-10-11 | Minda Michal | Lamperski Jakub | 3-1
 # pair | Lamperski Jakub | Mleczko Bartlomiej | 2026-10-11T05:29Z
 2026-10-10 | Mleczko Bartlomiej | Lamperski Jakub | 3-2
 # pair | Lamperski Jakub | Mugowski Arkadiusz | 2026-10-11T20:29Z
@@ -23446,9 +23466,10 @@
 # pair | Lamperski Jakub | Piecowski Miroslaw | 2026-10-11T22:31Z
 2023-01-07 | Piecowski Miroslaw | Lamperski Jakub | 3-1
 2023-01-07 | Piecowski Miroslaw | Lamperski Jakub | 3-1
-# pair | Lamperski Jakub | Piotrowski Tadeusz | 2026-10-11T05:29Z
+# pair | Lamperski Jakub | Piotrowski Tadeusz | 2026-10-11T23:56Z
 2023-01-08 | Lamperski Jakub | Piotrowski Tadeusz | 3-2
 2026-10-10 | Lamperski Jakub | Piotrowski Tadeusz | 3-1
+2026-10-11 | Lamperski Jakub | Piotrowski Tadeusz | 3-0
 2026-10-11 | Lamperski Jakub | Piotrowski Tadeusz | 3-1
 # pair | Lamperski Jakub | Sobel Artur | 2026-10-11T16:59Z
 2026-10-06 | Lamperski Jakub | Sobel Artur | 3-1
@@ -27724,7 +27745,7 @@
 2025-02-01 | Minda Michal | Piecowski Miroslaw | 3-0
 2025-11-12 | Piecowski Miroslaw | Minda Michal | 3-0
 2026-03-20 | Minda Michal | Piecowski Miroslaw | 3-1
-# pair | Minda Michal | Piotrowski Tadeusz | 2026-10-11T05:29Z
+# pair | Minda Michal | Piotrowski Tadeusz | 2026-10-11T23:56Z
 2022-11-13 | Minda Michal | Piotrowski Tadeusz | 3-1
 2022-12-04 | Minda Michal | Piotrowski Tadeusz | 3-1
 2022-12-24 | Minda Michal | Piotrowski Tadeusz | 3-2
@@ -27771,6 +27792,7 @@
 2026-07-11 | Minda Michal | Piotrowski Tadeusz | 3-0
 2026-07-11 | Minda Michal | Piotrowski Tadeusz | 3-1
 2026-10-10 | Minda Michal | Piotrowski Tadeusz | 3-1
+2026-10-11 | Minda Michal | Piotrowski Tadeusz | 3-2
 2026-10-11 | Minda Michal | Piotrowski Tadeusz | 3-2
 # pair | Minda Michal | Sobel Artur | 2026-10-11T17:29Z
 2023-11-28 | Sobel Artur | Minda Michal | 3-0
@@ -31623,7 +31645,7 @@
 2026-05-17 | Petas Kacper | Prokopcov Dimitrij | 3-1
 2026-08-19 | Petas Kacper | Prokopcov Dimitrij | 3-0
 2026-09-01 | Petas Kacper | Prokopcov Dimitrij | 3-0
-# pair | Petas Kacper | Spanik Tibor | 2026-10-11T05:29Z
+# pair | Petas Kacper | Spanik Tibor | 2026-10-11T23:56Z
 2026-03-23 | Spanik Tibor | Petas Kacper | 3-1
 2026-03-31 | Spanik Tibor | Petas Kacper | 3-1
 2026-03-31 | Spanik Tibor | Petas Kacper | 3-2
@@ -31653,6 +31675,8 @@
 2026-09-28 | Petas Kacper | Spanik Tibor | 3-1
 2026-10-10 | Petas Kacper | Spanik Tibor | 3-0
 2026-10-10 | Spanik Tibor | Petas Kacper | 3-2
+2026-10-11 | Petas Kacper | Spanik Tibor | 3-2
+2026-10-11 | Spanik Tibor | Petas Kacper | 3-0
 # pair | Petas Kacper | Vrablik Jiri | 2026-10-11T22:31Z
 2025-11-13 | Petas Kacper | Vrablik Jiri | 3-1
 2025-11-13 | Vrablik Jiri | Petas Kacper | 3-2
