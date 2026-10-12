@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T07:42Z
+# updated 2026-10-12T07:44Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12243,16 +12243,17 @@
 2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-2 | 1 | 1 | Pending
 2026-10-12 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 4 | 4 | Pending
 2026-10-12 | Braun Josef | Prokopcov Dimitrij | 3-0 | 4 | 4 | Pending
-2026-10-12 | David Petr | Spanik Tibor | 3-0 |  |  | 
+2026-10-12 | David Petr | Spanik Tibor | 3-0 | 4 | 4 | Pending
 2026-10-12 | Slawinski Kacper | Polok Pawel | 3-0 | 4 | 4 | Pending
 2026-10-12 | Pruszkowski Jakub | Przewlocki Piotr | 3-1 | 4 | 4 | Pending
 2026-10-12 | Mitas Jacek | Wisniewski Karol | 3-0 | 5 | 4 | Pending
 2026-10-12 | Krcil Frantisek | Wisniewski Bartlomiej | 3-2 | 4 | 4 | +5
 2026-10-12 | Machelski Michal | Stechly Witold | 3-1 | 4 | 4 | Pending
 2026-10-12 | Fomin Yurij | Wiciok Piotr | 3-0 | 2 | 2 | Pending
-2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1 |  |  | 
-2026-10-12 | Lamperski Jakub | Sobel Artur | 3-2 |  |  | 
+2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1 | 4 | 5 | Pending
+2026-10-12 | Lamperski Jakub | Sobel Artur | 3-2 | 4 | 4 | Pending
 2026-10-12 | Czerwinski Bartosz | Warpas Blazej | 3-2 |  |  | 
-2026-10-12 | Wolny Michal | Maszczynski Dariusz | 3-2 |  |  | 
-2026-10-12 | Schaniel Krzysztof | Tobiasz Wojciech | 3-2 |  |  | 
-2026-10-12 | Jozefiak Michal | Mecik Patryk | 3-0 |  |  | 
+2026-10-12 | Wolny Michal | Maszczynski Dariusz | 3-2 | 4 | 4 | Pending
+2026-10-12 | Schaniel Krzysztof | Tobiasz Wojciech | 3-2 | 2 | 2 | Pending
+2026-10-12 | Jozefiak Michal | Mecik Patryk | 3-0 |  | 2 | 
+2026-10-12 | Kordaszewski Tomasz | Przebierala Tomasz | 3-0 | 4 | 4 | Pending
