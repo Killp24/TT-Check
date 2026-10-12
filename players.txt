@@ -42,7 +42,7 @@ Czernik Mateusz | 599 | 1063
 Czerwinski Bartosz | 2276 | 2707
 Dabrowski Igor | 1719 | 1799
 Daniel Artur | 2755 | 2638
-David Petr | 2328 | 1109
+David Petr | 2329 | 1109
 Debski Jerzy | 43 | 93
 Delikatny Kamil | 295 | 362
 Dlugaj Rafal | 7 | 3
@@ -60,7 +60,7 @@ Filbrandt Tomasz | 2453 | 1916
 Fira Damian | 471 | 745
 Folwarski Jakub | 694 | 321
 Fomin Andriej | 626 | 445
-Fomin Yurij | 604 | 768
+Fomin Yurij | 605 | 768
 Gabrys Dariusz | 0 | 20
 Gaik Krystian | 326 | 284
 Gajda Rafal | 457 | 436
@@ -170,7 +170,7 @@ Linek Adam | 2177 | 2425
 Lis Daniel | 594 | 391
 Lojtek Tomasz | 602 | 1237
 Lukaszewski Mikolaj | 1116 | 1369
-Machelski Michal | 518 | 868
+Machelski Michal | 519 | 868
 Madej Boguslaw | 213 | 348
 Makajew Maciej | 958 | 924
 Makowski Kacper | 415 | 570
@@ -186,8 +186,8 @@ Martinko Tomas | 76 | 108
 Marud Grzegorz | 1145 | 1359
 Maruszak Piotr | 1001 | 1085
 Maslowski Jakub | 525 | 686
-Maszczynski Dariusz | 111 | 396
-Mecik Patryk | 1125 | 1171
+Maszczynski Dariusz | 112 | 396
+Mecik Patryk | 1126 | 1171
 Miastowski Maksymilian | 1550 | 1372
 Michalczyk Jakub | 226 | 203
 Michalik Jerzy | 997 | 1225
@@ -247,9 +247,9 @@ Polanski Pawel | 786 | 744
 Poliniewicz Grzegorz | 4087 | 2896
 Polok Pawel | 191 | 118
 Poloszczanski Dawid | 1222 | 2123
-Prokopcov Dimitrij | 112 | 138
-Pruszkowski Jakub | 2340 | 1661
-Przebierala Tomasz | 31 | 244
+Prokopcov Dimitrij | 112 | 139
+Pruszkowski Jakub | 2341 | 1661
+Przebierala Tomasz | 31 | 245
 Przewlocki Jacek | 909 | 1177
 Przewlocki Piotr | 723 | 901
 Ptak Wiktor | 91 | 75
@@ -274,7 +274,7 @@ Sikon Mateusz | 213 | 302
 Sikora Filip | 119 | 64
 Sikora Mariusz | 139 | 91
 Sinicki Maciej | 1059 | 1227
-Sklensky Miroslav | 1786 | 1245
+Sklensky Miroslav | 1787 | 1245
 Skop Szymon | 261 | 350
 Skorski Michal | 2023 | 1873
 Skorupa Jakub | 357 | 397
@@ -283,10 +283,10 @@ Skrla Jiri | 42 | 80
 Skupinski Arkadiusz | 379 | 604
 Skuril Michal | 25 | 35
 Skwierz Jakub | 6 | 26
-Slawinski Kacper | 2057 | 1462
+Slawinski Kacper | 2057 | 1463
 Slosarczyk Pawel | 448 | 827
 Smolka Kamil | 237 | 222
-Sobel Artur | 1799 | 1298
+Sobel Artur | 1800 | 1298
 Sobel Bartosz | 4 | 11
 Sobkow Zbigniew | 73 | 97
 Sojka Stanislaw | 149 | 82
@@ -301,7 +301,7 @@ Staniczek Adam | 533 | 1111
 Staniszewski Piotr | 904 | 1189
 Stapor Rafal | 743 | 580
 Staszczyk Konrad | 1389 | 1183
-Stechly Witold | 110 | 523
+Stechly Witold | 110 | 524
 Stecyszyn Jakub | 258 | 343
 Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
@@ -316,7 +316,7 @@ Szczepanek Blazej | 846 | 1067
 Szczepanski Mateusz | 329 | 368
 Szlubowski Dariusz | 443 | 251
 Szoltysek Artur | 551 | 692
-Szostok Sebastian | 1824 | 1241
+Szostok Sebastian | 1825 | 1241
 Szurgot Andrzej | 42 | 127
 Szurlej Kacper | 228 | 202
 Szydlo Aleksander | 84 | 85
@@ -325,7 +325,7 @@ Szymanski Igor | 126 | 394
 Szymik Robert | 1188 | 764
 Tkaczyk Henryk | 1152 | 589
 Tkocz Marek | 956 | 534
-Tobiasz Wojciech | 663 | 860
+Tobiasz Wojciech | 663 | 861
 Tomsia Slawomir | 75 | 144
 Trela Mateusz | 1497 | 1626
 Twardowski Szymon | 384 | 222
@@ -343,11 +343,11 @@ Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
 Wichowski Grzegorz | 1087 | 673
-Wiciok Piotr | 10 | 12
+Wiciok Piotr | 10 | 13
 Wiecek Adrian | 3194 | 2381
 Wieczerzak Jacek | 171 | 145
-Wisniewski Bartlomiej | 2895 | 2382
-Wisniewski Karol | 4040 | 4799
+Wisniewski Bartlomiej | 2895 | 2383
+Wisniewski Karol | 4040 | 4800
 Witczak Filip | 737 | 548
 Witkowski Antoni | 1076 | 775
 Witkowski Jakub | 760 | 1073
