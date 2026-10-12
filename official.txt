@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T01:07Z
+# updated 2026-10-12T01:08Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12154,7 +12154,7 @@
 2026-10-12 | Gumulinski Piotr | Urban Wojciech | 3-2 |  |  | 
 2026-10-12 | Oracz Lukasz | Nowak Jakub | 3-2 |  |  | 
 2026-10-12 | Chmielowski Jakub | Staszczyk Konrad | 3-2 |  |  | 
-2026-10-12 | Staszczyk Konrad | Sporek Szymon | 3-0 |  |  | 
+2026-10-12 | Staszczyk Konrad | Sporek Szymon | 3-0 | 1 | 1 | +13
 2026-10-12 | Kubiak Artur | Mucha Grzegorz | 3-2 | 1 | 1 | Pending
 2026-10-12 | Fomin Andriej | Szurgot Andrzej | 3-1 | 1 | 1 | Pending
 2026-10-12 | Trela Mateusz | Solilo Dominik | 3-0 | 2 | 2 | Pending
@@ -12162,5 +12162,5 @@
 2026-10-12 | Sikon Mateusz | Szymanski Igor | 3-2 | 2 | 2 | Pending
 2026-10-12 | Guzik Michal | Baron Mariusz | 3-1 | 3 | 2 | Pending
 2026-10-12 | Chmielowski Jakub | Jadam Dawid | 3-2 |  |  | 
-2026-10-12 | Mucha Grzegorz | Kwiatkowski Kacper | 3-1 |  |  | 
-2026-10-12 | Rudomina Kamil | Solilo Dominik | 3-0 |  |  | 
+2026-10-12 | Mucha Grzegorz | Kwiatkowski Kacper | 3-1 | 2 | 1 | Pending
+2026-10-12 | Rudomina Kamil | Solilo Dominik | 3-0 | 3 | 3 | +15
