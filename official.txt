@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T16:10Z
+# updated 2026-10-12T16:52Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12167,6 +12167,14 @@
 2026-10-12 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-1 | 1 | 6 | +15
 2026-10-12 | Malinowski Radoslaw | Lamperski Jakub | 3-2 | 1 | 6 | +9
 2026-10-12 | Zochniak Jakub | Kapik Krzysztof | 3-2 | 1 | 6 | +9
+2026-10-12 | Kwodawski Bartosz | Szoltysek Artur | 3-1 | 1 | 1 | Pending
+2026-10-12 | Warzecha Miroslaw | Cyndera Jakub | 3-0 | 1 | 1 | +9
+2026-10-12 | Brud Szymon | Stapor Rafal | 3-0 | 1 | 3 | Pending
+2026-10-12 | Lewczuk Miroslaw | Nocun Zbigniew | 3-2 | 1 | 1 | +7
+2026-10-12 | Mrugala Bartlomiej | Zwolinski Mariusz | 3-1 | 1 | 1 | Pending
+2026-10-12 | Staniczek Adam | Frank Roman | 3-2 | 1 | 1 | +11
+2026-10-12 | Strus Piotr | Golaszewski Kuba | 3-0 | 1 | 1 | Pending
+2026-10-12 | Zelezik Jacek | Krezel Andrzej | 3-1 | 1 | 1 | +1
 2026-10-12 | Kolek Maciej | Solilo Dominik | 3-2 | 2 | 1 | +5
 2026-10-12 | Rudomina Kamil | Trela Mateusz | 3-0 | 2 | 1 | +10
 2026-10-12 | Sawicki Grzegorz | Szymanski Igor | 3-2 | 2 | 1 | +8
@@ -12200,6 +12208,8 @@
 2026-10-12 | Jozefiak Michal | Mecik Patryk | 3-0 | 2 | 2 | +11
 2026-10-12 | Minda Michal | Sobel Artur | 3-2 | 2 | 7 | +10
 2026-10-12 | Zochniak Jakub | Rutkowski Mateusz | 3-1 | 2 | 2 | +11
+2026-10-12 | Zelezik Jacek | Lewczuk Miroslaw | 3-2 |  | 2 | 
+2026-10-12 | Warzecha Miroslaw | Staniczek Adam | 3-0 |  | 2 | 
 2026-10-12 | Guzik Michal | Baron Mariusz | 3-1 | 3 | 2 | +12
 2026-10-12 | Rudomina Kamil | Solilo Dominik | 3-0 | 3 | 3 | +15
 2026-10-12 | Szurgot Andrzej | Kwiatkowski Kacper | 3-0 | 3 | 2 | +19
@@ -12228,7 +12238,7 @@
 2026-10-12 | Mecik Patryk | Wiciok Piotr | 3-1 | 3 | 3 | +16
 2026-10-12 | Schaniel Krzysztof | Jozefiak Michal | 3-1 | 3 | 3 | +14
 2026-10-12 | Rutkowski Mateusz | Kapik Krzysztof | 3-1 | 3 | 8 | +14
-2026-10-12 | Malinowski Radoslaw | Minda Michal | 3-1 | 3 | 3 | Pending
+2026-10-12 | Malinowski Radoslaw | Minda Michal | 3-1 | 3 | 3 | +13
 2026-10-12 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 4 | 4 | Pending
 2026-10-12 | Guzik Michal | Sikon Mateusz | 3-0 | 4 | 3 | +12
 2026-10-12 | Sawicki Grzegorz | Baron Mariusz | 3-1 | 4 | 3 | +15
@@ -12257,6 +12267,10 @@
 2026-10-12 | Wiciok Piotr | Schaniel Krzysztof | 3-0 | 4 | 4 | +16
 2026-10-12 | Tobiasz Wojciech | Jozefiak Michal | 3-0 | 4 | 4 | +22
 2026-10-12 | Rutkowski Mateusz | Mitas Jacek | 3-2 | 4 | 9 | +9
+2026-10-12 | Kaczmarek Jakub | Buczynski Witold | 3-1 | 4 | 9 | +15
+2026-10-12 | Solilo Dominik | Marcinowski Krzysztof | 3-2 | 4 | 1 | Pending
+2026-10-12 | Kolek Maciej | Malinowski Radoslaw | 3-1 | 4 | 6 | Pending
+2026-10-12 | Mucha Grzegorz | Bartosik Dominik | 3-1 | 4 | 1 | +11
 2026-10-12 | Nowak Jakub | Urban Wojciech | 3-1 | 5 | 5 | +12
 2026-10-12 | Oracz Lukasz | Vincenec Oliver | 3-1 | 5 | 5 | +7
 2026-10-12 | Gumulinski Piotr | Urban Wojciech | 3-0 | 5 | 6 | +12
@@ -12279,23 +12293,26 @@
 2026-10-12 | Fomin Yurij | Schaniel Krzysztof | 3-1 | 5 | 5 | +9
 2026-10-12 | Tobiasz Wojciech | Mecik Patryk | 3-1 | 5 | 5 | +12
 2026-10-12 | Wiciok Piotr | Jozefiak Michal | 3-1 | 5 | 5 | +11
+2026-10-12 | Zochniak Jakub | Mitas Jacek | 3-2 | 5 | 10 | +9
+2026-10-12 | Malinowski Radoslaw | Krcil Frantisek | 3-0 | 5 | 10 | +14
 2026-10-12 | Jozefiak Michal | Fomin Yurij | 3-1 | 6 | 6 | Pending
 2026-10-12 | Mecik Patryk | Wiciok Piotr | 3-1 | 6 | 6 | Pending
 2026-10-12 | Pruszkowski Jakub | Kaczmarek Jakub | 3-0 | 6 | 1 | +8
-2026-10-12 | David Petr | Prokopcov Dimitrij | 3-2 | 6 | 6 | Pending
+2026-10-12 | David Petr | Prokopcov Dimitrij | 3-2 | 6 | 6 | +3
 2026-10-12 | Sobel Artur | Krcil Frantisek | 3-0 | 6 | 6 | +9
-2026-10-12 | Spanik Tibor | Braun Josef | 3-2 | 6 | 6 | Pending
+2026-10-12 | Spanik Tibor | Braun Josef | 3-2 | 6 | 6 | +6
 2026-10-12 | Polok Pawel | Buczynski Witold | 3-1 | 6 | 6 | +9
 2026-10-12 | Sklensky Miroslav | Mitas Jacek | 3-2 | 6 | 6 | +5
 2026-10-12 | Slawinski Kacper | Przewlocki Piotr | 3-1 | 6 | 6 | +7
-2026-10-12 | Wloczko Krzysztof | Wiecek Adrian | 3-2 | 6 | 6 | Pending
+2026-10-12 | Wloczko Krzysztof | Wiecek Adrian | 3-2 | 6 | 6 | +9
 2026-10-12 | Czerwinski Bartosz | Minda Michal | 3-1 | 6 | 1 | +7
 2026-10-12 | Tobiasz Wojciech | Schaniel Krzysztof | 3-2 | 6 | 6 | Pending
+2026-10-12 | Maszczynski Dariusz | Gesiarz Piotr | 3-2 | 6 | 1 | +14
 2026-10-12 | Fomin Yurij | Schaniel Krzysztof | 3-1 | 7 | 7 | Pending
-2026-10-12 | Spanik Tibor | David Petr | 3-0 | 7 | 7 | Pending
+2026-10-12 | Spanik Tibor | David Petr | 3-0 | 7 | 7 | +21
 2026-10-12 | Pruszkowski Jakub | Polok Pawel | 3-0 | 7 | 7 | +12
 2026-10-12 | Krcil Frantisek | Lamperski Jakub | 3-2 | 7 | 7 | +10
-2026-10-12 | Wiecek Adrian | Prokopcov Dimitrij | 3-1 | 7 | 7 | Pending
+2026-10-12 | Wiecek Adrian | Prokopcov Dimitrij | 3-1 | 7 | 7 | +10
 2026-10-12 | Przewlocki Piotr | Kaczmarek Jakub | 3-2 | 7 | 2 | +6
 2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-2 | 7 | 7 | +6
 2026-10-12 | Kapik Krzysztof | Mitas Jacek | 3-0 | 7 | 7 | +17
@@ -12305,27 +12322,42 @@
 2026-10-12 | Wiciok Piotr | Tobiasz Wojciech | 3-0 | 7 | 7 | Pending
 2026-10-12 | Jozefiak Michal | Mecik Patryk | 3-1 | 7 | 7 | Pending
 2026-10-12 | Wloczko Krzysztof | Braun Josef | 3-1 | 8 | 8 | Pending
-2026-10-12 | Spanik Tibor | Prokopcov Dimitrij | 3-0 | 8 | 8 | Pending
-2026-10-12 | David Petr | Wloczko Krzysztof | 3-1 | 8 | 9 | Pending
+2026-10-12 | Spanik Tibor | Prokopcov Dimitrij | 3-0 | 8 | 8 | +9
+2026-10-12 | David Petr | Wloczko Krzysztof | 3-1 | 8 | 8 | +7
 2026-10-12 | Polok Pawel | Kaczmarek Jakub | 3-0 | 8 | 3 | +11
 2026-10-12 | Mitas Jacek | Poliniewicz Grzegorz | 3-1 | 8 | 8 | +13
 2026-10-12 | Sobel Artur | Lamperski Jakub | 3-1 | 8 | 8 | +9
-2026-10-12 | Wiecek Adrian | Braun Josef | 3-1 | 8 | 9 | Pending
+2026-10-12 | Wiecek Adrian | Braun Josef | 3-1 | 8 | 8 | +11
 2026-10-12 | Slawinski Kacper | Pruszkowski Jakub | 3-0 | 8 | 8 | +15
 2026-10-12 | Buczynski Witold | Przewlocki Piotr | 3-0 | 8 | 8 | +19
 2026-10-12 | Sklensky Miroslav | Zochniak Jakub | 3-0 | 8 | 3 | +10
-2026-10-12 | Czerwinski Bartosz | Krcil Frantisek | 3-2 | 8 | 8 | Pending
+2026-10-12 | Czerwinski Bartosz | Krcil Frantisek | 3-2 | 8 | 8 | +3
 2026-10-12 | Fomin Yurij | Tobiasz Wojciech | 3-1 | 8 | 8 | Pending
-2026-10-12 | David Petr | Wiecek Adrian | 3-1 | 9 | 9 | Pending
+2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-1 | 8 | 8 | Pending
+2026-10-12 | Wiciok Piotr | Jozefiak Michal | 3-2 | 8 | 8 | Pending
+2026-10-12 | David Petr | Wiecek Adrian | 3-1 | 9 | 9 | +7
 2026-10-12 | Kapik Krzysztof | Sklensky Miroslav | 3-1 | 9 | 9 | +17
-2026-10-12 | Spanik Tibor | Wloczko Krzysztof | 3-1 | 9 | 10 | Pending
+2026-10-12 | Spanik Tibor | Wloczko Krzysztof | 3-1 | 9 | 9 | +8
 2026-10-12 | Poliniewicz Grzegorz | Zochniak Jakub | 3-1 | 9 | 4 | +11
-2026-10-12 | Czerwinski Bartosz | Lamperski Jakub | 3-0 | 9 | 9 | Pending
-2026-10-12 | Krcil Frantisek | Minda Michal | 3-1 | 9 | 4 | Pending
+2026-10-12 | Czerwinski Bartosz | Lamperski Jakub | 3-0 | 9 | 9 | +8
+2026-10-12 | Krcil Frantisek | Minda Michal | 3-1 | 9 | 4 | +15
 2026-10-12 | Polok Pawel | Slawinski Kacper | 3-2 | 9 | 9 | +11
 2026-10-12 | Pruszkowski Jakub | Przewlocki Piotr | 3-2 | 9 | 9 | +5
-2026-10-12 | Sobel Artur | Malinowski Radoslaw | 3-2 | 9 | 4 | Pending
-2026-10-12 | Braun Josef | Prokopcov Dimitrij | 3-1 | 10 | 9 | Pending
+2026-10-12 | Sobel Artur | Malinowski Radoslaw | 3-2 | 9 | 4 | +6
+2026-10-12 | Braun Josef | Prokopcov Dimitrij | 3-1 | 9 | 9 | +10
+2026-10-12 | Fomin Yurij | Mecik Patryk | 3-2 | 9 | 9 | Pending
+2026-10-12 | Wiciok Piotr | Schaniel Krzysztof | 3-1 | 9 | 9 | Pending
+2026-10-12 | Jozefiak Michal | Tobiasz Wojciech | 3-0 | 9 | 9 | Pending
+2026-10-12 | Polok Pawel | Przewlocki Piotr | 3-1 | 10 | 10 | +10
+2026-10-12 | Wiecek Adrian | Spanik Tibor | 3-1 | 10 | 10 | +15
+2026-10-12 | Prokopcov Dimitrij | Wloczko Krzysztof | 3-1 | 10 | 10 | +15
+2026-10-12 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 10 | 10 | +12
+2026-10-12 | Lamperski Jakub | Minda Michal | 3-2 | 10 | 5 | +8
+2026-10-12 | Braun Josef | David Petr | 3-1 | 10 | 10 | +19
+2026-10-12 | Slawinski Kacper | Kaczmarek Jakub | 3-0 | 10 | 5 | +6
+2026-10-12 | Pruszkowski Jakub | Buczynski Witold | 3-2 | 10 | 10 | +4
+2026-10-12 | Sklensky Miroslav | Rutkowski Mateusz | 3-0 | 10 | 5 | +9
+2026-10-12 | Czerwinski Bartosz | Sobel Artur | 3-1 | 10 | 10 | +9
 2026-10-12 | Jadam Dawid | Mlynarski Filip | 3-2 |  |  | 
 2026-10-12 | Kwiatkowski Kacper | Kubiak Artur | 3-2 |  |  | 
 2026-10-12 | Chmielowski Jakub | Mlynarski Filip | 3-2 |  |  | 
@@ -12340,28 +12372,3 @@
 2026-10-12 | Chmielowski Jakub | Staszczyk Konrad | 3-2 |  |  | 
 2026-10-12 | Marud Grzegorz | Nowak Jakub | 3-1 |  |  | 
 2026-10-12 | Wolny Michal | Kordaszewski Tomasz | 3-2 |  |  | 
-2026-10-12 | Wiecek Adrian | Spanik Tibor | 3-1 | 10 | 10 | Pending
-2026-10-12 | Prokopcov Dimitrij | Wloczko Krzysztof | 3-1 | 10 | 11 | Pending
-2026-10-12 | Kaczmarek Jakub | Buczynski Witold | 3-1 | 4 | 9 | +15
-2026-10-12 | Polok Pawel | Przewlocki Piotr | 3-1 | 10 | 10 | +10
-2026-10-12 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 10 | 10 | Pending
-2026-10-12 | Lamperski Jakub | Minda Michal | 3-2 | 10 | 5 | Pending
-2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-1 | 8 | 8 | Pending
-2026-10-12 | Braun Josef | David Petr | 3-1 | 10 | 10 | +19
-2026-10-12 | Slawinski Kacper | Kaczmarek Jakub | 3-0 | 10 | 5 | +6
-2026-10-12 | Pruszkowski Jakub | Buczynski Witold | 3-2 | 10 | 10 | +4
-2026-10-12 | Zochniak Jakub | Mitas Jacek | 3-2 | 5 | 10 | +9
-2026-10-12 | Sklensky Miroslav | Rutkowski Mateusz | 3-0 | 10 | 5 | +9
-2026-10-12 | Czerwinski Bartosz | Sobel Artur | 3-1 | 10 | 10 | Pending
-2026-10-12 | Malinowski Radoslaw | Krcil Frantisek | 3-0 | 5 | 10 | Pending
-2026-10-12 | Wiciok Piotr | Jozefiak Michal | 3-2 | 8 | 8 | Pending
-2026-10-12 | Kwodawski Bartosz | Szoltysek Artur | 3-1 | 1 | 1 | Pending
-2026-10-12 | Warzecha Miroslaw | Cyndera Jakub | 3-0 | 1 | 1 | +9
-2026-10-12 | Fomin Yurij | Mecik Patryk | 3-2 | 9 | 9 | Pending
-2026-10-12 | Brud Szymon | Stapor Rafal | 3-0 | 1 | 3 | Pending
-2026-10-12 | Solilo Dominik | Marcinowski Krzysztof | 3-2 | 4 | 1 | Pending
-2026-10-12 | Lewczuk Miroslaw | Nocun Zbigniew | 3-2 |  |  | 
-2026-10-12 | Mrugala Bartlomiej | Zwolinski Mariusz | 3-1 | 1 | 1 | Pending
-2026-10-12 | Staniczek Adam | Frank Roman | 3-2 | 1 |  | +11
-2026-10-12 | Wiciok Piotr | Schaniel Krzysztof | 3-1 | 9 | 9 | Pending
-2026-10-12 | Jozefiak Michal | Tobiasz Wojciech | 3-0 |  | 9 | 
