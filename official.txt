@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T14:37Z
+# updated 2026-10-12T14:43Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12315,7 +12315,7 @@
 2026-10-12 | Buczynski Witold | Przewlocki Piotr | 3-0 | 8 | 8 | +19
 2026-10-12 | Sklensky Miroslav | Zochniak Jakub | 3-0 | 8 | 3 | +10
 2026-10-12 | Czerwinski Bartosz | Krcil Frantisek | 3-2 | 8 | 8 | Pending
-2026-10-12 | Fomin Yurij | Tobiasz Wojciech | 3-1 |  | 8 | 
+2026-10-12 | Fomin Yurij | Tobiasz Wojciech | 3-1 | 8 | 8 | Pending
 2026-10-12 | David Petr | Wiecek Adrian | 3-1 | 9 | 9 | Pending
 2026-10-12 | Kapik Krzysztof | Sklensky Miroslav | 3-1 | 9 | 9 | +17
 2026-10-12 | Spanik Tibor | Wloczko Krzysztof | 3-1 | 9 | 10 | Pending
@@ -12340,10 +12340,10 @@
 2026-10-12 | Chmielowski Jakub | Staszczyk Konrad | 3-2 |  |  | 
 2026-10-12 | Marud Grzegorz | Nowak Jakub | 3-1 |  |  | 
 2026-10-12 | Wolny Michal | Kordaszewski Tomasz | 3-2 |  |  | 
-2026-10-12 | Wiecek Adrian | Spanik Tibor | 3-1 |  |  | 
-2026-10-12 | Prokopcov Dimitrij | Wloczko Krzysztof | 3-1 |  |  | 
+2026-10-12 | Wiecek Adrian | Spanik Tibor | 3-1 | 10 | 10 | Pending
+2026-10-12 | Prokopcov Dimitrij | Wloczko Krzysztof | 3-1 | 10 | 11 | Pending
 2026-10-12 | Kaczmarek Jakub | Buczynski Witold | 3-1 |  |  | 
 2026-10-12 | Polok Pawel | Przewlocki Piotr | 3-1 |  |  | 
-2026-10-12 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 |  |  | 
-2026-10-12 | Lamperski Jakub | Minda Michal | 3-2 |  |  | 
-2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-1 |  |  | 
+2026-10-12 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 10 | 10 | Pending
+2026-10-12 | Lamperski Jakub | Minda Michal | 3-2 | 10 | 5 | Pending
+2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-1 | 8 | 8 | Pending
