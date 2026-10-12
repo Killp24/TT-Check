@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-12T03:02Z
+# updated 2026-10-12T03:32Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-11T11:27Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -19722,7 +19722,7 @@
 2026-09-20 | Pietraszko Lukasz | Kolek Maciej | 3-1
 2026-09-27 | Pietraszko Lukasz | Kolek Maciej | 3-1
 2026-09-28 | Kolek Maciej | Pietraszko Lukasz | 3-1
-# pair | Kolek Maciej | Rudomina Kamil | 2026-10-11T09:28Z
+# pair | Kolek Maciej | Rudomina Kamil | 2026-10-12T03:32Z
 2025-12-29 | Rudomina Kamil | Kolek Maciej | 3-1
 2025-12-31 | Kolek Maciej | Rudomina Kamil | 3-1
 2025-12-31 | Rudomina Kamil | Kolek Maciej | 3-2
@@ -19767,6 +19767,8 @@
 2026-09-20 | Rudomina Kamil | Kolek Maciej | 3-2
 2026-10-09 | Rudomina Kamil | Kolek Maciej | 3-2
 2026-10-10 | Kolek Maciej | Rudomina Kamil | 3-1
+2026-10-11 | Kolek Maciej | Rudomina Kamil | 3-2
+2026-10-12 | Rudomina Kamil | Kolek Maciej | 3-2
 # pair | Kolek Maciej | Solilo Dominik | 2026-10-11T20:29Z
 2026-05-02 | Solilo Dominik | Kolek Maciej | 3-1
 2026-05-02 | Solilo Dominik | Kolek Maciej | 3-2
@@ -22591,9 +22593,10 @@
 2026-09-28 | Sobel Artur | Kukawka Milosz | 3-1
 2026-09-29 | Sobel Artur | Kukawka Milosz | 3-1
 2026-10-06 | Kukawka Milosz | Sobel Artur | 3-0
-# pair | Kukawka Milosz | Solilo Dominik | 2026-10-11T09:28Z
+# pair | Kukawka Milosz | Solilo Dominik | 2026-10-12T03:32Z
 2026-10-07 | Kukawka Milosz | Solilo Dominik | 3-2
 2026-10-10 | Solilo Dominik | Kukawka Milosz | 3-1
+2026-10-11 | Kukawka Milosz | Solilo Dominik | 3-1
 # pair | Kukawka Milosz | Stapor Rafal | 2026-10-11T20:29Z
 2026-02-09 | Kukawka Milosz | Stapor Rafal | 3-0
 2026-02-09 | Kukawka Milosz | Stapor Rafal | 3-1
