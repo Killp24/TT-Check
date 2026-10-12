@@ -21,11 +21,11 @@ Benes Michal | 531 | 486
 Bernacki Lukasz | 739 | 800
 Blocho Przemyslaw | 1572 | 1167
 Bluszcz Tomasz | 123 | 152
-Braun Josef | 1650 | 1538
+Braun Josef | 1650 | 1539
 Brozek Piotr | 112 | 88
 Brud Szymon | 715 | 752
 Brunner Marian | 560 | 668
-Buczynski Witold | 1047 | 1810
+Buczynski Witold | 1048 | 1810
 Burkacki Adrian | 148 | 250
 Burkacki Mateusz | 1959 | 1475
 Cesarz Milosz | 234 | 555
@@ -39,10 +39,10 @@ Cioch Blazej | 602 | 711
 Cyndera Jakub | 341 | 279
 Cyrnek Piotr | 741 | 610
 Czernik Mateusz | 599 | 1063
-Czerwinski Bartosz | 2279 | 2707
+Czerwinski Bartosz | 2280 | 2707
 Dabrowski Igor | 1719 | 1799
 Daniel Artur | 2755 | 2638
-David Petr | 2330 | 1110
+David Petr | 2331 | 1110
 Debski Jerzy | 43 | 93
 Delikatny Kamil | 295 | 362
 Dlugaj Rafal | 7 | 3
@@ -60,7 +60,7 @@ Filbrandt Tomasz | 2453 | 1916
 Fira Damian | 471 | 745
 Folwarski Jakub | 694 | 321
 Fomin Andriej | 626 | 445
-Fomin Yurij | 607 | 768
+Fomin Yurij | 607 | 769
 Gabrys Dariusz | 0 | 20
 Gaik Krystian | 326 | 284
 Gajda Rafal | 457 | 436
@@ -103,7 +103,7 @@ Jendrysik Dawid | 273 | 402
 Jendrzejewski Patryk | 419 | 453
 Jesiek Jakub | 311 | 279
 Jozala Waldemar | 415 | 500
-Jozefiak Michal | 27 | 28
+Jozefiak Michal | 28 | 28
 Jurowicz Grzegorz | 405 | 646
 Juszczyk Krzysztof | 1328 | 1248
 Juzek Sebastian | 382 | 576
@@ -138,7 +138,7 @@ Kowalski Kamil | 36 | 163
 Kowol Marek | 279 | 262
 Kratochvil Michal | 10 | 10
 Krawczyk Jakub | 181 | 285
-Krcil Frantisek | 711 | 839
+Krcil Frantisek | 711 | 840
 Krezel Andrzej | 122 | 189
 Krukar Piotr | 33 | 40
 Krupa Sebastian | 471 | 432
@@ -177,7 +177,7 @@ Makowski Kacper | 415 | 570
 Malachowski Michal | 736 | 860
 Malcher Krzysztof | 46 | 86
 Malecha Maciej | 225 | 253
-Malinowski Radoslaw | 753 | 713
+Malinowski Radoslaw | 754 | 713
 Marchlewski Kacper | 639 | 894
 Marchlewski Marcin | 1213 | 1160
 Marcinowski Krzysztof | 625 | 862
@@ -187,13 +187,13 @@ Marud Grzegorz | 1145 | 1359
 Maruszak Piotr | 1001 | 1085
 Maslowski Jakub | 525 | 686
 Maszczynski Dariusz | 112 | 396
-Mecik Patryk | 1126 | 1173
+Mecik Patryk | 1127 | 1173
 Miastowski Maksymilian | 1550 | 1372
 Michalczyk Jakub | 226 | 203
 Michalik Jerzy | 997 | 1225
 Michalski Jakub | 1188 | 1731
 Michna Dawid | 1204 | 1110
-Minda Michal | 3571 | 3467
+Minda Michal | 3571 | 3468
 Misiak Mateusz | 3791 | 3374
 Mista Sylwester | 405 | 994
 Mitas Jacek | 142 | 153
@@ -248,10 +248,10 @@ Poliniewicz Grzegorz | 4086 | 2900
 Polok Pawel | 193 | 119
 Poloszczanski Dawid | 1222 | 2123
 Prokopcov Dimitrij | 112 | 142
-Pruszkowski Jakub | 2343 | 1661
+Pruszkowski Jakub | 2343 | 1662
 Przebierala Tomasz | 31 | 245
 Przewlocki Jacek | 909 | 1177
-Przewlocki Piotr | 725 | 902
+Przewlocki Piotr | 725 | 903
 Ptak Wiktor | 91 | 75
 Pyda Lukasz | 130 | 466
 Pyrek Dawid | 493 | 655
@@ -263,7 +263,7 @@ Rudomina Kamil | 3022 | 3051
 Rus Maksymilian | 139 | 311
 Rusnak Ales | 139 | 153
 Ruszkiewicz Adam | 403 | 711
-Rutkowski Mateusz | 2195 | 2341
+Rutkowski Mateusz | 2196 | 2341
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
 Sawicki Grzegorz | 745 | 1094
@@ -274,7 +274,7 @@ Sikon Mateusz | 213 | 302
 Sikora Filip | 119 | 64
 Sikora Mariusz | 139 | 91
 Sinicki Maciej | 1059 | 1227
-Sklensky Miroslav | 1789 | 1245
+Sklensky Miroslav | 1790 | 1245
 Skop Szymon | 261 | 350
 Skorski Michal | 2023 | 1873
 Skorupa Jakub | 357 | 397
@@ -283,7 +283,7 @@ Skrla Jiri | 42 | 80
 Skupinski Arkadiusz | 379 | 604
 Skuril Michal | 25 | 35
 Skwierz Jakub | 6 | 26
-Slawinski Kacper | 2058 | 1464
+Slawinski Kacper | 2059 | 1464
 Slosarczyk Pawel | 448 | 827
 Smolka Kamil | 237 | 222
 Sobel Artur | 1802 | 1298
@@ -343,8 +343,8 @@ Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
 Wichowski Grzegorz | 1087 | 673
-Wiciok Piotr | 12 | 13
-Wiecek Adrian | 3195 | 2383
+Wiciok Piotr | 12 | 14
+Wiecek Adrian | 3196 | 2383
 Wieczerzak Jacek | 171 | 145
 Wisniewski Bartlomiej | 2895 | 2383
 Wisniewski Karol | 4040 | 4800
@@ -352,7 +352,7 @@ Witczak Filip | 737 | 548
 Witkowski Antoni | 1076 | 775
 Witkowski Jakub | 760 | 1073
 Wiza Roman | 887 | 1429
-Wloczko Krzysztof | 2564 | 2348
+Wloczko Krzysztof | 2564 | 2349
 Wnek Stanislaw | 942 | 857
 Wodniak Michal | 13 | 26
 Wojcik Rafal | 490 | 658
@@ -371,5 +371,5 @@ Zelezik Jacek | 439 | 346
 Zemla Piotr | 101 | 44
 Zielinski Marcin | 38 | 13
 Zmijewski Artur | 118 | 82
-Zochniak Jakub | 4218 | 3646
+Zochniak Jakub | 4218 | 3647
 Zwolinski Mariusz | 295 | 487
