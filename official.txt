@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T12:01Z
+# updated 2026-10-12T12:11Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12300,18 +12300,19 @@
 2026-10-12 | Wiecek Adrian | Prokopcov Dimitrij | 3-1 | 7 | 7 | Pending
 2026-10-12 | Przewlocki Piotr | Kaczmarek Jakub | 3-2 | 7 | 2 | Pending
 2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-2 | 7 | 7 | Pending
-2026-10-12 | Kapik Krzysztof | Mitas Jacek | 3-0 |  |  | 
-2026-10-12 | Minda Michal | Sobel Artur | 3-2 |  |  | 
+2026-10-12 | Kapik Krzysztof | Mitas Jacek | 3-0 | 7 | 7 | Pending
+2026-10-12 | Minda Michal | Sobel Artur | 3-2 | 2 | 7 | +10
 2026-10-12 | Fomin Yurij | Schaniel Krzysztof | 3-1 | 5 | 5 | Pending
 2026-10-12 | Tobiasz Wojciech | Mecik Patryk | 3-1 | 5 | 5 | Pending
-2026-10-12 | Buczynski Witold | Slawinski Kacper | 3-0 | 7 |  | Pending
-2026-10-12 | Wloczko Krzysztof | Braun Josef | 3-1 |  |  | 
-2026-10-12 | Spanik Tibor | Prokopcov Dimitrij | 3-0 |  |  | 
-2026-10-12 | Zochniak Jakub | Rutkowski Mateusz | 3-1 |  |  | 
-2026-10-12 | Czerwinski Bartosz | Malinowski Radoslaw | 3-0 |  |  | 
-2026-10-12 | Wiciok Piotr | Jozefiak Michal | 3-1 |  |  | 
+2026-10-12 | Buczynski Witold | Slawinski Kacper | 3-0 | 7 | 7 | Pending
+2026-10-12 | Wloczko Krzysztof | Braun Josef | 3-1 | 7 | 7 | Pending
+2026-10-12 | Spanik Tibor | Prokopcov Dimitrij | 3-0 | 8 | 8 | Pending
+2026-10-12 | Zochniak Jakub | Rutkowski Mateusz | 3-1 | 2 | 2 | Pending
+2026-10-12 | Czerwinski Bartosz | Malinowski Radoslaw | 3-0 | 7 | 2 | +8
+2026-10-12 | Wiciok Piotr | Jozefiak Michal | 3-1 | 5 | 5 | +11
 2026-10-12 | David Petr | Wloczko Krzysztof | 3-1 |  |  | 
-2026-10-12 | Polok Pawel | Kaczmarek Jakub | 3-0 |  |  | 
-2026-10-12 | Mitas Jacek | Poliniewicz Grzegorz | 3-1 |  |  | 
-2026-10-12 | Sobel Artur | Lamperski Jakub | 3-1 |  |  | 
-2026-10-12 | Tobiasz Wojciech | Schaniel Krzysztof | 3-2 |  |  | 
+2026-10-12 | Polok Pawel | Kaczmarek Jakub | 3-0 | 8 | 3 | Pending
+2026-10-12 | Mitas Jacek | Poliniewicz Grzegorz | 3-1 | 8 | 8 | Pending
+2026-10-12 | Sobel Artur | Lamperski Jakub | 3-1 | 8 | 8 | +9
+2026-10-12 | Tobiasz Wojciech | Schaniel Krzysztof | 3-2 | 6 | 6 | Pending
+2026-10-12 | Wloczko Krzysztof | Braun Josef | 3-1 | 8 | 8 | Pending
