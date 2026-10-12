@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-12T06:40Z
+# updated 2026-10-12T06:47Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12230,14 +12230,15 @@
 2026-10-12 | Wloczko Krzysztof | Wisniewski Karol | 3-1 | 3 | 3 | Pending
 2026-10-12 | Stechly Witold | Przebierala Tomasz | 3-1 | 3 | 3 | Pending
 2026-10-12 | Wiciok Piotr | Tobiasz Wojciech | 3-1 | 1 | 1 | Pending
-2026-10-12 | Braun Josef | Spanik Tibor | 3-1 |  |  | 
+2026-10-12 | Braun Josef | Spanik Tibor | 3-1 | 3 | 3 | Pending
 2026-10-12 | David Petr | Wiecek Adrian | 3-1 |  |  | 
-2026-10-12 | Pruszkowski Jakub | Buczynski Witold | 3-0 |  |  | 
-2026-10-12 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 |  |  | 
-2026-10-12 | Kapik Krzysztof | Sklensky Miroslav | 3-1 |  |  | 
-2026-10-12 | Lamperski Jakub | Krcil Frantisek | 3-2 |  |  | 
-2026-10-12 | Czerwinski Bartosz | Sobel Artur | 3-0 |  |  | 
-2026-10-12 | Wolny Michal | Machelski Michal | 3-2 |  |  | 
-2026-10-12 | Maszczynski Dariusz | Kordaszewski Tomasz | 3-0 |  |  | 
-2026-10-12 | Jozefiak Michal | Fomin Yurij | 3-1 |  |  | 
+2026-10-12 | Pruszkowski Jakub | Buczynski Witold | 3-0 | 3 | 3 | Pending
+2026-10-12 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 3 | 3 | Pending
+2026-10-12 | Kapik Krzysztof | Sklensky Miroslav | 3-1 | 3 | 3 | Pending
+2026-10-12 | Lamperski Jakub | Krcil Frantisek | 3-2 | 3 | 3 | +6
+2026-10-12 | Czerwinski Bartosz | Sobel Artur | 3-0 | 3 | 3 | +14
+2026-10-12 | Wolny Michal | Machelski Michal | 3-2 | 3 | 3 | Pending
+2026-10-12 | Maszczynski Dariusz | Kordaszewski Tomasz | 3-0 | 3 | 3 | Pending
+2026-10-12 | Jozefiak Michal | Fomin Yurij | 3-1 | 1 | 1 | Pending
 2026-10-12 | Schaniel Krzysztof | Mecik Patryk | 3-2 |  |  | 
+2026-10-12 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 4 | 4 | Pending
