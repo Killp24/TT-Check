@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T21:35Z
+# updated 2026-10-13T21:37Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12754,9 +12754,11 @@
 2026-10-13 | Szoltysek Artur | Lukaszewski Mikolaj | 3-1 |  |  | 
 2026-10-13 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
 2026-10-13 | Paszkiewicz Michal | Hetnar Krzysztof | 3-2 |  |  | 
-2026-10-13 | Pietraszko Lukasz | Marcinowski Krzysztof | 3-2 |  |  | 
+2026-10-13 | Pietraszko Lukasz | Marcinowski Krzysztof | 3-2 | 6 | 9 | Pending
 2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 |  |  | 
 2026-10-13 | Pietraszko Lukasz | Brud Szymon | 3-2 |  |  | 
-2026-10-13 | Nowak Jakub | Szostok Sebastian | 3-2 |  |  | 
-2026-10-13 | Guzik Michal | Marud Grzegorz | 3-2 |  |  | 
-2026-10-13 | Delikatny Kamil | Machelski Michal | 3-1 |  |  | 
+2026-10-13 | Nowak Jakub | Szostok Sebastian | 3-2 | 5 | 5 | +10
+2026-10-13 | Guzik Michal | Marud Grzegorz | 3-2 | 5 | 11 | +11
+2026-10-13 | Delikatny Kamil | Machelski Michal | 3-1 | 4 | 9 | Pending
+2026-10-13 | Slosarczyk Pawel | Paszkiewicz Michal | 3-2 | 1 | 5 | Pending
+2026-10-13 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 5 | 5 | +18
