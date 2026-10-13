@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T16:31Z
+# updated 2026-10-13T16:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12693,7 +12693,8 @@
 2026-10-13 | Gajda Rafal | Juzek Sebastian | 3-1 | 10 | 9 | Pending
 2026-10-13 | Trela Mateusz | Skorski Michal | 3-1 | 1 | 1 | +13
 2026-10-13 | Golaszewski Kuba | Rolak Jaroslaw | 3-2 | 1 | 1 | +9
-2026-10-13 | Brud Szymon | Kosmal Dawid | 3-2 |  |  | 
-2026-10-13 | Sokolowski Oliwier | Szostok Sebastian | 3-0 |  |  | 
-2026-10-13 | Koczyba Mariusz | Tkocz Marek | 3-2 |  |  | 
-2026-10-13 | Dlugaj Rafal | Schaniel Krzysztof | 3-1 |  |  | 
+2026-10-13 | Brud Szymon | Kosmal Dawid | 3-2 | 3 | 7 | Pending
+2026-10-13 | Sokolowski Oliwier | Szostok Sebastian | 3-0 | 1 | 1 | Pending
+2026-10-13 | Koczyba Mariusz | Tkocz Marek | 3-2 | 1 | 1 | Pending
+2026-10-13 | Dlugaj Rafal | Schaniel Krzysztof | 3-1 | 9 | 9 | Pending
+2026-10-13 | Mrugala Bartlomiej | Szlubowski Dariusz | 3-2 | 2 | 1 | +10
