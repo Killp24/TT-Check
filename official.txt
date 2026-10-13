@@ -12517,7 +12517,7 @@
 2026-10-13 | Krezel Andrzej | Bartosik Dominik | 3-2 | 2 | 2 | +6
 2026-10-13 | Michalik Jerzy | Frank Roman | 3-1 | 4 | 5 | +12
 2026-10-13 | Petas Kacper | David Petr | 3-0 | 1 | 1 | Pending
-2026-10-13 | Zandecki Jan | Vrablik Jiri | 3-0 |  |  | 
+2026-10-13 | Zandecki Jan | Vrablik Jiri | 3-0 | 1 | 1 | Pending
 2026-10-13 | Przewlocki Piotr | Pruszkowski Jakub | 3-0 | 1 | 1 | +23
 2026-10-13 | Adamus Kacper | Buczynski Witold | 3-1 | 1 | 1 | +9
 2026-10-13 | Lamperski Jakub | Kowalczyk Marcin | 3-0 | 1 | 1 | Pending
@@ -12525,13 +12525,14 @@
 2026-10-13 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
 2026-10-13 | Marud Grzegorz | Oracz Lukasz | 3-1 | 5 | 5 | Pending
 2026-10-13 | Paszkiewicz Michal | Cesarz Milosz | 3-0 | 1 | 1 | Pending
-2026-10-13 | Niemiec Rafal | Szymanski Igor | 3-0 |  |  | 
-2026-10-13 | Przewlocki Piotr | Adamus Kacper | 3-1 |  |  | 
-2026-10-13 | Miastowski Maksymilian | Mitas Jacek | 3-2 |  |  | 
-2026-10-13 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1 |  |  | 
-2026-10-13 | Kuzmicz Jakub | Kostal Daniel | 3-1 |  |  | 
-2026-10-13 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 |  |  | 
-2026-10-13 | Warpas Blazej | Piecowski Miroslaw | 3-0 |  |  | 
-2026-10-13 | Sobel Artur | Kowalczyk Marcin | 3-1 |  |  | 
-2026-10-13 | Hetnar Krzysztof | Kaczmarek Jakub | 3-0 |  |  | 
-2026-10-13 | Kurek Pawel | Urban Wojciech | 3-1 |  |  | 
+2026-10-13 | Niemiec Rafal | Szymanski Igor | 3-0 | 1 | 1 | Pending
+2026-10-13 | Przewlocki Piotr | Adamus Kacper | 3-1 | 2 | 2 | Pending
+2026-10-13 | Miastowski Maksymilian | Mitas Jacek | 3-2 | 1 | 1 | Pending
+2026-10-13 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1 | 1 | 1 | Pending
+2026-10-13 | Kuzmicz Jakub | Kostal Daniel | 3-1 | 1 | 1 | Pending
+2026-10-13 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 2 | 2 | Pending
+2026-10-13 | Warpas Blazej | Piecowski Miroslaw | 3-0 | 1 | 1 | +14
+2026-10-13 | Sobel Artur | Kowalczyk Marcin | 3-1 |  | 2 | 
+2026-10-13 | Hetnar Krzysztof | Kaczmarek Jakub | 3-0 | 1 | 1 | +6
+2026-10-13 | Kurek Pawel | Urban Wojciech | 3-1 | 5 | 5 | +10
+2026-10-13 | Vincenec Oliver | Oracz Lukasz | 3-0 | 6 |  | Pending
