@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T08:03Z
+# updated 2026-10-13T08:05Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12574,15 +12574,17 @@
 2026-10-13 | Dlugaj Rafal | Jozefiak Michal | 3-2 | 1 | 1 | Pending
 2026-10-13 | Juzek Sebastian | Skotniczny Rafal | 3-2 | 1 | 1 | Pending
 2026-10-13 | Vrablik Jiri | Petas Kacper | 3-1 | 4 | 4 | Pending
-2026-10-13 | Wiecek Adrian | Zandecki Jan | 3-2 |  |  | 
+2026-10-13 | Wiecek Adrian | Zandecki Jan | 3-2 | 4 | 4 | Pending
 2026-10-13 | Przewlocki Piotr | Szymanski Igor | 3-2 | 4 | 4 | Pending
 2026-10-13 | Buczynski Witold | Pruszkowski Jakub | 3-0 | 4 | 4 | Pending
 2026-10-13 | Kuzmicz Jakub | Mitas Jacek | 3-0 | 4 | 4 | Pending
-2026-10-13 | Hetnar Krzysztof | Adamus Pawel | 3-2 |  | 4 | 
+2026-10-13 | Hetnar Krzysztof | Adamus Pawel | 3-2 | 4 | 4 | +3
 2026-10-13 | Gajda Rafal | Jozefiak Michal | 3-2 | 2 | 2 | Pending
 2026-10-13 | Schaniel Krzysztof | Juzek Sebastian | 3-1 |  |  | 
-2026-10-13 | David Petr | Prokopcov Dimitrij | 3-0 |  |  | 
-2026-10-13 | Adamus Kacper | Szymanski Igor | 3-1 |  |  | 
-2026-10-13 | Miastowski Maksymilian | Sklensky Miroslav | 3-2 |  |  | 
-2026-10-13 | Kukawka Milosz | Lamperski Jakub | 3-1 |  |  | 
-2026-10-13 | Cesarz Milosz | Ruszkiewicz Adam | 3-2 |  |  | 
+2026-10-13 | David Petr | Prokopcov Dimitrij | 3-0 | 4 | 4 | Pending
+2026-10-13 | Adamus Kacper | Szymanski Igor | 3-1 |  | 5 | 
+2026-10-13 | Miastowski Maksymilian | Sklensky Miroslav | 3-2 | 4 | 4 | Pending
+2026-10-13 | Kukawka Milosz | Lamperski Jakub | 3-1 | 4 | 4 | Pending
+2026-10-13 | Cesarz Milosz | Ruszkiewicz Adam | 3-2 | 4 | 4 | Pending
+2026-10-13 | Miastowski Maksymilian | Sklensky Miroslav | 3-2 | 5 | 5 | Pending
+2026-10-13 | Miastowski Maksymilian | Sklensky Miroslav | 3-2 | 6 | 6 | Pending
