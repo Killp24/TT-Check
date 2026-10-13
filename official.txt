@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T02:29Z
+# updated 2026-10-13T02:31Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12208,8 +12208,8 @@
 2026-10-12 | Jozefiak Michal | Mecik Patryk | 3-0 | 2 | 2 | +11
 2026-10-12 | Minda Michal | Sobel Artur | 3-2 | 2 | 7 | +10
 2026-10-12 | Zochniak Jakub | Rutkowski Mateusz | 3-1 | 2 | 2 | +11
-2026-10-12 | Zelezik Jacek | Lewczuk Miroslaw | 3-2 |  | 2 | 
-2026-10-12 | Warzecha Miroslaw | Staniczek Adam | 3-0 |  | 2 | 
+2026-10-12 | Zelezik Jacek | Lewczuk Miroslaw | 3-2 | 2 | 2 | +1
+2026-10-12 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 2 | 2 | +7
 2026-10-12 | Guzik Michal | Baron Mariusz | 3-1 | 3 | 2 | +12
 2026-10-12 | Rudomina Kamil | Solilo Dominik | 3-0 | 3 | 3 | +15
 2026-10-12 | Szurgot Andrzej | Kwiatkowski Kacper | 3-0 | 3 | 2 | +19
@@ -12372,122 +12372,141 @@
 2026-10-12 | Chmielowski Jakub | Staszczyk Konrad | 3-2 |  |  | 
 2026-10-12 | Marud Grzegorz | Nowak Jakub | 3-1 |  |  | 
 2026-10-12 | Wolny Michal | Kordaszewski Tomasz | 3-2 |  |  | 
-2026-10-12 | Solilo Dominik | Brud Szymon | 3-2 |  |  | 
-2026-10-12 | Kwodawski Bartosz | Mrugala Bartlomiej | 3-2 |  |  | 
-2026-10-12 | Wiciok Piotr | Fomin Yurij | 3-2 |  |  | 
-2026-10-12 | Staszczyk Konrad | Brud Szymon | 3-2 |  |  | 
+2026-10-12 | Solilo Dominik | Brud Szymon | 3-2 | 5 | 2 | +9
+2026-10-12 | Kwodawski Bartosz | Mrugala Bartlomiej | 3-2 | 2 | 2 | +6
+2026-10-12 | Wiciok Piotr | Fomin Yurij | 3-2 | 10 | 10 | +9
+2026-10-12 | Staszczyk Konrad | Brud Szymon | 3-2 | 2 | 6 | +2
 2026-10-12 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 |  |  | 
-2026-10-12 | Marcinowski Krzysztof | Wozniak Jakub | 3-0 |  |  | 
-2026-10-12 | Bartosik Dominik | Nocun Zbigniew | 3-2 |  |  | 
-2026-10-12 | Zelezik Jacek | Krezel Andrzej | 3-2 |  |  | 
-2026-10-12 | Mucha Grzegorz | Lewczuk Miroslaw | 3-2 |  |  | 
-2026-10-12 | Szoltysek Artur | Zwolinski Mariusz | 3-2 |  |  | 
-2026-10-12 | Kwodawski Bartosz | Mrugala Bartlomiej | 3-0 |  |  | 
-2026-10-12 | Kwodawski Bartosz | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-12 | Malinowski Radoslaw | Stapor Rafal | 3-2 |  |  | 
-2026-10-12 | Kolek Maciej | Marcinowski Krzysztof | 3-2 |  |  | 
-2026-10-12 | Solilo Dominik | Stapor Rafal | 3-1 |  |  | 
-2026-10-12 | Brud Szymon | Kolek Maciej | 3-1 |  |  | 
-2026-10-12 | Malinowski Radoslaw | Marcinowski Krzysztof | 3-1 |  |  | 
-2026-10-12 | Kolek Maciej | Solilo Dominik | 3-1 |  |  | 
-2026-10-12 | Malinowski Radoslaw | Brud Szymon | 3-0 |  |  | 
-2026-10-12 | Marcinowski Krzysztof | Stapor Rafal | 3-1 |  |  | 
-2026-10-12 | Malinowski Radoslaw | Solilo Dominik | 3-2 |  |  | 
-2026-10-12 | Kolek Maciej | Stapor Rafal | 3-0 |  |  | 
-2026-10-12 | Marcinowski Krzysztof | Brud Szymon | 3-0 |  |  | 
-2026-10-12 | Bartosik Dominik | Nocun Zbigniew | 3-0 |  |  | 
-2026-10-12 | Krezel Andrzej | Mucha Grzegorz | 3-1 |  |  | 
-2026-10-12 | Zelezik Jacek | Nocun Zbigniew | 3-0 |  |  | 
-2026-10-12 | Lewczuk Miroslaw | Mucha Grzegorz | 3-2 |  |  | 
-2026-10-12 | Bartosik Dominik | Krezel Andrzej | 3-2 |  |  | 
-2026-10-12 | Zelezik Jacek | Mucha Grzegorz | 3-2 |  |  | 
-2026-10-12 | Lewczuk Miroslaw | Bartosik Dominik | 3-2 |  |  | 
-2026-10-12 | Krezel Andrzej | Nocun Zbigniew | 3-1 |  |  | 
-2026-10-12 | Zelezik Jacek | Bartosik Dominik | 3-1 |  |  | 
-2026-10-12 | Nocun Zbigniew | Mucha Grzegorz | 3-2 |  |  | 
-2026-10-12 | Krezel Andrzej | Lewczuk Miroslaw | 3-2 |  |  | 
-2026-10-12 | Szoltysek Artur | Strus Piotr | 3-2 |  |  | 
-2026-10-12 | Golaszewski Kuba | Zwolinski Mariusz | 3-2 |  |  | 
-2026-10-12 | Szoltysek Artur | Mrugala Bartlomiej | 3-2 |  |  | 
-2026-10-12 | Kwodawski Bartosz | Golaszewski Kuba | 3-0 |  |  | 
-2026-10-12 | Zwolinski Mariusz | Strus Piotr | 3-1 |  |  | 
-2026-10-12 | Mrugala Bartlomiej | Golaszewski Kuba | 3-1 |  |  | 
-2026-10-12 | Strus Piotr | Kwodawski Bartosz | 3-0 |  |  | 
-2026-10-12 | Zwolinski Mariusz | Szoltysek Artur | 3-1 |  |  | 
-2026-10-12 | Mrugala Bartlomiej | Strus Piotr | 3-1 |  |  | 
-2026-10-12 | Golaszewski Kuba | Szoltysek Artur | 3-1 |  |  | 
-2026-10-12 | Kwodawski Bartosz | Zwolinski Mariusz | 3-0 |  |  | 
-2026-10-12 | Cyndera Jakub | Michalik Jerzy | 3-2 |  |  | 
+2026-10-12 | Marcinowski Krzysztof | Wozniak Jakub | 3-0 | 6 | 1 | +8
+2026-10-12 | Bartosik Dominik | Nocun Zbigniew | 3-2 | 6 | 6 | +7
+2026-10-12 | Zelezik Jacek | Krezel Andrzej | 3-2 | 6 | 6 | +1
+2026-10-12 | Mucha Grzegorz | Lewczuk Miroslaw | 3-2 | 9 | 6 | +8
+2026-10-12 | Szoltysek Artur | Zwolinski Mariusz | 3-2 | 6 | 6 | Pending
+2026-10-12 | Kwodawski Bartosz | Mrugala Bartlomiej | 3-0 | 6 | 6 | Pending
+2026-10-12 | Kwodawski Bartosz | Lukaszewski Mikolaj | 3-0 | 7 | 2 | Pending
+2026-10-12 | Malinowski Radoslaw | Stapor Rafal | 3-2 | 7 | 4 | +10
+2026-10-12 | Kolek Maciej | Marcinowski Krzysztof | 3-2 | 5 | 2 | +5
+2026-10-12 | Solilo Dominik | Stapor Rafal | 3-1 | 6 | 5 | +14
+2026-10-12 | Brud Szymon | Kolek Maciej | 3-1 | 3 | 6 | +17
+2026-10-12 | Malinowski Radoslaw | Marcinowski Krzysztof | 3-1 | 8 | 3 | +13
+2026-10-12 | Kolek Maciej | Solilo Dominik | 3-1 | 7 | 7 | +7
+2026-10-12 | Malinowski Radoslaw | Brud Szymon | 3-0 | 9 | 4 | +18
+2026-10-12 | Marcinowski Krzysztof | Stapor Rafal | 3-1 | 4 | 6 | +13
+2026-10-12 | Malinowski Radoslaw | Solilo Dominik | 3-2 | 10 | 8 | +8
+2026-10-12 | Kolek Maciej | Stapor Rafal | 3-0 | 8 | 7 | +10
+2026-10-12 | Marcinowski Krzysztof | Brud Szymon | 3-0 | 5 | 5 | +16
+2026-10-12 | Bartosik Dominik | Nocun Zbigniew | 3-0 | 2 | 2 | +14
+2026-10-12 | Krezel Andrzej | Mucha Grzegorz | 3-1 | 2 | 5 | +13
+2026-10-12 | Zelezik Jacek | Nocun Zbigniew | 3-0 | 3 | 3 | +1
+2026-10-12 | Lewczuk Miroslaw | Mucha Grzegorz | 3-2 | 3 | 6 | +8
+2026-10-12 | Bartosik Dominik | Krezel Andrzej | 3-2 | 3 | 3 | +9
+2026-10-12 | Zelezik Jacek | Mucha Grzegorz | 3-2 | 4 | 7 | +1
+2026-10-12 | Lewczuk Miroslaw | Bartosik Dominik | 3-2 | 4 | 4 | +8
+2026-10-12 | Krezel Andrzej | Nocun Zbigniew | 3-1 | 4 | 4 | +9
+2026-10-12 | Zelezik Jacek | Bartosik Dominik | 3-1 | 5 | 5 | +1
+2026-10-12 | Nocun Zbigniew | Mucha Grzegorz | 3-2 | 5 | 8 | +10
+2026-10-12 | Krezel Andrzej | Lewczuk Miroslaw | 3-2 | 5 | 5 | +8
+2026-10-12 | Szoltysek Artur | Strus Piotr | 3-2 | 5 | 5 | +9
+2026-10-12 | Golaszewski Kuba | Zwolinski Mariusz | 3-2 | 2 | 2 | +10
+2026-10-12 | Szoltysek Artur | Mrugala Bartlomiej | 3-2 | 2 | 3 | +8
+2026-10-12 | Kwodawski Bartosz | Golaszewski Kuba | 3-0 | 3 | 3 | +9
+2026-10-12 | Zwolinski Mariusz | Strus Piotr | 3-1 | 3 | 2 | +14
+2026-10-12 | Mrugala Bartlomiej | Golaszewski Kuba | 3-1 | 4 | 4 | +10
+2026-10-12 | Strus Piotr | Kwodawski Bartosz | 3-0 | 3 | 4 | +19
+2026-10-12 | Zwolinski Mariusz | Szoltysek Artur | 3-1 | 4 | 3 | +12
+2026-10-12 | Mrugala Bartlomiej | Strus Piotr | 3-1 | 5 | 4 | +14
+2026-10-12 | Golaszewski Kuba | Szoltysek Artur | 3-1 | 5 | 4 | +15
+2026-10-12 | Kwodawski Bartosz | Zwolinski Mariusz | 3-0 | 5 | 5 | +13
+2026-10-12 | Cyndera Jakub | Michalik Jerzy | 3-2 | 6 | 1 | Pending
 2026-10-12 | Staniczek Adam | Frank Roman | 3-2 |  |  | 
-2026-10-12 | Cyndera Jakub | Maszczynski Dariusz | 3-2 |  |  | 
-2026-10-12 | Frank Roman | Gesiarz Piotr | 3-2 |  |  | 
-2026-10-12 | Cyndera Jakub | Staniczek Adam | 3-0 |  |  | 
-2026-10-12 | Gesiarz Piotr | Warzecha Miroslaw | 3-2 |  |  | 
-2026-10-12 | Frank Roman | Maszczynski Dariusz | 3-0 |  |  | 
-2026-10-12 | Gesiarz Piotr | Staniczek Adam | 3-1 |  |  | 
-2026-10-12 | Warzecha Miroslaw | Maszczynski Dariusz | 3-1 |  |  | 
-2026-10-12 | Cyndera Jakub | Frank Roman | 3-2 |  |  | 
-2026-10-12 | Staniczek Adam | Maszczynski Dariusz | 3-2 |  |  | 
-2026-10-12 | Gesiarz Piotr | Cyndera Jakub | 3-2 |  |  | 
-2026-10-12 | Warzecha Miroslaw | Frank Roman | 3-1 |  |  | 
-2026-10-12 | Oracz Lukasz | Urban Wojciech | 3-2 |  |  | 
-2026-10-12 | Vincenec Oliver | Kurek Pawel | 3-1 |  |  | 
-2026-10-12 | Marud Grzegorz | Gumulinski Piotr | 3-0 |  |  | 
-2026-10-12 | Vincenec Oliver | Oracz Lukasz | 3-1 |  |  | 
-2026-10-12 | Urban Wojciech | Marud Grzegorz | 3-2 |  |  | 
-2026-10-12 | Kurek Pawel | Gumulinski Piotr | 3-0 |  |  | 
-2026-10-12 | Oracz Lukasz | Gumulinski Piotr | 3-2 |  |  | 
-2026-10-12 | Kurek Pawel | Marud Grzegorz | 3-1 |  |  | 
-2026-10-12 | Vincenec Oliver | Gumulinski Piotr | 3-2 |  |  | 
-2026-10-12 | Oracz Lukasz | Marud Grzegorz | 3-2 |  |  | 
-2026-10-12 | Urban Wojciech | Kurek Pawel | 3-1 |  |  | 
-2026-10-12 | Mecik Patryk | Tobiasz Wojciech | 3-2 |  |  | 
-2026-10-12 | Schaniel Krzysztof | Jozefiak Michal | 3-1 |  |  | 
-2026-10-13 | Urban Wojciech | Marud Grzegorz | 3-2 |  |  | 
-2026-10-13 | Kurek Pawel | Vincenec Oliver | 3-2 |  |  | 
+2026-10-12 | Cyndera Jakub | Maszczynski Dariusz | 3-2 | 2 | 7 | +3
+2026-10-12 | Frank Roman | Gesiarz Piotr | 3-2 | 2 | 2 | +8
+2026-10-12 | Cyndera Jakub | Staniczek Adam | 3-0 | 3 | 3 | +13
+2026-10-12 | Gesiarz Piotr | Warzecha Miroslaw | 3-2 | 3 | 3 | +11
+2026-10-12 | Frank Roman | Maszczynski Dariusz | 3-0 | 3 | 8 | +5
+2026-10-12 | Gesiarz Piotr | Staniczek Adam | 3-1 | 4 | 4 | +7
+2026-10-12 | Warzecha Miroslaw | Maszczynski Dariusz | 3-1 | 4 | 9 | +2
+2026-10-12 | Cyndera Jakub | Frank Roman | 3-2 | 4 | 4 | +9
+2026-10-12 | Staniczek Adam | Maszczynski Dariusz | 3-2 | 5 | 10 | +5
+2026-10-12 | Gesiarz Piotr | Cyndera Jakub | 3-2 | 5 | 5 | +7
+2026-10-12 | Warzecha Miroslaw | Frank Roman | 3-1 | 5 | 5 | +8
+2026-10-12 | Oracz Lukasz | Urban Wojciech | 3-2 | 6 | 7 | +5
+2026-10-12 | Vincenec Oliver | Kurek Pawel | 3-1 | 6 | 1 | +16
+2026-10-12 | Marud Grzegorz | Gumulinski Piotr | 3-0 | 6 | 6 | +14
+2026-10-12 | Vincenec Oliver | Oracz Lukasz | 3-1 | 7 | 7 | +17
+2026-10-12 | Urban Wojciech | Marud Grzegorz | 3-2 | 8 | 7 | +12
+2026-10-12 | Kurek Pawel | Gumulinski Piotr | 3-0 | 2 | 7 | +18
+2026-10-12 | Oracz Lukasz | Gumulinski Piotr | 3-2 | 8 | 8 | +8
+2026-10-12 | Kurek Pawel | Marud Grzegorz | 3-1 | 3 | 8 | +15
+2026-10-12 | Vincenec Oliver | Gumulinski Piotr | 3-2 | 9 | 9 | +10
+2026-10-12 | Oracz Lukasz | Marud Grzegorz | 3-2 | 9 | 9 | +9
+2026-10-12 | Urban Wojciech | Kurek Pawel | 3-1 | 10 | 4 | +15
+2026-10-12 | Mecik Patryk | Tobiasz Wojciech | 3-2 | 10 | 10 | +8
+2026-10-12 | Schaniel Krzysztof | Jozefiak Michal | 3-1 | 10 | 10 | +14
+2026-10-12 | Vincenec Oliver | Urban Wojciech | 3-1 | 8 | 9 | +13
+2026-10-12 | Staszczyk Konrad | Rudomina Kamil | 3-0 | 3 | 5 | +4
+2026-10-12 | Kwodawski Bartosz | Zwolinski Mariusz | 3-0 | 8 | 9 | Pending
+2026-10-12 | Brud Szymon | Rudomina Kamil | 3-1 | 7 | 4 | +13
+2026-10-12 | Zwolinski Mariusz | Mrugala Bartlomiej | 3-1 | 7 | 7 | Pending
+2026-10-12 | Zelezik Jacek | Bartosik Dominik | 3-0 | 7 | 7 | +1
+2026-10-12 | Krezel Andrzej | Mucha Grzegorz | 3-2 | 7 | 10 | +7
+2026-10-12 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 | 7 | 7 | +15
+2026-10-12 | Brud Szymon | Wozniak Jakub | 3-0 | 8 | 2 | +8
+2026-10-12 | Zwolinski Mariusz | Lukaszewski Mikolaj | 3-2 | 8 | 1 | Pending
+2026-10-12 | Szoltysek Artur | Lukaszewski Mikolaj | 3-1 | 8 | 3 | Pending
+2026-10-12 | Mrugala Bartlomiej | Szoltysek Artur | 3-1 | 8 | 7 | Pending
+2026-10-12 | Nocun Zbigniew | Zelezik Jacek | 3-1 | 8 | 8 | +19
+2026-10-12 | Krezel Andrzej | Lewczuk Miroslaw | 3-1 | 8 | 8 | +10
+2026-10-12 | Mucha Grzegorz | Bartosik Dominik | 3-0 | 11 | 8 | +16
+2026-10-13 | Urban Wojciech | Marud Grzegorz | 3-2 | 2 | 2 | Pending
+2026-10-13 | Kurek Pawel | Vincenec Oliver | 3-2 | 2 | 2 | Pending
 2026-10-13 | Brud Szymon | Rudomina Kamil | 3-1 |  |  | 
 2026-10-13 | Brud Szymon | Wozniak Jakub | 3-0 |  |  | 
 2026-10-13 | Staszczyk Konrad | Rudomina Kamil | 3-0 |  |  | 
-2026-10-13 | Brud Szymon | Marcinowski Krzysztof | 3-1 |  |  | 
-2026-10-13 | Staszczyk Konrad | Wozniak Jakub | 3-1 |  |  | 
-2026-10-13 | Staszczyk Konrad | Marcinowski Krzysztof | 3-0 |  |  | 
-2026-10-13 | Wozniak Jakub | Rudomina Kamil | 3-1 |  |  | 
+2026-10-13 | Brud Szymon | Marcinowski Krzysztof | 3-1 | 1 | 1 | +13
+2026-10-13 | Staszczyk Konrad | Wozniak Jakub | 3-1 | 1 | 1 | +1
+2026-10-13 | Staszczyk Konrad | Marcinowski Krzysztof | 3-0 | 2 | 2 | +5
+2026-10-13 | Wozniak Jakub | Rudomina Kamil | 3-1 | 2 | 1 | +18
 2026-10-13 | Zelezik Jacek | Bartosik Dominik | 3-0 |  |  | 
 2026-10-13 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-13 | Krezel Andrzej | Mucha Grzegorz | 3-2 |  |  | 
 2026-10-13 | Nocun Zbigniew | Zelezik Jacek | 3-1 |  |  | 
 2026-10-13 | Mucha Grzegorz | Bartosik Dominik | 3-0 |  |  | 
 2026-10-13 | Krezel Andrzej | Lewczuk Miroslaw | 3-1 |  |  | 
-2026-10-13 | Mucha Grzegorz | Zelezik Jacek | 3-1 |  |  | 
+2026-10-13 | Mucha Grzegorz | Zelezik Jacek | 3-1 | 1 | 1 | +17
 2026-10-13 | Zwolinski Mariusz | Mrugala Bartlomiej | 3-1 |  |  | 
 2026-10-13 | Zwolinski Mariusz | Lukaszewski Mikolaj | 3-2 |  |  | 
 2026-10-13 | Mrugala Bartlomiej | Szoltysek Artur | 3-1 |  |  | 
 2026-10-13 | Kwodawski Bartosz | Zwolinski Mariusz | 3-0 |  |  | 
 2026-10-13 | Szoltysek Artur | Lukaszewski Mikolaj | 3-1 |  |  | 
-2026-10-13 | Kwodawski Bartosz | Szoltysek Artur | 3-0 |  |  | 
-2026-10-13 | Mrugala Bartlomiej | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-13 | Warzecha Miroslaw | Machelski Michal | 3-1 |  |  | 
+2026-10-13 | Kwodawski Bartosz | Szoltysek Artur | 3-0 | 1 | 1 | Pending
+2026-10-13 | Mrugala Bartlomiej | Lukaszewski Mikolaj | 3-0 | 1 | 1 | Pending
+2026-10-13 | Warzecha Miroslaw | Machelski Michal | 3-1 | 1 | 1 | Pending
 2026-10-13 | Staniczek Adam | Michalik Jerzy | 3-2 |  |  | 
 2026-10-13 | Warzecha Miroslaw | Cyndera Jakub | 3-0 |  |  | 
 2026-10-13 | Frank Roman | Machelski Michal | 3-0 |  |  | 
 2026-10-13 | Cyndera Jakub | Staniczek Adam | 3-1 |  |  | 
 2026-10-13 | Michalik Jerzy | Machelski Michal | 3-0 |  |  | 
 2026-10-13 | Warzecha Miroslaw | Frank Roman | 3-2 |  |  | 
-2026-10-13 | Marud Grzegorz | Vincenec Oliver | 3-2 |  |  | 
-2026-10-13 | Urban Wojciech | Gumulinski Piotr | 3-2 |  |  | 
-2026-10-13 | Oracz Lukasz | Kurek Pawel | 3-1 |  |  | 
-2026-10-13 | Gumulinski Piotr | Oracz Lukasz | 3-1 |  |  | 
-2026-10-13 | Marud Grzegorz | Vincenec Oliver | 3-2 |  |  | 
-2026-10-13 | Oracz Lukasz | Urban Wojciech | 3-2 |  |  | 
-2026-10-13 | Gumulinski Piotr | Kurek Pawel | 3-1 |  |  | 
-2026-10-13 | Vincenec Oliver | Urban Wojciech | 3-2 |  |  | 
-2026-10-13 | Gumulinski Piotr | Marud Grzegorz | 3-2 |  |  | 
-2026-10-13 | Kurek Pawel | Oracz Lukasz | 3-0 |  |  | 
-2026-10-13 | Lewczuk Miroslaw | Bartosik Dominik | 3-1 |  |  | 
-2026-10-13 | Nocun Zbigniew | Krezel Andrzej | 3-2 |  |  | 
-2026-10-13 | Lewczuk Miroslaw | Zelezik Jacek | 3-1 |  |  | 
-2026-10-13 | Mucha Grzegorz | Nocun Zbigniew | 3-2 |  |  | 
+2026-10-13 | Marud Grzegorz | Vincenec Oliver | 3-2 | 1 | 1 | +5
+2026-10-13 | Urban Wojciech | Gumulinski Piotr | 3-2 | 1 | 1 | +9
+2026-10-13 | Oracz Lukasz | Kurek Pawel | 3-1 | 1 | 1 | +10
+2026-10-13 | Gumulinski Piotr | Oracz Lukasz | 3-1 | 2 | 2 | Pending
+2026-10-13 | Marud Grzegorz | Vincenec Oliver | 3-2 | 3 | 3 | Pending
+2026-10-13 | Oracz Lukasz | Urban Wojciech | 3-2 | 3 | 3 | Pending
+2026-10-13 | Gumulinski Piotr | Kurek Pawel | 3-1 | 3 | 3 | Pending
+2026-10-13 | Vincenec Oliver | Urban Wojciech | 3-2 | 4 | 4 | Pending
+2026-10-13 | Gumulinski Piotr | Marud Grzegorz | 3-2 | 4 | 4 | Pending
+2026-10-13 | Kurek Pawel | Oracz Lukasz | 3-0 | 4 | 4 | Pending
+2026-10-13 | Lewczuk Miroslaw | Bartosik Dominik | 3-1 | 1 | 1 | +12
+2026-10-13 | Nocun Zbigniew | Krezel Andrzej | 3-2 | 1 | 1 | +10
+2026-10-13 | Lewczuk Miroslaw | Zelezik Jacek | 3-1 | 2 | 2 | +17
+2026-10-13 | Mucha Grzegorz | Nocun Zbigniew | 3-2 | 2 | 2 | +7
 2026-10-13 | Machelski Michal | Staniczek Adam | 3-0 |  |  | 
 2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 |  |  | 
 2026-10-13 | Frank Roman | Cyndera Jakub | 3-2 |  |  | 
 2026-10-13 | Warzecha Miroslaw | Staniczek Adam | 3-0 |  |  | 
+2026-10-13 | Warzecha Miroslaw | Machelski Michal | 3-1 | 2 | 2 | Pending
+2026-10-13 | Staniczek Adam | Frank Roman | 3-2 | 1 | 1 | Pending
+2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 2 | 3 | +18
+2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 3 | 4 | +16
