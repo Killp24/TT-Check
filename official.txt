@@ -12765,7 +12765,7 @@
 2026-10-13 | Staszczyk Konrad | Brud Szymon | 3-0 | 8 | 7 | Pending
 2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 1 | 8 | Pending
 2026-10-13 | Rolak Jaroslaw | Skorski Michal | 3-1 | 6 | 6 | +17
-2026-10-13 | Lukaszewski Mikolaj | Trela Mateusz | 3-2 |  |  | 
+2026-10-13 | Lukaszewski Mikolaj | Trela Mateusz | 3-2 | 2 | 7 | +11
 2026-10-13 | Adamus Mariusz | Tkaczyk Henryk | 3-2 | 6 | 1 | Pending
 2026-10-13 | Bartosik Dominik | Brunner Marian | 3-0 | 6 | 4 | Pending
 2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 2 | 9 | Pending
@@ -12778,7 +12778,12 @@
 2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 | 7 | 7 | Pending
 2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 | 8 | 8 | Pending
 2026-10-13 | Tkocz Marek | Krupa Sebastian | 3-2 | 6 | 1 | Pending
-2026-10-13 | Paszkiewicz Michal | Tkocz Marek | 3-1 | 6 |  | Pending
+2026-10-13 | Paszkiewicz Michal | Tkocz Marek | 3-1 | 6 | 7 | Pending
+2026-10-13 | Krupa Sebastian | Tkaczyk Henryk | 3-2 |  | 2 | 
+2026-10-13 | Mrugala Bartlomiej | Rolak Jaroslaw | 3-1 | 8 | 7 | +11
+2026-10-13 | Rolak Jaroslaw | Lukaszewski Mikolaj | 3-0 | 8 | 3 | +17
+2026-10-13 | Staszczyk Konrad | Pietraszko Lukasz | 3-2 | 9 | 7 | Pending
+2026-10-13 | Mrugala Bartlomiej | Skorski Michal | 3-0 | 9 | 7 | +18
 2026-10-14 | Staszczyk Konrad | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-14 | Kolek Maciej | Pietraszko Lukasz | 3-1 |  |  | 
 2026-10-14 | Tkocz Marek | Krupa Sebastian | 3-2 |  |  | 
@@ -12789,6 +12794,6 @@
 2026-10-14 | Rolak Jaroslaw | Lukaszewski Mikolaj | 3-0 |  |  | 
 2026-10-14 | Mrugala Bartlomiej | Skorski Michal | 3-0 |  |  | 
 2026-10-14 | Krupa Sebastian | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-14 | Machelski Michal | Bartosik Dominik | 3-2 |  |  | 
-2026-10-14 | Warzecha Miroslaw | Delikatny Kamil | 3-0 |  |  | 
-2026-10-14 | Brunner Marian | Michalik Jerzy | 3-0 |  |  | 
+2026-10-14 | Machelski Michal | Bartosik Dominik | 3-2 | 1 | 1 | +10
+2026-10-14 | Warzecha Miroslaw | Delikatny Kamil | 3-0 | 1 | 1 | +8
+2026-10-14 | Brunner Marian | Michalik Jerzy | 3-0 | 1 | 1 | +21
