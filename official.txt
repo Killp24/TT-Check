@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T15:30Z
+# updated 2026-10-13T15:32Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12674,15 +12674,15 @@
 2026-10-13 | Przewlocki Piotr | Adamus Kacper | 3-2 | 11 | 10 | Pending
 2026-10-13 | Mitas Jacek | Sklensky Miroslav | 3-2 | 10 | 10 | Pending
 2026-10-13 | Stapor Rafal | Sobel Artur | 3-0 | 5 | 10 | +21
-2026-10-13 | Zandecki Jan | Vrablik Jiri | 3-1 |  | 10 | 
+2026-10-13 | Zandecki Jan | Vrablik Jiri | 3-1 | 10 | 10 | +5
 2026-10-13 | Pruszkowski Jakub | Niemiec Rafal | 3-1 | 10 | 10 | Pending
 2026-10-13 | Rutkowski Mateusz | Miastowski Maksymilian | 3-1 | 5 | 10 | Pending
-2026-10-13 | Kostal Daniel | Kosmal Dawid | 3-1 |  |  | 
+2026-10-13 | Kostal Daniel | Kosmal Dawid | 3-1 | 10 | 5 | +12
 2026-10-13 | Zochniak Jakub | Czerwinski Bartosz | 3-2 | 5 | 5 | +9
 2026-10-13 | Juzek Sebastian | Skotniczny Rafal | 3-0 | 8 | 9 | +26
-2026-10-13 | Marcinowski Krzysztof | Brud Szymon | 3-2 |  |  | 
-2026-10-13 | Marud Grzegorz | Nowak Jakub | 3-1 |  |  | 
-2026-10-13 | Szymanski Igor | Buczynski Witold | 3-1 |  |  | 
-2026-10-13 | Minda Michal | Piecowski Miroslaw | 3-1 |  |  | 
-2026-10-13 | Dlugaj Rafal | Gajda Rafal | 3-2 |  |  | 
-2026-10-13 | Skotniczny Rafal | Jozefiak Michal | 3-0 |  |  | 
+2026-10-13 | Marcinowski Krzysztof | Brud Szymon | 3-2 | 4 | 2 | Pending
+2026-10-13 | Marud Grzegorz | Nowak Jakub | 3-1 | 7 | 1 | Pending
+2026-10-13 | Szymanski Igor | Buczynski Witold | 3-1 | 10 | 10 | +16
+2026-10-13 | Minda Michal | Piecowski Miroslaw | 3-1 | 5 | 10 | +7
+2026-10-13 | Dlugaj Rafal | Gajda Rafal | 3-2 | 8 | 9 | +6
+2026-10-13 | Skotniczny Rafal | Jozefiak Michal | 3-0 | 10 | 9 | Pending
