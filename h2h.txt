@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-13T11:20Z
+# updated 2026-10-13T17:32Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-12T05:33Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -11288,7 +11288,7 @@
 2026-10-01 | Fomin Andriej | Staniczek Adam | 3-1
 2026-10-07 | Fomin Andriej | Staniczek Adam | 3-0
 2026-10-08 | Fomin Andriej | Staniczek Adam | 3-2
-# pair | Fomin Andriej | Stechly Witold | 2026-10-08T04:39Z
+# pair | Fomin Andriej | Stechly Witold | 2026-10-13T17:32Z
 2025-09-01 | Stechly Witold | Fomin Andriej | 3-1
 2025-09-08 | Fomin Andriej | Stechly Witold | 3-1
 2025-09-15 | Stechly Witold | Fomin Andriej | 3-2
@@ -11627,6 +11627,8 @@
 # pair | Gabrys Dariusz | Staniczek Adam | 2026-10-13T02:59Z
 2026-08-27 | Staniczek Adam | Gabrys Dariusz | 3-0
 2026-08-28 | Staniczek Adam | Gabrys Dariusz | 3-0
+# pair | Gabrys Dariusz | Stechly Witold | 2026-10-13T17:32Z
+2026-08-27 | Stechly Witold | Gabrys Dariusz | 3-1
 # pair | Gabrys Dariusz | Warzecha Miroslaw | 2026-10-13T02:59Z
 # pair | Gabrys Dariusz | Zielinski Marcin | 2026-10-13T02:59Z
 # pair | Gajda Rafal | Gumulinski Piotr | 2026-10-13T02:32Z
@@ -41652,7 +41654,7 @@
 2026-07-15 | Sporek Szymon | Staszczyk Konrad | 3-0
 2026-07-16 | Sporek Szymon | Staszczyk Konrad | 3-0
 2026-10-11 | Staszczyk Konrad | Sporek Szymon | 3-1
-# pair | Staniczek Adam | Stechly Witold | 2026-10-08T04:39Z
+# pair | Staniczek Adam | Stechly Witold | 2026-10-13T17:32Z
 2025-07-14 | Stechly Witold | Staniczek Adam | 3-2
 2025-07-17 | Staniczek Adam | Stechly Witold | 3-2
 2025-08-07 | Staniczek Adam | Stechly Witold | 3-0
@@ -42047,7 +42049,7 @@
 2026-09-26 | Staszczyk Konrad | Wozniak Jakub | 3-0
 2026-10-09 | Staszczyk Konrad | Wozniak Jakub | 3-1
 2026-10-09 | Staszczyk Konrad | Wozniak Jakub | 3-1
-# pair | Stechly Witold | Warzecha Miroslaw | 2026-10-08T04:39Z
+# pair | Stechly Witold | Warzecha Miroslaw | 2026-10-13T17:32Z
 2025-07-07 | Warzecha Miroslaw | Stechly Witold | 3-0
 2025-07-14 | Warzecha Miroslaw | Stechly Witold | 3-0
 2025-07-21 | Warzecha Miroslaw | Stechly Witold | 3-1
@@ -42172,6 +42174,8 @@
 2026-09-28 | Wolny Michal | Stechly Witold | 3-2
 2026-10-05 | Wolny Michal | Stechly Witold | 3-2
 2026-10-12 | Wolny Michal | Stechly Witold | 3-1
+# pair | Stechly Witold | Zielinski Marcin | 2026-10-13T17:32Z
+2026-10-01 | Zielinski Marcin | Stechly Witold | 3-0
 # pair | Stecyszyn Jakub | Wloczko Krzysztof | 2026-10-08T23:57Z
 2023-07-14 | Stecyszyn Jakub | Wloczko Krzysztof | 3-1
 2024-03-01 | Wloczko Krzysztof | Stecyszyn Jakub | 3-2
