@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T08:59Z
+# updated 2026-10-13T09:07Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12597,10 +12597,10 @@
 2026-10-13 | Paszkiewicz Michal | Hetnar Krzysztof | 3-2 |  |  | 
 2026-10-13 | Skotniczny Rafal | Dlugaj Rafal | 3-2 | 2 | 2 | Pending
 2026-10-13 | Schaniel Krzysztof | Jozefiak Michal | 3-1 | 3 | 3 | Pending
-2026-10-13 | Wiecek Adrian | David Petr | 3-1 |  |  | 
-2026-10-13 | Buczynski Witold | Przewlocki Piotr | 3-1 |  |  | 
-2026-10-13 | Miastowski Maksymilian | Kostal Daniel | 3-0 |  |  | 
-2026-10-13 | Mitas Jacek | Sklensky Miroslav | 3-1 |  |  | 
-2026-10-13 | Sobel Artur | Lamperski Jakub | 3-1 |  |  | 
-2026-10-13 | Ruszkiewicz Adam | Kaczmarek Jakub | 3-2 |  |  | 
-2026-10-13 | Skotniczny Rafal | Gajda Rafal | 3-1 |  |  | 
+2026-10-13 | Wiecek Adrian | David Petr | 3-1 | 5 | 5 | +16
+2026-10-13 | Buczynski Witold | Przewlocki Piotr | 3-1 | 5 | 5 | +14
+2026-10-13 | Miastowski Maksymilian | Kostal Daniel | 3-0 | 5 | 5 | Pending
+2026-10-13 | Mitas Jacek | Sklensky Miroslav | 3-1 | 5 | 5 | Pending
+2026-10-13 | Sobel Artur | Lamperski Jakub | 3-1 | 5 | 5 | +9
+2026-10-13 | Ruszkiewicz Adam | Kaczmarek Jakub | 3-2 | 5 | 5 | +6
+2026-10-13 | Skotniczny Rafal | Gajda Rafal | 3-1 | 3 | 3 | Pending
