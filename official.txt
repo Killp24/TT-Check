@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T03:59Z
+# updated 2026-10-13T04:02Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12511,16 +12511,17 @@
 2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 2 | 3 | +18
 2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 3 | 4 | +16
 2026-10-13 | Machelski Michal | Cyndera Jakub | 3-1 | 5 | 4 | Pending
-2026-10-13 | Prokopcov Dimitrij | Wiecek Adrian | 3-2 | 1 |  | Pending
+2026-10-13 | Prokopcov Dimitrij | Wiecek Adrian | 3-2 | 1 | 1 | Pending
 2026-10-13 | Sobel Artur | Kukawka Milosz | 3-1 | 1 | 1 | +11
 2026-10-13 | Gumulinski Piotr | Vincenec Oliver | 3-0 | 5 | 5 | Pending
 2026-10-13 | Krezel Andrzej | Bartosik Dominik | 3-2 | 2 | 2 | +6
 2026-10-13 | Michalik Jerzy | Frank Roman | 3-1 | 4 | 5 | +12
-2026-10-13 | Petas Kacper | David Petr | 3-0 |  |  | 
+2026-10-13 | Petas Kacper | David Petr | 3-0 | 1 | 1 | Pending
 2026-10-13 | Zandecki Jan | Vrablik Jiri | 3-0 |  |  | 
-2026-10-13 | Przewlocki Piotr | Pruszkowski Jakub | 3-0 |  |  | 
-2026-10-13 | Adamus Kacper | Buczynski Witold | 3-1 |  |  | 
-2026-10-13 | Lamperski Jakub | Kowalczyk Marcin | 3-0 |  |  | 
-2026-10-13 | Ruszkiewicz Adam | Adamus Pawel | 3-2 |  |  | 
+2026-10-13 | Przewlocki Piotr | Pruszkowski Jakub | 3-0 | 1 | 1 | +23
+2026-10-13 | Adamus Kacper | Buczynski Witold | 3-1 | 1 | 1 | +9
+2026-10-13 | Lamperski Jakub | Kowalczyk Marcin | 3-0 | 1 | 1 | Pending
+2026-10-13 | Ruszkiewicz Adam | Adamus Pawel | 3-2 | 1 | 1 | +7
 2026-10-13 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
-2026-10-13 | Marud Grzegorz | Oracz Lukasz | 3-1 |  |  | 
+2026-10-13 | Marud Grzegorz | Oracz Lukasz | 3-1 | 5 | 5 | Pending
+2026-10-13 | Paszkiewicz Michal | Cesarz Milosz | 3-0 | 1 | 1 | Pending
