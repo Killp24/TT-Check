@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T03:29Z
+# updated 2026-10-13T03:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12483,11 +12483,11 @@
 2026-10-13 | Mrugala Bartlomiej | Lukaszewski Mikolaj | 3-0 | 1 | 1 | Pending
 2026-10-13 | Warzecha Miroslaw | Machelski Michal | 3-1 | 1 | 1 | Pending
 2026-10-13 | Staniczek Adam | Michalik Jerzy | 3-2 | 2 | 1 | Pending
-2026-10-13 | Warzecha Miroslaw | Cyndera Jakub | 3-0 |  | 1 | 
+2026-10-13 | Warzecha Miroslaw | Cyndera Jakub | 3-0 | 2 | 1 | +9
 2026-10-13 | Frank Roman | Machelski Michal | 3-0 | 2 | 2 | Pending
 2026-10-13 | Cyndera Jakub | Staniczek Adam | 3-1 | 2 | 3 | Pending
 2026-10-13 | Michalik Jerzy | Machelski Michal | 3-0 | 2 | 3 | Pending
-2026-10-13 | Warzecha Miroslaw | Frank Roman | 3-2 |  | 3 | 
+2026-10-13 | Warzecha Miroslaw | Frank Roman | 3-2 | 3 | 3 | +5
 2026-10-13 | Marud Grzegorz | Vincenec Oliver | 3-2 | 1 | 1 | +5
 2026-10-13 | Urban Wojciech | Gumulinski Piotr | 3-2 | 1 | 1 | +9
 2026-10-13 | Oracz Lukasz | Kurek Pawel | 3-1 | 1 | 1 | +10
@@ -12503,16 +12503,16 @@
 2026-10-13 | Lewczuk Miroslaw | Zelezik Jacek | 3-1 | 2 | 2 | +17
 2026-10-13 | Mucha Grzegorz | Nocun Zbigniew | 3-2 | 2 | 2 | +7
 2026-10-13 | Machelski Michal | Staniczek Adam | 3-0 | 4 | 4 | Pending
-2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 |  | 3 | 
+2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 | 4 | 3 | +11
 2026-10-13 | Frank Roman | Cyndera Jakub | 3-2 | 4 | 3 | Pending
-2026-10-13 | Warzecha Miroslaw | Staniczek Adam | 3-0 |  | 5 | 
+2026-10-13 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 5 | 5 | +5
 2026-10-13 | Warzecha Miroslaw | Machelski Michal | 3-1 | 2 | 2 | Pending
 2026-10-13 | Staniczek Adam | Frank Roman | 3-2 | 1 | 1 | Pending
 2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 2 | 3 | +18
 2026-10-13 | Rudomina Kamil | Marcinowski Krzysztof | 3-0 | 3 | 4 | +16
 2026-10-13 | Machelski Michal | Cyndera Jakub | 3-1 | 5 | 4 | Pending
-2026-10-13 | Prokopcov Dimitrij | Wiecek Adrian | 3-2 |  |  | 
-2026-10-13 | Sobel Artur | Kukawka Milosz | 3-1 |  |  | 
-2026-10-13 | Gumulinski Piotr | Vincenec Oliver | 3-0 |  |  | 
-2026-10-13 | Krezel Andrzej | Bartosik Dominik | 3-2 |  |  | 
-2026-10-13 | Michalik Jerzy | Frank Roman | 3-1 |  |  | 
+2026-10-13 | Prokopcov Dimitrij | Wiecek Adrian | 3-2 | 1 |  | Pending
+2026-10-13 | Sobel Artur | Kukawka Milosz | 3-1 | 1 | 1 | +11
+2026-10-13 | Gumulinski Piotr | Vincenec Oliver | 3-0 | 5 | 5 | Pending
+2026-10-13 | Krezel Andrzej | Bartosik Dominik | 3-2 | 2 | 2 | +6
+2026-10-13 | Michalik Jerzy | Frank Roman | 3-1 | 4 | 5 | +12
