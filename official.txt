@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T23:08Z
+# updated 2026-10-13T23:10Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12755,19 +12755,30 @@
 2026-10-13 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
 2026-10-13 | Paszkiewicz Michal | Hetnar Krzysztof | 3-2 |  |  | 
 2026-10-13 | Pietraszko Lukasz | Marcinowski Krzysztof | 3-2 | 6 | 9 | Pending
-2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 |  |  | 
+2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 | 6 | 6 | Pending
 2026-10-13 | Pietraszko Lukasz | Brud Szymon | 3-2 |  |  | 
 2026-10-13 | Nowak Jakub | Szostok Sebastian | 3-2 | 5 | 5 | +10
 2026-10-13 | Guzik Michal | Marud Grzegorz | 3-2 | 5 | 11 | +11
 2026-10-13 | Delikatny Kamil | Machelski Michal | 3-1 | 4 | 9 | Pending
 2026-10-13 | Slosarczyk Pawel | Paszkiewicz Michal | 3-2 | 1 | 5 | Pending
 2026-10-13 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 5 | 5 | +18
-2026-10-13 | Staszczyk Konrad | Brud Szymon | 3-0 |  |  | 
-2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 |  |  | 
-2026-10-13 | Rolak Jaroslaw | Skorski Michal | 3-1 |  |  | 
+2026-10-13 | Staszczyk Konrad | Brud Szymon | 3-0 | 8 | 7 | Pending
+2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 1 | 8 | Pending
+2026-10-13 | Rolak Jaroslaw | Skorski Michal | 3-1 | 6 | 6 | +17
 2026-10-13 | Lukaszewski Mikolaj | Trela Mateusz | 3-2 |  |  | 
-2026-10-13 | Adamus Mariusz | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-13 | Bartosik Dominik | Brunner Marian | 3-0 |  |  | 
+2026-10-13 | Adamus Mariusz | Tkaczyk Henryk | 3-2 | 6 | 1 | Pending
+2026-10-13 | Bartosik Dominik | Brunner Marian | 3-0 | 6 | 4 | Pending
+2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 2 | 9 | Pending
+2026-10-13 | Slosarczyk Pawel | Adamus Mariusz | 3-0 | 2 | 7 | Pending
+2026-10-13 | Trela Mateusz | Mrugala Bartlomiej | 3-1 | 6 | 7 | Pending
+2026-10-13 | Trela Mateusz | Mrugala Bartlomiej | 3-1 | 7 | 8 | Pending
+2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 | 9 | 8 | Pending
+2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 | 10 | 9 | Pending
+2026-10-13 | Warzecha Miroslaw | Michalik Jerzy | 3-0 | 11 | 10 | Pending
+2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 | 7 | 7 | Pending
+2026-10-13 | Nowak Jakub | Sokolowski Oliwier | 3-2 | 8 | 8 | Pending
+2026-10-13 | Tkocz Marek | Krupa Sebastian | 3-2 | 6 | 1 | Pending
+2026-10-13 | Paszkiewicz Michal | Tkocz Marek | 3-1 | 6 |  | Pending
 2026-10-14 | Staszczyk Konrad | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-14 | Kolek Maciej | Pietraszko Lukasz | 3-1 |  |  | 
 2026-10-14 | Tkocz Marek | Krupa Sebastian | 3-2 |  |  | 
