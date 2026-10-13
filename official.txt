@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-13T19:09Z
+# updated 2026-10-13T19:11Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12725,8 +12725,11 @@
 2026-10-13 | Machelski Michal | Michalik Jerzy | 3-2 | 6 | 5 | +11
 2026-10-13 | Pietraszko Lukasz | Rudomina Kamil | 3-0 | 3 | 5 | Pending
 2026-10-13 | Trela Mateusz | Mrugala Bartlomiej | 3-1 | 3 | 4 | +10
-2026-10-13 | Szlubowski Dariusz | Rolak Jaroslaw | 3-0 |  | 3 | 
-2026-10-13 | Durak Kamil | Szostok Sebastian | 3-2 |  |  | 
-2026-10-13 | Tkocz Marek | Gasiorski Pawel | 3-2 |  |  | 
-2026-10-13 | Delikatny Kamil | Bartosik Dominik | 3-2 |  |  | 
-2026-10-13 | Brunner Marian | Machelski Michal | 3-2 |  |  | 
+2026-10-13 | Szlubowski Dariusz | Rolak Jaroslaw | 3-0 | 3 | 3 | +9
+2026-10-13 | Durak Kamil | Szostok Sebastian | 3-2 | 4 | 4 | Pending
+2026-10-13 | Tkocz Marek | Gasiorski Pawel | 3-2 | 3 | 3 | Pending
+2026-10-13 | Delikatny Kamil | Bartosik Dominik | 3-2 | 1 | 3 | +9
+2026-10-13 | Brunner Marian | Machelski Michal | 3-2 | 2 | 7 | Pending
+2026-10-13 | Brud Szymon | Rudomina Kamil | 3-0 | 5 | 6 | Pending
+2026-10-13 | Mrugala Bartlomiej | Golaszewski Kuba | 3-2 | 5 | 4 | +6
+2026-10-13 | Kosmal Dawid | Staszczyk Konrad | 3-1 | 9 | 6 | Pending
