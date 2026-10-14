@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T15:17Z
+# updated 2026-10-14T15:26Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13004,15 +13004,17 @@
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
 2026-10-14 | Slosarczyk Pawel | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-14 | Czerwinski Bartosz | Kosmal Dawid | 3-1 |  |  | 
-2026-10-14 | Juzek Sebastian | Baron Mariusz | 3-1 |  |  | 
-2026-10-14 | Wloczko Krzysztof | Rutkowski Mateusz | 3-0 |  |  | 
-2026-10-14 | Stapor Rafal | Iwasyszyn Wojciech | 3-2 |  |  | 
-2026-10-14 | Rus Maksymilian | Madej Boguslaw | 3-1 |  |  | 
-2026-10-14 | Vrablik Jiri | Zandecki Jan | 3-2 |  |  | 
-2026-10-14 | Miastowski Maksymilian | Petas Kacper | 3-2 |  |  | 
-2026-10-14 | Grela Artur | Chodorski Piotr | 3-1 |  |  | 
-2026-10-14 | Skotniczny Rafal | Gumulinski Piotr | 3-1 |  |  | 
-2026-10-14 | Kwapis Jakub | Malachowski Michal | 3-0 |  |  | 
-2026-10-14 | Czerwinski Bartosz | Minda Michal | 3-2 |  |  | 
-2026-10-14 | Kosmal Dawid | Solilo Dominik | 3-0 |  |  | 
-2026-10-14 | Adamus Kacper | Kaczmarek Jakub | 3-0 |  |  | 
+2026-10-14 | Juzek Sebastian | Baron Mariusz | 3-1 | 10 | 10 | +13
+2026-10-14 | Wloczko Krzysztof | Rutkowski Mateusz | 3-0 | 5 | 5 | +8
+2026-10-14 | Stapor Rafal | Iwasyszyn Wojciech | 3-2 | 10 | 10 | +5
+2026-10-14 | Rus Maksymilian | Madej Boguslaw | 3-1 | 8 | 8 | +16
+2026-10-14 | Vrablik Jiri | Zandecki Jan | 3-2 | 10 | 10 | +13
+2026-10-14 | Miastowski Maksymilian | Petas Kacper | 3-2 | 9 | 10 | +10
+2026-10-14 | Grela Artur | Chodorski Piotr | 3-1 | 10 | 10 | +8
+2026-10-14 | Skotniczny Rafal | Gumulinski Piotr | 3-1 | 10 | 10 | +9
+2026-10-14 | Kwapis Jakub | Malachowski Michal | 3-0 | 10 | 10 | +21
+2026-10-14 | Czerwinski Bartosz | Minda Michal | 3-2 | 4 | 5 | +2
+2026-10-14 | Kosmal Dawid | Solilo Dominik | 3-0 | 4 | 5 | +10
+2026-10-14 | Adamus Kacper | Kaczmarek Jakub | 3-0 | 8 | 8 | +13
+2026-10-14 | Pruszkowski Jakub | Madej Boguslaw | 3-0 |  | 9 | 
+2026-10-14 | Bartosik Dominik | Delikatny Kamil | 3-0 | 7 | 7 | Pending
