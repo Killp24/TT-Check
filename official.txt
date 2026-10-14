@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T21:42Z
+# updated 2026-10-14T22:14Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -9328,7 +9328,7 @@
 2026-10-03 | Sojka Stanislaw | Wojtaszczyk Wojciech | 3-1 | 4 | 4 | +15
 2026-10-03 | Piotrowski Tadeusz | Maruszak Piotr | 3-1 | 4 | 4 | +12
 2026-10-03 | Makowski Kacper | Wrobel Dariusz | 3-1 | 4 | 4 | +10
-2026-10-03 | Zwolinski Mariusz | Suchecki Waclaw | 3-2 | 4 | 4 | +6
+2026-10-03 | Zwolinski Mariusz | Suchecki Waclaw | 3-2 | 4 | 4 | +5
 2026-10-03 | Rolak Jaroslaw | Krukar Piotr | 3-1 | 4 | 4 | +13
 2026-10-03 | Lukaszewski Mikolaj | Poloszczanski Dawid | 3-1 | 4 | 6 | +13
 2026-10-03 | Lojtek Tomasz | Koczyba Mariusz | 3-1 | 4 | 4 | +10
@@ -12843,6 +12843,8 @@
 2026-10-14 | Zielinski Marcin | Warzecha Miroslaw | 3-1 | 1 | 7 | +6
 2026-10-14 | Gesiarz Piotr | Staniczek Adam | 3-0 | 1 | 1 | +9
 2026-10-14 | Fomin Andriej | Gabrys Dariusz | 3-2 | 1 | 1 | +3
+2026-10-14 | Oracz Lukasz | Ruszkiewicz Adam | 3-0 | 1 | 6 | Pending
+2026-10-14 | Burkacki Adrian | Koczyba Mariusz | 3-2 | 1 | 6 | Pending
 2026-10-14 | Warzecha Miroslaw | Bartosik Dominik | 3-1 | 2 | 2 | +6
 2026-10-14 | Brunner Marian | Delikatny Kamil | 3-0 | 2 | 2 | +17
 2026-10-14 | Slosarczyk Pawel | Tkocz Marek | 3-2 | 2 | 2 | +9
@@ -12918,6 +12920,7 @@
 2026-10-14 | Polok Pawel | Pytlas Wojciech | 3-2 | 3 | 3 | +8
 2026-10-14 | Adach Rafal | Ruszkiewicz Adam | 3-0 | 3 | 3 | +27
 2026-10-14 | Zielinski Marcin | Gesiarz Piotr | 3-2 | 3 | 3 | Pending
+2026-10-14 | Staniczek Adam | Gabrys Dariusz | 3-1 | 3 | 3 | Pending
 2026-10-14 | Warzecha Miroslaw | Machelski Michal | 3-1 | 4 | 4 | +1
 2026-10-14 | Delikatny Kamil | Bartosik Dominik | 3-2 | 4 | 4 | +9
 2026-10-14 | Brunner Marian | Michalik Jerzy | 3-2 | 4 | 3 | +9
@@ -12956,6 +12959,8 @@
 2026-10-14 | Pytlas Wojciech | Koczyba Mariusz | 3-0 | 4 | 4 | +14
 2026-10-14 | Polok Pawel | Ruszkiewicz Adam | 3-1 | 4 | 4 | +10
 2026-10-14 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 | 4 | 4 | +9
+2026-10-14 | Fomin Andriej | Gesiarz Piotr | 3-2 | 4 | 4 | Pending
+2026-10-14 | Zielinski Marcin | Staniczek Adam | 3-1 |  | 4 | 
 2026-10-14 | Tkaczyk Henryk | Paszkiewicz Michal | 3-0 | 5 | 4 | +19
 2026-10-14 | Delikatny Kamil | Machelski Michal | 3-2 | 5 | 5 | +6
 2026-10-14 | Szostok Sebastian | Nowak Jakub | 3-1 | 5 | 4 | +10
@@ -12985,8 +12990,13 @@
 2026-10-14 | Wloczko Krzysztof | Rutkowski Mateusz | 3-0 | 5 | 5 | +8
 2026-10-14 | Kosmal Dawid | Glanowski Jakub | 3-2 | 5 | 1 | +5
 2026-10-14 | Kolek Maciej | Kukawka Milosz | 3-2 | 5 | 4 | +4
-2026-10-14 | Strus Piotr | Suchecki Waclaw | 3-1 | 5 | 5 | Pending
+2026-10-14 | Strus Piotr | Suchecki Waclaw | 3-1 | 5 | 5 | +6
 2026-10-14 | Skupinski Arkadiusz | Nocun Zbigniew | 3-1 | 5 | 5 | Pending
+2026-10-14 | Zwolinski Mariusz | Golaszewski Kuba | 3-1 | 5 | 5 | +11
+2026-10-14 | Koczyba Mariusz | Ruszkiewicz Adam | 3-2 | 5 | 5 | +8
+2026-10-14 | Kukawka Milosz | Rudomina Kamil | 3-2 | 5 | 5 | +7
+2026-10-14 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 5 | 5 | Pending
+2026-10-14 | Adach Rafal | Polok Pawel | 3-0 | 5 | 5 | +27
 2026-10-14 | Gajda Rafal | Gumulinski Piotr | 3-1 | 6 | 6 | +13
 2026-10-14 | Brunner Marian | Machelski Michal | 3-2 | 6 | 6 | +6
 2026-10-14 | Delikatny Kamil | Warzecha Miroslaw | 3-2 | 6 | 6 | +12
@@ -13000,6 +13010,9 @@
 2026-10-14 | Rus Maksymilian | Brozek Piotr | 3-1 | 6 | 6 | +19
 2026-10-14 | Pruszkowski Jakub | Kaczmarek Jakub | 3-0 | 6 | 6 | +10
 2026-10-14 | Adamus Kacper | Madej Boguslaw | 3-0 | 6 | 6 | +16
+2026-10-14 | Kolek Maciej | Glanowski Jakub | 3-1 | 6 | 5 | +5
+2026-10-14 | Kowalczyk Marcin | Zwolinski Mariusz | 3-1 | 6 | 6 | Pending
+2026-10-14 | Szoltysek Artur | Suchecki Waclaw | 3-2 | 6 | 6 | Pending
 2026-10-14 | Slosarczyk Pawel | Cesarz Milosz | 3-0 | 7 | 4 | +12
 2026-10-14 | Tkaczyk Henryk | Urban Wojciech | 3-0 | 7 | 4 | +5
 2026-10-14 | Zandecki Jan | Chodorski Piotr | 3-1 | 7 | 7 | +9
@@ -13047,6 +13060,8 @@
 2026-10-14 | Bartosik Dominik | Skupinski Arkadiusz | 3-0 | 9 | 3 | Pending
 2026-10-14 | Delikatny Kamil | Bladziak Krzysztof | 3-0 | 9 | 3 | Pending
 2026-10-14 | Kurek Pawel | Adach Rafal | 3-1 | 9 | 4 | +6
+2026-10-14 | Kosmal Dawid | Zochniak Jakub | 3-0 | 9 | 5 | +18
+2026-10-14 | Warzecha Miroslaw | Fomin Andriej | 3-1 | 9 | 3 | Pending
 2026-10-14 | Gajda Rafal | Przewlocki Piotr | 3-2 | 10 | 10 | +6
 2026-10-14 | Juzek Sebastian | Baron Mariusz | 3-1 | 10 | 10 | +13
 2026-10-14 | Stapor Rafal | Iwasyszyn Wojciech | 3-2 | 10 | 10 | +5
@@ -13059,6 +13074,10 @@
 2026-10-14 | Kaczmarek Jakub | Rus Maksymilian | 3-0 | 10 | 10 | +12
 2026-10-14 | Delikatny Kamil | Nocun Zbigniew | 3-1 | 10 | 4 | Pending
 2026-10-14 | Bartosik Dominik | Krezel Andrzej | 3-0 | 10 | 4 | Pending
+2026-10-14 | Kurek Pawel | Pytlas Wojciech | 3-0 | 10 | 5 | +20
+2026-10-14 | Warzecha Miroslaw | Gabrys Dariusz | 3-0 | 10 | 4 | Pending
+2026-10-14 | Bartosik Dominik | Bladziak Krzysztof | 3-0 | 11 | 5 | Pending
+2026-10-14 | Delikatny Kamil | Krezel Andrzej | 3-1 | 11 | 5 | Pending
 2026-10-14 | Staszczyk Konrad | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-14 | Kolek Maciej | Pietraszko Lukasz | 3-1 |  |  | 
 2026-10-14 | Tkocz Marek | Krupa Sebastian | 3-2 |  |  | 
@@ -13079,19 +13098,3 @@
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
 2026-10-14 | Slosarczyk Pawel | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-14 | Czerwinski Bartosz | Kosmal Dawid | 3-1 |  |  | 
-2026-10-14 | Kosmal Dawid | Zochniak Jakub | 3-0 | 9 | 5 | Pending
-2026-10-14 | Kolek Maciej | Glanowski Jakub | 3-1 | 6 | 5 | Pending
-2026-10-14 | Zwolinski Mariusz | Golaszewski Kuba | 3-1 | 5 | 5 | Pending
-2026-10-14 | Koczyba Mariusz | Ruszkiewicz Adam | 3-2 | 5 | 5 | Pending
-2026-10-14 | Warzecha Miroslaw | Fomin Andriej | 3-1 | 9 | 3 | Pending
-2026-10-14 | Kukawka Milosz | Rudomina Kamil | 3-2 | 5 | 5 | +7
-2026-10-14 | Bartosik Dominik | Bladziak Krzysztof | 3-0 | 11 | 5 | Pending
-2026-10-14 | Delikatny Kamil | Krezel Andrzej | 3-1 | 11 | 5 | Pending
-2026-10-14 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 5 | 5 | Pending
-2026-10-14 | Kurek Pawel | Pytlas Wojciech | 3-0 | 10 | 5 | +20
-2026-10-14 | Adach Rafal | Polok Pawel | 3-0 | 5 | 5 | +27
-2026-10-14 | Staniczek Adam | Gabrys Dariusz | 3-1 | 3 | 3 | Pending
-2026-10-14 | Kowalczyk Marcin | Zwolinski Mariusz | 3-1 | 6 | 6 | Pending
-2026-10-14 | Oracz Lukasz | Ruszkiewicz Adam | 3-0 | 1 | 6 | Pending
-2026-10-14 | Fomin Andriej | Gesiarz Piotr | 3-2 | 4 | 4 | Pending
-2026-10-14 | Warzecha Miroslaw | Gabrys Dariusz | 3-0 |  | 4 | 
