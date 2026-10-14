@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T04:13Z
+# updated 2026-10-14T04:42Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11634,7 +11634,7 @@
 2026-10-10 | Rolak Jaroslaw | Szoltysek Artur | 3-1 | 4 | 4 | +14
 2026-10-10 | Pytlas Wojciech | Adamus Kacper | 3-2 | 4 | 4 | +7
 2026-10-10 | Hetnar Krzysztof | Jesiek Jakub | 3-0 | 4 | 4 | +11
-2026-10-10 | Szostok Sebastian | Sobkow Zbigniew | 3-1 | 4 | 5 | +8
+2026-10-10 | Szostok Sebastian | Sobkow Zbigniew | 3-1 | 4 | 5 | +9
 2026-10-10 | Swider Dariusz | Morawiec Daniel | 3-0 | 4 | 4 | +18
 2026-10-10 | Oracz Michal | Cichocki Aleksander | 3-2 | 4 | 4 | +10
 2026-10-10 | Gumulinski Piotr | Buczynski Witold | 3-0 | 4 | 4 | +14
@@ -12500,6 +12500,7 @@
 2026-10-13 | Delikatny Kamil | Bartosik Dominik | 3-2 | 1 | 3 | +9
 2026-10-13 | Slosarczyk Pawel | Paszkiewicz Michal | 3-2 | 1 | 5 | +10
 2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 1 | 8 | Pending
+2026-10-13 | Wisniewski Karol | Miastowski Maksymilian | 3-2 | 1 | 11 | Pending
 2026-10-13 | Kolek Maciej | Brud Szymon | 3-1 | 2 | 9 | Pending
 2026-10-13 | Urban Wojciech | Marud Grzegorz | 3-2 | 2 | 2 | +11
 2026-10-13 | Kurek Pawel | Vincenec Oliver | 3-2 | 2 | 2 | +7
@@ -12793,7 +12794,6 @@
 2026-10-13 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
 2026-10-13 | Paszkiewicz Michal | Hetnar Krzysztof | 3-2 |  |  | 
 2026-10-13 | Pietraszko Lukasz | Brud Szymon | 3-2 |  |  | 
-2026-10-13 | Wisniewski Karol | Miastowski Maksymilian | 3-2 | 1 | 11 | Pending
 2026-10-14 | Machelski Michal | Bartosik Dominik | 3-2 | 1 | 1 | +10
 2026-10-14 | Warzecha Miroslaw | Delikatny Kamil | 3-0 | 1 | 1 | +8
 2026-10-14 | Brunner Marian | Michalik Jerzy | 3-0 | 1 | 1 | +21
@@ -12805,19 +12805,55 @@
 2026-10-14 | Michalczyk Jakub | Machelski Michal | 3-2 | 1 | 2 | +1
 2026-10-14 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-0 | 1 | 1 | +19
 2026-10-14 | Adamus Mariusz | Krupa Sebastian | 3-1 | 1 | 2 | +15
+2026-10-14 | Sokolowski Oliwier | Durak Kamil | 3-2 | 1 | 2 | +12
+2026-10-14 | Nowak Jakub | Marud Grzegorz | 3-2 | 1 | 2 | +10
+2026-10-14 | Petas Kacper | Zandecki Jan | 3-1 | 1 | 1 | Pending
+2026-10-14 | Baron Mariusz | Przewlocki Piotr | 3-1 | 1 | 1 | +14
+2026-10-14 | Stapor Rafal | Sulkowski Karol | 3-1 | 1 | 1 | Pending
+2026-10-14 | Wisniewski Bartlomiej | Iwasyszyn Wojciech | 3-0 | 1 | 1 | Pending
+2026-10-14 | Urban Wojciech | Paszkiewicz Michal | 3-1 | 1 | 3 | +16
+2026-10-14 | Durak Kamil | Guzik Michal | 3-1 | 1 | 1 | +1
+2026-10-14 | Marud Grzegorz | Szostok Sebastian | 3-1 | 1 | 1 | +11
+2026-10-14 | Chodorski Piotr | Vrablik Jiri | 3-1 | 1 | 1 | Pending
+2026-10-14 | Gajda Rafal | Gumulinski Piotr | 3-1 | 1 | 1 | +15
+2026-10-14 | Skotniczny Rafal | Juzek Sebastian | 3-0 | 1 | 1 | +7
+2026-10-14 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 1 | 1 | Pending
+2026-10-14 | Malachowski Michal | Kwapis Jakub | 3-0 | 1 | 1 | Pending
+2026-10-14 | Kurek Pawel | Cesarz Milosz | 3-0 | 1 | 1 | +13
+2026-10-14 | Jadczyk Marcin | Grela Artur | 3-1 | 1 | 1 | Pending
+2026-10-14 | Miastowski Maksymilian | Poliniewicz Grzegorz | 3-2 | 1 | 2 | Pending
+2026-10-14 | Lamperski Jakub | Warpas Blazej | 3-1 | 1 | 1 | Pending
 2026-10-14 | Warzecha Miroslaw | Bartosik Dominik | 3-1 | 2 | 2 | +6
 2026-10-14 | Brunner Marian | Delikatny Kamil | 3-0 | 2 | 2 | +17
 2026-10-14 | Slosarczyk Pawel | Tkocz Marek | 3-2 | 2 | 2 | +9
 2026-10-14 | Tkaczyk Henryk | Paszkiewicz Michal | 3-0 | 2 | 1 | +21
 2026-10-14 | Paszkiewicz Michal | Krupa Sebastian | 3-0 | 2 | 3 | +18
+2026-10-14 | Szostok Sebastian | Guzik Michal | 3-2 | 2 | 2 | +7
+2026-10-14 | Stapor Rafal | Wisniewski Bartlomiej | 3-2 |  | 2 | 
+2026-10-14 | Gajda Rafal | Przewlocki Piotr | 3-0 | 2 | 2 | +15
+2026-10-14 | Baron Mariusz | Skotniczny Rafal | 3-0 | 2 |  | +26
 2026-10-14 | Bartosik Dominik | Machelski Michal | 3-1 | 3 | 3 | +9
 2026-10-14 | Warzecha Miroslaw | Brunner Marian | 3-1 | 3 | 3 | +2
 2026-10-14 | Delikatny Kamil | Michalik Jerzy | 3-0 | 3 | 2 | +19
 2026-10-14 | Tkocz Marek | Adamus Mariusz | 3-1 | 3 | 2 | +10
 2026-10-14 | Tkaczyk Henryk | Slosarczyk Pawel | 3-1 | 3 | 3 | +15
+2026-10-14 | Durak Kamil | Nowak Jakub | 3-1 | 3 | 2 | +5
+2026-10-14 | Szostok Sebastian | Sokolowski Oliwier | 3-1 | 3 | 2 | +13
+2026-10-14 | Guzik Michal | Marud Grzegorz | 3-1 | 3 | 3 | +16
 2026-10-14 | Warzecha Miroslaw | Machelski Michal | 3-1 | 4 | 4 | +1
 2026-10-14 | Delikatny Kamil | Bartosik Dominik | 3-2 | 4 | 4 | +9
 2026-10-14 | Brunner Marian | Michalik Jerzy | 3-2 | 4 | 3 | +9
+2026-10-14 | Durak Kamil | Szostok Sebastian | 3-2 | 4 | 4 | +4
+2026-10-14 | Marud Grzegorz | Sokolowski Oliwier | 3-1 | 4 | 3 | +12
+2026-10-14 | Guzik Michal | Nowak Jakub | 3-1 | 4 | 3 | +13
+2026-10-14 | Michalik Jerzy | Warzecha Miroslaw | 3-1 | 4 | 5 | +19
+2026-10-14 | Tkaczyk Henryk | Slosarczyk Pawel | 3-2 | 4 | 4 | +9
+2026-10-14 | Delikatny Kamil | Machelski Michal | 3-2 | 5 | 5 | +6
+2026-10-14 | Szostok Sebastian | Nowak Jakub | 3-1 | 5 | 4 | +10
+2026-10-14 | Guzik Michal | Sokolowski Oliwier | 3-0 | 5 | 4 | +18
+2026-10-14 | Brunner Marian | Bartosik Dominik | 3-1 | 5 | 5 | +13
+2026-10-14 | Durak Kamil | Marud Grzegorz | 3-1 | 5 | 5 | +2
+2026-10-14 | Brunner Marian | Machelski Michal | 3-2 | 6 | 6 | +6
 2026-10-14 | Staszczyk Konrad | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-14 | Kolek Maciej | Pietraszko Lukasz | 3-1 |  |  | 
 2026-10-14 | Tkocz Marek | Krupa Sebastian | 3-2 |  |  | 
@@ -12834,33 +12870,5 @@
 2026-10-14 | Marcinowski Krzysztof | Kolek Maciej | 3-1 |  |  | 
 2026-10-14 | Lukaszewski Mikolaj | Skorski Michal | 3-2 |  |  | 
 2026-10-14 | Adamus Mariusz | Paszkiewicz Michal | 3-2 |  |  | 
-2026-10-14 | Sokolowski Oliwier | Durak Kamil | 3-2 | 1 | 2 | Pending
-2026-10-14 | Nowak Jakub | Marud Grzegorz | 3-2 | 1 | 2 | +10
-2026-10-14 | Szostok Sebastian | Guzik Michal | 3-2 | 2 | 2 | +7
-2026-10-14 | Durak Kamil | Nowak Jakub | 3-1 | 3 | 2 | +5
-2026-10-14 | Szostok Sebastian | Sokolowski Oliwier | 3-1 | 3 | 2 | +13
-2026-10-14 | Guzik Michal | Marud Grzegorz | 3-1 | 3 | 3 | +16
-2026-10-14 | Durak Kamil | Szostok Sebastian | 3-2 | 4 | 4 | +4
-2026-10-14 | Marud Grzegorz | Sokolowski Oliwier | 3-1 | 4 | 3 | +12
-2026-10-14 | Guzik Michal | Nowak Jakub | 3-1 | 4 | 3 | +13
 2026-10-14 | Durak Kamil | Marud Grzegorz | 3-2 |  |  | 
-2026-10-14 | Petas Kacper | Zandecki Jan | 3-1 | 1 | 1 | Pending
-2026-10-14 | Baron Mariusz | Przewlocki Piotr | 3-1 | 1 | 1 | +14
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
-2026-10-14 | Stapor Rafal | Sulkowski Karol | 3-1 | 1 | 1 | Pending
-2026-10-14 | Wisniewski Bartlomiej | Iwasyszyn Wojciech | 3-0 | 1 | 1 | Pending
-2026-10-14 | Urban Wojciech | Paszkiewicz Michal | 3-1 | 1 | 3 | +16
-2026-10-14 | Delikatny Kamil | Machelski Michal | 3-2 | 5 | 5 | +6
-2026-10-14 | Szostok Sebastian | Nowak Jakub | 3-1 | 5 | 4 | +10
-2026-10-14 | Guzik Michal | Sokolowski Oliwier | 3-0 | 5 | 4 | +18
-2026-10-14 | Durak Kamil | Guzik Michal | 3-1 | 1 | 1 | Pending
-2026-10-14 | Marud Grzegorz | Szostok Sebastian | 3-1 | 1 | 1 | Pending
-2026-10-14 | Chodorski Piotr | Vrablik Jiri | 3-1 | 1 | 1 | Pending
-2026-10-14 | Gajda Rafal | Gumulinski Piotr | 3-1 | 1 | 1 | +15
-2026-10-14 | Skotniczny Rafal | Juzek Sebastian | 3-0 | 1 | 1 | +7
-2026-10-14 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 1 | 1 | Pending
-2026-10-14 | Malachowski Michal | Kwapis Jakub | 3-0 | 1 | 1 | Pending
-2026-10-14 | Kurek Pawel | Cesarz Milosz | 3-0 | 1 | 1 | Pending
-2026-10-14 | Brunner Marian | Bartosik Dominik | 3-1 | 5 | 5 | Pending
-2026-10-14 | Michalik Jerzy | Warzecha Miroslaw | 3-1 | 4 |  | Pending
-2026-10-14 | Durak Kamil | Marud Grzegorz | 3-1 | 5 | 5 | +2
