@@ -28,10 +28,10 @@ Brunner Marian | 567 | 671
 Buczynski Witold | 1052 | 1818
 Burkacki Adrian | 148 | 250
 Burkacki Mateusz | 1959 | 1475
-Cesarz Milosz | 236 | 559
+Cesarz Milosz | 236 | 560
 Chlodnicki Piotr | 876 | 1463
 Chmielowski Jakub | 462 | 448
-Chodorski Piotr | 1656 | 1115
+Chodorski Piotr | 1657 | 1115
 Chojnacki Pawel | 321 | 523
 Chrzescian Radoslaw | 591 | 721
 Cichocki Aleksander | 145 | 93
@@ -44,7 +44,7 @@ Dabrowski Igor | 1719 | 1799
 Daniel Artur | 2755 | 2638
 David Petr | 2338 | 1115
 Debski Jerzy | 43 | 93
-Delikatny Kamil | 301 | 365
+Delikatny Kamil | 302 | 365
 Dlugaj Rafal | 12 | 8
 Domin Maciej | 930 | 935
 Dosz Adam | 1733 | 984
@@ -84,7 +84,7 @@ Gromek Artur | 64 | 111
 Gronowski Wojciech | 499 | 653
 Gudzik Krystian | 66 | 62
 Guminski Krzysztof | 516 | 573
-Gumulinski Piotr | 2121 | 1770
+Gumulinski Piotr | 2121 | 1771
 Guzik Michal | 203 | 86
 Hetnar Krzysztof | 965 | 611
 Horejsi Miroslav | 28 | 22
@@ -95,7 +95,7 @@ Jablonski Filip | 172 | 330
 Jablonski Karol | 124 | 156
 Jadach Oskar | 1975 | 1218
 Jadam Dawid | 172 | 176
-Jadczyk Marcin | 4004 | 2725
+Jadczyk Marcin | 4005 | 2725
 Janus Slawomir | 354 | 344
 Jarocki Lukasz | 3536 | 3166
 Jedrzejak Patryk | 945 | 407
@@ -107,7 +107,7 @@ Jozala Waldemar | 415 | 500
 Jozefiak Michal | 33 | 37
 Jurowicz Grzegorz | 405 | 646
 Juszczyk Krzysztof | 1332 | 1249
-Juzek Sebastian | 386 | 583
+Juzek Sebastian | 387 | 583
 Kaczmarek Jakub | 1053 | 1875
 Kaczmarek Krzysztof | 289 | 261
 Kaczynski Piotr | 226 | 200
@@ -161,7 +161,7 @@ Kwiatkowski Kacper | 151 | 195
 Kwodawski Bartosz | 587 | 769
 Lach Marcin | 170 | 105
 Lamer Maciej | 658 | 1161
-Lamperski Jakub | 65 | 50
+Lamperski Jakub | 66 | 50
 Lebek Marian | 1109 | 835
 Leczycki Mariusz | 9 | 10
 Lewandowski Patryk | 386 | 684
@@ -175,7 +175,7 @@ Machelski Michal | 523 | 879
 Madej Boguslaw | 213 | 348
 Makajew Maciej | 958 | 924
 Makowski Kacper | 415 | 570
-Malachowski Michal | 737 | 860
+Malachowski Michal | 737 | 861
 Malcher Krzysztof | 46 | 86
 Malecha Maciej | 225 | 253
 Malinowski Radoslaw | 759 | 715
@@ -230,12 +230,12 @@ Orszulik Jan | 128 | 142
 Ostachowski Piotr | 33 | 70
 Pacia Bartlomiej | 246 | 220
 Panczyk Adrian | 193 | 342
-Paszkiewicz Michal | 484 | 428
+Paszkiewicz Michal | 484 | 429
 Pawlik Cezary | 427 | 296
 Pawlowski Krzysztof | 858 | 656
 Pelka Jerzy | 859 | 990
 Perzynski Przemyslaw | 646 | 551
-Petas Kacper | 2065 | 1975
+Petas Kacper | 2065 | 1976
 Piechnik Roman | 24 | 46
 Piecowski Milosz | 1193 | 1172
 Piecowski Miroslaw | 1057 | 1375
@@ -279,7 +279,7 @@ Sklensky Miroslav | 1795 | 1252
 Skop Szymon | 261 | 350
 Skorski Michal | 2027 | 1878
 Skorupa Jakub | 357 | 397
-Skotniczny Rafal | 1113 | 1112
+Skotniczny Rafal | 1113 | 1113
 Skrla Jiri | 42 | 80
 Skupinski Arkadiusz | 379 | 604
 Skuril Michal | 25 | 35
@@ -300,7 +300,7 @@ Sporek Szymon | 1225 | 1165
 Spychala Adrian | 2198 | 3233
 Staniczek Adam | 537 | 1117
 Staniszewski Piotr | 904 | 1189
-Stapor Rafal | 746 | 588
+Stapor Rafal | 747 | 588
 Staszczyk Konrad | 1400 | 1185
 Stechly Witold | 110 | 524
 Stecyszyn Jakub | 258 | 343
@@ -310,7 +310,7 @@ Strowski Karol | 1582 | 1035
 Strus Piotr | 1124 | 1680
 Suchecki Waclaw | 324 | 523
 Sulkowski Bartek | 643 | 786
-Sulkowski Karol | 679 | 694
+Sulkowski Karol | 679 | 695
 Swider Dariusz | 21 | 19
 Szafranek Piotr | 377 | 345
 Szczepanek Blazej | 846 | 1067
@@ -324,7 +324,7 @@ Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
 Szymanski Igor | 130 | 400
 Szymik Robert | 1188 | 764
-Tkaczyk Henryk | 1155 | 592
+Tkaczyk Henryk | 1156 | 592
 Tkocz Marek | 961 | 539
 Tobiasz Wojciech | 666 | 865
 Tomsia Slawomir | 75 | 144
@@ -332,14 +332,14 @@ Trela Mateusz | 1502 | 1630
 Twardowski Szymon | 384 | 222
 Twarog Mariusz | 11 | 54
 Ufnal Mateusz | 235 | 416
-Urban Wojciech | 868 | 961
+Urban Wojciech | 869 | 961
 Urbanek Jan | 31 | 15
 Utylski Rafal | 260 | 369
 Vincenec Oliver | 768 | 992
 Vrablik Jiri | 26 | 45
 Wandachowicz Michal | 17 | 71
 Warpas Blazej | 453 | 431
-Warzecha Miroslaw | 1220 | 605
+Warzecha Miroslaw | 1220 | 606
 Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
@@ -348,7 +348,7 @@ Wiciok Piotr | 16 | 14
 Wiecek Adrian | 3204 | 2387
 Wieczerzak Jacek | 171 | 145
 Wisniewski Bartlomiej | 2896 | 2384
-Wisniewski Karol | 4041 | 4800
+Wisniewski Karol | 4042 | 4800
 Witczak Filip | 737 | 548
 Witkowski Antoni | 1076 | 775
 Witkowski Jakub | 760 | 1073
@@ -366,7 +366,7 @@ Wozniczka Marcin | 241 | 183
 Wrobel Dariusz | 915 | 933
 Wrzalik Tomasz | 494 | 646
 Zagajewski Mateusz | 766 | 850
-Zandecki Jan | 1589 | 1508
+Zandecki Jan | 1589 | 1509
 Zelezik Jacek | 446 | 349
 Zemla Piotr | 101 | 44
 Zielinski Marcin | 38 | 13
