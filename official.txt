@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T22:36Z
+# updated 2026-10-14T22:42Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12960,7 +12960,7 @@
 2026-10-14 | Polok Pawel | Ruszkiewicz Adam | 3-1 | 4 | 4 | +10
 2026-10-14 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 | 4 | 4 | +9
 2026-10-14 | Fomin Andriej | Gesiarz Piotr | 3-2 | 4 | 4 | Pending
-2026-10-14 | Zielinski Marcin | Staniczek Adam | 3-1 |  | 4 | 
+2026-10-14 | Zielinski Marcin | Staniczek Adam | 3-1 | 4 | 4 | Pending
 2026-10-14 | Tkaczyk Henryk | Paszkiewicz Michal | 3-0 | 5 | 4 | +19
 2026-10-14 | Delikatny Kamil | Machelski Michal | 3-2 | 5 | 5 | +6
 2026-10-14 | Szostok Sebastian | Nowak Jakub | 3-1 | 5 | 4 | +10
@@ -13098,11 +13098,15 @@
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
 2026-10-14 | Slosarczyk Pawel | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-14 | Czerwinski Bartosz | Kosmal Dawid | 3-1 |  |  | 
-2026-10-14 | Kukawka Milosz | Staszczyk Konrad | 3-1 |  |  | 
-2026-10-14 | Rudomina Kamil | Glanowski Jakub | 3-0 |  |  | 
+2026-10-14 | Kukawka Milosz | Staszczyk Konrad | 3-1 | 6 | 2 | Pending
+2026-10-14 | Rudomina Kamil | Glanowski Jakub | 3-0 | 7 | 6 | Pending
 2026-10-14 | Nocun Zbigniew | Bartosik Dominik | 3-0 |  |  | 
 2026-10-14 | Krezel Andrzej | Barton Aleksander | 3-1 |  |  | 
 2026-10-14 | Delikatny Kamil | Bladziak Krzysztof | 3-1 |  |  | 
-2026-10-14 | Szoltysek Artur | Golaszewski Kuba | 3-2 |  |  | 
+2026-10-14 | Szoltysek Artur | Golaszewski Kuba | 3-2 | 7 | 6 | Pending
+2026-10-14 | Sulkowski Bartek | Rudomina Kamil | 3-1 | 1 | 6 | Pending
+2026-10-14 | Kukawka Milosz | Glanowski Jakub | 3-0 | 7 | 7 | Pending
+2026-10-14 | Gesiarz Piotr | Gabrys Dariusz | 3-0 | 5 | 5 | Pending
+2026-10-14 | Tkaczyk Henryk | Polok Pawel | 3-0 | 9 | 6 | Pending
 2026-10-15 | Tkaczyk Henryk | Polok Pawel | 3-0 |  |  | 
 2026-10-15 | Gesiarz Piotr | Gabrys Dariusz | 3-0 |  |  | 
