@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T18:53Z
+# updated 2026-10-14T18:56Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13055,11 +13055,12 @@
 2026-10-14 | Koczyba Mariusz | Kurek Pawel | 3-2 | 3 | 8 | Pending
 2026-10-14 | Zielinski Marcin | Warzecha Miroslaw | 3-1 | 1 | 7 | +6
 2026-10-14 | Gesiarz Piotr | Staniczek Adam | 3-0 | 1 | 1 | Pending
-2026-10-14 | Kosmal Dawid | Kukawka Milosz | 3-0 |  |  | 
+2026-10-14 | Kosmal Dawid | Kukawka Milosz | 3-0 | 7 | 3 | Pending
 2026-10-14 | Zochniak Jakub | Glanowski Jakub | 3-1 |  |  | 
-2026-10-14 | Nocun Zbigniew | Krezel Andrzej | 3-0 |  |  | 
-2026-10-14 | Strus Piotr | Kowalczyk Marcin | 3-2 |  |  | 
-2026-10-14 | Golaszewski Kuba | Suchecki Waclaw | 3-0 |  |  | 
-2026-10-14 | Polok Pawel | Pytlas Wojciech | 3-2 |  |  | 
-2026-10-14 | Adach Rafal | Ruszkiewicz Adam | 3-0 |  |  | 
-2026-10-14 | Fomin Andriej | Gabrys Dariusz | 3-2 |  |  | 
+2026-10-14 | Nocun Zbigniew | Krezel Andrzej | 3-0 | 3 | 3 | Pending
+2026-10-14 | Strus Piotr | Kowalczyk Marcin | 3-2 | 3 | 3 | Pending
+2026-10-14 | Golaszewski Kuba | Suchecki Waclaw | 3-0 | 4 | 4 | Pending
+2026-10-14 | Polok Pawel | Pytlas Wojciech | 3-2 | 3 | 3 | Pending
+2026-10-14 | Adach Rafal | Ruszkiewicz Adam | 3-0 | 3 | 3 | Pending
+2026-10-14 | Fomin Andriej | Gabrys Dariusz | 3-2 | 1 | 1 | Pending
+2026-10-14 | Skupinski Arkadiusz | Bladziak Krzysztof | 3-2 | 4 |  | Pending
