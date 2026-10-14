@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T17:11Z
+# updated 2026-10-14T17:23Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13033,9 +13033,12 @@
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
 2026-10-14 | Slosarczyk Pawel | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-14 | Czerwinski Bartosz | Kosmal Dawid | 3-1 |  |  | 
-2026-10-14 | Kosmal Dawid | Glanowski Jakub | 3-2 |  |  | 
-2026-10-14 | Zochniak Jakub | Rudomina Kamil | 3-1 |  |  | 
-2026-10-14 | Nocun Zbigniew | Bartosik Dominik | 3-2 |  |  | 
-2026-10-14 | Strus Piotr | Zwolinski Mariusz | 3-2 |  |  | 
-2026-10-14 | Polok Pawel | Koczyba Mariusz | 3-2 |  |  | 
-2026-10-14 | Madej Boguslaw | Brozek Piotr | 3-0 |  |  | 
+2026-10-14 | Kosmal Dawid | Glanowski Jakub | 3-2 | 5 | 1 | +5
+2026-10-14 | Zochniak Jakub | Rudomina Kamil | 3-1 | 2 | 2 | +6
+2026-10-14 | Nocun Zbigniew | Bartosik Dominik | 3-2 | 2 | 8 | Pending
+2026-10-14 | Strus Piotr | Zwolinski Mariusz | 3-2 | 2 | 2 | Pending
+2026-10-14 | Polok Pawel | Koczyba Mariusz | 3-2 | 2 | 2 | Pending
+2026-10-14 | Madej Boguslaw | Brozek Piotr | 3-0 | 10 | 10 | +22
+2026-10-14 | Krezel Andrzej | Bladziak Krzysztof | 3-1 | 2 | 2 | Pending
+2026-10-14 | Kolek Maciej | Kosmal Dawid | 3-0 | 3 | 6 | +14
+2026-10-14 | Kaczmarek Jakub | Rus Maksymilian | 3-0 | 10 | 10 | Pending
