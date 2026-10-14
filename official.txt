@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-14T06:47Z
+# updated 2026-10-14T06:52Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -12894,13 +12894,14 @@
 2026-10-14 | Durak Kamil | Marud Grzegorz | 3-2 |  |  | 
 2026-10-14 | Wisniewski Karol | Miastowski Maksymilian | 3-2 |  |  | 
 2026-10-14 | Slosarczyk Pawel | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-14 | Grela Artur | Zandecki Jan | 3-2 |  |  | 
-2026-10-14 | Vrablik Jiri | Jadczyk Marcin | 3-2 |  |  | 
-2026-10-14 | Gumulinski Piotr | Skotniczny Rafal | 3-2 |  |  | 
-2026-10-14 | Gajda Rafal | Juzek Sebastian | 3-0 |  |  | 
-2026-10-14 | Malachowski Michal | Kapik Krzysztof | 3-0 |  |  | 
+2026-10-14 | Grela Artur | Zandecki Jan | 3-2 | 3 | 3 | Pending
+2026-10-14 | Vrablik Jiri | Jadczyk Marcin | 3-2 | 3 | 3 | Pending
+2026-10-14 | Gumulinski Piotr | Skotniczny Rafal | 3-2 | 3 | 3 | +11
+2026-10-14 | Gajda Rafal | Juzek Sebastian | 3-0 | 4 | 4 | +13
+2026-10-14 | Malachowski Michal | Kapik Krzysztof | 3-0 | 3 | 3 | Pending
 2026-10-14 | Poliniewicz Grzegorz | Kwapis Jakub | 3-0 |  |  | 
-2026-10-14 | Lamperski Jakub | Iwasyszyn Wojciech | 3-2 |  |  | 
-2026-10-14 | Cesarz Milosz | Paszkiewicz Michal | 3-0 |  |  | 
-2026-10-14 | Urban Wojciech | Slosarczyk Pawel | 3-2 |  |  | 
-2026-10-14 | Kaczmarek Jakub | Pruszkowski Jakub | 3-1 |  |  | 
+2026-10-14 | Lamperski Jakub | Iwasyszyn Wojciech | 3-2 | 3 | 3 | Pending
+2026-10-14 | Cesarz Milosz | Paszkiewicz Michal | 3-0 | 3 | 5 | +21
+2026-10-14 | Urban Wojciech | Slosarczyk Pawel | 3-2 | 3 | 6 | +10
+2026-10-14 | Kaczmarek Jakub | Pruszkowski Jakub | 3-1 | 1 | 1 | Pending
+2026-10-14 | Tkaczyk Henryk | Kurek Pawel | 3-1 | 6 |  | +12
