@@ -19,7 +19,7 @@ Bartosik Dominik | 23 | 27
 Belik Simon | 106 | 299
 Benes Michal | 531 | 486
 Bernacki Lukasz | 739 | 800
-Bladziak Krzysztof | 1 | 9
+Bladziak Krzysztof | 1 | 10
 Blocho Przemyslaw | 1572 | 1167
 Bluszcz Tomasz | 123 | 152
 Braun Josef | 1652 | 1538
@@ -62,7 +62,7 @@ Fira Damian | 471 | 745
 Folwarski Jakub | 694 | 321
 Fomin Andriej | 633 | 448
 Fomin Yurij | 610 | 770
-Frank Roman | 4 | 6
+Frank Roman | 4 | 7
 Gabrys Dariusz | 0 | 30
 Gaik Krystian | 326 | 284
 Gajda Rafal | 469 | 445
@@ -70,7 +70,7 @@ Gamrot Patryk | 330 | 330
 Gasiorski Pawel | 738 | 182
 Gawlas Michal | 131 | 174
 Gesiarz Piotr | 190 | 205
-Glanowski Jakub | 2104 | 2248
+Glanowski Jakub | 2104 | 2249
 Glanowski Waldemar | 1005 | 741
 Glazowski Kacper | 800 | 858
 Glica Rafal | 74 | 91
@@ -106,10 +106,10 @@ Jendrzejewski Patryk | 423 | 459
 Jesiek Jakub | 311 | 279
 Jozala Waldemar | 415 | 500
 Jozefiak Michal | 33 | 37
-Jurowicz Grzegorz | 405 | 646
-Juszczyk Krzysztof | 1332 | 1249
+Jurowicz Grzegorz | 405 | 647
+Juszczyk Krzysztof | 1332 | 1250
 Juzek Sebastian | 390 | 588
-Kaczmarek Jakub | 1059 | 1879
+Kaczmarek Jakub | 1060 | 1879
 Kaczmarek Krzysztof | 289 | 261
 Kaczynski Piotr | 226 | 200
 Kalinowski Mateusz | 113 | 153
@@ -121,7 +121,7 @@ Klag Wiktor | 95 | 164
 Klocek Kamil | 496 | 467
 Klos Patrik | 808 | 635
 Kocik Tomasz | 86 | 33
-Koczyba Mariusz | 2064 | 1565
+Koczyba Mariusz | 2065 | 1565
 Kolasa Szymon | 994 | 959
 Kolek Maciej | 812 | 766
 Kolodziej Krystian | 3839 | 2005
@@ -132,10 +132,10 @@ Kosowski Jakub | 2303 | 1695
 Kostal Daniel | 48 | 71
 Kostepski Robert | 285 | 240
 Kostyk Kamil | 247 | 249
-Kotwica Dawid | 2379 | 3648
+Kotwica Dawid | 2380 | 3648
 Kotyl Krzysztof | 2799 | 3674
 Kotyl Wojciech | 518 | 433
-Kowalczyk Marcin | 1199 | 1720
+Kowalczyk Marcin | 1199 | 1721
 Kowalski Kamil | 36 | 163
 Kowol Marek | 279 | 262
 Kratochvil Michal | 10 | 10
@@ -150,7 +150,7 @@ Kubiak Artur | 847 | 690
 Kucharek Jerzy | 7 | 78
 Kufel Karol | 38 | 20
 Kujawa Filip | 1576 | 1854
-Kukawka Milosz | 551 | 344
+Kukawka Milosz | 552 | 344
 Kulczycki Alan | 3 | 27
 Kulpa Konrad | 603 | 202
 Kumor Michal | 548 | 933
@@ -168,7 +168,7 @@ Leczycki Mariusz | 9 | 10
 Lewandowski Patryk | 386 | 684
 Lewczuk Miroslaw | 1069 | 1027
 Lilien Aleksander | 2740 | 2320
-Linek Adam | 2177 | 2425
+Linek Adam | 2177 | 2426
 Lis Daniel | 594 | 391
 Lojtek Tomasz | 602 | 1237
 Lukaszewski Mikolaj | 1120 | 1377
@@ -195,7 +195,7 @@ Michalczyk Jakub | 227 | 203
 Michalik Jerzy | 1002 | 1234
 Michalski Jakub | 1188 | 1731
 Michna Dawid | 1204 | 1110
-Minda Michal | 3575 | 3481
+Minda Michal | 3576 | 3481
 Misiak Mateusz | 3791 | 3374
 Mista Sylwester | 405 | 994
 Mitas Jacek | 146 | 161
@@ -208,7 +208,7 @@ Mucha Grzegorz | 205 | 205
 Mugowski Arkadiusz | 3469 | 4156
 Murawski Daniel | 1115 | 1007
 Murawski Michal | 2409 | 2345
-Myszewski Adrian | 785 | 865
+Myszewski Adrian | 785 | 866
 Nadolny Jakub | 14 | 13
 Nadolski Lukasz | 430 | 602
 Nagel Kacper | 250 | 397
@@ -216,7 +216,7 @@ Natkaniec Michal | 186 | 357
 Niemiec Krzysztof | 525 | 752
 Niemiec Rafal | 201 | 113
 Niezgoda Rostislav | 32 | 48
-Nocun Zbigniew | 1391 | 924
+Nocun Zbigniew | 1392 | 924
 Nosiadek Jakub | 34 | 61
 Nowak Jakub | 1342 | 2114
 Nowalinski Maciej | 1911 | 1777
@@ -259,9 +259,9 @@ Pyda Lukasz | 130 | 466
 Pyrek Dawid | 493 | 655
 Pytlas Wojciech | 499 | 486
 Radlo Szymon | 3129 | 2925
-Rolak Jaroslaw | 2421 | 2537
+Rolak Jaroslaw | 2422 | 2537
 Rozum Dawid | 25 | 105
-Rudomina Kamil | 3028 | 3063
+Rudomina Kamil | 3028 | 3064
 Rus Maksymilian | 143 | 317
 Rusnak Ales | 139 | 153
 Ruszkiewicz Adam | 411 | 718
@@ -282,7 +282,7 @@ Skorski Michal | 2027 | 1878
 Skorupa Jakub | 357 | 397
 Skotniczny Rafal | 1117 | 1117
 Skrla Jiri | 42 | 80
-Skupinski Arkadiusz | 383 | 605
+Skupinski Arkadiusz | 384 | 605
 Skuril Michal | 25 | 35
 Skwierz Jakub | 6 | 26
 Slawinski Kacper | 2068 | 1467
@@ -329,7 +329,7 @@ Tkaczyk Henryk | 1164 | 597
 Tkocz Marek | 961 | 539
 Tobiasz Wojciech | 666 | 865
 Tomsia Slawomir | 75 | 144
-Trela Mateusz | 1502 | 1630
+Trela Mateusz | 1503 | 1630
 Twardowski Szymon | 384 | 222
 Twarog Mariusz | 11 | 54
 Ufnal Mateusz | 235 | 416
