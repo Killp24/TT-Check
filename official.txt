@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T15:15Z
+# updated 2026-10-15T15:26Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13337,8 +13337,11 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Klos Patrik | Felkel Grzegorz | 3-2 |  |  | 
-2026-10-15 | Slawinski Kacper | Buczynski Witold | 3-0 |  |  | 
-2026-10-15 | Malachowski Michal | Czerwinski Bartosz | 3-1 |  |  | 
-2026-10-15 | Olbrycht Michal | Jendrzejewski Patryk | 3-2 |  |  | 
-2026-10-15 | Rutkowski Mateusz | Minda Michal | 3-1 |  |  | 
+2026-10-15 | Klos Patrik | Felkel Grzegorz | 3-2 | 10 | 10 | +12
+2026-10-15 | Slawinski Kacper | Buczynski Witold | 3-0 | 10 | 10 | +6
+2026-10-15 | Malachowski Michal | Czerwinski Bartosz | 3-1 | 10 | 5 | +6
+2026-10-15 | Olbrycht Michal | Jendrzejewski Patryk | 3-2 | 10 | 10 | +8
+2026-10-15 | Rutkowski Mateusz | Minda Michal | 3-1 | 5 | 5 | +5
+2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2 | 9 | 8 | Pending
+2026-10-15 | Pruszkowski Jakub | Schaniel Krzysztof | 3-1 | 9 | 8 | Pending
+2026-10-15 | Pruszkowski Jakub | Glanowski Waldemar | 3-0 | 10 | 8 | Pending
