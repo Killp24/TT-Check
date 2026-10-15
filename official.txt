@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T12:15Z
+# updated 2026-10-15T12:51Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13186,6 +13186,7 @@
 2026-10-15 | Pruszkowski Jakub | Nowak Jakub | 3-0 | 2 | 2 | +13
 2026-10-15 | Minda Michal | Warpas Blazej | 3-2 | 2 | 7 | +6
 2026-10-15 | Zochniak Jakub | Solilo Dominik | 3-2 | 2 | 2 | +4
+2026-10-15 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 2 | 2 | +8
 2026-10-15 | Zwolinski Mariusz | Szoltysek Artur | 3-1 | 3 | 2 | +10
 2026-10-15 | Bartosik Dominik | Barton Aleksander | 3-0 | 3 | 3 | +3
 2026-10-15 | Suchecki Waclaw | Golaszewski Kuba | 3-0 | 3 | 3 | +20
@@ -13215,6 +13216,9 @@
 2026-10-15 | Pruszkowski Jakub | Adamus Kacper | 3-0 | 3 | 3 | +15
 2026-10-15 | Nowak Jakub | Schaniel Krzysztof | 3-2 | 3 | 3 | +10
 2026-10-15 | Glanowski Waldemar | Pruszkowski Jakub | 3-2 | 3 | 4 | +12
+2026-10-15 | Zochniak Jakub | Warpas Blazej | 3-2 | 3 | 8 | +2
+2026-10-15 | Kolek Maciej | Minda Michal | 3-1 | 3 | 3 | +4
+2026-10-15 | Rutkowski Mateusz | Solilo Dominik | 3-0 | 3 | 3 | +10
 2026-10-15 | Barton Aleksander | Bladziak Krzysztof | 3-0 | 4 | 4 | +28
 2026-10-15 | Nocun Zbigniew | Delikatny Kamil | 3-2 | 4 | 4 | +8
 2026-10-15 | Krezel Andrzej | Bartosik Dominik | 3-2 | 4 | 4 | +8
@@ -13257,24 +13261,40 @@
 2026-10-15 | Malachowski Michal | Jendrzejewski Patryk | 3-1 | 5 | 5 | +9
 2026-10-15 | Wloczko Krzysztof | Kwapis Jakub | 3-1 | 5 | 5 | +10
 2026-10-15 | Schaniel Krzysztof | Glanowski Waldemar | 3-1 | 5 | 4 | +8
-2026-10-15 | Pruszkowski Jakub | Sokolowski Oliwier | 3-2 | 5 | 5 | Pending
-2026-10-15 | Sikon Mateusz | Slosarczyk Pawel | 3-2 | 6 | 6 | Pending
-2026-10-15 | Baron Mariusz | Buczynski Witold | 3-1 | 6 | 6 | Pending
+2026-10-15 | Pruszkowski Jakub | Sokolowski Oliwier | 3-2 | 5 | 5 | +6
+2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2 | 5 | 5 | +10
+2026-10-15 | Glanowski Waldemar | Nowak Jakub | 3-2 | 5 | 6 | Pending
+2026-10-15 | Sikon Mateusz | Slosarczyk Pawel | 3-2 | 6 | 6 | +10
+2026-10-15 | Baron Mariusz | Buczynski Witold | 3-1 | 6 | 6 | +12
 2026-10-15 | Klos Patrik | Kuzmicz Jakub | 3-2 | 6 | 6 | Pending
 2026-10-15 | Chodorski Piotr | Felkel Grzegorz | 3-0 | 6 | 6 | Pending
-2026-10-15 | Slawinski Kacper | Vincenec Oliver | 3-0 | 6 | 6 | Pending
+2026-10-15 | Slawinski Kacper | Vincenec Oliver | 3-0 | 6 | 6 | +7
 2026-10-15 | Malachowski Michal | Olbrycht Michal | 3-2 | 6 | 6 | Pending
 2026-10-15 | Grela Artur | Wloczko Krzysztof | 3-1 | 6 | 6 | Pending
 2026-10-15 | Jendrzejewski Patryk | Kwapis Jakub | 3-1 | 6 | 6 | Pending
-2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 7 | 7 | Pending
+2026-10-15 | Sokolowski Oliwier | Schaniel Krzysztof | 3-0 | 6 | 6 | +18
+2026-10-15 | Adamus Kacper | Pruszkowski Jakub | 3-0 | 6 | 6 | Pending
+2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 7 | 7 | +13
+2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 7 | 7 | +4
 2026-10-15 | Kuzmicz Jakub | Grela Artur | 3-2 | 7 | 7 | Pending
 2026-10-15 | Tkaczyk Henryk | Burkacki Adrian | 3-1 | 7 | 7 | +10
 2026-10-15 | Oracz Lukasz | Cesarz Milosz | 3-1 | 7 | 4 | +9
 2026-10-15 | Klos Patrik | Chodorski Piotr | 3-1 | 7 | 7 | Pending
-2026-10-15 | Vincenec Oliver | Buczynski Witold | 3-0 | 7 | 7 | Pending
+2026-10-15 | Vincenec Oliver | Buczynski Witold | 3-0 | 7 | 7 | +15
 2026-10-15 | Kwapis Jakub | Olbrycht Michal | 3-0 | 7 | 7 | Pending
 2026-10-15 | Malachowski Michal | Kapik Krzysztof | 3-2 | 7 | 2 | Pending
+2026-10-15 | Felkel Grzegorz | Wloczko Krzysztof | 3-1 | 7 | 7 | Pending
+2026-10-15 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 | 7 | 2 | Pending
+2026-10-15 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 8 | 8 | Pending
+2026-10-15 | Slosarczyk Pawel | Buczynski Witold | 3-1 | 8 | 8 | +9
 2026-10-15 | Burkacki Adrian | Oracz Lukasz | 3-1 | 8 | 8 | +15
+2026-10-15 | Baron Mariusz | Vincenec Oliver | 3-0 | 8 | 8 | +17
+2026-10-15 | Wloczko Krzysztof | Klos Patrik | 3-1 | 8 | 8 | Pending
+2026-10-15 | Malachowski Michal | Kwapis Jakub | 3-0 | 8 | 8 | Pending
+2026-10-15 | Grela Artur | Felkel Grzegorz | 3-0 | 8 | 8 | Pending
+2026-10-15 | Olbrycht Michal | Czerwinski Bartosz | 3-1 | 8 | 3 | Pending
+2026-10-15 | Jendrzejewski Patryk | Kapik Krzysztof | 3-1 | 8 | 3 | Pending
+2026-10-15 | Slawinski Kacper | Sikon Mateusz | 3-1 | 8 | 8 | Pending
 2026-10-15 | Tkaczyk Henryk | Polok Pawel | 3-0 |  |  | 
 2026-10-15 | Gesiarz Piotr | Gabrys Dariusz | 3-0 |  |  | 
 2026-10-15 | Kukawka Milosz | Glanowski Jakub | 3-0 |  |  | 
@@ -13292,16 +13312,3 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Felkel Grzegorz | Wloczko Krzysztof | 3-1 | 7 | 7 | Pending
-2026-10-15 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 8 | 8 | Pending
-2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 7 | 7 | Pending
-2026-10-15 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 | 7 | 2 | Pending
-2026-10-15 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 2 | 2 | +8
-2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2 | 5 | 5 | +10
-2026-10-15 | Baron Mariusz | Vincenec Oliver | 3-0 | 8 | 8 | Pending
-2026-10-15 | Wloczko Krzysztof | Klos Patrik | 3-1 | 8 | 8 | Pending
-2026-10-15 | Malachowski Michal | Kwapis Jakub | 3-0 | 8 | 8 | Pending
-2026-10-15 | Zochniak Jakub | Warpas Blazej | 3-2 | 3 | 8 | +2
-2026-10-15 | Kolek Maciej | Minda Michal | 3-1 | 3 | 3 | Pending
-2026-10-15 | Glanowski Waldemar | Nowak Jakub | 3-2 | 5 |  | Pending
-2026-10-15 | Sokolowski Oliwier | Schaniel Krzysztof | 3-0 | 6 | 6 | +18
