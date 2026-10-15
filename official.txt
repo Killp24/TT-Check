@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T00:02Z
+# updated 2026-10-15T00:09Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13115,6 +13115,10 @@
 2026-10-14 | Ruszkiewicz Adam | Polok Pawel | 3-0 | 7 | 7 | +19
 2026-10-14 | Tkaczyk Henryk | Burkacki Adrian | 3-1 | 10 | 2 | +1
 2026-10-14 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 11 | 5 | +5
+2026-10-14 | Staszczyk Konrad | Sulkowski Bartek | 3-1 |  | 3 | 
+2026-10-14 | Zielinski Marcin | Gabrys Dariusz | 3-1 | 6 | 6 | Pending
+2026-10-14 | Rudomina Kamil | Kukawka Milosz | 3-1 | 8 | 9 | Pending
+2026-10-14 | Ruszkiewicz Adam | Koczyba Mariusz | 3-2 | 8 | 8 | Pending
 2026-10-15 | Tkaczyk Henryk | Polok Pawel | 3-0 |  |  | 
 2026-10-15 | Gesiarz Piotr | Gabrys Dariusz | 3-0 |  |  | 
 2026-10-15 | Kukawka Milosz | Glanowski Jakub | 3-0 |  |  | 
@@ -13134,5 +13138,5 @@
 2026-10-15 | Staszczyk Konrad | Glanowski Jakub | 3-0 |  |  | 
 2026-10-15 | Rudomina Kamil | Kukawka Milosz | 3-1 |  |  | 
 2026-10-15 | Staszczyk Konrad | Sulkowski Bartek | 3-1 |  |  | 
-2026-10-15 | Szoltysek Artur | Kowalczyk Marcin | 3-2 |  |  | 
-2026-10-15 | Zwolinski Mariusz | Golaszewski Kuba | 3-0 |  |  | 
+2026-10-15 | Szoltysek Artur | Kowalczyk Marcin | 3-2 | 1 | 3 | Pending
+2026-10-15 | Zwolinski Mariusz | Golaszewski Kuba | 3-0 | 2 | 2 | Pending
