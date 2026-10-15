@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T20:07Z
+# updated 2026-10-15T20:10Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13394,9 +13394,14 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Kotwica Dawid | Eliasz Adrian | 3-2 |  |  | 
-2026-10-15 | Lewczuk Miroslaw | Bladziak Krzysztof | 3-0 |  |  | 
-2026-10-15 | Nocun Zbigniew | Frank Roman | 3-2 |  |  | 
-2026-10-15 | Rolak Jaroslaw | Myszewski Adrian | 3-1 |  |  | 
-2026-10-15 | Tkocz Marek | Kaczmarek Jakub | 3-1 |  |  | 
-2026-10-15 | Jurowicz Grzegorz | Juszczyk Krzysztof | 3-2 |  |  | 
+2026-10-15 | Kotwica Dawid | Eliasz Adrian | 3-2 | 4 | 4 | +8
+2026-10-15 | Lewczuk Miroslaw | Bladziak Krzysztof | 3-0 | 4 | 9 | Pending
+2026-10-15 | Nocun Zbigniew | Frank Roman | 3-2 | 9 | 4 | Pending
+2026-10-15 | Rolak Jaroslaw | Myszewski Adrian | 3-1 | 4 | 4 | +13
+2026-10-15 | Tkocz Marek | Kaczmarek Jakub | 3-1 | 4 | 4 | Pending
+2026-10-15 | Jurowicz Grzegorz | Juszczyk Krzysztof | 3-2 | 4 | 4 | Pending
+2026-10-15 | Molenda Dariusz | Wolny Michal | 3-0 | 2 | 2 | Pending
+2026-10-15 | Trela Mateusz | Glanowski Jakub | 3-0 | 4 | 6 | Pending
+2026-10-15 | Lewczuk Miroslaw | Skupinski Arkadiusz | 3-0 | 5 | 5 | Pending
+2026-10-15 | Minda Michal | Kukawka Milosz | 3-0 | 9 | 4 | Pending
+2026-10-15 | Minda Michal | Rudomina Kamil | 3-1 | 10 | 5 | Pending
