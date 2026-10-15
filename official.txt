@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T22:10Z
+# updated 2026-10-15T22:39Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13169,6 +13169,8 @@
 2026-10-15 | Wolny Michal | Zelezik Jacek | 3-2 | 1 | 1 | +12
 2026-10-15 | Michalik Jerzy | Krezel Andrzej | 3-1 | 1 | 6 | Pending
 2026-10-15 | Molenda Dariusz | Staniczek Adam | 3-1 | 1 | 6 | Pending
+2026-10-15 | Staszczyk Konrad | Kukawka Milosz | 3-0 | 1 | 6 | Pending
+2026-10-15 | Wozniak Jakub | Trela Mateusz | 3-0 | 1 | 7 | Pending
 2026-10-15 | Nocun Zbigniew | Barton Aleksander | 3-1 | 2 | 2 | +3
 2026-10-15 | Bartosik Dominik | Delikatny Kamil | 3-0 | 2 | 2 | +17
 2026-10-15 | Krezel Andrzej | Bladziak Krzysztof | 3-0 | 2 | 2 | +14
@@ -13323,7 +13325,10 @@
 2026-10-15 | Pytlas Wojciech | Juszczyk Krzysztof | 3-2 | 5 | 5 | +9
 2026-10-15 | Kaczmarek Jakub | Jurowicz Grzegorz | 3-1 | 5 | 5 | +11
 2026-10-15 | Frank Roman | Bladziak Krzysztof | 3-2 | 5 | 10 | +7
+2026-10-15 | Lewczuk Miroslaw | Nocun Zbigniew | 3-1 | 6 | 11 | Pending
+2026-10-15 | Trela Mateusz | Linek Adam | 3-1 | 6 | 6 | Pending
 2026-10-15 | Sikon Mateusz | Slosarczyk Pawel | 3-2 | 6 | 6 | +10
+2026-10-15 | Kotwica Dawid | Krukar Piotr | 3-0 | 6 | 6 | Pending
 2026-10-15 | Kapik Krzysztof | Kwapis Jakub | 3-1 | 6 | 11 | Pending
 2026-10-15 | Baron Mariusz | Buczynski Witold | 3-1 | 6 | 6 | +12
 2026-10-15 | Klos Patrik | Kuzmicz Jakub | 3-2 | 6 | 6 | +11
@@ -13337,6 +13342,10 @@
 2026-10-15 | Minda Michal | Linek Adam | 3-1 | 6 | 1 | +15
 2026-10-15 | Nocun Zbigniew | Bladziak Krzysztof | 3-0 | 6 | 6 | +12
 2026-10-15 | Koczyba Mariusz | Pytlas Wojciech | 3-1 | 6 | 4 | +12
+2026-10-15 | Myszewski Adrian | Rolak Jaroslaw | 3-1 | 6 | 6 | Pending
+2026-10-15 | Kurek Pawel | Tkaczyk Henryk | 3-2 | 6 | 9 | Pending
+2026-10-15 | Skupinski Arkadiusz | Frank Roman | 3-2 | 6 | 6 | Pending
+2026-10-15 | Jurowicz Grzegorz | Gumulinski Piotr | 3-2 | 6 | 1 | Pending
 2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 7 | 7 | +13
 2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 7 | 7 | +4
 2026-10-15 | Pruszkowski Jakub | Nowak Jakub | 3-0 | 7 | 7 | +12
@@ -13355,6 +13364,7 @@
 2026-10-15 | Bladziak Krzysztof | Skupinski Arkadiusz | 3-2 | 7 | 2 | +8
 2026-10-15 | Kowalczyk Marcin | Krukar Piotr | 3-2 | 7 | 4 | +9
 2026-10-15 | Glanowski Jakub | Linek Adam | 3-2 | 7 | 5 | +9
+2026-10-15 | Kotwica Dawid | Golaszewski Kuba | 3-1 | 7 | 4 | Pending
 2026-10-15 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 8 | 8 | +9
 2026-10-15 | Slosarczyk Pawel | Buczynski Witold | 3-1 | 8 | 8 | +9
 2026-10-15 | Pruszkowski Jakub | Nowak Jakub | 3-0 | 8 | 8 | +11
@@ -13398,6 +13408,7 @@
 2026-10-15 | Schaniel Krzysztof | Nowak Jakub | 3-2 | 10 | 11 | +6
 2026-10-15 | Minda Michal | Rudomina Kamil | 3-1 | 10 | 5 | +14
 2026-10-15 | Pruszkowski Jakub | Sokolowski Oliwier | 3-0 | 11 | 10 | +10
+2026-10-15 | Bladziak Krzysztof | Kumor Michal | 3-1 | 11 | 6 | Pending
 2026-10-15 | Tkaczyk Henryk | Polok Pawel | 3-0 |  |  | 
 2026-10-15 | Gesiarz Piotr | Gabrys Dariusz | 3-0 |  |  | 
 2026-10-15 | Kukawka Milosz | Glanowski Jakub | 3-0 |  |  | 
@@ -13415,13 +13426,4 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Staszczyk Konrad | Kukawka Milosz | 3-0 | 1 | 6 | Pending
-2026-10-15 | Lewczuk Miroslaw | Nocun Zbigniew | 3-1 | 6 | 11 | Pending
-2026-10-15 | Myszewski Adrian | Rolak Jaroslaw | 3-1 | 6 | 6 | Pending
-2026-10-15 | Kurek Pawel | Tkaczyk Henryk | 3-2 | 6 | 9 | Pending
-2026-10-15 | Trela Mateusz | Linek Adam | 3-1 | 6 | 6 | Pending
-2026-10-15 | Wozniak Jakub | Trela Mateusz | 3-0 | 1 | 7 | Pending
-2026-10-15 | Skupinski Arkadiusz | Frank Roman | 3-2 | 6 | 6 | Pending
-2026-10-15 | Bladziak Krzysztof | Kumor Michal | 3-1 | 11 | 6 | Pending
-2026-10-15 | Kotwica Dawid | Krukar Piotr | 3-0 | 6 | 6 | Pending
-2026-10-15 | Jurowicz Grzegorz | Gumulinski Piotr | 3-2 | 6 | 1 | Pending
+2026-10-16 | Tkocz Marek | Oracz Lukasz | 3-1 | 1 | 1 | Pending
