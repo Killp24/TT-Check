@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T05:09Z
+# updated 2026-10-15T05:11Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13199,10 +13199,10 @@
 2026-10-15 | Wisniewski Bartlomiej | Warpas Blazej | 3-2 | 2 | 2 | +9
 2026-10-15 | Oracz Lukasz | Tkaczyk Henryk | 3-1 | 4 | 4 | +11
 2026-10-15 | Warzecha Miroslaw | Stechly Witold | 3-2 |  | 4 | 
-2026-10-15 | Jadczyk Marcin | Kuzmicz Jakub | 3-1 |  |  | 
-2026-10-15 | Baron Mariusz | Buczynski Witold | 3-0 |  |  | 
-2026-10-15 | Olbrycht Michal | Malachowski Michal | 3-1 |  |  | 
-2026-10-15 | Lamperski Jakub | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-15 | Cesarz Milosz | Burkacki Adrian | 3-0 |  |  | 
-2026-10-15 | Stechly Witold | Warzecha Miroslaw | 3-2 |  |  | 
-2026-10-15 | Zielinski Marcin | Fomin Andriej | 3-0 |  |  | 
+2026-10-15 | Jadczyk Marcin | Kuzmicz Jakub | 3-1 | 2 | 2 | Pending
+2026-10-15 | Baron Mariusz | Buczynski Witold | 3-0 | 2 | 2 | Pending
+2026-10-15 | Olbrycht Michal | Malachowski Michal | 3-1 | 2 | 2 | Pending
+2026-10-15 | Lamperski Jakub | Lukaszewski Mikolaj | 3-0 | 2 | 2 | +8
+2026-10-15 | Cesarz Milosz | Burkacki Adrian | 3-0 | 2 | 5 | +19
+2026-10-15 | Stechly Witold | Warzecha Miroslaw | 3-2 | 4 | 5 | +15
+2026-10-15 | Zielinski Marcin | Fomin Andriej | 3-0 | 3 | 5 | +7
