@@ -27,7 +27,7 @@ Brozek Piotr | 117 | 93
 Brud Szymon | 724 | 761
 Brunner Marian | 567 | 671
 Buczynski Witold | 1052 | 1818
-Burkacki Adrian | 149 | 251
+Burkacki Adrian | 150 | 251
 Burkacki Mateusz | 1959 | 1475
 Cesarz Milosz | 237 | 562
 Chlodnicki Piotr | 876 | 1463
@@ -60,7 +60,7 @@ Felkel Grzegorz | 2747 | 1710
 Filbrandt Tomasz | 2453 | 1916
 Fira Damian | 471 | 745
 Folwarski Jakub | 694 | 321
-Fomin Andriej | 630 | 446
+Fomin Andriej | 631 | 446
 Fomin Yurij | 610 | 770
 Frank Roman | 4 | 6
 Gabrys Dariusz | 0 | 26
@@ -225,7 +225,7 @@ Olbrycht Michal | 773 | 959
 Olejnik Martin | 1359 | 974
 Olejnik Mikolaj | 151 | 183
 Oracz Jacek | 800 | 358
-Oracz Lukasz | 1207 | 1012
+Oracz Lukasz | 1208 | 1012
 Oracz Michal | 758 | 495
 Orszulik Jan | 128 | 142
 Ostachowski Piotr | 33 | 70
@@ -247,7 +247,7 @@ Pisarczyk Tomasz | 199 | 311
 Pokorny Adam | 18 | 44
 Polanski Pawel | 786 | 744
 Poliniewicz Grzegorz | 4092 | 2906
-Polok Pawel | 199 | 122
+Polok Pawel | 199 | 123
 Poloszczanski Dawid | 1222 | 2123
 Prokopcov Dimitrij | 117 | 149
 Pruszkowski Jakub | 2356 | 1671
@@ -261,7 +261,7 @@ Pytlas Wojciech | 499 | 486
 Radlo Szymon | 3129 | 2925
 Rolak Jaroslaw | 2421 | 2537
 Rozum Dawid | 25 | 105
-Rudomina Kamil | 3028 | 3062
+Rudomina Kamil | 3028 | 3063
 Rus Maksymilian | 143 | 317
 Rusnak Ales | 139 | 153
 Ruszkiewicz Adam | 409 | 718
@@ -299,11 +299,11 @@ Solilo Dominik | 308 | 323
 Spanik Tibor | 280 | 225
 Sporek Szymon | 1225 | 1165
 Spychala Adrian | 2198 | 3233
-Staniczek Adam | 538 | 1121
+Staniczek Adam | 539 | 1121
 Staniszewski Piotr | 904 | 1189
 Stapor Rafal | 752 | 591
-Staszczyk Konrad | 1401 | 1186
-Stechly Witold | 110 | 524
+Staszczyk Konrad | 1403 | 1186
+Stechly Witold | 110 | 525
 Stecyszyn Jakub | 258 | 343
 Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
@@ -317,7 +317,7 @@ Szafranek Piotr | 377 | 345
 Szczepanek Blazej | 846 | 1067
 Szczepanski Mateusz | 329 | 368
 Szlubowski Dariusz | 446 | 253
-Szoltysek Artur | 559 | 701
+Szoltysek Artur | 559 | 702
 Szostok Sebastian | 1829 | 1247
 Szurgot Andrzej | 42 | 127
 Szurlej Kacper | 228 | 202
@@ -325,7 +325,7 @@ Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
 Szymanski Igor | 130 | 400
 Szymik Robert | 1188 | 764
-Tkaczyk Henryk | 1161 | 592
+Tkaczyk Henryk | 1161 | 593
 Tkocz Marek | 961 | 539
 Tobiasz Wojciech | 666 | 865
 Tomsia Slawomir | 75 | 144
@@ -340,7 +340,7 @@ Vincenec Oliver | 768 | 992
 Vrablik Jiri | 29 | 51
 Wandachowicz Michal | 17 | 71
 Warpas Blazej | 454 | 434
-Warzecha Miroslaw | 1224 | 607
+Warzecha Miroslaw | 1224 | 608
 Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
@@ -373,4 +373,4 @@ Zemla Piotr | 101 | 44
 Zielinski Marcin | 43 | 14
 Zmijewski Artur | 118 | 82
 Zochniak Jakub | 4226 | 3651
-Zwolinski Mariusz | 304 | 495
+Zwolinski Mariusz | 305 | 495
