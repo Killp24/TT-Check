@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T17:13Z
+# updated 2026-10-15T17:23Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13362,10 +13362,12 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Glanowski Jakub | Minda Michal | 3-1 |  |  | 
-2026-10-15 | Bladziak Krzysztof | Skupinski Arkadiusz | 3-2 |  |  | 
-2026-10-15 | Lewczuk Miroslaw | Nocun Zbigniew | 3-1 |  |  | 
-2026-10-15 | Eliasz Adrian | Myszewski Adrian | 3-2 |  |  | 
-2026-10-15 | Rolak Jaroslaw | Krukar Piotr | 3-1 |  |  | 
-2026-10-15 | Adamus Kacper | Glanowski Waldemar | 3-0 |  |  | 
-2026-10-15 | Pruszkowski Jakub | Sokolowski Oliwier | 3-0 |  |  | 
+2026-10-15 | Glanowski Jakub | Minda Michal | 3-1 | 4 | 7 | Pending
+2026-10-15 | Bladziak Krzysztof | Skupinski Arkadiusz | 3-2 | 7 | 2 | +8
+2026-10-15 | Lewczuk Miroslaw | Nocun Zbigniew | 3-1 | 2 | 7 | +11
+2026-10-15 | Eliasz Adrian | Myszewski Adrian | 3-2 | 2 | 2 | +8
+2026-10-15 | Rolak Jaroslaw | Krukar Piotr | 3-1 | 2 | 2 | Pending
+2026-10-15 | Adamus Kacper | Glanowski Waldemar | 3-0 | 10 | 9 | Pending
+2026-10-15 | Pruszkowski Jakub | Sokolowski Oliwier | 3-0 | 11 | 10 | Pending
+2026-10-15 | Trela Mateusz | Linek Adam | 3-1 | 2 |  | Pending
+2026-10-15 | Juszczyk Krzysztof | Tkocz Marek | 3-2 | 2 | 2 | Pending
