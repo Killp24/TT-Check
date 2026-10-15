@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T11:39Z
+# updated 2026-10-15T11:45Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13292,9 +13292,10 @@
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
 2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
-2026-10-15 | Felkel Grzegorz | Wloczko Krzysztof | 3-1 |  |  | 
-2026-10-15 | Kuzmicz Jakub | Chodorski Piotr | 3-1 |  |  | 
-2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 |  |  | 
-2026-10-15 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 |  |  | 
-2026-10-15 | Kolek Maciej | Rutkowski Mateusz | 3-1 |  |  | 
-2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2 |  |  | 
+2026-10-15 | Felkel Grzegorz | Wloczko Krzysztof | 3-1 | 7 | 7 | Pending
+2026-10-15 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 8 | 8 | Pending
+2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 7 | 7 | Pending
+2026-10-15 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 | 7 | 2 | Pending
+2026-10-15 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 2 | 2 | +8
+2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2 | 5 | 5 | +10
+2026-10-15 | Baron Mariusz | Vincenec Oliver | 3-0 | 8 | 8 | Pending
