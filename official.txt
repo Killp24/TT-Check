@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T04:37Z
+# updated 2026-10-15T04:41Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13144,7 +13144,7 @@
 2026-10-15 | Jendrzejewski Patryk | Olbrycht Michal | 3-0 | 1 | 1 | Pending
 2026-10-15 | Hetnar Krzysztof | Burkacki Adrian | 3-0 | 1 | 4 | +7
 2026-10-15 | Slawinski Kacper | Vincenec Oliver | 3-2 | 1 | 1 | Pending
-2026-10-15 | Stapor Rafal | Lukaszewski Mikolaj | 3-1 |  | 1 | 
+2026-10-15 | Stapor Rafal | Lukaszewski Mikolaj | 3-1 | 1 | 1 | +5
 2026-10-15 | Slosarczyk Pawel | Buczynski Witold | 3-1 | 1 | 1 | Pending
 2026-10-15 | Kurek Pawel | Cesarz Milosz | 3-0 | 1 | 1 | +12
 2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 1 | 1 | Pending
@@ -13192,9 +13192,10 @@
 2026-10-15 | Ruszkiewicz Adam | Koczyba Mariusz | 3-2 |  |  | 
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
-2026-10-15 | Kolodziej Krystian | Jadczyk Marcin | 3-2 |  |  | 
-2026-10-15 | Felkel Grzegorz | Chodorski Piotr | 3-0 |  |  | 
-2026-10-15 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
-2026-10-15 | Klos Patrik | Kwapis Jakub | 3-0 |  |  | 
-2026-10-15 | Wisniewski Bartlomiej | Warpas Blazej | 3-2 |  |  | 
-2026-10-15 | Oracz Lukasz | Tkaczyk Henryk | 3-1 |  |  | 
+2026-10-15 | Kolodziej Krystian | Jadczyk Marcin | 3-2 | 1 | 1 | Pending
+2026-10-15 | Felkel Grzegorz | Chodorski Piotr | 3-0 | 2 | 2 | Pending
+2026-10-15 | Vincenec Oliver | Sikon Mateusz | 3-1 | 2 | 2 | Pending
+2026-10-15 | Klos Patrik | Kwapis Jakub | 3-0 | 2 | 2 | Pending
+2026-10-15 | Wisniewski Bartlomiej | Warpas Blazej | 3-2 | 2 | 2 | +9
+2026-10-15 | Oracz Lukasz | Tkaczyk Henryk | 3-1 | 4 | 4 | +11
+2026-10-15 | Warzecha Miroslaw | Stechly Witold | 3-2 |  | 4 | 
