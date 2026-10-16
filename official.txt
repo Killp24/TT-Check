@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-15T23:58Z
+# updated 2026-10-16T00:05Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13439,6 +13439,9 @@
 2026-10-15 | Krezel Andrzej | Wolny Michal | 3-0 |  |  | 
 2026-10-15 | Kumor Michal | Frank Roman | 3-0 | 7 | 7 | Pending
 2026-10-15 | Linek Adam | Staszczyk Konrad | 3-2 | 8 | 2 | Pending
+2026-10-15 | Kumor Michal | Lewczuk Miroslaw | 3-0 | 8 | 8 | Pending
+2026-10-15 | Kukawka Milosz | Trela Mateusz | 3-0 | 9 | 8 | Pending
+2026-10-15 | Nocun Zbigniew | Skupinski Arkadiusz | 3-2 | 13 | 8 | Pending
 2026-10-16 | Tkocz Marek | Oracz Lukasz | 3-1 | 1 | 1 | Pending
 2026-10-16 | Krukar Piotr | Rolak Jaroslaw | 3-2 | 1 | 1 | Pending
 2026-10-16 | Jurowicz Grzegorz | Kurek Pawel | 3-1 | 1 | 1 | Pending
@@ -13456,4 +13459,4 @@
 2026-10-16 | Krukar Piotr | Myszewski Adrian | 3-0 | 2 | 1 | Pending
 2026-10-16 | Nocun Zbigniew | Skupinski Arkadiusz | 3-2 |  |  | 
 2026-10-16 | Rolak Jaroslaw | Kotwica Dawid | 3-2 |  |  | 
-2026-10-16 | Tkaczyk Henryk | Jurowicz Grzegorz | 3-1 |  |  | 
+2026-10-16 | Tkaczyk Henryk | Jurowicz Grzegorz | 3-1 | 2 | 2 | Pending
