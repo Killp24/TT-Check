@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-16T23:06Z
+# updated 2026-10-16T23:08Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13790,8 +13790,16 @@
 2026-10-16 | Cesarz Milosz | Orszulik Jan | 3-2 | 4 | 4 | Pending
 2026-10-16 | Sawicki Grzegorz | Ruszkiewicz Adam | 3-1 | 2 | 7 | Pending
 2026-10-16 | Krutak Michal | Pawlik Cezary | 3-2 | 6 | 6 | Pending
-2026-10-16 | Lukaszewski Mikolaj | Szlubowski Dariusz | 3-1 | 7 |  | Pending
+2026-10-16 | Lukaszewski Mikolaj | Szlubowski Dariusz | 3-1 | 7 | 2 | Pending
 2026-10-16 | Staszczyk Konrad | Makowski Kacper | 3-0 | 8 | 6 | Pending
+2026-10-16 | Pelka Jerzy | Komandzik Rafal | 3-1 | 7 | 7 | Pending
+2026-10-16 | Szlubowski Dariusz | Gronowski Wojciech | 3-2 | 3 | 7 | Pending
+2026-10-16 | Michalski Jakub | Fira Damian | 3-2 | 5 | 5 | Pending
+2026-10-16 | Maruszak Piotr | Woskowicz Mateusz | 3-2 | 6 | 4 | Pending
+2026-10-16 | Pawlik Cezary | Jedrzejowski Oskar | 3-0 | 7 | 7 | Pending
+2026-10-16 | Oracz Jacek | Natkaniec Michal | 3-0 | 7 | 7 | Pending
+2026-10-16 | Guzik Michal | Orszulik Jan | 3-0 | 10 | 5 | Pending
+2026-10-16 | Tkaczyk Henryk | Adach Rafal | 3-0 | 11 | 7 | Pending
 2026-10-17 | Wisniewski Bartlomiej | Stapor Rafal | 3-1 |  |  | 
 2026-10-17 | Lamperski Jakub | Warpas Blazej | 3-1 |  |  | 
 2026-10-17 | Sulkowski Karol | Krcil Frantisek | 3-2 |  |  | 
