@@ -82,12 +82,12 @@ Gorski Przemyslaw | 35 | 275
 Grela Artur | 1498 | 1538
 Grela Pawel | 367 | 582
 Gromek Artur | 64 | 111
-Gronowski Wojciech | 499 | 653
+Gronowski Wojciech | 500 | 653
 Gudzik Krystian | 66 | 62
 Guminski Krzysztof | 516 | 573
 Gumulinski Piotr | 2127 | 1783
 Guzik Michal | 205 | 89
-Hetnar Krzysztof | 972 | 617
+Hetnar Krzysztof | 973 | 617
 Horejsi Miroslav | 28 | 22
 Idaczyk Dominik | 44 | 74
 Idaczyk Rafal | 936 | 1148
@@ -121,11 +121,11 @@ Klag Wiktor | 95 | 164
 Klocek Kamil | 496 | 467
 Klos Patrik | 808 | 635
 Kocik Tomasz | 86 | 33
-Koczyba Mariusz | 2068 | 1567
+Koczyba Mariusz | 2069 | 1567
 Kolasa Szymon | 994 | 959
 Kolek Maciej | 813 | 770
 Kolodziej Krystian | 3842 | 2007
-Komandzik Rafal | 6 | 25
+Komandzik Rafal | 6 | 26
 Kordaszewski Tomasz | 9 | 78
 Kosmal Dawid | 440 | 363
 Kosowski Jakub | 2303 | 1695
@@ -144,7 +144,7 @@ Krcil Frantisek | 717 | 846
 Krezel Andrzej | 138 | 203
 Krukar Piotr | 36 | 47
 Krupa Sebastian | 472 | 436
-Krutak Michal | 225 | 146
+Krutak Michal | 226 | 146
 Krzyzanowski Michal | 536 | 491
 Kubiak Artur | 847 | 690
 Kucharek Jerzy | 7 | 78
@@ -212,7 +212,7 @@ Myszewski Adrian | 789 | 870
 Nadolny Jakub | 14 | 13
 Nadolski Lukasz | 430 | 602
 Nagel Kacper | 250 | 397
-Natkaniec Michal | 186 | 357
+Natkaniec Michal | 186 | 358
 Niemiec Krzysztof | 525 | 752
 Niemiec Rafal | 201 | 113
 Niezgoda Rostislav | 32 | 48
@@ -222,7 +222,7 @@ Nowak Jakub | 1343 | 2115
 Nowalinski Maciej | 1917 | 1781
 Ogon Rafal | 223 | 565
 Olbrycht Michal | 782 | 964
-Olejnik Martin | 1359 | 983
+Olejnik Martin | 1359 | 984
 Olejnik Mikolaj | 151 | 183
 Oracz Jacek | 801 | 358
 Oracz Lukasz | 1219 | 1018
@@ -264,7 +264,7 @@ Rozum Dawid | 25 | 105
 Rudomina Kamil | 3030 | 3066
 Rus Maksymilian | 143 | 317
 Rusnak Ales | 139 | 153
-Ruszkiewicz Adam | 411 | 718
+Ruszkiewicz Adam | 412 | 718
 Rutkowski Mateusz | 2207 | 2357
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
@@ -302,13 +302,13 @@ Spychala Adrian | 2198 | 3233
 Staniczek Adam | 543 | 1132
 Staniszewski Piotr | 904 | 1189
 Stapor Rafal | 757 | 596
-Staszczyk Konrad | 1405 | 1188
+Staszczyk Konrad | 1406 | 1188
 Stechly Witold | 113 | 526
-Stecyszyn Jakub | 264 | 346
+Stecyszyn Jakub | 265 | 346
 Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
 Strowski Karol | 1582 | 1035
-Strus Piotr | 1128 | 1681
+Strus Piotr | 1128 | 1682
 Suchecki Waclaw | 327 | 529
 Sulkowski Bartek | 648 | 790
 Sulkowski Karol | 687 | 700
@@ -344,8 +344,8 @@ Warzecha Miroslaw | 1227 | 609
 Wasilewski Damian | 307 | 216
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
-Wichowski Grzegorz | 1095 | 674
-Wiciok Piotr | 17 | 21
+Wichowski Grzegorz | 1095 | 675
+Wiciok Piotr | 18 | 21
 Wiecek Adrian | 3204 | 2387
 Wieczerzak Jacek | 171 | 145
 Wisniewski Bartlomiej | 2900 | 2393
@@ -372,5 +372,5 @@ Zelezik Jacek | 452 | 353
 Zemla Piotr | 101 | 44
 Zielinski Marcin | 46 | 14
 Zmijewski Artur | 118 | 82
-Zochniak Jakub | 4232 | 3655
+Zochniak Jakub | 4232 | 3656
 Zwolinski Mariusz | 305 | 495
