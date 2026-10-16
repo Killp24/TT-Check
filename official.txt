@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-16T14:42Z
+# updated 2026-10-16T14:46Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13637,7 +13637,7 @@
 2026-10-16 | Minda Michal | Solilo Dominik | 3-2 | 4 | 4 | Pending
 2026-10-16 | Minda Michal | Solilo Dominik | 3-2 | 5 | 5 | Pending
 2026-10-16 | Felkel Grzegorz | Kuzmicz Jakub | 3-0 | 8 | 8 | Pending
-2026-10-16 | Kolodziej Krystian | Olejnik Martin | 3-1 |  |  | 
+2026-10-16 | Kolodziej Krystian | Olejnik Martin | 3-1 | 3 | 8 | Pending
 2026-10-16 | Paszkiewicz Michal | Urban Wojciech | 3-1 | 9 | 9 | Pending
 2026-10-16 | Adamus Mariusz | Slosarczyk Pawel | 3-1 | 9 | 8 | Pending
 2026-10-16 | Sokolowski Oliwier | Jozefiak Michal | 3-1 | 8 | 9 | Pending
@@ -13649,16 +13649,17 @@
 2026-10-16 | Jadach Oskar | Wiciok Piotr | 3-1 | 7 | 6 | +6
 2026-10-16 | Wichowski Grzegorz | Hetnar Krzysztof | 3-1 | 7 | 7 | Pending
 2026-10-16 | Mecik Patryk | Tobiasz Wojciech | 3-0 | 6 | 7 | Pending
-2026-10-16 | Stecyszyn Jakub | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-16 | Kolodziej Krystian | Felkel Grzegorz | 3-1 |  |  | 
+2026-10-16 | Stecyszyn Jakub | Jadczyk Marcin | 3-1 | 8 | 8 | Pending
+2026-10-16 | Kolodziej Krystian | Felkel Grzegorz | 3-1 | 4 | 9 | Pending
 2026-10-16 | Jadczyk Marcin | Olejnik Martin | 3-1 |  |  | 
-2026-10-16 | Paszkiewicz Michal | Slosarczyk Pawel | 3-0 |  |  | 
-2026-10-16 | Sokolowski Oliwier | Urban Wojciech | 3-2 |  |  | 
-2026-10-16 | Poliniewicz Grzegorz | Jendrzejewski Patryk | 3-2 |  |  | 
-2026-10-16 | Wloczko Krzysztof | Czerwinski Bartosz | 3-0 |  |  | 
-2026-10-16 | Zochniak Jakub | Solilo Dominik | 3-2 |  |  | 
-2026-10-16 | Sulkowski Bartek | Minda Michal | 3-1 |  |  | 
-2026-10-16 | Wiciok Piotr | Hetnar Krzysztof | 3-0 |  |  | 
+2026-10-16 | Paszkiewicz Michal | Slosarczyk Pawel | 3-0 | 10 | 9 | Pending
+2026-10-16 | Sokolowski Oliwier | Urban Wojciech | 3-2 | 9 | 10 | Pending
+2026-10-16 | Poliniewicz Grzegorz | Jendrzejewski Patryk | 3-2 | 10 | 10 | Pending
+2026-10-16 | Wloczko Krzysztof | Czerwinski Bartosz | 3-0 | 10 | 5 | Pending
+2026-10-16 | Zochniak Jakub | Solilo Dominik | 3-2 | 4 | 4 | +4
+2026-10-16 | Sulkowski Bartek | Minda Michal | 3-1 | 5 | 5 | +11
+2026-10-16 | Wiciok Piotr | Hetnar Krzysztof | 3-0 | 7 | 8 | Pending
+2026-10-16 | Jadach Oskar | Tobiasz Wojciech | 3-2 |  | 8 | 
 2026-10-17 | Wisniewski Bartlomiej | Stapor Rafal | 3-1 |  |  | 
 2026-10-17 | Lamperski Jakub | Warpas Blazej | 3-1 |  |  | 
 2026-10-17 | Sulkowski Karol | Krcil Frantisek | 3-2 |  |  | 
