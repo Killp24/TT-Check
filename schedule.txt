@@ -1,32 +1,17 @@
 # Match schedule from tt-series.com, Polish time (updated automatically)
 # date | time | tournament | player 1 | player 2 | result
-2026-10-16 | 11:00 | afternoon tournament OSP | Adamus Mariusz | Sokolowski Oliwier | 3:1
-2026-10-16 | 11:25 | afternoon tournament OSP | Paszkiewicz Michal | Jozefiak Michal | 3:0
-2026-10-16 | 11:50 | afternoon tournament OSP | Urban Wojciech | Slosarczyk Pawel | 3:2
 2026-10-16 | 12:00 | afternoon tournament HSC | Olejnik Martin | Kuzmicz Jakub | 2:3
-2026-10-16 | 12:10 | afternoon tournament OSP | Adamus Mariusz | Paszkiewicz Michal | 2:3
 2026-10-16 | 12:25 | afternoon tournament HSC | Felkel Grzegorz | Stecyszyn Jakub | 3:2
-2026-10-16 | 12:35 | afternoon tournament OSP | Slosarczyk Pawel | Sokolowski Oliwier | 3:1
 2026-10-16 | 12:50 | afternoon tournament HSC | Kolodziej Krystian | Jadczyk Marcin | 0:3
-2026-10-16 | 13:00 | afternoon tournament OSP | Urban Wojciech | Jozefiak Michal | 3:1
 2026-10-16 | 13:15 | afternoon tournament HSC | Olejnik Martin | Felkel Grzegorz | 1:3
-2026-10-16 | 13:25 | afternoon tournament OSP | Paszkiewicz Michal | Sokolowski Oliwier | 2:3
 2026-10-16 | 13:40 | afternoon tournament HSC | Jadczyk Marcin | Kuzmicz Jakub | 1:3
-2026-10-16 | 13:50 | afternoon tournament OSP | Adamus Mariusz | Urban Wojciech | 2:3
 2026-10-16 | 14:05 | afternoon tournament HSC | Kolodziej Krystian | Stecyszyn Jakub | 0:3
-2026-10-16 | 14:15 | afternoon tournament OSP | Slosarczyk Pawel | Jozefiak Michal | 3:2
 2026-10-16 | 14:30 | afternoon tournament HSC | Felkel Grzegorz | Kuzmicz Jakub | 3:0
-2026-10-16 | 14:40 | afternoon tournament OSP | Paszkiewicz Michal | Urban Wojciech | 3:1
 2026-10-16 | 14:55 | afternoon tournament HSC | Olejnik Martin | Kolodziej Krystian | 1:3
-2026-10-16 | 15:05 | afternoon tournament OSP | Adamus Mariusz | Slosarczyk Pawel | 3:1
 2026-10-16 | 15:20 | afternoon tournament HSC | Jadczyk Marcin | Stecyszyn Jakub | 1:3
-2026-10-16 | 15:30 | afternoon tournament OSP | Jozefiak Michal | Sokolowski Oliwier | 1:3
 2026-10-16 | 15:45 | afternoon tournament HSC | Felkel Grzegorz | Kolodziej Krystian | 1:3
-2026-10-16 | 15:55 | afternoon tournament OSP | Paszkiewicz Michal | Slosarczyk Pawel | 3:0
 2026-10-16 | 16:10 | afternoon tournament HSC | Olejnik Martin | Jadczyk Marcin | 1:3
-2026-10-16 | 16:20 | afternoon tournament OSP | Urban Wojciech | Sokolowski Oliwier | 2:3
 2026-10-16 | 16:35 | afternoon tournament HSC | Stecyszyn Jakub | Kuzmicz Jakub | 3:1
-2026-10-16 | 16:40 | afternoon tournament OSP | Adamus Mariusz | Jozefiak Michal | 2:3
 2026-10-16 | 17:00 | afternoon tournament HSC | Felkel Grzegorz | Jadczyk Marcin | 3:1
 2026-10-16 | 17:00 | evening tournament OSP2 (WB) | Komandzik Rafal | Pelka Jerzy | 1:3
 2026-10-16 | 17:00 | evening tournament OSP2 (WB) | Skorski Michal | Krukar Piotr | 1:3
@@ -296,12 +281,12 @@
 2026-10-17 | 18:05 | evening tournament HSC | Maruszak Piotr | Wos Alan | 3:2
 2026-10-17 | 18:15 | evening tournament OSP | Gesiarz Piotr | Maszczynski Dariusz | 3:1
 2026-10-17 | 18:15 | evening tournament OSP2 (WB) | Makowski Kacper | Sulkowski Karol | 3:1
-2026-10-17 | 18:20 | afternoon tournament Poczesna | Jedrzejak Patryk | Morawiec Daniel | 
-2026-10-17 | 18:25 | evening tournament Blachownia | Pawlik Cezary | Skorupa Jakub | 
-2026-10-17 | 18:30 | evening tournament HSC | Linek Adam | Mugowski Arkadiusz | 
-2026-10-17 | 18:35 | evening tournament OSP | Malcher Krzysztof | Bladziak Krzysztof | 
-2026-10-17 | 18:35 | evening tournament OSP2 (WB) | Cioch Blazej | Lukaszewski Mikolaj | 
-2026-10-17 | 18:40 | afternoon tournament Poczesna | Malcherek Adam | Jadach Oskar | 
+2026-10-17 | 18:20 | afternoon tournament Poczesna | Jedrzejak Patryk | Morawiec Daniel | 0:3
+2026-10-17 | 18:25 | evening tournament Blachownia | Pawlik Cezary | Skorupa Jakub | 1:3
+2026-10-17 | 18:30 | evening tournament HSC | Linek Adam | Mugowski Arkadiusz | 1:3
+2026-10-17 | 18:35 | evening tournament OSP | Malcher Krzysztof | Bladziak Krzysztof | 3:0
+2026-10-17 | 18:35 | evening tournament OSP2 (WB) | Cioch Blazej | Lukaszewski Mikolaj | 3:2
+2026-10-17 | 18:40 | afternoon tournament Poczesna | Malcherek Adam | Jadach Oskar | 3:2
 2026-10-17 | 18:50 | evening tournament Blachownia | Mucha Grzegorz | Fomin Andriej | 
 2026-10-17 | 18:55 | evening tournament HSC | Sulkowski Bartek | Woskowicz Mateusz | 
 2026-10-17 | 18:55 | evening tournament OSP | Kocik Tomasz | Szurgot Andrzej | 
