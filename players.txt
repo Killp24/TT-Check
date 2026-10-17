@@ -58,7 +58,7 @@ Eliasz Adrian | 1872 | 2335
 Fabis Adrian | 1993 | 1798
 Felkel Grzegorz | 2761 | 1716
 Filbrandt Tomasz | 2453 | 1916
-Fira Damian | 473 | 749
+Fira Damian | 474 | 749
 Folwarski Jakub | 694 | 321
 Fomin Andriej | 633 | 448
 Fomin Yurij | 613 | 772
@@ -82,7 +82,7 @@ Gorski Przemyslaw | 35 | 275
 Grela Artur | 1498 | 1538
 Grela Pawel | 367 | 582
 Gromek Artur | 64 | 111
-Gronowski Wojciech | 504 | 656
+Gronowski Wojciech | 505 | 656
 Gudzik Krystian | 66 | 62
 Guminski Krzysztof | 516 | 573
 Gumulinski Piotr | 2127 | 1783
@@ -125,7 +125,7 @@ Koczyba Mariusz | 2069 | 1570
 Kolasa Szymon | 994 | 959
 Kolek Maciej | 813 | 770
 Kolodziej Krystian | 3842 | 2007
-Komandzik Rafal | 7 | 31
+Komandzik Rafal | 7 | 32
 Kordaszewski Tomasz | 9 | 78
 Kosmal Dawid | 440 | 363
 Kosowski Jakub | 2303 | 1695
@@ -144,7 +144,7 @@ Krcil Frantisek | 717 | 846
 Krezel Andrzej | 138 | 203
 Krukar Piotr | 41 | 50
 Krupa Sebastian | 472 | 436
-Krutak Michal | 231 | 148
+Krutak Michal | 231 | 149
 Krzyzanowski Michal | 536 | 491
 Kubiak Artur | 847 | 690
 Kucharek Jerzy | 7 | 78
@@ -171,11 +171,11 @@ Lilien Aleksander | 2740 | 2320
 Linek Adam | 2180 | 2431
 Lis Daniel | 594 | 391
 Lojtek Tomasz | 602 | 1237
-Lukaszewski Mikolaj | 1124 | 1381
+Lukaszewski Mikolaj | 1124 | 1382
 Machelski Michal | 523 | 879
 Madej Boguslaw | 216 | 355
 Makajew Maciej | 958 | 924
-Makowski Kacper | 417 | 575
+Makowski Kacper | 417 | 577
 Malachowski Michal | 753 | 863
 Malcher Krzysztof | 46 | 86
 Malecha Maciej | 225 | 253
@@ -193,7 +193,7 @@ Mecik Patryk | 1132 | 1180
 Miastowski Maksymilian | 1564 | 1378
 Michalczyk Jakub | 227 | 203
 Michalik Jerzy | 1006 | 1240
-Michalski Jakub | 1194 | 1731
+Michalski Jakub | 1194 | 1732
 Michna Dawid | 1204 | 1110
 Minda Michal | 3582 | 3484
 Misiak Mateusz | 3791 | 3374
@@ -204,15 +204,15 @@ Mlynarski Filip | 2131 | 1991
 Molenda Dariusz | 244 | 74
 Morawiec Daniel | 863 | 714
 Mrugala Bartlomiej | 348 | 403
-Mucha Grzegorz | 208 | 209
-Mugowski Arkadiusz | 3469 | 4158
+Mucha Grzegorz | 209 | 209
+Mugowski Arkadiusz | 3470 | 4158
 Murawski Daniel | 1115 | 1007
 Murawski Michal | 2409 | 2345
 Myszewski Adrian | 789 | 870
 Nadolny Jakub | 14 | 13
 Nadolski Lukasz | 430 | 602
 Nagel Kacper | 250 | 397
-Natkaniec Michal | 186 | 365
+Natkaniec Michal | 187 | 366
 Niemiec Krzysztof | 525 | 752
 Niemiec Rafal | 201 | 113
 Niezgoda Rostislav | 32 | 48
@@ -224,15 +224,15 @@ Ogon Rafal | 223 | 565
 Olbrycht Michal | 782 | 964
 Olejnik Martin | 1359 | 984
 Olejnik Mikolaj | 151 | 183
-Oracz Jacek | 806 | 360
+Oracz Jacek | 807 | 360
 Oracz Lukasz | 1219 | 1018
 Oracz Michal | 758 | 495
-Orszulik Jan | 129 | 147
+Orszulik Jan | 129 | 148
 Ostachowski Piotr | 33 | 70
 Pacia Bartlomiej | 246 | 220
 Panczyk Adrian | 193 | 342
 Paszkiewicz Michal | 492 | 434
-Pawlik Cezary | 432 | 298
+Pawlik Cezary | 433 | 300
 Pawlowski Krzysztof | 858 | 656
 Pelka Jerzy | 863 | 994
 Perzynski Przemyslaw | 646 | 551
@@ -264,11 +264,11 @@ Rozum Dawid | 25 | 105
 Rudomina Kamil | 3030 | 3066
 Rus Maksymilian | 143 | 317
 Rusnak Ales | 139 | 153
-Ruszkiewicz Adam | 417 | 720
+Ruszkiewicz Adam | 418 | 720
 Rutkowski Mateusz | 2207 | 2357
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
-Sawicki Grzegorz | 747 | 1095
+Sawicki Grzegorz | 747 | 1096
 Schaniel Krzysztof | 2076 | 2214
 Scigany Dariusz | 1155 | 500
 Seroka Szymon | 2079 | 1485
@@ -325,7 +325,7 @@ Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
 Szymanski Igor | 130 | 400
 Szymik Robert | 1188 | 764
-Tkaczyk Henryk | 1173 | 601
+Tkaczyk Henryk | 1174 | 601
 Tkocz Marek | 967 | 543
 Tobiasz Wojciech | 669 | 873
 Tomsia Slawomir | 75 | 144
@@ -336,7 +336,7 @@ Ufnal Mateusz | 235 | 416
 Urban Wojciech | 877 | 966
 Urbanek Jan | 31 | 15
 Utylski Rafal | 260 | 369
-Vincenec Oliver | 777 | 999
+Vincenec Oliver | 778 | 999
 Vrablik Jiri | 29 | 51
 Wandachowicz Michal | 17 | 71
 Warpas Blazej | 458 | 445
@@ -362,7 +362,7 @@ Wojtaszczyk Wojciech | 604 | 309
 Wolny Michal | 573 | 733
 Wos Alan | 311 | 440
 Woskowicz Marcin | 19 | 28
-Woskowicz Mateusz | 148 | 124
+Woskowicz Mateusz | 149 | 124
 Wozniak Jakub | 1333 | 1750
 Wozniczka Marcin | 241 | 183
 Wrobel Dariusz | 915 | 933
