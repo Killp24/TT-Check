@@ -338,18 +338,18 @@
 2026-10-17 | 22:30 | evening tournament OSP2 (WB) | Makowski Kacper | Gronowski Wojciech | 1:3
 2026-10-17 | 22:45 | evening tournament Blachownia | Pawlik Cezary | Karpiuk Mateusz | 2:3
 2026-10-17 | 22:45 | evening tournament Poczesna | Badura Jaroslaw | Sikon Mateusz | 2:3
-2026-10-17 | 23:00 | night tournament HSC | Sulkowski Bartek | Mugowski Arkadiusz | 
+2026-10-17 | 23:00 | night tournament HSC | Sulkowski Bartek | Mugowski Arkadiusz | 3:1
 2026-10-17 | 23:00 | night tournament OSP | Malcher Krzysztof | Bladziak Krzysztof | 3:0
 2026-10-17 | 23:05 | evening tournament Poczesna | Szymik Robert | Fira Damian | 3:0
 2026-10-17 | 23:05 | night tournament OSP2 (WB) | Eliasz Adrian | Sulkowski Karol | 0:3
 2026-10-17 | 23:10 | night tournament Blachownia | Mucha Grzegorz | Fomin Andriej | 2:3
 2026-10-17 | 23:20 | night tournament OSP | Maszczynski Dariusz | Szurgot Andrzej | 0:3
-2026-10-17 | 23:25 | night tournament HSC | Maruszak Piotr | Linek Adam | 
+2026-10-17 | 23:25 | night tournament HSC | Maruszak Piotr | Linek Adam | 1:3
 2026-10-17 | 23:30 | evening tournament Poczesna | Szymanski Igor | Badura Jaroslaw | 1:3
 2026-10-17 | 23:30 | night tournament OSP2 (WB) | Makowski Kacper | Cioch Blazej | 2:3
 2026-10-17 | 23:35 | night tournament Blachownia | Skorupa Jakub | Karpiuk Mateusz | 3:2
-2026-10-17 | 23:45 | night tournament OSP | Kocik Tomasz | Gesiarz Piotr | 
-2026-10-17 | 23:50 | night tournament HSC | Kolek Maciej | Woskowicz Mateusz | 
+2026-10-17 | 23:45 | night tournament OSP | Kocik Tomasz | Gesiarz Piotr | 3:2
+2026-10-17 | 23:50 | night tournament HSC | Kolek Maciej | Woskowicz Mateusz | 3:2
 2026-10-17 | 23:55 | evening tournament Poczesna | Sikon Mateusz | Durda Michal | 
 2026-10-17 | 23:55 | night tournament OSP2 (WB) | Lukaszewski Mikolaj | Gronowski Wojciech | 
 2026-10-18 | 00:00 | night tournament Blachownia | Pyrek Dawid | Pawlik Cezary | 
@@ -717,9 +717,299 @@
 2026-10-19 | 04:35 | night tournament OSP | Nocun Zbigniew | Kwiatkowski Kacper | 
 2026-10-19 | 04:45 | night tournament Blachownia | Jozefiak Michal | Adamus Pawel | 
 2026-10-19 | 04:45 | night tournament Poczesna | Oracz Lukasz | Urban Wojciech | 
+2026-10-19 | 05:00 | morning tournament HSC | Kosowski Jakub | Wloczko Krzysztof | 
+2026-10-19 | 05:00 | morning tournament HSC2 | Poliniewicz Grzegorz | Wisniewski Karol | 
+2026-10-19 | 05:00 | morning tournament OSP | Piechnik Roman | Slawinski Kacper | 
+2026-10-19 | 05:00 | morning tournament OSP2 (WB) | Sobel Artur | Wisniewski Bartlomiej | 
 2026-10-19 | 05:05 | night tournament Poczesna | Adamus Kacper | Pruszkowski Jakub | 
+2026-10-19 | 05:10 | morning tournament Blachownia | Wolny Michal | Michalik Jerzy | 
+2026-10-19 | 05:20 | morning tournament HSC2 | Rutkowski Mateusz | Kapik Krzysztof | 
+2026-10-19 | 05:25 | morning tournament HSC | Grela Artur | Kuzmicz Jakub | 
+2026-10-19 | 05:25 | morning tournament OSP | Szostok Sebastian | Buczynski Witold | 
+2026-10-19 | 05:25 | morning tournament OSP2 (WB) | Wrobel Dariusz | Golaszewski Kuba | 
 2026-10-19 | 05:30 | night tournament Poczesna | Marud Grzegorz | Oracz Lukasz | 
+2026-10-19 | 05:35 | morning tournament Blachownia | Janus Slawomir | Kordaszewski Tomasz | 
+2026-10-19 | 05:40 | morning tournament HSC2 | Kosmal Dawid | Solilo Dominik | 
+2026-10-19 | 05:45 | morning tournament HSC | Wiecek Adrian | Jadczyk Marcin | 
+2026-10-19 | 05:50 | morning tournament OSP | Przewlocki Piotr | Hetnar Krzysztof | 
+2026-10-19 | 05:50 | morning tournament OSP2 (WB) | Krcil Frantisek | Warpas Blazej | 
 2026-10-19 | 05:55 | night tournament Poczesna | Urban Wojciech | Nowak Jakub | 
+2026-10-19 | 06:00 | morning tournament Blachownia | Stechly Witold | Maszczynski Dariusz | 
+2026-10-19 | 06:00 | morning tournament HSC2 | Poliniewicz Grzegorz | Rutkowski Mateusz | 
+2026-10-19 | 06:10 | morning tournament HSC | Kosowski Jakub | Grela Artur | 
+2026-10-19 | 06:10 | morning tournament OSP | Piechnik Roman | Szostok Sebastian | 
+2026-10-19 | 06:10 | morning tournament OSP2 (WB) | Sobel Artur | Wrobel Dariusz | 
 2026-10-19 | 06:20 | night tournament Poczesna | Adamus Kacper | Oracz Lukasz | 
+2026-10-19 | 06:25 | morning tournament Blachownia | Wolny Michal | Janus Slawomir | 
+2026-10-19 | 06:25 | morning tournament HSC2 | Solilo Dominik | Wisniewski Karol | 
+2026-10-19 | 06:30 | morning tournament HSC | Jadczyk Marcin | Wloczko Krzysztof | 
+2026-10-19 | 06:30 | morning tournament OSP | Hetnar Krzysztof | Slawinski Kacper | 
+2026-10-19 | 06:30 | morning tournament OSP2 (WB) | Warpas Blazej | Wisniewski Bartlomiej | 
 2026-10-19 | 06:40 | night tournament Poczesna | Pruszkowski Jakub | Nowak Jakub | 
+2026-10-19 | 06:50 | morning tournament Blachownia | Maszczynski Dariusz | Michalik Jerzy | 
+2026-10-19 | 06:50 | morning tournament HSC2 | Kosmal Dawid | Kapik Krzysztof | 
+2026-10-19 | 06:55 | morning tournament HSC | Wiecek Adrian | Kuzmicz Jakub | 
+2026-10-19 | 06:55 | morning tournament OSP | Przewlocki Piotr | Buczynski Witold | 
+2026-10-19 | 06:55 | morning tournament OSP2 (WB) | Krcil Frantisek | Golaszewski Kuba | 
 2026-10-19 | 07:05 | night tournament Poczesna | Marud Grzegorz | Urban Wojciech | 
+2026-10-19 | 07:10 | morning tournament Blachownia | Stechly Witold | Kordaszewski Tomasz | 
+2026-10-19 | 07:15 | morning tournament HSC | Grela Artur | Wloczko Krzysztof | 
+2026-10-19 | 07:15 | morning tournament HSC2 | Rutkowski Mateusz | Wisniewski Karol | 
+2026-10-19 | 07:15 | morning tournament OSP | Szostok Sebastian | Slawinski Kacper | 
+2026-10-19 | 07:15 | morning tournament OSP2 (WB) | Wrobel Dariusz | Wisniewski Bartlomiej | 
+2026-10-19 | 07:30 | morning tournament Poczesna | Wichowski Grzegorz | Polok Pawel | 
+2026-10-19 | 07:35 | morning tournament Blachownia | Janus Slawomir | Michalik Jerzy | 
+2026-10-19 | 07:35 | morning tournament HSC2 | Poliniewicz Grzegorz | Kosmal Dawid | 
+2026-10-19 | 07:40 | morning tournament HSC | Kosowski Jakub | Wiecek Adrian | 
+2026-10-19 | 07:40 | morning tournament OSP | Piechnik Roman | Przewlocki Piotr | 
+2026-10-19 | 07:40 | morning tournament OSP2 (WB) | Sobel Artur | Krcil Frantisek | 
+2026-10-19 | 07:55 | morning tournament Poczesna | Fomin Yurij | Mecik Patryk | 
+2026-10-19 | 08:00 | morning tournament Blachownia | Wolny Michal | Stechly Witold | 
+2026-10-19 | 08:00 | morning tournament HSC2 | Solilo Dominik | Kapik Krzysztof | 
+2026-10-19 | 08:05 | morning tournament HSC | Jadczyk Marcin | Kuzmicz Jakub | 
+2026-10-19 | 08:05 | morning tournament OSP | Hetnar Krzysztof | Buczynski Witold | 
+2026-10-19 | 08:05 | morning tournament OSP2 (WB) | Warpas Blazej | Golaszewski Kuba | 
+2026-10-19 | 08:20 | morning tournament Poczesna | Wiciok Piotr | Tobiasz Wojciech | 
+2026-10-19 | 08:25 | morning tournament Blachownia | Maszczynski Dariusz | Kordaszewski Tomasz | 
+2026-10-19 | 08:25 | morning tournament HSC2 | Rutkowski Mateusz | Kosmal Dawid | 
+2026-10-19 | 08:30 | morning tournament HSC | Grela Artur | Wiecek Adrian | 
+2026-10-19 | 08:30 | morning tournament OSP | Szostok Sebastian | Przewlocki Piotr | 
+2026-10-19 | 08:30 | morning tournament OSP2 (WB) | Wrobel Dariusz | Krcil Frantisek | 
+2026-10-19 | 08:45 | morning tournament Blachownia | Janus Slawomir | Stechly Witold | 
+2026-10-19 | 08:45 | morning tournament Poczesna | Wichowski Grzegorz | Fomin Yurij | 
+2026-10-19 | 08:50 | morning tournament HSC2 | Poliniewicz Grzegorz | Solilo Dominik | 
+2026-10-19 | 08:55 | morning tournament HSC | Kosowski Jakub | Jadczyk Marcin | 
+2026-10-19 | 08:55 | morning tournament OSP | Piechnik Roman | Hetnar Krzysztof | 
+2026-10-19 | 08:55 | morning tournament OSP2 (WB) | Sobel Artur | Warpas Blazej | 
+2026-10-19 | 09:10 | morning tournament Blachownia | Wolny Michal | Maszczynski Dariusz | 
+2026-10-19 | 09:10 | morning tournament Poczesna | Tobiasz Wojciech | Polok Pawel | 
+2026-10-19 | 09:15 | morning tournament HSC2 | Kapik Krzysztof | Wisniewski Karol | 
+2026-10-19 | 09:20 | morning tournament HSC | Kuzmicz Jakub | Wloczko Krzysztof | 
+2026-10-19 | 09:20 | morning tournament OSP | Buczynski Witold | Slawinski Kacper | 
+2026-10-19 | 09:20 | morning tournament OSP2 (WB) | Golaszewski Kuba | Wisniewski Bartlomiej | 
+2026-10-19 | 09:30 | morning tournament Poczesna | Wiciok Piotr | Mecik Patryk | 
+2026-10-19 | 09:35 | morning tournament Blachownia | Kordaszewski Tomasz | Michalik Jerzy | 
+2026-10-19 | 09:40 | morning tournament HSC2 | Rutkowski Mateusz | Solilo Dominik | 
+2026-10-19 | 09:40 | morning tournament OSP2 (WB) | Wrobel Dariusz | Warpas Blazej | 
+2026-10-19 | 09:45 | morning tournament HSC | Grela Artur | Jadczyk Marcin | 
+2026-10-19 | 09:45 | morning tournament OSP | Szostok Sebastian | Hetnar Krzysztof | 
+2026-10-19 | 09:55 | morning tournament Poczesna | Fomin Yurij | Polok Pawel | 
+2026-10-19 | 10:00 | morning tournament Blachownia | Janus Slawomir | Maszczynski Dariusz | 
+2026-10-19 | 10:05 | morning tournament HSC | Wiecek Adrian | Wloczko Krzysztof | 
+2026-10-19 | 10:05 | morning tournament HSC2 | Kosmal Dawid | Wisniewski Karol | 
+2026-10-19 | 10:10 | morning tournament OSP | Przewlocki Piotr | Slawinski Kacper | 
+2026-10-19 | 10:10 | morning tournament OSP2 (WB) | Krcil Frantisek | Wisniewski Bartlomiej | 
+2026-10-19 | 10:20 | morning tournament Blachownia | Stechly Witold | Michalik Jerzy | 
+2026-10-19 | 10:20 | morning tournament Poczesna | Wichowski Grzegorz | Wiciok Piotr | 
+2026-10-19 | 10:30 | morning tournament HSC | Kosowski Jakub | Kuzmicz Jakub | 
+2026-10-19 | 10:30 | morning tournament HSC2 | Poliniewicz Grzegorz | Kapik Krzysztof | 
+2026-10-19 | 10:35 | morning tournament OSP | Piechnik Roman | Buczynski Witold | 
+2026-10-19 | 10:35 | morning tournament OSP2 (WB) | Sobel Artur | Golaszewski Kuba | 
+2026-10-19 | 10:45 | morning tournament Blachownia | Wolny Michal | Kordaszewski Tomasz | 
+2026-10-19 | 10:45 | morning tournament Poczesna | Tobiasz Wojciech | Mecik Patryk | 
+2026-10-19 | 11:00 | afternoon tournament HSC | Wiecek Adrian | Wloczko Krzysztof | 
+2026-10-19 | 11:00 | afternoon tournament HSC2 | Kosmal Dawid | Wisniewski Karol | 
+2026-10-19 | 11:00 | afternoon tournament OSP | Hetnar Krzysztof | Slawinski Kacper | 
+2026-10-19 | 11:00 | afternoon tournament OSP2 (WB) | Solilo Dominik | Krcil Frantisek | 
+2026-10-19 | 11:05 | morning tournament Poczesna | Fomin Yurij | Wiciok Piotr | 
+2026-10-19 | 11:20 | afternoon tournament HSC | Kosowski Jakub | Grela Artur | 
+2026-10-19 | 11:20 | afternoon tournament HSC2 | Poliniewicz Grzegorz | Staszczyk Konrad | 
+2026-10-19 | 11:25 | afternoon tournament OSP | Schaniel Krzysztof | Buczynski Witold | 
+2026-10-19 | 11:25 | afternoon tournament OSP2 (WB) | Sobel Artur | Warpas Blazej | 
+2026-10-19 | 11:30 | morning tournament Poczesna | Wichowski Grzegorz | Tobiasz Wojciech | 
+2026-10-19 | 11:40 | afternoon tournament HSC | Kuzmicz Jakub | Jadczyk Marcin | 
+2026-10-19 | 11:45 | afternoon tournament HSC2 | Czerwinski Bartosz | Kapik Krzysztof | 
+2026-10-19 | 11:50 | afternoon tournament OSP | Przewlocki Piotr | Piechnik Roman | 
+2026-10-19 | 11:50 | afternoon tournament OSP2 (WB) | Rutkowski Mateusz | Kukawka Milosz | 
+2026-10-19 | 11:55 | morning tournament Poczesna | Mecik Patryk | Polok Pawel | 
+2026-10-19 | 12:00 | afternoon tournament HSC | Wiecek Adrian | Kosowski Jakub | 
+2026-10-19 | 12:05 | afternoon tournament HSC2 | Kosmal Dawid | Poliniewicz Grzegorz | 
+2026-10-19 | 12:10 | afternoon tournament OSP | Hetnar Krzysztof | Schaniel Krzysztof | 
+2026-10-19 | 12:10 | afternoon tournament OSP2 (WB) | Solilo Dominik | Sobel Artur | 
+2026-10-19 | 12:20 | morning tournament Poczesna | Fomin Yurij | Tobiasz Wojciech | 
+2026-10-19 | 12:25 | afternoon tournament HSC | Jadczyk Marcin | Wloczko Krzysztof | 
+2026-10-19 | 12:30 | afternoon tournament HSC2 | Kapik Krzysztof | Wisniewski Karol | 
+2026-10-19 | 12:35 | afternoon tournament OSP | Piechnik Roman | Slawinski Kacper | 
+2026-10-19 | 12:35 | afternoon tournament OSP2 (WB) | Kukawka Milosz | Krcil Frantisek | 
+2026-10-19 | 12:40 | morning tournament Poczesna | Wiciok Piotr | Polok Pawel | 
+2026-10-19 | 12:50 | afternoon tournament HSC | Kuzmicz Jakub | Grela Artur | 
+2026-10-19 | 12:55 | afternoon tournament HSC2 | Czerwinski Bartosz | Staszczyk Konrad | 
+2026-10-19 | 13:00 | afternoon tournament OSP | Przewlocki Piotr | Buczynski Witold | 
+2026-10-19 | 13:00 | afternoon tournament OSP2 (WB) | Rutkowski Mateusz | Warpas Blazej | 
+2026-10-19 | 13:05 | morning tournament Poczesna | Wichowski Grzegorz | Mecik Patryk | 
+2026-10-19 | 13:15 | afternoon tournament HSC | Kosowski Jakub | Wloczko Krzysztof | 
+2026-10-19 | 13:20 | afternoon tournament HSC2 | Poliniewicz Grzegorz | Wisniewski Karol | 
+2026-10-19 | 13:25 | afternoon tournament OSP | Schaniel Krzysztof | Slawinski Kacper | 
+2026-10-19 | 13:25 | afternoon tournament OSP2 (WB) | Sobel Artur | Krcil Frantisek | 
+2026-10-19 | 13:30 | afternoon tournament Poczesna | Tobiasz Wojciech | Polok Pawel | 
+2026-10-19 | 13:40 | afternoon tournament HSC | Wiecek Adrian | Kuzmicz Jakub | 
+2026-10-19 | 13:45 | afternoon tournament HSC2 | Kosmal Dawid | Czerwinski Bartosz | 
+2026-10-19 | 13:50 | afternoon tournament OSP | Hetnar Krzysztof | Przewlocki Piotr | 
+2026-10-19 | 13:50 | afternoon tournament OSP2 (WB) | Solilo Dominik | Rutkowski Mateusz | 
+2026-10-19 | 13:55 | afternoon tournament Poczesna | Fomin Yurij | Mecik Patryk | 
+2026-10-19 | 14:05 | afternoon tournament HSC | Jadczyk Marcin | Grela Artur | 
+2026-10-19 | 14:10 | afternoon tournament HSC2 | Kapik Krzysztof | Staszczyk Konrad | 
+2026-10-19 | 14:15 | afternoon tournament OSP | Piechnik Roman | Buczynski Witold | 
+2026-10-19 | 14:15 | afternoon tournament OSP2 (WB) | Kukawka Milosz | Warpas Blazej | 
+2026-10-19 | 14:20 | afternoon tournament Poczesna | Wiciok Piotr | Wichowski Grzegorz | 
+2026-10-19 | 14:30 | afternoon tournament HSC | Kosowski Jakub | Kuzmicz Jakub | 
+2026-10-19 | 14:35 | afternoon tournament HSC2 | Poliniewicz Grzegorz | Czerwinski Bartosz | 
+2026-10-19 | 14:40 | afternoon tournament OSP | Schaniel Krzysztof | Przewlocki Piotr | 
+2026-10-19 | 14:40 | afternoon tournament OSP2 (WB) | Sobel Artur | Rutkowski Mateusz | 
+2026-10-19 | 14:45 | afternoon tournament Poczesna | Tobiasz Wojciech | Fomin Yurij | 
+2026-10-19 | 14:55 | afternoon tournament HSC | Wiecek Adrian | Jadczyk Marcin | 
+2026-10-19 | 15:00 | afternoon tournament HSC2 | Kosmal Dawid | Kapik Krzysztof | 
+2026-10-19 | 15:05 | afternoon tournament OSP | Hetnar Krzysztof | Piechnik Roman | 
+2026-10-19 | 15:05 | afternoon tournament OSP2 (WB) | Solilo Dominik | Kukawka Milosz | 
+2026-10-19 | 15:10 | afternoon tournament Poczesna | Wichowski Grzegorz | Polok Pawel | 
+2026-10-19 | 15:20 | afternoon tournament HSC | Grela Artur | Wloczko Krzysztof | 
+2026-10-19 | 15:25 | afternoon tournament HSC2 | Staszczyk Konrad | Wisniewski Karol | 
+2026-10-19 | 15:30 | afternoon tournament OSP | Buczynski Witold | Slawinski Kacper | 
+2026-10-19 | 15:30 | afternoon tournament OSP2 (WB) | Warpas Blazej | Krcil Frantisek | 
+2026-10-19 | 15:30 | afternoon tournament Poczesna | Wiciok Piotr | Mecik Patryk | 
+2026-10-19 | 15:45 | afternoon tournament HSC | Kosowski Jakub | Jadczyk Marcin | 
+2026-10-19 | 15:50 | afternoon tournament HSC2 | Poliniewicz Grzegorz | Kapik Krzysztof | 
+2026-10-19 | 15:55 | afternoon tournament OSP | Schaniel Krzysztof | Piechnik Roman | 
+2026-10-19 | 15:55 | afternoon tournament OSP2 (WB) | Sobel Artur | Kukawka Milosz | 
+2026-10-19 | 15:55 | afternoon tournament Poczesna | Fomin Yurij | Polok Pawel | 
+2026-10-19 | 16:10 | afternoon tournament HSC | Kuzmicz Jakub | Wloczko Krzysztof | 
+2026-10-19 | 16:15 | afternoon tournament HSC2 | Czerwinski Bartosz | Wisniewski Karol | 
+2026-10-19 | 16:20 | afternoon tournament OSP | Przewlocki Piotr | Slawinski Kacper | 
+2026-10-19 | 16:20 | afternoon tournament OSP2 (WB) | Rutkowski Mateusz | Krcil Frantisek | 
+2026-10-19 | 16:20 | afternoon tournament Poczesna | Tobiasz Wojciech | Wiciok Piotr | 
+2026-10-19 | 16:35 | afternoon tournament HSC | Wiecek Adrian | Grela Artur | 
+2026-10-19 | 16:35 | afternoon tournament HSC2 | Kosmal Dawid | Staszczyk Konrad | 
+2026-10-19 | 16:40 | afternoon tournament OSP | Hetnar Krzysztof | Buczynski Witold | 
+2026-10-19 | 16:40 | afternoon tournament OSP2 (WB) | Solilo Dominik | Warpas Blazej | 
+2026-10-19 | 16:45 | afternoon tournament Poczesna | Wichowski Grzegorz | Mecik Patryk | 
+2026-10-19 | 17:00 | evening tournament HSC | Linek Adam | Stapor Rafal | 
+2026-10-19 | 17:00 | evening tournament OSP | Oracz Jacek | Krezel Andrzej | 
+2026-10-19 | 17:00 | evening tournament OSP2 (WB) | Lukaszewski Mikolaj | Glanowski Jakub | 
+2026-10-19 | 17:05 | afternoon tournament Poczesna | Fomin Yurij | Wiciok Piotr | 
+2026-10-19 | 17:10 | evening tournament Blachownia | Warzecha Miroslaw | Kubiak Artur | 
+2026-10-19 | 17:25 | evening tournament HSC | Minda Michal | Kwodawski Bartosz | 
+2026-10-19 | 17:25 | evening tournament OSP | Lewczuk Miroslaw | Frank Roman | 
+2026-10-19 | 17:25 | evening tournament OSP2 (WB) | Zwolinski Mariusz | Szoltysek Artur | 
+2026-10-19 | 17:30 | afternoon tournament Poczesna | Tobiasz Wojciech | Wichowski Grzegorz | 
+2026-10-19 | 17:35 | evening tournament Blachownia | Zmijewski Artur | Staniczek Adam | 
+2026-10-19 | 17:45 | evening tournament HSC | Rudomina Kamil | Sulkowski Bartek | 
+2026-10-19 | 17:50 | evening tournament OSP | Tkaczyk Henryk | Nocun Zbigniew | 
+2026-10-19 | 17:50 | evening tournament OSP2 (WB) | Przewlocki Jacek | Strus Piotr | 
+2026-10-19 | 17:55 | afternoon tournament Poczesna | Mecik Patryk | Polok Pawel | 
+2026-10-19 | 18:00 | evening tournament Blachownia | Gesiarz Piotr | Maszczynski Dariusz | 
+2026-10-19 | 18:05 | evening tournament HSC | Linek Adam | Minda Michal | 
+2026-10-19 | 18:15 | evening tournament OSP | Oracz Jacek | Lewczuk Miroslaw | 
+2026-10-19 | 18:15 | evening tournament OSP2 (WB) | Lukaszewski Mikolaj | Zwolinski Mariusz | 
+2026-10-19 | 18:20 | afternoon tournament Poczesna | Fomin Yurij | Wichowski Grzegorz | 
+2026-10-19 | 18:25 | evening tournament Blachownia | Warzecha Miroslaw | Zmijewski Artur | 
+2026-10-19 | 18:30 | evening tournament HSC | Sulkowski Bartek | Stapor Rafal | 
+2026-10-19 | 18:35 | evening tournament OSP | Nocun Zbigniew | Krezel Andrzej | 
+2026-10-19 | 18:35 | evening tournament OSP2 (WB) | Strus Piotr | Glanowski Jakub | 
+2026-10-19 | 18:40 | afternoon tournament Poczesna | Wiciok Piotr | Polok Pawel | 
+2026-10-19 | 18:50 | evening tournament Blachownia | Maszczynski Dariusz | Kubiak Artur | 
+2026-10-19 | 18:55 | evening tournament HSC | Rudomina Kamil | Kwodawski Bartosz | 
+2026-10-19 | 18:55 | evening tournament OSP | Tkaczyk Henryk | Frank Roman | 
+2026-10-19 | 18:55 | evening tournament OSP2 (WB) | Przewlocki Jacek | Szoltysek Artur | 
+2026-10-19 | 19:05 | afternoon tournament Poczesna | Tobiasz Wojciech | Mecik Patryk | 
+2026-10-19 | 19:10 | evening tournament Blachownia | Gesiarz Piotr | Staniczek Adam | 
+2026-10-19 | 19:20 | evening tournament HSC | Minda Michal | Stapor Rafal | 
+2026-10-19 | 19:20 | evening tournament OSP | Lewczuk Miroslaw | Krezel Andrzej | 
+2026-10-19 | 19:20 | evening tournament OSP2 (WB) | Zwolinski Mariusz | Glanowski Jakub | 
+2026-10-19 | 19:30 | evening tournament Poczesna | Oracz Lukasz | Nowak Jakub | 
+2026-10-19 | 19:35 | evening tournament Blachownia | Zmijewski Artur | Kubiak Artur | 
+2026-10-19 | 19:40 | evening tournament HSC | Linek Adam | Rudomina Kamil | 
+2026-10-19 | 19:45 | evening tournament OSP | Oracz Jacek | Tkaczyk Henryk | 
+2026-10-19 | 19:45 | evening tournament OSP2 (WB) | Lukaszewski Mikolaj | Przewlocki Jacek | 
+2026-10-19 | 19:55 | evening tournament Poczesna | Vincenec Oliver | Urban Wojciech | 
+2026-10-19 | 20:00 | evening tournament Blachownia | Warzecha Miroslaw | Gesiarz Piotr | 
+2026-10-19 | 20:05 | evening tournament HSC | Sulkowski Bartek | Kwodawski Bartosz | 
+2026-10-19 | 20:10 | evening tournament OSP | Nocun Zbigniew | Frank Roman | 
+2026-10-19 | 20:10 | evening tournament OSP2 (WB) | Strus Piotr | Szoltysek Artur | 
+2026-10-19 | 20:20 | evening tournament Poczesna | Pruszkowski Jakub | Marud Grzegorz | 
+2026-10-19 | 20:25 | evening tournament Blachownia | Maszczynski Dariusz | Staniczek Adam | 
+2026-10-19 | 20:30 | evening tournament HSC | Minda Michal | Rudomina Kamil | 
+2026-10-19 | 20:30 | evening tournament OSP | Lewczuk Miroslaw | Tkaczyk Henryk | 
+2026-10-19 | 20:30 | evening tournament OSP2 (WB) | Zwolinski Mariusz | Przewlocki Jacek | 
+2026-10-19 | 20:45 | evening tournament Blachownia | Zmijewski Artur | Gesiarz Piotr | 
+2026-10-19 | 20:45 | evening tournament Poczesna | Oracz Lukasz | Vincenec Oliver | 
+2026-10-19 | 20:50 | evening tournament HSC | Linek Adam | Sulkowski Bartek | 
+2026-10-19 | 20:55 | evening tournament OSP | Oracz Jacek | Nocun Zbigniew | 
+2026-10-19 | 20:55 | evening tournament OSP2 (WB) | Lukaszewski Mikolaj | Strus Piotr | 
+2026-10-19 | 21:10 | evening tournament Blachownia | Warzecha Miroslaw | Maszczynski Dariusz | 
+2026-10-19 | 21:10 | evening tournament Poczesna | Marud Grzegorz | Nowak Jakub | 
+2026-10-19 | 21:15 | evening tournament HSC | Kwodawski Bartosz | Stapor Rafal | 
+2026-10-19 | 21:20 | evening tournament OSP | Frank Roman | Krezel Andrzej | 
+2026-10-19 | 21:20 | evening tournament OSP2 (WB) | Szoltysek Artur | Glanowski Jakub | 
+2026-10-19 | 21:30 | evening tournament Poczesna | Pruszkowski Jakub | Urban Wojciech | 
+2026-10-19 | 21:35 | evening tournament Blachownia | Staniczek Adam | Kubiak Artur | 
+2026-10-19 | 21:40 | evening tournament HSC | Minda Michal | Sulkowski Bartek | 
+2026-10-19 | 21:40 | evening tournament OSP | Lewczuk Miroslaw | Nocun Zbigniew | 
+2026-10-19 | 21:40 | evening tournament OSP2 (WB) | Zwolinski Mariusz | Strus Piotr | 
+2026-10-19 | 21:55 | evening tournament Poczesna | Vincenec Oliver | Nowak Jakub | 
+2026-10-19 | 22:00 | evening tournament Blachownia | Zmijewski Artur | Maszczynski Dariusz | 
+2026-10-19 | 22:05 | evening tournament HSC | Rudomina Kamil | Stapor Rafal | 
+2026-10-19 | 22:05 | evening tournament OSP | Tkaczyk Henryk | Krezel Andrzej | 
+2026-10-19 | 22:05 | evening tournament OSP2 (WB) | Przewlocki Jacek | Glanowski Jakub | 
+2026-10-19 | 22:20 | evening tournament Blachownia | Gesiarz Piotr | Kubiak Artur | 
+2026-10-19 | 22:20 | evening tournament Poczesna | Oracz Lukasz | Pruszkowski Jakub | 
+2026-10-19 | 22:30 | evening tournament HSC | Linek Adam | Kwodawski Bartosz | 
+2026-10-19 | 22:30 | evening tournament OSP | Oracz Jacek | Frank Roman | 
+2026-10-19 | 22:30 | evening tournament OSP2 (WB) | Lukaszewski Mikolaj | Szoltysek Artur | 
+2026-10-19 | 22:45 | evening tournament Blachownia | Warzecha Miroslaw | Staniczek Adam | 
+2026-10-19 | 22:45 | evening tournament Poczesna | Marud Grzegorz | Urban Wojciech | 
+2026-10-19 | 23:00 | night tournament OSP | Nocun Zbigniew | Krezel Andrzej | 
+2026-10-19 | 23:00 | night tournament OSP | Stapor Rafal | Linek Adam | 
+2026-10-19 | 23:05 | evening tournament Poczesna | Vincenec Oliver | Pruszkowski Jakub | 
+2026-10-19 | 23:05 | night tournament OSP2 (WB) | Glanowski Jakub | Lukaszewski Mikolaj | 
+2026-10-19 | 23:10 | night tournament Blachownia | Machelski Michal | Kubiak Artur | 
+2026-10-19 | 23:20 | night tournament OSP | Lewczuk Miroslaw | Frank Roman | 
+2026-10-19 | 23:25 | night tournament OSP | Kwodawski Bartosz | Sulkowski Bartek | 
+2026-10-19 | 23:30 | evening tournament Poczesna | Oracz Lukasz | Marud Grzegorz | 
+2026-10-19 | 23:30 | night tournament OSP2 (WB) | Szoltysek Artur | Przewlocki Jacek | 
+2026-10-19 | 23:35 | night tournament Blachownia | Zmijewski Artur | Staniczek Adam | 
+2026-10-19 | 23:45 | night tournament OSP | Tkaczyk Henryk | Oracz Jacek | 
+2026-10-19 | 23:50 | night tournament OSP | Kwodawski Bartosz | Rudomina Kamil | 
+2026-10-19 | 23:55 | evening tournament Poczesna | Urban Wojciech | Nowak Jakub | 
+2026-10-19 | 23:55 | night tournament OSP2 (WB) | Szoltysek Artur | Zwolinski Mariusz | 
+2026-10-20 | 00:00 | night tournament Blachownia | Michalik Jerzy | Warzecha Miroslaw | 
+2026-10-20 | 00:10 | night tournament OSP | Linek Adam | Sulkowski Bartek | 
+2026-10-20 | 00:10 | night tournament OSP | Nocun Zbigniew | Lewczuk Miroslaw | 
+2026-10-20 | 00:15 | night tournament OSP2 (WB) | Lukaszewski Mikolaj | Przewlocki Jacek | 
+2026-10-20 | 00:20 | evening tournament Poczesna | Vincenec Oliver | Marud Grzegorz | 
+2026-10-20 | 00:25 | night tournament Blachownia | Machelski Michal | Zmijewski Artur | 
+2026-10-20 | 00:30 | night tournament OSP | Oracz Jacek | Krezel Andrzej | 
+2026-10-20 | 00:35 | night tournament OSP | Rudomina Kamil | Linek Adam | 
+2026-10-20 | 00:35 | night tournament OSP2 (WB) | Zwolinski Mariusz | Lukaszewski Mikolaj | 
+2026-10-20 | 00:40 | evening tournament Poczesna | Pruszkowski Jakub | Nowak Jakub | 
+2026-10-20 | 00:50 | night tournament Blachownia | Warzecha Miroslaw | Kubiak Artur | 
+2026-10-20 | 00:50 | night tournament OSP | Tkaczyk Henryk | Frank Roman | 
+2026-10-20 | 00:55 | night tournament OSP | Stapor Rafal | Sulkowski Bartek | 
+2026-10-20 | 00:55 | night tournament OSP2 (WB) | Glanowski Jakub | Przewlocki Jacek | 
+2026-10-20 | 01:05 | evening tournament Poczesna | Oracz Lukasz | Urban Wojciech | 
+2026-10-20 | 01:10 | night tournament Blachownia | Michalik Jerzy | Staniczek Adam | 
+2026-10-20 | 01:10 | night tournament OSP | Lewczuk Miroslaw | Krezel Andrzej | 
+2026-10-20 | 01:20 | night tournament OSP | Kwodawski Bartosz | Linek Adam | 
+2026-10-20 | 01:20 | night tournament OSP2 (WB) | Szoltysek Artur | Lukaszewski Mikolaj | 
+2026-10-20 | 01:30 | night tournament OSP | Nocun Zbigniew | Tkaczyk Henryk | 
+2026-10-20 | 01:35 | night tournament Blachownia | Zmijewski Artur | Kubiak Artur | 
+2026-10-20 | 01:45 | night tournament OSP | Stapor Rafal | Rudomina Kamil | 
+2026-10-20 | 01:45 | night tournament OSP2 (WB) | Glanowski Jakub | Zwolinski Mariusz | 
+2026-10-20 | 01:50 | night tournament OSP | Oracz Jacek | Frank Roman | 
+2026-10-20 | 02:00 | night tournament Blachownia | Machelski Michal | Michalik Jerzy | 
+2026-10-20 | 02:10 | night tournament OSP | Kwodawski Bartosz | Stapor Rafal | 
+2026-10-20 | 02:10 | night tournament OSP | Lewczuk Miroslaw | Tkaczyk Henryk | 
+2026-10-20 | 02:10 | night tournament OSP2 (WB) | Szoltysek Artur | Glanowski Jakub | 
+2026-10-20 | 02:25 | night tournament Blachownia | Warzecha Miroslaw | Staniczek Adam | 
+2026-10-20 | 02:30 | night tournament OSP | Nocun Zbigniew | Oracz Jacek | 
+2026-10-20 | 02:35 | night tournament OSP | Rudomina Kamil | Sulkowski Bartek | 
+2026-10-20 | 02:35 | night tournament OSP2 (WB) | Zwolinski Mariusz | Przewlocki Jacek | 
+2026-10-20 | 02:45 | night tournament Blachownia | Zmijewski Artur | Michalik Jerzy | 
+2026-10-20 | 02:50 | night tournament OSP | Frank Roman | Krezel Andrzej | 
+2026-10-20 | 03:10 | night tournament Blachownia | Machelski Michal | Warzecha Miroslaw | 
+2026-10-20 | 03:10 | night tournament OSP | Lewczuk Miroslaw | Oracz Jacek | 
+2026-10-20 | 03:30 | night tournament OSP | Tkaczyk Henryk | Krezel Andrzej | 
+2026-10-20 | 03:35 | night tournament Blachownia | Staniczek Adam | Kubiak Artur | 
+2026-10-20 | 03:50 | night tournament OSP | Nocun Zbigniew | Frank Roman | 
+2026-10-20 | 04:00 | night tournament Blachownia | Zmijewski Artur | Warzecha Miroslaw | 
+2026-10-20 | 04:20 | night tournament Blachownia | Michalik Jerzy | Kubiak Artur | 
+2026-10-20 | 04:45 | night tournament Blachownia | Machelski Michal | Staniczek Adam | 
