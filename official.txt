@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T17:32Z
+# updated 2026-10-17T17:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14068,9 +14068,11 @@
 2026-10-17 | Cioch Blazej | Lukaszewski Mikolaj | 3-2 | 2 | 3 | Pending
 2026-10-17 | Skorupa Jakub | Pawlik Cezary | 3-1 | 2 | 6 | Pending
 2026-10-17 | Morawiec Daniel | Jedrzejak Patryk | 3-0 | 10 | 10 | Pending
-2026-10-17 | Malcherek Adam | Jadach Oskar | 3-2 | 10 |  | Pending
-2026-10-17 | Woskowicz Mateusz | Sulkowski Bartek | 3-2 |  |  | 
-2026-10-17 | Szurgot Andrzej | Kocik Tomasz | 3-1 |  |  | 
-2026-10-17 | Mucha Grzegorz | Fomin Andriej | 3-1 |  |  | 
-2026-10-17 | Pyrek Dawid | Karpiuk Mateusz | 3-2 |  |  | 
-2026-10-17 | Lach Marcin | Jablonski Karol | 3-0 |  |  | 
+2026-10-17 | Malcherek Adam | Jadach Oskar | 3-2 | 10 | 10 | +11
+2026-10-17 | Woskowicz Mateusz | Sulkowski Bartek | 3-2 | 4 | 2 | Pending
+2026-10-17 | Szurgot Andrzej | Kocik Tomasz | 3-1 | 2 | 2 | Pending
+2026-10-17 | Mucha Grzegorz | Fomin Andriej | 3-1 | 5 | 2 | +14
+2026-10-17 | Pyrek Dawid | Karpiuk Mateusz | 3-2 | 2 | 2 | +10
+2026-10-17 | Lach Marcin | Jablonski Karol | 3-0 | 10 | 10 | +9
+2026-10-17 | Eliasz Adrian | Gronowski Wojciech | 3-1 | 2 | 3 | Pending
+2026-10-17 | Maszczynski Dariusz | Bladziak Krzysztof | 3-0 | 3 | 3 | Pending
