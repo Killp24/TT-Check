@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T06:42Z
+# updated 2026-10-17T07:18Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13842,6 +13842,7 @@
 2026-10-17 | Adamus Mariusz | Lojtek Tomasz | 3-1 | 1 | 1 | Pending
 2026-10-17 | Jadach Oskar | Morawiec Daniel | 3-1 | 1 | 1 | Pending
 2026-10-17 | Lach Marcin | Jedrzejak Patryk | 3-0 | 1 | 1 | Pending
+2026-10-17 | Jablonski Karol | Malcherek Adam | 3-2 | 1 | 1 | Pending
 2026-10-17 | Vincenec Oliver | Orszulik Jan | 3-2 | 2 | 1 | +9
 2026-10-17 | Woskowicz Mateusz | Makowski Kacper | 3-2 | 2 | 2 | +6
 2026-10-17 | Oracz Jacek | Krutak Michal | 3-1 | 2 | 2 | +10
@@ -13866,6 +13867,7 @@
 2026-10-17 | Ptak Wiktor | Wieczerzak Jacek | 3-1 | 2 | 2 | Pending
 2026-10-17 | Misiak Mateusz | Rolak Jaroslaw | 3-0 | 2 | 2 | Pending
 2026-10-17 | Pytlas Wojciech | Lojtek Tomasz | 3-2 | 2 | 2 | Pending
+2026-10-17 | Jedrzejak Patryk | Morawiec Daniel | 3-0 | 2 | 2 | Pending
 2026-10-17 | Vincenec Oliver | Cesarz Milosz | 3-2 | 3 | 2 | Pending
 2026-10-17 | Pawlik Cezary | Natkaniec Michal | 3-0 | 3 | 3 | +7
 2026-10-17 | Guzik Michal | Michalski Jakub | 3-0 | 3 | 2 | +13
@@ -13886,6 +13888,7 @@
 2026-10-17 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-1 | 3 | 3 | Pending
 2026-10-17 | Przewlocki Jacek | Misiak Mateusz | 3-1 | 3 | 3 | Pending
 2026-10-17 | Ptak Wiktor | Gajda Rafal | 3-0 | 3 | 3 | Pending
+2026-10-17 | Adamus Mariusz | Pytlas Wojciech | 3-1 | 3 | 3 | Pending
 2026-10-17 | Felkel Grzegorz | Stecyszyn Jakub | 3-1 | 4 | 4 | Pending
 2026-10-17 | Pawlik Cezary | Oracz Jacek | 3-2 | 4 | 3 | +8
 2026-10-17 | Natkaniec Michal | Mucha Grzegorz | 3-2 | 4 | 3 | +11
@@ -13893,10 +13896,18 @@
 2026-10-17 | Vincenec Oliver | Michalski Jakub | 3-0 | 4 | 3 | +12
 2026-10-17 | Michalski Jakub | Cesarz Milosz | 3-0 | 4 | 4 | +18
 2026-10-17 | David Petr | Kolodziej Krystian | 3-0 | 4 | 4 | Pending
-2026-10-17 | Guzik Michal | Orszulik Jan | 3-0 | 5 | 4 | Pending
+2026-10-17 | Marchlewski Marcin | Baran Sebastian | 3-2 | 4 | 4 | Pending
+2026-10-17 | Dabrowski Igor | Wasilewski Damian | 3-2 | 4 | 4 | Pending
+2026-10-17 | Piotrowski Tadeusz | Przewlocki Jacek | 3-0 | 4 | 4 | Pending
+2026-10-17 | Misiak Mateusz | Wrobel Dariusz | 3-1 | 4 | 4 | Pending
+2026-10-17 | Koczyba Mariusz | Lojtek Tomasz | 3-1 | 4 | 4 | Pending
+2026-10-17 | Ptak Wiktor | Sawicki Grzegorz | 3-0 | 4 | 6 | Pending
 2026-10-17 | Felkel Grzegorz | David Petr | 3-2 | 5 | 5 | Pending
+2026-10-17 | Guzik Michal | Orszulik Jan | 3-0 | 5 | 4 | Pending
 2026-10-17 | Vincenec Oliver | Fira Damian | 3-1 | 5 | 4 | +11
+2026-10-17 | Kolodziej Krystian | Stecyszyn Jakub | 3-2 | 5 | 5 | Pending
 2026-10-17 | Vincenec Oliver | Cesarz Milosz | 3-2 |  |  | 
+2026-10-17 | Guzik Michal | Orszulik Jan | 3-0 |  |  | 
 2026-10-17 | Wisniewski Bartlomiej | Stapor Rafal | 3-1 |  |  | 
 2026-10-17 | Lamperski Jakub | Warpas Blazej | 3-1 |  |  | 
 2026-10-17 | Sulkowski Karol | Krcil Frantisek | 3-2 |  |  | 
@@ -13923,7 +13934,6 @@
 2026-10-17 | Szlubowski Dariusz | Gronowski Wojciech | 3-2 |  |  | 
 2026-10-17 | Pawlik Cezary | Jedrzejowski Oskar | 3-0 |  |  | 
 2026-10-17 | Michalski Jakub | Fira Damian | 3-2 |  |  | 
-2026-10-17 | Guzik Michal | Orszulik Jan | 3-0 |  |  | 
 2026-10-17 | Woskowicz Mateusz | Mugowski Arkadiusz | 3-1 |  |  | 
 2026-10-17 | Lukaszewski Mikolaj | Krukar Piotr | 3-2 |  |  | 
 2026-10-17 | Krutak Michal | Mucha Grzegorz | 3-1 |  |  | 
@@ -13937,5 +13947,3 @@
 2026-10-17 | Tkaczyk Henryk | Ruszkiewicz Adam | 3-2 |  |  | 
 2026-10-17 | Krukar Piotr | Gronowski Wojciech | 3-1 |  |  | 
 2026-10-17 | Skorski Michal | Krukar Piotr | 3-1 |  |  | 
-2026-10-17 | Adamus Mariusz | Pytlas Wojciech | 3-1 |  |  | 
-2026-10-17 | Jablonski Karol | Malcherek Adam | 3-2 |  |  | 
