@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-16T23:57Z
+# updated 2026-10-17T00:01Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13804,6 +13804,11 @@
 2026-10-16 | Vincenec Oliver | Cesarz Milosz | 3-2 | 5 | 5 | +8
 2026-10-16 | Staszczyk Konrad | Maruszak Piotr | 3-0 | 9 | 7 | Pending
 2026-10-16 | Lukaszewski Mikolaj | Krukar Piotr | 3-2 | 8 | 10 | Pending
+2026-10-16 | Sawicki Grzegorz | Pelka Jerzy | 3-2 | 3 | 8 | Pending
+2026-10-16 | Szlubowski Dariusz | Skorski Michal | 3-0 | 4 | 8 | Pending
+2026-10-16 | Michalski Jakub | Orszulik Jan | 3-2 | 6 | 6 | Pending
+2026-10-16 | Krutak Michal | Mucha Grzegorz | 3-1 | 7 | 7 | Pending
+2026-10-16 | Staszczyk Konrad | Mugowski Arkadiusz | 3-0 | 10 | 2 | Pending
 2026-10-17 | Wisniewski Bartlomiej | Stapor Rafal | 3-1 |  |  | 
 2026-10-17 | Lamperski Jakub | Warpas Blazej | 3-1 |  |  | 
 2026-10-17 | Sulkowski Karol | Krcil Frantisek | 3-2 |  |  | 
@@ -13839,4 +13844,4 @@
 2026-10-17 | Staszczyk Konrad | Maruszak Piotr | 3-0 |  |  | 
 2026-10-17 | Sawicki Grzegorz | Pelka Jerzy | 3-2 |  |  | 
 2026-10-17 | Szlubowski Dariusz | Skorski Michal | 3-0 |  |  | 
-2026-10-17 | Oracz Jacek | Jedrzejowski Oskar | 3-0 |  |  | 
+2026-10-17 | Oracz Jacek | Jedrzejowski Oskar | 3-0 | 1 | 1 | Pending
