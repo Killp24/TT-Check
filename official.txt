@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T12:39Z
+# updated 2026-10-17T13:15Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13947,8 +13947,9 @@
 2026-10-17 | Gajda Rafal | Wieczerzak Jacek | 3-0 | 6 | 6 | Pending
 2026-10-17 | Jesiek Jakub | Ptak Wiktor | 3-1 | 6 | 6 | Pending
 2026-10-17 | Dabrowski Igor | Przewlocki Jacek | 3-1 | 6 | 6 | Pending
-2026-10-17 | Jadach Oskar | Jablonski Karol | 3-1 | 6 | 6 | Pending
-2026-10-17 | Jedrzejak Patryk | Lach Marcin | 3-1 | 6 | 6 | Pending
+2026-10-17 | Jadach Oskar | Jablonski Karol | 3-1 | 6 | 6 | +8
+2026-10-17 | Jedrzejak Patryk | Lach Marcin | 3-1 | 6 | 6 | +13
+2026-10-17 | Malcherek Adam | Morawiec Daniel | 3-2 | 6 | 6 | +8
 2026-10-17 | Felkel Grzegorz | Stecyszyn Jakub | 3-1 | 7 | 7 | +9
 2026-10-17 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-1 | 7 | 7 | Pending
 2026-10-17 | Kolodziej Krystian | David Petr | 3-1 | 7 | 7 | +15
@@ -13959,6 +13960,7 @@
 2026-10-17 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-1 | 7 | 7 | Pending
 2026-10-17 | Wieczerzak Jacek | Ptak Wiktor | 3-0 | 7 | 7 | Pending
 2026-10-17 | Misiak Mateusz | Przewlocki Jacek | 3-1 | 7 | 7 | Pending
+2026-10-17 | Jedrzejak Patryk | Jablonski Karol | 3-1 | 7 | 7 | +7
 2026-10-17 | Felkel Grzegorz | David Petr | 3-2 | 8 | 8 | Pending
 2026-10-17 | Wasilewski Damian | Mleczko Bartlomiej | 3-2 | 8 | 8 | Pending
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1 | 8 | 8 | Pending
@@ -13973,6 +13975,9 @@
 2026-10-17 | Piechnik Roman | Ptak Wiktor | 3-0 | 8 | 8 | Pending
 2026-10-17 | David Petr | Stecyszyn Jakub | 3-1 | 9 | 9 | +11
 2026-10-17 | Kolodziej Krystian | Felkel Grzegorz | 3-0 | 9 | 9 | +22
+2026-10-17 | Baran Sebastian | Mleczko Bartlomiej | 3-2 | 9 | 9 | Pending
+2026-10-17 | Przewlocki Jacek | Rolak Jaroslaw | 3-2 | 9 | 9 | Pending
+2026-10-17 | Gajda Rafal | Ptak Wiktor | 3-1 | 9 | 9 | Pending
 2026-10-17 | David Petr | Kolodziej Krystian | 3-2 | 10 | 10 | +7
 2026-10-17 | Felkel Grzegorz | Stecyszyn Jakub | 3-0 | 10 | 10 | +13
 2026-10-17 | Stecyszyn Jakub | Kolodziej Krystian | 3-0 | 11 | 11 | +15
