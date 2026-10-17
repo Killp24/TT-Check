@@ -36,7 +36,7 @@ Chodorski Piotr | 1660 | 1130
 Chojnacki Pawel | 321 | 523
 Chrzescian Radoslaw | 591 | 721
 Cichocki Aleksander | 145 | 93
-Cioch Blazej | 606 | 711
+Cioch Blazej | 607 | 711
 Cyndera Jakub | 346 | 284
 Cyrnek Piotr | 741 | 610
 Czernik Mateusz | 599 | 1063
@@ -54,13 +54,13 @@ Durak Kamil | 99 | 51
 Durda Michal | 222 | 83
 Dytko Dawid | 277 | 228
 Dzida Karol | 54 | 107
-Eliasz Adrian | 1874 | 2337
+Eliasz Adrian | 1875 | 2337
 Fabis Adrian | 1993 | 1798
 Felkel Grzegorz | 2769 | 1720
 Filbrandt Tomasz | 2453 | 1916
-Fira Damian | 475 | 753
+Fira Damian | 475 | 754
 Folwarski Jakub | 694 | 321
-Fomin Andriej | 634 | 451
+Fomin Andriej | 635 | 451
 Fomin Yurij | 613 | 772
 Frank Roman | 6 | 14
 Gabrys Dariusz | 0 | 30
@@ -69,7 +69,7 @@ Gajda Rafal | 476 | 448
 Gamrot Patryk | 330 | 330
 Gasiorski Pawel | 738 | 182
 Gawlas Michal | 131 | 174
-Gesiarz Piotr | 192 | 207
+Gesiarz Piotr | 192 | 208
 Glanowski Jakub | 2106 | 2251
 Glanowski Waldemar | 1005 | 742
 Glazowski Kacper | 800 | 858
@@ -82,7 +82,7 @@ Gorski Przemyslaw | 35 | 275
 Grela Artur | 1498 | 1538
 Grela Pawel | 367 | 582
 Gromek Artur | 64 | 111
-Gronowski Wojciech | 505 | 659
+Gronowski Wojciech | 507 | 659
 Gudzik Krystian | 66 | 62
 Guminski Krzysztof | 516 | 573
 Gumulinski Piotr | 2127 | 1783
@@ -171,11 +171,11 @@ Lilien Aleksander | 2740 | 2320
 Linek Adam | 2182 | 2434
 Lis Daniel | 594 | 391
 Lojtek Tomasz | 602 | 1242
-Lukaszewski Mikolaj | 1125 | 1384
+Lukaszewski Mikolaj | 1125 | 1386
 Machelski Michal | 523 | 879
 Madej Boguslaw | 216 | 355
 Makajew Maciej | 958 | 924
-Makowski Kacper | 419 | 579
+Makowski Kacper | 419 | 580
 Malachowski Michal | 753 | 863
 Malcher Krzysztof | 49 | 88
 Malcherek Adam | 4 | 6
@@ -187,7 +187,7 @@ Marcinowski Krzysztof | 630 | 875
 Marek David | 214 | 206
 Martinko Tomas | 76 | 108
 Marud Grzegorz | 1154 | 1370
-Maruszak Piotr | 1007 | 1092
+Maruszak Piotr | 1007 | 1094
 Maslowski Jakub | 525 | 686
 Maszczynski Dariusz | 114 | 404
 Mecik Patryk | 1132 | 1180
@@ -257,7 +257,7 @@ Przewlocki Jacek | 914 | 1182
 Przewlocki Piotr | 733 | 917
 Ptak Wiktor | 94 | 82
 Pyda Lukasz | 130 | 466
-Pyrek Dawid | 494 | 658
+Pyrek Dawid | 494 | 659
 Pytlas Wojciech | 503 | 492
 Radlo Szymon | 3129 | 2925
 Rolak Jaroslaw | 2430 | 2547
@@ -273,7 +273,7 @@ Sawicki Grzegorz | 748 | 1101
 Schaniel Krzysztof | 2076 | 2214
 Scigany Dariusz | 1155 | 500
 Seroka Szymon | 2079 | 1485
-Sikon Mateusz | 219 | 308
+Sikon Mateusz | 220 | 308
 Sikora Filip | 119 | 64
 Sikora Mariusz | 139 | 91
 Sinicki Maciej | 1059 | 1227
@@ -312,7 +312,7 @@ Strowski Karol | 1582 | 1035
 Strus Piotr | 1129 | 1685
 Suchecki Waclaw | 327 | 529
 Sulkowski Bartek | 650 | 793
-Sulkowski Karol | 689 | 702
+Sulkowski Karol | 689 | 703
 Swider Dariusz | 21 | 19
 Szafranek Piotr | 377 | 345
 Szczepanek Blazej | 846 | 1067
@@ -320,11 +320,11 @@ Szczepanski Mateusz | 329 | 368
 Szlubowski Dariusz | 448 | 255
 Szoltysek Artur | 559 | 702
 Szostok Sebastian | 1829 | 1247
-Szurgot Andrzej | 46 | 127
+Szurgot Andrzej | 47 | 127
 Szurlej Kacper | 228 | 202
 Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
-Szymanski Igor | 130 | 402
+Szymanski Igor | 131 | 402
 Szymik Robert | 1190 | 765
 Tkaczyk Henryk | 1174 | 602
 Tkocz Marek | 967 | 543
@@ -363,7 +363,7 @@ Wojtaszczyk Wojciech | 611 | 312
 Wolny Michal | 573 | 733
 Wos Alan | 316 | 445
 Woskowicz Marcin | 19 | 28
-Woskowicz Mateusz | 152 | 125
+Woskowicz Mateusz | 154 | 125
 Wozniak Jakub | 1333 | 1750
 Wozniczka Marcin | 241 | 183
 Wrobel Dariusz | 918 | 935
