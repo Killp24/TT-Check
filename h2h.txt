@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-17T17:35Z
+# updated 2026-10-17T18:05Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-17T17:35Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -13911,7 +13911,7 @@
 2026-07-23 | Felkel Grzegorz | Klos Patrik | 3-1
 2026-07-23 | Felkel Grzegorz | Klos Patrik | 3-2
 2026-08-19 | Klos Patrik | Felkel Grzegorz | 3-0
-# pair | Felkel Grzegorz | Kolodziej Krystian | 2026-10-17T00:03Z
+# pair | Felkel Grzegorz | Kolodziej Krystian | 2026-10-17T18:05Z
 2023-08-20 | Kolodziej Krystian | Felkel Grzegorz | 3-1
 2023-10-03 | Felkel Grzegorz | Kolodziej Krystian | 3-0
 2023-10-30 | Felkel Grzegorz | Kolodziej Krystian | 3-0
@@ -13984,6 +13984,10 @@
 2026-10-05 | Felkel Grzegorz | Kolodziej Krystian | 3-1
 2026-10-15 | Felkel Grzegorz | Kolodziej Krystian | 3-2
 2026-10-16 | Kolodziej Krystian | Felkel Grzegorz | 3-1
+2026-10-17 | Felkel Grzegorz | Kolodziej Krystian | 3-0
+2026-10-17 | Felkel Grzegorz | Kolodziej Krystian | 3-1
+2026-10-17 | Kolodziej Krystian | Felkel Grzegorz | 3-0
+2026-10-17 | Kolodziej Krystian | Felkel Grzegorz | 3-1
 # pair | Felkel Grzegorz | Kuzmicz Jakub | 2026-10-17T00:03Z
 2026-04-06 | Kuzmicz Jakub | Felkel Grzegorz | 3-0
 2026-09-16 | Kuzmicz Jakub | Felkel Grzegorz | 3-1
@@ -22289,7 +22293,7 @@
 2026-09-07 | Kolasa Szymon | Jadczyk Marcin | 3-1
 2026-09-23 | Kolasa Szymon | Jadczyk Marcin | 3-2
 2026-10-11 | Kolasa Szymon | Jadczyk Marcin | 3-2
-# pair | Jadczyk Marcin | Kolodziej Krystian | 2026-10-17T00:03Z
+# pair | Jadczyk Marcin | Kolodziej Krystian | 2026-10-17T18:05Z
 2023-01-27 | Jadczyk Marcin | Kolodziej Krystian | 3-1
 2023-09-19 | Jadczyk Marcin | Kolodziej Krystian | 3-1
 2023-10-03 | Kolodziej Krystian | Jadczyk Marcin | 3-1
@@ -29157,7 +29161,7 @@
 # pair | Koczyba Mariusz | Polok Pawel | 2026-10-14T15:54Z
 2026-09-17 | Polok Pawel | Koczyba Mariusz | 3-0
 2026-10-03 | Koczyba Mariusz | Polok Pawel | 3-1
-# pair | Koczyba Mariusz | Pytlas Wojciech | 2026-10-17T00:03Z
+# pair | Koczyba Mariusz | Pytlas Wojciech | 2026-10-17T18:05Z
 2025-06-18 | Koczyba Mariusz | Pytlas Wojciech | 3-1
 2025-06-26 | Pytlas Wojciech | Koczyba Mariusz | 3-1
 2025-07-02 | Koczyba Mariusz | Pytlas Wojciech | 3-1
@@ -29250,6 +29254,7 @@
 2026-10-10 | Pytlas Wojciech | Koczyba Mariusz | 3-2
 2026-10-14 | Pytlas Wojciech | Koczyba Mariusz | 3-0
 2026-10-15 | Koczyba Mariusz | Pytlas Wojciech | 3-1
+2026-10-17 | Koczyba Mariusz | Pytlas Wojciech | 3-1
 # pair | Koczyba Mariusz | Ruszkiewicz Adam | 2026-10-17T00:03Z
 2025-06-30 | Koczyba Mariusz | Ruszkiewicz Adam | 3-1
 2025-06-30 | Koczyba Mariusz | Ruszkiewicz Adam | 3-1
@@ -29758,7 +29763,7 @@
 2026-05-02 | Kolek Maciej | Maruszak Piotr | 3-2
 2026-09-13 | Maruszak Piotr | Kolek Maciej | 3-2
 2026-09-18 | Kolek Maciej | Maruszak Piotr | 3-1
-# pair | Kolek Maciej | Minda Michal | 2026-10-17T00:03Z
+# pair | Kolek Maciej | Minda Michal | 2026-10-17T18:05Z
 2025-12-29 | Minda Michal | Kolek Maciej | 3-2
 2025-12-30 | Kolek Maciej | Minda Michal | 3-1
 2025-12-31 | Minda Michal | Kolek Maciej | 3-1
