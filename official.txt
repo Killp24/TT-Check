@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T12:00Z
+# updated 2026-10-17T12:05Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13999,7 +13999,7 @@
 2026-10-17 | Kukawka Milosz | Wasilewski Damian | 3-1 | 7 | 7 | Pending
 2026-10-17 | Dabrowski Igor | Poloszczanski Dawid | 3-0 | 7 | 7 | Pending
 2026-10-17 | Jedrzejak Patryk | Jablonski Karol | 3-2 | 5 | 5 | Pending
-2026-10-17 | Stecyszyn Jakub | Kolodziej Krystian | 3-0 |  |  | 
+2026-10-17 | Stecyszyn Jakub | Kolodziej Krystian | 3-0 | 11 | 11 | Pending
 2026-10-17 | David Petr | Felkel Grzegorz | 3-1 | 11 | 11 | Pending
 2026-10-17 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-1 | 7 | 7 | Pending
 2026-10-17 | Wieczerzak Jacek | Ptak Wiktor | 3-0 | 7 | 7 | Pending
@@ -14008,6 +14008,7 @@
 2026-10-17 | Lach Marcin | Morawiec Daniel | 3-2 | 5 | 5 | +4
 2026-10-17 | Misiak Mateusz | Przewlocki Jacek | 3-1 | 7 | 7 | Pending
 2026-10-17 | David Petr | Stecyszyn Jakub | 3-1 |  |  | 
-2026-10-17 | Wojtaszczyk Wojciech | Gajda Rafal | 3-2 |  |  | 
-2026-10-17 | Wasilewski Damian | Mleczko Bartlomiej | 3-2 |  |  | 
-2026-10-17 | Jadach Oskar | Jablonski Karol | 3-1 |  |  | 
+2026-10-17 | Wojtaszczyk Wojciech | Gajda Rafal | 3-2 | 8 | 8 | Pending
+2026-10-17 | Wasilewski Damian | Mleczko Bartlomiej | 3-2 | 8 | 8 | Pending
+2026-10-17 | Jadach Oskar | Jablonski Karol | 3-1 | 6 | 6 | Pending
+2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1 | 8 | 8 | Pending
