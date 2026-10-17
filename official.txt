@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T22:58Z
+# updated 2026-10-17T23:02Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14129,18 +14129,21 @@
 2026-10-17 | Fomin Andriej | Mucha Grzegorz | 3-2 | 6 | 9 | Pending
 2026-10-17 | Skorupa Jakub | Karpiuk Mateusz | 3-2 | 6 | 6 | Pending
 2026-10-17 | Badura Jaroslaw | Szymanski Igor | 3-1 | 4 | 4 | Pending
-2026-10-17 | Sulkowski Bartek | Mugowski Arkadiusz | 3-1 |  |  | 
-2026-10-17 | Linek Adam | Maruszak Piotr | 3-1 |  |  | 
-2026-10-17 | Kolek Maciej | Woskowicz Mateusz | 3-2 |  |  | 
+2026-10-17 | Sulkowski Bartek | Mugowski Arkadiusz | 3-1 | 6 | 8 | Pending
+2026-10-17 | Linek Adam | Maruszak Piotr | 3-1 | 6 | 7 | Pending
+2026-10-17 | Kolek Maciej | Woskowicz Mateusz | 3-2 | 1 | 8 | Pending
 2026-10-17 | Kocik Tomasz | Gesiarz Piotr | 3-2 | 6 | 6 | Pending
 2026-10-17 | Lukaszewski Mikolaj | Gronowski Wojciech | 3-0 | 7 | 7 | Pending
 2026-10-17 | Durda Michal | Sikon Mateusz | 3-2 | 4 | 4 | +4
 2026-10-17 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 | 7 | 7 | Pending
+2026-10-17 | Gesiarz Piotr | Bladziak Krzysztof | 3-0 | 7 | 7 | Pending
+2026-10-17 | Badura Jaroslaw | Szymik Robert | 3-2 | 5 | 5 | +7
+2026-10-17 | Maruszak Piotr | Sulkowski Bartek | 3-1 | 8 | 7 | Pending
 2026-10-18 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 |  |  | 
-2026-10-18 | Makowski Kacper | Eliasz Adrian | 3-1 |  |  | 
+2026-10-18 | Makowski Kacper | Eliasz Adrian | 3-1 | 1 | 1 | Pending
 2026-10-18 | Pawlik Cezary | Pyrek Dawid | 3-1 | 1 | 1 | +4
 2026-10-18 | Maruszak Piotr | Sulkowski Bartek | 3-1 |  |  | 
 2026-10-18 | Gesiarz Piotr | Bladziak Krzysztof | 3-0 |  |  | 
-2026-10-18 | Gronowski Wojciech | Sulkowski Karol | 3-0 |  |  | 
-2026-10-18 | Mucha Grzegorz | Skorupa Jakub | 3-1 |  |  | 
+2026-10-18 | Gronowski Wojciech | Sulkowski Karol | 3-0 | 1 | 1 | Pending
+2026-10-18 | Mucha Grzegorz | Skorupa Jakub | 3-1 | 1 | 1 | Pending
 2026-10-18 | Badura Jaroslaw | Szymik Robert | 3-2 |  |  | 
