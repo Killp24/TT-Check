@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.
-# updated 2026-10-18T19:13Z
+# updated 2026-10-18T21:09Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-18T11:36Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -1319,7 +1319,7 @@
 2026-10-07 | Niemiec Rafal | Adamus Kacper | 3-2
 2026-10-13 | Niemiec Rafal | Adamus Kacper | 3-0
 2026-10-13 | Niemiec Rafal | Adamus Kacper | 3-2
-# pair | Adamus Kacper | Nowak Jakub | 2026-10-18T02:39Z
+# pair | Adamus Kacper | Nowak Jakub | 2026-10-18T21:09Z
 2025-06-18 | Adamus Kacper | Nowak Jakub | 3-1
 2025-06-19 | Nowak Jakub | Adamus Kacper | 3-0
 2025-06-20 | Adamus Kacper | Nowak Jakub | 3-2
@@ -1363,6 +1363,7 @@
 2026-09-08 | Adamus Kacper | Nowak Jakub | 3-2
 2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2
 2026-10-15 | Nowak Jakub | Adamus Kacper | 3-2
+2026-10-18 | Adamus Kacper | Nowak Jakub | 3-1
 # pair | Adamus Kacper | Oracz Lukasz | 2026-10-18T11:36Z
 2023-11-12 | Adamus Kacper | Oracz Lukasz | 3-1
 2023-11-12 | Adamus Kacper | Oracz Lukasz | 3-1
@@ -41823,7 +41824,7 @@
 2025-08-14 | Marcinowski Krzysztof | Wozniak Jakub | 3-2
 2026-06-13 | Marcinowski Krzysztof | Wozniak Jakub | 3-1
 2026-06-13 | Marcinowski Krzysztof | Wozniak Jakub | 3-1
-# pair | Marud Grzegorz | Nowak Jakub | 2026-10-18T02:39Z
+# pair | Marud Grzegorz | Nowak Jakub | 2026-10-18T21:09Z
 2024-11-11 | Marud Grzegorz | Nowak Jakub | 3-1
 2024-11-11 | Nowak Jakub | Marud Grzegorz | 3-1
 2025-01-26 | Marud Grzegorz | Nowak Jakub | 3-1
@@ -41941,6 +41942,7 @@
 2026-10-12 | Marud Grzegorz | Nowak Jakub | 3-2
 2026-10-13 | Marud Grzegorz | Nowak Jakub | 3-1
 2026-10-14 | Nowak Jakub | Marud Grzegorz | 3-2
+2026-10-18 | Nowak Jakub | Marud Grzegorz | 3-0
 # pair | Marud Grzegorz | Oracz Lukasz | 2026-10-18T12:05Z
 2024-07-29 | Marud Grzegorz | Oracz Lukasz | 3-1
 2026-02-10 | Marud Grzegorz | Oracz Lukasz | 3-1
@@ -48975,7 +48977,7 @@
 2026-07-26 | Nosiadek Jakub | Wisniewski Bartlomiej | 3-1
 2026-08-08 | Wisniewski Bartlomiej | Nosiadek Jakub | 3-0
 2026-08-24 | Nosiadek Jakub | Wisniewski Bartlomiej | 3-1
-# pair | Nowak Jakub | Oracz Lukasz | 2026-10-18T02:39Z
+# pair | Nowak Jakub | Oracz Lukasz | 2026-10-18T21:09Z
 2024-11-08 | Nowak Jakub | Oracz Lukasz | 3-1
 2024-11-08 | Oracz Lukasz | Nowak Jakub | 3-1
 2024-11-10 | Nowak Jakub | Oracz Lukasz | 3-1
@@ -49021,7 +49023,8 @@
 2026-10-02 | Oracz Lukasz | Nowak Jakub | 3-0
 2026-10-03 | Oracz Lukasz | Nowak Jakub | 3-0
 2026-10-12 | Nowak Jakub | Oracz Lukasz | 3-0
-# pair | Nowak Jakub | Pruszkowski Jakub | 2026-10-18T02:39Z
+2026-10-18 | Nowak Jakub | Oracz Lukasz | 3-2
+# pair | Nowak Jakub | Pruszkowski Jakub | 2026-10-18T21:09Z
 2023-11-01 | Nowak Jakub | Pruszkowski Jakub | 3-2
 2023-12-29 | Pruszkowski Jakub | Nowak Jakub | 3-1
 2023-12-29 | Pruszkowski Jakub | Nowak Jakub | 3-2
@@ -49431,7 +49434,7 @@
 2026-09-20 | Nowak Jakub | Szostok Sebastian | 3-1
 2026-09-21 | Szostok Sebastian | Nowak Jakub | 3-0
 2026-10-13 | Nowak Jakub | Szostok Sebastian | 3-2
-# pair | Nowak Jakub | Urban Wojciech | 2026-10-18T02:39Z
+# pair | Nowak Jakub | Urban Wojciech | 2026-10-18T21:09Z
 2025-09-18 | Urban Wojciech | Nowak Jakub | 3-0
 2025-09-18 | Urban Wojciech | Nowak Jakub | 3-2
 2025-10-07 | Urban Wojciech | Nowak Jakub | 3-2
