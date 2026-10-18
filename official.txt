@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-17T23:57Z
+# updated 2026-10-17T23:59Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14142,6 +14142,9 @@
 2026-10-17 | Szurgot Andrzej | Kocik Tomasz | 3-1 | 7 | 7 | Pending
 2026-10-17 | Durda Michal | Fira Damian | 3-0 | 5 | 9 | +8
 2026-10-17 | Woskowicz Mateusz | Mugowski Arkadiusz | 3-2 | 9 | 9 | +5
+2026-10-17 | Szymanski Igor | Sikon Mateusz | 3-0 | 5 | 5 | +19
+2026-10-17 | Kocik Tomasz | Malcher Krzysztof | 3-0 | 8 | 8 | Pending
+2026-10-17 | Maszczynski Dariusz | Bladziak Krzysztof | 3-2 | 8 | 8 | Pending
 2026-10-18 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 |  |  | 
 2026-10-18 | Makowski Kacper | Eliasz Adrian | 3-1 | 1 | 1 | Pending
 2026-10-18 | Pawlik Cezary | Pyrek Dawid | 3-1 | 1 | 1 | +4
@@ -14161,5 +14164,6 @@
 2026-10-18 | Mugowski Arkadiusz | Maruszak Piotr | 3-1 |  |  | 
 2026-10-18 | Maszczynski Dariusz | Bladziak Krzysztof | 3-2 |  |  | 
 2026-10-18 | Kocik Tomasz | Malcher Krzysztof | 3-0 |  |  | 
-2026-10-18 | Skorupa Jakub | Fomin Andriej | 3-1 |  |  | 
+2026-10-18 | Skorupa Jakub | Fomin Andriej | 3-1 | 2 | 2 | Pending
 2026-10-18 | Szymanski Igor | Sikon Mateusz | 3-0 |  |  | 
+2026-10-18 | Sulkowski Karol | Makowski Kacper | 3-2 | 2 | 2 | Pending
