@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T09:04Z
+# updated 2026-10-18T09:08Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14284,18 +14284,19 @@
 2026-10-18 | Gajda Rafal | Wojtaszczyk Wojciech | 3-1 | 2 | 2 | Pending
 2026-10-18 | Poloszczanski Dawid | Trela Mateusz | 3-2 | 5 | 5 | Pending
 2026-10-18 | Kosowski Jakub | Braun Josef | 3-0 | 7 | 7 | Pending
-2026-10-18 | Jadczyk Marcin | Kolodziej Krystian | 3-2 |  |  | 
+2026-10-18 | Jadczyk Marcin | Kolodziej Krystian | 3-2 | 7 | 7 | Pending
 2026-10-18 | Lach Marcin | Szostok Sebastian | 3-1 | 5 | 5 | Pending
 2026-10-18 | Pelka Jerzy | Wieczerzak Jacek | 3-0 | 5 | 5 | Pending
 2026-10-18 | Wos Alan | Kufel Karol | 3-2 | 5 | 5 | Pending
-2026-10-18 | Solilo Dominik | Kukawka Milosz | 3-0 |  |  | 
+2026-10-18 | Solilo Dominik | Kukawka Milosz | 3-0 | 5 | 5 | Pending
 2026-10-18 | Wisniewski Bartlomiej | Piotrowski Tadeusz | 3-1 | 5 | 5 | Pending
 2026-10-18 | Urban Wojciech | Adamus Mariusz | 3-2 |  |  | 
 2026-10-18 | Jadach Oskar | Jedrzejak Patryk | 3-2 | 3 | 3 | +8
 2026-10-18 | Gajda Rafal | Buczynski Witold | 3-0 | 3 | 3 | Pending
 2026-10-18 | Tkaczyk Henryk | Adamus Mariusz | 3-2 | 5 | 5 | Pending
-2026-10-18 | Kosowski Jakub | Kolodziej Krystian | 3-0 |  |  | 
-2026-10-18 | Ptak Wiktor | Piechnik Roman | 3-0 |  |  | 
-2026-10-18 | Sinicki Maciej | Staniszewski Piotr | 3-0 |  |  | 
-2026-10-18 | Pytlas Wojciech | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-18 | Adach Rafal | Jesiek Jakub | 3-0 |  |  | 
+2026-10-18 | Kosowski Jakub | Kolodziej Krystian | 3-0 | 8 | 8 | Pending
+2026-10-18 | Ptak Wiktor | Piechnik Roman | 3-0 | 5 | 5 | +15
+2026-10-18 | Sinicki Maciej | Staniszewski Piotr | 3-0 | 5 | 5 | +20
+2026-10-18 | Pytlas Wojciech | Tkaczyk Henryk | 3-2 | 5 | 6 | +8
+2026-10-18 | Adach Rafal | Jesiek Jakub | 3-0 | 5 | 5 | +21
+2026-10-18 | Michalski Jakub | Wojtaszczyk Wojciech | 3-0 | 3 |  | +25
