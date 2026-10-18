@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T22:01Z
+# updated 2026-10-18T22:07Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14452,9 +14452,11 @@
 2026-10-18 | Szurgot Andrzej | Nocun Zbigniew | 3-2 | 8 | 6 | Pending
 2026-10-18 | Skorski Michal | Sulkowski Karol | 3-0 | 6 | 10 | Pending
 2026-10-18 | Urban Wojciech | Marud Grzegorz | 3-1 | 7 | 3 | Pending
-2026-10-18 | Pruszkowski Jakub | Adamus Kacper | 3-1 |  |  | 
-2026-10-18 | Pietraszko Lukasz | Glanowski Jakub | 3-0 |  |  | 
-2026-10-18 | Kwiatkowski Kacper | Mucha Grzegorz | 3-2 |  |  | 
-2026-10-18 | Oracz Jacek | Zelezik Jacek | 3-0 |  |  | 
-2026-10-18 | Myszewski Adrian | Lukaszewski Mikolaj | 3-1 |  |  | 
-2026-10-18 | Oracz Lukasz | Marud Grzegorz | 3-1 |  |  | 
+2026-10-18 | Pruszkowski Jakub | Adamus Kacper | 3-1 | 4 | 4 | Pending
+2026-10-18 | Pietraszko Lukasz | Glanowski Jakub | 3-0 | 6 | 1 | Pending
+2026-10-18 | Kwiatkowski Kacper | Mucha Grzegorz | 3-2 | 6 | 10 | Pending
+2026-10-18 | Oracz Jacek | Zelezik Jacek | 3-0 | 6 | 6 | Pending
+2026-10-18 | Myszewski Adrian | Lukaszewski Mikolaj | 3-1 | 6 | 10 | Pending
+2026-10-18 | Oracz Lukasz | Marud Grzegorz | 3-1 | 4 | 4 | Pending
+2026-10-18 | Adamus Pawel | Sawicki Grzegorz | 3-1 | 6 | 6 | +8
+2026-10-18 | Guzik Michal | Jozefiak Michal | 3-0 | 7 | 5 | +11
