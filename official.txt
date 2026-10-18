@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T23:01Z
+# updated 2026-10-18T23:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14461,15 +14461,18 @@
 2026-10-18 | Adamus Pawel | Sawicki Grzegorz | 3-1 | 6 | 6 | +8
 2026-10-18 | Guzik Michal | Jozefiak Michal | 3-0 | 7 | 5 | +11
 2026-10-18 | Kolek Maciej | Rudomina Kamil | 3-0 | 9 | 1 | Pending
-2026-10-18 | Kotwica Dawid | Myszewski Adrian | 3-0 |  |  | 
+2026-10-18 | Kotwica Dawid | Myszewski Adrian | 3-0 | 6 | 7 | Pending
 2026-10-18 | Nowak Jakub | Urban Wojciech | 3-2 | 4 | 8 | Pending
 2026-10-18 | Vincenec Oliver | Sikon Mateusz | 3-1 | 6 | 10 | +9
 2026-10-18 | Nocun Zbigniew | Mucha Grzegorz | 3-1 | 7 | 11 | Pending
+2026-10-18 | Oracz Jacek | Szurgot Andrzej | 3-2 | 7 | 9 | Pending
+2026-10-18 | Sawicki Grzegorz | Jozefiak Michal | 3-1 | 7 | 6 | +14
+2026-10-18 | Linek Adam | Glanowski Jakub | 3-0 | 10 | 2 | Pending
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
 2026-10-19 | Nocun Zbigniew | Mucha Grzegorz | 3-1 |  |  | 
 2026-10-19 | Oracz Jacek | Szurgot Andrzej | 3-2 |  |  | 
-2026-10-19 | Lukaszewski Mikolaj | Skorski Michal | 3-2 |  |  | 
-2026-10-19 | Kotwica Dawid | Skorski Michal | 3-2 |  |  | 
+2026-10-19 | Lukaszewski Mikolaj | Skorski Michal | 3-2 | 1 | 1 | Pending
+2026-10-19 | Kotwica Dawid | Skorski Michal | 3-2 | 1 | 2 | Pending
 2026-10-19 | Sawicki Grzegorz | Jozefiak Michal | 3-1 |  |  | 
 2026-10-19 | Marud Grzegorz | Adamus Kacper | 3-2 |  |  | 
