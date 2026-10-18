@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T08:04Z
+# updated 2026-10-18T08:07Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13464,7 +13464,7 @@
 2026-10-15 | Ruszkiewicz Adam | Koczyba Mariusz | 3-2 |  |  | 
 2026-10-15 | Staniczek Adam | Stechly Witold | 3-2 |  |  | 
 2026-10-15 | Warzecha Miroslaw | Zielinski Marcin | 3-2 |  |  | 
-2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 |  |  | 
+2026-10-15 | Nowak Jakub | Glanowski Waldemar | 3-1 | 11 | 10 | +11
 2026-10-15 | Michalik Jerzy | Wolny Michal | 3-1 |  |  | 
 2026-10-15 | Zelezik Jacek | Staniczek Adam | 3-0 |  |  | 
 2026-10-15 | Molenda Dariusz | Krezel Andrzej | 3-2 |  |  | 
@@ -14271,14 +14271,15 @@
 2026-10-18 | Szymanski Igor | Sikon Mateusz | 3-0 |  |  | 
 2026-10-18 | Szymik Robert | Sikon Mateusz | 3-0 |  |  | 
 2026-10-18 | Szurgot Andrzej | Gesiarz Piotr | 3-1 |  |  | 
-2026-10-18 | Kosowski Jakub | Jadczyk Marcin | 3-2 |  |  | 
-2026-10-18 | Ptak Wiktor | Wieczerzak Jacek | 3-0 |  |  | 
-2026-10-18 | Wos Alan | Marchlewski Marcin | 3-2 |  |  | 
-2026-10-18 | Staniszewski Piotr | Trela Mateusz | 3-2 |  |  | 
-2026-10-18 | Adach Rafal | Urban Wojciech | 3-1 |  |  | 
-2026-10-18 | Braun Josef | Kolodziej Krystian | 3-2 |  |  | 
-2026-10-18 | Kesik Gracjan | Kukawka Milosz | 3-0 |  |  | 
-2026-10-18 | Piotrowski Tadeusz | Sinicki Maciej | 3-2 |  |  | 
-2026-10-18 | Tkaczyk Henryk | Jesiek Jakub | 3-1 |  |  | 
-2026-10-18 | Jadach Oskar | Michalski Jakub | 3-2 |  |  | 
-2026-10-18 | Gajda Rafal | Wojtaszczyk Wojciech | 3-1 |  |  | 
+2026-10-18 | Kosowski Jakub | Jadczyk Marcin | 3-2 | 6 | 6 | +6
+2026-10-18 | Ptak Wiktor | Wieczerzak Jacek | 3-0 | 4 | 4 | +21
+2026-10-18 | Wos Alan | Marchlewski Marcin | 3-2 | 4 | 4 | Pending
+2026-10-18 | Staniszewski Piotr | Trela Mateusz | 3-2 | 4 | 4 | Pending
+2026-10-18 | Adach Rafal | Urban Wojciech | 3-1 | 4 | 4 | Pending
+2026-10-18 | Braun Josef | Kolodziej Krystian | 3-2 | 6 | 6 | +8
+2026-10-18 | Kesik Gracjan | Kukawka Milosz | 3-0 | 4 | 4 | Pending
+2026-10-18 | Piotrowski Tadeusz | Sinicki Maciej | 3-2 | 4 | 4 | Pending
+2026-10-18 | Tkaczyk Henryk | Jesiek Jakub | 3-1 | 4 | 4 | Pending
+2026-10-18 | Jadach Oskar | Michalski Jakub | 3-2 | 2 | 2 | +3
+2026-10-18 | Gajda Rafal | Wojtaszczyk Wojciech | 3-1 | 2 | 2 | Pending
+2026-10-18 | Poloszczanski Dawid | Trela Mateusz | 3-2 | 5 |  | Pending
