@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T03:43Z
+# updated 2026-10-18T04:10Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14005,8 +14005,13 @@
 2026-10-17 | Badura Jaroslaw | Szymik Robert | 3-2 | 5 | 5 | +7
 2026-10-17 | Durda Michal | Fira Damian | 3-0 | 5 | 9 | +8
 2026-10-17 | Szymanski Igor | Sikon Mateusz | 3-0 | 5 | 5 | +19
+2026-10-17 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 6 | 6 | +7
+2026-10-17 | Skorupa Jakub | Karpiuk Mateusz | 3-2 | 6 | 6 | +7
+2026-10-17 | Szymik Robert | Sikon Mateusz | 3-0 | 6 | 6 | +9
 2026-10-17 | Misiak Mateusz | Rolak Jaroslaw | 3-0 | 6 | 6 | +13
+2026-10-17 | Malcher Krzysztof | Bladziak Krzysztof | 3-0 | 6 | 6 | +13
 2026-10-17 | Stecyszyn Jakub | David Petr | 3-2 | 6 | 6 | +9
+2026-10-17 | Kocik Tomasz | Gesiarz Piotr | 3-2 | 6 | 6 | +5
 2026-10-17 | Felkel Grzegorz | Kolodziej Krystian | 3-1 | 6 | 6 | +8
 2026-10-17 | Marchlewski Marcin | Wasilewski Damian | 3-1 | 6 | 6 | +6
 2026-10-17 | Piotrowski Tadeusz | Poloszczanski Dawid | 3-1 | 6 | 6 | +6
@@ -14020,11 +14025,6 @@
 2026-10-17 | Jedrzejak Patryk | Lach Marcin | 3-1 | 6 | 6 | +13
 2026-10-17 | Malcherek Adam | Morawiec Daniel | 3-2 | 6 | 6 | +8
 2026-10-17 | Wos Alan | Woskowicz Mateusz | 3-0 | 6 | 3 | +8
-2026-10-17 | Szurgot Andrzej | Maszczynski Dariusz | 3-0 | 6 | 6 | +7
-2026-10-17 | Skorupa Jakub | Karpiuk Mateusz | 3-2 | 6 | 6 | +7
-2026-10-17 | Malcher Krzysztof | Bladziak Krzysztof | 3-0 | 6 | 6 | +13
-2026-10-17 | Kocik Tomasz | Gesiarz Piotr | 3-2 | 6 | 6 | +5
-2026-10-17 | Szymik Robert | Sikon Mateusz | 3-0 | 6 | 6 | +9
 2026-10-17 | Woskowicz Mateusz | Mugowski Arkadiusz | 3-0 | 6 | 6 | +13
 2026-10-17 | Fira Damian | Sikon Mateusz | 3-0 | 6 | 2 | +14
 2026-10-17 | Gronowski Wojciech | Makowski Kacper | 3-1 | 6 | 7 | +13
@@ -14035,7 +14035,10 @@
 2026-10-17 | Linek Adam | Maruszak Piotr | 3-1 | 6 | 7 | +11
 2026-10-17 | Durda Michal | Badura Jaroslaw | 3-0 | 6 | 6 | +16
 2026-10-17 | Felkel Grzegorz | Stecyszyn Jakub | 3-1 | 7 | 7 | +9
+2026-10-17 | Gesiarz Piotr | Bladziak Krzysztof | 3-0 | 7 | 7 | +8
+2026-10-17 | Szurgot Andrzej | Kocik Tomasz | 3-1 | 7 | 7 | +18
 2026-10-17 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-1 | 7 | 7 | +9
+2026-10-17 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 | 7 | 7 | +4
 2026-10-17 | Kolodziej Krystian | David Petr | 3-1 | 7 | 7 | +15
 2026-10-17 | Mleczko Bartlomiej | Marchlewski Marcin | 3-2 | 7 | 7 | +11
 2026-10-17 | Piechnik Roman | Gajda Rafal | 3-0 | 7 | 7 | +21
@@ -14047,16 +14050,15 @@
 2026-10-17 | Jedrzejak Patryk | Jablonski Karol | 3-1 | 7 | 7 | +7
 2026-10-17 | Jadach Oskar | Morawiec Daniel | 3-2 | 7 | 7 | +4
 2026-10-17 | Lach Marcin | Malcherek Adam | 3-2 | 7 | 7 | +4
-2026-10-17 | Gesiarz Piotr | Bladziak Krzysztof | 3-0 | 7 | 7 | +8
-2026-10-17 | Szurgot Andrzej | Kocik Tomasz | 3-1 | 7 | 7 | +18
 2026-10-17 | Pawlik Cezary | Pyrek Dawid | 3-1 | 7 | 3 | +5
-2026-10-17 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 | 7 | 7 | +4
 2026-10-17 | Woskowicz Mateusz | Maruszak Piotr | 3-1 | 7 | 6 | Pending
 2026-10-17 | Lukaszewski Mikolaj | Gronowski Wojciech | 3-0 | 7 | 7 | +19
 2026-10-17 | Jablonski Karol | Malcherek Adam | 3-2 | 8 | 8 | +7
 2026-10-17 | Felkel Grzegorz | David Petr | 3-2 | 8 | 8 | Pending
 2026-10-17 | Wasilewski Damian | Mleczko Bartlomiej | 3-2 | 8 | 8 | +10
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1 | 8 | 8 | +9
+2026-10-17 | Szurgot Andrzej | Gesiarz Piotr | 3-1 | 8 | 8 | +14
+2026-10-17 | Woskowicz Mateusz | Maruszak Piotr | 3-1 | 8 | 7 | Pending
 2026-10-17 | David Petr | Felkel Grzegorz | 3-2 | 8 | 8 | +10
 2026-10-17 | Stecyszyn Jakub | Kolodziej Krystian | 3-0 | 8 | 8 | +15
 2026-10-17 | Wojtaszczyk Wojciech | Gajda Rafal | 3-2 | 8 | 8 | +7
@@ -14070,8 +14072,6 @@
 2026-10-17 | Morawiec Daniel | Lach Marcin | 3-1 | 8 | 8 | +18
 2026-10-17 | Wos Alan | Mugowski Arkadiusz | 3-2 | 8 | 5 | +3
 2026-10-17 | Pawlik Cezary | Mucha Grzegorz | 3-1 | 8 | 7 | +8
-2026-10-17 | Woskowicz Mateusz | Maruszak Piotr | 3-1 | 8 | 7 | Pending
-2026-10-17 | Szurgot Andrzej | Gesiarz Piotr | 3-1 | 8 | 8 | +14
 2026-10-17 | Maruszak Piotr | Sulkowski Bartek | 3-1 | 8 | 7 | +15
 2026-10-17 | Kocik Tomasz | Malcher Krzysztof | 3-0 | 8 | 8 | +7
 2026-10-17 | Maszczynski Dariusz | Bladziak Krzysztof | 3-2 | 8 | 8 | +10
@@ -14168,6 +14168,14 @@
 2026-10-18 | Staniszewski Piotr | Piotrowski Tadeusz | 3-0 | 1 | 1 | Pending
 2026-10-18 | Wieczerzak Jacek | Piechnik Roman | 3-1 | 1 | 1 | Pending
 2026-10-18 | Tkaczyk Henryk | Adach Rafal | 3-0 | 1 | 1 | Pending
+2026-10-18 | Kosowski Jakub | Kolodziej Krystian | 3-2 | 1 | 1 | Pending
+2026-10-18 | Ptak Wiktor | Lach Marcin | 3-0 | 1 | 1 | Pending
+2026-10-18 | Braun Josef | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
+2026-10-18 | Marchlewski Marcin | Kukawka Milosz | 3-2 | 1 | 1 | Pending
+2026-10-18 | Kufel Karol | Kesik Gracjan | 3-1 | 1 | 1 | Pending
+2026-10-18 | Poloszczanski Dawid | Sinicki Maciej | 3-0 | 1 | 1 | Pending
+2026-10-18 | Jesiek Jakub | Adamus Mariusz | 3-2 | 1 | 1 | Pending
+2026-10-18 | Wisniewski Bartlomiej | Trela Mateusz | 3-1 | 1 |  | Pending
 2026-10-18 | Skorupa Jakub | Fomin Andriej | 3-1 | 2 | 2 | +14
 2026-10-18 | Sulkowski Karol | Makowski Kacper | 3-2 | 2 | 2 | +8
 2026-10-18 | Lukaszewski Mikolaj | Eliasz Adrian | 3-1 | 2 | 2 | +14
@@ -14181,6 +14189,7 @@
 2026-10-18 | Kocik Tomasz | Bladziak Krzysztof | 3-2 | 2 | 2 | +2
 2026-10-18 | Badura Jaroslaw | Fira Damian | 3-0 | 2 | 3 | +9
 2026-10-18 | Malcher Krzysztof | Szurgot Andrzej | 3-2 | 2 | 2 | +10
+2026-10-18 | Braun Josef | Kosowski Jakub | 3-0 | 2 | 2 | Pending
 2026-10-18 | Pyrek Dawid | Mucha Grzegorz | 3-2 | 3 | 2 | +12
 2026-10-18 | Pawlik Cezary | Karpiuk Mateusz | 3-1 | 3 | 2 | +8
 2026-10-18 | Makowski Kacper | Lukaszewski Mikolaj | 3-0 | 3 | 3 | +14
@@ -14198,6 +14207,8 @@
 2026-10-18 | Fomin Andriej | Pyrek Dawid | 3-2 | 4 | 5 | +4
 2026-10-18 | Eliasz Adrian | Cioch Blazej | 3-1 | 4 | 4 | +16
 2026-10-18 | Mucha Grzegorz | Karpiuk Mateusz | 3-1 | 4 | 4 | +11
+2026-10-18 | Fira Damian | Szymik Robert | 3-1 | 4 | 3 | +17
+2026-10-18 | Szymanski Igor | Badura Jaroslaw | 3-0 | 4 | 3 | +25
 2026-10-18 | Pawlik Cezary | Skorupa Jakub | 3-0 | 5 | 4 | +12
 2026-10-18 | Malcher Krzysztof | Maszczynski Dariusz | 3-2 |  |  | 
 2026-10-18 | Maruszak Piotr | Sulkowski Bartek | 3-1 |  |  | 
@@ -14213,6 +14224,3 @@
 2026-10-18 | Szymanski Igor | Sikon Mateusz | 3-0 |  |  | 
 2026-10-18 | Szymik Robert | Sikon Mateusz | 3-0 |  |  | 
 2026-10-18 | Szurgot Andrzej | Gesiarz Piotr | 3-1 |  |  | 
-2026-10-18 | Kosowski Jakub | Kolodziej Krystian | 3-2 |  |  | 
-2026-10-18 | Ptak Wiktor | Lach Marcin | 3-0 |  |  | 
-2026-10-18 | Fira Damian | Szymik Robert | 3-1 |  |  | 
