@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-18T09:34Z
+# updated 2026-10-18T09:36Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14299,8 +14299,9 @@
 2026-10-18 | Sinicki Maciej | Staniszewski Piotr | 3-0 | 5 | 5 | +20
 2026-10-18 | Pytlas Wojciech | Tkaczyk Henryk | 3-2 | 5 | 6 | +8
 2026-10-18 | Adach Rafal | Jesiek Jakub | 3-0 | 5 | 5 | +21
-2026-10-18 | Michalski Jakub | Wojtaszczyk Wojciech | 3-0 | 3 |  | +25
-2026-10-18 | Braun Josef | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-18 | Wieczerzak Jacek | Szostok Sebastian | 3-0 |  |  | 
-2026-10-18 | Wisniewski Bartlomiej | Trela Mateusz | 3-1 |  |  | 
-2026-10-18 | Marchlewski Marcin | Kesik Gracjan | 3-1 |  |  | 
+2026-10-18 | Michalski Jakub | Wojtaszczyk Wojciech | 3-0 | 3 | 3 | +25
+2026-10-18 | Braun Josef | Jadczyk Marcin | 3-1 | 8 | 8 | Pending
+2026-10-18 | Wieczerzak Jacek | Szostok Sebastian | 3-0 | 6 | 6 | Pending
+2026-10-18 | Wisniewski Bartlomiej | Trela Mateusz | 3-1 | 6 | 6 | Pending
+2026-10-18 | Marchlewski Marcin | Kesik Gracjan | 3-1 | 5 | 5 | +7
+2026-10-18 | Jedrzejak Patryk | Gajda Rafal | 3-2 | 4 | 4 | Pending
