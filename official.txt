@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T06:18Z
+# updated 2026-10-19T06:58Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14372,7 +14372,7 @@
 2026-10-18 | Adamus Pawel | Sawicki Grzegorz | 3-1 | 6 | 6 | +8
 2026-10-18 | Kotwica Dawid | Myszewski Adrian | 3-0 | 6 | 7 | +17
 2026-10-18 | Vincenec Oliver | Sikon Mateusz | 3-1 | 6 | 10 | +9
-2026-10-18 | Marud Grzegorz | Nowak Jakub | 3-2 | 6 | 6 | Pending
+2026-10-18 | Marud Grzegorz | Nowak Jakub | 3-2 | 6 | 6 | +8
 2026-10-18 | Lach Marcin | Szostok Sebastian | 3-1 | 7 | 7 | +6
 2026-10-18 | Kosowski Jakub | Braun Josef | 3-0 | 7 | 7 | +14
 2026-10-18 | Jadczyk Marcin | Kolodziej Krystian | 3-2 | 7 | 7 | +9
@@ -14490,41 +14490,93 @@
 2026-10-19 | Vincenec Oliver | Jozefiak Michal | 3-1 | 1 | 1 | +8
 2026-10-19 | Oracz Jacek | Kwiatkowski Kacper | 3-0 | 1 | 1 | +5
 2026-10-19 | Adamus Pawel | Sikon Mateusz | 3-1 | 1 | 1 | +9
-2026-10-19 | Adamus Kacper | Urban Wojciech | 3-2 | 1 | 1 | Pending
-2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-1 | 1 | 1 | Pending
-2026-10-19 | Marud Grzegorz | Adamus Kacper | 3-0 | 1 | 2 | Pending
+2026-10-19 | Adamus Kacper | Urban Wojciech | 3-2 | 1 | 1 | +6
+2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-1 | 1 | 1 | +11
+2026-10-19 | Marud Grzegorz | Adamus Kacper | 3-0 | 1 | 2 | +19
 2026-10-19 | Glanowski Jakub | Rudomina Kamil | 3-1 | 1 | 1 | +14
 2026-10-19 | Mucha Grzegorz | Zelezik Jacek | 3-2 | 1 | 1 | +10
 2026-10-19 | Nocun Zbigniew | Oracz Jacek | 3-2 | 1 | 2 | +11
 2026-10-19 | Guzik Michal | Adamus Pawel | 3-2 | 1 | 2 | +7
 2026-10-19 | Wloczko Krzysztof | Kosowski Jakub | 3-1 | 1 | 1 | Pending
 2026-10-19 | Poliniewicz Grzegorz | Wisniewski Karol | 3-0 | 1 | 1 | +13
-2026-10-19 | Kapik Krzysztof | Rutkowski Mateusz | 3-0 | 1 | 1 | Pending
+2026-10-19 | Kapik Krzysztof | Rutkowski Mateusz | 3-0 | 1 | 1 | +13
 2026-10-19 | Wisniewski Bartlomiej | Sobel Artur | 3-1 | 1 | 1 | Pending
 2026-10-19 | Slawinski Kacper | Piechnik Roman | 3-1 | 1 | 1 | Pending
 2026-10-19 | Kukawka Milosz | Wrobel Dariusz | 3-0 | 1 | 1 | Pending
+2026-10-19 | Kuzmicz Jakub | Grela Artur | 3-1 | 1 | 1 | Pending
+2026-10-19 | Wiecek Adrian | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
+2026-10-19 | Buczynski Witold | Szostok Sebastian | 3-2 | 1 | 1 | Pending
+2026-10-19 | Solilo Dominik | Kosmal Dawid | 3-2 | 1 | 1 | +9
+2026-10-19 | Krcil Frantisek | Warpas Blazej | 3-1 | 1 | 1 | Pending
+2026-10-19 | Michalik Jerzy | Wolny Michal | 3-1 | 1 | 1 | +11
+2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 1 | 1 | Pending
+2026-10-19 | Hetnar Krzysztof | Przewlocki Piotr | 3-0 | 1 | 1 | Pending
+2026-10-19 | Maszczynski Dariusz | Stechly Witold | 3-2 | 1 | 1 | +9
+2026-10-19 | Polok Pawel | Wichowski Grzegorz | 3-0 | 1 | 1 | Pending
+2026-10-19 | Mecik Patryk | Fomin Yurij | 3-2 | 1 | 1 | Pending
+2026-10-19 | Wiciok Piotr | Tobiasz Wojciech | 3-1 | 1 | 1 | Pending
 2026-10-19 | Myszewski Adrian | Sulkowski Karol | 3-1 | 2 | 3 | +11
 2026-10-19 | Sulkowski Karol | Kotwica Dawid | 3-0 | 2 | 2 | +19
-2026-10-19 | Oracz Lukasz | Nowak Jakub | 3-1 | 2 | 1 | Pending
+2026-10-19 | Oracz Lukasz | Nowak Jakub | 3-1 | 2 | 1 | +10
 2026-10-19 | Kolek Maciej | Linek Adam | 3-1 | 2 | 1 | +6
 2026-10-19 | Kwiatkowski Kacper | Szurgot Andrzej | 3-0 | 2 | 1 | +23
 2026-10-19 | Vincenec Oliver | Sawicki Grzegorz | 3-1 | 2 | 1 | +7
 2026-10-19 | Jozefiak Michal | Sikon Mateusz | 3-1 | 2 | 2 | +12
 2026-10-19 | Glanowski Jakub | Kolek Maciej | 3-1 | 2 | 3 | +20
 2026-10-19 | Pietraszko Lukasz | Sulkowski Bartek | 3-2 | 2 | 1 | +6
-2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-0 | 2 | 2 | Pending
+2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-0 | 2 | 2 | +21
 2026-10-19 | Rudomina Kamil | Sulkowski Bartek | 3-1 | 2 | 2 | +13
 2026-10-19 | Nocun Zbigniew | Kwiatkowski Kacper | 3-1 | 2 | 3 | +7
 2026-10-19 | Sawicki Grzegorz | Sikon Mateusz | 3-1 | 2 | 3 | +13
-2026-10-19 | Marud Grzegorz | Pruszkowski Jakub | 3-1 | 2 | 3 | Pending
+2026-10-19 | Marud Grzegorz | Pruszkowski Jakub | 3-1 | 2 | 3 | +14
 2026-10-19 | Szurgot Andrzej | Zelezik Jacek | 3-2 | 2 | 2 | +9
 2026-10-19 | Guzik Michal | Vincenec Oliver | 3-0 | 2 | 3 | +14
+2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 2 | 2 | Pending
+2026-10-19 | Grela Artur | Kosowski Jakub | 3-2 | 2 | 2 | Pending
+2026-10-19 | Jadczyk Marcin | Wloczko Krzysztof | 3-1 | 2 | 2 | Pending
+2026-10-19 | Wiecek Adrian | Kuzmicz Jakub | 3-0 | 2 | 2 | Pending
+2026-10-19 | Szostok Sebastian | Piechnik Roman | 3-1 | 2 | 2 | Pending
+2026-10-19 | Hetnar Krzysztof | Slawinski Kacper | 3-1 | 2 | 2 | Pending
+2026-10-19 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-2 | 2 | 2 | +5
+2026-10-19 | Solilo Dominik | Wisniewski Karol | 3-2 | 2 | 2 | +9
+2026-10-19 | Kapik Krzysztof | Kosmal Dawid | 3-0 | 2 | 2 | +13
+2026-10-19 | Sobel Artur | Wrobel Dariusz | 3-1 | 2 | 2 | Pending
+2026-10-19 | Warpas Blazej | Wisniewski Bartlomiej | 3-1 | 2 | 2 | Pending
+2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 2 | 2 | Pending
+2026-10-19 | Janus Slawomir | Wolny Michal | 3-1 | 2 | 2 | +13
+2026-10-19 | Michalik Jerzy | Maszczynski Dariusz | 3-0 | 2 | 2 | +6
+2026-10-19 | Buczynski Witold | Przewlocki Piotr | 3-1 | 2 | 2 | Pending
+2026-10-19 | Stechly Witold | Kordaszewski Tomasz | 3-1 | 2 | 2 | +8
 2026-10-19 | Lukaszewski Mikolaj | Kotwica Dawid | 3-2 | 3 | 3 | +9
-2026-10-19 | Adamus Kacper | Nowak Jakub | 3-1 | 3 | 2 | Pending
+2026-10-19 | Adamus Kacper | Nowak Jakub | 3-1 | 3 | 2 | +10
 2026-10-19 | Oracz Jacek | Mucha Grzegorz | 3-0 | 3 | 2 | +9
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 | 3 | 3 | Pending
 2026-10-19 | Pietraszko Lukasz | Linek Adam | 3-0 | 3 | 2 | +10
 2026-10-19 | Adamus Pawel | Jozefiak Michal | 3-1 | 3 | 3 | +8
+2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-0 | 3 | 4 | +16
+2026-10-19 | Janus Slawomir | Wolny Michal | 3-1 | 3 | 3 | +12
+2026-10-19 | Nowak Jakub | Urban Wojciech | 3-1 | 3 | 4 | +14
+2026-10-19 | Grela Artur | Wloczko Krzysztof | 3-1 | 3 | 3 | Pending
+2026-10-19 | Wiecek Adrian | Kosowski Jakub | 3-1 | 3 | 3 | Pending
+2026-10-19 | Slawinski Kacper | Szostok Sebastian | 3-0 | 3 | 3 | Pending
+2026-10-19 | Piechnik Roman | Przewlocki Piotr | 3-1 | 3 | 3 | Pending
+2026-10-19 | Rutkowski Mateusz | Wisniewski Karol | 3-2 | 3 | 3 | +9
+2026-10-19 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 3 | 3 | +16
+2026-10-19 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 | 3 | 3 | Pending
+2026-10-19 | Krcil Frantisek | Sobel Artur | 3-0 | 3 | 3 | Pending
+2026-10-19 | Michalik Jerzy | Janus Slawomir | 3-0 | 3 | 4 | +14
+2026-10-19 | Kuzmicz Jakub | Jadczyk Marcin | 3-1 | 3 | 3 | Pending
+2026-10-19 | Kapik Krzysztof | Solilo Dominik | 3-1 | 3 | 3 | +9
+2026-10-19 | Kukawka Milosz | Warpas Blazej | 3-0 | 3 | 3 | Pending
+2026-10-19 | Hetnar Krzysztof | Buczynski Witold | 3-1 | 3 | 3 | Pending
+2026-10-19 | Maszczynski Dariusz | Kordaszewski Tomasz | 3-0 | 3 | 3 | +11
+2026-10-19 | Pruszkowski Jakub | Adamus Kacper | 3-0 | 4 | 4 | +16
+2026-10-19 | Wolny Michal | Stechly Witold | 3-0 | 4 | 3 | +9
+2026-10-19 | Kosmal Dawid | Rutkowski Mateusz | 3-2 | 4 | 4 | Pending
+2026-10-19 | Oracz Lukasz | Adamus Kacper | 3-1 | 5 | 5 | +13
+2026-10-19 | Pruszkowski Jakub | Nowak Jakub | 3-0 | 5 | 4 | +11
+2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-0 | 5 | 4 | +18
+2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
 2026-10-19 | Nocun Zbigniew | Mucha Grzegorz | 3-1 |  |  | 
@@ -14539,51 +14591,7 @@
 2026-10-19 | Sulkowski Bartek | Glanowski Jakub | 3-1 |  |  | 
 2026-10-19 | Szurgot Andrzej | Mucha Grzegorz | 3-2 |  |  | 
 2026-10-19 | Adamus Pawel | Vincenec Oliver | 3-0 |  |  | 
-2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Marud Grzegorz | Nowak Jakub | 3-2 |  |  | 
 2026-10-19 | Rudomina Kamil | Linek Adam | 3-0 |  |  | 
 2026-10-19 | Nocun Zbigniew | Zelezik Jacek | 3-2 |  |  | 
 2026-10-19 | Guzik Michal | Sawicki Grzegorz | 3-2 |  |  | 
-2026-10-19 | Kuzmicz Jakub | Grela Artur | 3-1 | 1 | 1 | Pending
-2026-10-19 | Wiecek Adrian | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
-2026-10-19 | Buczynski Witold | Szostok Sebastian | 3-2 | 1 | 1 | Pending
-2026-10-19 | Solilo Dominik | Kosmal Dawid | 3-2 | 1 | 1 | +9
-2026-10-19 | Krcil Frantisek | Warpas Blazej | 3-1 | 1 | 1 | Pending
-2026-10-19 | Michalik Jerzy | Wolny Michal | 3-1 | 1 | 1 | Pending
-2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 1 | 1 | Pending
-2026-10-19 | Pruszkowski Jakub | Adamus Kacper | 3-0 | 4 | 4 | Pending
-2026-10-19 | Hetnar Krzysztof | Przewlocki Piotr | 3-0 | 1 | 1 | Pending
-2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 2 | 2 | Pending
-2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-0 | 3 | 4 | Pending
-2026-10-19 | Grela Artur | Kosowski Jakub | 3-2 | 2 | 2 | Pending
-2026-10-19 | Jadczyk Marcin | Wloczko Krzysztof | 3-1 | 2 | 2 | Pending
-2026-10-19 | Wiecek Adrian | Kuzmicz Jakub | 3-0 | 2 | 2 | Pending
-2026-10-19 | Szostok Sebastian | Piechnik Roman | 3-1 | 2 | 2 | Pending
-2026-10-19 | Hetnar Krzysztof | Slawinski Kacper | 3-1 | 2 | 2 | Pending
-2026-10-19 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-2 | 2 | 2 | +5
-2026-10-19 | Solilo Dominik | Wisniewski Karol | 3-2 | 2 | 2 | +9
-2026-10-19 | Kapik Krzysztof | Kosmal Dawid | 3-0 | 2 | 2 | +13
-2026-10-19 | Sobel Artur | Wrobel Dariusz | 3-1 | 2 | 2 | Pending
-2026-10-19 | Warpas Blazej | Wisniewski Bartlomiej | 3-1 | 2 | 2 | Pending
-2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 2 | 2 | Pending
-2026-10-19 | Maszczynski Dariusz | Stechly Witold | 3-2 | 1 | 1 | +9
-2026-10-19 | Janus Slawomir | Wolny Michal | 3-1 | 2 | 2 | +13
-2026-10-19 | Michalik Jerzy | Maszczynski Dariusz | 3-0 | 2 | 2 | +6
-2026-10-19 | Nowak Jakub | Urban Wojciech | 3-1 | 3 | 4 | Pending
-2026-10-19 | Oracz Lukasz | Adamus Kacper | 3-1 | 5 | 5 | Pending
-2026-10-19 | Pruszkowski Jakub | Nowak Jakub | 3-0 | 5 | 4 | Pending
-2026-10-19 | Janus Slawomir | Wolny Michal | 3-1 | 3 | 3 | +12
-2026-10-19 | Grela Artur | Wloczko Krzysztof | 3-1 | 3 | 3 | Pending
-2026-10-19 | Wiecek Adrian | Kosowski Jakub | 3-1 | 3 | 3 | Pending
-2026-10-19 | Buczynski Witold | Przewlocki Piotr | 3-1 | 2 | 2 | Pending
-2026-10-19 | Slawinski Kacper | Szostok Sebastian | 3-0 | 3 | 3 | Pending
-2026-10-19 | Piechnik Roman | Przewlocki Piotr | 3-1 | 3 | 3 | Pending
-2026-10-19 | Rutkowski Mateusz | Wisniewski Karol | 3-2 | 3 | 3 | +9
-2026-10-19 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 3 | 3 | +16
-2026-10-19 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 | 3 | 3 | Pending
-2026-10-19 | Krcil Frantisek | Sobel Artur | 3-0 | 3 | 3 | Pending
-2026-10-19 | Stechly Witold | Kordaszewski Tomasz | 3-1 | 2 | 2 | Pending
-2026-10-19 | Michalik Jerzy | Janus Slawomir | 3-0 | 3 | 4 | Pending
-2026-10-19 | Polok Pawel | Wichowski Grzegorz | 3-0 | 1 | 1 | Pending
-2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-0 | 5 | 4 | +18
-2026-10-19 | Wolny Michal | Stechly Witold | 3-0 | 4 | 3 | Pending
