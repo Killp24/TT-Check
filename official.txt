@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T03:10Z
+# updated 2026-10-19T03:13Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14524,7 +14524,7 @@
 2026-10-19 | Sulkowski Bartek | Glanowski Jakub | 3-1 |  |  | 
 2026-10-19 | Szurgot Andrzej | Mucha Grzegorz | 3-2 |  |  | 
 2026-10-19 | Adamus Pawel | Vincenec Oliver | 3-0 |  |  | 
-2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
+2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 | 3 | 3 | Pending
 2026-10-19 | Marud Grzegorz | Nowak Jakub | 3-2 |  |  | 
 2026-10-19 | Rudomina Kamil | Linek Adam | 3-0 |  |  | 
 2026-10-19 | Nocun Zbigniew | Zelezik Jacek | 3-2 |  |  | 
@@ -14532,9 +14532,9 @@
 2026-10-19 | Rudomina Kamil | Sulkowski Bartek | 3-1 | 2 | 2 | Pending
 2026-10-19 | Nocun Zbigniew | Kwiatkowski Kacper | 3-1 | 2 | 3 | Pending
 2026-10-19 | Sawicki Grzegorz | Sikon Mateusz | 3-1 | 2 | 3 | +13
-2026-10-19 | Marud Grzegorz | Pruszkowski Jakub | 3-1 |  |  | 
+2026-10-19 | Marud Grzegorz | Pruszkowski Jakub | 3-1 | 2 | 3 | Pending
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
-2026-10-19 | Pietraszko Lukasz | Linek Adam | 3-0 |  |  | 
-2026-10-19 | Szurgot Andrzej | Zelezik Jacek | 3-2 |  |  | 
-2026-10-19 | Guzik Michal | Vincenec Oliver | 3-0 |  |  | 
-2026-10-19 | Adamus Pawel | Jozefiak Michal | 3-1 |  |  | 
+2026-10-19 | Pietraszko Lukasz | Linek Adam | 3-0 | 3 | 2 | +10
+2026-10-19 | Szurgot Andrzej | Zelezik Jacek | 3-2 | 2 | 2 | +9
+2026-10-19 | Guzik Michal | Vincenec Oliver | 3-0 | 2 | 3 | +14
+2026-10-19 | Adamus Pawel | Jozefiak Michal | 3-1 | 3 | 3 | +8
