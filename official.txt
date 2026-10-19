@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T21:33Z
+# updated 2026-10-19T22:05Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14670,6 +14670,7 @@
 2026-10-19 | Gesiarz Piotr | Kubiak Artur | 3-1 | 5 | 5 | +12
 2026-10-19 | Kwodawski Bartosz | Linek Adam | 3-1 | 5 | 7 | +14
 2026-10-19 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 5 | 5 | +5
+2026-10-19 | Lewczuk Miroslaw | Frank Roman | 3-1 | 6 | 6 | +6
 2026-10-19 | Tobiasz Wojciech | Polok Pawel | 3-1 | 6 | 6 | +15
 2026-10-19 | Wichowski Grzegorz | Wiciok Piotr | 3-1 | 6 | 6 | +7
 2026-10-19 | Sobel Artur | Warpas Blazej | 3-1 | 6 | 6 | +5
@@ -14696,6 +14697,9 @@
 2026-10-19 | Vincenec Oliver | Nowak Jakub | 3-2 | 6 | 7 | Pending
 2026-10-19 | Kubiak Artur | Machelski Michal | 3-0 | 6 | 1 | Pending
 2026-10-19 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 6 | 8 | +17
+2026-10-19 | Kwodawski Bartosz | Sulkowski Bartek | 3-1 | 6 | 8 | Pending
+2026-10-19 | Szoltysek Artur | Przewlocki Jacek | 3-2 | 6 | 6 | Pending
+2026-10-19 | Zmijewski Artur | Staniczek Adam | 3-1 | 6 | 6 | Pending
 2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 7 | 7 | +5
 2026-10-19 | Wiciok Piotr | Mecik Patryk | 3-0 | 7 | 7 | +13
 2026-10-19 | Grela Artur | Jadczyk Marcin | 3-2 | 7 | 7 | +5
@@ -14735,6 +14739,8 @@
 2026-10-19 | Oracz Jacek | Frank Roman | 3-1 | 8 | 5 | +5
 2026-10-19 | Glanowski Jakub | Lukaszewski Mikolaj | 3-1 | 8 | 9 | Pending
 2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-1 | 8 | 7 | Pending
+2026-10-19 | Linek Adam | Stapor Rafal | 3-1 | 8 | 6 | Pending
+2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-2 | 8 | 9 | Pending
 2026-10-19 | Grela Artur | Wiecek Adrian | 3-2 | 9 | 9 | +7
 2026-10-19 | Rutkowski Mateusz | Sobel Artur | 3-2 | 9 | 9 | +6
 2026-10-19 | Solilo Dominik | Kukawka Milosz | 3-1 | 9 | 9 | +14
