@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T11:45Z
+# updated 2026-10-19T12:12Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14615,6 +14615,7 @@
 2026-10-19 | Fomin Yurij | Tobiasz Wojciech | 3-0 | 5 | 5 | +9
 2026-10-19 | Wichowski Grzegorz | Mecik Patryk | 3-1 | 5 | 5 | +5
 2026-10-19 | Wiciok Piotr | Polok Pawel | 3-0 | 5 | 5 | +15
+2026-10-19 | Tobiasz Wojciech | Polok Pawel | 3-1 | 6 | 6 | Pending
 2026-10-19 | Sobel Artur | Warpas Blazej | 3-1 | 6 | 6 | Pending
 2026-10-19 | Janus Slawomir | Maszczynski Dariusz | 3-2 | 6 | 5 | +4
 2026-10-19 | Wisniewski Karol | Kosmal Dawid | 3-2 | 6 | 6 | +7
@@ -14629,6 +14630,7 @@
 2026-10-19 | Kapik Krzysztof | Czerwinski Bartosz | 3-0 | 6 | 1 | +13
 2026-10-19 | Rutkowski Mateusz | Kukawka Milosz | 3-1 | 6 | 6 | Pending
 2026-10-19 | Przewlocki Piotr | Piechnik Roman | 3-1 | 6 | 6 | Pending
+2026-10-19 | Mecik Patryk | Fomin Yurij | 3-0 | 6 | 6 | Pending
 2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 7 | 7 | Pending
 2026-10-19 | Kosowski Jakub | Wiecek Adrian | 3-1 | 7 | 7 | Pending
 2026-10-19 | Hetnar Krzysztof | Schaniel Krzysztof | 3-2 | 7 | 2 | Pending
@@ -14636,6 +14638,8 @@
 2026-10-19 | Kapik Krzysztof | Wisniewski Karol | 3-0 | 7 | 7 | Pending
 2026-10-19 | Sobel Artur | Solilo Dominik | 3-0 | 7 | 7 | Pending
 2026-10-19 | Rutkowski Mateusz | Warpas Blazej | 3-0 | 7 | 7 | Pending
+2026-10-19 | Rutkowski Mateusz | Solilo Dominik | 3-1 | 8 | 8 | Pending
+2026-10-19 | Krcil Frantisek | Sobel Artur | 3-2 | 8 | 8 | Pending
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
