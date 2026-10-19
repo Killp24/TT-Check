@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T08:21Z
+# updated 2026-10-19T08:52Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14541,7 +14541,7 @@
 2026-10-19 | Solilo Dominik | Wisniewski Karol | 3-2 | 2 | 2 | +9
 2026-10-19 | Kapik Krzysztof | Kosmal Dawid | 3-0 | 2 | 2 | +13
 2026-10-19 | Sobel Artur | Wrobel Dariusz | 3-1 | 2 | 2 | Pending
-2026-10-19 | Warpas Blazej | Wisniewski Bartlomiej | 3-1 | 2 | 2 | Pending
+2026-10-19 | Warpas Blazej | Wisniewski Bartlomiej | 3-1 | 2 | 2 | +14
 2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 2 | 2 | Pending
 2026-10-19 | Janus Slawomir | Wolny Michal | 3-1 | 2 | 2 | +13
 2026-10-19 | Michalik Jerzy | Maszczynski Dariusz | 3-0 | 2 | 2 | +6
@@ -14565,7 +14565,7 @@
 2026-10-19 | Piechnik Roman | Przewlocki Piotr | 3-1 | 3 | 3 | Pending
 2026-10-19 | Rutkowski Mateusz | Wisniewski Karol | 3-2 | 3 | 3 | +9
 2026-10-19 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 3 | 3 | +16
-2026-10-19 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 | 3 | 3 | Pending
+2026-10-19 | Wrobel Dariusz | Wisniewski Bartlomiej | 3-1 | 3 | 3 | +14
 2026-10-19 | Krcil Frantisek | Sobel Artur | 3-0 | 3 | 3 | Pending
 2026-10-19 | Michalik Jerzy | Janus Slawomir | 3-0 | 3 | 4 | +14
 2026-10-19 | Kuzmicz Jakub | Jadczyk Marcin | 3-1 | 3 | 3 | Pending
@@ -14573,6 +14573,8 @@
 2026-10-19 | Kukawka Milosz | Warpas Blazej | 3-0 | 3 | 3 | Pending
 2026-10-19 | Hetnar Krzysztof | Buczynski Witold | 3-1 | 3 | 3 | Pending
 2026-10-19 | Maszczynski Dariusz | Kordaszewski Tomasz | 3-0 | 3 | 3 | +11
+2026-10-19 | Fomin Yurij | Polok Pawel | 3-1 | 3 | 3 | Pending
+2026-10-19 | Wichowski Grzegorz | Wiciok Piotr | 3-1 | 3 | 3 | Pending
 2026-10-19 | Pruszkowski Jakub | Adamus Kacper | 3-0 | 4 | 4 | +16
 2026-10-19 | Wolny Michal | Stechly Witold | 3-0 | 4 | 3 | +9
 2026-10-19 | Kosmal Dawid | Rutkowski Mateusz | 3-2 | 4 | 4 | +7
@@ -14593,6 +14595,16 @@
 2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-0 | 5 | 4 | +18
 2026-10-19 | Janus Slawomir | Stechly Witold | 3-1 | 5 | 4 | +6
 2026-10-19 | Wolny Michal | Maszczynski Dariusz | 3-0 | 5 | 4 | +8
+2026-10-19 | Grela Artur | Jadczyk Marcin | 3-2 | 5 | 5 | Pending
+2026-10-19 | Szostok Sebastian | Hetnar Krzysztof | 3-1 | 5 | 5 | Pending
+2026-10-19 | Rutkowski Mateusz | Solilo Dominik | 3-1 | 5 | 5 | +12
+2026-10-19 | Wisniewski Karol | Kosmal Dawid | 3-0 | 5 | 5 | +17
+2026-10-19 | Wrobel Dariusz | Warpas Blazej | 3-1 | 5 | 5 | +12
+2026-10-19 | Wiecek Adrian | Wloczko Krzysztof | 3-1 | 5 | 5 | Pending
+2026-10-19 | Krcil Frantisek | Wisniewski Bartlomiej | 3-2 | 5 | 5 | Pending
+2026-10-19 | Przewlocki Piotr | Slawinski Kacper | 3-2 | 5 |  | Pending
+2026-10-19 | Stechly Witold | Michalik Jerzy | 3-1 | 5 | 5 | +20
+2026-10-19 | Janus Slawomir | Maszczynski Dariusz | 3-2 | 6 | 5 | +4
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
@@ -14612,9 +14624,3 @@
 2026-10-19 | Rudomina Kamil | Linek Adam | 3-0 |  |  | 
 2026-10-19 | Nocun Zbigniew | Zelezik Jacek | 3-2 |  |  | 
 2026-10-19 | Guzik Michal | Sawicki Grzegorz | 3-2 |  |  | 
-2026-10-19 | Grela Artur | Jadczyk Marcin | 3-2 |  |  | 
-2026-10-19 | Szostok Sebastian | Hetnar Krzysztof | 3-1 |  |  | 
-2026-10-19 | Rutkowski Mateusz | Solilo Dominik | 3-1 |  |  | 
-2026-10-19 | Wisniewski Karol | Kosmal Dawid | 3-0 |  |  | 
-2026-10-19 | Wrobel Dariusz | Warpas Blazej | 3-1 |  |  | 
-2026-10-19 | Fomin Yurij | Polok Pawel | 3-1 |  |  | 
