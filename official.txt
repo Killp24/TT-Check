@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T04:15Z
+# updated 2026-10-19T04:19Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14502,7 +14502,7 @@
 2026-10-19 | Kapik Krzysztof | Rutkowski Mateusz | 3-0 | 1 | 1 | Pending
 2026-10-19 | Wisniewski Bartlomiej | Sobel Artur | 3-1 | 1 | 1 | Pending
 2026-10-19 | Slawinski Kacper | Piechnik Roman | 3-1 | 1 | 1 | Pending
-2026-10-19 | Kukawka Milosz | Wrobel Dariusz | 3-0 |  | 1 | 
+2026-10-19 | Kukawka Milosz | Wrobel Dariusz | 3-0 | 1 | 1 | Pending
 2026-10-19 | Myszewski Adrian | Sulkowski Karol | 3-1 | 2 | 3 | +11
 2026-10-19 | Sulkowski Karol | Kotwica Dawid | 3-0 | 2 | 2 | +19
 2026-10-19 | Oracz Lukasz | Nowak Jakub | 3-1 | 2 | 1 | Pending
@@ -14544,11 +14544,14 @@
 2026-10-19 | Rudomina Kamil | Linek Adam | 3-0 |  |  | 
 2026-10-19 | Nocun Zbigniew | Zelezik Jacek | 3-2 |  |  | 
 2026-10-19 | Guzik Michal | Sawicki Grzegorz | 3-2 |  |  | 
-2026-10-19 | Kuzmicz Jakub | Grela Artur | 3-1 |  |  | 
-2026-10-19 | Wiecek Adrian | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-19 | Buczynski Witold | Szostok Sebastian | 3-2 |  |  | 
-2026-10-19 | Solilo Dominik | Kosmal Dawid | 3-2 |  |  | 
-2026-10-19 | Krcil Frantisek | Warpas Blazej | 3-1 |  |  | 
-2026-10-19 | Michalik Jerzy | Wolny Michal | 3-1 |  |  | 
-2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 |  |  | 
-2026-10-19 | Pruszkowski Jakub | Adamus Kacper | 3-0 |  |  | 
+2026-10-19 | Kuzmicz Jakub | Grela Artur | 3-1 | 1 | 1 | Pending
+2026-10-19 | Wiecek Adrian | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
+2026-10-19 | Buczynski Witold | Szostok Sebastian | 3-2 | 1 | 1 | Pending
+2026-10-19 | Solilo Dominik | Kosmal Dawid | 3-2 | 1 | 1 | +9
+2026-10-19 | Krcil Frantisek | Warpas Blazej | 3-1 | 1 | 1 | Pending
+2026-10-19 | Michalik Jerzy | Wolny Michal | 3-1 | 1 | 1 | Pending
+2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 1 | 1 | Pending
+2026-10-19 | Pruszkowski Jakub | Adamus Kacper | 3-0 | 4 | 4 | Pending
+2026-10-19 | Hetnar Krzysztof | Przewlocki Piotr | 3-0 |  | 1 | 
+2026-10-19 | Janus Slawomir | Kordaszewski Tomasz | 3-0 | 2 | 2 | Pending
+2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-0 | 3 | 4 | Pending
