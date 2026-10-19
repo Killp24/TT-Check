@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T01:45Z
+# updated 2026-10-19T02:15Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14364,13 +14364,13 @@
 2026-10-18 | Kolek Maciej | Kotwica Dawid | 3-1 | 6 | 3 | +4
 2026-10-18 | Szurgot Andrzej | Kwiatkowski Kacper | 3-0 | 6 | 4 | +11
 2026-10-18 | Urban Wojciech | Pruszkowski Jakub | 3-2 | 6 | 2 | +12
-2026-10-18 | Skorski Michal | Sulkowski Karol | 3-0 | 6 | 10 | Pending
+2026-10-18 | Skorski Michal | Sulkowski Karol | 3-0 | 6 | 10 | +14
 2026-10-18 | Pietraszko Lukasz | Glanowski Jakub | 3-0 | 6 | 1 | +9
 2026-10-18 | Kwiatkowski Kacper | Mucha Grzegorz | 3-2 | 6 | 10 | Pending
 2026-10-18 | Oracz Jacek | Zelezik Jacek | 3-0 | 6 | 6 | Pending
-2026-10-18 | Myszewski Adrian | Lukaszewski Mikolaj | 3-1 | 6 | 10 | Pending
+2026-10-18 | Myszewski Adrian | Lukaszewski Mikolaj | 3-1 | 6 | 10 | +11
 2026-10-18 | Adamus Pawel | Sawicki Grzegorz | 3-1 | 6 | 6 | +8
-2026-10-18 | Kotwica Dawid | Myszewski Adrian | 3-0 | 6 | 7 | Pending
+2026-10-18 | Kotwica Dawid | Myszewski Adrian | 3-0 | 6 | 7 | +17
 2026-10-18 | Vincenec Oliver | Sikon Mateusz | 3-1 | 6 | 10 | +9
 2026-10-18 | Marud Grzegorz | Nowak Jakub | 3-2 | 6 | 6 | Pending
 2026-10-18 | Lach Marcin | Szostok Sebastian | 3-1 | 7 | 7 | +6
@@ -14482,16 +14482,34 @@
 2026-10-18 | Buczynski Witold | Wojtaszczyk Wojciech | 3-0 |  |  | 
 2026-10-18 | Jozefiak Michal | Vincenec Oliver | 3-1 |  |  | 
 2026-10-18 | Vincenec Oliver | Guzik Michal | 3-1 |  |  | 
-2026-10-19 | Lukaszewski Mikolaj | Skorski Michal | 3-2 | 1 | 1 | Pending
-2026-10-19 | Kotwica Dawid | Skorski Michal | 3-2 | 1 | 2 | Pending
-2026-10-19 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 | 1 | 2 | Pending
-2026-10-19 | Myszewski Adrian | Skorski Michal | 3-1 | 1 | 3 | Pending
+2026-10-19 | Lukaszewski Mikolaj | Skorski Michal | 3-2 | 1 | 1 | +9
+2026-10-19 | Kotwica Dawid | Skorski Michal | 3-2 | 1 | 2 | +8
+2026-10-19 | Sulkowski Karol | Lukaszewski Mikolaj | 3-1 | 1 | 2 | +13
+2026-10-19 | Myszewski Adrian | Skorski Michal | 3-1 | 1 | 3 | +12
 2026-10-19 | Kolek Maciej | Pietraszko Lukasz | 3-0 | 1 | 1 | +14
 2026-10-19 | Vincenec Oliver | Jozefiak Michal | 3-1 | 1 | 1 | +8
 2026-10-19 | Oracz Jacek | Kwiatkowski Kacper | 3-0 | 1 | 1 | Pending
 2026-10-19 | Adamus Pawel | Sikon Mateusz | 3-1 | 1 | 1 | +9
-2026-10-19 | Myszewski Adrian | Sulkowski Karol | 3-1 | 2 | 3 | Pending
-2026-10-19 | Sulkowski Karol | Kotwica Dawid | 3-0 | 2 | 2 | Pending
+2026-10-19 | Adamus Kacper | Urban Wojciech | 3-2 | 1 | 1 | Pending
+2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-1 | 1 | 1 | Pending
+2026-10-19 | Marud Grzegorz | Adamus Kacper | 3-0 | 1 | 2 | Pending
+2026-10-19 | Glanowski Jakub | Rudomina Kamil | 3-1 | 1 | 1 | Pending
+2026-10-19 | Mucha Grzegorz | Zelezik Jacek | 3-2 | 1 | 1 | Pending
+2026-10-19 | Nocun Zbigniew | Oracz Jacek | 3-2 | 1 | 2 | Pending
+2026-10-19 | Guzik Michal | Adamus Pawel | 3-2 | 1 | 2 | +7
+2026-10-19 | Myszewski Adrian | Sulkowski Karol | 3-1 | 2 | 3 | +11
+2026-10-19 | Sulkowski Karol | Kotwica Dawid | 3-0 | 2 | 2 | +19
+2026-10-19 | Oracz Lukasz | Nowak Jakub | 3-1 | 2 | 1 | Pending
+2026-10-19 | Kolek Maciej | Linek Adam | 3-1 | 2 | 1 | Pending
+2026-10-19 | Kwiatkowski Kacper | Szurgot Andrzej | 3-0 | 2 | 1 | Pending
+2026-10-19 | Vincenec Oliver | Sawicki Grzegorz | 3-1 | 2 | 1 | +7
+2026-10-19 | Jozefiak Michal | Sikon Mateusz | 3-1 | 2 | 2 | +12
+2026-10-19 | Glanowski Jakub | Kolek Maciej | 3-1 | 2 | 3 | Pending
+2026-10-19 | Pietraszko Lukasz | Sulkowski Bartek | 3-2 | 2 | 1 | Pending
+2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-0 | 2 | 2 | Pending
+2026-10-19 | Lukaszewski Mikolaj | Kotwica Dawid | 3-2 | 3 | 3 | +9
+2026-10-19 | Adamus Kacper | Nowak Jakub | 3-1 | 3 | 2 | Pending
+2026-10-19 | Oracz Jacek | Mucha Grzegorz | 3-0 | 3 | 2 | Pending
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
 2026-10-19 | Nocun Zbigniew | Mucha Grzegorz | 3-1 |  |  | 
@@ -14508,18 +14526,6 @@
 2026-10-19 | Adamus Pawel | Vincenec Oliver | 3-0 |  |  | 
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Marud Grzegorz | Nowak Jakub | 3-2 |  |  | 
-2026-10-19 | Adamus Kacper | Urban Wojciech | 3-2 | 1 | 1 | Pending
 2026-10-19 | Rudomina Kamil | Linek Adam | 3-0 |  |  | 
 2026-10-19 | Nocun Zbigniew | Zelezik Jacek | 3-2 |  |  | 
 2026-10-19 | Guzik Michal | Sawicki Grzegorz | 3-2 |  |  | 
-2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-1 | 1 | 1 | Pending
-2026-10-19 | Marud Grzegorz | Adamus Kacper | 3-0 | 1 | 2 | Pending
-2026-10-19 | Oracz Lukasz | Nowak Jakub | 3-1 | 2 | 1 | Pending
-2026-10-19 | Glanowski Jakub | Rudomina Kamil | 3-1 | 1 | 1 | Pending
-2026-10-19 | Kolek Maciej | Linek Adam | 3-1 | 2 | 1 | Pending
-2026-10-19 | Mucha Grzegorz | Zelezik Jacek | 3-2 | 1 | 1 | Pending
-2026-10-19 | Nocun Zbigniew | Oracz Jacek | 3-2 | 1 | 2 | Pending
-2026-10-19 | Kwiatkowski Kacper | Szurgot Andrzej | 3-0 | 2 | 1 | Pending
-2026-10-19 | Lukaszewski Mikolaj | Kotwica Dawid | 3-2 | 3 | 3 | +9
-2026-10-19 | Vincenec Oliver | Sawicki Grzegorz | 3-1 | 2 | 1 | +7
-2026-10-19 | Jozefiak Michal | Sikon Mateusz | 3-1 | 2 | 2 | +12
