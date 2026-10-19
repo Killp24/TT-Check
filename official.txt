@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T22:07Z
+# updated 2026-10-19T22:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14695,11 +14695,12 @@
 2026-10-19 | Sulkowski Bartek | Linek Adam | 3-1 | 6 | 6 | +11
 2026-10-19 | Glanowski Jakub | Szoltysek Artur | 3-2 | 6 | 4 | +5
 2026-10-19 | Vincenec Oliver | Nowak Jakub | 3-2 | 6 | 7 | Pending
-2026-10-19 | Kubiak Artur | Machelski Michal | 3-0 | 6 | 1 | Pending
+2026-10-19 | Kubiak Artur | Machelski Michal | 3-0 | 6 | 1 | +8
 2026-10-19 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 6 | 8 | +17
 2026-10-19 | Kwodawski Bartosz | Sulkowski Bartek | 3-1 | 6 | 8 | Pending
 2026-10-19 | Szoltysek Artur | Przewlocki Jacek | 3-2 | 6 | 6 | Pending
-2026-10-19 | Zmijewski Artur | Staniczek Adam | 3-1 | 6 | 6 | Pending
+2026-10-19 | Zmijewski Artur | Staniczek Adam | 3-1 | 6 | 6 | +5
+2026-10-19 | Zwolinski Mariusz | Szoltysek Artur | 3-1 | 6 | 7 | Pending
 2026-10-19 | Kukawka Milosz | Krcil Frantisek | 3-2 | 7 | 7 | +5
 2026-10-19 | Wiciok Piotr | Mecik Patryk | 3-0 | 7 | 7 | +13
 2026-10-19 | Grela Artur | Jadczyk Marcin | 3-2 | 7 | 7 | +5
@@ -14721,6 +14722,7 @@
 2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-1 | 7 | 7 | Pending
 2026-10-19 | Glanowski Jakub | Przewlocki Jacek | 3-2 | 7 | 5 | +5
 2026-10-19 | Kukawka Milosz | Warpas Blazej | 3-0 | 8 | 8 | +4
+2026-10-19 | Rudomina Kamil | Kwodawski Bartosz | 3-1 | 8 | 7 | Pending
 2026-10-19 | Rutkowski Mateusz | Solilo Dominik | 3-1 | 8 | 8 | +9
 2026-10-19 | Kosowski Jakub | Kuzmicz Jakub | 3-1 | 8 | 7 | +10
 2026-10-19 | Krcil Frantisek | Sobel Artur | 3-2 | 8 | 8 | +10
@@ -14742,6 +14744,7 @@
 2026-10-19 | Linek Adam | Stapor Rafal | 3-1 | 8 | 6 | Pending
 2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-2 | 8 | 9 | Pending
 2026-10-19 | Grela Artur | Wiecek Adrian | 3-2 | 9 | 9 | +7
+2026-10-19 | Sulkowski Bartek | Linek Adam | 3-1 | 9 | 9 | Pending
 2026-10-19 | Rutkowski Mateusz | Sobel Artur | 3-2 | 9 | 9 | +6
 2026-10-19 | Solilo Dominik | Kukawka Milosz | 3-1 | 9 | 9 | +14
 2026-10-19 | Przewlocki Piotr | Schaniel Krzysztof | 3-2 | 9 | 4 | +9
@@ -14756,6 +14759,9 @@
 2026-10-19 | Wichowski Grzegorz | Tobiasz Wojciech | 3-1 | 9 | 9 | +4
 2026-10-19 | Polok Pawel | Mecik Patryk | 3-0 | 9 | 9 | +14
 2026-10-19 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 9 | 7 | Pending
+2026-10-19 | Urban Wojciech | Nowak Jakub | 3-2 | 9 | 8 | Pending
+2026-10-19 | Oracz Jacek | Tkaczyk Henryk | 3-1 | 9 | 6 | +3
+2026-10-19 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 | 9 |  | Pending
 2026-10-19 | Przewlocki Piotr | Slawinski Kacper | 3-2 | 10 | 10 | +12
 2026-10-19 | Kukawka Milosz | Sobel Artur | 3-0 | 10 | 10 | +14
 2026-10-19 | Kosmal Dawid | Czerwinski Bartosz | 3-1 | 10 | 4 | +12
@@ -14790,3 +14796,4 @@
 2026-10-19 | Grela Artur | Kuzmicz Jakub | 3-0 |  |  | 
 2026-10-19 | Kosowski Jakub | Wloczko Krzysztof | 3-1 |  |  | 
 2026-10-19 | Wiecek Adrian | Kuzmicz Jakub | 3-1 |  |  | 
+2026-10-20 | Warzecha Miroslaw | Michalik Jerzy | 3-2 | 1 | 1 | +4
