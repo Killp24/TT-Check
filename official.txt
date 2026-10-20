@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T02:36Z
+# updated 2026-10-20T03:08Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14826,17 +14826,23 @@
 2026-10-20 | Krezel Andrzej | Frank Roman | 3-2 | 1 | 1 | +4
 2026-10-20 | Przewlocki Jacek | Zwolinski Mariusz | 3-2 | 1 | 1 | +10
 2026-10-20 | Sulkowski Bartek | Rudomina Kamil | 3-0 | 1 | 1 | +15
+2026-10-20 | Nowak Jakub | Oracz Lukasz | 3-1 | 1 | 2 | Pending
 2026-10-20 | Warzecha Miroslaw | Kubiak Artur | 3-1 | 2 | 1 | +8
 2026-10-20 | Michalik Jerzy | Staniczek Adam | 3-2 | 2 | 1 | +5
 2026-10-20 | Zmijewski Artur | Kubiak Artur | 3-1 | 2 | 2 | +11
 2026-10-20 | Lewczuk Miroslaw | Oracz Jacek | 3-1 | 2 | 2 | +15
 2026-10-20 | Krezel Andrzej | Tkaczyk Henryk | 3-1 | 2 | 2 | +16
 2026-10-20 | Nocun Zbigniew | Krezel Andrzej | 3-0 | 2 | 3 | +18
+2026-10-20 | Pruszkowski Jakub | Urban Wojciech | 3-0 | 2 | 1 | Pending
+2026-10-20 | Vincenec Oliver | Nowak Jakub | 3-2 | 2 | 2 | Pending
 2026-10-20 | Michalik Jerzy | Machelski Michal | 3-2 | 3 | 2 | +5
 2026-10-20 | Warzecha Miroslaw | Staniczek Adam | 3-2 | 3 | 2 | +2
 2026-10-20 | Zmijewski Artur | Michalik Jerzy | 3-0 | 3 | 4 | +12
-2026-10-20 | Staniczek Adam | Kubiak Artur | 3-2 | 3 | 3 | Pending
+2026-10-20 | Staniczek Adam | Kubiak Artur | 3-2 | 3 | 3 | +12
 2026-10-20 | Warzecha Miroslaw | Machelski Michal | 3-0 | 4 | 3 | +4
+2026-10-20 | Kubiak Artur | Michalik Jerzy | 3-0 | 4 | 5 | +14
+2026-10-20 | Staniczek Adam | Machelski Michal | 3-1 | 4 | 4 | +12
+2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -14858,10 +14864,5 @@
 2026-10-20 | Vincenec Oliver | Urban Wojciech | 3-0 |  |  | 
 2026-10-20 | Oracz Jacek | Frank Roman | 3-2 |  |  | 
 2026-10-20 | Glanowski Jakub | Zwolinski Mariusz | 3-2 |  |  | 
-2026-10-20 | Nowak Jakub | Oracz Lukasz | 3-1 | 1 | 2 | Pending
-2026-10-20 | Pruszkowski Jakub | Urban Wojciech | 3-0 | 2 | 1 | Pending
-2026-10-20 | Vincenec Oliver | Nowak Jakub | 3-2 |  |  | 
 2026-10-20 | Marud Grzegorz | Pruszkowski Jakub | 3-0 |  |  | 
 2026-10-20 | Nocun Zbigniew | Frank Roman | 3-0 |  |  | 
-2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
-2026-10-20 | Kubiak Artur | Michalik Jerzy | 3-0 | 4 | 5 | Pending
