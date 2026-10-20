@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T22:40Z
+# updated 2026-10-20T23:04Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15014,6 +15014,7 @@
 2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 6 | 6 | +10
 2026-10-20 | Ptak Wiktor | Kurek Pawel | 3-0 | 6 | 6 | +16
 2026-10-20 | Sokolowski Oliwier | Lebek Marian | 3-1 | 6 | 5 | Pending
+2026-10-20 | Lebek Marian | Adamus Pawel | 3-1 | 6 | 8 | Pending
 2026-10-20 | Trela Mateusz | Piecowski Miroslaw | 3-1 | 6 | 6 | Pending
 2026-10-20 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 5 | +15
 2026-10-20 | David Petr | Kosowski Jakub | 3-1 | 6 | 6 | +10
@@ -15033,6 +15034,7 @@
 2026-10-20 | Blocho Przemyslaw | Glanowski Jakub | 3-2 | 6 | 7 | Pending
 2026-10-20 | Tkocz Marek | Adamus Pawel | 3-1 | 6 | 7 | Pending
 2026-10-20 | Jurowicz Grzegorz | Orszulik Jan | 3-2 | 6 | 6 | Pending
+2026-10-20 | Szostok Sebastian | Komandzik Rafal | 3-2 | 6 | 7 | +3
 2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | +3
 2026-10-20 | Kosowski Jakub | Chodorski Piotr | 3-1 | 7 | 7 | +8
 2026-10-20 | Lamperski Jakub | Sobel Artur | 3-1 | 7 | 6 | +13
@@ -15051,6 +15053,8 @@
 2026-10-20 | Marud Grzegorz | Komandzik Rafal | 3-0 | 7 | 4 | +7
 2026-10-20 | Zmijewski Artur | Brunner Marian | 3-0 | 7 | 3 | Pending
 2026-10-20 | Krezel Andrzej | Brunner Marian | 3-2 | 7 | 4 | Pending
+2026-10-20 | Blocho Przemyslaw | Sulkowski Bartek | 3-0 | 7 | 2 | Pending
+2026-10-20 | Pietraszko Lukasz | Sulkowski Bartek | 3-0 | 7 | 3 | Pending
 2026-10-20 | Smolka Kamil | Juzek Sebastian | 3-0 | 8 | 8 | +13
 2026-10-20 | Adamus Kacper | Baron Mariusz | 3-1 | 8 | 8 | +11
 2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | +6
@@ -15082,6 +15086,7 @@
 2026-10-20 | Filbrandt Tomasz | Glanowski Jakub | 3-1 | 9 | 5 | +4
 2026-10-20 | Golaszewski Kuba | Piecowski Miroslaw | 3-1 | 9 | 4 | +13
 2026-10-20 | Solilo Dominik | Minda Michal | 3-2 | 9 | 4 | +8
+2026-10-20 | Machelski Michal | Krezel Andrzej | 3-2 | 9 | 8 | Pending
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 10 | 10 | +11
 2026-10-20 | Wiecek Adrian | Kosowski Jakub | 3-1 | 10 | 10 | +13
 2026-10-20 | Filbrandt Tomasz | Stapor Rafal | 3-1 | 10 | 6 | +5
@@ -15094,6 +15099,7 @@
 2026-10-20 | Kowalski Kamil | Smolka Kamil | 3-1 | 10 | 10 | +19
 2026-10-20 | Juzek Sebastian | Adamus Kacper | 3-1 | 10 | 10 | +14
 2026-10-20 | Nowak Jakub | Marud Grzegorz | 3-2 | 10 | 9 | +10
+2026-10-20 | Marud Grzegorz | Paszkiewicz Michal | 3-0 | 10 | 6 | +18
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -15118,8 +15124,8 @@
 2026-10-20 | Nocun Zbigniew | Frank Roman | 3-0 |  |  | 
 2026-10-20 | Lebek Marian | Ruszkiewicz Adam | 3-0 |  |  | 
 2026-10-20 | Paszkiewicz Michal | Szostok Sebastian | 3-0 |  |  | 
-2026-10-20 | Blocho Przemyslaw | Sulkowski Bartek | 3-0 |  |  | 
 2026-10-21 | Piecowski Miroslaw | Rolak Jaroslaw | 3-1 | 1 | 1 | Pending
+2026-10-21 | Lukaszewski Mikolaj | Rolak Jaroslaw | 3-0 | 1 | 2 | Pending
 2026-10-21 | Glanowski Jakub | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
