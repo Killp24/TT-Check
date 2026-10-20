@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T20:34Z
+# updated 2026-10-20T21:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14848,12 +14848,12 @@
 2026-10-20 | Minda Michal | Lamperski Jakub | 3-1 | 1 | 6 | +12
 2026-10-20 | Kukawka Milosz | Solilo Dominik | 3-0 | 1 | 6 | +14
 2026-10-20 | Rutkowski Mateusz | Kolek Maciej | 3-1 | 1 | 6 | +13
-2026-10-20 | Pietraszko Lukasz | Stapor Rafal | 3-1 | 1 | 2 | Pending
+2026-10-20 | Pietraszko Lukasz | Stapor Rafal | 3-1 | 1 | 2 | +7
 2026-10-20 | Trela Mateusz | Skorski Michal | 3-2 | 1 | 1 | +9
 2026-10-20 | Pytlas Wojciech | Jurowicz Grzegorz | 3-1 | 1 | 1 | +8
-2026-10-20 | Blocho Przemyslaw | Glanowski Jakub | 3-1 | 1 | 2 | Pending
+2026-10-20 | Blocho Przemyslaw | Glanowski Jakub | 3-1 | 1 | 2 | +8
 2026-10-20 | Tkocz Marek | Kaczynski Piotr | 3-1 | 1 | 1 | +11
-2026-10-20 | Paszkiewicz Michal | Marud Grzegorz | 3-0 | 1 | 4 | Pending
+2026-10-20 | Paszkiewicz Michal | Marud Grzegorz | 3-0 | 1 | 4 | +15
 2026-10-20 | Szlubowski Dariusz | Piecowski Miroslaw | 3-1 | 1 | 1 | +8
 2026-10-20 | Orszulik Jan | Koczyba Mariusz | 3-1 | 1 | 1 | +13
 2026-10-20 | Zielinski Marcin | Brunner Marian | 3-1 | 1 | 1 | +1
@@ -14890,11 +14890,11 @@
 2026-10-20 | Kuzmicz Jakub | Kosmal Dawid | 3-0 | 2 | 7 | +8
 2026-10-20 | Rutkowski Mateusz | Filbrandt Tomasz | 3-1 | 2 | 2 | +13
 2026-10-20 | Glanowski Jakub | Gajda Rafal | 3-0 | 2 | 9 | Pending
-2026-10-20 | Pietraszko Lukasz | Glanowski Jakub | 3-0 | 2 | 3 | Pending
-2026-10-20 | Szostok Sebastian | Marud Grzegorz | 3-0 | 2 | 5 | Pending
+2026-10-20 | Pietraszko Lukasz | Glanowski Jakub | 3-0 | 2 | 3 | +9
+2026-10-20 | Szostok Sebastian | Marud Grzegorz | 3-0 | 2 | 5 | +16
 2026-10-20 | Szlubowski Dariusz | Skorski Michal | 3-1 | 2 | 2 | +10
 2026-10-20 | Jurowicz Grzegorz | Kaczynski Piotr | 3-2 | 2 | 2 | +11
-2026-10-20 | Paszkiewicz Michal | Komandzik Rafal | 3-1 | 2 | 2 | Pending
+2026-10-20 | Paszkiewicz Michal | Komandzik Rafal | 3-1 | 2 | 2 | +4
 2026-10-20 | Koczyba Mariusz | Pytlas Wojciech | 3-2 | 2 | 2 | +9
 2026-10-20 | Tkocz Marek | Orszulik Jan | 3-0 | 2 | 2 | +11
 2026-10-20 | Rolak Jaroslaw | Piecowski Miroslaw | 3-2 | 2 | 2 | +8
@@ -14927,14 +14927,14 @@
 2026-10-20 | Wloczko Krzysztof | Kosmal Dawid | 3-1 | 3 | 8 | +6
 2026-10-20 | Rutkowski Mateusz | Kuzmicz Jakub | 3-0 | 3 | 3 | +24
 2026-10-20 | Minda Michal | Kukawka Milosz | 3-2 | 3 | 4 | +10
-2026-10-20 | Stapor Rafal | Mugowski Arkadiusz | 3-1 | 3 | 2 | Pending
+2026-10-20 | Stapor Rafal | Mugowski Arkadiusz | 3-1 | 3 | 2 | +9
 2026-10-20 | Pytlas Wojciech | Kaczynski Piotr | 3-2 | 3 | 3 | +8
 2026-10-20 | Rolak Jaroslaw | Szlubowski Dariusz | 3-1 | 3 | 3 | +16
 2026-10-20 | Trela Mateusz | Piecowski Miroslaw | 3-1 | 3 | 3 | +10
 2026-10-20 | Orszulik Jan | Jurowicz Grzegorz | 3-2 | 3 | 3 | +7
-2026-10-20 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-1 | 3 | 3 | Pending
+2026-10-20 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-1 | 3 | 3 | +6
 2026-10-20 | Koczyba Mariusz | Tkocz Marek | 3-2 | 3 | 3 | +11
-2026-10-20 | Szostok Sebastian | Nowak Jakub | 3-1 | 3 | 8 | Pending
+2026-10-20 | Szostok Sebastian | Nowak Jakub | 3-1 | 3 | 8 | +10
 2026-10-20 | Zielinski Marcin | Machelski Michal | 3-2 | 3 | 7 | Pending
 2026-10-20 | Warzecha Miroslaw | Machelski Michal | 3-0 | 4 | 3 | +4
 2026-10-20 | Kubiak Artur | Michalik Jerzy | 3-0 | 4 | 5 | +14
@@ -14963,14 +14963,15 @@
 2026-10-20 | Kuzmicz Jakub | Kolek Maciej | 3-2 | 4 | 9 | +5
 2026-10-20 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 4 | 9 | +10
 2026-10-20 | Filbrandt Tomasz | Wloczko Krzysztof | 3-2 | 4 | 4 | +12
-2026-10-20 | Stapor Rafal | Glanowski Jakub | 3-1 | 4 | 4 | Pending
+2026-10-20 | Stapor Rafal | Glanowski Jakub | 3-1 | 4 | 4 | +11
 2026-10-20 | Krezel Andrzej | Zmijewski Artur | 3-1 | 4 | 5 | +13
 2026-10-20 | Kaczynski Piotr | Orszulik Jan | 3-2 | 4 | 4 | +7
 2026-10-20 | Szlubowski Dariusz | Trela Mateusz | 3-2 | 4 | 4 | +6
-2026-10-20 | Skorski Michal | Rolak Jaroslaw | 3-2 | 4 | 4 | Pending
+2026-10-20 | Skorski Michal | Rolak Jaroslaw | 3-2 | 4 | 4 | +8
 2026-10-20 | Tkocz Marek | Pytlas Wojciech | 3-2 | 4 | 4 | +6
 2026-10-20 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 | 4 | 4 | +12
-2026-10-20 | Pietraszko Lukasz | Mugowski Arkadiusz | 3-1 | 4 | 4 | Pending
+2026-10-20 | Pietraszko Lukasz | Mugowski Arkadiusz | 3-1 | 4 | 4 | +5
+2026-10-20 | Paszkiewicz Michal | Nowak Jakub | 3-2 | 4 | 9 | +6
 2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
 2026-10-20 | Oracz Lukasz | Vincenec Oliver | 3-1 | 5 | 4 | +14
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 5 | 4 | +11
@@ -14992,15 +14993,19 @@
 2026-10-20 | Adamus Kacper | Baron Mariusz | 3-1 | 5 | 5 | +11
 2026-10-20 | Wloczko Krzysztof | Rutkowski Mateusz | 3-2 | 5 | 5 | +5
 2026-10-20 | Filbrandt Tomasz | Kuzmicz Jakub | 3-1 | 5 | 5 | +18
-2026-10-20 | Vincenec Oliver | Szostok Sebastian | 3-1 | 5 | 1 | Pending
-2026-10-20 | Nowak Jakub | Komandzik Rafal | 3-2 | 5 | 1 | Pending
+2026-10-20 | Vincenec Oliver | Szostok Sebastian | 3-1 | 5 | 1 | +11
+2026-10-20 | Nowak Jakub | Komandzik Rafal | 3-2 | 5 | 1 | +4
 2026-10-20 | Krezel Andrzej | Zielinski Marcin | 3-2 | 5 | 2 | +10
-2026-10-20 | Szlubowski Dariusz | Golaszewski Kuba | 3-0 | 5 | 10 | Pending
-2026-10-20 | Stapor Rafal | Blocho Przemyslaw | 3-2 | 5 | 4 | Pending
-2026-10-20 | Mugowski Arkadiusz | Glanowski Jakub | 3-1 | 5 | 6 | Pending
-2026-10-20 | Piecowski Miroslaw | Skorski Michal | 3-1 | 5 | 5 | Pending
-2026-10-20 | Kaczynski Piotr | Koczyba Mariusz | 3-2 | 5 | 5 | Pending
-2026-10-20 | Komandzik Rafal | Szostok Sebastian | 3-2 | 5 | 4 | Pending
+2026-10-20 | Szlubowski Dariusz | Golaszewski Kuba | 3-0 | 5 | 10 | +8
+2026-10-20 | Stapor Rafal | Blocho Przemyslaw | 3-2 | 5 | 4 | +10
+2026-10-20 | Mugowski Arkadiusz | Glanowski Jakub | 3-1 | 5 | 6 | +14
+2026-10-20 | Piecowski Miroslaw | Skorski Michal | 3-1 | 5 | 5 | +15
+2026-10-20 | Kaczynski Piotr | Koczyba Mariusz | 3-2 | 5 | 5 | +8
+2026-10-20 | Komandzik Rafal | Szostok Sebastian | 3-2 | 5 | 4 | +13
+2026-10-20 | Blocho Przemyslaw | Pietraszko Lukasz | 3-0 | 5 | 5 | +18
+2026-10-20 | Jurowicz Grzegorz | Tkocz Marek | 3-1 | 5 | 5 | +19
+2026-10-20 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 5 | 5 | +13
+2026-10-20 | Pytlas Wojciech | Orszulik Jan | 3-0 | 5 | 5 | +14
 2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 6 | 6 | +10
 2026-10-20 | Ptak Wiktor | Kurek Pawel | 3-0 | 6 | 6 | +16
 2026-10-20 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 5 | +15
@@ -15011,12 +15016,11 @@
 2026-10-20 | Juzek Sebastian | Kowalski Kamil | 3-0 | 6 | 6 | +8
 2026-10-20 | Adamus Kacper | Schaniel Krzysztof | 3-1 | 6 | 6 | +11
 2026-10-20 | Baron Mariusz | Smolka Kamil | 3-0 | 6 | 6 | +18
-2026-10-20 | Filbrandt Tomasz | Mugowski Arkadiusz | 3-0 | 6 | 1 | Pending
+2026-10-20 | Filbrandt Tomasz | Mugowski Arkadiusz | 3-0 | 6 | 1 | +5
 2026-10-20 | Golaszewski Kuba | Rolak Jaroslaw | 3-2 | 6 | 1 | +10
-2026-10-20 | Vincenec Oliver | Nowak Jakub | 3-1 | 6 | 6 | Pending
-2026-10-20 | Marud Grzegorz | Nowak Jakub | 3-0 | 6 | 7 | Pending
+2026-10-20 | Vincenec Oliver | Nowak Jakub | 3-1 | 6 | 6 | +10
+2026-10-20 | Marud Grzegorz | Nowak Jakub | 3-0 | 6 | 7 | +16
 2026-10-20 | Machelski Michal | Brunner Marian | 3-1 | 6 | 2 | +17
-2026-10-20 | Filbrandt Tomasz | Stapor Rafal | 3-1 |  | 6 | 
 2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | +3
 2026-10-20 | Kosowski Jakub | Chodorski Piotr | 3-1 | 7 | 7 | +8
 2026-10-20 | Lamperski Jakub | Sobel Artur | 3-1 | 7 | 6 | +13
@@ -15030,9 +15034,9 @@
 2026-10-20 | Schaniel Krzysztof | Juzek Sebastian | 3-2 | 7 | 7 | +8
 2026-10-20 | Smolka Kamil | Adamus Kacper | 3-1 | 7 | 7 | +13
 2026-10-20 | Golaszewski Kuba | Trela Mateusz | 3-2 | 7 | 2 | +11
-2026-10-20 | Filbrandt Tomasz | Blocho Przemyslaw | 3-2 | 7 | 2 | Pending
-2026-10-20 | Vincenec Oliver | Komandzik Rafal | 3-1 | 7 | 3 | Pending
-2026-10-20 | Marud Grzegorz | Komandzik Rafal | 3-0 | 7 | 4 | Pending
+2026-10-20 | Filbrandt Tomasz | Blocho Przemyslaw | 3-2 | 7 | 2 | +6
+2026-10-20 | Vincenec Oliver | Komandzik Rafal | 3-1 | 7 | 3 | +4
+2026-10-20 | Marud Grzegorz | Komandzik Rafal | 3-0 | 7 | 4 | +7
 2026-10-20 | Smolka Kamil | Juzek Sebastian | 3-0 | 8 | 8 | +13
 2026-10-20 | Adamus Kacper | Baron Mariusz | 3-1 | 8 | 8 | +11
 2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | +6
@@ -15045,9 +15049,10 @@
 2026-10-20 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | +7
 2026-10-20 | Sobel Artur | Kukawka Milosz | 3-0 | 8 | 3 | +20
 2026-10-20 | Kowalski Kamil | Schaniel Krzysztof | 3-1 | 8 | 8 | +19
-2026-10-20 | Filbrandt Tomasz | Pietraszko Lukasz | 3-0 | 8 | 3 | Pending
+2026-10-20 | Filbrandt Tomasz | Pietraszko Lukasz | 3-0 | 8 | 3 | +14
 2026-10-20 | Golaszewski Kuba | Skorski Michal | 3-1 | 8 | 3 | +16
-2026-10-20 | Vincenec Oliver | Paszkiewicz Michal | 3-1 | 8 | 3 | Pending
+2026-10-20 | Vincenec Oliver | Paszkiewicz Michal | 3-1 | 8 | 3 | +12
+2026-10-20 | Marud Grzegorz | Vincenec Oliver | 3-0 | 8 | 9 | +19
 2026-10-20 | Grela Artur | Kosowski Jakub | 3-1 | 9 | 9 | +12
 2026-10-20 | Jadach Oskar | Kurek Pawel | 3-2 | 9 | 9 | +5
 2026-10-20 | Schaniel Krzysztof | Smolka Kamil | 3-2 | 9 | 9 | +9
@@ -15059,10 +15064,11 @@
 2026-10-20 | Sobel Artur | Solilo Dominik | 3-2 | 9 | 8 | +8
 2026-10-20 | Juzek Sebastian | Baron Mariusz | 3-1 | 9 | 9 | +13
 2026-10-20 | Adamus Kacper | Kowalski Kamil | 3-2 | 9 | 9 | +3
-2026-10-20 | Filbrandt Tomasz | Glanowski Jakub | 3-1 | 9 | 5 | Pending
+2026-10-20 | Filbrandt Tomasz | Glanowski Jakub | 3-1 | 9 | 5 | +4
 2026-10-20 | Golaszewski Kuba | Piecowski Miroslaw | 3-1 | 9 | 4 | +13
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 10 | 10 | +11
 2026-10-20 | Wiecek Adrian | Kosowski Jakub | 3-1 | 10 | 10 | +13
+2026-10-20 | Filbrandt Tomasz | Stapor Rafal | 3-1 | 10 | 6 | +5
 2026-10-20 | Kosmal Dawid | Kolek Maciej | 3-1 | 10 | 10 | +14
 2026-10-20 | Kurek Pawel | Glanowski Waldemar | 3-0 | 10 | 10 | +10
 2026-10-20 | Przewlocki Piotr | Gajda Rafal | 3-1 | 10 | 9 | +15
