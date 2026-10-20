@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T14:40Z
+# updated 2026-10-20T15:13Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14844,10 +14844,10 @@
 2026-10-20 | Kowalski Kamil | Baron Mariusz | 3-2 | 1 | 1 | +12
 2026-10-20 | Schaniel Krzysztof | Adamus Kacper | 3-2 | 1 | 1 | +9
 2026-10-20 | Smolka Kamil | Juzek Sebastian | 3-0 | 1 | 1 | +13
-2026-10-20 | Wloczko Krzysztof | Kuzmicz Jakub | 3-0 | 1 | 1 | Pending
+2026-10-20 | Wloczko Krzysztof | Kuzmicz Jakub | 3-0 | 1 | 1 | +17
 2026-10-20 | Minda Michal | Lamperski Jakub | 3-1 | 1 | 6 | +12
 2026-10-20 | Kukawka Milosz | Solilo Dominik | 3-0 | 1 | 6 | +14
-2026-10-20 | Rutkowski Mateusz | Kolek Maciej | 3-1 | 1 | 6 | Pending
+2026-10-20 | Rutkowski Mateusz | Kolek Maciej | 3-1 | 1 | 6 | +13
 2026-10-20 | Warzecha Miroslaw | Kubiak Artur | 3-1 | 2 | 1 | +8
 2026-10-20 | Michalik Jerzy | Staniczek Adam | 3-2 | 2 | 1 | +5
 2026-10-20 | Zmijewski Artur | Kubiak Artur | 3-1 | 2 | 2 | +11
@@ -14877,8 +14877,8 @@
 2026-10-20 | Baron Mariusz | Schaniel Krzysztof | 3-2 | 2 | 2 | +9
 2026-10-20 | Juzek Sebastian | Kowalski Kamil | 3-2 | 2 | 2 | +5
 2026-10-20 | Adamus Kacper | Smolka Kamil | 3-2 | 2 | 2 | +8
-2026-10-20 | Kuzmicz Jakub | Kosmal Dawid | 3-0 | 2 | 7 | Pending
-2026-10-20 | Rutkowski Mateusz | Filbrandt Tomasz | 3-1 | 2 | 2 | Pending
+2026-10-20 | Kuzmicz Jakub | Kosmal Dawid | 3-0 | 2 | 7 | +8
+2026-10-20 | Rutkowski Mateusz | Filbrandt Tomasz | 3-1 | 2 | 2 | +13
 2026-10-20 | Glanowski Jakub | Gajda Rafal | 3-0 | 2 | 9 | Pending
 2026-10-20 | Michalik Jerzy | Machelski Michal | 3-2 | 3 | 2 | +5
 2026-10-20 | Warzecha Miroslaw | Staniczek Adam | 3-2 | 3 | 2 | +2
@@ -14905,8 +14905,8 @@
 2026-10-20 | Smolka Kamil | Baron Mariusz | 3-2 | 3 | 3 | +7
 2026-10-20 | Schaniel Krzysztof | Kowalski Kamil | 3-1 | 3 | 3 | +5
 2026-10-20 | Juzek Sebastian | Adamus Kacper | 3-0 | 3 | 3 | +20
-2026-10-20 | Wloczko Krzysztof | Kosmal Dawid | 3-1 | 3 | 8 | Pending
-2026-10-20 | Rutkowski Mateusz | Kuzmicz Jakub | 3-0 | 3 | 3 | Pending
+2026-10-20 | Wloczko Krzysztof | Kosmal Dawid | 3-1 | 3 | 8 | +6
+2026-10-20 | Rutkowski Mateusz | Kuzmicz Jakub | 3-0 | 3 | 3 | +24
 2026-10-20 | Warzecha Miroslaw | Machelski Michal | 3-0 | 4 | 3 | +4
 2026-10-20 | Kubiak Artur | Michalik Jerzy | 3-0 | 4 | 5 | +14
 2026-10-20 | Staniczek Adam | Machelski Michal | 3-1 | 4 | 4 | +12
@@ -14931,9 +14931,9 @@
 2026-10-20 | Schaniel Krzysztof | Smolka Kamil | 3-2 | 4 | 4 | +9
 2026-10-20 | Baron Mariusz | Juzek Sebastian | 3-0 | 4 | 4 | +16
 2026-10-20 | Kowalski Kamil | Adamus Kacper | 3-2 | 4 | 4 | +13
-2026-10-20 | Kuzmicz Jakub | Kolek Maciej | 3-2 | 4 | 9 | Pending
-2026-10-20 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 4 | 9 | Pending
-2026-10-20 | Filbrandt Tomasz | Wloczko Krzysztof | 3-2 | 4 | 4 | Pending
+2026-10-20 | Kuzmicz Jakub | Kolek Maciej | 3-2 | 4 | 9 | +5
+2026-10-20 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 4 | 9 | +10
+2026-10-20 | Filbrandt Tomasz | Wloczko Krzysztof | 3-2 | 4 | 4 | +12
 2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
 2026-10-20 | Oracz Lukasz | Vincenec Oliver | 3-1 | 5 | 4 | +14
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 5 | 4 | +11
@@ -14953,49 +14953,55 @@
 2026-10-20 | Juzek Sebastian | Schaniel Krzysztof | 3-0 | 5 | 5 | +19
 2026-10-20 | Smolka Kamil | Kowalski Kamil | 3-2 | 5 | 5 | +3
 2026-10-20 | Adamus Kacper | Baron Mariusz | 3-1 | 5 | 5 | +11
-2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 6 | 6 | Pending
-2026-10-20 | Ptak Wiktor | Kurek Pawel | 3-0 | 6 | 6 | Pending
+2026-10-20 | Wloczko Krzysztof | Rutkowski Mateusz | 3-2 | 5 | 5 | +5
+2026-10-20 | Filbrandt Tomasz | Kuzmicz Jakub | 3-1 | 5 | 5 | +18
+2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 6 | 6 | +10
+2026-10-20 | Ptak Wiktor | Kurek Pawel | 3-0 | 6 | 6 | +16
 2026-10-20 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 5 | +15
 2026-10-20 | David Petr | Kosowski Jakub | 3-1 | 6 | 6 | +10
 2026-10-20 | Wiecek Adrian | Grela Artur | 3-0 | 6 | 6 | +18
-2026-10-20 | Kosmal Dawid | Filbrandt Tomasz | 3-0 | 6 | 1 | Pending
-2026-10-20 | Przewlocki Piotr | Glanowski Waldemar | 3-2 | 6 | 6 | Pending
+2026-10-20 | Kosmal Dawid | Filbrandt Tomasz | 3-0 | 6 | 1 | +18
+2026-10-20 | Przewlocki Piotr | Glanowski Waldemar | 3-2 | 6 | 6 | +7
 2026-10-20 | Juzek Sebastian | Kowalski Kamil | 3-0 | 6 | 6 | +8
 2026-10-20 | Adamus Kacper | Schaniel Krzysztof | 3-1 | 6 | 6 | +11
 2026-10-20 | Baron Mariusz | Smolka Kamil | 3-0 | 6 | 6 | +18
-2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | Pending
+2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | +3
 2026-10-20 | Kosowski Jakub | Chodorski Piotr | 3-1 | 7 | 7 | +8
 2026-10-20 | Lamperski Jakub | Sobel Artur | 3-1 | 7 | 6 | +13
 2026-10-20 | Olejnik Martin | Wiecek Adrian | 3-2 | 7 | 7 | +10
-2026-10-20 | Gajda Rafal | Ptak Wiktor | 3-2 | 7 | 7 | Pending
-2026-10-20 | Kurek Pawel | Przewlocki Piotr | 3-0 | 7 | 7 | Pending
-2026-10-20 | Kolek Maciej | Wloczko Krzysztof | 3-1 | 7 | 2 | Pending
-2026-10-20 | Grela Artur | David Petr | 3-1 | 7 | 7 | Pending
+2026-10-20 | Gajda Rafal | Ptak Wiktor | 3-2 | 7 | 7 | +9
+2026-10-20 | Kurek Pawel | Przewlocki Piotr | 3-0 | 7 | 7 | +13
+2026-10-20 | Kolek Maciej | Wloczko Krzysztof | 3-1 | 7 | 2 | +18
+2026-10-20 | Grela Artur | David Petr | 3-1 | 7 | 7 | +14
 2026-10-20 | Sobel Artur | Minda Michal | 3-2 | 7 | 2 | +8
 2026-10-20 | Baron Mariusz | Kowalski Kamil | 3-2 | 7 | 7 | +4
 2026-10-20 | Schaniel Krzysztof | Juzek Sebastian | 3-2 | 7 | 7 | +8
 2026-10-20 | Smolka Kamil | Adamus Kacper | 3-1 | 7 | 7 | +13
-2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | Pending
-2026-10-20 | Gajda Rafal | Kurek Pawel | 3-2 | 8 | 8 | Pending
-2026-10-20 | Ptak Wiktor | Glanowski Waldemar | 3-1 | 8 | 8 | Pending
-2026-10-20 | Chodorski Piotr | Grela Artur | 3-1 | 8 | 8 | Pending
-2026-10-20 | Kolek Maciej | Filbrandt Tomasz | 3-1 | 8 | 3 | Pending
+2026-10-20 | Smolka Kamil | Juzek Sebastian | 3-0 | 8 | 8 | +13
+2026-10-20 | Adamus Kacper | Baron Mariusz | 3-1 | 8 | 8 | +11
+2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | +6
+2026-10-20 | Gajda Rafal | Kurek Pawel | 3-2 | 8 | 8 | +9
+2026-10-20 | Ptak Wiktor | Glanowski Waldemar | 3-1 | 8 | 8 | +7
+2026-10-20 | Chodorski Piotr | Grela Artur | 3-1 | 8 | 8 | +17
+2026-10-20 | Kolek Maciej | Filbrandt Tomasz | 3-1 | 8 | 3 | +11
 2026-10-20 | Lamperski Jakub | Kukawka Milosz | 3-1 | 8 | 2 | +16
-2026-10-20 | Jadach Oskar | Przewlocki Piotr | 3-1 | 8 | 8 | Pending
-2026-10-20 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | Pending
+2026-10-20 | Jadach Oskar | Przewlocki Piotr | 3-1 | 8 | 8 | +6
+2026-10-20 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | +7
 2026-10-20 | Sobel Artur | Kukawka Milosz | 3-0 | 8 | 3 | Pending
-2026-10-20 | Kowalski Kamil | Schaniel Krzysztof | 3-1 | 8 | 8 | Pending
-2026-10-20 | Grela Artur | Kosowski Jakub | 3-1 | 9 | 9 | Pending
-2026-10-20 | Jadach Oskar | Kurek Pawel | 3-2 | 9 | 9 | Pending
-2026-10-20 | Chodorski Piotr | Wiecek Adrian | 3-1 | 9 | 9 | Pending
-2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-1 | 9 | 9 | Pending
-2026-10-20 | Olejnik Martin | David Petr | 3-1 | 9 | 9 | Pending
-2026-10-20 | Glanowski Waldemar | Gajda Rafal | 3-0 | 9 | 10 | Pending
-2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 10 | 10 | Pending
-2026-10-20 | Wiecek Adrian | Kosowski Jakub | 3-1 | 10 | 10 | Pending
-2026-10-20 | Kosmal Dawid | Kolek Maciej | 3-1 | 10 | 10 | Pending
-2026-10-20 | Kurek Pawel | Glanowski Waldemar | 3-0 | 10 | 10 | Pending
-2026-10-20 | Przewlocki Piotr | Gajda Rafal | 3-1 | 10 | 9 | Pending
+2026-10-20 | Kowalski Kamil | Schaniel Krzysztof | 3-1 | 8 | 8 | +19
+2026-10-20 | Grela Artur | Kosowski Jakub | 3-1 | 9 | 9 | +12
+2026-10-20 | Jadach Oskar | Kurek Pawel | 3-2 | 9 | 9 | +5
+2026-10-20 | Chodorski Piotr | Wiecek Adrian | 3-1 | 9 | 9 | +16
+2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-1 | 9 | 9 | +8
+2026-10-20 | Olejnik Martin | David Petr | 3-1 | 9 | 9 | +17
+2026-10-20 | Glanowski Waldemar | Gajda Rafal | 3-0 | 9 | 10 | +22
+2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 10 | 10 | +11
+2026-10-20 | Wiecek Adrian | Kosowski Jakub | 3-1 | 10 | 10 | +13
+2026-10-20 | Kosmal Dawid | Kolek Maciej | 3-1 | 10 | 10 | +14
+2026-10-20 | Kurek Pawel | Glanowski Waldemar | 3-0 | 10 | 10 | +10
+2026-10-20 | Przewlocki Piotr | Gajda Rafal | 3-1 | 10 | 9 | +15
+2026-10-20 | Chodorski Piotr | David Petr | 3-1 | 10 | 10 | +17
+2026-10-20 | Ptak Wiktor | Jadach Oskar | 3-1 | 10 | 10 | +16
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -15021,6 +15027,4 @@
 2026-10-20 | Nocun Zbigniew | Frank Roman | 3-0 |  |  | 
 2026-10-20 | Lebek Marian | Ruszkiewicz Adam | 3-0 |  |  | 
 2026-10-20 | Solilo Dominik | Minda Michal | 3-2 |  |  | 
-2026-10-20 | Wloczko Krzysztof | Rutkowski Mateusz | 3-2 |  |  | 
 2026-10-20 | Lamperski Jakub | Solilo Dominik | 3-2 |  |  | 
-2026-10-20 | Smolka Kamil | Juzek Sebastian | 3-0 |  |  | 
