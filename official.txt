@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T12:53Z
+# updated 2026-10-20T13:45Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14879,6 +14879,7 @@
 2026-10-20 | Adamus Kacper | Smolka Kamil | 3-2 | 2 | 2 | +8
 2026-10-20 | Kuzmicz Jakub | Kosmal Dawid | 3-0 | 2 | 7 | Pending
 2026-10-20 | Rutkowski Mateusz | Filbrandt Tomasz | 3-1 | 2 | 2 | Pending
+2026-10-20 | Glanowski Jakub | Gajda Rafal | 3-0 | 2 | 9 | Pending
 2026-10-20 | Michalik Jerzy | Machelski Michal | 3-2 | 3 | 2 | +5
 2026-10-20 | Warzecha Miroslaw | Staniczek Adam | 3-2 | 3 | 2 | +2
 2026-10-20 | Zmijewski Artur | Michalik Jerzy | 3-0 | 3 | 4 | +12
@@ -14930,6 +14931,8 @@
 2026-10-20 | Schaniel Krzysztof | Smolka Kamil | 3-2 | 4 | 4 | +9
 2026-10-20 | Baron Mariusz | Juzek Sebastian | 3-0 | 4 | 4 | +16
 2026-10-20 | Kowalski Kamil | Adamus Kacper | 3-2 | 4 | 4 | +13
+2026-10-20 | Kuzmicz Jakub | Kolek Maciej | 3-2 | 4 | 9 | Pending
+2026-10-20 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 4 | 9 | Pending
 2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
 2026-10-20 | Oracz Lukasz | Vincenec Oliver | 3-1 | 5 | 4 | +14
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 5 | 4 | +11
@@ -14968,6 +14971,8 @@
 2026-10-20 | Kolek Maciej | Wloczko Krzysztof | 3-1 | 7 | 2 | Pending
 2026-10-20 | Grela Artur | David Petr | 3-1 | 7 | 7 | Pending
 2026-10-20 | Sobel Artur | Minda Michal | 3-2 | 7 | 2 | +8
+2026-10-20 | Baron Mariusz | Kowalski Kamil | 3-2 | 7 | 7 | +4
+2026-10-20 | Schaniel Krzysztof | Juzek Sebastian | 3-2 | 7 | 7 | +8
 2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | Pending
 2026-10-20 | Gajda Rafal | Kurek Pawel | 3-2 | 8 | 8 | Pending
 2026-10-20 | Ptak Wiktor | Glanowski Waldemar | 3-1 | 8 | 8 | Pending
@@ -14975,6 +14980,11 @@
 2026-10-20 | Kolek Maciej | Filbrandt Tomasz | 3-1 | 8 | 3 | Pending
 2026-10-20 | Lamperski Jakub | Kukawka Milosz | 3-1 | 8 | 2 | +16
 2026-10-20 | Jadach Oskar | Przewlocki Piotr | 3-1 | 8 | 8 | Pending
+2026-10-20 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | Pending
+2026-10-20 | Sobel Artur | Kukawka Milosz | 3-0 | 8 | 3 | Pending
+2026-10-20 | Grela Artur | Kosowski Jakub | 3-1 | 9 | 9 | Pending
+2026-10-20 | Chodorski Piotr | Wiecek Adrian | 3-1 | 9 | 9 | Pending
+2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-1 | 9 | 9 | Pending
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -15000,4 +15010,3 @@
 2026-10-20 | Nocun Zbigniew | Frank Roman | 3-0 |  |  | 
 2026-10-20 | Lebek Marian | Ruszkiewicz Adam | 3-0 |  |  | 
 2026-10-20 | Solilo Dominik | Minda Michal | 3-2 |  |  | 
-2026-10-20 | David Petr | Wiecek Adrian | 3-2 |  |  | 
