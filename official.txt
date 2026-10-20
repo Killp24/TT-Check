@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T11:35Z
+# updated 2026-10-20T12:06Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14904,6 +14904,7 @@
 2026-10-20 | Smolka Kamil | Baron Mariusz | 3-2 | 3 | 3 | +7
 2026-10-20 | Schaniel Krzysztof | Kowalski Kamil | 3-1 | 3 | 3 | +5
 2026-10-20 | Juzek Sebastian | Adamus Kacper | 3-0 | 3 | 3 | +20
+2026-10-20 | Wloczko Krzysztof | Kosmal Dawid | 3-1 | 3 | 8 | Pending
 2026-10-20 | Warzecha Miroslaw | Machelski Michal | 3-0 | 4 | 3 | +4
 2026-10-20 | Kubiak Artur | Michalik Jerzy | 3-0 | 4 | 5 | +14
 2026-10-20 | Staniczek Adam | Machelski Michal | 3-1 | 4 | 4 | +12
@@ -14954,6 +14955,7 @@
 2026-10-20 | Wiecek Adrian | Grela Artur | 3-0 | 6 | 6 | +18
 2026-10-20 | Kosmal Dawid | Filbrandt Tomasz | 3-0 | 6 | 1 | Pending
 2026-10-20 | Przewlocki Piotr | Glanowski Waldemar | 3-2 | 6 | 6 | Pending
+2026-10-20 | Juzek Sebastian | Kowalski Kamil | 3-0 | 6 | 6 | Pending
 2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | Pending
 2026-10-20 | Kosowski Jakub | Chodorski Piotr | 3-1 | 7 | 7 | +8
 2026-10-20 | Lamperski Jakub | Sobel Artur | 3-1 | 7 | 6 | +13
@@ -14962,6 +14964,10 @@
 2026-10-20 | Kurek Pawel | Przewlocki Piotr | 3-0 | 7 | 7 | Pending
 2026-10-20 | Kolek Maciej | Wloczko Krzysztof | 3-1 | 7 | 2 | Pending
 2026-10-20 | Grela Artur | David Petr | 3-1 | 7 | 7 | Pending
+2026-10-20 | Sobel Artur | Minda Michal | 3-2 | 7 | 2 | +8
+2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | Pending
+2026-10-20 | Gajda Rafal | Kurek Pawel | 3-2 | 8 | 8 | Pending
+2026-10-20 | Ptak Wiktor | Glanowski Waldemar | 3-1 |  | 8 | 
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
