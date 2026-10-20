@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-19T23:37Z
+# updated 2026-10-20T00:02Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14694,7 +14694,7 @@
 2026-10-19 | Marud Grzegorz | Nowak Jakub | 3-1 | 6 | 6 | +10
 2026-10-19 | Sulkowski Bartek | Linek Adam | 3-1 | 6 | 6 | +11
 2026-10-19 | Glanowski Jakub | Szoltysek Artur | 3-2 | 6 | 4 | +5
-2026-10-19 | Vincenec Oliver | Nowak Jakub | 3-2 | 6 | 7 | Pending
+2026-10-19 | Vincenec Oliver | Nowak Jakub | 3-2 | 6 | 7 | +7
 2026-10-19 | Kubiak Artur | Machelski Michal | 3-0 | 6 | 1 | +8
 2026-10-19 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 6 | 8 | +17
 2026-10-19 | Kwodawski Bartosz | Sulkowski Bartek | 3-1 | 6 | 8 | Pending
@@ -14719,7 +14719,7 @@
 2026-10-19 | Oracz Jacek | Nocun Zbigniew | 3-1 | 7 | 6 | +9
 2026-10-19 | Lukaszewski Mikolaj | Strus Piotr | 3-1 | 7 | 4 | +11
 2026-10-19 | Sulkowski Bartek | Minda Michal | 3-2 | 7 | 5 | +8
-2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-1 | 7 | 7 | Pending
+2026-10-19 | Urban Wojciech | Pruszkowski Jakub | 3-1 | 7 | 7 | +15
 2026-10-19 | Glanowski Jakub | Przewlocki Jacek | 3-2 | 7 | 5 | +5
 2026-10-19 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 | 7 | 10 | Pending
 2026-10-19 | Zwolinski Mariusz | Lukaszewski Mikolaj | 3-2 | 7 | 11 | Pending
@@ -14741,13 +14741,16 @@
 2026-10-19 | Wiciok Piotr | Tobiasz Wojciech | 3-0 | 8 | 8 | +11
 2026-10-19 | Wichowski Grzegorz | Mecik Patryk | 3-0 | 8 | 8 | +6
 2026-10-19 | Lukaszewski Mikolaj | Szoltysek Artur | 3-0 | 8 | 5 | +12
-2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-2 | 8 | 8 | Pending
+2026-10-19 | Pruszkowski Jakub | Oracz Lukasz | 3-2 | 8 | 8 | +6
 2026-10-19 | Oracz Jacek | Frank Roman | 3-1 | 8 | 5 | +5
 2026-10-19 | Glanowski Jakub | Lukaszewski Mikolaj | 3-1 | 8 | 9 | Pending
-2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-1 | 8 | 7 | Pending
+2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-1 | 8 | 7 | +12
 2026-10-19 | Linek Adam | Stapor Rafal | 3-1 | 8 | 6 | Pending
-2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-2 | 8 | 9 | Pending
-2026-10-19 | Vincenec Oliver | Marud Grzegorz | 3-2 | 8 | 9 | Pending
+2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-2 | 8 | 9 | +8
+2026-10-19 | Vincenec Oliver | Marud Grzegorz | 3-2 | 8 | 9 | +9
+2026-10-19 | Szoltysek Artur | Lukaszewski Mikolaj | 3-0 | 8 | 12 | Pending
+2026-10-19 | Tkaczyk Henryk | Nocun Zbigniew | 3-2 | 8 | 10 | +5
+2026-10-19 | Krezel Andrzej | Lewczuk Miroslaw | 3-2 | 8 | 8 | +8
 2026-10-19 | Grela Artur | Wiecek Adrian | 3-2 | 9 | 9 | +7
 2026-10-19 | Sulkowski Bartek | Linek Adam | 3-1 | 9 | 9 | Pending
 2026-10-19 | Rutkowski Mateusz | Sobel Artur | 3-2 | 9 | 9 | +6
@@ -14763,11 +14766,12 @@
 2026-10-19 | Wiciok Piotr | Fomin Yurij | 3-2 | 9 | 9 | +7
 2026-10-19 | Wichowski Grzegorz | Tobiasz Wojciech | 3-1 | 9 | 9 | +4
 2026-10-19 | Polok Pawel | Mecik Patryk | 3-0 | 9 | 9 | +14
-2026-10-19 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 9 | 7 | Pending
-2026-10-19 | Urban Wojciech | Nowak Jakub | 3-2 | 9 | 8 | Pending
+2026-10-19 | Pruszkowski Jakub | Vincenec Oliver | 3-1 | 9 | 7 | +9
+2026-10-19 | Urban Wojciech | Nowak Jakub | 3-2 | 9 | 8 | +6
 2026-10-19 | Oracz Jacek | Tkaczyk Henryk | 3-1 | 9 | 6 | +3
 2026-10-19 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 | 9 | 7 | +14
 2026-10-19 | Glanowski Jakub | Przewlocki Jacek | 3-0 | 9 | 8 | Pending
+2026-10-19 | Rudomina Kamil | Linek Adam | 3-2 | 9 | 10 | Pending
 2026-10-19 | Przewlocki Piotr | Slawinski Kacper | 3-2 | 10 | 10 | +12
 2026-10-19 | Kukawka Milosz | Sobel Artur | 3-0 | 10 | 10 | +14
 2026-10-19 | Kosmal Dawid | Czerwinski Bartosz | 3-1 | 10 | 4 | +12
@@ -14779,7 +14783,11 @@
 2026-10-19 | Fomin Yurij | Wichowski Grzegorz | 3-1 | 10 | 10 | +18
 2026-10-19 | Polok Pawel | Wiciok Piotr | 3-0 | 10 | 10 | +19
 2026-10-19 | Mecik Patryk | Tobiasz Wojciech | 3-0 | 10 | 10 | +15
-2026-10-19 | Pruszkowski Jakub | Nowak Jakub | 3-2 | 10 | 9 | Pending
+2026-10-19 | Pruszkowski Jakub | Nowak Jakub | 3-2 | 10 | 9 | +5
+2026-10-19 | Sulkowski Bartek | Stapor Rafal | 3-1 | 10 | 7 | Pending
+2026-10-19 | Oracz Lukasz | Urban Wojciech | 3-1 | 10 | 10 | +14
+2026-10-19 | Nowak Jakub | Marud Grzegorz | 3-2 | 10 | 10 | Pending
+2026-10-19 | Linek Adam | Kwodawski Bartosz | 3-2 | 11 | 8 | Pending
 2026-10-19 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-19 | Linek Adam | Glanowski Jakub | 3-0 |  |  | 
 2026-10-19 | Vincenec Oliver | Sikon Mateusz | 3-1 |  |  | 
@@ -14805,7 +14813,9 @@
 2026-10-19 | Wiecek Adrian | Kuzmicz Jakub | 3-1 |  |  | 
 2026-10-20 | Warzecha Miroslaw | Michalik Jerzy | 3-2 | 1 | 1 | +4
 2026-10-20 | Zmijewski Artur | Machelski Michal | 3-1 | 1 | 1 | +5
-2026-10-20 | Warzecha Miroslaw | Kubiak Artur | 3-1 | 2 | 1 | Pending
+2026-10-20 | Warzecha Miroslaw | Kubiak Artur | 3-1 | 2 | 1 | +8
+2026-10-20 | Michalik Jerzy | Staniczek Adam | 3-2 | 2 | 1 | +5
+2026-10-20 | Zmijewski Artur | Kubiak Artur | 3-1 | 2 | 2 | Pending
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -14817,7 +14827,6 @@
 2026-10-20 | Zwolinski Mariusz | Lukaszewski Mikolaj | 3-2 |  |  | 
 2026-10-20 | Glanowski Jakub | Przewlocki Jacek | 3-0 |  |  | 
 2026-10-20 | Szoltysek Artur | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-20 | Michalik Jerzy | Staniczek Adam | 3-2 |  |  | 
 2026-10-20 | Vincenec Oliver | Marud Grzegorz | 3-2 |  |  | 
 2026-10-20 | Pruszkowski Jakub | Nowak Jakub | 3-2 |  |  | 
 2026-10-20 | Oracz Lukasz | Urban Wojciech | 3-1 |  |  | 
