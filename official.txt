@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-20T13:47Z
+# updated 2026-10-20T14:36Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14933,6 +14933,7 @@
 2026-10-20 | Kowalski Kamil | Adamus Kacper | 3-2 | 4 | 4 | +13
 2026-10-20 | Kuzmicz Jakub | Kolek Maciej | 3-2 | 4 | 9 | Pending
 2026-10-20 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 4 | 9 | Pending
+2026-10-20 | Filbrandt Tomasz | Wloczko Krzysztof | 3-2 | 4 | 4 | Pending
 2026-10-20 | Warzecha Miroslaw | Zmijewski Artur | 3-1 | 5 | 4 | +9
 2026-10-20 | Oracz Lukasz | Vincenec Oliver | 3-1 | 5 | 4 | +14
 2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 5 | 4 | +11
@@ -14973,6 +14974,7 @@
 2026-10-20 | Sobel Artur | Minda Michal | 3-2 | 7 | 2 | +8
 2026-10-20 | Baron Mariusz | Kowalski Kamil | 3-2 | 7 | 7 | +4
 2026-10-20 | Schaniel Krzysztof | Juzek Sebastian | 3-2 | 7 | 7 | +8
+2026-10-20 | Smolka Kamil | Adamus Kacper | 3-1 | 7 | 7 | +13
 2026-10-20 | Kosowski Jakub | Olejnik Martin | 3-2 | 8 | 8 | Pending
 2026-10-20 | Gajda Rafal | Kurek Pawel | 3-2 | 8 | 8 | Pending
 2026-10-20 | Ptak Wiktor | Glanowski Waldemar | 3-1 | 8 | 8 | Pending
@@ -14982,9 +14984,18 @@
 2026-10-20 | Jadach Oskar | Przewlocki Piotr | 3-1 | 8 | 8 | Pending
 2026-10-20 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | Pending
 2026-10-20 | Sobel Artur | Kukawka Milosz | 3-0 | 8 | 3 | Pending
+2026-10-20 | Kowalski Kamil | Schaniel Krzysztof | 3-1 | 8 | 8 | Pending
 2026-10-20 | Grela Artur | Kosowski Jakub | 3-1 | 9 | 9 | Pending
+2026-10-20 | Jadach Oskar | Kurek Pawel | 3-2 | 9 | 9 | Pending
 2026-10-20 | Chodorski Piotr | Wiecek Adrian | 3-1 | 9 | 9 | Pending
 2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-1 | 9 | 9 | Pending
+2026-10-20 | Olejnik Martin | David Petr | 3-1 | 9 | 9 | Pending
+2026-10-20 | Glanowski Waldemar | Gajda Rafal | 3-0 | 9 | 10 | Pending
+2026-10-20 | Grela Artur | Olejnik Martin | 3-0 | 10 | 10 | Pending
+2026-10-20 | Wiecek Adrian | Kosowski Jakub | 3-1 | 10 | 10 | Pending
+2026-10-20 | Kosmal Dawid | Kolek Maciej | 3-1 | 10 | 10 | Pending
+2026-10-20 | Kurek Pawel | Glanowski Waldemar | 3-0 | 10 | 10 | Pending
+2026-10-20 | Przewlocki Piotr | Gajda Rafal | 3-1 | 10 | 9 | Pending
 2026-10-20 | Sulkowski Bartek | Linek Adam | 3-1 |  |  | 
 2026-10-20 | Nocun Zbigniew | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-20 | Przewlocki Jacek | Lukaszewski Mikolaj | 3-1 |  |  | 
@@ -15010,5 +15021,3 @@
 2026-10-20 | Nocun Zbigniew | Frank Roman | 3-0 |  |  | 
 2026-10-20 | Lebek Marian | Ruszkiewicz Adam | 3-0 |  |  | 
 2026-10-20 | Solilo Dominik | Minda Michal | 3-2 |  |  | 
-2026-10-20 | Olejnik Martin | David Petr | 3-1 |  |  | 
-2026-10-20 | Glanowski Waldemar | Gajda Rafal | 3-0 |  |  | 
