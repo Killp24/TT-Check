@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-21T14:39Z
+# updated 2026-10-21T17:12Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -29916,7 +29916,7 @@
 2026-09-21 | Janus Slawomir | Maszczynski Dariusz | 3-0
 2026-10-05 | Maszczynski Dariusz | Janus Slawomir | 3-1
 2026-10-19 | Janus Slawomir | Maszczynski Dariusz | 3-2
-# pair | Janus Slawomir | Michalik Jerzy | 2026-10-20T23:05Z
+# pair | Janus Slawomir | Michalik Jerzy | 2026-10-21T17:12Z
 2025-07-28 | Janus Slawomir | Michalik Jerzy | 3-2
 2025-08-04 | Michalik Jerzy | Janus Slawomir | 3-0
 2025-09-01 | Janus Slawomir | Michalik Jerzy | 3-2
@@ -61153,7 +61153,7 @@
 2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1
 2026-10-12 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-2
 2026-10-13 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-1
-# pair | Poliniewicz Grzegorz | Solilo Dominik | 2026-10-20T23:05Z
+# pair | Poliniewicz Grzegorz | Solilo Dominik | 2026-10-21T17:12Z
 2025-12-28 | Poliniewicz Grzegorz | Solilo Dominik | 3-0
 2025-12-31 | Solilo Dominik | Poliniewicz Grzegorz | 3-1
 2026-04-03 | Poliniewicz Grzegorz | Solilo Dominik | 3-2
@@ -61169,6 +61169,7 @@
 2026-09-17 | Poliniewicz Grzegorz | Solilo Dominik | 3-1
 2026-09-20 | Poliniewicz Grzegorz | Solilo Dominik | 3-2
 2026-10-19 | Poliniewicz Grzegorz | Solilo Dominik | 3-2
+2026-10-21 | Solilo Dominik | Poliniewicz Grzegorz | 3-2
 # pair | Poliniewicz Grzegorz | Staszczyk Konrad | 2026-10-20T04:40Z
 2023-02-23 | Poliniewicz Grzegorz | Staszczyk Konrad | 3-0
 2023-04-06 | Staszczyk Konrad | Poliniewicz Grzegorz | 3-1
@@ -63978,7 +63979,7 @@
 2026-09-02 | Ptak Wiktor | Przewlocki Piotr | 3-2
 2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-1
 2026-10-20 | Ptak Wiktor | Przewlocki Piotr | 3-2
-# pair | Przewlocki Piotr | Schaniel Krzysztof | 2026-10-20T23:05Z
+# pair | Przewlocki Piotr | Schaniel Krzysztof | 2026-10-21T17:12Z
 2025-04-02 | Przewlocki Piotr | Schaniel Krzysztof | 3-1
 2025-04-02 | Schaniel Krzysztof | Przewlocki Piotr | 3-0
 2025-06-12 | Schaniel Krzysztof | Przewlocki Piotr | 3-1
@@ -64017,6 +64018,8 @@
 2026-09-29 | Przewlocki Piotr | Schaniel Krzysztof | 3-1
 2026-09-29 | Schaniel Krzysztof | Przewlocki Piotr | 3-2
 2026-10-19 | Przewlocki Piotr | Schaniel Krzysztof | 3-2
+2026-10-21 | Przewlocki Piotr | Schaniel Krzysztof | 3-1
+2026-10-21 | Schaniel Krzysztof | Przewlocki Piotr | 3-2
 # pair | Przewlocki Piotr | Skotniczny Rafal | 2026-10-14T15:28Z
 2025-10-25 | Przewlocki Piotr | Skotniczny Rafal | 3-1
 2026-06-11 | Przewlocki Piotr | Skotniczny Rafal | 3-2
@@ -66996,7 +66999,7 @@
 2026-08-06 | Schaniel Krzysztof | Skotniczny Rafal | 3-2
 2026-08-06 | Schaniel Krzysztof | Skotniczny Rafal | 3-2
 2026-10-02 | Skotniczny Rafal | Schaniel Krzysztof | 3-0
-# pair | Schaniel Krzysztof | Slawinski Kacper | 2026-10-20T23:05Z
+# pair | Schaniel Krzysztof | Slawinski Kacper | 2026-10-21T17:12Z
 2023-10-12 | Slawinski Kacper | Schaniel Krzysztof | 3-2
 2023-10-12 | Slawinski Kacper | Schaniel Krzysztof | 3-2
 2024-01-26 | Slawinski Kacper | Schaniel Krzysztof | 3-0
@@ -67066,6 +67069,8 @@
 2026-09-25 | Schaniel Krzysztof | Slawinski Kacper | 3-1
 2026-09-25 | Slawinski Kacper | Schaniel Krzysztof | 3-0
 2026-10-19 | Slawinski Kacper | Schaniel Krzysztof | 3-0
+2026-10-21 | Schaniel Krzysztof | Slawinski Kacper | 3-1
+2026-10-21 | Slawinski Kacper | Schaniel Krzysztof | 3-1
 # pair | Schaniel Krzysztof | Slosarczyk Pawel | 2026-10-08T04:39Z
 2025-06-12 | Schaniel Krzysztof | Slosarczyk Pawel | 3-0
 2025-06-13 | Slosarczyk Pawel | Schaniel Krzysztof | 3-2
