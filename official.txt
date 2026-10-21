@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T02:37Z
+# updated 2026-10-21T03:08Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15158,8 +15158,17 @@
 2026-10-21 | Brunner Marian | Zielinski Marcin | 3-2 | 2 | 1 | Pending
 2026-10-21 | Vincenec Oliver | Paszkiewicz Michal | 3-1 | 2 | 1 | +12
 2026-10-21 | Zmijewski Artur | Pyrek Dawid | 3-2 | 2 | 1 | Pending
+2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 | 2 | 3 | Pending
+2026-10-21 | Zielinski Marcin | Machelski Michal | 3-0 | 2 | 2 | Pending
+2026-10-21 | Nowak Jakub | Paszkiewicz Michal | 3-0 | 2 | 2 | +18
+2026-10-21 | Adamus Pawel | Jurowicz Grzegorz | 3-2 | 2 | 3 | +6
 2026-10-21 | Skorski Michal | Trela Mateusz | 3-1 | 3 | 2 | +12
 2026-10-21 | Piecowski Miroslaw | Lukaszewski Mikolaj | 3-1 | 3 | 3 | +15
+2026-10-21 | Marud Grzegorz | Szostok Sebastian | 3-1 | 3 | 2 | +11
+2026-10-21 | Tkocz Marek | Lebek Marian | 3-0 | 3 | 3 | +18
+2026-10-21 | Vincenec Oliver | Komandzik Rafal | 3-0 | 3 | 2 | +6
+2026-10-21 | Orszulik Jan | Sokolowski Oliwier | 3-0 | 3 | 2 | +18
+2026-10-21 | Zmijewski Artur | Krezel Andrzej | 3-0 | 3 | 2 | Pending
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
 2026-10-21 | Pietraszko Lukasz | Sulkowski Bartek | 3-0 |  |  | 
@@ -15175,11 +15184,6 @@
 2026-10-21 | Staszczyk Konrad | Sulkowski Bartek | 3-0 |  |  | 
 2026-10-21 | Szostok Sebastian | Paszkiewicz Michal | 3-1 |  |  | 
 2026-10-21 | Orszulik Jan | Tkocz Marek | 3-1 |  |  | 
-2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Machelski Michal | Pyrek Dawid | 3-1 |  |  | 
 2026-10-21 | Komandzik Rafal | Nowak Jakub | 3-1 |  |  | 
 2026-10-21 | Sokolowski Oliwier | Adamus Pawel | 3-2 |  |  | 
-2026-10-21 | Zielinski Marcin | Machelski Michal | 3-0 |  |  | 
-2026-10-21 | Marud Grzegorz | Szostok Sebastian | 3-1 |  |  | 
-2026-10-21 | Nowak Jakub | Paszkiewicz Michal | 3-0 |  |  | 
-2026-10-21 | Adamus Pawel | Jurowicz Grzegorz | 3-2 |  |  | 
