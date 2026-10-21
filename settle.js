@@ -985,9 +985,18 @@ function seriesLeadGate(rows, prior) {
   return { on, n: hn, gain, shift: on ? shrunkShift(n, w, exp, prior) : 0 };
 }
 
+// Logit shift for the winner of an earlier same-day match.
+// A 3-2 moves the win chance 20 Elo toward the player who lost it.
+// 735 same-day rematches: that winner took the next one 48.0% of the time,
+// where the ratings said 53.1%. A 3-0 or a 3-1 does not get this shift.
+function closeRematchShift(score) {
+  if (String(score || "").trim() !== "3-2") return 0;
+  return -20 * Math.LN10 / 400;
+}
+
 // Winner of the last meeting when that match was 3-0.
-// A 3-1 did not beat the price. A 3-2 pointed the other way, but the later
-// matches were too close to the price to move it. Rows can arrive in any order.
+// A 3-1 did not beat the price. A same-day 3-2 uses closeRematchShift.
+// Rows can arrive in any order.
 function lastSweep(rows) {
   const list = [];
   for (const row of rows || []) {

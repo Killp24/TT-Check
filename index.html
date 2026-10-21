@@ -848,7 +848,11 @@ function estimate(a,b,opt){
   formNotes.push(line);why.push(line);
  }
  const rx=prev?RADJ[prev.score]:null;
- if(prev&&rx&&rx.n>=40&&rx.shift>=0.05){   // 3-0 is already priced into the rating change
+ const close=prev?closeRematchShift(prev.score):0;
+ if(close){
+  adj+=(prev.w===a.name?1:-1)*close;
+  why.push(`${esc(sur(prev.w))} beat ${esc(sur(prev.l))} 3-2 earlier today. Over 735 same-day rematches the 3-2 winner took the next one 48% of the time, where the ratings said 53%, so +${Math.abs(toElo(close))} Elo for ${esc(sur(prev.l))}`);
+ }else if(prev&&rx&&rx.n>=40&&rx.shift>=0.05){   // 3-0 is already priced into the rating change
   adj+=(prev.w===a.name?1:-1)*rx.shift;
   why.push(`${esc(sur(prev.w))} beat ${esc(sur(prev.l))} ${esc(prev.score)} earlier today; after a same-day ${esc(prev.score)} win the winner takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time (${rx.won} of ${rx.n}), more than the new ratings allow for, so +${Math.abs(toElo(rx.shift))} Elo`);
  }
@@ -866,8 +870,9 @@ function estimate(a,b,opt){
  if(opt&&opt.book!=null&&BOOK_W>0){book=opt.book;bookW=BOOK_W;pa=logitBlend(preBook,book,BOOK_W)}
  return{pe,pa,preBook,why,skipped,prev,banWhy,raw,formNotes,h2h:hx,book,bookW};
 }
-// A second call on top of our price. Head-to-head, a same-day 3-2, a short losing run,
-// hot or cold form, and a cold slate. Today's match count stays out. This does not change pa.
+// A second call on top of our price. Head-to-head, a short losing run,
+// hot or cold form, and a cold slate. A same-day 3-2 is already in the price.
+// Today's match count stays out. This does not change pa.
 function coldSlateOf(name){
  const s=STATS.get(name);
  if(!s||!s.days)return null;
@@ -882,7 +887,7 @@ function ambitiousRead(a,b,est){
   notes.push(`Head-to-head is ${hx.aw}–${hx.bw} for ${sur(a.name)}`);
  }
  const prev=est&&est.prev,rx=prev?RADJ[prev.score]:null;
- if(prev&&rx&&rx.n>=40&&rx.shift<=-0.05){
+ if(prev&&rx&&rx.n>=40&&rx.shift<=-0.05&&!closeRematchShift(prev.score)){
   shifts.push((prev.w===a.name?1:-1)*rx.shift);
   notes.push(`${sur(prev.w)} won ${prev.score} earlier today, and that winner has taken the rematch less often than Elo expects`);
  }
@@ -1197,9 +1202,16 @@ function update(){
  if(gap&&dw>fw&&meet.length>=4){if(!fb&&!db)title="Head-to-head favors the underdog";cls=cls.replace(" good","")+" warn";body+=` Head-to-head goes the other way: ${esc(dog.name)} leads ${dw}–${fw}.`}
  const notes=[];
  if(est.prev){const p=est.prev,rx=RADJ[p.score],wonEarlier=p.w===fav.name;
-  const on=rx&&rx.n>=40&&rx.shift>=0.05;
-  notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The ratings above already include the points that moved after it.${rx&&rx.n>=40?` Historically the winner of the first match takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time, and the ratings predict ${Math.round(rx.exp/rx.n*100)}%${on?", so the estimate adds points for it":" — the same thing, so no points are added: winning earlier mostly just confirms who the better player is"}.`:""}`);
-  if(!wonEarlier&&on){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}}
+  const close=closeRematchShift(p.score);
+  const on=!close&&rx&&rx.n>=40&&rx.shift>=0.05;
+  if(close){
+   notes.push(`They already played today: ${esc(p.w)} won 3-2. The ratings above already include the points that moved after it. A same-day 3-2 winner takes the rematch 48% of the time where the ratings say 53%, measured on 735 rematches, so the estimate moves ${Math.abs(toElo(close))} Elo toward ${esc(p.l)}.`);
+   if(p.w===fav.name){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Won 3-2 earlier today"}
+  }else{
+   notes.push(`They already played today: ${esc(p.w)} won ${esc(p.score)}. The ratings above already include the points that moved after it.${rx&&rx.n>=40?` Historically the winner of the first match takes the rematch ${Math.round(rx.won/rx.n*100)}% of the time, and the ratings predict ${Math.round(rx.exp/rx.n*100)}%${on?", so the estimate adds points for it":" — the same thing, so no points are added: winning earlier mostly just confirms who the better player is"}.`:""}`);
+   if(!wonEarlier&&on){cls=cls.replace(" good","").replace(" warn","")+" warn";if(!fb&&!db)title="Lost to this opponent earlier today"}
+  }
+ }
  for(const k of est.banWhy){
   const se=sessionOf(k.p.name),today=se.n?` This session he's ${se.w}–${se.n-se.w}${se.run>=3?`, having lost ${se.run} in a row`:""}.`:" He hasn't played recently.";
   const who=`${esc(k.p.name)} (ban #${banRank(k.p)}, Tier ${k.t})`;
@@ -1909,7 +1921,7 @@ function reportCard(){
   return{t,n:xs.length,won:xs.reduce((s,x)=>s+x[1],0),exp:xs.reduce((s,x)=>s+x[0],0)}});
  const tiersAll=tierRow(dates[0]),tiersNew=tierRow(LISTDATE);
  const rem=Object.keys(RADJ).sort();
- const used=rem.filter(k=>RADJ[k].n>=40&&RADJ[k].shift>=0.05);
+ const used=rem.filter(k=>!closeRematchShift(k)&&RADJ[k].n>=40&&RADJ[k].shift>=0.05);
  box.innerHTML=`<p class="help">Every match below is scored using ratings built only from earlier matches, so nothing is judged with hindsight. ${MODEL.n.toLocaleString()} matches have enough history to test; the calibration table covers the last 14 days (${tested.length}).</p>
  <h3 class="rch">The app vs the book</h3>
  ${(()=>{const s=bookScore();
@@ -1931,7 +1943,7 @@ function reportCard(){
   <p class="help">The estimate adds ${SADJ[3]&&SADJ[3].n>=100&&SADJ[3].shift>0.02?`+${Math.abs(toElo(SADJ[3].shift))} Elo after 3 or more losses in a row`:"nothing yet"}. It needs today's results, so it only works while results are collected through the day.</p>`})()}
  <h3 class="rch">Same-day rematches</h3>
  ${rem.length?`<div class="otab"><table><tr><th>First result</th><th>Rematches</th><th>Winner won again</th><th>Predicted</th></tr>${rem.map(k=>{const x=RADJ[k];return `<tr><td>${esc(k)}</td><td>${x.n}</td><td class="${x.won/x.n-x.exp/x.n>0.05?"pos":""}">${pct(x.won/x.n)}</td><td>${pct(x.exp/x.n)}</td></tr>`}).join("")}</table></div>
- <p class="help">Whoever won the first match usually wins the rematch, but that's because they're the better player — the ratings already expect it. The estimate only adds points if they win by more than predicted: currently ${used.length?used.map(k=>`${esc(k)}: +${Math.abs(toElo(RADJ[k].shift))} Elo`).join(", "):"no adjustment, the gap is too small to be real"}.</p>`:`<p class="help">No rematch data yet.</p>`}
+ <p class="help">A same-day 3-2 moves the estimate 20 Elo toward the player who lost that match. Over 735 of those rematches the winner took the next one 48% of the time, where the ratings said 53%. A 3-0 or a 3-1 does not get that move. Another score adds points only when its winner takes the rematch more often than the ratings say: currently ${used.length?used.map(k=>`${esc(k)}: +${Math.abs(toElo(RADJ[k].shift))} Elo`).join(", "):"no other adjustment"}.</p>`:`<p class="help">No rematch data yet. A same-day 3-2 still moves the estimate 20 Elo toward the player who lost it. A 3-0 or a 3-1 does not.</p>`}
  <h3 class="rch">When the estimate says…</h3>
  <div class="otab"><table><tr><th>Estimate</th><th>Matches</th><th>Favorite won</th></tr>${bk.filter(b=>b.n).map(b=>`<tr><td>${Math.round(b.lo*100)}–${Math.min(100,Math.round(b.hi*100))}%</td><td>${b.n}</td><td class="${Math.abs(b.act-b.pred)>0.08&&b.n>=30?"neg":""}">${pct(b.act)} <span class="muted">(avg est ${pct(b.pred)})</span></td></tr>`).join("")}</table></div>
  <p class="help">Favorites should win about as often as predicted. Gaps over 8 points on 30+ matches are marked red.</p>`;
@@ -2037,7 +2049,8 @@ function renderSignals(){
   }
   if(so&&isFlagPair(so.o1,so.o2))sigs.push({cls:"flagp",text:"Flagged price",rank:25});
   const prev=e.prev;
-  if(prev&&(prev.score==="3-0"||prev.score==="3-1"))sigs.push({cls:"rem",text:`Rematch ${prev.score} · ${sur(prev.w)} won`,rank:prev.score==="3-0"?36:32});
+  if(prev&&closeRematchShift(prev.score))sigs.push({cls:"rem",text:`Rematch 3-2 · ${sur(prev.l)}`,rank:34});
+  else if(prev&&(prev.score==="3-0"||prev.score==="3-1"))sigs.push({cls:"rem",text:`Rematch ${prev.score} · ${sur(prev.w)} won`,rank:prev.score==="3-0"?36:32});
   if(sigs.length)items.push({r,e,sigs,so,best,rank:Math.max(...sigs.map(s=>s.rank||0))});
  }
  const isRem=x=>x.sigs.some(s=>s.cls==="rem");
@@ -2046,7 +2059,7 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match at 70% or more: one player is hot and at least 100 Elo higher, and the other is cold. Each side is at least 1.5 wins off Elo. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day rematches are listed first. A 3-2 moves the estimate 20 Elo toward the player who lost it. A 3-0 or a 3-1 does not. A gold border is a legendary match at 70% or more: one player is hot and at least 100 Elo higher, and the other is cold. Each side is at least 1.5 wins off Elo. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
