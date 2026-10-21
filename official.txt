@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T12:10Z
+# updated 2026-10-21T12:46Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14215,7 +14215,7 @@
 2026-10-18 | Adamus Mariusz | Adach Rafal | 3-0 | 2 | 2 | +8
 2026-10-18 | Urban Wojciech | Tkaczyk Henryk | 3-1 | 2 | 2 | +13
 2026-10-18 | Ptak Wiktor | Pelka Jerzy | 3-2 | 2 | 2 | +10
-2026-10-18 | Solilo Dominik | Kesik Gracjan | 3-1 | 2 | 2 | +12
+2026-10-18 | Solilo Dominik | Kesik Gracjan | 3-1 | 2 | 2 | +10
 2026-10-18 | Wisniewski Bartlomiej | Sinicki Maciej | 3-1 | 2 | 2 | +12
 2026-10-18 | Jesiek Jakub | Pytlas Wojciech | 3-2 | 2 | 2 | +9
 2026-10-18 | Jedrzejak Patryk | Buczynski Witold | 3-1 | 2 | 2 | +5
@@ -15230,6 +15230,9 @@
 2026-10-21 | Madej Boguslaw | Pruszkowski Jakub | 3-2 | 3 | 3 | +11
 2026-10-21 | Dlugaj Rafal | Rus Maksymilian | 3-0 | 3 | 3 | +6
 2026-10-21 | Minda Michal | Myszewski Adrian | 3-0 | 3 | 8 | Pending
+2026-10-21 | Solilo Dominik | Poliniewicz Grzegorz | 3-2 | 3 | 8 | Pending
+2026-10-21 | Rutkowski Mateusz | Czerwinski Bartosz | 3-0 | 3 | 8 | Pending
+2026-10-21 | Rudomina Kamil | Linek Adam | 3-2 | 3 | 3 | Pending
 2026-10-21 | Zmijewski Artur | Machelski Michal | 3-0 | 4 | 3 | +6
 2026-10-21 | Brunner Marian | Krezel Andrzej | 3-2 | 4 | 3 | +12
 2026-10-21 | Lebek Marian | Adamus Mariusz | 3-0 | 4 | 1 | +13
@@ -15280,7 +15283,8 @@
 2026-10-21 | Olbrycht Michal | Chodorski Piotr | 3-1 | 6 | 6 | Pending
 2026-10-21 | Myszewski Adrian | Sulkowski Karol | 3-2 | 6 | 6 | +7
 2026-10-21 | Brozek Piotr | Schaniel Krzysztof | 3-0 | 6 | 6 | Pending
-2026-10-21 | Gajda Rafal | Rus Maksymilian | 3-2 | 6 | 6 | Pending
+2026-10-21 | Gajda Rafal | Rus Maksymilian | 3-2 | 6 | 6 | +5
+2026-10-21 | Dlugaj Rafal | Skotniczny Rafal | 3-1 | 6 | 6 | +11
 2026-10-21 | Cyrnek Piotr | David Petr | 3-0 | 7 | 7 | Pending
 2026-10-21 | Czerwinski Bartosz | Zochniak Jakub | 3-2 | 7 | 6 | Pending
 2026-10-21 | Brozek Piotr | Oracz Lukasz | 3-1 | 7 | 6 | Pending
@@ -15290,9 +15294,12 @@
 2026-10-21 | Warpas Blazej | Minda Michal | 3-0 | 7 | 2 | +26
 2026-10-21 | Slawinski Kacper | Schaniel Krzysztof | 3-1 | 7 | 7 | Pending
 2026-10-21 | Kolek Maciej | Zochniak Jakub | 3-1 | 7 | 7 | Pending
+2026-10-21 | Oracz Lukasz | Slawinski Kacper | 3-1 | 7 | 8 | Pending
 2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 8 | 8 | Pending
 2026-10-21 | Cyrnek Piotr | Olbrycht Michal | 3-1 | 8 | 8 | Pending
 2026-10-21 | Brozek Piotr | Urban Wojciech | 3-0 | 8 | 8 | Pending
+2026-10-21 | Braun Josef | Chodorski Piotr | 3-0 | 8 | 8 | Pending
+2026-10-21 | Warpas Blazej | Sulkowski Karol | 3-1 | 8 | 8 | Pending
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
