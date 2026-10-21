@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-21T20:08Z
+# updated 2026-10-21T20:36Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -15697,7 +15697,9 @@
 # pair | Dlugaj Rafal | Nowak Jakub | 2026-10-09T20:29Z
 2026-10-09 | Dlugaj Rafal | Nowak Jakub | 3-0
 2026-10-09 | Dlugaj Rafal | Nowak Jakub | 3-1
-# pair | Dlugaj Rafal | Pruszkowski Jakub | 2026-10-21T02:14Z
+# pair | Dlugaj Rafal | Pruszkowski Jakub | 2026-10-21T20:36Z
+2026-10-21 | Pruszkowski Jakub | Dlugaj Rafal | 3-2
+2026-10-21 | Pruszkowski Jakub | Dlugaj Rafal | 3-2
 # pair | Dlugaj Rafal | Rus Maksymilian | 2026-10-21T10:43Z
 # pair | Dlugaj Rafal | Schaniel Krzysztof | 2026-10-13T04:04Z
 # pair | Dlugaj Rafal | Skotniczny Rafal | 2026-10-21T11:38Z
@@ -20036,7 +20038,7 @@
 # pair | Gajda Rafal | Piechnik Roman | 2026-10-18T04:40Z
 2026-10-17 | Gajda Rafal | Piechnik Roman | 3-2
 2026-10-17 | Piechnik Roman | Gajda Rafal | 3-0
-# pair | Gajda Rafal | Pruszkowski Jakub | 2026-10-21T02:14Z
+# pair | Gajda Rafal | Pruszkowski Jakub | 2026-10-21T20:36Z
 2026-01-15 | Gajda Rafal | Pruszkowski Jakub | 3-2
 2026-01-15 | Pruszkowski Jakub | Gajda Rafal | 3-1
 2026-01-21 | Pruszkowski Jakub | Gajda Rafal | 3-0
@@ -20053,6 +20055,8 @@
 2026-07-01 | Pruszkowski Jakub | Gajda Rafal | 3-0
 2026-08-20 | Gajda Rafal | Pruszkowski Jakub | 3-2
 2026-08-20 | Gajda Rafal | Pruszkowski Jakub | 3-2
+2026-10-21 | Gajda Rafal | Pruszkowski Jakub | 3-1
+2026-10-21 | Pruszkowski Jakub | Gajda Rafal | 3-0
 # pair | Gajda Rafal | Przewlocki Piotr | 2026-10-20T11:36Z
 2026-06-25 | Gajda Rafal | Przewlocki Piotr | 3-0
 2026-06-25 | Przewlocki Piotr | Gajda Rafal | 3-0
@@ -47567,7 +47571,7 @@
 2026-10-20 | Zmijewski Artur | Machelski Michal | 3-0
 2026-10-20 | Zmijewski Artur | Machelski Michal | 3-1
 2026-10-21 | Zmijewski Artur | Machelski Michal | 3-0
-# pair | Madej Boguslaw | Pruszkowski Jakub | 2026-10-21T02:14Z
+# pair | Madej Boguslaw | Pruszkowski Jakub | 2026-10-21T20:36Z
 2025-05-22 | Madej Boguslaw | Pruszkowski Jakub | 3-1
 2025-05-22 | Pruszkowski Jakub | Madej Boguslaw | 3-0
 2025-08-13 | Pruszkowski Jakub | Madej Boguslaw | 3-0
@@ -47588,6 +47592,8 @@
 2026-01-28 | Pruszkowski Jakub | Madej Boguslaw | 3-2
 2026-10-14 | Pruszkowski Jakub | Madej Boguslaw | 3-0
 2026-10-14 | Pruszkowski Jakub | Madej Boguslaw | 3-0
+2026-10-21 | Madej Boguslaw | Pruszkowski Jakub | 3-2
+2026-10-21 | Pruszkowski Jakub | Madej Boguslaw | 3-1
 # pair | Madej Boguslaw | Rus Maksymilian | 2026-10-21T11:38Z
 2025-12-02 | Madej Boguslaw | Rus Maksymilian | 3-1
 2025-12-02 | Madej Boguslaw | Rus Maksymilian | 3-1
@@ -61066,7 +61072,7 @@
 2026-08-22 | Zochniak Jakub | Piotrowski Tadeusz | 3-1
 2026-09-26 | Zochniak Jakub | Piotrowski Tadeusz | 3-0
 2026-10-10 | Piotrowski Tadeusz | Zochniak Jakub | 3-1
-# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-21T02:14Z
+# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-21T20:36Z
 2023-02-12 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-0
 2023-02-15 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2
 2023-02-24 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-0
@@ -61111,6 +61117,7 @@
 2026-10-12 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-1
 2026-10-16 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-1
 2026-10-19 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-2
+2026-10-21 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-0
 # pair | Poliniewicz Grzegorz | Sklensky Miroslav | 2026-10-14T01:43Z
 2025-04-30 | Poliniewicz Grzegorz | Sklensky Miroslav | 3-2
 2025-05-20 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-0
@@ -62862,11 +62869,13 @@
 2026-10-12 | Pruszkowski Jakub | Przewlocki Piotr | 3-2
 2026-10-13 | Pruszkowski Jakub | Przewlocki Piotr | 3-2
 2026-10-13 | Przewlocki Piotr | Pruszkowski Jakub | 3-0
-# pair | Pruszkowski Jakub | Rus Maksymilian | 2026-10-21T02:14Z
+# pair | Pruszkowski Jakub | Rus Maksymilian | 2026-10-21T20:36Z
 2026-01-20 | Pruszkowski Jakub | Rus Maksymilian | 3-0
 2026-01-20 | Pruszkowski Jakub | Rus Maksymilian | 3-1
 2026-10-14 | Pruszkowski Jakub | Rus Maksymilian | 3-2
 2026-10-14 | Rus Maksymilian | Pruszkowski Jakub | 3-1
+2026-10-21 | Pruszkowski Jakub | Rus Maksymilian | 3-0
+2026-10-21 | Pruszkowski Jakub | Rus Maksymilian | 3-2
 # pair | Pruszkowski Jakub | Schaniel Krzysztof | 2026-10-15T11:46Z
 2024-06-05 | Schaniel Krzysztof | Pruszkowski Jakub | 3-1
 2024-06-05 | Schaniel Krzysztof | Pruszkowski Jakub | 3-2
@@ -63188,7 +63197,7 @@
 2026-08-31 | Pruszkowski Jakub | Sikon Mateusz | 3-0
 2026-08-31 | Sikon Mateusz | Pruszkowski Jakub | 3-2
 2026-09-01 | Pruszkowski Jakub | Sikon Mateusz | 3-0
-# pair | Pruszkowski Jakub | Skotniczny Rafal | 2026-10-21T02:14Z
+# pair | Pruszkowski Jakub | Skotniczny Rafal | 2026-10-21T20:36Z
 2023-11-01 | Skotniczny Rafal | Pruszkowski Jakub | 3-1
 2023-11-11 | Pruszkowski Jakub | Skotniczny Rafal | 3-1
 2023-11-11 | Skotniczny Rafal | Pruszkowski Jakub | 3-2
@@ -63264,6 +63273,8 @@
 2026-09-04 | Skotniczny Rafal | Pruszkowski Jakub | 3-1
 2026-09-11 | Pruszkowski Jakub | Skotniczny Rafal | 3-2
 2026-09-11 | Pruszkowski Jakub | Skotniczny Rafal | 3-2
+2026-10-21 | Pruszkowski Jakub | Skotniczny Rafal | 3-1
+2026-10-21 | Skotniczny Rafal | Pruszkowski Jakub | 3-0
 # pair | Pruszkowski Jakub | Slawinski Kacper | 2026-10-12T12:53Z
 2023-11-01 | Slawinski Kacper | Pruszkowski Jakub | 3-2
 2023-11-01 | Slawinski Kacper | Pruszkowski Jakub | 3-2
