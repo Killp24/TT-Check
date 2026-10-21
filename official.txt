@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T07:46Z
+# updated 2026-10-21T09:15Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15169,6 +15169,7 @@
 2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-1 | 1 | 2 | Pending
 2026-10-21 | Pruszkowski Jakub | Gajda Rafal | 3-0 | 1 | 1 | Pending
 2026-10-21 | Dlugaj Rafal | Skotniczny Rafal | 3-2 | 1 | 1 | Pending
+2026-10-21 | Oracz Jacek | Brozek Piotr | 3-0 | 1 | 5 | Pending
 2026-10-21 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 2 | 2 | +13
 2026-10-21 | Lebek Marian | Jurowicz Grzegorz | 3-0 | 2 | 2 | +9
 2026-10-21 | Marud Grzegorz | Komandzik Rafal | 3-0 | 2 | 1 | +6
@@ -15231,10 +15232,19 @@
 2026-10-21 | Klocek Kamil | Warpas Blazej | 3-1 | 4 | 4 | +13
 2026-10-21 | Adamus Mariusz | Sokolowski Oliwier | 3-0 | 4 | 6 | +14
 2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 4 | 4 | Pending
+2026-10-21 | Olbrycht Michal | Kolek Maciej | 3-1 | 4 | 3 | Pending
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
 2026-10-21 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 5 | 3 | +15
+2026-10-21 | Braun Josef | Wloczko Krzysztof | 3-2 | 5 | 5 | Pending
+2026-10-21 | Czerwinski Bartosz | Kapik Krzysztof | 3-1 | 5 | 5 | Pending
+2026-10-21 | Sulkowski Karol | Wisniewski Bartlomiej | 3-0 | 5 | 5 | +15
+2026-10-21 | Kuzmicz Jakub | Cyrnek Piotr | 3-0 | 5 | 5 | Pending
+2026-10-21 | Poliniewicz Grzegorz | Kolek Maciej | 3-1 | 5 | 4 | Pending
+2026-10-21 | Slawinski Kacper | Urban Wojciech | 3-1 | 5 | 5 | Pending
+2026-10-21 | Lamperski Jakub | Klocek Kamil | 3-2 |  | 5 | 
+2026-10-21 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 7 | +16
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
@@ -15256,3 +15266,15 @@
 2026-10-21 | Sokolowski Oliwier | Adamus Pawel | 3-2 |  |  | 
 2026-10-21 | Zochniak Jakub | Kolek Maciej | 3-0 |  |  | 
 2026-10-21 | Madej Boguslaw | Rus Maksymilian | 3-1 |  |  | 
+2026-10-21 | Oracz Lukasz | Brozek Piotr | 3-0 |  |  | 
+2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
+2026-10-21 | David Petr | Chodorski Piotr | 3-0 |  |  | 
+2026-10-21 | Przewlocki Piotr | Schaniel Krzysztof | 3-1 |  |  | 
+2026-10-21 | Olbrycht Michal | Zochniak Jakub | 3-0 |  |  | 
+2026-10-21 | Myszewski Adrian | Warpas Blazej | 3-2 |  |  | 
+2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
+2026-10-21 | Kurek Pawel | Lebek Marian | 3-0 |  |  | 
+2026-10-21 | Pruszkowski Jakub | Skotniczny Rafal | 3-1 |  |  | 
+2026-10-21 | Gajda Rafal | Rus Maksymilian | 3-0 |  |  | 
+2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-2 |  |  | 
+2026-10-21 | Gajda Rafal | Skotniczny Rafal | 3-0 |  |  | 
