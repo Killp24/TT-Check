@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T13:22Z
+# updated 2026-10-21T13:44Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15254,6 +15254,10 @@
 2026-10-21 | Madej Boguslaw | Skotniczny Rafal | 3-2 | 4 | 4 | +10
 2026-10-21 | Pruszkowski Jakub | Rus Maksymilian | 3-2 | 4 | 4 | +3
 2026-10-21 | Dlugaj Rafal | Gajda Rafal | 3-1 | 4 | 4 | +10
+2026-10-21 | Rutkowski Mateusz | Zochniak Jakub | 3-1 | 4 | 8 | Pending
+2026-10-21 | Rudomina Kamil | Myszewski Adrian | 3-1 | 4 | 9 | Pending
+2026-10-21 | Linek Adam | Warpas Blazej | 3-0 | 4 | 9 | Pending
+2026-10-21 | Solilo Dominik | Czerwinski Bartosz | 3-2 | 4 | 9 | Pending
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
@@ -15285,6 +15289,8 @@
 2026-10-21 | Brozek Piotr | Schaniel Krzysztof | 3-0 | 6 | 6 | Pending
 2026-10-21 | Gajda Rafal | Rus Maksymilian | 3-2 | 6 | 6 | +5
 2026-10-21 | Dlugaj Rafal | Skotniczny Rafal | 3-1 | 6 | 6 | +11
+2026-10-21 | Pruszkowski Jakub | Madej Boguslaw | 3-1 | 6 | 6 | +8
+2026-10-21 | Rus Maksymilian | Skotniczny Rafal | 3-1 | 7 | 7 | +18
 2026-10-21 | Cyrnek Piotr | David Petr | 3-0 | 7 | 7 | Pending
 2026-10-21 | Czerwinski Bartosz | Zochniak Jakub | 3-2 | 7 | 6 | Pending
 2026-10-21 | Brozek Piotr | Oracz Lukasz | 3-1 | 7 | 6 | Pending
@@ -15295,11 +15301,18 @@
 2026-10-21 | Slawinski Kacper | Schaniel Krzysztof | 3-1 | 7 | 7 | Pending
 2026-10-21 | Kolek Maciej | Zochniak Jakub | 3-1 | 7 | 7 | Pending
 2026-10-21 | Oracz Lukasz | Slawinski Kacper | 3-1 | 7 | 8 | Pending
+2026-10-21 | Gajda Rafal | Pruszkowski Jakub | 3-1 | 7 | 7 | +16
 2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 8 | 8 | Pending
 2026-10-21 | Cyrnek Piotr | Olbrycht Michal | 3-1 | 8 | 8 | Pending
 2026-10-21 | Brozek Piotr | Urban Wojciech | 3-0 | 8 | 8 | Pending
 2026-10-21 | Braun Josef | Chodorski Piotr | 3-0 | 8 | 8 | Pending
 2026-10-21 | Warpas Blazej | Sulkowski Karol | 3-1 | 8 | 8 | Pending
+2026-10-21 | Schaniel Krzysztof | Przewlocki Piotr | 3-2 | 8 | 8 | Pending
+2026-10-21 | David Petr | Olbrycht Michal | 3-0 | 9 | 9 | Pending
+2026-10-21 | Slawinski Kacper | Brozek Piotr | 3-1 | 9 | 9 | Pending
+2026-10-21 | Cyrnek Piotr | Chodorski Piotr | 3-2 | 9 | 9 | Pending
+2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-0 | 9 | 9 | Pending
+2026-10-21 | Przewlocki Piotr | Oracz Lukasz | 3-1 | 9 | 8 | Pending
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
@@ -15323,11 +15336,3 @@
 2026-10-21 | Oracz Lukasz | Brozek Piotr | 3-0 |  |  | 
 2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
 2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
-2026-10-21 | David Petr | Olbrycht Michal | 3-0 |  |  | 
-2026-10-21 | Schaniel Krzysztof | Przewlocki Piotr | 3-2 |  |  | 
-2026-10-21 | Slawinski Kacper | Brozek Piotr | 3-1 |  |  | 
-2026-10-21 | Rutkowski Mateusz | Zochniak Jakub | 3-1 |  |  | 
-2026-10-21 | Rudomina Kamil | Myszewski Adrian | 3-1 |  |  | 
-2026-10-21 | Linek Adam | Warpas Blazej | 3-0 |  |  | 
-2026-10-21 | Pruszkowski Jakub | Madej Boguslaw | 3-1 |  |  | 
-2026-10-21 | Rus Maksymilian | Skotniczny Rafal | 3-1 |  |  | 
