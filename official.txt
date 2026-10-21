@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T18:49Z
+# updated 2026-10-21T19:18Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15183,7 +15183,7 @@
 2026-10-21 | Adach Rafal | Krupa Sebastian | 3-1 | 1 | 1 | Pending
 2026-10-21 | Fomin Andriej | Frank Roman | 3-0 | 1 | 1 | Pending
 2026-10-21 | Warzecha Miroslaw | Michalik Jerzy | 3-1 | 1 | 1 | +1
-2026-10-21 | Skupinski Arkadiusz | Nocun Zbigniew | 3-0 | 1 | 1 | Pending
+2026-10-21 | Skupinski Arkadiusz | Nocun Zbigniew | 3-0 | 1 | 1 | +25
 2026-10-21 | Janus Slawomir | Staniczek Adam | 3-0 | 1 | 1 | +13
 2026-10-21 | Staszczyk Konrad | Blocho Przemyslaw | 3-0 | 2 | 2 | Pending
 2026-10-21 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 2 | 2 | +13
@@ -15226,6 +15226,7 @@
 2026-10-21 | Adach Rafal | Adamus Mariusz | 3-0 | 2 | 6 | Pending
 2026-10-21 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 2 | 2 | Pending
 2026-10-21 | Frank Roman | Bladziak Krzysztof | 3-2 | 2 | 2 | Pending
+2026-10-21 | Warzecha Miroslaw | Janus Slawomir | 3-1 | 2 | 2 | Pending
 2026-10-21 | Skorski Michal | Trela Mateusz | 3-1 | 3 | 2 | +12
 2026-10-21 | Piecowski Miroslaw | Lukaszewski Mikolaj | 3-1 | 3 | 3 | +15
 2026-10-21 | Marud Grzegorz | Szostok Sebastian | 3-1 | 3 | 2 | +11
@@ -15260,9 +15261,11 @@
 2026-10-21 | Szoltysek Artur | Golaszewski Kuba | 3-1 | 3 | 3 | +10
 2026-10-21 | Zwolinski Mariusz | Mrugala Bartlomiej | 3-2 | 3 | 3 | +7
 2026-10-21 | Pytlas Wojciech | Krupa Sebastian | 3-1 | 3 | 3 | Pending
-2026-10-21 | Strus Piotr | Kowalczyk Marcin | 3-1 | 3 | 3 | Pending
+2026-10-21 | Strus Piotr | Kowalczyk Marcin | 3-1 | 3 | 3 | +11
 2026-10-21 | Fomin Andriej | Bladziak Krzysztof | 3-2 | 3 | 3 | Pending
 2026-10-21 | Kumor Michal | Frank Roman | 3-1 | 3 | 3 | Pending
+2026-10-21 | Smoter Adam | Blocho Przemyslaw | 3-2 | 3 | 4 | Pending
+2026-10-21 | Koczyba Mariusz | Adach Rafal | 3-1 | 3 | 3 | Pending
 2026-10-21 | Zmijewski Artur | Machelski Michal | 3-0 | 4 | 3 | +6
 2026-10-21 | Brunner Marian | Krezel Andrzej | 3-2 | 4 | 3 | +12
 2026-10-21 | Lebek Marian | Adamus Mariusz | 3-0 | 4 | 1 | +13
@@ -15290,6 +15293,8 @@
 2026-10-21 | Solilo Dominik | Czerwinski Bartosz | 3-2 | 4 | 9 | +10
 2026-10-21 | Minda Michal | Sulkowski Karol | 3-2 | 4 | 9 | +4
 2026-10-21 | Staszczyk Konrad | Sulkowski Bartek | 3-2 | 4 | 4 | Pending
+2026-10-21 | Krupa Sebastian | Adamus Mariusz | 3-1 | 4 | 8 | Pending
+2026-10-21 | Golaszewski Kuba | Mrugala Bartlomiej | 3-1 | 4 | 4 | +16
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
@@ -15352,6 +15357,8 @@
 2026-10-21 | Kolek Maciej | Poliniewicz Grzegorz | 3-2 | 8 | 9 | +9
 2026-10-21 | Skotniczny Rafal | Gajda Rafal | 3-1 | 8 | 8 | +12
 2026-10-21 | Madej Boguslaw | Rus Maksymilian | 3-2 | 8 | 8 | +5
+2026-10-21 | Linek Adam | Mugowski Arkadiusz | 3-2 | 8 | 3 | Pending
+2026-10-21 | Zielinski Marcin | Frank Roman | 3-0 | 8 | 4 | Pending
 2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 9 | 9 | +8
 2026-10-21 | David Petr | Olbrycht Michal | 3-0 | 9 | 9 | +8
 2026-10-21 | Slawinski Kacper | Brozek Piotr | 3-1 | 9 | 9 | +10
@@ -15397,7 +15404,4 @@
 2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
 2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
 2026-10-21 | Gajda Rafal | Madej Boguslaw | 3-0 |  |  | 
-2026-10-21 | Smoter Adam | Blocho Przemyslaw | 3-2 |  |  | 
-2026-10-21 | Linek Adam | Mugowski Arkadiusz | 3-2 |  |  | 
 2026-10-21 | Smoter Adam | Sulkowski Bartek | 3-0 |  |  | 
-2026-10-21 | Koczyba Mariusz | Adach Rafal | 3-1 |  |  | 
