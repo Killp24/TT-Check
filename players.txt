@@ -32,7 +32,7 @@ Burkacki Mateusz | 1959 | 1475
 Cesarz Milosz | 244 | 570
 Chlodnicki Piotr | 876 | 1463
 Chmielowski Jakub | 462 | 448
-Chodorski Piotr | 1667 | 1137
+Chodorski Piotr | 1667 | 1138
 Chojnacki Pawel | 321 | 523
 Chrzescian Radoslaw | 591 | 721
 Cichocki Aleksander | 145 | 93
@@ -43,7 +43,7 @@ Czernik Mateusz | 599 | 1063
 Czerwinski Bartosz | 2300 | 2724
 Dabrowski Igor | 1723 | 1805
 Daniel Artur | 2755 | 2638
-David Petr | 2352 | 1127
+David Petr | 2353 | 1127
 Debski Jerzy | 43 | 93
 Delikatny Kamil | 308 | 369
 Dlugaj Rafal | 13 | 8
@@ -154,7 +154,7 @@ Kukawka Milosz | 574 | 359
 Kulczycki Alan | 3 | 27
 Kulpa Konrad | 603 | 202
 Kumor Michal | 554 | 937
-Kurek Pawel | 523 | 508
+Kurek Pawel | 524 | 508
 Kurowski Kamil | 56 | 115
 Kuzmicz Jakub | 803 | 627
 Kwapis Jakub | 487 | 591
@@ -162,8 +162,8 @@ Kwiatkowski Kacper | 153 | 203
 Kwodawski Bartosz | 589 | 776
 Lach Marcin | 184 | 111
 Lamer Maciej | 658 | 1161
-Lamperski Jakub | 83 | 59
-Lebek Marian | 1115 | 841
+Lamperski Jakub | 84 | 59
+Lebek Marian | 1115 | 842
 Leczycki Mariusz | 9 | 10
 Lewandowski Patryk | 386 | 684
 Lewczuk Miroslaw | 1083 | 1033
@@ -209,7 +209,7 @@ Mucha Grzegorz | 217 | 223
 Mugowski Arkadiusz | 3475 | 4169
 Murawski Daniel | 1115 | 1007
 Murawski Michal | 2409 | 2345
-Myszewski Adrian | 798 | 874
+Myszewski Adrian | 799 | 874
 Nadolny Jakub | 14 | 13
 Nadolski Lukasz | 430 | 602
 Nagel Kacper | 250 | 397
@@ -222,7 +222,7 @@ Nosiadek Jakub | 40 | 65
 Nowak Jakub | 1358 | 2130
 Nowalinski Maciej | 1917 | 1781
 Ogon Rafal | 223 | 565
-Olbrycht Michal | 786 | 965
+Olbrycht Michal | 787 | 965
 Olejnik Martin | 1364 | 989
 Olejnik Mikolaj | 151 | 183
 Oracz Jacek | 821 | 368
@@ -254,7 +254,7 @@ Prokopcov Dimitrij | 117 | 149
 Pruszkowski Jakub | 2375 | 1683
 Przebierala Tomasz | 31 | 245
 Przewlocki Jacek | 917 | 1188
-Przewlocki Piotr | 743 | 931
+Przewlocki Piotr | 744 | 931
 Ptak Wiktor | 108 | 87
 Pyda Lukasz | 130 | 466
 Pyrek Dawid | 500 | 668
@@ -270,7 +270,7 @@ Rutkowski Mateusz | 2218 | 2361
 Rybak Kazimierz | 121 | 412
 Sawczak Jr Milosz | 336 | 307
 Sawicki Grzegorz | 752 | 1107
-Schaniel Krzysztof | 2084 | 2225
+Schaniel Krzysztof | 2084 | 2226
 Scigany Dariusz | 1155 | 500
 Seroka Szymon | 2079 | 1485
 Sikon Mateusz | 224 | 321
@@ -340,7 +340,7 @@ Utylski Rafal | 260 | 369
 Vincenec Oliver | 799 | 1011
 Vrablik Jiri | 29 | 51
 Wandachowicz Michal | 17 | 71
-Warpas Blazej | 464 | 458
+Warpas Blazej | 464 | 459
 Warzecha Miroslaw | 1236 | 610
 Wasilewski Damian | 310 | 223
 Wawrosz Pavel | 10 | 12
@@ -374,5 +374,5 @@ Zelezik Jacek | 456 | 359
 Zemla Piotr | 105 | 45
 Zielinski Marcin | 52 | 17
 Zmijewski Artur | 131 | 88
-Zochniak Jakub | 4237 | 3664
+Zochniak Jakub | 4237 | 3665
 Zwolinski Mariusz | 310 | 499
