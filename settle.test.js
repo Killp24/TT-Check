@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate, lastSweep } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate, lastSweep, careerH2hShift } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -666,6 +666,53 @@ test("a 50% price with an edge of $3 to $14 is the go spot", () => {
   assert.equal(goSide(0.52, 14.5), false);
   assert.equal(goSide(0.62, 22), false);
   assert.equal(goSide(0.61, 10), true);
+});
+
+test("career head-to-head moves about 35 Elo once the series is long enough", () => {
+  const elo = rows => careerH2hShift(rows).shift * 400 / Math.LN10;
+  const series = (w, n, name) => {
+    const rows = [];
+    for (let i = 0; i < w; i++) rows.push({ w: name || "A" });
+    for (let i = w; i < n; i++) rows.push({ w: "B" });
+    return rows;
+  };
+  assert.equal(careerH2hShift(series(4, 4)), null);
+  assert.equal(careerH2hShift(series(3, 5)), null);
+  const short = careerH2hShift(series(4, 5));
+  assert.equal(short.leader, "A");
+  assert.equal(short.n, 5);
+  assert.equal(short.w, 4);
+  assert.ok(Math.abs(elo(series(4, 5)) - 8.75) < 1e-9);
+  assert.equal(careerH2hShift(series(12, 20)), null);
+  const even = careerH2hShift(series(13, 20));
+  assert.equal(even.leader, "A");
+  assert.equal(even.w, 13);
+  assert.ok(Math.abs(elo(series(13, 20)) - 35) < 1e-9);
+  assert.ok(Math.abs(elo(series(70, 100)) - 35) < 1e-9);
+  assert.ok(Math.abs(elo(series(7, 10)) - 17.5) < 1e-9);
+});
+
+test("career head-to-head counts the whole series, not the recent meetings", () => {
+  const rows = [];
+  for (let i = 0; i < 18; i++) rows.push({ w: "A", date: "2024-01-0" + (i % 9 + 1) });
+  for (let i = 0; i < 6; i++) rows.push({ w: "B", date: "2026-10-0" + (i + 1) });
+  const s = careerH2hShift(rows);
+  assert.equal(s.leader, "A");
+  assert.equal(s.n, 24);
+  assert.equal(s.w, 18);
+  assert.ok(Math.abs(s.shift * 400 / Math.LN10 - 35) < 1e-9);
+});
+
+test("a career series against the rating keeps the full shift", () => {
+  const rows = [];
+  for (let i = 0; i < 14; i++) rows.push({ w: "Lower", elo: 1500 });
+  for (let i = 0; i < 6; i++) rows.push({ w: "Higher", elo: 1750 });
+  const against = careerH2hShift(rows);
+  const plain = careerH2hShift(rows.map(r => ({ w: r.w })));
+  assert.equal(against.leader, "Lower");
+  assert.equal(against.n, 20);
+  assert.equal(against.shift, plain.shift);
+  assert.ok(Math.abs(against.shift * 400 / Math.LN10 - 35) < 1e-9);
 });
 
 test("a series lead counts only when one player is ahead by 3 or more", () => {

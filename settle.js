@@ -227,14 +227,29 @@ function recentShift(rows, mode, prior) {
   return { n, w: sy, exp: se, shift: shrunkShift(sw, sy, se, prior == null ? 80 : prior) };
 }
 
-function h2hShiftFrom(rows, wantFirst, prior) {
+// Full career series. Every prior meeting counts. A recent window does not.
+// Five or more meetings, and one player has won at least 65%: move toward
+// that player. The move is 35 Elo once 20 meetings are on file. A shorter
+// series moves in proportion, so five meetings are a quarter of that.
+// Ratings on the rows are ignored. The move stays when the leader is the
+// lower-rated player. That disagreement is when the series matters most.
+function careerH2hShift(rows) {
   if (!rows || rows.length < 5) return null;
-  let aw = 0, exp = 0;
-  for (const x of rows) {
-    if (wantFirst ? x.firstWon : !x.firstWon) aw++;
-    exp += wantFirst ? x.eFirst : 1 - x.eFirst;
+  const wins = new Map();
+  let n = 0;
+  for (const row of rows) {
+    if (!row || !row.w) continue;
+    n++;
+    wins.set(row.w, (wins.get(row.w) || 0) + 1);
   }
-  return { n: rows.length, aw, exp, diff: aw - exp, shift: shrunkShift(rows.length, aw, exp, prior == null ? 40 : prior) };
+  if (n < 5) return null;
+  let leader = null, top = 0;
+  for (const [name, count] of wins) {
+    if (count > top) { top = count; leader = name; }
+  }
+  if (!leader || top / n < 0.65) return null;
+  const elo = 35 * Math.min(1, n / 20);
+  return { leader, n, w: top, shift: elo * Math.LN10 / 400 };
 }
 
 function sessionBin(n) {

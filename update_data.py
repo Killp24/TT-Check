@@ -224,7 +224,7 @@ subprocess.run(["git", "add", "ratings_history.txt"], check=False)
 print(f"Ratings history: {len(kept)} earlier days on file")
 
 # Full head-to-head for pairs on the schedule. A few dozen per run, so this
-# pass stays short. The match page reads h2h.txt. The win chance does not.
+# pass stays short. The match page and the win chance both read h2h.txt.
 try:
     from h2h_fetch import refresh_h2h
     refresh_h2h()
