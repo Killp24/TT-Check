@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T05:11Z
+# updated 2026-10-21T05:12Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15212,9 +15212,9 @@
 2026-10-21 | Komandzik Rafal | Nowak Jakub | 3-1 |  |  | 
 2026-10-21 | Sokolowski Oliwier | Adamus Pawel | 3-2 |  |  | 
 2026-10-21 | Zochniak Jakub | Kolek Maciej | 3-0 |  |  | 
-2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-2 |  |  | 
-2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-1 |  |  | 
-2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-1 |  |  | 
-2026-10-21 | Sulkowski Karol | Klocek Kamil | 3-1 |  |  | 
-2026-10-21 | Lamperski Jakub | Warpas Blazej | 3-0 |  |  | 
-2026-10-21 | Kurek Pawel | Adamus Mariusz | 3-2 |  |  | 
+2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-2 | 2 | 2 | Pending
+2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-1 | 2 | 2 | Pending
+2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-1 | 1 | 2 | Pending
+2026-10-21 | Sulkowski Karol | Klocek Kamil | 3-1 | 2 | 2 | +11
+2026-10-21 | Lamperski Jakub | Warpas Blazej | 3-0 | 2 | 2 | +7
+2026-10-21 | Kurek Pawel | Adamus Mariusz | 3-2 | 2 | 2 | Pending
