@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-21T19:19Z
+# updated 2026-10-21T20:08Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -5858,7 +5858,7 @@
 2026-10-09 | Krezel Andrzej | Barton Aleksander | 3-2
 2026-10-15 | Krezel Andrzej | Barton Aleksander | 3-1
 2026-10-16 | Krezel Andrzej | Barton Aleksander | 3-1
-# pair | Barton Aleksander | Machelski Michal | 2026-10-09T01:32Z
+# pair | Barton Aleksander | Machelski Michal | 2026-10-21T20:08Z
 2025-11-24 | Barton Aleksander | Machelski Michal | 3-2
 2025-12-16 | Machelski Michal | Barton Aleksander | 3-0
 2025-12-20 | Machelski Michal | Barton Aleksander | 3-0
@@ -5885,6 +5885,7 @@
 2026-09-01 | Machelski Michal | Barton Aleksander | 3-1
 2026-09-07 | Machelski Michal | Barton Aleksander | 3-2
 2026-09-09 | Machelski Michal | Barton Aleksander | 3-0
+2026-10-09 | Machelski Michal | Barton Aleksander | 3-1
 # pair | Barton Aleksander | Michalik Jerzy | 2026-10-21T07:48Z
 2025-11-05 | Michalik Jerzy | Barton Aleksander | 3-1
 2026-01-15 | Michalik Jerzy | Barton Aleksander | 3-1
@@ -5939,6 +5940,19 @@
 2026-10-01 | Nocun Zbigniew | Barton Aleksander | 3-1
 2026-10-02 | Nocun Zbigniew | Barton Aleksander | 3-1
 2026-10-15 | Nocun Zbigniew | Barton Aleksander | 3-1
+# pair | Barton Aleksander | Pyrek Dawid | 2026-10-21T20:08Z
+2025-12-16 | Pyrek Dawid | Barton Aleksander | 3-0
+2025-12-16 | Pyrek Dawid | Barton Aleksander | 3-1
+2026-03-11 | Barton Aleksander | Pyrek Dawid | 3-0
+2026-03-11 | Pyrek Dawid | Barton Aleksander | 3-1
+2026-04-15 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-04-15 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-05-04 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-05-11 | Barton Aleksander | Pyrek Dawid | 3-2
+2026-07-03 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-07-15 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-07-16 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-07-16 | Pyrek Dawid | Barton Aleksander | 3-0
 # pair | Barton Aleksander | Staniczek Adam | 2026-10-21T07:48Z
 2025-12-23 | Staniczek Adam | Barton Aleksander | 3-0
 2025-12-23 | Staniczek Adam | Barton Aleksander | 3-0
@@ -6026,7 +6040,7 @@
 2026-09-07 | Wolny Michal | Barton Aleksander | 3-1
 2026-10-08 | Wolny Michal | Barton Aleksander | 3-0
 2026-10-16 | Wolny Michal | Barton Aleksander | 3-0
-# pair | Barton Aleksander | Zelezik Jacek | 2026-10-16T05:46Z
+# pair | Barton Aleksander | Zelezik Jacek | 2026-10-21T20:08Z
 2025-11-24 | Zelezik Jacek | Barton Aleksander | 3-1
 2025-11-24 | Zelezik Jacek | Barton Aleksander | 3-2
 2026-02-05 | Zelezik Jacek | Barton Aleksander | 3-0
@@ -6040,6 +6054,10 @@
 2026-09-04 | Zelezik Jacek | Barton Aleksander | 3-0
 2026-10-09 | Zelezik Jacek | Barton Aleksander | 3-0
 2026-10-16 | Zelezik Jacek | Barton Aleksander | 3-0
+# pair | Barton Aleksander | Zmijewski Artur | 2026-10-21T20:08Z
+2026-08-21 | Zmijewski Artur | Barton Aleksander | 3-0
+2026-09-07 | Zmijewski Artur | Barton Aleksander | 3-0
+2026-09-09 | Zmijewski Artur | Barton Aleksander | 3-0
 # pair | Bartosik Dominik | Bladziak Krzysztof | 2026-10-21T11:38Z
 2026-10-14 | Bartosik Dominik | Bladziak Krzysztof | 3-0
 2026-10-15 | Bartosik Dominik | Bladziak Krzysztof | 3-2
