@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T09:16Z
+# updated 2026-10-21T10:10Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15039,7 +15039,7 @@
 2026-10-20 | Tkocz Marek | Adamus Pawel | 3-1 | 6 | 7 | +10
 2026-10-20 | Jurowicz Grzegorz | Orszulik Jan | 3-2 | 6 | 6 | +9
 2026-10-20 | Szostok Sebastian | Komandzik Rafal | 3-2 | 6 | 7 | +3
-2026-10-20 | Zochniak Jakub | Kolek Maciej | 3-0 | 6 | 11 | Pending
+2026-10-20 | Zochniak Jakub | Kolek Maciej | 3-0 | 6 | 11 | +19
 2026-10-20 | Jadach Oskar | Glanowski Waldemar | 3-2 | 7 | 7 | +3
 2026-10-20 | Kosowski Jakub | Chodorski Piotr | 3-1 | 7 | 7 | +8
 2026-10-20 | Lamperski Jakub | Sobel Artur | 3-1 | 7 | 6 | +13
@@ -15153,23 +15153,25 @@
 2026-10-21 | Krezel Andrzej | Machelski Michal | 3-1 | 1 | 1 | +5
 2026-10-21 | Zmijewski Artur | Brunner Marian | 3-2 | 1 | 1 | +4
 2026-10-21 | Sokolowski Oliwier | Tkocz Marek | 3-0 | 1 | 2 | +21
-2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 1 | 1 | Pending
+2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 1 | 1 | +7
 2026-10-21 | Myszewski Adrian | Klocek Kamil | 3-1 | 1 | 1 | +10
 2026-10-21 | Kurek Pawel | Adamus Pawel | 3-0 | 1 | 3 | +15
 2026-10-21 | Urban Wojciech | Przewlocki Piotr | 3-1 | 1 | 1 | +10
-2026-10-21 | Chodorski Piotr | Wloczko Krzysztof | 3-0 | 1 | 1 | Pending
-2026-10-21 | Braun Josef | Cyrnek Piotr | 3-0 | 1 | 1 | Pending
+2026-10-21 | Chodorski Piotr | Wloczko Krzysztof | 3-0 | 1 | 1 | +16
+2026-10-21 | Braun Josef | Cyrnek Piotr | 3-0 | 1 | 1 | +19
 2026-10-21 | Brozek Piotr | Schaniel Krzysztof | 3-2 | 1 | 1 | +7
-2026-10-21 | Slawinski Kacper | Oracz Lukasz | 3-1 | 1 | 1 | Pending
-2026-10-21 | Olbrycht Michal | Kapik Krzysztof | 3-2 | 1 | 1 | Pending
-2026-10-21 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-2 | 1 | 1 | Pending
+2026-10-21 | Slawinski Kacper | Oracz Lukasz | 3-1 | 1 | 1 | +7
+2026-10-21 | Olbrycht Michal | Kapik Krzysztof | 3-2 | 1 | 1 | +9
+2026-10-21 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-2 | 1 | 1 | +6
 2026-10-21 | Wisniewski Bartlomiej | Warpas Blazej | 3-1 | 1 | 1 | +11
 2026-10-21 | Sulkowski Karol | Lamperski Jakub | 3-1 | 1 | 1 | +18
 2026-10-21 | Hetnar Krzysztof | Sokolowski Oliwier | 3-0 | 1 | 3 | +10
-2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-1 | 1 | 2 | Pending
+2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-1 | 1 | 2 | +12
 2026-10-21 | Pruszkowski Jakub | Gajda Rafal | 3-0 | 1 | 1 | Pending
 2026-10-21 | Dlugaj Rafal | Skotniczny Rafal | 3-2 | 1 | 1 | Pending
-2026-10-21 | Oracz Jacek | Brozek Piotr | 3-0 | 1 | 5 | Pending
+2026-10-21 | Oracz Jacek | Brozek Piotr | 3-0 | 1 | 5 | +20
+2026-10-21 | Minda Michal | Linek Adam | 3-0 | 1 | 1 | +13
+2026-10-21 | Rudomina Kamil | Warpas Blazej | 3-0 | 1 | 6 | +8
 2026-10-21 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 2 | 2 | +13
 2026-10-21 | Lebek Marian | Jurowicz Grzegorz | 3-0 | 2 | 2 | +9
 2026-10-21 | Marud Grzegorz | Komandzik Rafal | 3-0 | 2 | 1 | +6
@@ -15180,20 +15182,20 @@
 2026-10-21 | Zielinski Marcin | Machelski Michal | 3-0 | 2 | 2 | +4
 2026-10-21 | Nowak Jakub | Paszkiewicz Michal | 3-0 | 2 | 2 | +18
 2026-10-21 | Adamus Pawel | Jurowicz Grzegorz | 3-2 | 2 | 3 | +6
-2026-10-21 | David Petr | Wloczko Krzysztof | 3-1 | 2 | 2 | Pending
-2026-10-21 | Kapik Krzysztof | Zochniak Jakub | 3-1 | 2 | 1 | Pending
+2026-10-21 | David Petr | Wloczko Krzysztof | 3-1 | 2 | 2 | +7
+2026-10-21 | Kapik Krzysztof | Zochniak Jakub | 3-1 | 2 | 1 | +7
 2026-10-21 | Myszewski Adrian | Wisniewski Bartlomiej | 3-2 | 2 | 2 | +7
-2026-10-21 | Brozek Piotr | Przewlocki Piotr | 3-1 | 2 | 2 | Pending
-2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-2 | 2 | 2 | Pending
-2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-1 | 2 | 2 | Pending
+2026-10-21 | Brozek Piotr | Przewlocki Piotr | 3-1 | 2 | 2 | +8
+2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-2 | 2 | 2 | +7
+2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-1 | 2 | 2 | +13
 2026-10-21 | Sulkowski Karol | Klocek Kamil | 3-1 | 2 | 2 | +11
 2026-10-21 | Lamperski Jakub | Warpas Blazej | 3-0 | 2 | 2 | +7
 2026-10-21 | Kurek Pawel | Adamus Mariusz | 3-2 | 2 | 2 | +7
-2026-10-21 | Cyrnek Piotr | Chodorski Piotr | 3-1 | 2 | 2 | Pending
-2026-10-21 | Kolek Maciej | Kapik Krzysztof | 3-0 | 2 | 3 | Pending
-2026-10-21 | Olbrycht Michal | Poliniewicz Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-21 | Cyrnek Piotr | Chodorski Piotr | 3-1 | 2 | 2 | +10
+2026-10-21 | Kolek Maciej | Kapik Krzysztof | 3-0 | 2 | 3 | +20
+2026-10-21 | Olbrycht Michal | Poliniewicz Grzegorz | 3-1 | 2 | 2 | +12
 2026-10-21 | Hetnar Krzysztof | Adamus Pawel | 3-2 | 2 | 4 | +5
-2026-10-21 | Schaniel Krzysztof | Slawinski Kacper | 3-1 | 2 | 2 | Pending
+2026-10-21 | Schaniel Krzysztof | Slawinski Kacper | 3-1 | 2 | 2 | +18
 2026-10-21 | Skorski Michal | Trela Mateusz | 3-1 | 3 | 2 | +12
 2026-10-21 | Piecowski Miroslaw | Lukaszewski Mikolaj | 3-1 | 3 | 3 | +15
 2026-10-21 | Marud Grzegorz | Szostok Sebastian | 3-1 | 3 | 2 | +11
@@ -15202,49 +15204,63 @@
 2026-10-21 | Orszulik Jan | Sokolowski Oliwier | 3-0 | 3 | 2 | +18
 2026-10-21 | Zmijewski Artur | Krezel Andrzej | 3-0 | 3 | 2 | +16
 2026-10-21 | Zielinski Marcin | Pyrek Dawid | 3-0 | 3 | 3 | +6
-2026-10-21 | Kuzmicz Jakub | Wloczko Krzysztof | 3-2 | 3 | 3 | Pending
-2026-10-21 | Poliniewicz Grzegorz | Zochniak Jakub | 3-0 | 3 | 2 | Pending
+2026-10-21 | Kuzmicz Jakub | Wloczko Krzysztof | 3-2 | 3 | 3 | +8
+2026-10-21 | Poliniewicz Grzegorz | Zochniak Jakub | 3-0 | 3 | 2 | +11
 2026-10-21 | Myszewski Adrian | Lamperski Jakub | 3-1 | 3 | 3 | +16
 2026-10-21 | Wisniewski Bartlomiej | Klocek Kamil | 3-1 | 3 | 3 | +11
-2026-10-21 | Urban Wojciech | Brozek Piotr | 3-2 | 3 | 3 | Pending
+2026-10-21 | Urban Wojciech | Brozek Piotr | 3-2 | 3 | 3 | +9
 2026-10-21 | Adamus Mariusz | Adamus Pawel | 3-2 | 3 | 5 | +7
-2026-10-21 | Cyrnek Piotr | David Petr | 3-2 | 3 | 3 | Pending
-2026-10-21 | Braun Josef | Chodorski Piotr | 3-1 | 3 | 3 | Pending
-2026-10-21 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 3 | 3 | Pending
+2026-10-21 | Cyrnek Piotr | David Petr | 3-2 | 3 | 3 | +9
+2026-10-21 | Braun Josef | Chodorski Piotr | 3-1 | 3 | 3 | +11
+2026-10-21 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 3 | 3 | +8
 2026-10-21 | Warpas Blazej | Sulkowski Karol | 3-0 | 3 | 3 | +19
-2026-10-21 | Oracz Lukasz | Schaniel Krzysztof | 3-2 | 3 | 3 | Pending
-2026-10-21 | Olbrycht Michal | Czerwinski Bartosz | 3-1 | 3 | 3 | Pending
+2026-10-21 | Oracz Lukasz | Schaniel Krzysztof | 3-2 | 3 | 3 | +8
+2026-10-21 | Olbrycht Michal | Czerwinski Bartosz | 3-1 | 3 | 3 | +8
 2026-10-21 | Hetnar Krzysztof | Lebek Marian | 3-0 | 3 | 6 | +14
 2026-10-21 | Zmijewski Artur | Machelski Michal | 3-0 | 4 | 3 | +6
 2026-10-21 | Brunner Marian | Krezel Andrzej | 3-2 | 4 | 3 | +12
 2026-10-21 | Lebek Marian | Adamus Mariusz | 3-0 | 4 | 1 | +13
 2026-10-21 | Krezel Andrzej | Pyrek Dawid | 3-0 | 4 | 4 | +9
-2026-10-21 | Cyrnek Piotr | Wloczko Krzysztof | 3-1 | 4 | 4 | Pending
-2026-10-21 | Brozek Piotr | Slawinski Kacper | 3-2 | 4 | 4 | Pending
-2026-10-21 | Przewlocki Piotr | Oracz Lukasz | 3-2 | 4 | 4 | Pending
+2026-10-21 | Cyrnek Piotr | Wloczko Krzysztof | 3-1 | 4 | 4 | +8
+2026-10-21 | Brozek Piotr | Slawinski Kacper | 3-2 | 4 | 4 | +10
+2026-10-21 | Przewlocki Piotr | Oracz Lukasz | 3-2 | 4 | 4 | +10
 2026-10-21 | Lamperski Jakub | Wisniewski Bartlomiej | 3-0 | 4 | 4 | +9
 2026-10-21 | Sulkowski Karol | Myszewski Adrian | 3-1 | 4 | 4 | +15
-2026-10-21 | Braun Josef | David Petr | 3-1 | 4 | 4 | Pending
-2026-10-21 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 4 | 4 | Pending
-2026-10-21 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 4 | 4 | Pending
-2026-10-21 | Czerwinski Bartosz | Zochniak Jakub | 3-1 | 4 | 3 | Pending
+2026-10-21 | Braun Josef | David Petr | 3-1 | 4 | 4 | +14
+2026-10-21 | Kuzmicz Jakub | Chodorski Piotr | 3-1 | 4 | 4 | +13
+2026-10-21 | Poliniewicz Grzegorz | Kapik Krzysztof | 3-1 | 4 | 4 | +12
+2026-10-21 | Czerwinski Bartosz | Zochniak Jakub | 3-1 | 4 | 3 | +11
 2026-10-21 | Hetnar Krzysztof | Kurek Pawel | 3-1 | 4 | 4 | +8
 2026-10-21 | Klocek Kamil | Warpas Blazej | 3-1 | 4 | 4 | +13
 2026-10-21 | Adamus Mariusz | Sokolowski Oliwier | 3-0 | 4 | 6 | +14
-2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 4 | 4 | Pending
-2026-10-21 | Olbrycht Michal | Kolek Maciej | 3-1 | 4 | 3 | Pending
+2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 4 | 4 | +9
+2026-10-21 | Olbrycht Michal | Kolek Maciej | 3-1 | 4 | 3 | +9
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
 2026-10-21 | Sokolowski Oliwier | Kurek Pawel | 3-1 | 5 | 3 | +15
-2026-10-21 | Braun Josef | Wloczko Krzysztof | 3-2 | 5 | 5 | Pending
-2026-10-21 | Czerwinski Bartosz | Kapik Krzysztof | 3-1 | 5 | 5 | Pending
+2026-10-21 | Braun Josef | Wloczko Krzysztof | 3-2 | 5 | 5 | +6
+2026-10-21 | Czerwinski Bartosz | Kapik Krzysztof | 3-1 | 5 | 5 | +15
 2026-10-21 | Sulkowski Karol | Wisniewski Bartlomiej | 3-0 | 5 | 5 | +15
-2026-10-21 | Kuzmicz Jakub | Cyrnek Piotr | 3-0 | 5 | 5 | Pending
-2026-10-21 | Poliniewicz Grzegorz | Kolek Maciej | 3-1 | 5 | 4 | Pending
-2026-10-21 | Slawinski Kacper | Urban Wojciech | 3-1 | 5 | 5 | Pending
+2026-10-21 | Kuzmicz Jakub | Cyrnek Piotr | 3-0 | 5 | 5 | +21
+2026-10-21 | Poliniewicz Grzegorz | Kolek Maciej | 3-1 | 5 | 4 | +9
+2026-10-21 | Slawinski Kacper | Urban Wojciech | 3-1 | 5 | 5 | +8
 2026-10-21 | Lamperski Jakub | Klocek Kamil | 3-2 | 5 | 5 | +3
+2026-10-21 | David Petr | Chodorski Piotr | 3-0 | 5 | 5 | +10
+2026-10-21 | Przewlocki Piotr | Schaniel Krzysztof | 3-1 | 5 | 5 | +14
+2026-10-21 | Olbrycht Michal | Zochniak Jakub | 3-0 | 5 | 4 | +8
+2026-10-21 | Myszewski Adrian | Warpas Blazej | 3-2 | 5 | 5 | +6
+2026-10-21 | Kurek Pawel | Lebek Marian | 3-0 | 5 | 7 | +19
+2026-10-21 | Kolek Maciej | Czerwinski Bartosz | 3-2 | 5 | 6 | Pending
+2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-2 | 5 | 6 | Pending
+2026-10-21 | Poliniewicz Grzegorz | Zochniak Jakub | 3-0 | 6 | 5 | Pending
+2026-10-21 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 6 | 6 | Pending
 2026-10-21 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 7 | +16
+2026-10-21 | David Petr | Braun Josef | 3-0 | 6 | 6 | Pending
+2026-10-21 | Kuzmicz Jakub | Cyrnek Piotr | 3-2 | 6 | 6 | Pending
+2026-10-21 | Olbrycht Michal | Chodorski Piotr | 3-1 | 6 | 6 | Pending
+2026-10-21 | Myszewski Adrian | Sulkowski Karol | 3-2 | 6 | 6 | +7
+2026-10-21 | Brozek Piotr | Schaniel Krzysztof | 3-0 | 6 | 6 | Pending
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
@@ -15268,12 +15284,7 @@
 2026-10-21 | Madej Boguslaw | Rus Maksymilian | 3-1 |  |  | 
 2026-10-21 | Oracz Lukasz | Brozek Piotr | 3-0 |  |  | 
 2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
-2026-10-21 | David Petr | Chodorski Piotr | 3-0 | 5 | 5 | +10
-2026-10-21 | Przewlocki Piotr | Schaniel Krzysztof | 3-1 | 5 | 5 | +14
-2026-10-21 | Olbrycht Michal | Zochniak Jakub | 3-0 | 5 | 4 | +8
-2026-10-21 | Myszewski Adrian | Warpas Blazej | 3-2 | 5 | 5 | +6
 2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
-2026-10-21 | Kurek Pawel | Lebek Marian | 3-0 | 5 | 7 | +19
 2026-10-21 | Pruszkowski Jakub | Skotniczny Rafal | 3-1 |  |  | 
 2026-10-21 | Gajda Rafal | Rus Maksymilian | 3-0 |  |  | 
 2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-2 |  |  | 
