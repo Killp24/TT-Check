@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T14:16Z
+# updated 2026-10-21T14:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15258,6 +15258,7 @@
 2026-10-21 | Rudomina Kamil | Myszewski Adrian | 3-1 | 4 | 9 | Pending
 2026-10-21 | Linek Adam | Warpas Blazej | 3-0 | 4 | 9 | Pending
 2026-10-21 | Solilo Dominik | Czerwinski Bartosz | 3-2 | 4 | 9 | Pending
+2026-10-21 | Minda Michal | Sulkowski Karol | 3-2 | 4 | 9 | Pending
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
@@ -15279,6 +15280,7 @@
 2026-10-21 | Rus Maksymilian | Skotniczny Rafal | 3-1 | 5 | 5 | +19
 2026-10-21 | Pruszkowski Jakub | Dlugaj Rafal | 3-2 | 5 | 5 | +8
 2026-10-21 | Madej Boguslaw | Gajda Rafal | 3-1 | 5 | 5 | +13
+2026-10-21 | Minda Michal | Rudomina Kamil | 3-1 | 5 | 5 | Pending
 2026-10-21 | Poliniewicz Grzegorz | Zochniak Jakub | 3-0 | 6 | 5 | Pending
 2026-10-21 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 6 | 6 | Pending
 2026-10-21 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 7 | +16
@@ -15302,17 +15304,25 @@
 2026-10-21 | Kolek Maciej | Zochniak Jakub | 3-1 | 7 | 7 | Pending
 2026-10-21 | Oracz Lukasz | Slawinski Kacper | 3-1 | 7 | 8 | Pending
 2026-10-21 | Gajda Rafal | Pruszkowski Jakub | 3-1 | 7 | 7 | +16
+2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-1 | 7 | 7 | +9
 2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 8 | 8 | Pending
 2026-10-21 | Cyrnek Piotr | Olbrycht Michal | 3-1 | 8 | 8 | Pending
 2026-10-21 | Brozek Piotr | Urban Wojciech | 3-0 | 8 | 8 | Pending
 2026-10-21 | Braun Josef | Chodorski Piotr | 3-0 | 8 | 8 | Pending
 2026-10-21 | Warpas Blazej | Sulkowski Karol | 3-1 | 8 | 8 | Pending
 2026-10-21 | Schaniel Krzysztof | Przewlocki Piotr | 3-2 | 8 | 8 | Pending
+2026-10-21 | Kolek Maciej | Poliniewicz Grzegorz | 3-2 | 8 | 9 | Pending
+2026-10-21 | Skotniczny Rafal | Gajda Rafal | 3-1 | 8 | 8 | +12
+2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 9 | 9 | Pending
 2026-10-21 | David Petr | Olbrycht Michal | 3-0 | 9 | 9 | Pending
 2026-10-21 | Slawinski Kacper | Brozek Piotr | 3-1 | 9 | 9 | Pending
 2026-10-21 | Cyrnek Piotr | Chodorski Piotr | 3-2 | 9 | 9 | Pending
 2026-10-21 | Braun Josef | Kuzmicz Jakub | 3-0 | 9 | 9 | Pending
 2026-10-21 | Przewlocki Piotr | Oracz Lukasz | 3-1 | 9 | 8 | Pending
+2026-10-21 | Zochniak Jakub | Solilo Dominik | 3-2 | 9 | 5 | Pending
+2026-10-21 | David Petr | Chodorski Piotr | 3-1 | 10 | 10 | Pending
+2026-10-21 | Warpas Blazej | Myszewski Adrian | 3-0 | 10 | 10 | Pending
+2026-10-21 | Brozek Piotr | Przewlocki Piotr | 3-0 | 10 | 10 | Pending
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
@@ -15336,10 +15346,3 @@
 2026-10-21 | Oracz Lukasz | Brozek Piotr | 3-0 |  |  | 
 2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
 2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
-2026-10-21 | David Petr | Chodorski Piotr | 3-1 |  |  | 
-2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 |  |  | 
-2026-10-21 | Kolek Maciej | Poliniewicz Grzegorz | 3-2 |  |  | 
-2026-10-21 | Minda Michal | Sulkowski Karol | 3-2 |  |  | 
-2026-10-21 | Warpas Blazej | Myszewski Adrian | 3-0 |  |  | 
-2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-1 |  |  | 
-2026-10-21 | Skotniczny Rafal | Gajda Rafal | 3-1 |  |  | 
