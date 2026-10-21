@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-21T22:09Z
+# updated 2026-10-21T22:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15307,6 +15307,8 @@
 2026-10-21 | Koczyba Mariusz | Polok Pawel | 3-1 | 4 | 4 | +13
 2026-10-21 | Adach Rafal | Pytlas Wojciech | 3-2 | 4 | 4 | +11
 2026-10-21 | Bartosik Dominik | Bladziak Krzysztof | 3-1 | 4 | 4 | +5
+2026-10-21 | Skupinski Arkadiusz | Warzecha Miroslaw | 3-0 | 4 | 4 | Pending
+2026-10-21 | Janus Slawomir | Nocun Zbigniew | 3-2 | 4 | 4 | Pending
 2026-10-21 | Brunner Marian | Machelski Michal | 3-0 | 5 | 4 | +12
 2026-10-21 | Lebek Marian | Sokolowski Oliwier | 3-2 | 5 | 4 | +5
 2026-10-21 | Zmijewski Artur | Zielinski Marcin | 3-2 | 5 | 4 | +10
@@ -15343,6 +15345,7 @@
 2026-10-21 | Bladziak Krzysztof | Kumor Michal | 3-2 | 5 | 5 | +13
 2026-10-21 | Poliniewicz Grzegorz | Zochniak Jakub | 3-0 | 6 | 5 | +9
 2026-10-21 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 6 | 6 | +8
+2026-10-21 | Kumor Michal | Frank Roman | 3-1 | 6 | 6 | +8
 2026-10-21 | Adamus Pawel | Sokolowski Oliwier | 3-0 | 6 | 7 | +16
 2026-10-21 | David Petr | Braun Josef | 3-0 | 6 | 6 | +14
 2026-10-21 | Kuzmicz Jakub | Cyrnek Piotr | 3-2 | 6 | 6 | +10
@@ -15357,8 +15360,10 @@
 2026-10-21 | Staszczyk Konrad | Smoter Adam | 3-0 | 6 | 5 | +4
 2026-10-21 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-0 | 6 | 5 | +10
 2026-10-21 | Mugowski Arkadiusz | Staszczyk Konrad | 3-1 | 6 | 7 | Pending
-2026-10-21 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 6 | 6 | Pending
+2026-10-21 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 6 | 6 | +12
 2026-10-21 | Bartosik Dominik | Fomin Andriej | 3-0 | 6 | 6 | +19
+2026-10-21 | Zwolinski Mariusz | Golaszewski Kuba | 3-1 | 6 | 6 | +8
+2026-10-21 | Koczyba Mariusz | Tkaczyk Henryk | 3-0 | 6 | 1 | Pending
 2026-10-21 | Rus Maksymilian | Skotniczny Rafal | 3-1 | 7 | 7 | +18
 2026-10-21 | Cyrnek Piotr | David Petr | 3-0 | 7 | 7 | +19
 2026-10-21 | Czerwinski Bartosz | Zochniak Jakub | 3-2 | 7 | 6 | +6
@@ -15373,6 +15378,8 @@
 2026-10-21 | Gajda Rafal | Pruszkowski Jakub | 3-1 | 7 | 7 | +16
 2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-1 | 7 | 7 | +9
 2026-10-21 | Adamus Mariusz | Polok Pawel | 3-1 | 7 | 3 | +12
+2026-10-21 | Blocho Przemyslaw | Smoter Adam | 3-1 | 7 | 6 | Pending
+2026-10-21 | Zwolinski Mariusz | Mrugala Bartlomiej | 3-1 | 7 | 6 | +11
 2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 8 | 8 | +8
 2026-10-21 | Pruszkowski Jakub | Dlugaj Rafal | 3-2 | 8 | 8 | +8
 2026-10-21 | Cyrnek Piotr | Olbrycht Michal | 3-1 | 8 | 8 | +7
@@ -15410,6 +15417,7 @@
 2026-10-21 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-0 | 10 | 10 | +12
 2026-10-21 | Skotniczny Rafal | Pruszkowski Jakub | 3-0 | 10 | 10 | +19
 2026-10-21 | Dlugaj Rafal | Rus Maksymilian | 3-1 | 10 | 10 | +4
+2026-10-21 | Zielinski Marcin | Bladziak Krzysztof | 3-1 | 10 | 6 | +2
 2026-10-21 | Pyrek Dawid | Brunner Marian | 3-1 |  |  | 
 2026-10-21 | Szostok Sebastian | Komandzik Rafal | 3-2 |  |  | 
 2026-10-21 | Jurowicz Grzegorz | Orszulik Jan | 3-2 |  |  | 
@@ -15434,9 +15442,4 @@
 2026-10-21 | Adamus Pawel | Lebek Marian | 3-1 |  |  | 
 2026-10-21 | Hetnar Krzysztof | Adamus Mariusz | 3-0 |  |  | 
 2026-10-21 | Gajda Rafal | Madej Boguslaw | 3-0 |  |  | 
-2026-10-21 | Blocho Przemyslaw | Smoter Adam | 3-1 |  |  | 
-2026-10-21 | Zielinski Marcin | Bladziak Krzysztof | 3-1 | 10 | 6 | +2
-2026-10-21 | Zwolinski Mariusz | Golaszewski Kuba | 3-1 | 6 | 6 | Pending
-2026-10-21 | Koczyba Mariusz | Tkaczyk Henryk | 3-0 | 6 | 1 | Pending
-2026-10-21 | Skupinski Arkadiusz | Warzecha Miroslaw | 3-0 | 4 | 4 | Pending
-2026-10-21 | Janus Slawomir | Nocun Zbigniew | 3-2 | 4 | 4 | Pending
+2026-10-22 | Polok Pawel | Burkacki Adrian | 3-0 | 1 | 1 | Pending
