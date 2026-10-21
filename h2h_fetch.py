@@ -1,8 +1,8 @@
 """Save full head-to-head lists from the official tt-series page.
 
 Player profiles only keep the last 30 matches, so older meetings never land in
-official.txt. The head-to-head page still has them. This file is for the
-match page list. It is not part of the win chance.
+official.txt. The head-to-head page still has them. The win chance reads the
+full career series in this file. It does not use a recent slice of it.
 """
 import html
 import re
@@ -141,7 +141,7 @@ def write_h2h(path, fetched, rows):
     keys = sorted(set(fetched) | set(by_pair))
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
     out = [
-        "# Head-to-head from tt-series.com/h2h/. Display only. The win chance does not use this file.\n",
+        "# Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.\n",
         f"# updated {now}\n",
     ]
     for key in keys:
