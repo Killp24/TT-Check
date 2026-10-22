@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-22T07:49Z
+# updated 2026-10-22T11:11Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -36934,7 +36934,7 @@
 2026-09-26 | Lukaszewski Mikolaj | Klocek Kamil | 3-1
 # pair | Klocek Kamil | Marchlewski Marcin | 2026-10-11T06:35Z
 2026-10-10 | Marchlewski Marcin | Klocek Kamil | 3-0
-# pair | Klocek Kamil | Minda Michal | 2026-10-11T20:29Z
+# pair | Klocek Kamil | Minda Michal | 2026-10-22T11:11Z
 2026-07-22 | Minda Michal | Klocek Kamil | 3-0
 2026-07-22 | Minda Michal | Klocek Kamil | 3-1
 2026-07-29 | Minda Michal | Klocek Kamil | 3-0
@@ -37066,6 +37066,21 @@
 2026-09-24 | Solilo Dominik | Klocek Kamil | 3-2
 2026-10-08 | Klocek Kamil | Solilo Dominik | 3-0
 2026-10-11 | Solilo Dominik | Klocek Kamil | 3-2
+# pair | Klocek Kamil | Strus Piotr | 2026-10-22T11:11Z
+2026-02-17 | Strus Piotr | Klocek Kamil | 3-1
+2026-03-05 | Klocek Kamil | Strus Piotr | 3-2
+2026-04-09 | Klocek Kamil | Strus Piotr | 3-2
+2026-04-21 | Klocek Kamil | Strus Piotr | 3-2
+2026-05-21 | Klocek Kamil | Strus Piotr | 3-1
+2026-06-12 | Klocek Kamil | Strus Piotr | 3-1
+2026-06-26 | Strus Piotr | Klocek Kamil | 3-1
+2026-07-01 | Klocek Kamil | Strus Piotr | 3-1
+2026-07-03 | Klocek Kamil | Strus Piotr | 3-0
+2026-08-28 | Strus Piotr | Klocek Kamil | 3-2
+2026-09-09 | Klocek Kamil | Strus Piotr | 3-0
+2026-09-18 | Klocek Kamil | Strus Piotr | 3-1
+2026-09-30 | Klocek Kamil | Strus Piotr | 3-2
+2026-10-02 | Strus Piotr | Klocek Kamil | 3-1
 # pair | Klocek Kamil | Sulkowski Bartek | 2026-10-09T00:42Z
 2026-07-22 | Sulkowski Bartek | Klocek Kamil | 3-1
 2026-08-05 | Klocek Kamil | Sulkowski Bartek | 3-2
@@ -37099,6 +37114,24 @@
 2026-10-09 | Klocek Kamil | Sulkowski Karol | 3-1
 2026-10-21 | Sulkowski Karol | Klocek Kamil | 3-1
 2026-10-22 | Klocek Kamil | Sulkowski Karol | 3-1
+# pair | Klocek Kamil | Szlubowski Dariusz | 2026-10-22T11:11Z
+2026-02-17 | Szlubowski Dariusz | Klocek Kamil | 3-1
+2026-03-06 | Klocek Kamil | Szlubowski Dariusz | 3-2
+2026-04-02 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-04-10 | Klocek Kamil | Szlubowski Dariusz | 3-0
+2026-05-01 | Klocek Kamil | Szlubowski Dariusz | 3-1
+2026-05-08 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-05-13 | Klocek Kamil | Szlubowski Dariusz | 3-2
+2026-05-15 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-05-22 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-06-12 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-06-23 | Szlubowski Dariusz | Klocek Kamil | 3-1
+2026-07-01 | Szlubowski Dariusz | Klocek Kamil | 3-2
+2026-07-16 | Klocek Kamil | Szlubowski Dariusz | 3-1
+2026-09-08 | Klocek Kamil | Szlubowski Dariusz | 3-1
+2026-09-18 | Klocek Kamil | Szlubowski Dariusz | 3-1
+2026-09-29 | Klocek Kamil | Szlubowski Dariusz | 3-2
+2026-10-02 | Klocek Kamil | Szlubowski Dariusz | 3-2
 # pair | Klocek Kamil | Warpas Blazej | 2026-10-22T05:13Z
 2026-02-14 | Klocek Kamil | Warpas Blazej | 3-0
 2026-02-15 | Warpas Blazej | Klocek Kamil | 3-2
@@ -55187,6 +55220,17 @@
 2026-10-01 | Warpas Blazej | Minda Michal | 3-1
 2026-10-15 | Minda Michal | Warpas Blazej | 3-2
 2026-10-21 | Warpas Blazej | Minda Michal | 3-0
+# pair | Minda Michal | Wrobel Dariusz | 2026-10-22T11:11Z
+2025-07-09 | Minda Michal | Wrobel Dariusz | 3-0
+2025-07-09 | Minda Michal | Wrobel Dariusz | 3-1
+2025-07-30 | Minda Michal | Wrobel Dariusz | 3-1
+2025-07-30 | Minda Michal | Wrobel Dariusz | 3-2
+2025-12-04 | Minda Michal | Wrobel Dariusz | 3-2
+2025-12-04 | Wrobel Dariusz | Minda Michal | 3-1
+2026-02-28 | Wrobel Dariusz | Minda Michal | 3-1
+2026-06-13 | Minda Michal | Wrobel Dariusz | 3-0
+2026-09-05 | Minda Michal | Wrobel Dariusz | 3-0
+2026-09-19 | Minda Michal | Wrobel Dariusz | 3-0
 # pair | Minda Michal | Zochniak Jakub | 2026-10-22T02:13Z
 2022-10-12 | Zochniak Jakub | Minda Michal | 3-1
 2022-10-17 | Minda Michal | Zochniak Jakub | 3-2
