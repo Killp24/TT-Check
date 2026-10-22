@@ -14,12 +14,12 @@ Baran Mateusz | 95 | 92
 Baran Sebastian | 1763 | 1314
 Baranowski Jakub | 41 | 108
 Baron Mariusz | 1898 | 2247
-Barton Aleksander | 93 | 349
-Bartosik Dominik | 28 | 31
+Barton Aleksander | 93 | 350
+Bartosik Dominik | 28 | 32
 Belik Simon | 106 | 299
 Benes Michal | 531 | 486
 Bernacki Lukasz | 739 | 800
-Bladziak Krzysztof | 9 | 30
+Bladziak Krzysztof | 9 | 31
 Blocho Przemyslaw | 1580 | 1177
 Bluszcz Tomasz | 123 | 152
 Braun Josef | 1668 | 1544
@@ -27,7 +27,7 @@ Brozek Piotr | 124 | 96
 Brud Szymon | 724 | 761
 Brunner Marian | 570 | 678
 Buczynski Witold | 1060 | 1839
-Burkacki Adrian | 155 | 257
+Burkacki Adrian | 155 | 258
 Burkacki Mateusz | 1959 | 1475
 Cesarz Milosz | 244 | 570
 Chlodnicki Piotr | 876 | 1463
@@ -60,9 +60,9 @@ Felkel Grzegorz | 2769 | 1720
 Filbrandt Tomasz | 2460 | 1919
 Fira Damian | 477 | 759
 Folwarski Jakub | 694 | 321
-Fomin Andriej | 643 | 457
+Fomin Andriej | 644 | 457
 Fomin Yurij | 617 | 778
-Frank Roman | 8 | 30
+Frank Roman | 9 | 30
 Gabrys Dariusz | 0 | 30
 Gaik Krystian | 326 | 284
 Gajda Rafal | 489 | 464
@@ -121,7 +121,7 @@ Klag Wiktor | 95 | 164
 Klocek Kamil | 497 | 471
 Klos Patrik | 808 | 635
 Kocik Tomasz | 94 | 35
-Koczyba Mariusz | 2080 | 1578
+Koczyba Mariusz | 2080 | 1579
 Kolasa Szymon | 994 | 959
 Kolek Maciej | 834 | 784
 Kolodziej Krystian | 3852 | 2021
@@ -153,8 +153,8 @@ Kujawa Filip | 1576 | 1854
 Kukawka Milosz | 574 | 359
 Kulczycki Alan | 3 | 27
 Kulpa Konrad | 603 | 202
-Kumor Michal | 559 | 941
-Kurek Pawel | 526 | 510
+Kumor Michal | 559 | 942
+Kurek Pawel | 527 | 510
 Kurowski Kamil | 56 | 115
 Kuzmicz Jakub | 805 | 630
 Kwapis Jakub | 487 | 591
@@ -163,7 +163,7 @@ Kwodawski Bartosz | 589 | 776
 Lach Marcin | 184 | 111
 Lamer Maciej | 658 | 1161
 Lamperski Jakub | 84 | 59
-Lebek Marian | 1117 | 844
+Lebek Marian | 1117 | 845
 Leczycki Mariusz | 9 | 10
 Lewandowski Patryk | 386 | 684
 Lewczuk Miroslaw | 1083 | 1033
@@ -193,7 +193,7 @@ Maszczynski Dariusz | 118 | 415
 Mecik Patryk | 1136 | 1186
 Miastowski Maksymilian | 1564 | 1378
 Michalczyk Jakub | 227 | 203
-Michalik Jerzy | 1016 | 1247
+Michalik Jerzy | 1017 | 1247
 Michalski Jakub | 1199 | 1740
 Michna Dawid | 1204 | 1110
 Minda Michal | 3594 | 3491
@@ -217,7 +217,7 @@ Natkaniec Michal | 188 | 366
 Niemiec Krzysztof | 525 | 752
 Niemiec Rafal | 201 | 113
 Niezgoda Rostislav | 32 | 48
-Nocun Zbigniew | 1413 | 939
+Nocun Zbigniew | 1414 | 939
 Nosiadek Jakub | 40 | 65
 Nowak Jakub | 1358 | 2130
 Nowalinski Maciej | 1917 | 1781
@@ -248,7 +248,7 @@ Pisarczyk Tomasz | 199 | 311
 Pokorny Adam | 18 | 44
 Polanski Pawel | 786 | 744
 Poliniewicz Grzegorz | 4113 | 2920
-Polok Pawel | 210 | 133
+Polok Pawel | 211 | 133
 Poloszczanski Dawid | 1232 | 2133
 Prokopcov Dimitrij | 117 | 149
 Pruszkowski Jakub | 2381 | 1686
@@ -305,7 +305,7 @@ Staniczek Adam | 550 | 1142
 Staniszewski Piotr | 908 | 1195
 Stapor Rafal | 765 | 602
 Staszczyk Konrad | 1427 | 1193
-Stechly Witold | 116 | 530
+Stechly Witold | 116 | 531
 Stecyszyn Jakub | 270 | 353
 Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
@@ -327,7 +327,7 @@ Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
 Szymanski Igor | 135 | 405
 Szymik Robert | 1194 | 768
-Tkaczyk Henryk | 1183 | 613
+Tkaczyk Henryk | 1184 | 613
 Tkocz Marek | 973 | 547
 Tobiasz Wojciech | 672 | 880
 Tomsia Slawomir | 75 | 144
@@ -373,7 +373,7 @@ Zagajewski Mateusz | 766 | 850
 Zandecki Jan | 1593 | 1513
 Zelezik Jacek | 456 | 359
 Zemla Piotr | 105 | 45
-Zielinski Marcin | 60 | 18
+Zielinski Marcin | 61 | 18
 Zmijewski Artur | 131 | 88
 Zochniak Jakub | 4238 | 3669
 Zwolinski Mariusz | 316 | 502
