@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T00:48Z
+# updated 2026-10-22T01:39Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15363,7 +15363,7 @@
 2026-10-21 | Zielinski Marcin | Kumor Michal | 3-1 | 6 | 2 | +7
 2026-10-21 | Staszczyk Konrad | Smoter Adam | 3-0 | 6 | 5 | +4
 2026-10-21 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-0 | 6 | 5 | +10
-2026-10-21 | Mugowski Arkadiusz | Staszczyk Konrad | 3-1 | 6 | 7 | Pending
+2026-10-21 | Mugowski Arkadiusz | Staszczyk Konrad | 3-1 | 6 | 7 | +22
 2026-10-21 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 6 | 6 | +12
 2026-10-21 | Bartosik Dominik | Fomin Andriej | 3-0 | 6 | 6 | +19
 2026-10-21 | Zwolinski Mariusz | Golaszewski Kuba | 3-1 | 6 | 6 | +8
@@ -15384,11 +15384,11 @@
 2026-10-21 | Gajda Rafal | Pruszkowski Jakub | 3-1 | 7 | 7 | +16
 2026-10-21 | Dlugaj Rafal | Madej Boguslaw | 3-1 | 7 | 7 | +9
 2026-10-21 | Adamus Mariusz | Polok Pawel | 3-1 | 7 | 3 | +12
-2026-10-21 | Blocho Przemyslaw | Smoter Adam | 3-1 | 7 | 6 | Pending
+2026-10-21 | Blocho Przemyslaw | Smoter Adam | 3-1 | 7 | 6 | +9
 2026-10-21 | Zwolinski Mariusz | Mrugala Bartlomiej | 3-1 | 7 | 6 | +11
 2026-10-21 | Kumor Michal | Bartosik Dominik | 3-1 | 7 | 7 | +13
-2026-10-21 | Sulkowski Bartek | Blocho Przemyslaw | 3-2 | 7 | 8 | Pending
-2026-10-21 | Mugowski Arkadiusz | Smoter Adam | 3-1 | 7 | 7 | Pending
+2026-10-21 | Sulkowski Bartek | Blocho Przemyslaw | 3-2 | 7 | 8 | +9
+2026-10-21 | Mugowski Arkadiusz | Smoter Adam | 3-1 | 7 | 7 | +13
 2026-10-21 | Bladziak Krzysztof | Frank Roman | 3-2 | 7 | 7 | +10
 2026-10-21 | David Petr | Kuzmicz Jakub | 3-1 | 8 | 8 | +8
 2026-10-21 | Pruszkowski Jakub | Dlugaj Rafal | 3-2 | 8 | 8 | +8
@@ -15403,8 +15403,8 @@
 2026-10-21 | Linek Adam | Mugowski Arkadiusz | 3-2 | 8 | 3 | +7
 2026-10-21 | Zielinski Marcin | Frank Roman | 3-0 | 8 | 4 | +5
 2026-10-21 | Lebek Marian | Kurek Pawel | 3-1 | 8 | 6 | Pending
-2026-10-21 | Staszczyk Konrad | Smoter Adam | 3-1 | 8 | 8 | Pending
-2026-10-21 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 | 8 | 8 | Pending
+2026-10-21 | Staszczyk Konrad | Smoter Adam | 3-1 | 8 | 8 | +3
+2026-10-21 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 | 8 | 8 | +6
 2026-10-21 | Fomin Andriej | Frank Roman | 3-1 | 8 | 8 | +6
 2026-10-21 | Schaniel Krzysztof | Urban Wojciech | 3-2 | 9 | 9 | +8
 2026-10-21 | David Petr | Olbrycht Michal | 3-0 | 9 | 9 | +8
@@ -15420,7 +15420,7 @@
 2026-10-21 | Linek Adam | Blocho Przemyslaw | 3-1 | 9 | 5 | +15
 2026-10-21 | Zielinski Marcin | Fomin Andriej | 3-1 | 9 | 5 | +9
 2026-10-21 | Adamus Mariusz | Pytlas Wojciech | 3-0 | 9 | 5 | +17
-2026-10-21 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-2 | 9 | 9 | Pending
+2026-10-21 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-2 | 9 | 9 | +5
 2026-10-21 | Braun Josef | Cyrnek Piotr | 3-0 | 10 | 10 | +16
 2026-10-21 | David Petr | Chodorski Piotr | 3-1 | 10 | 10 | +6
 2026-10-21 | Warpas Blazej | Myszewski Adrian | 3-0 | 10 | 10 | +19
@@ -15461,18 +15461,28 @@
 2026-10-22 | Polok Pawel | Burkacki Adrian | 3-0 | 1 | 1 | Pending
 2026-10-22 | Golaszewski Kuba | Kowalczyk Marcin | 3-0 | 1 | 1 | +19
 2026-10-22 | Koczyba Mariusz | Lebek Marian | 3-2 | 1 | 1 | Pending
-2026-10-22 | Mrugala Bartlomiej | Kowalczyk Marcin | 3-1 | 1 | 2 | Pending
-2026-10-22 | Szoltysek Artur | Golaszewski Kuba | 3-2 | 1 | 2 | Pending
-2026-10-22 | Zwolinski Mariusz | Kowalczyk Marcin | 3-0 | 1 | 3 | Pending
-2026-10-22 | Staszczyk Konrad | Sulkowski Bartek | 3-2 | 1 | 1 | Pending
+2026-10-22 | Mrugala Bartlomiej | Kowalczyk Marcin | 3-1 | 1 | 2 | +11
+2026-10-22 | Szoltysek Artur | Golaszewski Kuba | 3-2 | 1 | 2 | +7
+2026-10-22 | Zwolinski Mariusz | Kowalczyk Marcin | 3-0 | 1 | 3 | +11
+2026-10-22 | Staszczyk Konrad | Sulkowski Bartek | 3-2 | 1 | 1 | +3
 2026-10-22 | Bladziak Krzysztof | Kumor Michal | 3-1 | 1 | 1 | +19
+2026-10-22 | Smoter Adam | Sulkowski Bartek | 3-2 | 1 | 2 | +10
+2026-10-22 | Zielinski Marcin | Frank Roman | 3-1 | 1 | 1 | +1
+2026-10-22 | Warzecha Miroslaw | Nocun Zbigniew | 3-0 | 1 | 1 | Pending
+2026-10-22 | Michalik Jerzy | Warzecha Miroslaw | 3-2 | 1 | 2 | Pending
+2026-10-22 | Fomin Andriej | Kumor Michal | 3-2 | 1 | 2 | +7
+2026-10-22 | Stechly Witold | Barton Aleksander | 3-0 | 1 | 1 | Pending
 2026-10-22 | Polok Pawel | Kurek Pawel | 3-0 | 2 | 1 | Pending
 2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-1 | 2 | 1 | Pending
 2026-10-22 | Kurek Pawel | Koczyba Mariusz | 3-0 | 2 | 2 | Pending
-2026-10-22 | Szoltysek Artur | Mrugala Bartlomiej | 3-2 | 2 | 2 | Pending
-2026-10-22 | Szoltysek Artur | Zwolinski Mariusz | 3-1 | 3 | 2 | Pending
+2026-10-22 | Szoltysek Artur | Mrugala Bartlomiej | 3-2 | 2 | 2 | +9
+2026-10-22 | Staszczyk Konrad | Blocho Przemyslaw | 3-1 | 2 | 1 | +5
+2026-10-22 | Szoltysek Artur | Zwolinski Mariusz | 3-1 | 3 | 2 | +15
 2026-10-22 | Burkacki Adrian | Lebek Marian | 3-0 | 3 | 2 | Pending
 2026-10-22 | Polok Pawel | Tkaczyk Henryk | 3-1 | 3 | 2 | Pending
+2026-10-22 | Lebek Marian | Polok Pawel | 3-1 | 3 | 4 | Pending
+2026-10-22 | Golaszewski Kuba | Mrugala Bartlomiej | 3-2 | 3 | 3 | +10
+2026-10-22 | Burkacki Adrian | Koczyba Mariusz | 3-2 | 4 | 3 | Pending
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
 2026-10-22 | Zielinski Marcin | Fomin Andriej | 3-2 |  |  | 
 2026-10-22 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 |  |  | 
