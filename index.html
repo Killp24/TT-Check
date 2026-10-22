@@ -1129,7 +1129,7 @@ function setup(k){
 function honestLines(p){
  const rec=REC.get(p.name),fe=formEdge(p.name);
  const onFile=rec?`<small>On file: ${rec.w}–${rec.l}</small>`:`<small>On file: no results yet</small>`;
- const edge=fe?`<small class="${fe.diff>=1.5?"today":fe.diff<=-1.5?"today bad":""}">Form edge: ${fe.w}–${fe.n-fe.w} last ${fe.n}, ${sgn(fe.diff)} vs Elo${Math.abs(fe.shift)<0.03?" · too close to move the estimate":""}</small>`:`<small>Form edge: needs 8 results on file</small>`;
+ const edge=fe?`<small>Form edge: ${fe.w}–${fe.n-fe.w} last ${fe.n}, ${sgn(fe.diff)} vs Elo${Math.abs(fe.shift)<0.03?" · too close to move the estimate":""}</small>`:`<small>Form edge: needs 8 results on file</small>`;
  return onFile+edge;
 }
 function form(p){
@@ -1755,6 +1755,8 @@ function renderSched(opt){
     for(const v of latestByBook(OHIST[key]||[]).values()){fade=fadeOf(a,b,first?v.o1:v.o2,first?v.o2:v.o1);if(fade)break}
     if(!fade&&so)fade=fadeOf(a,b,so.o1,so.o2);
     if(fade){flag=true;tags+=`<span class="stag fade">Caution · ${esc(sur(fade.dog))}</span>`}}
+   const rem=rematchFlag(e.prev);
+   if(rem){flag=true;tags+=`<span class="stag rem">Rematch 3-2 · ${esc(sur(rem.loser))} lost</span>`}
    const lg=legendaryShown(a,b,e.pa);
    const wp=worryPair(a,b);
    if(lg){legend=true;flag=true;tags+=`<span class="stag legend">Legendary ${lg.pct}%</span>`}
@@ -2014,8 +2016,6 @@ function renderSignals(){
   const e=estimate(a,b,so0?bookOpt(so0.o1,so0.o2):null),sigs=[];
   const fav=a.elo>=b.elo?a:b;
   if(isBan(fav))sigs.push({cls:"t"+tierOf(fav),text:sur(fav.name)+" ban favorite T"+tierOf(fav),rank:tierOf(fav)===1?50:tierOf(fav)===2?35:22});
-  for(const p of [a,b]){const f=formEdge(p.name);if(!f||Math.abs(f.diff)<3||Math.abs(f.shift)<0.03)continue;
-   sigs.push({cls:f.diff>0?"ev":"t2",text:sur(p.name)+(f.diff>0?" hot ":" cold ")+sgn(f.diff),rank:Math.abs(toElo(f.shift))});}
   const hx=careerH2hShift(careerMeetings(a,b));
   if(hx)sigs.push({cls:"w",text:`${sur(hx.leader)} H2H ${hx.w}–${hx.n-hx.w}`,rank:Math.abs(toElo(hx.shift))});
   const so=so0;
@@ -2029,8 +2029,8 @@ function renderSignals(){
    if(sides.length){best=sides.sort((x,y)=>y.ev-x.ev)[0];const goHere=!wp&&goSide(best.pm,best.ev);if(goHere)sigs.push({cls:"go",text:"Go",rank:0});if(best.ev>=3)sigs.push({cls:goHere?"ev":"",text:`+$${best.ev.toFixed(0)} ${sur(best.p.name)}`,rank:goHere?best.ev:0})}
   }
   if(so&&isFlagPair(so.o1,so.o2))sigs.push({cls:"flagp",text:"Flagged price",rank:25});
-  const prev=e.prev;
-  if(prev&&(prev.score==="3-0"||prev.score==="3-1"))sigs.push({cls:"rem",text:`Rematch ${prev.score} · ${sur(prev.w)} won`,rank:prev.score==="3-0"?36:32});
+  const rem=rematchFlag(e.prev);
+  if(rem)sigs.push({cls:"rem",text:`Rematch 3-2 · ${sur(rem.loser)} lost`,rank:34});
   if(sigs.length)items.push({r,e,sigs,so,best,rank:Math.max(...sigs.map(s=>s.rank||0))});
  }
  const isRem=x=>x.sigs.some(s=>s.cls==="rem");
@@ -2039,7 +2039,7 @@ function renderSignals(){
  const shown=[...remItems,...rest.slice(0,40)];
  const asOf=data&&(data.ratings.match(/as of (\d{4}-\d{2}-\d{2})/)||[])[1];
  const more=items.length-shown.length;
- $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-0 and 3-1 rematches are listed first. A gold border is a legendary match at 70% or more: one player is hot and at least 100 Elo higher, and the other is cold. Each side is at least 1.5 wins off Elo. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, form is at least 3 wins off Elo, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
+ $("sigInfo").textContent=`${shown.length} signal${shown.length===1?"":"s"}${more?`, ${more} more on Home`:""}. Elo ${asOf?nice(asOf):"not loaded"}. Results ${offAt?ago(offAt):"time unknown"}. Same-day 3-2 rematches are listed first. The name on that flag is the player who lost the first meeting. A gold border is a legendary match at 70% or more: one player is hot and at least 100 Elo higher, and the other is cold. Each side is at least 1.5 wins off Elo. A green border means our price is 50% or more and the edge is $3 to $14. A red border means the other player is at least 100 Elo higher and at least 2 wins ahead on recent form. A $15 edge is not the reason. Also listed when a ban-list player is favored, head-to-head moves the estimate, or a saved price is at least $3 per $100 off it. Tap one to open the match. Home still has every match.`;
  $("sigList").innerHTML=shown.map(({r,e,sigs,so})=>{
   const fav=e.pa>=.5?r.p1:r.p2,pf=Math.round(Math.max(e.pa,1-e.pa)*100);
   const fresh=so&&so.at?`Price ${ago(so.at)}`:"No book price yet";
