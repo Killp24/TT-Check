@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T17:10Z
+# updated 2026-10-22T17:34Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15534,6 +15534,9 @@
 2026-10-22 | Zochniak Jakub | Kukawka Milosz | 3-2 | 2 | 2 | +8
 2026-10-22 | Stapor Rafal | Kukawka Milosz | 3-2 | 2 | 7 | Pending
 2026-10-22 | Skupinski Arkadiusz | Staniczek Adam | 3-0 | 2 | 6 | +16
+2026-10-22 | Jadach Oskar | Jurowicz Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-22 | Rolak Jaroslaw | Golaszewski Kuba | 3-2 | 2 | 5 | +7
+2026-10-22 | Kubiak Artur | Nocun Zbigniew | 3-1 | 2 | 7 | +11
 2026-10-22 | Warzecha Miroslaw | Staniczek Adam | 3-1 | 3 | 2 | +4
 2026-10-22 | Szoltysek Artur | Zwolinski Mariusz | 3-1 | 3 | 2 | +15
 2026-10-22 | Burkacki Adrian | Lebek Marian | 3-0 | 3 | 2 | +22
@@ -15563,6 +15566,7 @@
 2026-10-22 | Poliniewicz Grzegorz | Kostal Daniel | 3-1 | 3 | 8 | +10
 2026-10-22 | Kukawka Milosz | Minda Michal | 3-2 | 3 | 3 | +6
 2026-10-22 | Bartosik Dominik | Staniczek Adam | 3-1 | 3 | 5 | +8
+2026-10-22 | Smoter Adam | Minda Michal | 3-1 | 3 | 7 | Pending
 2026-10-22 | Golaszewski Kuba | Mrugala Bartlomiej | 3-2 | 4 | 4 | +9
 2026-10-22 | Burkacki Adrian | Koczyba Mariusz | 3-2 | 4 | 3 | +9
 2026-10-22 | Kurek Pawel | Burkacki Adrian | 3-0 | 4 | 5 | +12
@@ -15590,6 +15594,8 @@
 2026-10-22 | Kukawka Milosz | Kotwica Dawid | 3-2 | 4 | 9 | +3
 2026-10-22 | Minda Michal | Sulkowski Karol | 3-1 | 4 | 9 | +7
 2026-10-22 | Solilo Dominik | Zochniak Jakub | 3-2 | 4 | 4 | +8
+2026-10-22 | Sulkowski Bartek | Rudomina Kamil | 3-0 | 4 | 2 | Pending
+2026-10-22 | Bartosik Dominik | Wolny Michal | 3-2 | 4 | 2 | +7
 2026-10-22 | Polok Pawel | Koczyba Mariusz | 3-0 | 5 | 4 | +15
 2026-10-22 | Kurek Pawel | Urban Wojciech | 3-0 | 5 | 1 | +12
 2026-10-22 | Lebek Marian | Tkaczyk Henryk | 3-1 | 5 | 5 | +9
@@ -15615,6 +15621,8 @@
 2026-10-22 | Solilo Dominik | Kukawka Milosz | 3-2 | 5 | 5 | +8
 2026-10-22 | Zochniak Jakub | Minda Michal | 3-1 | 5 | 5 | +10
 2026-10-22 | Koczyba Mariusz | Bernacki Lukasz | 3-0 | 5 | 1 | Pending
+2026-10-22 | Kowalczyk Marcin | Trela Mateusz | 3-1 | 5 | 2 | +15
+2026-10-22 | Mrugala Bartlomiej | Lukaszewski Mikolaj | 3-1 | 5 | 2 | +13
 2026-10-22 | Jozefiak Michal | Hetnar Krzysztof | 3-0 | 6 | 6 | +25
 2026-10-22 | Buczynski Witold | Sikon Mateusz | 3-1 | 6 | 6 | +10
 2026-10-22 | Jendrzejewski Patryk | Kapik Krzysztof | 3-0 | 6 | 6 | +18
@@ -15629,6 +15637,7 @@
 2026-10-22 | Glanowski Waldemar | Sokolowski Oliwier | 3-0 | 6 | 6 | +19
 2026-10-22 | Slawinski Kacper | Vincenec Oliver | 3-0 | 6 | 6 | +12
 2026-10-22 | Minda Michal | Sulkowski Bartek | 3-2 | 6 | 3 | Pending
+2026-10-22 | Koczyba Mariusz | Pytlas Wojciech | 3-0 | 6 | 2 | Pending
 2026-10-22 | Jadczyk Marcin | Wloczko Krzysztof | 3-0 | 7 | 7 | +14
 2026-10-22 | Tkaczyk Henryk | Urban Wojciech | 3-2 | 7 | 3 | +7
 2026-10-22 | Cyrnek Piotr | Kolodziej Krystian | 3-0 | 7 | 7 | +14
@@ -15668,9 +15677,10 @@
 2026-10-22 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 | 9 | 4 | +5
 2026-10-22 | Pruszkowski Jakub | Hetnar Krzysztof | 3-0 | 9 | 11 | +19
 2026-10-22 | Jozefiak Michal | Buczynski Witold | 3-0 | 9 | 10 | +12
-2026-10-22 | Slawinski Kacper | Niemiec Rafal | 3-0 | 9 | 9 | Pending
+2026-10-22 | Slawinski Kacper | Niemiec Rafal | 3-0 | 9 | 9 | +18
 2026-10-22 | Vincenec Oliver | Glanowski Jakub | 3-0 | 9 | 1 | +23
-2026-10-22 | Sokolowski Oliwier | Oracz Lukasz | 3-1 | 9 | 8 | Pending
+2026-10-22 | Sokolowski Oliwier | Oracz Lukasz | 3-1 | 9 | 8 | +15
+2026-10-22 | Oracz Lukasz | Vincenec Oliver | 3-1 | 9 | 10 | +13
 2026-10-22 | Cyrnek Piotr | Jadczyk Marcin | 3-1 | 10 | 10 | +10
 2026-10-22 | Cesarz Milosz | Hetnar Krzysztof | 3-2 | 10 | 10 | +13
 2026-10-22 | Olbrycht Michal | Kapik Krzysztof | 3-2 | 10 | 10 | +8
@@ -15678,7 +15688,8 @@
 2026-10-22 | Kolodziej Krystian | Miastowski Maksymilian | 3-0 | 10 | 10 | +18
 2026-10-22 | Jendrzejewski Patryk | Kostal Daniel | 3-0 | 10 | 10 | +12
 2026-10-22 | Kotwica Dawid | Sulkowski Karol | 3-0 | 10 | 10 | +17
-2026-10-22 | Slawinski Kacper | Glanowski Waldemar | 3-1 | 10 | 9 | Pending
+2026-10-22 | Slawinski Kacper | Glanowski Waldemar | 3-1 | 10 | 9 | +5
+2026-10-22 | Sokolowski Oliwier | Niemiec Rafal | 3-2 | 10 | 10 | +12
 2026-10-22 | Cesarz Milosz | Sikon Mateusz | 3-1 | 11 | 10 | +9
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
 2026-10-22 | Zielinski Marcin | Fomin Andriej | 3-2 |  |  | 
@@ -15694,8 +15705,3 @@
 2026-10-22 | Pruszkowski Jakub | Jozefiak Michal | 3-2 |  |  | 
 2026-10-22 | Oracz Lukasz | Glanowski Waldemar | 3-1 |  |  | 
 2026-10-22 | Vincenec Oliver | Glanowski Waldemar | 3-0 |  |  | 
-2026-10-22 | Smoter Adam | Minda Michal | 3-1 |  |  | 
-2026-10-22 | Sulkowski Bartek | Rudomina Kamil | 3-0 |  |  | 
-2026-10-22 | Bartosik Dominik | Wolny Michal | 3-2 |  |  | 
-2026-10-22 | Jadach Oskar | Jurowicz Grzegorz | 3-1 |  |  | 
-2026-10-22 | Koczyba Mariusz | Pytlas Wojciech | 3-0 |  |  | 
