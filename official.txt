@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T07:26Z
+# updated 2026-10-22T07:48Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13221,7 +13221,7 @@
 2026-10-15 | Lamperski Jakub | Lukaszewski Mikolaj | 3-0 | 2 | 2 | +8
 2026-10-15 | Cesarz Milosz | Burkacki Adrian | 3-0 | 2 | 5 | +19
 2026-10-15 | Kolodziej Krystian | Grela Artur | 3-2 | 2 | 2 | +9
-2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 2 | 2 | +5
+2026-10-15 | Slawinski Kacper | Slosarczyk Pawel | 3-2 | 2 | 2 | +4
 2026-10-15 | Wloczko Krzysztof | Jendrzejewski Patryk | 3-2 | 2 | 2 | +7
 2026-10-15 | Stapor Rafal | Sulkowski Karol | 3-1 | 2 | 2 | +5
 2026-10-15 | Kurek Pawel | Oracz Lukasz | 3-0 | 2 | 5 | +18
@@ -15488,6 +15488,7 @@
 2026-10-22 | Oracz Lukasz | Slawinski Kacper | 3-0 | 1 | 1 | +24
 2026-10-22 | Vincenec Oliver | Niemiec Rafal | 3-1 | 1 | 1 | Pending
 2026-10-22 | Sokolowski Oliwier | Glanowski Waldemar | 3-2 | 1 | 1 | +6
+2026-10-22 | Niemiec Krzysztof | Oracz Lukasz | 3-2 | 1 | 2 | Pending
 2026-10-22 | Polok Pawel | Kurek Pawel | 3-0 | 2 | 1 | +17
 2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-1 | 2 | 1 | +14
 2026-10-22 | Kurek Pawel | Koczyba Mariusz | 3-0 | 2 | 2 | +17
@@ -15510,8 +15511,10 @@
 2026-10-22 | Wisniewski Bartlomiej | Lamperski Jakub | 3-2 | 2 | 2 | Pending
 2026-10-22 | Skotniczny Rafal | Urban Wojciech | 3-0 | 2 | 2 | Pending
 2026-10-22 | Kolodziej Krystian | Sklensky Miroslav | 3-0 | 2 | 2 | Pending
-2026-10-22 | Jendrzejewski Patryk | Kapik Krzysztof | 3-0 | 2 | 2 | Pending
+2026-10-22 | Jendrzejewski Patryk | Kapik Krzysztof | 3-0 | 2 | 2 | +18
 2026-10-22 | Warpas Blazej | Kotwica Dawid | 3-2 | 2 | 2 | Pending
+2026-10-22 | Glanowski Waldemar | Slawinski Kacper | 3-1 | 2 | 2 | Pending
+2026-10-22 | Sokolowski Oliwier | Vincenec Oliver | 3-1 | 2 | 2 | Pending
 2026-10-22 | Warzecha Miroslaw | Staniczek Adam | 3-1 | 3 | 2 | +4
 2026-10-22 | Szoltysek Artur | Zwolinski Mariusz | 3-1 | 3 | 2 | +15
 2026-10-22 | Burkacki Adrian | Lebek Marian | 3-0 | 3 | 2 | +22
@@ -15523,16 +15526,17 @@
 2026-10-22 | Michalik Jerzy | Staniczek Adam | 3-2 | 3 | 3 | +6
 2026-10-22 | Cyrnek Piotr | Kolodziej Krystian | 3-1 | 3 | 3 | Pending
 2026-10-22 | Wloczko Krzysztof | Miastowski Maksymilian | 3-2 | 3 | 3 | Pending
-2026-10-22 | Olbrycht Michal | Jendrzejewski Patryk | 3-0 | 3 | 3 | Pending
-2026-10-22 | Wisniewski Karol | Kolek Maciej | 3-1 | 3 | 3 | Pending
+2026-10-22 | Olbrycht Michal | Jendrzejewski Patryk | 3-0 | 3 | 3 | +15
+2026-10-22 | Wisniewski Karol | Kolek Maciej | 3-1 | 3 | 3 | +14
 2026-10-22 | Hetnar Krzysztof | Sikon Mateusz | 3-1 | 3 | 3 | Pending
 2026-10-22 | Pruszkowski Jakub | Cesarz Milosz | 3-1 | 3 | 3 | Pending
 2026-10-22 | Sulkowski Karol | Warpas Blazej | 3-1 | 3 | 3 | Pending
 2026-10-22 | Wisniewski Bartlomiej | Klocek Kamil | 3-1 | 3 | 3 | Pending
 2026-10-22 | Sklensky Miroslav | Jadczyk Marcin | 3-1 | 3 | 3 | Pending
-2026-10-22 | Kapik Krzysztof | Kostal Daniel | 3-0 | 3 | 3 | Pending
+2026-10-22 | Kapik Krzysztof | Kostal Daniel | 3-0 | 3 | 3 | +15
 2026-10-22 | Lamperski Jakub | Kotwica Dawid | 3-1 | 3 | 3 | Pending
 2026-10-22 | Buczynski Witold | Jozefiak Michal | 3-1 | 3 | 3 | Pending
+2026-10-22 | Skotniczny Rafal | Lebek Marian | 3-1 | 3 | 7 | Pending
 2026-10-22 | Burkacki Adrian | Koczyba Mariusz | 3-2 | 4 | 3 | +9
 2026-10-22 | Kurek Pawel | Burkacki Adrian | 3-0 | 4 | 5 | +12
 2026-10-22 | Tkaczyk Henryk | Lebek Marian | 3-1 | 4 | 4 | +16
@@ -15541,6 +15545,17 @@
 2026-10-22 | Michalik Jerzy | Nocun Zbigniew | 3-2 | 4 | 5 | +9
 2026-10-22 | Staniczek Adam | Barton Aleksander | 3-1 | 4 | 4 | +5
 2026-10-22 | Cesarz Milosz | Hetnar Krzysztof | 3-0 | 4 | 4 | Pending
+2026-10-22 | Miastowski Maksymilian | Kolodziej Krystian | 3-2 | 4 | 4 | Pending
+2026-10-22 | Jadczyk Marcin | Cyrnek Piotr | 3-2 | 4 | 4 | Pending
+2026-10-22 | Pruszkowski Jakub | Buczynski Witold | 3-1 | 4 | 4 | Pending
+2026-10-22 | Kolek Maciej | Jendrzejewski Patryk | 3-1 | 4 | 4 | +13
+2026-10-22 | Warpas Blazej | Klocek Kamil | 3-1 | 4 | 4 | Pending
+2026-10-22 | Sulkowski Karol | Lamperski Jakub | 3-2 | 4 | 4 | Pending
+2026-10-22 | Wloczko Krzysztof | Sklensky Miroslav | 3-1 | 4 | 4 | Pending
+2026-10-22 | Olbrycht Michal | Kostal Daniel | 3-1 | 4 | 4 | Pending
+2026-10-22 | Kapik Krzysztof | Wisniewski Karol | 3-0 | 4 | 4 | Pending
+2026-10-22 | Kotwica Dawid | Wisniewski Bartlomiej | 3-2 | 4 | 4 | Pending
+2026-10-22 | Jozefiak Michal | Sikon Mateusz | 3-1 | 4 | 4 | Pending
 2026-10-22 | Polok Pawel | Koczyba Mariusz | 3-0 | 5 | 4 | +15
 2026-10-22 | Kurek Pawel | Urban Wojciech | 3-0 | 5 | 1 | Pending
 2026-10-22 | Lebek Marian | Tkaczyk Henryk | 3-1 | 5 | 5 | Pending
@@ -15549,6 +15564,8 @@
 2026-10-22 | Lebek Marian | Burkacki Adrian | 3-0 | 6 | 7 | Pending
 2026-10-22 | Tkaczyk Henryk | Urban Wojciech | 3-2 | 7 | 3 | Pending
 2026-10-22 | Burkacki Adrian | Kurek Pawel | 3-0 | 8 | 7 | Pending
+2026-10-22 | Kurek Pawel | Skotniczny Rafal | 3-1 | 8 | 4 | Pending
+2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-0 | 9 | 8 | Pending
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
 2026-10-22 | Zielinski Marcin | Fomin Andriej | 3-2 |  |  | 
 2026-10-22 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 |  |  | 
@@ -15560,12 +15577,3 @@
 2026-10-22 | Zielinski Marcin | Bartosik Dominik | 3-1 |  |  | 
 2026-10-22 | Staniczek Adam | Stechly Witold | 3-1 |  |  | 
 2026-10-22 | Fomin Andriej | Frank Roman | 3-1 |  |  | 
-2026-10-22 | Miastowski Maksymilian | Kolodziej Krystian | 3-2 |  |  | 
-2026-10-22 | Jadczyk Marcin | Cyrnek Piotr | 3-2 |  |  | 
-2026-10-22 | Pruszkowski Jakub | Buczynski Witold | 3-1 |  |  | 
-2026-10-22 | Kolek Maciej | Jendrzejewski Patryk | 3-1 |  |  | 
-2026-10-22 | Warpas Blazej | Klocek Kamil | 3-1 |  |  | 
-2026-10-22 | Sulkowski Karol | Lamperski Jakub | 3-2 |  |  | 
-2026-10-22 | Skotniczny Rafal | Lebek Marian | 3-1 |  |  | 
-2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-0 |  |  | 
-2026-10-22 | Glanowski Waldemar | Slawinski Kacper | 3-1 |  |  | 
