@@ -6,7 +6,7 @@ const vm = require("node:vm");
 const ctx = { Date, Math, Number };
 vm.runInNewContext(readFileSync(__dirname + "/settle.js", "utf8"), ctx);
 
-const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate, lastSweep, careerH2hShift } = ctx;
+const { parlayTicketStatus, parlayPayoutOdds, decisionSnapshot, settleParlayLegs, shrunkShift, fitWinCurve, applyWinCurve, recentShift, chooseNudge, bestBlendWeight, logitBlend, fitSessionShifts, sessionBin, bothPrices, pricePairMatch, pairPlusOdds, betOnFlaggedPlus, roiOf, setsFromScore, recentShape, formEdgeSide, recentStatRows, recentLead, fieldShape, fieldSide, fieldStat, favoriteShape, favoriteSide, favoriteStat, sessionStat, bookKey, upsertBookPrice, latestByBook, trimBookList, bestBookSide, matchPlayerName, parseBookPaste, alignPasteTimes, pickFixture, dataMark, resultsAge, activePlayerFlag, prunePlayerFlags, flagLeft, localDayKey, betsOnDay, betBackupText, parseBetBackup, bookFadesRating, coldSlates, eloMove, blendShifts, worryPlayer, goSide, legendarySide, legendaryGold, legendaryHigh, unionMeetings, seriesLead, seriesLeadGate, lastSweep, rematchFlag, careerH2hShift } = ctx;
 
 test("a lost leg settles the ticket and leaves the other legs alone", () => {
   const bet = {
@@ -744,6 +744,19 @@ test("a series lead is added only when later matches get less wrong", () => {
   for (let i = 0; i < 100; i++) flat.push({ hold: false, p: 0.5, y: i % 2 });
   for (let i = 0; i < 200; i++) flat.push({ hold: true, p: 0.5, y: i % 2 });
   assert.equal(seriesLeadGate(flat).on, false);
+});
+
+test("a same-day 3-2 flags the player who lost, and a 3-0 or 3-1 does not", () => {
+  assert.equal(rematchFlag(null), null);
+  assert.equal(rematchFlag({ score: "3-0", w: "A", l: "B" }), null);
+  assert.equal(rematchFlag({ score: "3-1", w: "A", l: "B" }), null);
+  assert.equal(rematchFlag({ score: "3-2", w: "A", l: " " }), null);
+  const hit = rematchFlag({ score: "3-2", w: "A", l: "B" });
+  assert.equal(hit.loser, "B");
+  assert.equal(hit.score, "3-2");
+  const named = rematchFlag({ score: " 3-2 ", w: "Winner Name", l: "Loser Name" });
+  assert.equal(named.loser, "Loser Name");
+  assert.equal(named.score, "3-2");
 });
 
 test("the last meeting moves the price only when it was 3-0", () => {

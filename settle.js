@@ -1000,6 +1000,15 @@ function seriesLeadGate(rows, prior) {
   return { on, n: hn, gain, shift: on ? shrunkShift(n, w, exp, prior) : 0 };
 }
 
+// Same-day flag for a 3-2. The name is the player who lost that first meeting.
+// A 3-0 or a 3-1 is not this flag. Display only. It does not move the win chance.
+function rematchFlag(prev) {
+  if (!prev || String(prev.score || "").trim() !== "3-2") return null;
+  const loser = String(prev.l || "").trim();
+  if (!loser) return null;
+  return { loser, score: "3-2" };
+}
+
 // Winner of the last meeting when that match was 3-0.
 // A 3-1 did not beat the price. A 3-2 pointed the other way, but the later
 // matches were too close to the price to move it. Rows can arrive in any order.
