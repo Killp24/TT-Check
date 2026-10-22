@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T23:05Z
+# updated 2026-10-22T23:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15657,7 +15657,8 @@
 2026-10-22 | Bernacki Lukasz | Pytlas Wojciech | 3-2 | 5 | 5 | +8
 2026-10-22 | Kubiak Artur | Staniczek Adam | 3-0 | 5 | 10 | +7
 2026-10-22 | Molenda Dariusz | Michalik Jerzy | 3-1 | 5 | 9 | +7
-2026-10-22 | Zmijewski Artur | Pyrek Dawid | 3-1 |  | 5 | 
+2026-10-22 | Zmijewski Artur | Pyrek Dawid | 3-1 | 5 | 5 | +5
+2026-10-22 | Machelski Michal | Zelezik Jacek | 3-0 | 5 | 5 | +27
 2026-10-22 | Jozefiak Michal | Hetnar Krzysztof | 3-0 | 6 | 6 | +25
 2026-10-22 | Kubiak Artur | Skupinski Arkadiusz | 3-0 | 6 | 6 | Pending
 2026-10-22 | Buczynski Witold | Sikon Mateusz | 3-1 | 6 | 6 | +10
@@ -15724,6 +15725,8 @@
 2026-10-22 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-1 | 8 | 5 | +14
 2026-10-22 | Bartosik Dominik | Wolny Michal | 3-0 | 8 | 6 | Pending
 2026-10-22 | Michalik Jerzy | Zmijewski Artur | 3-2 | 8 | 4 | +12
+2026-10-22 | Smoter Adam | Solilo Dominik | 3-0 | 8 | 8 | Pending
+2026-10-22 | Rudomina Kamil | Glanowski Jakub | 3-0 | 8 | 3 | Pending
 2026-10-22 | Olbrycht Michal | Kostal Daniel | 3-1 | 9 | 9 | +10
 2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-0 | 9 | 8 | +17
 2026-10-22 | Kurek Pawel | Lebek Marian | 3-1 | 9 | 9 | +13
@@ -15757,6 +15760,7 @@
 2026-10-22 | Nocun Zbigniew | Bartosik Dominik | 3-2 | 11 | 7 | +8
 2026-10-22 | Staniczek Adam | Nocun Zbigniew | 3-1 | 11 | 12 | Pending
 2026-10-22 | Staniczek Adam | Bartosik Dominik | 3-0 | 12 | 9 | Pending
+2026-10-22 | Nocun Zbigniew | Kubiak Artur | 3-2 | 13 | 7 | Pending
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
 2026-10-22 | Zielinski Marcin | Fomin Andriej | 3-2 |  |  | 
 2026-10-22 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 |  |  | 
@@ -15775,4 +15779,6 @@
 2026-10-23 | Golaszewski Kuba | Rolak Jaroslaw | 3-1 | 1 | 1 | Pending
 2026-10-23 | Mrugala Bartlomiej | Rolak Jaroslaw | 3-2 | 1 | 2 | Pending
 2026-10-23 | Bernacki Lukasz | Paszkiewicz Michal | 3-2 | 1 | 1 | Pending
+2026-10-23 | Lebek Marian | Tkocz Marek | 3-1 | 1 | 2 | Pending
+2026-10-23 | Lukaszewski Mikolaj | Golaszewski Kuba | 3-1 | 1 | 2 | Pending
 2026-10-23 | Skupinski Arkadiusz | Wolny Michal | 3-0 |  |  | 
