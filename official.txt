@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T03:37Z
+# updated 2026-10-22T04:13Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -13176,7 +13176,7 @@
 2026-10-15 | Stapor Rafal | Lukaszewski Mikolaj | 3-1 | 1 | 1 | +5
 2026-10-15 | Slosarczyk Pawel | Buczynski Witold | 3-1 | 1 | 1 | +9
 2026-10-15 | Kurek Pawel | Cesarz Milosz | 3-0 | 1 | 1 | +12
-2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 1 | 1 | +14
+2026-10-15 | Sikon Mateusz | Baron Mariusz | 3-1 | 1 | 1 | +13
 2026-10-15 | Kolodziej Krystian | Jadczyk Marcin | 3-2 | 1 | 1 | +8
 2026-10-15 | Adamus Kacper | Sokolowski Oliwier | 3-2 | 1 | 1 | +7
 2026-10-15 | Schaniel Krzysztof | Pruszkowski Jakub | 3-0 | 1 | 1 | +19
@@ -15476,6 +15476,13 @@
 2026-10-22 | Cyrnek Piotr | Wloczko Krzysztof | 3-1 | 1 | 1 | Pending
 2026-10-22 | Wisniewski Karol | Olbrycht Michal | 3-2 | 1 | 1 | Pending
 2026-10-22 | Kapik Krzysztof | Kolek Maciej | 3-0 | 1 | 1 | Pending
+2026-10-22 | Kolodziej Krystian | Jadczyk Marcin | 3-1 | 1 | 1 | Pending
+2026-10-22 | Sklensky Miroslav | Miastowski Maksymilian | 3-0 | 1 | 1 | Pending
+2026-10-22 | Kostal Daniel | Jendrzejewski Patryk | 3-0 | 1 | 1 | Pending
+2026-10-22 | Jozefiak Michal | Hetnar Krzysztof | 3-0 | 1 | 1 | +27
+2026-10-22 | Klocek Kamil | Kotwica Dawid | 3-0 | 1 | 1 | Pending
+2026-10-22 | Pruszkowski Jakub | Sikon Mateusz | 3-0 | 1 | 1 | +7
+2026-10-22 | Cesarz Milosz | Buczynski Witold | 3-1 | 1 | 1 | Pending
 2026-10-22 | Polok Pawel | Kurek Pawel | 3-0 | 2 | 1 | +17
 2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-1 | 2 | 1 | +14
 2026-10-22 | Kurek Pawel | Koczyba Mariusz | 3-0 | 2 | 2 | +17
@@ -15487,7 +15494,7 @@
 2026-10-22 | Fomin Andriej | Bladziak Krzysztof | 3-0 | 2 | 3 | +7
 2026-10-22 | Frank Roman | Bartosik Dominik | 3-0 | 2 | 2 | +23
 2026-10-22 | Michalik Jerzy | Stechly Witold | 3-1 | 2 | 2 | Pending
-2026-10-22 | Warzecha Miroslaw | Staniczek Adam | 3-1 |  | 2 | 
+2026-10-22 | Warzecha Miroslaw | Staniczek Adam | 3-1 | 3 | 2 | Pending
 2026-10-22 | Szoltysek Artur | Zwolinski Mariusz | 3-1 | 3 | 2 | +15
 2026-10-22 | Burkacki Adrian | Lebek Marian | 3-0 | 3 | 2 | +22
 2026-10-22 | Polok Pawel | Tkaczyk Henryk | 3-1 | 3 | 2 | +10
@@ -15499,7 +15506,9 @@
 2026-10-22 | Kurek Pawel | Burkacki Adrian | 3-0 | 4 | 5 | +12
 2026-10-22 | Tkaczyk Henryk | Lebek Marian | 3-1 | 4 | 4 | +16
 2026-10-22 | Nocun Zbigniew | Stechly Witold | 3-1 | 4 | 3 | Pending
+2026-10-22 | Warzecha Miroslaw | Barton Aleksander | 3-0 | 4 | 3 | Pending
 2026-10-22 | Polok Pawel | Koczyba Mariusz | 3-0 | 5 | 4 | +15
+2026-10-22 | Kurek Pawel | Urban Wojciech | 3-0 | 5 | 1 | Pending
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
 2026-10-22 | Zielinski Marcin | Fomin Andriej | 3-2 |  |  | 
 2026-10-22 | Sulkowski Bartek | Mugowski Arkadiusz | 3-2 |  |  | 
