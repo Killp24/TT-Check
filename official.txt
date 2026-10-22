@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-22T12:12Z
+# updated 2026-10-22T12:13Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15615,7 +15615,7 @@
 2026-10-22 | Kurek Pawel | Skotniczny Rafal | 3-1 | 8 | 4 | +13
 2026-10-22 | Lebek Marian | Urban Wojciech | 3-0 | 8 | 4 | +10
 2026-10-22 | Wloczko Krzysztof | Cyrnek Piotr | 3-0 | 8 | 8 | Pending
-2026-10-22 | Hetnar Krzysztof | Sikon Mateusz | 3-0 |  | 8 | 
+2026-10-22 | Hetnar Krzysztof | Sikon Mateusz | 3-0 | 8 | 8 | Pending
 2026-10-22 | Burkacki Adrian | Tkaczyk Henryk | 3-0 | 9 | 8 | +17
 2026-10-22 | Kurek Pawel | Lebek Marian | 3-1 | 9 | 9 | +13
 2026-10-22 | Mugowski Arkadiusz | Smoter Adam | 3-1 |  |  | 
@@ -15629,6 +15629,6 @@
 2026-10-22 | Zielinski Marcin | Bartosik Dominik | 3-1 |  |  | 
 2026-10-22 | Staniczek Adam | Stechly Witold | 3-1 |  |  | 
 2026-10-22 | Fomin Andriej | Frank Roman | 3-1 |  |  | 
-2026-10-22 | Solilo Dominik | Kotwica Dawid | 3-2 |  |  | 
-2026-10-22 | Oracz Lukasz | Niemiec Rafal | 3-2 |  |  | 
-2026-10-22 | Glanowski Waldemar | Sokolowski Oliwier | 3-0 |  |  | 
+2026-10-22 | Solilo Dominik | Kotwica Dawid | 3-2 | 3 | 8 | Pending
+2026-10-22 | Oracz Lukasz | Niemiec Rafal | 3-2 | 6 | 6 | +12
+2026-10-22 | Glanowski Waldemar | Sokolowski Oliwier | 3-0 | 6 | 6 | +19
