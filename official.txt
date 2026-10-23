@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-23T21:37Z
+# updated 2026-10-23T22:07Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15826,6 +15826,7 @@
 2026-10-23 | Guzik Michal | Wiza Roman | 3-1 | 1 | 1 | +7
 2026-10-23 | Fira Damian | Michalski Jakub | 3-0 | 1 | 1 | +17
 2026-10-23 | Badura Jaroslaw | Sawicki Grzegorz | 3-2 | 1 | 1 | +4
+2026-10-23 | Skorupa Jakub | Wozniczka Marcin | 3-1 | 1 | 6 | Pending
 2026-10-23 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-1 | 2 | 2 | +13
 2026-10-23 | Lebek Marian | Bernacki Lukasz | 3-1 | 2 | 2 | +11
 2026-10-23 | Trela Mateusz | Lukaszewski Mikolaj | 3-1 | 2 | 3 | +10
@@ -15942,6 +15943,7 @@
 2026-10-23 | Jedrzejowski Oskar | Wozniczka Marcin | 3-1 | 4 | 4 | +9
 2026-10-23 | Stapor Rafal | Zochniak Jakub | 3-1 | 4 | 9 | Pending
 2026-10-23 | Fira Damian | Badura Jaroslaw | 3-2 | 4 | 4 | +11
+2026-10-23 | Wiza Roman | Sawicki Grzegorz | 3-2 | 4 | 4 | +7
 2026-10-23 | Tkocz Marek | Bernacki Lukasz | 3-0 | 5 | 4 | +15
 2026-10-23 | Jurowicz Grzegorz | Lebek Marian | 3-2 | 5 | 4 | +11
 2026-10-23 | Zmijewski Artur | Pyrek Dawid | 3-1 | 5 | 4 | +6
@@ -15975,6 +15977,8 @@
 2026-10-23 | Hetnar Krzysztof | Tkaczyk Henryk | 3-2 | 5 | 5 | +6
 2026-10-23 | Pawlik Cezary | Jedrzejowski Oskar | 3-0 | 5 | 5 | +10
 2026-10-23 | Wozniczka Marcin | Natkaniec Michal | 3-2 | 5 | 5 | +8
+2026-10-23 | Wozniak Jakub | Glanowski Jakub | 3-2 | 5 | 6 | Pending
+2026-10-23 | Oracz Jacek | Jedrzejowski Oskar | 3-1 | 6 | 6 | Pending
 2026-10-23 | Lebek Marian | Paszkiewicz Michal | 3-1 | 6 | 6 | +10
 2026-10-23 | Kurek Pawel | Oracz Lukasz | 3-0 | 6 | 2 | +12
 2026-10-23 | Urban Wojciech | Ptak Wiktor | 3-0 | 6 | 6 | +21
@@ -15995,6 +15999,8 @@
 2026-10-23 | Zochniak Jakub | Wozniak Jakub | 3-1 | 6 | 1 | Pending
 2026-10-23 | Mrugala Bartlomiej | Strus Piotr | 3-2 | 6 | 3 | +10
 2026-10-23 | Vincenec Oliver | Paszkiewicz Michal | 3-1 | 6 | 10 | Pending
+2026-10-23 | Skorski Michal | Klocek Kamil | 3-2 | 6 | 11 | Pending
+2026-10-23 | Tkaczyk Henryk | Adamus Pawel | 3-2 | 6 | 6 | Pending
 2026-10-23 | Krcil Frantisek | Mleczko Bartlomiej | 3-0 | 7 | 7 | +18
 2026-10-23 | Lebek Marian | Fomin Yurij | 3-0 | 7 | 3 | +15
 2026-10-23 | Paszkiewicz Michal | Kurek Pawel | 3-1 | 7 | 7 | +16
@@ -16077,4 +16083,3 @@
 2026-10-23 | Jendrzejewski Patryk | Kostal Daniel | 3-1 |  |  | 
 2026-10-23 | Kostal Daniel | Rutkowski Mateusz | 3-1 |  |  | 
 2026-10-23 | Pelka Jerzy | Wichowski Grzegorz | 3-0 |  |  | 
-2026-10-23 | Skorupa Jakub | Wozniczka Marcin | 3-1 |  |  | 
