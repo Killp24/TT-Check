@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-23T15:42Z
+# updated 2026-10-23T16:15Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15814,6 +15814,8 @@
 2026-10-23 | Wichowski Grzegorz | Tobiasz Wojciech | 3-0 | 1 | 1 | +5
 2026-10-23 | Jadach Oskar | Wiciok Piotr | 3-1 | 1 | 1 | +8
 2026-10-23 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 1 | 4 | Pending
+2026-10-23 | Wozniczka Marcin | Pawlik Cezary | 3-2 | 1 | 1 | Pending
+2026-10-23 | Oracz Jacek | Jedrzejowski Oskar | 3-1 | 1 | 1 | Pending
 2026-10-23 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-1 | 2 | 2 | +13
 2026-10-23 | Lebek Marian | Bernacki Lukasz | 3-1 | 2 | 2 | +11
 2026-10-23 | Trela Mateusz | Lukaszewski Mikolaj | 3-1 | 2 | 3 | +10
@@ -15894,6 +15896,7 @@
 2026-10-23 | Tobiasz Wojciech | Pelka Jerzy | 3-2 | 4 | 4 | +11
 2026-10-23 | Staszczyk Konrad | Rutkowski Mateusz | 3-2 | 4 | 9 | +6
 2026-10-23 | Zochniak Jakub | Minda Michal | 3-0 | 4 | 9 | +12
+2026-10-23 | Mrugala Bartlomiej | Klocek Kamil | 3-1 | 4 | 6 | Pending
 2026-10-23 | Tkocz Marek | Bernacki Lukasz | 3-0 | 5 | 4 | +15
 2026-10-23 | Jurowicz Grzegorz | Lebek Marian | 3-2 | 5 | 4 | +11
 2026-10-23 | Zmijewski Artur | Pyrek Dawid | 3-1 | 5 | 4 | +6
@@ -15929,9 +15932,9 @@
 2026-10-23 | Krcil Frantisek | Zochniak Jakub | 3-2 | 6 | 1 | +11
 2026-10-23 | Minda Michal | Mleczko Bartlomiej | 3-2 | 6 | 6 | +9
 2026-10-23 | Lamperski Jakub | Mugowski Arkadiusz | 3-1 | 6 | 1 | +10
-2026-10-23 | Sporek Szymon | Olejnik Martin | 3-2 | 6 | 6 | Pending
-2026-10-23 | Braun Josef | Miastowski Maksymilian | 3-2 | 6 | 6 | Pending
-2026-10-23 | Sklensky Miroslav | Jadczyk Marcin | 3-0 | 6 | 6 | Pending
+2026-10-23 | Sporek Szymon | Olejnik Martin | 3-2 | 6 | 6 | +12
+2026-10-23 | Braun Josef | Miastowski Maksymilian | 3-2 | 6 | 6 | +8
+2026-10-23 | Sklensky Miroslav | Jadczyk Marcin | 3-0 | 6 | 6 | +19
 2026-10-23 | Jendrzejewski Patryk | Rutkowski Mateusz | 3-1 | 6 | 7 | +9
 2026-10-23 | Sklensky Miroslav | Jadczyk Marcin | 3-2 |  | 6 | 
 2026-10-23 | Pelka Jerzy | Jadach Oskar | 3-1 | 6 | 6 | +17
@@ -15945,37 +15948,45 @@
 2026-10-23 | Jendrzejewski Patryk | Kostal Daniel | 3-0 | 7 | 7 | +11
 2026-10-23 | Wisniewski Karol | Czerwinski Bartosz | 3-1 | 7 | 2 | +12
 2026-10-23 | Lamperski Jakub | Minda Michal | 3-1 | 7 | 7 | +11
-2026-10-23 | Braun Josef | Olejnik Martin | 3-1 | 7 | 7 | Pending
-2026-10-23 | Jadczyk Marcin | Sporek Szymon | 3-1 | 7 | 7 | Pending
-2026-10-23 | Miastowski Maksymilian | Sklensky Miroslav | 3-0 | 7 | 7 | Pending
+2026-10-23 | Braun Josef | Olejnik Martin | 3-1 | 7 | 7 | +9
+2026-10-23 | Jadczyk Marcin | Sporek Szymon | 3-1 | 7 | 7 | +6
+2026-10-23 | Miastowski Maksymilian | Sklensky Miroslav | 3-0 | 7 | 7 | +13
 2026-10-23 | Wichowski Grzegorz | Jadach Oskar | 3-1 | 7 | 7 | Pending
 2026-10-23 | Pelka Jerzy | Idaczyk Rafal | 3-1 | 7 | 2 | Pending
 2026-10-23 | Tobiasz Wojciech | Wiciok Piotr | 3-1 | 7 | 7 | Pending
 2026-10-23 | Szymanski Igor | Jozefiak Michal | 3-2 | 7 | 7 | +11
-2026-10-23 | Sklensky Miroslav | Olejnik Martin | 3-0 | 8 | 8 | Pending
+2026-10-23 | Sklensky Miroslav | Olejnik Martin | 3-0 | 8 | 8 | +17
 2026-10-23 | Lamperski Jakub | Krcil Frantisek | 3-2 | 8 | 8 | +7
 2026-10-23 | Lebek Marian | Kurek Pawel | 3-1 | 8 | 8 | +13
 2026-10-23 | Wisniewski Karol | Rutkowski Mateusz | 3-1 | 8 | 8 | +15
 2026-10-23 | Minda Michal | Mugowski Arkadiusz | 3-1 | 8 | 3 | +11
-2026-10-23 | Sporek Szymon | Braun Josef | 3-0 | 8 | 8 | Pending
-2026-10-23 | Jadczyk Marcin | Miastowski Maksymilian | 3-1 | 8 | 8 | Pending
+2026-10-23 | Sporek Szymon | Braun Josef | 3-0 | 8 | 8 | +26
+2026-10-23 | Jadczyk Marcin | Miastowski Maksymilian | 3-1 | 8 | 8 | +14
 2026-10-23 | Kostal Daniel | Czerwinski Bartosz | 3-1 | 8 | 4 | +9
 2026-10-23 | Jendrzejewski Patryk | Wisniewski Karol | 3-2 | 8 | 9 | +4
 2026-10-23 | Wiciok Piotr | Wichowski Grzegorz | 3-0 | 8 | 8 | Pending
 2026-10-23 | Jozefiak Michal | Ruszkiewicz Adam | 3-0 | 8 | 8 | +16
 2026-10-23 | Urban Wojciech | Szymanski Igor | 3-0 | 8 | 8 | +14
 2026-10-23 | Ptak Wiktor | Schaniel Krzysztof | 3-0 | 8 | 8 | +17
-2026-10-23 | Olejnik Martin | Jadczyk Marcin | 3-2 | 9 | 9 | Pending
+2026-10-23 | Olejnik Martin | Jadczyk Marcin | 3-2 | 9 | 9 | +10
 2026-10-23 | Kurek Pawel | Sokolowski Oliwier | 3-0 | 9 | 5 | +12
 2026-10-23 | Mleczko Bartlomiej | Lamperski Jakub | 3-0 | 9 | 9 | +18
 2026-10-23 | Krcil Frantisek | Mugowski Arkadiusz | 3-2 | 9 | 4 | +7
-2026-10-23 | Braun Josef | Sklensky Miroslav | 3-0 | 9 | 9 | Pending
+2026-10-23 | Braun Josef | Sklensky Miroslav | 3-0 | 9 | 9 | +12
 2026-10-23 | Jendrzejewski Patryk | Czerwinski Bartosz | 3-2 | 9 | 5 | +3
-2026-10-23 | Miastowski Maksymilian | Sporek Szymon | 3-1 | 9 | 9 | Pending
+2026-10-23 | Miastowski Maksymilian | Sporek Szymon | 3-1 | 9 | 9 | +6
 2026-10-23 | Wiciok Piotr | Jadach Oskar | 3-0 | 9 | 8 | Pending
 2026-10-23 | Szymanski Igor | Schaniel Krzysztof | 3-0 | 9 | 9 | +22
-2026-10-23 | Jadczyk Marcin | Braun Josef | 3-0 | 10 | 10 | Pending
+2026-10-23 | Urban Wojciech | Ruszkiewicz Adam | 3-0 | 9 | 9 | +18
+2026-10-23 | Jozefiak Michal | Ptak Wiktor | 3-0 | 9 | 9 | +17
+2026-10-23 | Jadach Oskar | Idaczyk Rafal | 3-0 | 9 | 4 | Pending
+2026-10-23 | Jadczyk Marcin | Braun Josef | 3-0 | 10 | 10 | +18
 2026-10-23 | Minda Michal | Krcil Frantisek | 3-0 | 10 | 10 | +17
+2026-10-23 | Wiciok Piotr | Wichowski Grzegorz | 3-1 | 10 | 9 | Pending
+2026-10-23 | Miastowski Maksymilian | Olejnik Martin | 3-1 | 10 | 10 | +9
+2026-10-23 | Sklensky Miroslav | Sporek Szymon | 3-2 | 10 | 10 | +5
+2026-10-23 | Szymanski Igor | Ptak Wiktor | 3-2 | 10 | 10 | Pending
+2026-10-23 | Ruszkiewicz Adam | Schaniel Krzysztof | 3-0 | 10 | 10 | Pending
 2026-10-23 | Zmijewski Artur | Pyrek Dawid | 3-1 |  |  | 
 2026-10-23 | Skupinski Arkadiusz | Wolny Michal | 3-0 |  |  | 
 2026-10-23 | Rudomina Kamil | Solilo Dominik | 3-0 |  |  | 
@@ -15995,8 +16006,3 @@
 2026-10-23 | Jendrzejewski Patryk | Kostal Daniel | 3-1 |  |  | 
 2026-10-23 | Kostal Daniel | Rutkowski Mateusz | 3-1 |  |  | 
 2026-10-23 | Pelka Jerzy | Wichowski Grzegorz | 3-0 |  |  | 
-2026-10-23 | Urban Wojciech | Ruszkiewicz Adam | 3-0 |  |  | 
-2026-10-23 | Jozefiak Michal | Ptak Wiktor | 3-0 |  |  | 
-2026-10-23 | Wozniczka Marcin | Pawlik Cezary | 3-2 |  |  | 
-2026-10-23 | Wiciok Piotr | Wichowski Grzegorz | 3-1 |  |  | 
-2026-10-23 | Jadach Oskar | Idaczyk Rafal | 3-0 |  |  | 
