@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-23T07:48Z
+# updated 2026-10-23T09:15Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -6267,7 +6267,7 @@
 2026-10-09 | Krezel Andrzej | Barton Aleksander | 3-2
 2026-10-15 | Krezel Andrzej | Barton Aleksander | 3-1
 2026-10-16 | Krezel Andrzej | Barton Aleksander | 3-1
-# pair | Barton Aleksander | Machelski Michal | 2026-10-22T15:14Z
+# pair | Barton Aleksander | Machelski Michal | 2026-10-23T09:15Z
 2025-11-24 | Barton Aleksander | Machelski Michal | 3-2
 2025-12-16 | Machelski Michal | Barton Aleksander | 3-0
 2025-12-20 | Machelski Michal | Barton Aleksander | 3-0
@@ -6295,6 +6295,7 @@
 2026-09-07 | Machelski Michal | Barton Aleksander | 3-2
 2026-09-09 | Machelski Michal | Barton Aleksander | 3-0
 2026-10-09 | Machelski Michal | Barton Aleksander | 3-1
+2026-10-23 | Machelski Michal | Barton Aleksander | 3-2
 # pair | Barton Aleksander | Michalik Jerzy | 2026-10-22T20:37Z
 2025-11-05 | Michalik Jerzy | Barton Aleksander | 3-1
 2026-01-15 | Michalik Jerzy | Barton Aleksander | 3-1
@@ -6350,7 +6351,7 @@
 2026-10-01 | Nocun Zbigniew | Barton Aleksander | 3-1
 2026-10-02 | Nocun Zbigniew | Barton Aleksander | 3-1
 2026-10-15 | Nocun Zbigniew | Barton Aleksander | 3-1
-# pair | Barton Aleksander | Pyrek Dawid | 2026-10-22T15:14Z
+# pair | Barton Aleksander | Pyrek Dawid | 2026-10-23T09:15Z
 2025-12-16 | Pyrek Dawid | Barton Aleksander | 3-0
 2025-12-16 | Pyrek Dawid | Barton Aleksander | 3-1
 2026-03-11 | Barton Aleksander | Pyrek Dawid | 3-0
@@ -6363,6 +6364,7 @@
 2026-07-15 | Pyrek Dawid | Barton Aleksander | 3-0
 2026-07-16 | Pyrek Dawid | Barton Aleksander | 3-0
 2026-07-16 | Pyrek Dawid | Barton Aleksander | 3-0
+2026-10-22 | Pyrek Dawid | Barton Aleksander | 3-0
 # pair | Barton Aleksander | Staniczek Adam | 2026-10-21T07:48Z
 2025-12-23 | Staniczek Adam | Barton Aleksander | 3-0
 2025-12-23 | Staniczek Adam | Barton Aleksander | 3-0
@@ -6450,7 +6452,7 @@
 2026-09-07 | Wolny Michal | Barton Aleksander | 3-1
 2026-10-08 | Wolny Michal | Barton Aleksander | 3-0
 2026-10-16 | Wolny Michal | Barton Aleksander | 3-0
-# pair | Barton Aleksander | Zelezik Jacek | 2026-10-22T15:14Z
+# pair | Barton Aleksander | Zelezik Jacek | 2026-10-23T09:15Z
 2025-11-24 | Zelezik Jacek | Barton Aleksander | 3-1
 2025-11-24 | Zelezik Jacek | Barton Aleksander | 3-2
 2026-02-05 | Zelezik Jacek | Barton Aleksander | 3-0
@@ -6464,10 +6466,12 @@
 2026-09-04 | Zelezik Jacek | Barton Aleksander | 3-0
 2026-10-09 | Zelezik Jacek | Barton Aleksander | 3-0
 2026-10-16 | Zelezik Jacek | Barton Aleksander | 3-0
-# pair | Barton Aleksander | Zmijewski Artur | 2026-10-22T15:14Z
+2026-10-23 | Zelezik Jacek | Barton Aleksander | 3-0
+# pair | Barton Aleksander | Zmijewski Artur | 2026-10-23T09:15Z
 2026-08-21 | Zmijewski Artur | Barton Aleksander | 3-0
 2026-09-07 | Zmijewski Artur | Barton Aleksander | 3-0
 2026-09-09 | Zmijewski Artur | Barton Aleksander | 3-0
+2026-10-23 | Zmijewski Artur | Barton Aleksander | 3-0
 # pair | Bartosik Dominik | Bladziak Krzysztof | 2026-10-21T11:38Z
 2026-10-14 | Bartosik Dominik | Bladziak Krzysztof | 3-0
 2026-10-15 | Bartosik Dominik | Bladziak Krzysztof | 3-2
@@ -59499,7 +59503,7 @@
 2026-06-26 | Zochniak Jakub | Mugowski Arkadiusz | 3-1
 2026-09-04 | Zochniak Jakub | Mugowski Arkadiusz | 3-1
 2026-10-01 | Zochniak Jakub | Mugowski Arkadiusz | 3-1
-# pair | Myszewski Adrian | Nosiadek Jakub | 2026-10-19T06:20Z
+# pair | Myszewski Adrian | Nosiadek Jakub | 2026-10-23T09:15Z
 2026-10-18 | Myszewski Adrian | Nosiadek Jakub | 3-2
 # pair | Myszewski Adrian | Perzynski Przemyslaw | 2026-10-08T04:39Z
 2026-01-30 | Myszewski Adrian | Perzynski Przemyslaw | 3-0
@@ -60543,13 +60547,23 @@
 2026-07-11 | Nosiadek Jakub | Poloszczanski Dawid | 3-2
 2026-08-08 | Poloszczanski Dawid | Nosiadek Jakub | 3-2
 2026-10-18 | Poloszczanski Dawid | Nosiadek Jakub | 3-0
-# pair | Nosiadek Jakub | Sinicki Maciej | 2026-10-19T05:20Z
+# pair | Nosiadek Jakub | Przewlocki Jacek | 2026-10-23T09:15Z
+2026-07-11 | Przewlocki Jacek | Nosiadek Jakub | 3-2
+2026-08-08 | Przewlocki Jacek | Nosiadek Jakub | 3-1
+2026-09-07 | Przewlocki Jacek | Nosiadek Jakub | 3-2
+# pair | Nosiadek Jakub | Rolak Jaroslaw | 2026-10-23T09:15Z
+2026-06-13 | Nosiadek Jakub | Rolak Jaroslaw | 3-2
+2026-07-11 | Rolak Jaroslaw | Nosiadek Jakub | 3-2
+2026-09-15 | Nosiadek Jakub | Rolak Jaroslaw | 3-2
+# pair | Nosiadek Jakub | Sinicki Maciej | 2026-10-23T09:15Z
 2026-10-18 | Nosiadek Jakub | Sinicki Maciej | 3-0
 # pair | Nosiadek Jakub | Skorski Michal | 2026-10-19T06:20Z
 2026-10-18 | Nosiadek Jakub | Skorski Michal | 3-1
 # pair | Nosiadek Jakub | Staniszewski Piotr | 2026-10-19T05:20Z
 2026-07-26 | Staniszewski Piotr | Nosiadek Jakub | 3-0
 2026-10-18 | Nosiadek Jakub | Staniszewski Piotr | 3-1
+# pair | Nosiadek Jakub | Suchecki Waclaw | 2026-10-23T09:15Z
+2026-07-26 | Suchecki Waclaw | Nosiadek Jakub | 3-0
 # pair | Nosiadek Jakub | Sulkowski Karol | 2026-10-19T06:20Z
 2026-03-26 | Sulkowski Karol | Nosiadek Jakub | 3-1
 2026-07-26 | Nosiadek Jakub | Sulkowski Karol | 3-0
@@ -65729,7 +65743,7 @@
 2026-09-06 | Pisarczyk Tomasz | Wasilewski Damian | 3-2
 2026-09-06 | Wasilewski Damian | Pisarczyk Tomasz | 3-0
 2026-09-27 | Wasilewski Damian | Pisarczyk Tomasz | 3-2
-# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-22T15:14Z
+# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-23T09:15Z
 2023-02-12 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-0
 2023-02-15 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2
 2023-02-24 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-0
@@ -65775,6 +65789,7 @@
 2026-10-16 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-1
 2026-10-19 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-2
 2026-10-21 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-0
+2026-10-23 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2
 # pair | Poliniewicz Grzegorz | Sklensky Miroslav | 2026-10-14T01:43Z
 2025-04-30 | Poliniewicz Grzegorz | Sklensky Miroslav | 3-2
 2025-05-20 | Sklensky Miroslav | Poliniewicz Grzegorz | 3-0
