@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-23T18:47Z
+# updated 2026-10-23T19:15Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15825,6 +15825,7 @@
 2026-10-23 | Tkaczyk Henryk | Adamus Pawel | 3-1 | 1 | 1 | +14
 2026-10-23 | Guzik Michal | Wiza Roman | 3-1 | 1 | 1 | Pending
 2026-10-23 | Fira Damian | Michalski Jakub | 3-0 | 1 | 1 | Pending
+2026-10-23 | Badura Jaroslaw | Sawicki Grzegorz | 3-2 | 1 | 1 | Pending
 2026-10-23 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-1 | 2 | 2 | +13
 2026-10-23 | Lebek Marian | Bernacki Lukasz | 3-1 | 2 | 2 | +11
 2026-10-23 | Trela Mateusz | Lukaszewski Mikolaj | 3-1 | 2 | 3 | +10
@@ -15861,6 +15862,7 @@
 2026-10-23 | Vincenec Oliver | Adamus Mariusz | 3-1 | 2 | 2 | +12
 2026-10-23 | Baron Mariusz | Tkaczyk Henryk | 3-1 | 2 | 2 | +13
 2026-10-23 | Wozniak Jakub | Malinowski Radoslaw | 3-0 | 2 | 2 | Pending
+2026-10-23 | Wiza Roman | Fira Damian | 3-2 | 2 | 2 | Pending
 2026-10-23 | Tkocz Marek | Kurek Pawel | 3-1 | 3 | 2 | +13
 2026-10-23 | Jurowicz Grzegorz | Paszkiewicz Michal | 3-0 | 3 | 2 | +20
 2026-10-23 | Mrugala Bartlomiej | Golaszewski Kuba | 3-1 | 3 | 3 | +11
@@ -15895,6 +15897,10 @@
 2026-10-23 | Szlubowski Dariusz | Skorski Michal | 3-1 | 3 | 3 | Pending
 2026-10-23 | Baron Mariusz | Hetnar Krzysztof | 3-1 | 3 | 3 | +16
 2026-10-23 | Vincenec Oliver | Adamus Pawel | 3-1 | 3 | 3 | +9
+2026-10-23 | Tkaczyk Henryk | Adamus Mariusz | 3-0 | 3 | 3 | +19
+2026-10-23 | Oracz Jacek | Wozniczka Marcin | 3-2 | 3 | 3 | Pending
+2026-10-23 | Pawlik Cezary | Natkaniec Michal | 3-2 | 3 | 3 | Pending
+2026-10-23 | Janus Slawomir | Jedrzejowski Oskar | 3-1 | 3 | 3 | Pending
 2026-10-23 | Tkocz Marek | Paszkiewicz Michal | 3-0 | 4 | 3 | +14
 2026-10-23 | Kurek Pawel | Paszkiewicz Michal | 3-1 | 4 | 4 | +9
 2026-10-23 | Zelezik Jacek | Barton Aleksander | 3-0 | 4 | 3 | +2
@@ -15919,6 +15925,10 @@
 2026-10-23 | Staszczyk Konrad | Rutkowski Mateusz | 3-2 | 4 | 9 | +6
 2026-10-23 | Zochniak Jakub | Minda Michal | 3-0 | 4 | 9 | +12
 2026-10-23 | Mrugala Bartlomiej | Klocek Kamil | 3-1 | 4 | 6 | Pending
+2026-10-23 | Glanowski Jakub | Rudomina Kamil | 3-2 | 4 | 3 | Pending
+2026-10-23 | Skorski Michal | Strus Piotr | 3-1 | 4 | 4 | Pending
+2026-10-23 | Oracz Jacek | Natkaniec Michal | 3-1 | 4 | 4 | Pending
+2026-10-23 | Adamus Pawel | Baron Mariusz | 3-0 | 4 | 4 | +17
 2026-10-23 | Tkocz Marek | Bernacki Lukasz | 3-0 | 5 | 4 | +15
 2026-10-23 | Jurowicz Grzegorz | Lebek Marian | 3-2 | 5 | 4 | +11
 2026-10-23 | Zmijewski Artur | Pyrek Dawid | 3-1 | 5 | 4 | +6
@@ -16009,6 +16019,7 @@
 2026-10-23 | Jadach Oskar | Idaczyk Rafal | 3-0 | 9 | 4 | +11
 2026-10-23 | Tobiasz Wojciech | Pelka Jerzy | 3-0 | 9 | 8 | +22
 2026-10-23 | Pelka Jerzy | Wiciok Piotr | 3-2 | 9 | 11 | +9
+2026-10-23 | Klocek Kamil | Szlubowski Dariusz | 3-1 | 9 | 4 | Pending
 2026-10-23 | Jadczyk Marcin | Braun Josef | 3-0 | 10 | 10 | +18
 2026-10-23 | Minda Michal | Krcil Frantisek | 3-0 | 10 | 10 | +17
 2026-10-23 | Wiciok Piotr | Wichowski Grzegorz | 3-1 | 10 | 9 | +17
@@ -16038,8 +16049,3 @@
 2026-10-23 | Jendrzejewski Patryk | Kostal Daniel | 3-1 |  |  | 
 2026-10-23 | Kostal Daniel | Rutkowski Mateusz | 3-1 |  |  | 
 2026-10-23 | Pelka Jerzy | Wichowski Grzegorz | 3-0 |  |  | 
-2026-10-23 | Tkaczyk Henryk | Adamus Mariusz | 3-0 |  |  | 
-2026-10-23 | Oracz Jacek | Wozniczka Marcin | 3-2 |  |  | 
-2026-10-23 | Pawlik Cezary | Natkaniec Michal | 3-2 |  |  | 
-2026-10-23 | Janus Slawomir | Jedrzejowski Oskar | 3-1 |  |  | 
-2026-10-23 | Badura Jaroslaw | Sawicki Grzegorz | 3-2 |  |  | 
