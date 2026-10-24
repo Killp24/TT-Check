@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T15:05Z
+# updated 2026-10-24T15:29Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16129,6 +16129,8 @@
 2026-10-24 | Jedrzejak Patryk | Mecik Patryk | 3-1 | 1 | 1 | +5
 2026-10-24 | Polok Pawel | Wojcik Rafal | 3-1 | 1 | 1 | +10
 2026-10-24 | Idaczyk Rafal | Dlugaj Rafal | 3-2 | 1 | 1 | +11
+2026-10-24 | Kwodawski Bartosz | Klocek Kamil | 3-1 | 1 | 4 | Pending
+2026-10-24 | Kubiak Artur | Karpiuk Mateusz | 3-0 | 1 | 1 | +13
 2026-10-24 | Mrugala Bartlomiej | Poloszczanski Dawid | 3-2 | 2 | 1 | +8
 2026-10-24 | Pawlik Cezary | Wozniczka Marcin | 3-0 | 2 | 1 | +6
 2026-10-24 | Lukaszewski Mikolaj | Poloszczanski Dawid | 3-0 | 2 | 2 | +15
@@ -16284,6 +16286,7 @@
 2026-10-24 | Sinicki Maciej | Przewlocki Jacek | 3-1 | 8 | 8 | +12
 2026-10-24 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 | 8 | 8 | +14
 2026-10-24 | Jedrzejak Patryk | Adach Rafal | 3-1 | 8 | 8 | Pending
+2026-10-24 | Polok Pawel | Juszczyk Krzysztof | 3-2 | 8 | 2 | Pending
 2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 9 | 9 | +8
 2026-10-24 | Mleczko Bartlomiej | Pisarczyk Tomasz | 3-0 | 9 | 9 | +10
 2026-10-24 | Dytko Dawid | Pelka Jerzy | 3-2 | 9 | 9 | +9
@@ -16304,6 +16307,7 @@
 2026-10-24 | Myszewski Adrian | Przewlocki Jacek | 3-0 | 10 | 10 | +14
 2026-10-24 | Wojtaszczyk Wojciech | Dytko Dawid | 3-0 | 10 | 10 | +12
 2026-10-24 | Pelka Jerzy | Szymanski Igor | 3-1 | 10 | 10 | +8
+2026-10-24 | Szostok Sebastian | Buczynski Witold | 3-1 | 10 | 10 | +6
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
