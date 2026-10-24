@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T21:02Z
+# updated 2026-10-24T21:30Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16175,13 +16175,13 @@
 2026-10-24 | Jedrzejak Patryk | Wojcik Rafal | 3-2 | 2 | 2 | +4
 2026-10-24 | Mecik Patryk | Idaczyk Rafal | 3-2 | 2 | 2 | +9
 2026-10-24 | Polok Pawel | Dlugaj Rafal | 3-0 | 2 | 2 | +17
-2026-10-24 | Kubiak Artur | Frank Roman | 3-0 | 2 | 2 | Pending
+2026-10-24 | Kubiak Artur | Frank Roman | 3-0 | 2 | 2 | +7
 2026-10-24 | Krutak Michal | Zmijewski Artur | 3-1 | 2 | 2 | +12
-2026-10-24 | Karpiuk Mateusz | Malcher Krzysztof | 3-2 | 2 | 2 | Pending
+2026-10-24 | Karpiuk Mateusz | Malcher Krzysztof | 3-2 | 2 | 2 | +6
 2026-10-24 | Jadam Dawid | Chmielowski Jakub | 3-0 | 2 | 2 | +17
 2026-10-24 | Mlynarski Filip | Sporek Szymon | 3-1 | 2 | 2 | +12
 2026-10-24 | Eliasz Adrian | Linek Adam | 3-1 | 2 | 2 | +17
-2026-10-24 | Kumor Michal | Skorupa Jakub | 3-1 | 2 | 6 | Pending
+2026-10-24 | Kumor Michal | Skorupa Jakub | 3-1 | 2 | 6 | +15
 2026-10-24 | Szurgot Andrzej | Mucha Grzegorz | 3-0 | 2 | 2 | +13
 2026-10-24 | Michalik Jerzy | Fomin Andriej | 3-2 | 2 | 2 | +10
 2026-10-24 | Durda Michal | Nowak Jakub | 3-1 | 2 | 2 | +6
@@ -16218,17 +16218,19 @@
 2026-10-24 | Michalczyk Jakub | Dabrowski Igor | 3-2 | 3 | 8 | +8
 2026-10-24 | Juszczyk Krzysztof | Dlugaj Rafal | 3-0 | 3 | 9 | +19
 2026-10-24 | Mlynarski Filip | Staszczyk Konrad | 3-1 | 3 | 3 | +14
-2026-10-24 | Karpiuk Mateusz | Frank Roman | 3-0 | 3 | 3 | Pending
+2026-10-24 | Karpiuk Mateusz | Frank Roman | 3-0 | 3 | 3 | +10
 2026-10-24 | Kwodawski Bartosz | Cioch Blazej | 3-1 | 3 | 3 | +13
 2026-10-24 | Eliasz Adrian | Klocek Kamil | 3-0 | 3 | 6 | +14
 2026-10-24 | Sporek Szymon | Chmielowski Jakub | 3-1 | 3 | 3 | +13
 2026-10-24 | Linek Adam | Michalczyk Jakub | 3-1 | 3 | 8 | +11
 2026-10-24 | Szurgot Andrzej | Krutak Michal | 3-2 | 3 | 3 | +9
-2026-10-24 | Kumor Michal | Kubiak Artur | 3-1 | 3 | 3 | Pending
+2026-10-24 | Kumor Michal | Kubiak Artur | 3-1 | 3 | 3 | +15
 2026-10-24 | Zmijewski Artur | Michalik Jerzy | 3-1 | 3 | 3 | +9
-2026-10-24 | Malcher Krzysztof | Skorupa Jakub | 3-0 | 3 | 7 | Pending
+2026-10-24 | Malcher Krzysztof | Skorupa Jakub | 3-0 | 3 | 7 | +22
 2026-10-24 | Mucha Grzegorz | Fomin Andriej | 3-2 | 3 | 3 | +10
 2026-10-24 | Durda Michal | Fira Damian | 3-0 | 3 | 9 | +6
+2026-10-24 | Szymik Robert | Wiza Roman | 3-0 | 3 | 8 | +11
+2026-10-24 | Nowak Jakub | Sikon Mateusz | 3-2 | 3 | 3 | +5
 2026-10-24 | Natkaniec Michal | Skorupa Jakub | 3-2 | 4 | 2 | +11
 2026-10-24 | Guzik Michal | Sawicki Grzegorz | 3-1 | 4 | 4 | +5
 2026-10-24 | Oracz Jacek | Pawlik Cezary | 3-0 | 4 | 5 | +15
@@ -16254,12 +16256,12 @@
 2026-10-24 | Nosiadek Jakub | Rolak Jaroslaw | 3-0 | 4 | 9 | +15
 2026-10-24 | Juszczyk Krzysztof | Jedrzejak Patryk | 3-1 | 4 | 9 | +16
 2026-10-24 | Cioch Blazej | Eliasz Adrian | 3-1 | 4 | 4 | +12
-2026-10-24 | Kumor Michal | Frank Roman | 3-1 | 4 | 4 | Pending
+2026-10-24 | Kumor Michal | Frank Roman | 3-1 | 4 | 4 | +7
 2026-10-24 | Staszczyk Konrad | Chmielowski Jakub | 3-0 | 4 | 4 | +14
 2026-10-24 | Michalik Jerzy | Krutak Michal | 3-1 | 4 | 4 | +16
-2026-10-24 | Malcher Krzysztof | Kubiak Artur | 3-1 | 4 | 4 | Pending
+2026-10-24 | Malcher Krzysztof | Kubiak Artur | 3-1 | 4 | 4 | +17
 2026-10-24 | Sporek Szymon | Jadam Dawid | 3-2 | 4 | 4 | +9
-2026-10-24 | Karpiuk Mateusz | Skorupa Jakub | 3-1 | 4 | 8 | Pending
+2026-10-24 | Karpiuk Mateusz | Skorupa Jakub | 3-1 | 4 | 8 | +13
 2026-10-24 | Linek Adam | Kwodawski Bartosz | 3-0 | 4 | 4 | +12
 2026-10-24 | Zmijewski Artur | Mucha Grzegorz | 3-2 | 4 | 4 | +6
 2026-10-24 | Szurgot Andrzej | Fomin Andriej | 3-1 | 4 | 4 | +11
@@ -16287,11 +16289,16 @@
 2026-10-24 | Nosiadek Jakub | Suchecki Waclaw | 3-1 | 5 | 10 | +7
 2026-10-24 | Skorupa Jakub | Frank Roman | 3-0 | 5 | 1 | +8
 2026-10-24 | Klocek Kamil | Cioch Blazej | 3-2 | 5 | 2 | +10
-2026-10-24 | Chmielowski Jakub | Kolodziej Krystian | 3-0 | 5 | 10 | Pending
-2026-10-24 | Mlynarski Filip | Jadam Dawid | 3-0 | 5 | 5 | Pending
+2026-10-24 | Chmielowski Jakub | Kolodziej Krystian | 3-0 | 5 | 10 | +25
+2026-10-24 | Mlynarski Filip | Jadam Dawid | 3-0 | 5 | 5 | +16
 2026-10-24 | Cioch Blazej | Michalczyk Jakub | 3-2 | 5 | 10 | +9
-2026-10-24 | Mucha Grzegorz | Krutak Michal | 3-1 | 5 | 5 | Pending
-2026-10-24 | Malcher Krzysztof | Frank Roman | 3-2 | 5 | 5 | Pending
+2026-10-24 | Mucha Grzegorz | Krutak Michal | 3-1 | 5 | 5 | +15
+2026-10-24 | Malcher Krzysztof | Frank Roman | 3-2 | 5 | 5 | +6
+2026-10-24 | Kumor Michal | Karpiuk Mateusz | 3-2 | 5 | 5 | +8
+2026-10-24 | Kwodawski Bartosz | Eliasz Adrian | 3-1 | 5 | 5 | +11
+2026-10-24 | Staszczyk Konrad | Sporek Szymon | 3-2 | 5 | 5 | +7
+2026-10-24 | Szurgot Andrzej | Michalik Jerzy | 3-0 | 5 | 5 | +12
+2026-10-24 | Fomin Andriej | Zmijewski Artur | 3-2 | 5 | 5 | +9
 2026-10-24 | Szymanski Igor | Buczynski Witold | 3-0 | 6 | 6 | +13
 2026-10-24 | Badura Jaroslaw | Guzik Michal | 3-1 | 6 | 6 | +15
 2026-10-24 | Fira Damian | Michalski Jakub | 3-0 | 6 | 6 | +15
@@ -16311,6 +16318,7 @@
 2026-10-24 | Jedrzejak Patryk | Polok Pawel | 3-1 | 6 | 6 | +9
 2026-10-24 | Kolodziej Krystian | Sporek Szymon | 3-0 | 6 | 1 | +9
 2026-10-24 | Michalczyk Jakub | Eliasz Adrian | 3-1 | 6 | 1 | +10
+2026-10-24 | Malcher Krzysztof | Karpiuk Mateusz | 3-1 | 6 | 6 | Pending
 2026-10-24 | Szurlej Kacper | Pisarczyk Tomasz | 3-0 | 7 | 7 | +5
 2026-10-24 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 7 | 4 | +10
 2026-10-24 | Paszkiewicz Michal | Buczynski Witold | 3-0 | 7 | 5 | +13
@@ -16345,6 +16353,7 @@
 2026-10-24 | Jedrzejak Patryk | Adach Rafal | 3-1 | 8 | 8 | +6
 2026-10-24 | Polok Pawel | Juszczyk Krzysztof | 3-2 | 8 | 2 | +6
 2026-10-24 | Kolodziej Krystian | Jadam Dawid | 3-0 | 8 | 3 | +9
+2026-10-24 | Klocek Kamil | Linek Adam | 3-2 | 8 | 5 | +12
 2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 9 | 9 | +8
 2026-10-24 | Mleczko Bartlomiej | Pisarczyk Tomasz | 3-0 | 9 | 9 | +10
 2026-10-24 | Dytko Dawid | Pelka Jerzy | 3-2 | 9 | 9 | +9
@@ -16360,6 +16369,7 @@
 2026-10-24 | Wojcik Rafal | Juszczyk Krzysztof | 3-0 | 9 | 5 | +18
 2026-10-24 | Kolodziej Krystian | Mlynarski Filip | 3-0 | 9 | 4 | +9
 2026-10-24 | Michalczyk Jakub | Klocek Kamil | 3-1 | 9 | 7 | +8
+2026-10-24 | Skorupa Jakub | Kubiak Artur | 3-1 | 9 | 5 | +13
 2026-10-24 | Polok Pawel | Dlugaj Rafal | 3-0 | 10 | 10 | +15
 2026-10-24 | Wasilewski Damian | Mleczko Bartlomiej | 3-2 | 10 | 10 | +8
 2026-10-24 | Sinicki Maciej | Rolak Jaroslaw | 3-1 | 10 | 10 | +11
@@ -16390,9 +16400,3 @@
 2026-10-24 | Polok Pawel | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-24 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 |  |  | 
 2026-10-24 | Frank Roman | Kumor Michal | 3-0 |  |  | 
-2026-10-24 | Kumor Michal | Karpiuk Mateusz | 3-2 | 5 | 5 | Pending
-2026-10-24 | Kwodawski Bartosz | Eliasz Adrian | 3-1 | 5 | 5 | +11
-2026-10-24 | Staszczyk Konrad | Sporek Szymon | 3-2 | 5 | 5 | +7
-2026-10-24 | Klocek Kamil | Linek Adam | 3-2 | 8 | 5 | +12
-2026-10-24 | Szurgot Andrzej | Michalik Jerzy | 3-0 | 5 | 5 | Pending
-2026-10-24 | Szymik Robert | Wiza Roman | 3-0 | 3 | 8 | +11
