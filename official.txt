@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T12:44Z
+# updated 2026-10-24T13:14Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16215,6 +16215,7 @@
 2026-10-24 | Wojcik Rafal | Dlugaj Rafal | 3-2 | 4 | 4 | +10
 2026-10-24 | Jedrzejak Patryk | Idaczyk Dominik | 3-1 | 4 | 2 | +10
 2026-10-24 | Mecik Patryk | Polok Pawel | 3-2 | 4 | 4 | +12
+2026-10-24 | Nosiadek Jakub | Rolak Jaroslaw | 3-0 | 4 | 9 | Pending
 2026-10-24 | Sawicki Grzegorz | Badura Jaroslaw | 3-2 | 5 | 5 | +12
 2026-10-24 | Wiza Roman | Fira Damian | 3-2 | 5 | 5 | +8
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-0 | 5 | 5 | +10
@@ -16266,6 +16267,7 @@
 2026-10-24 | Mleczko Bartlomiej | Michalczyk Jakub | 3-0 | 7 | 2 | Pending
 2026-10-24 | Przewlocki Jacek | Nosiadek Jakub | 3-1 | 7 | 2 | Pending
 2026-10-24 | Pelka Jerzy | Szostok Sebastian | 3-0 | 7 | 7 | +17
+2026-10-24 | Dlugaj Rafal | Jedrzejak Patryk | 3-1 | 7 | 7 | Pending
 2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0 | 8 | 8 | Pending
 2026-10-24 | Petas Kacper | Spanik Tibor | 3-1 | 8 | 8 | Pending
 2026-10-24 | Szurlej Kacper | Mleczko Bartlomiej | 3-0 | 8 | 8 | Pending
@@ -16275,6 +16277,10 @@
 2026-10-24 | Domin Maciej | Adamiak Grzegorz | 3-1 | 8 | 8 | Pending
 2026-10-24 | Myszewski Adrian | Nosiadek Jakub | 3-1 | 8 | 3 | Pending
 2026-10-24 | Sinicki Maciej | Przewlocki Jacek | 3-1 | 8 | 8 | Pending
+2026-10-24 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 | 8 | 8 | +14
+2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 9 | 9 | Pending
+2026-10-24 | Mleczko Bartlomiej | Pisarczyk Tomasz | 3-0 | 9 | 9 | Pending
+2026-10-24 | Dytko Dawid | Pelka Jerzy | 3-2 | 9 | 9 | +9
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
@@ -16291,5 +16297,4 @@
 2026-10-24 | Wiza Roman | Sawicki Grzegorz | 3-0 |  |  | 
 2026-10-24 | Polok Pawel | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-24 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 |  |  | 
-2026-10-24 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 |  |  | 
 2026-10-24 | Wojcik Rafal | Juszczyk Krzysztof | 3-0 |  |  | 
