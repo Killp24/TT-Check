@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T09:08Z
+# updated 2026-10-24T09:32Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16210,6 +16210,7 @@
 2026-10-24 | Domin Maciej | Michna Dawid | 3-2 | 4 | 4 | +9
 2026-10-24 | Rolak Jaroslaw | Wrobel Dariusz | 3-2 | 4 | 4 | +10
 2026-10-24 | Adach Rafal | Kurek Pawel | 3-0 | 4 | 4 | +21
+2026-10-24 | Wojcik Rafal | Dlugaj Rafal | 3-2 | 4 | 4 | Pending
 2026-10-24 | Sawicki Grzegorz | Badura Jaroslaw | 3-2 | 5 | 5 | +12
 2026-10-24 | Wiza Roman | Fira Damian | 3-2 | 5 | 5 | +8
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-0 | 5 | 5 | +10
@@ -16227,9 +16228,13 @@
 2026-10-24 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-1 | 5 | 5 | +11
 2026-10-24 | Sinicki Maciej | Rolak Jaroslaw | 3-1 | 5 | 5 | +12
 2026-10-24 | Lojtek Tomasz | Adach Rafal | 3-2 | 5 | 5 | +8
+2026-10-24 | Szymanski Igor | Buczynski Witold | 3-0 | 6 | 6 | Pending
 2026-10-24 | Badura Jaroslaw | Guzik Michal | 3-1 | 6 | 6 | +15
 2026-10-24 | Fira Damian | Michalski Jakub | 3-0 | 6 | 6 | +15
 2026-10-24 | Paszkiewicz Michal | Wojtaszczyk Wojciech | 3-1 | 6 | 4 | +17
+2026-10-24 | Spanik Tibor | Adamiak Grzegorz | 3-1 | 6 | 6 | Pending
+2026-10-24 | Szurlej Kacper | Wasilewski Damian | 3-0 | 6 | 6 | Pending
+2026-10-24 | Suchecki Waclaw | Myszewski Adrian | 3-1 | 6 | 6 | Pending
 2026-10-24 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 7 | 4 | +10
 2026-10-24 | Paszkiewicz Michal | Buczynski Witold | 3-0 | 7 | 5 | +13
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
