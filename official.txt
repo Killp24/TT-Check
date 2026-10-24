@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T14:05Z
+# updated 2026-10-24T14:30Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16280,6 +16280,7 @@
 2026-10-24 | Myszewski Adrian | Nosiadek Jakub | 3-1 | 8 | 3 | Pending
 2026-10-24 | Sinicki Maciej | Przewlocki Jacek | 3-1 | 8 | 8 | Pending
 2026-10-24 | Wojtaszczyk Wojciech | Szostok Sebastian | 3-0 | 8 | 8 | +14
+2026-10-24 | Jedrzejak Patryk | Adach Rafal | 3-1 | 8 | 8 | Pending
 2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 9 | 9 | Pending
 2026-10-24 | Mleczko Bartlomiej | Pisarczyk Tomasz | 3-0 | 9 | 9 | Pending
 2026-10-24 | Dytko Dawid | Pelka Jerzy | 3-2 | 9 | 9 | +9
@@ -16291,6 +16292,9 @@
 2026-10-24 | Wasilewski Damian | Michalczyk Jakub | 3-0 | 9 | 4 | Pending
 2026-10-24 | Przewlocki Jacek | Suchecki Waclaw | 3-1 | 9 | 9 | Pending
 2026-10-24 | Szostok Sebastian | Szymanski Igor | 3-0 | 9 | 9 | +12
+2026-10-24 | Sinicki Maciej | Rolak Jaroslaw | 3-1 | 10 | 10 | Pending
+2026-10-24 | Michna Dawid | Petas Kacper | 3-0 | 10 | 10 | Pending
+2026-10-24 | Spanik Tibor | Domin Maciej | 3-0 | 10 | 10 | Pending
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
