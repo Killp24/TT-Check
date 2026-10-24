@@ -1,7 +1,7 @@
 # Career record from tt-series.com: name | wins | losses
 Abbasi Amirreza | 1265 | 953
-Adach Rafal | 282 | 419
-Adamiak Grzegorz | 1335 | 1550
+Adach Rafal | 283 | 419
+Adamiak Grzegorz | 1335 | 1551
 Adamus Kacper | 1330 | 1084
 Adamus Mariusz | 1686 | 1823
 Adamus Pawel | 728 | 746
@@ -26,7 +26,7 @@ Braun Josef | 1673 | 1549
 Brozek Piotr | 124 | 96
 Brud Szymon | 724 | 761
 Brunner Marian | 570 | 678
-Buczynski Witold | 1066 | 1851
+Buczynski Witold | 1066 | 1852
 Burkacki Adrian | 157 | 261
 Burkacki Mateusz | 1959 | 1475
 Cesarz Milosz | 250 | 580
@@ -41,7 +41,7 @@ Cyndera Jakub | 346 | 284
 Cyrnek Piotr | 754 | 617
 Czernik Mateusz | 599 | 1063
 Czerwinski Bartosz | 2302 | 2737
-Dabrowski Igor | 1727 | 1809
+Dabrowski Igor | 1727 | 1810
 Daniel Artur | 2755 | 2638
 David Petr | 2357 | 1128
 Debski Jerzy | 43 | 93
@@ -107,7 +107,7 @@ Jesiek Jakub | 317 | 288
 Jozala Waldemar | 415 | 500
 Jozefiak Michal | 53 | 55
 Jurowicz Grzegorz | 417 | 664
-Juszczyk Krzysztof | 1333 | 1253
+Juszczyk Krzysztof | 1333 | 1254
 Juzek Sebastian | 396 | 592
 Kaczmarek Jakub | 1063 | 1885
 Kaczmarek Krzysztof | 289 | 261
@@ -124,7 +124,7 @@ Kocik Tomasz | 94 | 35
 Koczyba Mariusz | 2085 | 1579
 Kolasa Szymon | 994 | 959
 Kolek Maciej | 838 | 790
-Kolodziej Krystian | 3857 | 2029
+Kolodziej Krystian | 3857 | 2030
 Komandzik Rafal | 9 | 41
 Kordaszewski Tomasz | 9 | 83
 Kosmal Dawid | 449 | 374
@@ -192,10 +192,10 @@ Maslowski Jakub | 525 | 686
 Maszczynski Dariusz | 118 | 415
 Mecik Patryk | 1138 | 1189
 Miastowski Maksymilian | 1576 | 1386
-Michalczyk Jakub | 228 | 205
+Michalczyk Jakub | 228 | 206
 Michalik Jerzy | 1023 | 1253
 Michalski Jakub | 1202 | 1747
-Michna Dawid | 1208 | 1114
+Michna Dawid | 1209 | 1114
 Minda Michal | 3602 | 3503
 Misiak Mateusz | 3798 | 3377
 Mista Sylwester | 405 | 994
@@ -209,7 +209,7 @@ Mucha Grzegorz | 217 | 223
 Mugowski Arkadiusz | 3481 | 4177
 Murawski Daniel | 1115 | 1007
 Murawski Michal | 2409 | 2345
-Myszewski Adrian | 803 | 883
+Myszewski Adrian | 804 | 883
 Nadolny Jakub | 14 | 13
 Nadolski Lukasz | 430 | 602
 Nagel Kacper | 250 | 397
@@ -248,12 +248,12 @@ Pisarczyk Tomasz | 202 | 317
 Pokorny Adam | 18 | 44
 Polanski Pawel | 786 | 744
 Poliniewicz Grzegorz | 4120 | 2923
-Polok Pawel | 214 | 136
+Polok Pawel | 215 | 136
 Poloszczanski Dawid | 1233 | 2141
 Prokopcov Dimitrij | 117 | 149
 Pruszkowski Jakub | 2386 | 1690
 Przebierala Tomasz | 31 | 245
-Przewlocki Jacek | 922 | 1191
+Przewlocki Jacek | 923 | 1191
 Przewlocki Piotr | 745 | 935
 Ptak Wiktor | 112 | 93
 Pyda Lukasz | 130 | 466
@@ -276,7 +276,7 @@ Seroka Szymon | 2079 | 1485
 Sikon Mateusz | 226 | 329
 Sikora Filip | 119 | 64
 Sikora Mariusz | 139 | 91
-Sinicki Maciej | 1068 | 1236
+Sinicki Maciej | 1068 | 1237
 Sklensky Miroslav | 1805 | 1262
 Skop Szymon | 262 | 354
 Skorski Michal | 2044 | 1897
@@ -298,7 +298,7 @@ Sokolowski Lukasz | 89 | 77
 Sokolowski Oliwier | 309 | 415
 Sokolowski Oskar | 149 | 300
 Solilo Dominik | 340 | 349
-Spanik Tibor | 284 | 229
+Spanik Tibor | 285 | 229
 Sporek Szymon | 1227 | 1173
 Spychala Adrian | 2198 | 3233
 Staniczek Adam | 554 | 1152
@@ -311,7 +311,7 @@ Stepien Damian | 2 | 13
 Stodolica Mikolaj | 75 | 79
 Strowski Karol | 1582 | 1035
 Strus Piotr | 1137 | 1692
-Suchecki Waclaw | 331 | 533
+Suchecki Waclaw | 331 | 534
 Sulkowski Bartek | 673 | 812
 Sulkowski Karol | 705 | 726
 Swider Dariusz | 21 | 19
@@ -320,12 +320,12 @@ Szczepanek Blazej | 846 | 1067
 Szczepanski Mateusz | 329 | 368
 Szlubowski Dariusz | 454 | 259
 Szoltysek Artur | 568 | 711
-Szostok Sebastian | 1844 | 1264
+Szostok Sebastian | 1845 | 1264
 Szurgot Andrzej | 58 | 131
-Szurlej Kacper | 234 | 204
+Szurlej Kacper | 235 | 204
 Szydlo Aleksander | 84 | 85
 Szymanski Filip | 4 | 7
-Szymanski Igor | 142 | 416
+Szymanski Igor | 142 | 417
 Szymik Robert | 1194 | 768
 Tkaczyk Henryk | 1192 | 620
 Tkocz Marek | 978 | 552
@@ -343,7 +343,7 @@ Vrablik Jiri | 29 | 51
 Wandachowicz Michal | 17 | 71
 Warpas Blazej | 471 | 462
 Warzecha Miroslaw | 1244 | 612
-Wasilewski Damian | 314 | 227
+Wasilewski Damian | 315 | 227
 Wawrosz Pavel | 10 | 12
 Wederlich Damian | 1073 | 842
 Wichowski Grzegorz | 1111 | 679
@@ -358,9 +358,9 @@ Witkowski Jakub | 760 | 1073
 Wiza Roman | 894 | 1431
 Wloczko Krzysztof | 2589 | 2380
 Wnek Stanislaw | 942 | 857
-Wojcik Rafal | 493 | 660
+Wojcik Rafal | 493 | 661
 Wojewodka Michal | 164 | 191
-Wojtaszczyk Wojciech | 620 | 319
+Wojtaszczyk Wojciech | 621 | 319
 Wolny Michal | 581 | 741
 Wos Alan | 322 | 449
 Woskowicz Marcin | 19 | 28

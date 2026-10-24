@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T13:36Z
+# updated 2026-10-24T14:02Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16268,6 +16268,8 @@
 2026-10-24 | Przewlocki Jacek | Nosiadek Jakub | 3-1 | 7 | 2 | Pending
 2026-10-24 | Pelka Jerzy | Szostok Sebastian | 3-0 | 7 | 7 | +17
 2026-10-24 | Dlugaj Rafal | Jedrzejak Patryk | 3-1 | 7 | 7 | Pending
+2026-10-24 | Adach Rafal | Juszczyk Krzysztof | 3-0 | 7 | 1 | Pending
+2026-10-24 | Polok Pawel | Wojcik Rafal | 3-2 | 7 | 6 | Pending
 2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0 | 8 | 8 | Pending
 2026-10-24 | Petas Kacper | Spanik Tibor | 3-1 | 8 | 8 | Pending
 2026-10-24 | Szurlej Kacper | Mleczko Bartlomiej | 3-0 | 8 | 8 | Pending
@@ -16281,6 +16283,14 @@
 2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 9 | 9 | Pending
 2026-10-24 | Mleczko Bartlomiej | Pisarczyk Tomasz | 3-0 | 9 | 9 | Pending
 2026-10-24 | Dytko Dawid | Pelka Jerzy | 3-2 | 9 | 9 | +9
+2026-10-24 | Michna Dawid | Adamiak Grzegorz | 3-0 | 9 | 9 | Pending
+2026-10-24 | Wojtaszczyk Wojciech | Buczynski Witold | 3-1 | 9 | 9 | +5
+2026-10-24 | Szurlej Kacper | Dabrowski Igor | 3-0 | 9 | 9 | Pending
+2026-10-24 | Myszewski Adrian | Sinicki Maciej | 3-0 | 9 | 9 | Pending
+2026-10-24 | Spanik Tibor | Kolodziej Krystian | 3-1 | 9 | 4 | Pending
+2026-10-24 | Wasilewski Damian | Michalczyk Jakub | 3-0 | 9 | 4 | Pending
+2026-10-24 | Przewlocki Jacek | Suchecki Waclaw | 3-1 | 9 | 9 | Pending
+2026-10-24 | Szostok Sebastian | Szymanski Igor | 3-0 | 9 | 9 | +12
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
@@ -16298,8 +16308,3 @@
 2026-10-24 | Polok Pawel | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-24 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 |  |  | 
 2026-10-24 | Wojcik Rafal | Juszczyk Krzysztof | 3-0 |  |  | 
-2026-10-24 | Michna Dawid | Adamiak Grzegorz | 3-0 |  |  | 
-2026-10-24 | Wojtaszczyk Wojciech | Buczynski Witold | 3-1 |  |  | 
-2026-10-24 | Szurlej Kacper | Dabrowski Igor | 3-0 |  |  | 
-2026-10-24 | Myszewski Adrian | Sinicki Maciej | 3-0 |  |  | 
-2026-10-24 | Adach Rafal | Juszczyk Krzysztof | 3-0 |  |  | 
