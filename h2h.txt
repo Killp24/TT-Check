@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-24T00:50Z
+# updated 2026-10-24T02:35Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -12259,7 +12259,7 @@
 2026-09-27 | Wieczerzak Jacek | Cichocki Aleksander | 3-1
 2026-10-11 | Cichocki Aleksander | Wieczerzak Jacek | 3-0
 2026-10-11 | Wieczerzak Jacek | Cichocki Aleksander | 3-1
-# pair | Cioch Blazej | Eliasz Adrian | 2026-10-23T07:48Z
+# pair | Cioch Blazej | Eliasz Adrian | 2026-10-24T02:35Z
 2022-10-10 | Eliasz Adrian | Cioch Blazej | 3-0
 2022-12-26 | Cioch Blazej | Eliasz Adrian | 3-2
 2023-01-07 | Eliasz Adrian | Cioch Blazej | 3-1
@@ -12309,9 +12309,9 @@
 2026-04-05 | Cioch Blazej | Gronowski Wojciech | 3-0
 2026-10-17 | Cioch Blazej | Gronowski Wojciech | 3-1
 2026-10-18 | Gronowski Wojciech | Cioch Blazej | 3-2
-# pair | Cioch Blazej | Klocek Kamil | 2026-10-23T07:48Z
+# pair | Cioch Blazej | Klocek Kamil | 2026-10-24T02:35Z
 2026-06-30 | Klocek Kamil | Cioch Blazej | 3-1
-# pair | Cioch Blazej | Kwodawski Bartosz | 2026-10-23T07:48Z
+# pair | Cioch Blazej | Kwodawski Bartosz | 2026-10-24T02:35Z
 2022-12-21 | Kwodawski Bartosz | Cioch Blazej | 3-2
 2023-05-22 | Kwodawski Bartosz | Cioch Blazej | 3-1
 2023-08-07 | Kwodawski Bartosz | Cioch Blazej | 3-1
@@ -12324,7 +12324,7 @@
 2025-07-08 | Kwodawski Bartosz | Cioch Blazej | 3-1
 2025-08-05 | Kwodawski Bartosz | Cioch Blazej | 3-2
 2026-04-11 | Kwodawski Bartosz | Cioch Blazej | 3-0
-# pair | Cioch Blazej | Linek Adam | 2026-10-23T07:48Z
+# pair | Cioch Blazej | Linek Adam | 2026-10-24T02:35Z
 2023-01-07 | Linek Adam | Cioch Blazej | 3-2
 2023-01-10 | Cioch Blazej | Linek Adam | 3-1
 2023-03-25 | Linek Adam | Cioch Blazej | 3-1
@@ -12369,7 +12369,7 @@
 2026-04-11 | Cioch Blazej | Makowski Kacper | 3-2
 2026-10-17 | Cioch Blazej | Makowski Kacper | 3-0
 2026-10-17 | Cioch Blazej | Makowski Kacper | 3-2
-# pair | Cioch Blazej | Michalczyk Jakub | 2026-10-23T07:48Z
+# pair | Cioch Blazej | Michalczyk Jakub | 2026-10-24T02:35Z
 2026-03-03 | Cioch Blazej | Michalczyk Jakub | 3-2
 # pair | Cioch Blazej | Sulkowski Karol | 2026-10-18T05:10Z
 2026-01-27 | Sulkowski Karol | Cioch Blazej | 3-0
@@ -17172,7 +17172,7 @@
 2026-10-04 | Iwasyszyn Wojciech | Eliasz Adrian | 3-2
 2026-10-11 | Eliasz Adrian | Iwasyszyn Wojciech | 3-1
 2026-10-11 | Iwasyszyn Wojciech | Eliasz Adrian | 3-1
-# pair | Eliasz Adrian | Klocek Kamil | 2026-10-23T07:48Z
+# pair | Eliasz Adrian | Klocek Kamil | 2026-10-24T02:35Z
 2026-02-15 | Eliasz Adrian | Klocek Kamil | 3-1
 2026-05-29 | Klocek Kamil | Eliasz Adrian | 3-2
 2026-05-30 | Eliasz Adrian | Klocek Kamil | 3-1
@@ -17362,7 +17362,7 @@
 2026-10-03 | Eliasz Adrian | Krukar Piotr | 3-2
 2026-10-04 | Eliasz Adrian | Krukar Piotr | 3-1
 2026-10-04 | Krukar Piotr | Eliasz Adrian | 3-0
-# pair | Eliasz Adrian | Kwodawski Bartosz | 2026-10-23T07:48Z
+# pair | Eliasz Adrian | Kwodawski Bartosz | 2026-10-24T02:35Z
 2022-10-30 | Kwodawski Bartosz | Eliasz Adrian | 3-1
 2023-04-11 | Kwodawski Bartosz | Eliasz Adrian | 3-2
 2024-05-09 | Kwodawski Bartosz | Eliasz Adrian | 3-2
@@ -17383,7 +17383,7 @@
 2026-03-28 | Kwodawski Bartosz | Eliasz Adrian | 3-0
 2026-04-04 | Eliasz Adrian | Kwodawski Bartosz | 3-2
 2026-04-18 | Kwodawski Bartosz | Eliasz Adrian | 3-2
-# pair | Eliasz Adrian | Linek Adam | 2026-10-23T07:48Z
+# pair | Eliasz Adrian | Linek Adam | 2026-10-24T02:35Z
 2022-10-30 | Eliasz Adrian | Linek Adam | 3-1
 2022-11-20 | Linek Adam | Eliasz Adrian | 3-2
 2022-12-29 | Eliasz Adrian | Linek Adam | 3-1
@@ -17538,7 +17538,7 @@
 2026-05-24 | Makowski Kacper | Eliasz Adrian | 3-1
 2026-10-17 | Makowski Kacper | Eliasz Adrian | 3-1
 2026-10-18 | Makowski Kacper | Eliasz Adrian | 3-1
-# pair | Eliasz Adrian | Michalczyk Jakub | 2026-10-23T07:48Z
+# pair | Eliasz Adrian | Michalczyk Jakub | 2026-10-24T02:35Z
 2025-07-21 | Michalczyk Jakub | Eliasz Adrian | 3-2
 2025-07-27 | Eliasz Adrian | Michalczyk Jakub | 3-2
 2025-08-27 | Michalczyk Jakub | Eliasz Adrian | 3-0
@@ -38422,7 +38422,7 @@
 2026-06-24 | Kukawka Milosz | Klocek Kamil | 3-0
 2026-06-26 | Kukawka Milosz | Klocek Kamil | 3-0
 2026-06-26 | Kukawka Milosz | Klocek Kamil | 3-2
-# pair | Klocek Kamil | Kwodawski Bartosz | 2026-10-23T07:48Z
+# pair | Klocek Kamil | Kwodawski Bartosz | 2026-10-24T02:35Z
 2026-02-14 | Kwodawski Bartosz | Klocek Kamil | 3-1
 2026-09-05 | Klocek Kamil | Kwodawski Bartosz | 3-1
 # pair | Klocek Kamil | Lamperski Jakub | 2026-10-23T19:16Z
@@ -38434,7 +38434,7 @@
 2026-10-21 | Lamperski Jakub | Klocek Kamil | 3-2
 2026-10-22 | Klocek Kamil | Lamperski Jakub | 3-1
 2026-10-23 | Lamperski Jakub | Klocek Kamil | 3-1
-# pair | Klocek Kamil | Linek Adam | 2026-10-23T07:48Z
+# pair | Klocek Kamil | Linek Adam | 2026-10-24T02:35Z
 2026-07-29 | Klocek Kamil | Linek Adam | 3-0
 2026-07-30 | Klocek Kamil | Linek Adam | 3-0
 2026-08-14 | Klocek Kamil | Linek Adam | 3-0
@@ -38487,7 +38487,7 @@
 2026-09-26 | Lukaszewski Mikolaj | Klocek Kamil | 3-1
 # pair | Klocek Kamil | Marchlewski Marcin | 2026-10-11T06:35Z
 2026-10-10 | Marchlewski Marcin | Klocek Kamil | 3-0
-# pair | Klocek Kamil | Michalczyk Jakub | 2026-10-23T07:48Z
+# pair | Klocek Kamil | Michalczyk Jakub | 2026-10-24T02:35Z
 # pair | Klocek Kamil | Minda Michal | 2026-10-24T00:02Z
 2026-07-22 | Minda Michal | Klocek Kamil | 3-0
 2026-07-22 | Minda Michal | Klocek Kamil | 3-1
@@ -47853,7 +47853,7 @@
 2026-09-24 | Zelezik Jacek | Kwiatkowski Kacper | 3-0
 2026-10-18 | Zelezik Jacek | Kwiatkowski Kacper | 3-0
 2026-10-18 | Zelezik Jacek | Kwiatkowski Kacper | 3-1
-# pair | Kwodawski Bartosz | Linek Adam | 2026-10-23T07:48Z
+# pair | Kwodawski Bartosz | Linek Adam | 2026-10-24T02:35Z
 2022-12-19 | Kwodawski Bartosz | Linek Adam | 3-1
 2023-01-11 | Kwodawski Bartosz | Linek Adam | 3-2
 2023-07-24 | Linek Adam | Kwodawski Bartosz | 3-0
@@ -47897,7 +47897,7 @@
 2025-09-09 | Kwodawski Bartosz | Lukaszewski Mikolaj | 3-1
 2026-06-11 | Kwodawski Bartosz | Lukaszewski Mikolaj | 3-0
 2026-06-27 | Kwodawski Bartosz | Lukaszewski Mikolaj | 3-2
-# pair | Kwodawski Bartosz | Michalczyk Jakub | 2026-10-23T07:48Z
+# pair | Kwodawski Bartosz | Michalczyk Jakub | 2026-10-24T02:35Z
 2025-09-02 | Michalczyk Jakub | Kwodawski Bartosz | 3-0
 2025-09-02 | Michalczyk Jakub | Kwodawski Bartosz | 3-1
 2026-08-01 | Michalczyk Jakub | Kwodawski Bartosz | 3-2
@@ -49161,7 +49161,7 @@
 2026-04-09 | Linek Adam | Maruszak Piotr | 3-1
 2026-10-17 | Linek Adam | Maruszak Piotr | 3-1
 2026-10-17 | Maruszak Piotr | Linek Adam | 3-0
-# pair | Linek Adam | Michalczyk Jakub | 2026-10-23T07:48Z
+# pair | Linek Adam | Michalczyk Jakub | 2026-10-24T02:35Z
 2025-07-21 | Michalczyk Jakub | Linek Adam | 3-2
 2025-09-22 | Linek Adam | Michalczyk Jakub | 3-1
 2025-10-10 | Linek Adam | Michalczyk Jakub | 3-2
@@ -61368,7 +61368,7 @@
 2025-11-06 | Pisarczyk Tomasz | Myszewski Adrian | 3-1
 2026-04-26 | Myszewski Adrian | Pisarczyk Tomasz | 3-0
 2026-04-26 | Myszewski Adrian | Pisarczyk Tomasz | 3-2
-# pair | Myszewski Adrian | Przewlocki Jacek | 2026-10-23T07:48Z
+# pair | Myszewski Adrian | Przewlocki Jacek | 2026-10-24T02:35Z
 2024-08-04 | Przewlocki Jacek | Myszewski Adrian | 3-0
 2024-08-18 | Myszewski Adrian | Przewlocki Jacek | 3-0
 2024-08-18 | Przewlocki Jacek | Myszewski Adrian | 3-2
@@ -61395,7 +61395,7 @@
 2026-04-25 | Przewlocki Jacek | Myszewski Adrian | 3-2
 2026-09-21 | Myszewski Adrian | Przewlocki Jacek | 3-1
 2026-09-21 | Myszewski Adrian | Przewlocki Jacek | 3-1
-# pair | Myszewski Adrian | Rolak Jaroslaw | 2026-10-23T07:48Z
+# pair | Myszewski Adrian | Rolak Jaroslaw | 2026-10-24T02:35Z
 2024-06-22 | Myszewski Adrian | Rolak Jaroslaw | 3-2
 2024-08-17 | Rolak Jaroslaw | Myszewski Adrian | 3-2
 2024-08-24 | Rolak Jaroslaw | Myszewski Adrian | 3-0
@@ -61461,7 +61461,7 @@
 2026-08-15 | Myszewski Adrian | Rudomina Kamil | 3-2
 2026-08-17 | Rudomina Kamil | Myszewski Adrian | 3-0
 2026-10-07 | Rudomina Kamil | Myszewski Adrian | 3-2
-# pair | Myszewski Adrian | Sinicki Maciej | 2026-10-23T07:48Z
+# pair | Myszewski Adrian | Sinicki Maciej | 2026-10-24T02:35Z
 2024-05-05 | Myszewski Adrian | Sinicki Maciej | 3-0
 2024-05-05 | Sinicki Maciej | Myszewski Adrian | 3-1
 2024-06-23 | Myszewski Adrian | Sinicki Maciej | 3-1
@@ -61529,7 +61529,7 @@
 2026-10-11 | Staniszewski Piotr | Myszewski Adrian | 3-2
 # pair | Myszewski Adrian | Staszczyk Konrad | 2026-10-08T04:39Z
 2026-10-07 | Staszczyk Konrad | Myszewski Adrian | 3-0
-# pair | Myszewski Adrian | Suchecki Waclaw | 2026-10-23T07:48Z
+# pair | Myszewski Adrian | Suchecki Waclaw | 2026-10-24T02:35Z
 2024-08-25 | Myszewski Adrian | Suchecki Waclaw | 3-0
 2024-08-25 | Myszewski Adrian | Suchecki Waclaw | 3-1
 2024-11-16 | Myszewski Adrian | Suchecki Waclaw | 3-0
@@ -68828,7 +68828,7 @@
 2026-10-03 | Polok Pawel | Wojtaszczyk Wojciech | 3-2
 2026-10-04 | Polok Pawel | Wojtaszczyk Wojciech | 3-1
 2026-10-04 | Wojtaszczyk Wojciech | Polok Pawel | 3-0
-# pair | Poloszczanski Dawid | Przewlocki Jacek | 2026-10-23T07:48Z
+# pair | Poloszczanski Dawid | Przewlocki Jacek | 2026-10-24T02:35Z
 2024-04-20 | Poloszczanski Dawid | Przewlocki Jacek | 3-0
 2024-04-20 | Poloszczanski Dawid | Przewlocki Jacek | 3-2
 2024-05-12 | Poloszczanski Dawid | Przewlocki Jacek | 3-0
@@ -68894,7 +68894,7 @@
 2026-09-12 | Poloszczanski Dawid | Przewlocki Jacek | 3-1
 2026-10-17 | Poloszczanski Dawid | Przewlocki Jacek | 3-2
 2026-10-17 | Przewlocki Jacek | Poloszczanski Dawid | 3-0
-# pair | Poloszczanski Dawid | Rolak Jaroslaw | 2026-10-23T07:48Z
+# pair | Poloszczanski Dawid | Rolak Jaroslaw | 2026-10-24T02:35Z
 2022-11-19 | Poloszczanski Dawid | Rolak Jaroslaw | 3-0
 2022-12-10 | Poloszczanski Dawid | Rolak Jaroslaw | 3-2
 2023-01-06 | Poloszczanski Dawid | Rolak Jaroslaw | 3-1
@@ -68960,7 +68960,7 @@
 2026-10-08 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1
-# pair | Poloszczanski Dawid | Sinicki Maciej | 2026-10-23T07:48Z
+# pair | Poloszczanski Dawid | Sinicki Maciej | 2026-10-24T02:35Z
 2023-01-14 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 2023-02-03 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 2023-02-04 | Sinicki Maciej | Poloszczanski Dawid | 3-0
@@ -69361,7 +69361,7 @@
 2026-09-23 | Poloszczanski Dawid | Strus Piotr | 3-1
 2026-09-30 | Poloszczanski Dawid | Strus Piotr | 3-1
 2026-10-09 | Poloszczanski Dawid | Strus Piotr | 3-2
-# pair | Poloszczanski Dawid | Suchecki Waclaw | 2026-10-23T07:48Z
+# pair | Poloszczanski Dawid | Suchecki Waclaw | 2026-10-24T02:35Z
 2024-04-20 | Poloszczanski Dawid | Suchecki Waclaw | 3-1
 2024-04-20 | Suchecki Waclaw | Poloszczanski Dawid | 3-2
 2024-05-18 | Poloszczanski Dawid | Suchecki Waclaw | 3-2
@@ -69577,7 +69577,7 @@
 2026-09-20 | Wisniewski Bartlomiej | Poloszczanski Dawid | 3-1
 2026-10-18 | Poloszczanski Dawid | Wisniewski Bartlomiej | 3-2
 2026-10-18 | Wisniewski Bartlomiej | Poloszczanski Dawid | 3-0
-# pair | Poloszczanski Dawid | Wrobel Dariusz | 2026-10-23T07:48Z
+# pair | Poloszczanski Dawid | Wrobel Dariusz | 2026-10-24T02:35Z
 2025-06-07 | Wrobel Dariusz | Poloszczanski Dawid | 3-2
 2025-06-14 | Wrobel Dariusz | Poloszczanski Dawid | 3-1
 2025-06-21 | Wrobel Dariusz | Poloszczanski Dawid | 3-0
@@ -70574,7 +70574,7 @@
 2025-06-09 | Wolny Michal | Przebierala Tomasz | 3-1
 2026-09-14 | Wolny Michal | Przebierala Tomasz | 3-0
 2026-10-12 | Wolny Michal | Przebierala Tomasz | 3-0
-# pair | Przewlocki Jacek | Rolak Jaroslaw | 2026-10-23T07:48Z
+# pair | Przewlocki Jacek | Rolak Jaroslaw | 2026-10-24T02:35Z
 2024-04-20 | Rolak Jaroslaw | Przewlocki Jacek | 3-0
 2024-07-27 | Przewlocki Jacek | Rolak Jaroslaw | 3-1
 2024-08-10 | Rolak Jaroslaw | Przewlocki Jacek | 3-1
@@ -70615,7 +70615,7 @@
 2026-10-10 | Przewlocki Jacek | Rolak Jaroslaw | 3-1
 2026-10-17 | Przewlocki Jacek | Rolak Jaroslaw | 3-2
 2026-10-17 | Rolak Jaroslaw | Przewlocki Jacek | 3-2
-# pair | Przewlocki Jacek | Sinicki Maciej | 2026-10-23T07:48Z
+# pair | Przewlocki Jacek | Sinicki Maciej | 2026-10-24T02:35Z
 2024-05-12 | Przewlocki Jacek | Sinicki Maciej | 3-2
 2024-05-12 | Sinicki Maciej | Przewlocki Jacek | 3-1
 2024-05-26 | Sinicki Maciej | Przewlocki Jacek | 3-0
@@ -70688,7 +70688,7 @@
 2026-09-21 | Strus Piotr | Przewlocki Jacek | 3-0
 2026-10-05 | Przewlocki Jacek | Strus Piotr | 3-2
 2026-10-19 | Strus Piotr | Przewlocki Jacek | 3-0
-# pair | Przewlocki Jacek | Suchecki Waclaw | 2026-10-23T07:48Z
+# pair | Przewlocki Jacek | Suchecki Waclaw | 2026-10-24T02:35Z
 2023-12-02 | Przewlocki Jacek | Suchecki Waclaw | 3-0
 2023-12-04 | Suchecki Waclaw | Przewlocki Jacek | 3-2
 2023-12-18 | Suchecki Waclaw | Przewlocki Jacek | 3-0
@@ -70863,7 +70863,7 @@
 2026-09-26 | Przewlocki Jacek | Wisniewski Bartlomiej | 3-0
 2026-09-26 | Wisniewski Bartlomiej | Przewlocki Jacek | 3-1
 2026-10-10 | Przewlocki Jacek | Wisniewski Bartlomiej | 3-1
-# pair | Przewlocki Jacek | Wrobel Dariusz | 2026-10-23T07:48Z
+# pair | Przewlocki Jacek | Wrobel Dariusz | 2026-10-24T02:35Z
 2025-07-02 | Przewlocki Jacek | Wrobel Dariusz | 3-0
 2025-07-02 | Wrobel Dariusz | Przewlocki Jacek | 3-1
 2025-07-26 | Wrobel Dariusz | Przewlocki Jacek | 3-2
@@ -71381,7 +71381,7 @@
 2026-10-04 | Zemla Piotr | Pytlas Wojciech | 3-0
 2026-10-11 | Zemla Piotr | Pytlas Wojciech | 3-1
 2026-10-17 | Zemla Piotr | Pytlas Wojciech | 3-0
-# pair | Rolak Jaroslaw | Sinicki Maciej | 2026-10-23T07:48Z
+# pair | Rolak Jaroslaw | Sinicki Maciej | 2026-10-24T02:35Z
 2023-03-04 | Sinicki Maciej | Rolak Jaroslaw | 3-1
 2023-03-18 | Rolak Jaroslaw | Sinicki Maciej | 3-2
 2023-09-10 | Rolak Jaroslaw | Sinicki Maciej | 3-0
@@ -71523,7 +71523,7 @@
 2026-10-08 | Skorski Michal | Rolak Jaroslaw | 3-1
 2026-10-13 | Rolak Jaroslaw | Skorski Michal | 3-1
 2026-10-13 | Skorski Michal | Rolak Jaroslaw | 3-2
-# pair | Rolak Jaroslaw | Suchecki Waclaw | 2026-10-23T07:48Z
+# pair | Rolak Jaroslaw | Suchecki Waclaw | 2026-10-24T02:35Z
 2024-07-07 | Suchecki Waclaw | Rolak Jaroslaw | 3-2
 2024-10-12 | Rolak Jaroslaw | Suchecki Waclaw | 3-1
 2024-10-19 | Rolak Jaroslaw | Suchecki Waclaw | 3-2
@@ -72097,7 +72097,7 @@
 2026-09-26 | Rolak Jaroslaw | Wisniewski Bartlomiej | 3-1
 2026-09-26 | Wisniewski Bartlomiej | Rolak Jaroslaw | 3-0
 2026-10-10 | Rolak Jaroslaw | Wisniewski Bartlomiej | 3-2
-# pair | Rolak Jaroslaw | Wrobel Dariusz | 2026-10-23T07:48Z
+# pair | Rolak Jaroslaw | Wrobel Dariusz | 2026-10-24T02:35Z
 2024-12-21 | Rolak Jaroslaw | Wrobel Dariusz | 3-0
 2025-01-08 | Rolak Jaroslaw | Wrobel Dariusz | 3-1
 2025-01-08 | Wrobel Dariusz | Rolak Jaroslaw | 3-1
@@ -75095,7 +75095,7 @@
 2026-10-11 | Staniszewski Piotr | Sinicki Maciej | 3-2
 2026-10-18 | Sinicki Maciej | Staniszewski Piotr | 3-0
 2026-10-18 | Sinicki Maciej | Staniszewski Piotr | 3-1
-# pair | Sinicki Maciej | Suchecki Waclaw | 2026-10-23T07:48Z
+# pair | Sinicki Maciej | Suchecki Waclaw | 2026-10-24T02:35Z
 2024-06-02 | Sinicki Maciej | Suchecki Waclaw | 3-1
 2024-06-02 | Sinicki Maciej | Suchecki Waclaw | 3-2
 2024-07-07 | Suchecki Waclaw | Sinicki Maciej | 3-2
@@ -75221,7 +75221,7 @@
 2026-10-11 | Sinicki Maciej | Wisniewski Bartlomiej | 3-2
 2026-10-18 | Wisniewski Bartlomiej | Sinicki Maciej | 3-1
 2026-10-18 | Wisniewski Bartlomiej | Sinicki Maciej | 3-2
-# pair | Sinicki Maciej | Wrobel Dariusz | 2026-10-23T07:48Z
+# pair | Sinicki Maciej | Wrobel Dariusz | 2026-10-24T02:35Z
 2025-02-22 | Sinicki Maciej | Wrobel Dariusz | 3-0
 2025-03-26 | Sinicki Maciej | Wrobel Dariusz | 3-1
 2025-03-26 | Wrobel Dariusz | Sinicki Maciej | 3-0
@@ -78762,7 +78762,7 @@
 2026-08-23 | Wisniewski Bartlomiej | Suchecki Waclaw | 3-0
 2026-09-17 | Wisniewski Bartlomiej | Suchecki Waclaw | 3-1
 2026-09-19 | Wisniewski Bartlomiej | Suchecki Waclaw | 3-0
-# pair | Suchecki Waclaw | Wrobel Dariusz | 2026-10-23T07:48Z
+# pair | Suchecki Waclaw | Wrobel Dariusz | 2026-10-24T02:35Z
 2025-08-23 | Wrobel Dariusz | Suchecki Waclaw | 3-1
 2025-10-14 | Wrobel Dariusz | Suchecki Waclaw | 3-2
 2025-12-06 | Wrobel Dariusz | Suchecki Waclaw | 3-1
