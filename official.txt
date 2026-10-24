@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T03:06Z
+# updated 2026-10-24T03:33Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11854,7 +11854,7 @@
 2026-10-11 | Solilo Dominik | Klocek Kamil | 3-2 | 1 | 1 | +4
 2026-10-11 | Sawicki Grzegorz | Wiza Roman | 3-2 | 1 | 2 | +9
 2026-10-11 | Jadach Oskar | Juszczyk Krzysztof | 3-0 | 1 | 2 | +11
-2026-10-11 | Petas Kacper | Adamiak Grzegorz | 3-0 | 1 | 1 | +6
+2026-10-11 | Petas Kacper | Adamiak Grzegorz | 3-0 | 1 | 1 | +5
 2026-10-11 | Cichocki Aleksander | Sobkow Zbigniew | 3-2 | 1 | 1 | +4
 2026-10-11 | Staniszewski Piotr | Sinicki Maciej | 3-2 | 1 | 1 | +7
 2026-10-11 | Zemla Piotr | Adach Rafal | 3-1 | 1 | 1 | +3
@@ -16112,6 +16112,9 @@
 2026-10-24 | Tkaczyk Henryk | Hetnar Krzysztof | 3-1 | 1 | 1 | +16
 2026-10-24 | Kukawka Milosz | Glanowski Jakub | 3-2 | 1 | 1 | +5
 2026-10-24 | Baron Mariusz | Adamus Pawel | 3-2 | 1 | 1 | +9
+2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 1 | 1 | Pending
+2026-10-24 | Wojtaszczyk Wojciech | Szymanski Igor | 3-2 | 1 | 1 | Pending
+2026-10-24 | Wrobel Dariusz | Sinicki Maciej | 3-1 | 1 | 1 | Pending
 2026-10-24 | Mrugala Bartlomiej | Poloszczanski Dawid | 3-2 | 2 | 1 | +8
 2026-10-24 | Pawlik Cezary | Wozniczka Marcin | 3-0 | 2 | 1 | +6
 2026-10-24 | Lukaszewski Mikolaj | Poloszczanski Dawid | 3-0 | 2 | 2 | +15
@@ -16142,6 +16145,7 @@
 2026-10-24 | Oracz Jacek | Pawlik Cezary | 3-0 | 4 | 5 | +15
 2026-10-24 | Fira Damian | Badura Jaroslaw | 3-2 | 4 | 4 | +10
 2026-10-24 | Jedrzejowski Oskar | Skorupa Jakub | 3-1 | 4 | 4 | +13
+2026-10-24 | Wiza Roman | Michalski Jakub | 3-0 | 4 | 4 | +17
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
