@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T11:36Z
+# updated 2026-10-24T12:03Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16248,6 +16248,7 @@
 2026-10-24 | Dabrowski Igor | Mleczko Bartlomiej | 3-2 | 6 | 6 | Pending
 2026-10-24 | Sinicki Maciej | Nosiadek Jakub | 3-2 | 6 | 1 | Pending
 2026-10-24 | Pelka Jerzy | Wojtaszczyk Wojciech | 3-1 | 6 | 6 | Pending
+2026-10-24 | Dlugaj Rafal | Adach Rafal | 3-0 | 6 | 6 | Pending
 2026-10-24 | Szurlej Kacper | Pisarczyk Tomasz | 3-0 | 7 | 7 | Pending
 2026-10-24 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 7 | 4 | +10
 2026-10-24 | Paszkiewicz Michal | Buczynski Witold | 3-0 | 7 | 5 | +13
@@ -16262,6 +16263,11 @@
 2026-10-24 | Mleczko Bartlomiej | Michalczyk Jakub | 3-0 | 7 | 2 | Pending
 2026-10-24 | Przewlocki Jacek | Nosiadek Jakub | 3-1 | 7 | 2 | Pending
 2026-10-24 | Pelka Jerzy | Szostok Sebastian | 3-0 | 7 | 7 | Pending
+2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0 | 8 | 8 | Pending
+2026-10-24 | Petas Kacper | Spanik Tibor | 3-1 | 8 | 8 | Pending
+2026-10-24 | Szurlej Kacper | Mleczko Bartlomiej | 3-0 | 8 | 8 | Pending
+2026-10-24 | Rolak Jaroslaw | Suchecki Waclaw | 3-1 | 8 | 8 | Pending
+2026-10-24 | Dytko Dawid | Szymanski Igor | 3-0 | 8 | 8 | Pending
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
@@ -16278,5 +16284,3 @@
 2026-10-24 | Wiza Roman | Sawicki Grzegorz | 3-0 |  |  | 
 2026-10-24 | Polok Pawel | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-24 | Jedrzejak Patryk | Idaczyk Rafal | 3-1 |  |  | 
-2026-10-24 | Petas Kacper | Spanik Tibor | 3-1 |  |  | 
-2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0 |  |  | 
