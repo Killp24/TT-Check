@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T09:41Z
+# updated 2026-10-24T10:04Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16211,6 +16211,7 @@
 2026-10-24 | Rolak Jaroslaw | Wrobel Dariusz | 3-2 | 4 | 4 | +10
 2026-10-24 | Adach Rafal | Kurek Pawel | 3-0 | 4 | 4 | +21
 2026-10-24 | Wojcik Rafal | Dlugaj Rafal | 3-2 | 4 | 4 | Pending
+2026-10-24 | Jedrzejak Patryk | Idaczyk Dominik | 3-1 | 4 | 2 | Pending
 2026-10-24 | Sawicki Grzegorz | Badura Jaroslaw | 3-2 | 5 | 5 | +12
 2026-10-24 | Wiza Roman | Fira Damian | 3-2 | 5 | 5 | +8
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-0 | 5 | 5 | +10
@@ -16235,6 +16236,11 @@
 2026-10-24 | Spanik Tibor | Adamiak Grzegorz | 3-1 | 6 | 6 | Pending
 2026-10-24 | Szurlej Kacper | Wasilewski Damian | 3-0 | 6 | 6 | Pending
 2026-10-24 | Suchecki Waclaw | Myszewski Adrian | 3-1 | 6 | 6 | Pending
+2026-10-24 | Pisarczyk Tomasz | Michalczyk Jakub | 3-1 | 6 | 1 | Pending
+2026-10-24 | Petas Kacper | Kolodziej Krystian | 3-0 | 6 | 1 | Pending
+2026-10-24 | Michna Dawid | Domin Maciej | 3-0 | 6 | 6 | Pending
+2026-10-24 | Przewlocki Jacek | Rolak Jaroslaw | 3-2 | 6 | 6 | Pending
+2026-10-24 | Szostok Sebastian | Dytko Dawid | 3-2 | 6 | 6 | Pending
 2026-10-24 | Poloszczanski Dawid | Suchecki Waclaw | 3-1 | 7 | 4 | +10
 2026-10-24 | Paszkiewicz Michal | Buczynski Witold | 3-0 | 7 | 5 | +13
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
@@ -16252,4 +16258,3 @@
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-1 |  |  | 
 2026-10-24 | Wiza Roman | Sawicki Grzegorz | 3-0 |  |  | 
 2026-10-24 | Polok Pawel | Idaczyk Rafal | 3-0 |  |  | 
-2026-10-24 | Pisarczyk Tomasz | Michalczyk Jakub | 3-1 |  |  | 
