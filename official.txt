@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-24T05:07Z
+# updated 2026-10-24T05:32Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16146,6 +16146,15 @@
 2026-10-24 | Dabrowski Igor | Szurlej Kacper | 3-2 | 2 | 2 | Pending
 2026-10-24 | Buczynski Witold | Wojtaszczyk Wojciech | 3-0 | 2 | 2 | Pending
 2026-10-24 | Sinicki Maciej | Poloszczanski Dawid | 3-2 | 2 | 5 | Pending
+2026-10-24 | Domin Maciej | Jadczyk Marcin | 3-1 | 2 | 2 | Pending
+2026-10-24 | Szymanski Igor | Paszkiewicz Michal | 3-1 | 2 | 4 | Pending
+2026-10-24 | Mleczko Bartlomiej | Myszewski Adrian | 3-1 | 2 | 2 | Pending
+2026-10-24 | Przewlocki Jacek | Wrobel Dariusz | 3-1 | 2 | 2 | Pending
+2026-10-24 | Pelka Jerzy | Jadach Oskar | 3-0 | 2 | 2 | Pending
+2026-10-24 | Pytlas Wojciech | Adach Rafal | 3-1 | 2 | 2 | Pending
+2026-10-24 | Michna Dawid | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-24 | Dytko Dawid | Szostok Sebastian | 3-2 | 2 | 2 | Pending
+2026-10-24 | Suchecki Waclaw | Rolak Jaroslaw | 3-1 | 2 | 2 | Pending
 2026-10-24 | Jedrzejowski Oskar | Natkaniec Michal | 3-1 | 3 | 5 | +9
 2026-10-24 | Mrugala Bartlomiej | Skorski Michal | 3-0 | 3 | 1 | +19
 2026-10-24 | Klocek Kamil | Poloszczanski Dawid | 3-2 | 3 | 3 | +7
@@ -16156,6 +16165,7 @@
 2026-10-24 | Michalski Jakub | Badura Jaroslaw | 3-0 | 3 | 3 | +21
 2026-10-24 | Wozniczka Marcin | Natkaniec Michal | 3-0 | 3 | 6 | +18
 2026-10-24 | Paszkiewicz Michal | Dytko Dawid | 3-1 | 3 | 1 | Pending
+2026-10-24 | Szymanski Igor | Buczynski Witold | 3-0 | 3 | 3 | Pending
 2026-10-24 | Natkaniec Michal | Skorupa Jakub | 3-2 | 4 | 2 | +11
 2026-10-24 | Guzik Michal | Sawicki Grzegorz | 3-1 | 4 | 4 | +5
 2026-10-24 | Oracz Jacek | Pawlik Cezary | 3-0 | 4 | 5 | +15
@@ -16165,6 +16175,8 @@
 2026-10-24 | Sawicki Grzegorz | Badura Jaroslaw | 3-2 | 5 | 5 | +12
 2026-10-24 | Wiza Roman | Fira Damian | 3-2 | 5 | 5 | +8
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-0 | 5 | 5 | +10
+2026-10-24 | Badura Jaroslaw | Guzik Michal | 3-1 | 6 | 6 | +15
+2026-10-24 | Fira Damian | Michalski Jakub | 3-0 | 6 | 6 | +15
 2026-10-24 | Stapor Rafal | Glanowski Jakub | 3-2 |  |  | 
 2026-10-24 | Malinowski Radoslaw | Wozniak Jakub | 3-1 |  |  | 
 2026-10-24 | Adamus Pawel | Paszkiewicz Michal | 3-1 |  |  | 
@@ -16177,13 +16189,6 @@
 2026-10-24 | Wozniak Jakub | Glanowski Jakub | 3-1 |  |  | 
 2026-10-24 | Baron Mariusz | Paszkiewicz Michal | 3-0 |  |  | 
 2026-10-24 | Jedrzejowski Oskar | Wozniczka Marcin | 3-1 |  |  | 
-2026-10-24 | Domin Maciej | Jadczyk Marcin | 3-1 |  |  | 
-2026-10-24 | Szymanski Igor | Paszkiewicz Michal | 3-1 |  |  | 
-2026-10-24 | Mleczko Bartlomiej | Myszewski Adrian | 3-1 |  |  | 
 2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0 |  |  | 
-2026-10-24 | Przewlocki Jacek | Wrobel Dariusz | 3-1 |  |  | 
-2026-10-24 | Pelka Jerzy | Jadach Oskar | 3-0 |  |  | 
-2026-10-24 | Pytlas Wojciech | Adach Rafal | 3-1 |  |  | 
 2026-10-24 | Guzik Michal | Michalski Jakub | 3-1 |  |  | 
 2026-10-24 | Wiza Roman | Sawicki Grzegorz | 3-0 |  |  | 
-2026-10-24 | Badura Jaroslaw | Guzik Michal | 3-1 |  |  | 
