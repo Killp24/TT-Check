@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T04:14Z
+# updated 2026-10-25T04:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16142,6 +16142,7 @@
 2026-10-24 | Sikon Mateusz | Fira Damian | 3-1 | 1 | 7 | +17
 2026-10-24 | Szymik Robert | Nowak Jakub | 3-1 | 1 | 1 | +9
 2026-10-24 | Kocik Tomasz | Kubiak Artur | 3-1 | 1 | 6 | Pending
+2026-10-24 | Mugowski Arkadiusz | Szurlej Kacper | 3-0 | 1 | 11 | Pending
 2026-10-24 | Kocik Tomasz | Kubiak Artur | 3-1 | 2 | 7 | Pending
 2026-10-24 | Mrugala Bartlomiej | Poloszczanski Dawid | 3-2 | 2 | 1 | +8
 2026-10-24 | Pawlik Cezary | Wozniczka Marcin | 3-0 | 2 | 1 | +6
@@ -16450,6 +16451,11 @@
 2026-10-25 | Kocik Tomasz | Frank Roman | 3-2 | 1 | 1 | +2
 2026-10-25 | Mucha Grzegorz | Zmijewski Artur | 3-2 | 1 | 2 | +10
 2026-10-25 | Durda Michal | Wiza Roman | 3-0 | 1 | 2 | +8
+2026-10-25 | Spanik Tibor | Adamiak Grzegorz | 3-2 | 1 | 1 | Pending
+2026-10-25 | Lamperski Jakub | Trela Mateusz | 3-0 | 1 | 1 | Pending
+2026-10-25 | Szostok Sebastian | Wojtaszczyk Wojciech | 3-1 | 1 | 1 | Pending
+2026-10-25 | Piotrowski Tadeusz | Sinicki Maciej | 3-1 | 1 | 1 | Pending
+2026-10-25 | Kaczynski Piotr | Adach Rafal | 3-2 | 1 | 1 | Pending
 2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
 2026-10-25 | Fomin Andriej | Szurgot Andrzej | 3-0 | 2 | 1 | +16
@@ -16467,6 +16473,7 @@
 2026-10-25 | Szymik Robert | Nowak Jakub | 3-2 | 3 | 2 | +6
 2026-10-25 | Fomin Andriej | Mucha Grzegorz | 3-1 | 3 | 2 | +10
 2026-10-25 | Fira Damian | Szymik Robert | 3-0 | 3 | 4 | +24
+2026-10-25 | Durda Michal | Sikon Mateusz | 3-1 | 3 | 3 | +2
 2026-10-25 | Wiza Roman | Nowak Jakub | 3-2 | 4 | 3 | +7
 2026-10-25 | Zmijewski Artur | Michalik Jerzy | 3-2 |  |  | 
 2026-10-25 | Staszczyk Konrad | Mlynarski Filip | 3-1 |  |  | 
