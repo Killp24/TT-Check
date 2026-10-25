@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-25T13:16Z
+# updated 2026-10-25T15:04Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -39517,12 +39517,13 @@
 2026-10-21 | Lamperski Jakub | Klocek Kamil | 3-2
 2026-10-22 | Klocek Kamil | Lamperski Jakub | 3-1
 2026-10-23 | Lamperski Jakub | Klocek Kamil | 3-1
-# pair | Klocek Kamil | Linek Adam | 2026-10-24T21:02Z
+# pair | Klocek Kamil | Linek Adam | 2026-10-25T15:04Z
 2026-07-29 | Klocek Kamil | Linek Adam | 3-0
 2026-07-30 | Klocek Kamil | Linek Adam | 3-0
 2026-08-14 | Klocek Kamil | Linek Adam | 3-0
 2026-08-25 | Klocek Kamil | Linek Adam | 3-1
-2026-10-24 | Klocek Kamil | Linek Adam | 3-2
+2026-10-24 | Linek Adam | Klocek Kamil | 3-2
+2026-10-25 | Linek Adam | Klocek Kamil | 3-0
 # pair | Klocek Kamil | Lukaszewski Mikolaj | 2026-10-24T06:05Z
 2026-02-15 | Lukaszewski Mikolaj | Klocek Kamil | 3-0
 2026-02-18 | Klocek Kamil | Lukaszewski Mikolaj | 3-2
@@ -39573,7 +39574,7 @@
 2026-10-24 | Lukaszewski Mikolaj | Klocek Kamil | 3-0
 # pair | Klocek Kamil | Marchlewski Marcin | 2026-10-11T06:35Z
 2026-10-10 | Marchlewski Marcin | Klocek Kamil | 3-0
-# pair | Klocek Kamil | Michalczyk Jakub | 2026-10-24T21:02Z
+# pair | Klocek Kamil | Michalczyk Jakub | 2026-10-25T15:04Z
 2026-10-24 | Michalczyk Jakub | Klocek Kamil | 3-1
 # pair | Klocek Kamil | Minda Michal | 2026-10-24T00:02Z
 2026-07-22 | Minda Michal | Klocek Kamil | 3-0
@@ -71311,7 +71312,7 @@
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1
 2026-10-17 | Rolak Jaroslaw | Poloszczanski Dawid | 3-1
 2026-10-24 | Rolak Jaroslaw | Poloszczanski Dawid | 3-0
-# pair | Poloszczanski Dawid | Sinicki Maciej | 2026-10-24T21:02Z
+# pair | Poloszczanski Dawid | Sinicki Maciej | 2026-10-25T15:04Z
 2023-01-14 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 2023-02-03 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 2023-02-04 | Sinicki Maciej | Poloszczanski Dawid | 3-0
@@ -71436,6 +71437,8 @@
 2026-10-18 | Poloszczanski Dawid | Sinicki Maciej | 3-0
 2026-10-18 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 2026-10-24 | Sinicki Maciej | Poloszczanski Dawid | 3-2
+2026-10-25 | Sinicki Maciej | Poloszczanski Dawid | 3-0
+2026-10-25 | Sinicki Maciej | Poloszczanski Dawid | 3-2
 # pair | Poloszczanski Dawid | Skorski Michal | 2026-10-25T00:40Z
 2022-11-14 | Skorski Michal | Poloszczanski Dawid | 3-2
 2023-01-15 | Poloszczanski Dawid | Skorski Michal | 3-0
