@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T19:11Z
+# updated 2026-10-25T19:31Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16478,6 +16478,7 @@
 2026-10-25 | Kwiatkowski Kacper | Szurgot Andrzej | 3-2 | 1 | 3 | Pending
 2026-10-25 | Staszczyk Konrad | Kolodziej Krystian | 3-2 | 1 | 7 | Pending
 2026-10-25 | Oracz Lukasz | Paszkiewicz Michal | 3-0 | 1 | 1 | Pending
+2026-10-25 | Schaniel Krzysztof | Urban Wojciech | 3-1 | 1 | 1 | Pending
 2026-10-25 | Kolodziej Krystian | Adamiak Grzegorz | 3-1 | 2 | 7 | +5
 2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
@@ -16552,6 +16553,7 @@
 2026-10-25 | Rudomina Kamil | Kotwica Dawid | 3-1 | 3 | 3 | +6
 2026-10-25 | Szymanski Igor | Krupa Sebastian | 3-1 | 3 | 3 | Pending
 2026-10-25 | Oracz Jacek | Kumor Michal | 3-1 | 3 | 3 | Pending
+2026-10-25 | Sawicki Grzegorz | Sikon Mateusz | 3-2 | 3 | 7 | Pending
 2026-10-25 | Wiza Roman | Nowak Jakub | 3-2 | 4 | 3 | +7
 2026-10-25 | Fira Damian | Wiza Roman | 3-1 | 4 | 5 | +15
 2026-10-25 | Durda Michal | Szymik Robert | 3-0 | 4 | 5 | +9
@@ -16600,6 +16602,8 @@
 2026-10-25 | Michalczyk Jakub | Misiak Mateusz | 3-1 | 5 | 10 | +9
 2026-10-25 | Sikon Mateusz | Nowak Jakub | 3-2 | 5 | 5 | +11
 2026-10-25 | Kubiak Artur | Mucha Grzegorz | 3-2 | 5 | 4 | Pending
+2026-10-25 | Klocek Kamil | Michalczyk Jakub | 3-1 | 5 | 8 | Pending
+2026-10-25 | Mucha Grzegorz | Kwiatkowski Kacper | 3-2 | 5 | 3 | Pending
 2026-10-25 | Adamus Pawel | Wojtaszczyk Wojciech | 3-1 | 6 | 6 | Pending
 2026-10-25 | Staniszewski Piotr | Szoltysek Artur | 3-2 | 6 | 6 | +8
 2026-10-25 | Szostok Sebastian | Tkaczyk Henryk | 3-1 | 6 | 6 | Pending
@@ -16669,6 +16673,7 @@
 2026-10-25 | Wojcik Rafal | Jedrzejak Patryk | 3-0 | 10 | 10 | +25
 2026-10-25 | Slawinski Kacper | Lojtek Tomasz | 3-2 | 10 | 10 | +3
 2026-10-25 | Sojka Stanislaw | Jadach Oskar | 3-2 | 10 | 10 | +6
+2026-10-25 | Jadam Dawid | Mlynarski Filip | 3-1 |  |  | 
 2026-10-25 | Zmijewski Artur | Michalik Jerzy | 3-2 |  |  | 
 2026-10-25 | Staszczyk Konrad | Mlynarski Filip | 3-1 |  |  | 
 2026-10-25 | Staszczyk Konrad | Chmielowski Jakub | 3-1 |  |  | 
@@ -16698,4 +16703,3 @@
 2026-10-25 | Adach Rafal | Juszczyk Krzysztof | 3-2 |  |  | 
 2026-10-25 | Petas Kacper | Michna Dawid | 3-0 |  |  | 
 2026-10-25 | Kubiak Artur | Oracz Jacek | 3-0 |  |  | 
-2026-10-25 | Jadam Dawid | Mlynarski Filip | 3-1 |  |  | 
