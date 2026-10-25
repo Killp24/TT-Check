@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T15:05Z
+# updated 2026-10-25T15:30Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -14585,7 +14585,7 @@
 2026-10-19 | Michalik Jerzy | Janus Slawomir | 3-0 | 3 | 4 | +14
 2026-10-19 | Kuzmicz Jakub | Jadczyk Marcin | 3-1 | 3 | 3 | +11
 2026-10-19 | Kapik Krzysztof | Solilo Dominik | 3-1 | 3 | 3 | +9
-2026-10-19 | Kukawka Milosz | Warpas Blazej | 3-0 | 3 | 3 | +6
+2026-10-19 | Kukawka Milosz | Warpas Blazej | 3-0 | 3 | 3 | +4
 2026-10-19 | Hetnar Krzysztof | Buczynski Witold | 3-1 | 3 | 3 | +5
 2026-10-19 | Maszczynski Dariusz | Kordaszewski Tomasz | 3-0 | 3 | 3 | +11
 2026-10-19 | Fomin Yurij | Polok Pawel | 3-1 | 3 | 3 | +10
@@ -16571,6 +16571,7 @@
 2026-10-25 | Slawinski Kacper | Lojtek Tomasz | 3-0 | 5 | 5 | +8
 2026-10-25 | Sojka Stanislaw | Wojcik Rafal | 3-2 | 5 | 5 | +6
 2026-10-25 | Jedrzejak Patryk | Jadach Oskar | 3-1 | 5 | 5 | +8
+2026-10-25 | Kukawka Milosz | Mugowski Arkadiusz | 3-0 | 5 | 9 | Pending
 2026-10-25 | Adamus Pawel | Wojtaszczyk Wojciech | 3-1 | 6 | 6 | Pending
 2026-10-25 | Staniszewski Piotr | Szoltysek Artur | 3-2 | 6 | 6 | Pending
 2026-10-25 | Szostok Sebastian | Tkaczyk Henryk | 3-1 | 6 | 6 | Pending
@@ -16598,6 +16599,7 @@
 2026-10-25 | Sojka Stanislaw | Wojcik Rafal | 3-1 | 7 | 7 | Pending
 2026-10-25 | Jadach Oskar | Lojtek Tomasz | 3-1 | 7 | 7 | Pending
 2026-10-25 | Skorski Michal | Poloszczanski Dawid | 3-1 | 8 | 8 | Pending
+2026-10-25 | Slawinski Kacper | Wojcik Rafal | 3-0 | 8 | 8 | Pending
 2026-10-25 | Adamiak Grzegorz | Michna Dawid | 3-2 | 8 | 6 | Pending
 2026-10-25 | Spanik Tibor | Michna Dawid | 3-2 | 8 | 7 | Pending
 2026-10-25 | Piotrowski Tadeusz | Staniszewski Piotr | 3-1 | 8 | 8 | Pending
@@ -16616,6 +16618,11 @@
 2026-10-25 | Poloszczanski Dawid | Szoltysek Artur | 3-2 | 9 | 9 | Pending
 2026-10-25 | Szostok Sebastian | Polok Pawel | 3-2 | 9 | 9 | Pending
 2026-10-25 | Staniszewski Piotr | Skorski Michal | 3-1 | 9 | 9 | Pending
+2026-10-25 | Petas Kacper | Spanik Tibor | 3-1 | 9 | 10 | Pending
+2026-10-25 | Domin Maciej | Adamiak Grzegorz | 3-2 | 10 | 11 | Pending
+2026-10-25 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-0 | 10 | 10 | Pending
+2026-10-25 | Trela Mateusz | Szurlej Kacper | 3-1 | 10 | 9 | Pending
+2026-10-25 | Piotrowski Tadeusz | Poloszczanski Dawid | 3-0 | 10 | 10 | Pending
 2026-10-25 | Zmijewski Artur | Michalik Jerzy | 3-2 |  |  | 
 2026-10-25 | Staszczyk Konrad | Mlynarski Filip | 3-1 |  |  | 
 2026-10-25 | Staszczyk Konrad | Chmielowski Jakub | 3-1 |  |  | 
@@ -16645,4 +16652,3 @@
 2026-10-25 | Mugowski Arkadiusz | Szurlej Kacper | 3-0 |  |  | 
 2026-10-25 | Adach Rafal | Juszczyk Krzysztof | 3-2 |  |  | 
 2026-10-25 | Petas Kacper | Michna Dawid | 3-0 |  |  | 
-2026-10-25 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-0 |  |  | 
