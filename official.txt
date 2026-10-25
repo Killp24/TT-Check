@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T06:06Z
+# updated 2026-10-25T06:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16464,6 +16464,8 @@
 2026-10-25 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | Pending
 2026-10-25 | Szurlej Kacper | Lamperski Jakub | 3-0 | 1 | 2 | Pending
 2026-10-25 | Juszczyk Krzysztof | Mecik Patryk | 3-0 | 1 | 1 | Pending
+2026-10-25 | Skorski Michal | Poloszczanski Dawid | 3-1 | 1 | 1 | Pending
+2026-10-25 | Szoltysek Artur | Staniszewski Piotr | 3-1 | 1 | 1 | Pending
 2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
 2026-10-25 | Fomin Andriej | Szurgot Andrzej | 3-0 | 2 | 1 | +16
@@ -16476,6 +16478,18 @@
 2026-10-25 | Michalik Jerzy | Szurgot Andrzej | 3-1 | 2 | 2 | +16
 2026-10-25 | Malcher Krzysztof | Skorupa Jakub | 3-0 | 2 | 3 | +20
 2026-10-25 | Wojtaszczyk Wojciech | Jesiek Jakub | 3-2 | 2 | 2 | Pending
+2026-10-25 | Petas Kacper | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-25 | Tkaczyk Henryk | Szostok Sebastian | 3-2 | 2 | 2 | Pending
+2026-10-25 | Misiak Mateusz | Mugowski Arkadiusz | 3-1 | 2 | 1 | Pending
+2026-10-25 | Skorski Michal | Sinicki Maciej | 3-0 | 2 | 2 | Pending
+2026-10-25 | Piotrowski Tadeusz | Szoltysek Artur | 3-1 | 2 | 2 | Pending
+2026-10-25 | Kaczynski Piotr | Koczyba Mariusz | 3-0 | 2 | 2 | Pending
+2026-10-25 | Jadczyk Marcin | Spanik Tibor | 3-0 | 2 | 2 | Pending
+2026-10-25 | Trela Mateusz | Stapor Rafal | 3-2 | 2 | 2 | Pending
+2026-10-25 | Adamus Pawel | Polok Pawel | 3-0 | 2 | 2 | Pending
+2026-10-25 | Poloszczanski Dawid | Staniszewski Piotr | 3-2 | 2 | 2 | Pending
+2026-10-25 | Pytlas Wojciech | Juszczyk Krzysztof | 3-0 | 2 | 2 | Pending
+2026-10-25 | Mecik Patryk | Adach Rafal | 3-2 | 2 | 2 | Pending
 2026-10-25 | Linek Adam | Klocek Kamil | 3-0 | 3 | 1 | +8
 2026-10-25 | Kwodawski Bartosz | Eliasz Adrian | 3-2 | 3 | 2 | +7
 2026-10-25 | Eliasz Adrian | Cioch Blazej | 3-2 | 3 | 3 | +9
@@ -16483,6 +16497,9 @@
 2026-10-25 | Fomin Andriej | Mucha Grzegorz | 3-1 | 3 | 2 | +10
 2026-10-25 | Fira Damian | Szymik Robert | 3-0 | 3 | 4 | +24
 2026-10-25 | Durda Michal | Sikon Mateusz | 3-1 | 3 | 3 | +2
+2026-10-25 | Lamperski Jakub | Mugowski Arkadiusz | 3-0 | 3 | 2 | Pending
+2026-10-25 | Piotrowski Tadeusz | Skorski Michal | 3-2 | 3 | 3 | Pending
+2026-10-25 | Jesiek Jakub | Szostok Sebastian | 3-1 | 3 | 3 | Pending
 2026-10-25 | Wiza Roman | Nowak Jakub | 3-2 | 4 | 3 | +7
 2026-10-25 | Fira Damian | Wiza Roman | 3-1 | 4 | 5 | +15
 2026-10-25 | Durda Michal | Szymik Robert | 3-0 | 4 | 5 | +9
@@ -16514,11 +16531,3 @@
 2026-10-25 | Sikon Mateusz | Fira Damian | 3-2 |  |  | 
 2026-10-25 | Malcher Krzysztof | Kubiak Artur | 3-1 |  |  | 
 2026-10-25 | Mugowski Arkadiusz | Szurlej Kacper | 3-0 |  |  | 
-2026-10-25 | Skorski Michal | Poloszczanski Dawid | 3-1 |  |  | 
-2026-10-25 | Szoltysek Artur | Staniszewski Piotr | 3-1 |  |  | 
-2026-10-25 | Petas Kacper | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
-2026-10-25 | Tkaczyk Henryk | Szostok Sebastian | 3-2 | 2 | 2 | Pending
-2026-10-25 | Misiak Mateusz | Mugowski Arkadiusz | 3-1 | 2 | 1 | Pending
-2026-10-25 | Skorski Michal | Sinicki Maciej | 3-0 |  |  | 
-2026-10-25 | Piotrowski Tadeusz | Szoltysek Artur | 3-1 |  |  | 
-2026-10-25 | Kaczynski Piotr | Koczyba Mariusz | 3-0 | 2 | 2 | Pending
