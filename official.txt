@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T02:09Z
+# updated 2026-10-25T02:34Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16449,12 +16449,15 @@
 2026-10-25 | Fira Damian | Nowak Jakub | 3-2 | 1 | 1 | +10
 2026-10-25 | Kocik Tomasz | Frank Roman | 3-2 | 1 | 1 | Pending
 2026-10-25 | Mucha Grzegorz | Zmijewski Artur | 3-2 | 1 | 2 | +10
-2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 |  | 1 | 
+2026-10-25 | Durda Michal | Wiza Roman | 3-0 | 1 | 2 | +8
+2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
-2026-10-25 | Durda Michal | Wiza Roman | 3-0 |  | 2 | 
 2026-10-25 | Fomin Andriej | Szurgot Andrzej | 3-0 | 2 | 1 | +16
 2026-10-25 | Kubiak Artur | Malcher Krzysztof | 3-1 | 2 | 1 | Pending
 2026-10-25 | Skorupa Jakub | Karpiuk Mateusz | 3-1 | 2 | 1 | Pending
+2026-10-25 | Krutak Michal | Zmijewski Artur | 3-2 | 2 | 3 | Pending
+2026-10-25 | Durda Michal | Fira Damian | 3-0 |  | 2 | 
+2026-10-25 | Frank Roman | Kubiak Artur | 3-0 | 2 | 3 | Pending
 2026-10-25 | Linek Adam | Klocek Kamil | 3-0 | 3 | 1 | +8
 2026-10-25 | Kwodawski Bartosz | Eliasz Adrian | 3-2 | 3 | 2 | +7
 2026-10-25 | Eliasz Adrian | Cioch Blazej | 3-2 | 3 | 3 | +9
