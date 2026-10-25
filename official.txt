@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T16:07Z
+# updated 2026-10-25T16:31Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16470,6 +16470,9 @@
 2026-10-25 | Jadach Oskar | Wojcik Rafal | 3-1 | 1 | 1 | +10
 2026-10-25 | Sojka Stanislaw | Lojtek Tomasz | 3-0 | 1 | 1 | +13
 2026-10-25 | Kolodziej Krystian | Adamiak Grzegorz | 3-1 | 1 | 6 | +5
+2026-10-25 | Pietraszko Lukasz | Mlynarski Filip | 3-2 | 1 | 2 | Pending
+2026-10-25 | Zochniak Jakub | Rudomina Kamil | 3-1 | 1 | 1 | Pending
+2026-10-25 | Sawicki Grzegorz | Szymanski Igor | 3-0 | 1 | 1 | Pending
 2026-10-25 | Kolodziej Krystian | Adamiak Grzegorz | 3-1 | 2 | 7 | +5
 2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
@@ -16552,6 +16555,7 @@
 2026-10-25 | Kolodziej Krystian | Domin Maciej | 3-0 | 4 | 8 | +13
 2026-10-25 | Kukawka Milosz | Szurlej Kacper | 3-2 | 4 | 8 | +12
 2026-10-25 | Michalczyk Jakub | Trela Mateusz | 3-0 | 4 | 9 | +14
+2026-10-25 | Kubiak Artur | Oracz Jacek | 3-2 | 4 | 1 | Pending
 2026-10-25 | Szurlej Kacper | Misiak Mateusz | 3-0 | 5 | 6 | +5
 2026-10-25 | Lamperski Jakub | Misiak Mateusz | 3-1 | 5 | 5 | +9
 2026-10-25 | Szoltysek Artur | Skorski Michal | 3-1 | 5 | 5 | +15
