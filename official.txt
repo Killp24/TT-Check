@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-25T06:45Z
+# updated 2026-10-25T07:21Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -11930,7 +11930,7 @@
 2026-10-11 | Kostyk Kamil | Mugowski Arkadiusz | 3-1 | 3 | 3 | +10
 2026-10-11 | Jadach Oskar | Sawicki Grzegorz | 3-0 | 3 | 3 | +6
 2026-10-11 | Petas Kacper | Kolasa Szymon | 3-1 | 3 | 3 | +10
-2026-10-11 | Spanik Tibor | Adamiak Grzegorz | 3-0 | 3 | 3 | +9
+2026-10-11 | Spanik Tibor | Adamiak Grzegorz | 3-0 | 3 | 3 | +7
 2026-10-11 | Cichocki Aleksander | Lach Marcin | 3-0 | 3 | 3 | +19
 2026-10-11 | Wisniewski Bartlomiej | Staniszewski Piotr | 3-1 | 3 | 3 | +15
 2026-10-11 | Sinicki Maciej | Iwasyszyn Wojciech | 3-0 | 3 | 3 | +17
@@ -12589,7 +12589,7 @@
 2026-10-13 | Gumulinski Piotr | Kurek Pawel | 3-1 | 3 | 3 | +12
 2026-10-13 | Miastowski Maksymilian | Poliniewicz Grzegorz | 3-0 | 3 | 3 | +9
 2026-10-13 | Kowalczyk Marcin | Kukawka Milosz | 3-0 | 3 | 3 | +25
-2026-10-13 | Petas Kacper | Prokopcov Dimitrij | 3-0 | 3 | 3 | +7
+2026-10-13 | Petas Kacper | Prokopcov Dimitrij | 3-0 | 3 | 3 | +9
 2026-10-13 | Kostal Daniel | Mitas Jacek | 3-1 | 3 | 3 | +14
 2026-10-13 | Wiecek Adrian | Vrablik Jiri | 3-1 | 3 | 3 | +9
 2026-10-13 | Zandecki Jan | David Petr | 3-1 | 3 | 3 | +13
@@ -14837,7 +14837,7 @@
 2026-10-20 | Czerwinski Bartosz | Kolek Maciej | 3-1 | 1 | 1 | +12
 2026-10-20 | Lamperski Jakub | Solilo Dominik | 3-0 | 1 | 1 | +19
 2026-10-20 | Hetnar Krzysztof | Adamus Pawel | 3-2 | 1 | 1 | +5
-2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 1 | 1 | +14
+2026-10-20 | Jadach Oskar | Gajda Rafal | 3-0 | 1 | 1 | +10
 2026-10-20 | Sokolowski Oliwier | Adamus Mariusz | 3-1 | 1 | 1 | +16
 2026-10-20 | Warpas Blazej | Golaszewski Kuba | 3-1 | 1 | 1 | +9
 2026-10-20 | Glanowski Waldemar | Ptak Wiktor | 3-0 | 1 | 1 | +23
@@ -16466,6 +16466,8 @@
 2026-10-25 | Juszczyk Krzysztof | Mecik Patryk | 3-0 | 1 | 1 | Pending
 2026-10-25 | Skorski Michal | Poloszczanski Dawid | 3-1 | 1 | 1 | Pending
 2026-10-25 | Szoltysek Artur | Staniszewski Piotr | 3-1 | 1 | 1 | Pending
+2026-10-25 | Jedrzejak Patryk | Slawinski Kacper | 3-1 | 1 | 1 | Pending
+2026-10-25 | Jadach Oskar | Wojcik Rafal | 3-1 | 1 | 1 | Pending
 2026-10-25 | Szymik Robert | Sikon Mateusz | 3-0 | 2 | 1 | +7
 2026-10-25 | Kwodawski Bartosz | Klocek Kamil | 3-0 | 2 | 2 | +11
 2026-10-25 | Fomin Andriej | Szurgot Andrzej | 3-0 | 2 | 1 | +16
@@ -16490,6 +16492,8 @@
 2026-10-25 | Poloszczanski Dawid | Staniszewski Piotr | 3-2 | 2 | 2 | Pending
 2026-10-25 | Pytlas Wojciech | Juszczyk Krzysztof | 3-0 | 2 | 2 | Pending
 2026-10-25 | Mecik Patryk | Adach Rafal | 3-2 | 2 | 2 | Pending
+2026-10-25 | Domin Maciej | Michna Dawid | 3-2 | 2 | 2 | Pending
+2026-10-25 | Szurlej Kacper | Stapor Rafal | 3-1 | 2 | 3 | Pending
 2026-10-25 | Linek Adam | Klocek Kamil | 3-0 | 3 | 1 | +8
 2026-10-25 | Kwodawski Bartosz | Eliasz Adrian | 3-2 | 3 | 2 | +7
 2026-10-25 | Eliasz Adrian | Cioch Blazej | 3-2 | 3 | 3 | +9
@@ -16500,6 +16504,11 @@
 2026-10-25 | Lamperski Jakub | Mugowski Arkadiusz | 3-0 | 3 | 2 | Pending
 2026-10-25 | Piotrowski Tadeusz | Skorski Michal | 3-2 | 3 | 3 | Pending
 2026-10-25 | Jesiek Jakub | Szostok Sebastian | 3-1 | 3 | 3 | Pending
+2026-10-25 | Petas Kacper | Spanik Tibor | 3-0 | 3 | 3 | Pending
+2026-10-25 | Adach Rafal | Koczyba Mariusz | 3-0 | 3 | 3 | Pending
+2026-10-25 | Adamus Pawel | Wojtaszczyk Wojciech | 3-1 | 3 | 3 | Pending
+2026-10-25 | Sinicki Maciej | Staniszewski Piotr | 3-2 | 3 | 3 | Pending
+2026-10-25 | Juszczyk Krzysztof | Kaczynski Piotr | 3-0 | 3 | 3 | Pending
 2026-10-25 | Wiza Roman | Nowak Jakub | 3-2 | 4 | 3 | +7
 2026-10-25 | Fira Damian | Wiza Roman | 3-1 | 4 | 5 | +15
 2026-10-25 | Durda Michal | Szymik Robert | 3-0 | 4 | 5 | +9
@@ -16531,6 +16540,3 @@
 2026-10-25 | Sikon Mateusz | Fira Damian | 3-2 |  |  | 
 2026-10-25 | Malcher Krzysztof | Kubiak Artur | 3-1 |  |  | 
 2026-10-25 | Mugowski Arkadiusz | Szurlej Kacper | 3-0 |  |  | 
-2026-10-25 | Domin Maciej | Michna Dawid | 3-2 |  |  | 
-2026-10-25 | Petas Kacper | Spanik Tibor | 3-0 |  |  | 
-2026-10-25 | Adach Rafal | Koczyba Mariusz | 3-0 |  |  | 
