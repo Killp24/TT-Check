@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-26T16:53Z
+# updated 2026-10-26T17:40Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16801,6 +16801,12 @@
 2026-10-26 | Zelezik Jacek | Oracz Jacek | 3-0 | 1 | 4 | Pending
 2026-10-26 | Pyrek Dawid | Warzecha Miroslaw | 3-0 | 1 | 1 | +26
 2026-10-26 | Lewczuk Miroslaw | Bladziak Krzysztof | 3-0 | 1 | 1 | Pending
+2026-10-26 | Zochniak Jakub | Minda Michal | 3-1 | 1 | 6 | Pending
+2026-10-26 | Kowalczyk Marcin | Lukaszewski Mikolaj | 3-2 | 1 | 1 | Pending
+2026-10-26 | Cyndera Jakub | Staniczek Adam | 3-0 | 1 | 1 | +11
+2026-10-26 | Zwolinski Mariusz | Strus Piotr | 3-1 | 1 | 1 | Pending
+2026-10-26 | Gesiarz Piotr | Maszczynski Dariusz | 3-2 | 1 | 7 | Pending
+2026-10-26 | Nocun Zbigniew | Mucha Grzegorz | 3-0 | 1 | 4 | Pending
 2026-10-26 | Stapor Rafal | Kotwica Dawid | 3-1 | 2 | 1 | +5
 2026-10-26 | Staszczyk Konrad | Pietraszko Lukasz | 3-1 | 2 | 2 | +6
 2026-10-26 | Linek Adam | Kotwica Dawid | 3-1 | 2 | 2 | +6
@@ -16832,6 +16838,8 @@
 2026-10-26 | Fomin Yurij | Pruszkowski Jakub | 3-0 | 2 | 2 | +18
 2026-10-26 | Cesarz Milosz | Kurek Pawel | 3-2 | 2 | 7 | +11
 2026-10-26 | Minda Michal | Myszewski Adrian | 3-2 | 2 | 7 | +6
+2026-10-26 | Zochniak Jakub | Brud Szymon | 3-1 | 2 | 2 | Pending
+2026-10-26 | Lukaszewski Mikolaj | Trela Mateusz | 3-1 | 2 | 2 | Pending
 2026-10-26 | Linek Adam | Stapor Rafal | 3-0 | 3 | 3 | +17
 2026-10-26 | Kumor Michal | Szurgot Andrzej | 3-0 | 3 | 2 | +17
 2026-10-26 | Guzik Michal | Szymanski Igor | 3-0 | 3 | 2 | +11
@@ -16863,6 +16871,7 @@
 2026-10-26 | Kolodziej Krystian | Petas Kacper | 3-0 | 3 | 9 | +22
 2026-10-26 | Cesarz Milosz | Slawinski Kacper | 3-1 | 3 | 8 | +20
 2026-10-26 | Solilo Dominik | Iwasyszyn Wojciech | 3-1 | 3 | 8 | +6
+2026-10-26 | Staszczyk Konrad | Lamperski Jakub | 3-1 | 3 | 1 | Pending
 2026-10-26 | Guzik Michal | Nowak Jakub | 3-0 | 4 | 3 | +8
 2026-10-26 | Kwiatkowski Kacper | Mucha Grzegorz | 3-1 | 4 | 3 | +16
 2026-10-26 | Oracz Lukasz | Marud Grzegorz | 3-2 | 4 | 4 | +9
@@ -16913,6 +16922,7 @@
 2026-10-26 | Jadach Oskar | Fomin Yurij | 3-1 | 5 | 5 | +11
 2026-10-26 | Pruszkowski Jakub | Wichowski Grzegorz | 3-2 | 5 | 5 | +12
 2026-10-26 | Minda Michal | Solilo Dominik | 3-1 | 5 | 5 | +15
+2026-10-26 | Oracz Jacek | Lewczuk Miroslaw | 3-2 | 5 | 2 | Pending
 2026-10-26 | Czerwinski Bartosz | Mitas Jacek | 3-1 | 6 | 6 | +15
 2026-10-26 | Skotniczny Rafal | Jadach Oskar | 3-1 | 6 | 6 | Pending
 2026-10-26 | Stapor Rafal | Mleczko Bartlomiej | 3-2 | 6 | 3 | +7
@@ -16932,7 +16942,6 @@
 2026-10-26 | Lamer Maciej | Wolny Michal | 3-2 | 6 | 6 | +13
 2026-10-26 | Pruszkowski Jakub | Mecik Patryk | 3-0 | 6 | 6 | Pending
 2026-10-26 | Wichowski Grzegorz | Fomin Yurij | 3-2 | 6 | 6 | Pending
-2026-10-26 | Zochniak Jakub | Minda Michal | 3-1 |  | 6 | 
 2026-10-26 | Wichowski Grzegorz | Jadach Oskar | 3-0 | 7 | 7 | Pending
 2026-10-26 | Stapor Rafal | Iwasyszyn Wojciech | 3-1 | 7 | 4 | +5
 2026-10-26 | Poliniewicz Grzegorz | Kolek Maciej | 3-2 | 7 | 7 | +6
@@ -16970,6 +16979,8 @@
 2026-10-26 | Kolek Maciej | Mitas Jacek | 3-2 | 9 | 9 | +9
 2026-10-26 | Sobel Artur | Mleczko Bartlomiej | 3-1 | 9 | 9 | +11
 2026-10-26 | Kosowski Jakub | Spanik Tibor | 3-2 | 9 | 10 | +6
+2026-10-26 | Skotniczny Rafal | Wichowski Grzegorz | 3-2 | 9 | 9 | Pending
+2026-10-26 | Pruszkowski Jakub | Jadach Oskar | 3-2 | 9 | 9 | Pending
 2026-10-26 | Braun Josef | Petas Kacper | 3-1 | 10 | 10 | +14
 2026-10-26 | Mitas Jacek | Poliniewicz Grzegorz | 3-2 | 10 | 10 | +10
 2026-10-26 | Kosmal Dawid | Czerwinski Bartosz | 3-2 | 10 | 10 | +6
@@ -16979,6 +16990,7 @@
 2026-10-26 | Kurek Pawel | Slawinski Kacper | 3-0 | 10 | 10 | +21
 2026-10-26 | Polok Pawel | Buczynski Witold | 3-0 | 10 | 10 | +8
 2026-10-26 | Baron Mariusz | Cesarz Milosz | 3-0 | 10 | 5 | +15
+2026-10-26 | Wichowski Grzegorz | Mecik Patryk | 3-1 | 10 | 10 | Pending
 2026-10-26 | Urban Wojciech | Oracz Lukasz | 3-0 |  |  | 
 2026-10-26 | Sawicki Grzegorz | Sikon Mateusz | 3-2 |  |  | 
 2026-10-26 | Mlynarski Filip | Chmielowski Jakub | 3-2 |  |  | 
@@ -16992,5 +17004,3 @@
 2026-10-26 | Szymanski Igor | Sawicki Grzegorz | 3-2 |  |  | 
 2026-10-26 | Jadam Dawid | Pietraszko Lukasz | 3-0 |  |  | 
 2026-10-26 | Kosowski Jakub | Kolodziej Krystian | 3-1 |  |  | 
-2026-10-26 | Kowalczyk Marcin | Lukaszewski Mikolaj | 3-2 |  |  | 
-2026-10-26 | Cyndera Jakub | Staniczek Adam | 3-0 |  |  | 
