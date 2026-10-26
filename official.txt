@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-26T16:08Z
+# updated 2026-10-26T16:49Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16796,6 +16796,11 @@
 2026-10-26 | Wichowski Grzegorz | Jadach Oskar | 3-0 | 1 | 1 | +10
 2026-10-26 | Mecik Patryk | Pruszkowski Jakub | 3-1 | 1 | 1 | +17
 2026-10-26 | Skotniczny Rafal | Fomin Yurij | 3-0 | 1 | 1 | +13
+2026-10-26 | Brud Szymon | Linek Adam | 3-1 | 1 | 4 | Pending
+2026-10-26 | Szoltysek Artur | Trela Mateusz | 3-2 | 1 | 1 | Pending
+2026-10-26 | Zelezik Jacek | Oracz Jacek | 3-0 | 1 | 4 | Pending
+2026-10-26 | Pyrek Dawid | Warzecha Miroslaw | 3-0 | 1 | 1 | +26
+2026-10-26 | Lewczuk Miroslaw | Bladziak Krzysztof | 3-0 | 1 | 1 | Pending
 2026-10-26 | Stapor Rafal | Kotwica Dawid | 3-1 | 2 | 1 | +5
 2026-10-26 | Staszczyk Konrad | Pietraszko Lukasz | 3-1 | 2 | 2 | +6
 2026-10-26 | Linek Adam | Kotwica Dawid | 3-1 | 2 | 2 | +6
@@ -16855,7 +16860,7 @@
 2026-10-26 | Wichowski Grzegorz | Fomin Yurij | 3-0 | 3 | 3 | +8
 2026-10-26 | Mecik Patryk | Jadach Oskar | 3-2 | 3 | 3 | +11
 2026-10-26 | Skotniczny Rafal | Pruszkowski Jakub | 3-2 | 3 | 3 | +6
-2026-10-26 | Kolodziej Krystian | Petas Kacper | 3-0 | 3 | 9 | Pending
+2026-10-26 | Kolodziej Krystian | Petas Kacper | 3-0 | 3 | 9 | +22
 2026-10-26 | Cesarz Milosz | Slawinski Kacper | 3-1 | 3 | 8 | +20
 2026-10-26 | Solilo Dominik | Iwasyszyn Wojciech | 3-1 | 3 | 8 | +6
 2026-10-26 | Guzik Michal | Nowak Jakub | 3-0 | 4 | 3 | +8
@@ -16884,7 +16889,7 @@
 2026-10-26 | Cesarz Milosz | Buczynski Witold | 3-1 | 4 | 9 | +11
 2026-10-26 | Minda Michal | Iwasyszyn Wojciech | 3-2 | 4 | 9 | +5
 2026-10-26 | Solilo Dominik | Myszewski Adrian | 3-0 | 4 | 9 | +9
-2026-10-26 | Kolodziej Krystian | Wloczko Krzysztof | 3-2 | 4 | 10 | Pending
+2026-10-26 | Kolodziej Krystian | Wloczko Krzysztof | 3-2 | 4 | 10 | +6
 2026-10-26 | Schaniel Krzysztof | Oracz Lukasz | 3-0 | 5 | 5 | +13
 2026-10-26 | Stapor Rafal | Kukawka Milosz | 3-0 | 5 | 2 | +15
 2026-10-26 | Vincenec Oliver | Paszkiewicz Michal | 3-0 | 5 | 5 | +11
@@ -16911,14 +16916,14 @@
 2026-10-26 | Czerwinski Bartosz | Mitas Jacek | 3-1 | 6 | 6 | +15
 2026-10-26 | Skotniczny Rafal | Jadach Oskar | 3-1 | 6 | 6 | Pending
 2026-10-26 | Stapor Rafal | Mleczko Bartlomiej | 3-2 | 6 | 3 | +7
-2026-10-26 | Kosowski Jakub | Wloczko Krzysztof | 3-2 | 6 | 6 | Pending
+2026-10-26 | Kosowski Jakub | Wloczko Krzysztof | 3-2 | 6 | 6 | +5
 2026-10-26 | Kosmal Dawid | Kolek Maciej | 3-2 | 6 | 6 | +9
 2026-10-26 | Sobel Artur | Solilo Dominik | 3-2 | 6 | 1 | +8
 2026-10-26 | Iwasyszyn Wojciech | Myszewski Adrian | 3-1 | 6 | 6 | +14
 2026-10-26 | Stechly Witold | Maszczynski Dariusz | 3-2 | 6 | 6 | +8
 2026-10-26 | Janus Slawomir | Michalik Jerzy | 3-0 | 6 | 6 | +15
-2026-10-26 | Spanik Tibor | Petas Kacper | 3-2 | 6 | 6 | Pending
-2026-10-26 | Braun Josef | Kolodziej Krystian | 3-2 | 6 | 1 | Pending
+2026-10-26 | Spanik Tibor | Petas Kacper | 3-2 | 6 | 6 | +11
+2026-10-26 | Braun Josef | Kolodziej Krystian | 3-2 | 6 | 1 | +7
 2026-10-26 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-1 | 6 | 6 | +17
 2026-10-26 | Mleczko Bartlomiej | Minda Michal | 3-0 | 6 | 1 | +14
 2026-10-26 | Buczynski Witold | Slawinski Kacper | 3-1 | 6 | 6 | +21
@@ -16927,14 +16932,15 @@
 2026-10-26 | Lamer Maciej | Wolny Michal | 3-2 | 6 | 6 | +13
 2026-10-26 | Pruszkowski Jakub | Mecik Patryk | 3-0 | 6 | 6 | Pending
 2026-10-26 | Wichowski Grzegorz | Fomin Yurij | 3-2 | 6 | 6 | Pending
+2026-10-26 | Zochniak Jakub | Minda Michal | 3-1 |  | 6 | 
 2026-10-26 | Wichowski Grzegorz | Jadach Oskar | 3-0 | 7 | 7 | Pending
 2026-10-26 | Stapor Rafal | Iwasyszyn Wojciech | 3-1 | 7 | 4 | +5
 2026-10-26 | Poliniewicz Grzegorz | Kolek Maciej | 3-2 | 7 | 7 | +6
 2026-10-26 | Sobel Artur | Iwasyszyn Wojciech | 3-2 | 7 | 7 | +4
-2026-10-26 | Kosowski Jakub | Petas Kacper | 3-2 | 7 | 7 | Pending
+2026-10-26 | Kosowski Jakub | Petas Kacper | 3-2 | 7 | 7 | +8
 2026-10-26 | Slawinski Kacper | Polok Pawel | 3-1 | 7 | 7 | +9
-2026-10-26 | Braun Josef | Wloczko Krzysztof | 3-1 | 7 | 7 | Pending
-2026-10-26 | Spanik Tibor | Kolodziej Krystian | 3-0 | 7 | 2 | Pending
+2026-10-26 | Braun Josef | Wloczko Krzysztof | 3-1 | 7 | 7 | +8
+2026-10-26 | Spanik Tibor | Kolodziej Krystian | 3-0 | 7 | 2 | +15
 2026-10-26 | Baron Mariusz | Buczynski Witold | 3-0 | 7 | 7 | +14
 2026-10-26 | Mitas Jacek | Kosmal Dawid | 3-1 | 7 | 7 | +11
 2026-10-26 | Rutkowski Mateusz | Czerwinski Bartosz | 3-0 | 7 | 7 | +15
@@ -16944,9 +16950,9 @@
 2026-10-26 | Polok Pawel | Baron Mariusz | 3-0 | 8 | 8 | +11
 2026-10-26 | Buczynski Witold | Kurek Pawel | 3-0 | 8 | 8 | +23
 2026-10-26 | Stapor Rafal | Sobel Artur | 3-2 | 8 | 5 | +7
-2026-10-26 | Petas Kacper | Wloczko Krzysztof | 3-1 | 8 | 8 | Pending
-2026-10-26 | Spanik Tibor | Braun Josef | 3-0 | 8 | 8 | Pending
-2026-10-26 | Kosowski Jakub | Braun Josef | 3-1 | 8 | 9 | Pending
+2026-10-26 | Petas Kacper | Wloczko Krzysztof | 3-1 | 8 | 8 | +6
+2026-10-26 | Spanik Tibor | Braun Josef | 3-0 | 8 | 8 | +18
+2026-10-26 | Kosowski Jakub | Braun Josef | 3-1 | 8 | 9 | +10
 2026-10-26 | Kosmal Dawid | Poliniewicz Grzegorz | 3-1 | 8 | 8 | +17
 2026-10-26 | Czerwinski Bartosz | Kolek Maciej | 3-2 | 8 | 8 | +9
 2026-10-26 | Mitas Jacek | Rutkowski Mateusz | 3-0 | 8 | 8 | +15
@@ -16954,15 +16960,17 @@
 2026-10-26 | Myszewski Adrian | Mleczko Bartlomiej | 3-2 | 8 | 8 | +12
 2026-10-26 | Skotniczny Rafal | Fomin Yurij | 3-1 | 8 | 8 | Pending
 2026-10-26 | Mecik Patryk | Jadach Oskar | 3-1 | 8 | 8 | Pending
+2026-10-26 | Wichowski Grzegorz | Pruszkowski Jakub | 3-2 | 8 | 8 | Pending
 2026-10-26 | Kosmal Dawid | Rutkowski Mateusz | 3-1 | 9 | 9 | +12
+2026-10-26 | Fomin Yurij | Mecik Patryk | 3-0 | 9 | 9 | Pending
 2026-10-26 | Wloczko Krzysztof | Spanik Tibor | 3-1 | 9 | 9 | +17
 2026-10-26 | Baron Mariusz | Slawinski Kacper | 3-1 | 9 | 9 | +18
 2026-10-26 | Kurek Pawel | Polok Pawel | 3-2 | 9 | 9 | +9
 2026-10-26 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-0 | 9 | 9 | +9
 2026-10-26 | Kolek Maciej | Mitas Jacek | 3-2 | 9 | 9 | +9
 2026-10-26 | Sobel Artur | Mleczko Bartlomiej | 3-1 | 9 | 9 | +11
-2026-10-26 | Kosowski Jakub | Spanik Tibor | 3-2 | 9 | 10 | Pending
-2026-10-26 | Braun Josef | Petas Kacper | 3-1 | 10 | 10 | Pending
+2026-10-26 | Kosowski Jakub | Spanik Tibor | 3-2 | 9 | 10 | +6
+2026-10-26 | Braun Josef | Petas Kacper | 3-1 | 10 | 10 | +14
 2026-10-26 | Mitas Jacek | Poliniewicz Grzegorz | 3-2 | 10 | 10 | +10
 2026-10-26 | Kosmal Dawid | Czerwinski Bartosz | 3-2 | 10 | 10 | +6
 2026-10-26 | Rutkowski Mateusz | Kolek Maciej | 3-1 | 10 | 10 | +13
@@ -16984,4 +16992,3 @@
 2026-10-26 | Szymanski Igor | Sawicki Grzegorz | 3-2 |  |  | 
 2026-10-26 | Jadam Dawid | Pietraszko Lukasz | 3-0 |  |  | 
 2026-10-26 | Kosowski Jakub | Kolodziej Krystian | 3-1 |  |  | 
-2026-10-26 | Wichowski Grzegorz | Pruszkowski Jakub | 3-2 |  |  | 
