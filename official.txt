@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-27T16:25Z
+# updated 2026-10-27T17:22Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17109,6 +17109,11 @@
 2026-10-27 | Sokolowski Oliwier | Glanowski Waldemar | 3-1 | 1 | 6 | +10
 2026-10-27 | Solilo Dominik | Kukawka Milosz | 3-2 | 1 | 6 | +9
 2026-10-27 | Minda Michal | Sobel Artur | 3-1 | 1 | 6 | +14
+2026-10-27 | Pietraszko Lukasz | Solilo Dominik | 3-2 | 1 | 6 | Pending
+2026-10-27 | Blocho Przemyslaw | Brud Szymon | 3-1 | 1 | 4 | Pending
+2026-10-27 | Rolak Jaroslaw | Skorski Michal | 3-2 | 1 | 1 | Pending
+2026-10-27 | Kaczynski Piotr | Juszczyk Krzysztof | 3-1 | 1 | 1 | Pending
+2026-10-27 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 1 | 1 | Pending
 2026-10-27 | Staszczyk Konrad | Rudomina Kamil | 3-0 | 2 | 1 | +5
 2026-10-27 | Dytko Dawid | Nowak Jakub | 3-0 | 2 | 1 | +11
 2026-10-27 | Warzecha Miroslaw | Pyrek Dawid | 3-2 | 2 | 1 | +3
@@ -17250,6 +17255,7 @@
 2026-10-27 | Mleczko Bartlomiej | Misiak Mateusz | 3-0 | 6 | 6 | +10
 2026-10-27 | Slawinski Kacper | Juzek Sebastian | 3-0 | 6 | 6 | +11
 2026-10-27 | Smolka Kamil | Brozek Piotr | 3-0 | 6 | 6 | +19
+2026-10-27 | Sokolowski Oliwier | Cesarz Milosz | 3-2 |  | 6 | 
 2026-10-27 | Dytko Dawid | Nowak Jakub | 3-0 | 7 | 6 | +13
 2026-10-27 | Kosowski Jakub | Wiecek Adrian | 3-1 | 7 | 7 | +11
 2026-10-27 | Wloczko Krzysztof | Jadczyk Marcin | 3-1 | 7 | 7 | +16
@@ -17264,6 +17270,8 @@
 2026-10-27 | Juzek Sebastian | Baron Mariusz | 3-2 | 7 | 7 | +9
 2026-10-27 | Slawinski Kacper | Brozek Piotr | 3-1 | 7 | 7 | +11
 2026-10-27 | Gajda Rafal | Smolka Kamil | 3-2 | 7 | 7 | +10
+2026-10-27 | Marud Grzegorz | Szostok Sebastian | 3-2 | 7 | 1 | +7
+2026-10-27 | Urban Wojciech | Kurek Pawel | 3-2 | 7 | 1 | +9
 2026-10-27 | Olbrycht Michal | Czerwinski Bartosz | 3-1 | 8 | 8 | +5
 2026-10-27 | Kosowski Jakub | Wloczko Krzysztof | 3-1 | 8 | 8 | +7
 2026-10-27 | David Petr | Wiecek Adrian | 3-2 | 8 | 8 | +6
@@ -17278,13 +17286,15 @@
 2026-10-27 | Smolka Kamil | Slawinski Kacper | 3-0 | 8 | 8 | +20
 2026-10-27 | Brozek Piotr | Baron Mariusz | 3-2 | 8 | 8 | +7
 2026-10-27 | Szymanski Igor | Adamus Kacper | 3-0 | 9 | 9 | +15
+2026-10-27 | Smolka Kamil | Baron Mariusz | 3-2 | 9 | 9 | Pending
 2026-10-27 | Kukawka Milosz | Misiak Mateusz | 3-2 | 9 | 9 | +4
 2026-10-27 | David Petr | Kosowski Jakub | 3-2 | 9 | 9 | +8
 2026-10-27 | Jadczyk Marcin | Wiecek Adrian | 3-2 | 9 | 9 | +8
 2026-10-27 | Wloczko Krzysztof | Sklensky Miroslav | 3-1 | 9 | 9 | +14
 2026-10-27 | Olbrycht Michal | Mitas Jacek | 3-1 | 9 | 9 | +9
 2026-10-27 | Czerwinski Bartosz | Kolek Maciej | 3-2 | 9 | 4 | +10
-2026-10-27 | Juzek Sebastian | Brozek Piotr | 3-0 | 9 | 9 | Pending
+2026-10-27 | Juzek Sebastian | Brozek Piotr | 3-0 | 9 | 9 | +19
+2026-10-27 | Gajda Rafal | Slawinski Kacper | 3-1 | 9 | 9 | Pending
 2026-10-27 | Wloczko Krzysztof | David Petr | 3-1 | 10 | 10 | +18
 2026-10-27 | Jadczyk Marcin | Kosowski Jakub | 3-1 | 10 | 10 | +15
 2026-10-27 | Kosmal Dawid | Olbrycht Michal | 3-2 | 10 | 10 | +11
