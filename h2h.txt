@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-27T09:43Z
+# updated 2026-10-27T10:22Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -14975,7 +14975,7 @@
 2026-10-26 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-0
 2026-10-26 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-1
 2026-10-27 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-0
-# pair | Czerwinski Bartosz | Rutkowski Mateusz | 2026-10-26T16:07Z
+# pair | Czerwinski Bartosz | Rutkowski Mateusz | 2026-10-27T10:22Z
 2022-12-10 | Czerwinski Bartosz | Rutkowski Mateusz | 3-0
 2022-12-10 | Czerwinski Bartosz | Rutkowski Mateusz | 3-2
 2022-12-12 | Rutkowski Mateusz | Czerwinski Bartosz | 3-1
@@ -43339,7 +43339,7 @@
 2026-09-27 | Pietraszko Lukasz | Kolek Maciej | 3-1
 2026-09-28 | Kolek Maciej | Pietraszko Lukasz | 3-1
 2026-10-13 | Kolek Maciej | Pietraszko Lukasz | 3-1
-# pair | Kolek Maciej | Poliniewicz Grzegorz | 2026-10-26T16:07Z
+# pair | Kolek Maciej | Poliniewicz Grzegorz | 2026-10-27T10:22Z
 2026-01-28 | Poliniewicz Grzegorz | Kolek Maciej | 3-1
 2026-01-29 | Kolek Maciej | Poliniewicz Grzegorz | 3-0
 2026-02-16 | Poliniewicz Grzegorz | Kolek Maciej | 3-2
@@ -50051,7 +50051,7 @@
 2026-10-19 | Solilo Dominik | Kukawka Milosz | 3-1
 2026-10-20 | Kukawka Milosz | Solilo Dominik | 3-0
 2026-10-22 | Solilo Dominik | Kukawka Milosz | 3-2
-# pair | Kukawka Milosz | Stapor Rafal | 2026-10-26T16:07Z
+# pair | Kukawka Milosz | Stapor Rafal | 2026-10-27T10:22Z
 2026-02-09 | Kukawka Milosz | Stapor Rafal | 3-0
 2026-02-09 | Kukawka Milosz | Stapor Rafal | 3-1
 2026-02-09 | Stapor Rafal | Kukawka Milosz | 3-1
@@ -50123,6 +50123,7 @@
 2026-10-22 | Stapor Rafal | Kukawka Milosz | 3-2
 2026-10-23 | Stapor Rafal | Kukawka Milosz | 3-0
 2026-10-26 | Stapor Rafal | Kukawka Milosz | 3-0
+2026-10-27 | Kukawka Milosz | Stapor Rafal | 3-1
 # pair | Kukawka Milosz | Staszczyk Konrad | 2026-10-16T04:16Z
 2026-05-23 | Kukawka Milosz | Staszczyk Konrad | 3-2
 2026-10-02 | Staszczyk Konrad | Kukawka Milosz | 3-0
@@ -52049,7 +52050,7 @@
 2026-10-15 | Lamperski Jakub | Lukaszewski Mikolaj | 3-0
 # pair | Lamperski Jakub | Malinowski Radoslaw | 2026-10-12T12:13Z
 2026-10-12 | Malinowski Radoslaw | Lamperski Jakub | 3-2
-# pair | Lamperski Jakub | Minda Michal | 2026-10-26T16:07Z
+# pair | Lamperski Jakub | Minda Michal | 2026-10-27T10:22Z
 2026-10-10 | Minda Michal | Lamperski Jakub | 3-1
 2026-10-11 | Lamperski Jakub | Minda Michal | 3-0
 2026-10-11 | Minda Michal | Lamperski Jakub | 3-1
@@ -52057,6 +52058,7 @@
 2026-10-20 | Minda Michal | Lamperski Jakub | 3-1
 2026-10-23 | Lamperski Jakub | Minda Michal | 3-1
 2026-10-23 | Lamperski Jakub | Minda Michal | 3-2
+2026-10-26 | Minda Michal | Lamperski Jakub | 3-2
 # pair | Lamperski Jakub | Misiak Mateusz | 2026-10-26T05:16Z
 2023-01-07 | Misiak Mateusz | Lamperski Jakub | 3-0
 2023-01-08 | Misiak Mateusz | Lamperski Jakub | 3-0
@@ -55061,7 +55063,7 @@
 2026-10-12 | Szoltysek Artur | Lukaszewski Mikolaj | 3-1
 2026-10-19 | Lukaszewski Mikolaj | Szoltysek Artur | 3-0
 2026-10-19 | Szoltysek Artur | Lukaszewski Mikolaj | 3-0
-# pair | Lukaszewski Mikolaj | Trela Mateusz | 2026-10-26T16:07Z
+# pair | Lukaszewski Mikolaj | Trela Mateusz | 2026-10-27T10:22Z
 2025-08-12 | Lukaszewski Mikolaj | Trela Mateusz | 3-0
 2025-08-16 | Trela Mateusz | Lukaszewski Mikolaj | 3-0
 2025-08-24 | Trela Mateusz | Lukaszewski Mikolaj | 3-1
@@ -55180,6 +55182,8 @@
 2026-10-20 | Lukaszewski Mikolaj | Trela Mateusz | 3-2
 2026-10-22 | Trela Mateusz | Lukaszewski Mikolaj | 3-0
 2026-10-23 | Trela Mateusz | Lukaszewski Mikolaj | 3-1
+2026-10-26 | Lukaszewski Mikolaj | Trela Mateusz | 3-1
+2026-10-26 | Lukaszewski Mikolaj | Trela Mateusz | 3-1
 # pair | Lukaszewski Mikolaj | Warpas Blazej | 2026-10-15T13:58Z
 2026-02-15 | Warpas Blazej | Lukaszewski Mikolaj | 3-0
 2026-03-15 | Lukaszewski Mikolaj | Warpas Blazej | 3-1
@@ -61376,7 +61380,7 @@
 2026-08-07 | Minda Michal | Misiak Mateusz | 3-2
 2026-08-21 | Minda Michal | Misiak Mateusz | 3-2
 2026-09-04 | Minda Michal | Misiak Mateusz | 3-0
-# pair | Minda Michal | Mleczko Bartlomiej | 2026-10-26T16:07Z
+# pair | Minda Michal | Mleczko Bartlomiej | 2026-10-27T10:22Z
 2023-07-09 | Minda Michal | Mleczko Bartlomiej | 3-0
 2023-07-15 | Minda Michal | Mleczko Bartlomiej | 3-0
 2023-07-22 | Minda Michal | Mleczko Bartlomiej | 3-1
@@ -62562,7 +62566,7 @@
 2026-10-13 | Sobel Artur | Minda Michal | 3-1
 2026-10-20 | Sobel Artur | Minda Michal | 3-2
 2026-10-26 | Sobel Artur | Minda Michal | 3-1
-# pair | Minda Michal | Solilo Dominik | 2026-10-26T16:07Z
+# pair | Minda Michal | Solilo Dominik | 2026-10-27T10:22Z
 2025-12-30 | Solilo Dominik | Minda Michal | 3-0
 2026-05-03 | Minda Michal | Solilo Dominik | 3-2
 2026-05-03 | Solilo Dominik | Minda Michal | 3-1
@@ -70826,7 +70830,7 @@
 2026-10-16 | Paszkiewicz Michal | Urban Wojciech | 3-1
 2026-10-25 | Paszkiewicz Michal | Urban Wojciech | 3-2
 2026-10-26 | Urban Wojciech | Paszkiewicz Michal | 3-0
-# pair | Paszkiewicz Michal | Vincenec Oliver | 2026-10-26T16:07Z
+# pair | Paszkiewicz Michal | Vincenec Oliver | 2026-10-27T10:22Z
 2025-10-10 | Vincenec Oliver | Paszkiewicz Michal | 3-2
 2025-11-04 | Vincenec Oliver | Paszkiewicz Michal | 3-0
 2025-12-07 | Vincenec Oliver | Paszkiewicz Michal | 3-1
@@ -73443,7 +73447,7 @@
 2026-09-27 | Wasilewski Damian | Pisarczyk Tomasz | 3-2
 2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0
 2026-10-24 | Wasilewski Damian | Pisarczyk Tomasz | 3-0
-# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-26T16:07Z
+# pair | Poliniewicz Grzegorz | Rutkowski Mateusz | 2026-10-27T10:22Z
 2023-02-12 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-0
 2023-02-15 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2
 2023-02-24 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-0
