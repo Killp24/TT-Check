@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-27T00:06Z
+# updated 2026-10-27T00:44Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -37122,7 +37122,7 @@
 2026-09-30 | Kaczynski Piotr | Juszczyk Krzysztof | 3-1
 2026-10-13 | Juszczyk Krzysztof | Kaczynski Piotr | 3-1
 2026-10-25 | Juszczyk Krzysztof | Kaczynski Piotr | 3-0
-# pair | Juszczyk Krzysztof | Koczyba Mariusz | 2026-10-26T06:13Z
+# pair | Juszczyk Krzysztof | Koczyba Mariusz | 2026-10-27T00:44Z
 2023-12-17 | Koczyba Mariusz | Juszczyk Krzysztof | 3-0
 2025-03-29 | Koczyba Mariusz | Juszczyk Krzysztof | 3-1
 2025-03-29 | Koczyba Mariusz | Juszczyk Krzysztof | 3-2
@@ -38934,7 +38934,7 @@
 2026-06-09 | Orszulik Jan | Kaczynski Piotr | 3-1
 2026-09-15 | Orszulik Jan | Kaczynski Piotr | 3-2
 2026-10-20 | Kaczynski Piotr | Orszulik Jan | 3-2
-# pair | Kaczynski Piotr | Pytlas Wojciech | 2026-10-26T06:13Z
+# pair | Kaczynski Piotr | Pytlas Wojciech | 2026-10-27T00:44Z
 2025-09-02 | Pytlas Wojciech | Kaczynski Piotr | 3-1
 2025-10-09 | Kaczynski Piotr | Pytlas Wojciech | 3-1
 2025-10-18 | Kaczynski Piotr | Pytlas Wojciech | 3-2
@@ -42362,7 +42362,7 @@
 2026-10-15 | Koczyba Mariusz | Polok Pawel | 3-0
 2026-10-21 | Koczyba Mariusz | Polok Pawel | 3-1
 2026-10-22 | Polok Pawel | Koczyba Mariusz | 3-0
-# pair | Koczyba Mariusz | Pytlas Wojciech | 2026-10-26T06:13Z
+# pair | Koczyba Mariusz | Pytlas Wojciech | 2026-10-27T00:44Z
 2025-06-18 | Koczyba Mariusz | Pytlas Wojciech | 3-1
 2025-06-26 | Pytlas Wojciech | Koczyba Mariusz | 3-1
 2025-07-02 | Koczyba Mariusz | Pytlas Wojciech | 3-1
@@ -56974,7 +56974,7 @@
 2026-10-19 | Nowak Jakub | Marud Grzegorz | 3-2
 2026-10-20 | Marud Grzegorz | Nowak Jakub | 3-0
 2026-10-20 | Nowak Jakub | Marud Grzegorz | 3-2
-# pair | Marud Grzegorz | Oracz Lukasz | 2026-10-26T06:13Z
+# pair | Marud Grzegorz | Oracz Lukasz | 2026-10-27T00:44Z
 2024-07-29 | Marud Grzegorz | Oracz Lukasz | 3-1
 2026-02-10 | Marud Grzegorz | Oracz Lukasz | 3-1
 2026-03-03 | Marud Grzegorz | Oracz Lukasz | 3-1
@@ -57009,6 +57009,7 @@
 2026-10-19 | Marud Grzegorz | Oracz Lukasz | 3-2
 2026-10-20 | Marud Grzegorz | Oracz Lukasz | 3-0
 2026-10-25 | Oracz Lukasz | Marud Grzegorz | 3-1
+2026-10-26 | Marud Grzegorz | Oracz Lukasz | 3-0
 2026-10-26 | Oracz Lukasz | Marud Grzegorz | 3-2
 # pair | Marud Grzegorz | Paszkiewicz Michal | 2026-10-26T06:13Z
 2025-11-04 | Marud Grzegorz | Paszkiewicz Michal | 3-2
@@ -57592,7 +57593,7 @@
 2026-10-20 | Szostok Sebastian | Marud Grzegorz | 3-0
 2026-10-21 | Marud Grzegorz | Szostok Sebastian | 3-1
 # pair | Marud Grzegorz | Tkaczyk Henryk | 2026-10-26T10:44Z
-# pair | Marud Grzegorz | Urban Wojciech | 2026-10-26T06:13Z
+# pair | Marud Grzegorz | Urban Wojciech | 2026-10-27T00:44Z
 2025-09-15 | Marud Grzegorz | Urban Wojciech | 3-1
 2025-09-15 | Urban Wojciech | Marud Grzegorz | 3-1
 2025-09-16 | Urban Wojciech | Marud Grzegorz | 3-0
@@ -57720,6 +57721,8 @@
 2026-10-19 | Urban Wojciech | Marud Grzegorz | 3-1
 2026-10-20 | Marud Grzegorz | Urban Wojciech | 3-2
 2026-10-25 | Urban Wojciech | Marud Grzegorz | 3-2
+2026-10-26 | Marud Grzegorz | Urban Wojciech | 3-1
+2026-10-26 | Urban Wojciech | Marud Grzegorz | 3-0
 # pair | Marud Grzegorz | Vincenec Oliver | 2026-10-26T06:13Z
 2025-10-12 | Vincenec Oliver | Marud Grzegorz | 3-1
 2025-10-14 | Vincenec Oliver | Marud Grzegorz | 3-1
@@ -65042,7 +65045,7 @@
 2026-10-13 | Mucha Grzegorz | Nocun Zbigniew | 3-2
 2026-10-18 | Mucha Grzegorz | Nocun Zbigniew | 3-2
 2026-10-18 | Nocun Zbigniew | Mucha Grzegorz | 3-1
-# pair | Mucha Grzegorz | Oracz Jacek | 2026-10-26T06:13Z
+# pair | Mucha Grzegorz | Oracz Jacek | 2026-10-27T00:44Z
 2026-06-17 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-06-18 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-06-21 | Oracz Jacek | Mucha Grzegorz | 3-1
@@ -65069,6 +65072,7 @@
 2026-10-19 | Oracz Jacek | Mucha Grzegorz | 3-0
 2026-10-25 | Mucha Grzegorz | Oracz Jacek | 3-2
 2026-10-26 | Oracz Jacek | Mucha Grzegorz | 3-1
+2026-10-26 | Oracz Jacek | Mucha Grzegorz | 3-2
 # pair | Mucha Grzegorz | Pawlik Cezary | 2026-10-18T00:48Z
 2026-08-01 | Pawlik Cezary | Mucha Grzegorz | 3-2
 2026-08-02 | Pawlik Cezary | Mucha Grzegorz | 3-2
@@ -70251,7 +70255,7 @@
 2026-07-24 | Oracz Lukasz | Tkocz Marek | 3-1
 2026-07-24 | Tkocz Marek | Oracz Lukasz | 3-0
 2026-08-05 | Tkocz Marek | Oracz Lukasz | 3-1
-# pair | Oracz Lukasz | Urban Wojciech | 2026-10-26T06:13Z
+# pair | Oracz Lukasz | Urban Wojciech | 2026-10-27T00:44Z
 2026-03-13 | Oracz Lukasz | Urban Wojciech | 3-1
 2026-03-13 | Oracz Lukasz | Urban Wojciech | 3-1
 2026-03-22 | Oracz Lukasz | Urban Wojciech | 3-0
@@ -70294,6 +70298,7 @@
 2026-10-21 | Oracz Lukasz | Urban Wojciech | 3-2
 2026-10-25 | Urban Wojciech | Oracz Lukasz | 3-0
 2026-10-26 | Urban Wojciech | Oracz Lukasz | 3-0
+2026-10-27 | Urban Wojciech | Oracz Lukasz | 3-2
 # pair | Oracz Lukasz | Vincenec Oliver | 2026-10-26T06:13Z
 2025-09-21 | Oracz Lukasz | Vincenec Oliver | 3-0
 2025-09-21 | Oracz Lukasz | Vincenec Oliver | 3-1
@@ -74332,7 +74337,7 @@
 2026-10-04 | Swider Dariusz | Polok Pawel | 3-2
 2026-10-11 | Polok Pawel | Swider Dariusz | 3-1
 2026-10-11 | Swider Dariusz | Polok Pawel | 3-1
-# pair | Polok Pawel | Szostok Sebastian | 2026-10-26T06:13Z
+# pair | Polok Pawel | Szostok Sebastian | 2026-10-27T00:44Z
 2026-08-12 | Szostok Sebastian | Polok Pawel | 3-0
 2026-08-31 | Polok Pawel | Szostok Sebastian | 3-1
 2026-08-31 | Polok Pawel | Szostok Sebastian | 3-2
@@ -74345,7 +74350,7 @@
 2026-10-25 | Polok Pawel | Szostok Sebastian | 3-0
 2026-10-25 | Szostok Sebastian | Polok Pawel | 3-2
 2026-10-26 | Polok Pawel | Szostok Sebastian | 3-2
-# pair | Polok Pawel | Tkaczyk Henryk | 2026-10-26T06:13Z
+# pair | Polok Pawel | Tkaczyk Henryk | 2026-10-27T00:44Z
 2026-10-14 | Tkaczyk Henryk | Polok Pawel | 3-0
 2026-10-22 | Polok Pawel | Tkaczyk Henryk | 3-1
 2026-10-25 | Polok Pawel | Tkaczyk Henryk | 3-2
