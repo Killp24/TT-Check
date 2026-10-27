@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-27T01:47Z
+# updated 2026-10-27T02:35Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16929,7 +16929,7 @@
 2026-10-26 | Szoltysek Artur | Kowalczyk Marcin | 3-2 | 4 | 4 | +9
 2026-10-26 | Staniczek Adam | Pyrek Dawid | 3-2 | 4 | 4 | +10
 2026-10-26 | Tkaczyk Henryk | Nowak Jakub | 3-1 | 4 | 7 | +9
-2026-10-26 | Rudomina Kamil | Brud Szymon | 3-2 | 4 | 6 | Pending
+2026-10-26 | Rudomina Kamil | Brud Szymon | 3-2 | 4 | 6 | +9
 2026-10-26 | Schaniel Krzysztof | Oracz Lukasz | 3-0 | 5 | 5 | +13
 2026-10-26 | Stapor Rafal | Kukawka Milosz | 3-0 | 5 | 2 | +15
 2026-10-26 | Vincenec Oliver | Paszkiewicz Michal | 3-0 | 5 | 5 | +11
@@ -17011,7 +17011,7 @@
 2026-10-26 | Oracz Jacek | Mucha Grzegorz | 3-2 | 7 | 7 | +4
 2026-10-26 | Oracz Lukasz | Tkaczyk Henryk | 3-0 | 7 | 2 | +15
 2026-10-26 | Staszczyk Konrad | Minda Michal | 3-1 | 7 | 10 | +3
-2026-10-26 | Lamperski Jakub | Glanowski Jakub | 3-1 | 7 | 1 | Pending
+2026-10-26 | Lamperski Jakub | Glanowski Jakub | 3-1 | 7 | 1 | +8
 2026-10-26 | Lukaszewski Mikolaj | Kowalczyk Marcin | 3-1 | 7 | 8 | +11
 2026-10-26 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 | 7 | 7 | +8
 2026-10-26 | Polok Pawel | Baron Mariusz | 3-0 | 8 | 8 | +11
@@ -17033,7 +17033,7 @@
 2026-10-26 | Oracz Lukasz | Nowak Jakub | 3-0 | 8 | 6 | +11
 2026-10-26 | Marud Grzegorz | Urban Wojciech | 3-1 | 8 | 8 | +11
 2026-10-26 | Mucha Grzegorz | Bladziak Krzysztof | 3-1 | 8 | 5 | +6
-2026-10-26 | Staszczyk Konrad | Lamperski Jakub | 3-2 | 8 | 6 | Pending
+2026-10-26 | Staszczyk Konrad | Lamperski Jakub | 3-2 | 8 | 6 | +2
 2026-10-26 | Zwolinski Mariusz | Szoltysek Artur | 3-1 | 8 | 7 | +11
 2026-10-26 | Kosmal Dawid | Rutkowski Mateusz | 3-1 | 9 | 9 | +12
 2026-10-26 | Fomin Yurij | Mecik Patryk | 3-0 | 9 | 9 | +13
@@ -17078,33 +17078,40 @@
 2026-10-26 | Mucha Grzegorz | Lewczuk Miroslaw | 3-2 |  |  | 
 2026-10-26 | Dytko Dawid | Urban Wojciech | 3-2 |  |  | 
 2026-10-27 | Warzecha Miroslaw | Michalik Jerzy | 3-1 | 1 | 1 | Pending
-2026-10-27 | Staszczyk Konrad | Brud Szymon | 3-1 | 1 | 1 | Pending
-2026-10-27 | Glanowski Jakub | Brud Szymon | 3-2 | 1 | 2 | Pending
+2026-10-27 | Staszczyk Konrad | Brud Szymon | 3-1 | 1 | 1 | +4
+2026-10-27 | Glanowski Jakub | Brud Szymon | 3-2 | 1 | 2 | +11
 2026-10-27 | Cyndera Jakub | Machelski Michal | 3-0 | 1 | 1 | Pending
 2026-10-27 | Dytko Dawid | Urbanek Jan | 3-2 | 1 | 1 | +15
 2026-10-27 | Marud Grzegorz | Tkaczyk Henryk | 3-0 | 1 | 1 | +15
 2026-10-27 | Urban Wojciech | Oracz Lukasz | 3-2 | 1 | 1 | +9
-2026-10-27 | Staszczyk Konrad | Rudomina Kamil | 3-0 | 2 | 1 | Pending
+2026-10-27 | Trela Mateusz | Kowalczyk Marcin | 3-0 | 1 | 1 | +14
+2026-10-27 | Lukaszewski Mikolaj | Szoltysek Artur | 3-0 | 1 | 1 | +14
+2026-10-27 | Staszczyk Konrad | Rudomina Kamil | 3-0 | 2 | 1 | +5
 2026-10-27 | Dytko Dawid | Nowak Jakub | 3-0 | 2 | 1 | +11
 2026-10-27 | Warzecha Miroslaw | Pyrek Dawid | 3-2 | 2 | 1 | Pending
 2026-10-27 | Michalik Jerzy | Staniczek Adam | 3-0 | 2 | 1 | Pending
-2026-10-27 | Brud Szymon | Lamperski Jakub | 3-2 | 3 | 1 | Pending
+2026-10-27 | Pyrek Dawid | Cyndera Jakub | 3-0 | 2 | 2 | Pending
+2026-10-27 | Glanowski Jakub | Rudomina Kamil | 3-1 | 2 | 2 | +16
+2026-10-27 | Trela Mateusz | Szoltysek Artur | 3-0 | 2 | 2 | +13
+2026-10-27 | Lukaszewski Mikolaj | Zwolinski Mariusz | 3-1 | 2 | 1 | +11
+2026-10-27 | Marud Grzegorz | Dytko Dawid | 3-0 | 2 | 3 | +14
+2026-10-27 | Nowak Jakub | Oracz Lukasz | 3-1 | 2 | 2 | +16
+2026-10-27 | Urban Wojciech | Tkaczyk Henryk | 3-1 | 2 | 2 | +12
+2026-10-27 | Marud Grzegorz | Tkaczyk Henryk | 3-0 | 3 | 3 | +12
+2026-10-27 | Brud Szymon | Lamperski Jakub | 3-2 | 3 | 1 | +8
+2026-10-27 | Rudomina Kamil | Lamperski Jakub | 3-2 | 3 | 2 | +8
+2026-10-27 | Staszczyk Konrad | Glanowski Jakub | 3-0 | 3 | 3 | +3
+2026-10-27 | Michalik Jerzy | Machelski Michal | 3-0 | 3 | 2 | Pending
+2026-10-27 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 3 | 2 | Pending
+2026-10-27 | Oracz Lukasz | Dytko Dawid | 3-2 | 3 | 4 | +8
+2026-10-27 | Michalik Jerzy | Cyndera Jakub | 3-0 | 4 | 3 | Pending
 2026-10-27 | Oracz Jacek | Nocun Zbigniew | 3-0 |  |  | 
 2026-10-27 | Lewczuk Miroslaw | Bladziak Krzysztof | 3-0 |  |  | 
 2026-10-27 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 |  |  | 
 2026-10-27 | Lukaszewski Mikolaj | Kowalczyk Marcin | 3-1 |  |  | 
 2026-10-27 | Zwolinski Mariusz | Szoltysek Artur | 3-1 |  |  | 
-2026-10-27 | Trela Mateusz | Kowalczyk Marcin | 3-0 |  |  | 
-2026-10-27 | Pyrek Dawid | Cyndera Jakub | 3-0 |  |  | 
-2026-10-27 | Glanowski Jakub | Rudomina Kamil | 3-1 |  |  | 
-2026-10-27 | Rudomina Kamil | Lamperski Jakub | 3-2 |  |  | 
-2026-10-27 | Staszczyk Konrad | Glanowski Jakub | 3-0 |  |  | 
 2026-10-27 | Mucha Grzegorz | Zelezik Jacek | 3-2 |  |  | 
 2026-10-27 | Oracz Jacek | Bladziak Krzysztof | 3-0 |  |  | 
 2026-10-27 | Nocun Zbigniew | Mucha Grzegorz | 3-1 |  |  | 
 2026-10-27 | Zelezik Jacek | Lewczuk Miroslaw | 3-1 |  |  | 
 2026-10-27 | Mucha Grzegorz | Oracz Jacek | 3-1 |  |  | 
-2026-10-27 | Lukaszewski Mikolaj | Szoltysek Artur | 3-0 |  |  | 
-2026-10-27 | Trela Mateusz | Szoltysek Artur | 3-0 |  |  | 
-2026-10-27 | Michalik Jerzy | Machelski Michal | 3-0 |  |  | 
-2026-10-27 | Warzecha Miroslaw | Staniczek Adam | 3-0 |  |  | 
