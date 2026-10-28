@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-28T10:51Z
+# updated 2026-10-28T11:44Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17423,6 +17423,7 @@
 2026-10-28 | Pruszkowski Jakub | Slosarczyk Pawel | 3-0 | 1 | 1 | Pending
 2026-10-28 | Rus Maksymilian | Madej Boguslaw | 3-2 | 1 | 1 | Pending
 2026-10-28 | Stapor Rafal | Kolek Maciej | 3-2 | 1 | 6 | Pending
+2026-10-28 | Kukawka Milosz | Minda Michal | 3-2 | 1 | 1 | Pending
 2026-10-28 | Piecowski Miroslaw | Skorski Michal | 3-1 | 2 | 1 | +13
 2026-10-28 | Rudomina Kamil | Blocho Przemyslaw | 3-0 | 2 | 1 | +19
 2026-10-28 | Lukaszewski Mikolaj | Skorski Michal | 3-0 | 2 | 2 | +13
@@ -17497,6 +17498,7 @@
 2026-10-28 | Gajda Rafal | Dytko Dawid | 3-2 | 4 | 7 | +8
 2026-10-28 | Pruszkowski Jakub | Madej Boguslaw | 3-2 | 4 | 4 | Pending
 2026-10-28 | Adamus Kacper | Rus Maksymilian | 3-0 | 4 | 4 | Pending
+2026-10-28 | Sokolowski Oliwier | Slosarczyk Pawel | 3-0 | 4 | 4 | Pending
 2026-10-28 | Delikatny Kamil | Machelski Michal | 3-0 | 5 | 4 | +8
 2026-10-28 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 5 | 4 | +18
 2026-10-28 | Machelski Michal | Fomin Andriej | 3-1 | 5 | 5 | +18
@@ -17526,11 +17528,20 @@
 2026-10-28 | Lamperski Jakub | Kotwica Dawid | 3-1 | 6 | 6 | Pending
 2026-10-28 | Adamus Pawel | Slawinski Kacper | 3-0 | 6 | 6 | Pending
 2026-10-28 | Pelka Jerzy | Nowak Jakub | 3-0 | 6 | 6 | Pending
+2026-10-28 | Wiecek Adrian | Olbrycht Michal | 3-2 | 6 | 6 | Pending
+2026-10-28 | Poliniewicz Grzegorz | Czerwinski Bartosz | 3-2 | 6 | 1 | Pending
+2026-10-28 | Rutkowski Mateusz | Solilo Dominik | 3-1 | 6 | 1 | Pending
+2026-10-28 | Glanowski Jakub | Myszewski Adrian | 3-1 | 6 | 6 | Pending
+2026-10-28 | Cesarz Milosz | Gajda Rafal | 3-2 | 6 | 6 | Pending
+2026-10-28 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 7 | 7 | Pending
+2026-10-28 | Adamus Pawel | Pelka Jerzy | 3-1 | 7 | 7 | Pending
 2026-10-28 | Krezel Andrzej | Fomin Andriej | 3-1 | 7 | 6 | +11
 2026-10-28 | Machelski Michal | Brunner Marian | 3-2 | 7 | 7 | +10
 2026-10-28 | Fomin Andriej | Nocun Zbigniew | 3-2 | 7 | 7 | +9
 2026-10-28 | Paszkiewicz Michal | Vincenec Oliver | 3-1 | 7 | 6 | +14
 2026-10-28 | Jozefiak Michal | Vincenec Oliver | 3-0 | 7 | 7 | +15
+2026-10-28 | David Petr | Grela Artur | 3-0 | 7 | 7 | Pending
+2026-10-28 | Kotwica Dawid | Myszewski Adrian | 3-1 | 7 | 7 | Pending
 2026-10-28 | Krezel Andrzej | Delikatny Kamil | 3-0 | 8 | 8 | +16
 2026-10-28 | Paszkiewicz Michal | Idaczyk Rafal | 3-2 | 8 | 4 | +9
 2026-10-28 | Marud Grzegorz | Dytko Dawid | 3-1 |  |  | 
