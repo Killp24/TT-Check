@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-28T17:51Z
+# updated 2026-10-28T18:48Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17435,6 +17435,7 @@
 2026-10-28 | Strus Piotr | Suchecki Waclaw | 3-2 | 1 | 1 | Pending
 2026-10-28 | Ruszkiewicz Adam | Krupa Sebastian | 3-0 | 1 | 1 | Pending
 2026-10-28 | Kumor Michal | Delikatny Kamil | 3-1 | 1 | 9 | Pending
+2026-10-28 | Zielinski Marcin | Warzecha Miroslaw | 3-0 | 1 | 1 | Pending
 2026-10-28 | Piecowski Miroslaw | Skorski Michal | 3-1 | 2 | 1 | +13
 2026-10-28 | Rudomina Kamil | Blocho Przemyslaw | 3-0 | 2 | 1 | +19
 2026-10-28 | Lukaszewski Mikolaj | Skorski Michal | 3-0 | 2 | 2 | +13
@@ -17466,6 +17467,14 @@
 2026-10-28 | Minda Michal | Lamperski Jakub | 3-1 | 2 | 7 | +11
 2026-10-28 | Polok Pawel | Koczyba Mariusz | 3-0 | 2 | 2 | Pending
 2026-10-28 | Zelezik Jacek | Skupinski Arkadiusz | 3-0 | 2 | 2 | Pending
+2026-10-28 | Golaszewski Kuba | Szoltysek Artur | 3-2 | 2 | 2 | Pending
+2026-10-28 | Mugowski Arkadiusz | Nadolny Jakub | 3-1 | 2 | 2 | Pending
+2026-10-28 | Zwolinski Mariusz | Strus Piotr | 3-1 | 2 | 2 | Pending
+2026-10-28 | Pytlas Wojciech | Krupa Sebastian | 3-2 | 2 | 2 | Pending
+2026-10-28 | Suchecki Waclaw | Kowalczyk Marcin | 3-1 | 2 | 2 | Pending
+2026-10-28 | Juszczyk Krzysztof | Ruszkiewicz Adam | 3-1 | 2 | 2 | Pending
+2026-10-28 | Kumor Michal | Krezel Andrzej | 3-0 | 2 | 10 | Pending
+2026-10-28 | Pyrek Dawid | Delikatny Kamil | 3-0 | 2 | 10 | Pending
 2026-10-28 | Skorski Michal | Trela Mateusz | 3-1 | 3 | 2 | +15
 2026-10-28 | Piecowski Miroslaw | Lukaszewski Mikolaj | 3-0 | 3 | 3 | +20
 2026-10-28 | Delikatny Kamil | Machelski Michal | 3-1 | 3 | 2 | +7
@@ -17500,6 +17509,7 @@
 2026-10-28 | Kukawka Milosz | Kotwica Dawid | 3-0 | 3 | 8 | +7
 2026-10-28 | Blocho Przemyslaw | Perzynski Przemyslaw | 3-0 | 3 | 2 | Pending
 2026-10-28 | Perzynski Przemyslaw | Solilo Dominik | 3-1 | 3 | 7 | Pending
+2026-10-28 | Skupinski Arkadiusz | Krezel Andrzej | 3-1 | 3 | 11 | Pending
 2026-10-28 | Delikatny Kamil | Fomin Andriej | 3-1 | 4 | 3 | +13
 2026-10-28 | Krezel Andrzej | Machelski Michal | 3-1 | 4 | 3 | +7
 2026-10-28 | Lebek Marian | Jozefiak Michal | 3-1 | 4 | 3 | +10
@@ -17523,6 +17533,7 @@
 2026-10-28 | Minda Michal | Kotwica Dawid | 3-0 | 4 | 9 | +6
 2026-10-28 | Stapor Rafal | Solilo Dominik | 3-2 | 4 | 4 | +6
 2026-10-28 | Rudomina Kamil | Mugowski Arkadiusz | 3-1 | 4 | 1 | Pending
+2026-10-28 | Perzynski Przemyslaw | Rudomina Kamil | 3-2 | 4 | 6 | Pending
 2026-10-28 | Delikatny Kamil | Machelski Michal | 3-0 | 5 | 4 | +8
 2026-10-28 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 5 | 4 | +18
 2026-10-28 | Machelski Michal | Fomin Andriej | 3-1 | 5 | 5 | +18
@@ -17608,8 +17619,8 @@
 2026-10-28 | Michna Dawid | Olbrycht Michal | 3-0 | 9 | 10 | +8
 2026-10-28 | Poliniewicz Grzegorz | Kolek Maciej | 3-2 | 9 | 9 | +5
 2026-10-28 | Madej Boguslaw | Pruszkowski Jakub | 3-0 | 9 | 9 | +19
-2026-10-28 | Rus Maksymilian | Adamus Kacper | 3-2 | 9 | 9 | Pending
-2026-10-28 | Slosarczyk Pawel | Sokolowski Oliwier | 3-1 | 9 | 9 | Pending
+2026-10-28 | Rus Maksymilian | Adamus Kacper | 3-2 | 9 | 9 | +11
+2026-10-28 | Slosarczyk Pawel | Sokolowski Oliwier | 3-1 | 9 | 9 | +15
 2026-10-28 | Slawinski Kacper | Gajda Rafal | 3-0 | 10 | 10 | +9
 2026-10-28 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-1 | 10 | 10 | +7
 2026-10-28 | Kolasa Szymon | Grela Artur | 3-0 | 10 | 10 | +21
@@ -17620,7 +17631,9 @@
 2026-10-28 | Kolek Maciej | Solilo Dominik | 3-1 | 10 | 5 | +6
 2026-10-28 | Kotwica Dawid | Glanowski Jakub | 3-1 | 10 | 10 | +16
 2026-10-28 | Adamus Pawel | Nowak Jakub | 3-0 | 10 | 10 | +8
-2026-10-28 | Adamus Kacper | Pruszkowski Jakub | 3-0 | 10 | 10 | Pending
+2026-10-28 | Adamus Kacper | Pruszkowski Jakub | 3-0 | 10 | 10 | +17
+2026-10-28 | Madej Boguslaw | Sokolowski Oliwier | 3-0 | 10 | 10 | +14
+2026-10-28 | Slosarczyk Pawel | Rus Maksymilian | 3-1 | 10 | 10 | +12
 2026-10-28 | Marud Grzegorz | Dytko Dawid | 3-1 |  |  | 
 2026-10-28 | Urban Wojciech | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-28 | Paszkiewicz Michal | Tkocz Marek | 3-1 |  |  | 
@@ -17633,5 +17646,4 @@
 2026-10-28 | Jozefiak Michal | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-28 | Vincenec Oliver | Lebek Marian | 3-0 |  |  | 
 2026-10-28 | Slosarczyk Pawel | Adamus Kacper | 3-0 |  |  | 
-2026-10-28 | Golaszewski Kuba | Szoltysek Artur | 3-2 |  |  | 
 2026-10-28 | Ruszkiewicz Adam | Krupa Sebastian | 3-2 |  |  | 
