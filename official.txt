@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-28T12:57Z
+# updated 2026-10-28T14:01Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -15816,7 +15816,7 @@
 2026-10-23 | Skorski Michal | Lukaszewski Mikolaj | 3-1 | 1 | 4 | +10
 2026-10-23 | Wozniczka Marcin | Pawlik Cezary | 3-2 | 1 | 1 | +12
 2026-10-23 | Oracz Jacek | Jedrzejowski Oskar | 3-1 | 1 | 1 | +8
-2026-10-23 | Stapor Rafal | Glanowski Jakub | 3-2 | 1 | 2 | +6
+2026-10-23 | Stapor Rafal | Glanowski Jakub | 3-2 | 1 | 2 | +5
 2026-10-23 | Vincenec Oliver | Hetnar Krzysztof | 3-0 | 1 | 1 | +20
 2026-10-23 | Strus Piotr | Szlubowski Dariusz | 3-2 | 1 | 1 | +10
 2026-10-23 | Janus Slawomir | Natkaniec Michal | 3-2 | 1 | 1 | +7
@@ -17481,6 +17481,10 @@
 2026-10-28 | Sokolowski Oliwier | Pruszkowski Jakub | 3-1 | 3 | 3 | +17
 2026-10-28 | Madej Boguslaw | Adamus Kacper | 3-1 | 3 | 3 | +13
 2026-10-28 | Slosarczyk Pawel | Rus Maksymilian | 3-2 | 3 | 3 | +6
+2026-10-28 | Solilo Dominik | Poliniewicz Grzegorz | 3-2 | 3 | 8 | Pending
+2026-10-28 | Czerwinski Bartosz | Kolek Maciej | 3-1 | 3 | 8 | Pending
+2026-10-28 | Minda Michal | Glanowski Jakub | 3-2 | 3 | 8 | Pending
+2026-10-28 | Kukawka Milosz | Kotwica Dawid | 3-0 | 3 | 8 | Pending
 2026-10-28 | Delikatny Kamil | Fomin Andriej | 3-1 | 4 | 3 | +13
 2026-10-28 | Krezel Andrzej | Machelski Michal | 3-1 | 4 | 3 | +7
 2026-10-28 | Lebek Marian | Jozefiak Michal | 3-1 | 4 | 3 | +10
@@ -17523,6 +17527,7 @@
 2026-10-28 | Rus Maksymilian | Pruszkowski Jakub | 3-1 | 5 | 5 | +19
 2026-10-28 | Adamus Kacper | Slosarczyk Pawel | 3-0 | 5 | 5 | +13
 2026-10-28 | Sokolowski Oliwier | Madej Boguslaw | 3-2 | 5 | 5 | +8
+2026-10-28 | Pruszkowski Jakub | Slosarczyk Pawel | 3-0 | 6 | 6 | +10
 2026-10-28 | Delikatny Kamil | Nocun Zbigniew | 3-0 | 6 | 5 | +16
 2026-10-28 | Nocun Zbigniew | Machelski Michal | 3-1 | 6 | 6 | +6
 2026-10-28 | Brunner Marian | Delikatny Kamil | 3-1 | 6 | 7 | +16
@@ -17539,6 +17544,7 @@
 2026-10-28 | Glanowski Jakub | Myszewski Adrian | 3-1 | 6 | 6 | Pending
 2026-10-28 | Cesarz Milosz | Gajda Rafal | 3-2 | 6 | 6 | Pending
 2026-10-28 | Rus Maksymilian | Sokolowski Oliwier | 3-1 | 6 | 6 | +16
+2026-10-28 | Adamus Kacper | Madej Boguslaw | 3-2 | 6 | 6 | +7
 2026-10-28 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 7 | 7 | +11
 2026-10-28 | Adamus Pawel | Pelka Jerzy | 3-1 | 7 | 7 | Pending
 2026-10-28 | Krezel Andrzej | Fomin Andriej | 3-1 | 7 | 6 | +11
@@ -17554,10 +17560,16 @@
 2026-10-28 | Glanowski Jakub | Kukawka Milosz | 3-1 | 7 | 2 | Pending
 2026-10-28 | Slawinski Kacper | Cesarz Milosz | 3-0 | 7 | 7 | Pending
 2026-10-28 | Gajda Rafal | Nowak Jakub | 3-0 | 7 | 7 | Pending
+2026-10-28 | Wiecek Adrian | Kolasa Szymon | 3-0 | 8 | 8 | Pending
 2026-10-28 | Slawinski Kacper | Pelka Jerzy | 3-0 | 8 | 8 | Pending
 2026-10-28 | Krezel Andrzej | Delikatny Kamil | 3-0 | 8 | 8 | +16
 2026-10-28 | Paszkiewicz Michal | Idaczyk Rafal | 3-2 | 8 | 4 | +9
 2026-10-28 | Lamperski Jakub | Myszewski Adrian | 3-0 | 8 | 8 | Pending
+2026-10-28 | Grela Artur | Olbrycht Michal | 3-0 | 8 | 8 | Pending
+2026-10-28 | Rutkowski Mateusz | Stapor Rafal | 3-2 | 8 | 3 | Pending
+2026-10-28 | Gajda Rafal | Adamus Pawel | 3-0 | 8 | 8 | Pending
+2026-10-28 | Nowak Jakub | Cesarz Milosz | 3-1 | 8 | 8 | Pending
+2026-10-28 | Myszewski Adrian | Kukawka Milosz | 3-2 | 9 | 4 | Pending
 2026-10-28 | Marud Grzegorz | Dytko Dawid | 3-1 |  |  | 
 2026-10-28 | Urban Wojciech | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-28 | Paszkiewicz Michal | Tkocz Marek | 3-1 |  |  | 
@@ -17570,5 +17582,4 @@
 2026-10-28 | Jozefiak Michal | Idaczyk Rafal | 3-0 |  |  | 
 2026-10-28 | Vincenec Oliver | Lebek Marian | 3-0 |  |  | 
 2026-10-28 | Michna Dawid | David Petr | 3-1 |  |  | 
-2026-10-28 | Grela Artur | Olbrycht Michal | 3-0 |  |  | 
 2026-10-28 | Slosarczyk Pawel | Adamus Kacper | 3-0 |  |  | 
