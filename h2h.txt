@@ -1,5 +1,5 @@
 # Head-to-head from tt-series.com/h2h/. The win chance uses the full career series in this file.
-# updated 2026-10-28T00:08Z
+# updated 2026-10-28T00:54Z
 # pair | Adach Rafal | Adamus Mariusz | 2026-10-21T13:45Z
 2025-09-01 | Adamus Mariusz | Adach Rafal | 3-0
 2025-10-04 | Adamus Mariusz | Adach Rafal | 3-1
@@ -9851,7 +9851,7 @@
 2026-10-04 | Pietraszko Lukasz | Brud Szymon | 3-2
 2026-10-13 | Brud Szymon | Pietraszko Lukasz | 3-2
 2026-10-13 | Pietraszko Lukasz | Brud Szymon | 3-1
-# pair | Brud Szymon | Rudomina Kamil | 2026-10-27T06:13Z
+# pair | Brud Szymon | Rudomina Kamil | 2026-10-28T00:54Z
 2025-08-12 | Brud Szymon | Rudomina Kamil | 3-0
 2025-08-12 | Rudomina Kamil | Brud Szymon | 3-1
 2025-09-12 | Rudomina Kamil | Brud Szymon | 3-2
@@ -9883,6 +9883,7 @@
 2026-10-12 | Brud Szymon | Rudomina Kamil | 3-1
 2026-10-13 | Brud Szymon | Rudomina Kamil | 3-0
 2026-10-26 | Rudomina Kamil | Brud Szymon | 3-2
+2026-10-27 | Brud Szymon | Rudomina Kamil | 3-0
 # pair | Brud Szymon | Solilo Dominik | 2026-10-27T13:31Z
 2025-12-28 | Solilo Dominik | Brud Szymon | 3-0
 2026-08-10 | Brud Szymon | Solilo Dominik | 3-1
@@ -12048,7 +12049,7 @@
 2026-09-30 | Kaczmarek Jakub | Cesarz Milosz | 3-0
 2026-10-06 | Cesarz Milosz | Kaczmarek Jakub | 3-2
 2026-10-13 | Kaczmarek Jakub | Cesarz Milosz | 3-2
-# pair | Cesarz Milosz | Kurek Pawel | 2026-10-27T06:13Z
+# pair | Cesarz Milosz | Kurek Pawel | 2026-10-28T00:54Z
 2025-12-13 | Cesarz Milosz | Kurek Pawel | 3-0
 2026-02-21 | Kurek Pawel | Cesarz Milosz | 3-0
 2026-05-05 | Kurek Pawel | Cesarz Milosz | 3-1
@@ -12063,6 +12064,7 @@
 2026-10-14 | Kurek Pawel | Cesarz Milosz | 3-0
 2026-10-15 | Kurek Pawel | Cesarz Milosz | 3-0
 2026-10-26 | Cesarz Milosz | Kurek Pawel | 3-2
+2026-10-27 | Kurek Pawel | Cesarz Milosz | 3-0
 # pair | Cesarz Milosz | Lebek Marian | 2026-10-27T12:14Z
 2025-08-08 | Lebek Marian | Cesarz Milosz | 3-0
 2025-08-09 | Lebek Marian | Cesarz Milosz | 3-1
@@ -19180,7 +19182,7 @@
 2026-10-26 | Dytko Dawid | Marud Grzegorz | 3-0
 2026-10-27 | Marud Grzegorz | Dytko Dawid | 3-0
 2026-10-27 | Marud Grzegorz | Dytko Dawid | 3-1
-# pair | Dytko Dawid | Nowak Jakub | 2026-10-27T06:13Z
+# pair | Dytko Dawid | Nowak Jakub | 2026-10-28T00:54Z
 2023-11-17 | Dytko Dawid | Nowak Jakub | 3-1
 2025-03-18 | Dytko Dawid | Nowak Jakub | 3-0
 2025-03-18 | Nowak Jakub | Dytko Dawid | 3-0
@@ -31749,7 +31751,7 @@
 2026-09-14 | Krcil Frantisek | Iwasyszyn Wojciech | 3-0
 2026-09-24 | Iwasyszyn Wojciech | Krcil Frantisek | 3-0
 2026-09-24 | Krcil Frantisek | Iwasyszyn Wojciech | 3-1
-# pair | Iwasyszyn Wojciech | Kukawka Milosz | 2026-10-27T06:13Z
+# pair | Iwasyszyn Wojciech | Kukawka Milosz | 2026-10-28T00:54Z
 2026-03-02 | Kukawka Milosz | Iwasyszyn Wojciech | 3-2
 2026-03-06 | Iwasyszyn Wojciech | Kukawka Milosz | 3-1
 2026-03-06 | Iwasyszyn Wojciech | Kukawka Milosz | 3-2
@@ -31765,7 +31767,7 @@
 2026-10-01 | Lamperski Jakub | Iwasyszyn Wojciech | 3-0
 2026-10-01 | Lamperski Jakub | Iwasyszyn Wojciech | 3-0
 2026-10-14 | Lamperski Jakub | Iwasyszyn Wojciech | 3-2
-# pair | Iwasyszyn Wojciech | Minda Michal | 2026-10-27T06:13Z
+# pair | Iwasyszyn Wojciech | Minda Michal | 2026-10-28T00:54Z
 2023-02-25 | Minda Michal | Iwasyszyn Wojciech | 3-0
 2023-02-25 | Minda Michal | Iwasyszyn Wojciech | 3-2
 2023-07-09 | Minda Michal | Iwasyszyn Wojciech | 3-1
@@ -46070,7 +46072,7 @@
 2026-10-01 | Kosmal Dawid | Minda Michal | 3-2
 2026-10-06 | Kosmal Dawid | Minda Michal | 3-1
 2026-10-14 | Kosmal Dawid | Minda Michal | 3-0
-# pair | Kosmal Dawid | Mitas Jacek | 2026-10-27T06:13Z
+# pair | Kosmal Dawid | Mitas Jacek | 2026-10-28T00:54Z
 2026-05-12 | Kosmal Dawid | Mitas Jacek | 3-1
 2026-05-25 | Kosmal Dawid | Mitas Jacek | 3-2
 2026-08-01 | Mitas Jacek | Kosmal Dawid | 3-1
@@ -46080,6 +46082,8 @@
 2026-10-13 | Mitas Jacek | Kosmal Dawid | 3-1
 2026-10-26 | Mitas Jacek | Kosmal Dawid | 3-0
 2026-10-26 | Mitas Jacek | Kosmal Dawid | 3-1
+2026-10-27 | Kosmal Dawid | Mitas Jacek | 3-1
+2026-10-27 | Mitas Jacek | Kosmal Dawid | 3-2
 # pair | Kosmal Dawid | Olbrycht Michal | 2026-10-27T12:14Z
 2026-09-16 | Kosmal Dawid | Olbrycht Michal | 3-2
 2026-09-16 | Olbrycht Michal | Kosmal Dawid | 3-1
@@ -51390,12 +51394,13 @@
 2026-10-25 | Kukawka Milosz | Misiak Mateusz | 3-0
 2026-10-27 | Kukawka Milosz | Misiak Mateusz | 3-2
 2026-10-27 | Kukawka Milosz | Misiak Mateusz | 3-2
-# pair | Kukawka Milosz | Mleczko Bartlomiej | 2026-10-27T06:13Z
+# pair | Kukawka Milosz | Mleczko Bartlomiej | 2026-10-28T00:54Z
 2026-05-02 | Mleczko Bartlomiej | Kukawka Milosz | 3-2
 2026-10-17 | Kukawka Milosz | Mleczko Bartlomiej | 3-0
 2026-10-17 | Mleczko Bartlomiej | Kukawka Milosz | 3-0
 2026-10-26 | Mleczko Bartlomiej | Kukawka Milosz | 3-2
 2026-10-27 | Kukawka Milosz | Mleczko Bartlomiej | 3-0
+2026-10-27 | Kukawka Milosz | Mleczko Bartlomiej | 3-2
 # pair | Kukawka Milosz | Mugowski Arkadiusz | 2026-10-26T05:16Z
 2026-02-21 | Mugowski Arkadiusz | Kukawka Milosz | 3-2
 2026-04-24 | Mugowski Arkadiusz | Kukawka Milosz | 3-1
@@ -65723,7 +65728,7 @@
 2026-09-10 | Olbrycht Michal | Mitas Jacek | 3-0
 2026-09-10 | Olbrycht Michal | Mitas Jacek | 3-1
 2026-10-27 | Mitas Jacek | Olbrycht Michal | 3-0
-# pair | Mitas Jacek | Poliniewicz Grzegorz | 2026-10-27T06:13Z
+# pair | Mitas Jacek | Poliniewicz Grzegorz | 2026-10-28T00:54Z
 2026-06-22 | Poliniewicz Grzegorz | Mitas Jacek | 3-2
 2026-06-25 | Poliniewicz Grzegorz | Mitas Jacek | 3-2
 2026-07-15 | Mitas Jacek | Poliniewicz Grzegorz | 3-2
@@ -65736,7 +65741,8 @@
 2026-10-13 | Poliniewicz Grzegorz | Mitas Jacek | 3-1
 2026-10-26 | Mitas Jacek | Poliniewicz Grzegorz | 3-2
 2026-10-26 | Poliniewicz Grzegorz | Mitas Jacek | 3-2
-# pair | Mitas Jacek | Rutkowski Mateusz | 2026-10-27T06:13Z
+2026-10-27 | Poliniewicz Grzegorz | Mitas Jacek | 3-1
+# pair | Mitas Jacek | Rutkowski Mateusz | 2026-10-28T00:54Z
 2026-05-25 | Mitas Jacek | Rutkowski Mateusz | 3-1
 2026-05-25 | Rutkowski Mateusz | Mitas Jacek | 3-2
 2026-05-26 | Rutkowski Mateusz | Mitas Jacek | 3-0
@@ -65764,6 +65770,7 @@
 2026-10-13 | Mitas Jacek | Rutkowski Mateusz | 3-0
 2026-10-26 | Mitas Jacek | Rutkowski Mateusz | 3-0
 2026-10-26 | Mitas Jacek | Rutkowski Mateusz | 3-1
+2026-10-27 | Mitas Jacek | Rutkowski Mateusz | 3-1
 # pair | Mitas Jacek | Sklensky Miroslav | 2026-10-27T13:31Z
 2026-08-20 | Sklensky Miroslav | Mitas Jacek | 3-0
 2026-10-12 | Sklensky Miroslav | Mitas Jacek | 3-1
@@ -84644,7 +84651,7 @@
 2026-10-20 | Sobel Artur | Solilo Dominik | 3-2
 2026-10-20 | Solilo Dominik | Sobel Artur | 3-2
 2026-10-26 | Sobel Artur | Solilo Dominik | 3-2
-# pair | Sobel Artur | Stapor Rafal | 2026-10-27T06:13Z
+# pair | Sobel Artur | Stapor Rafal | 2026-10-28T00:54Z
 2026-06-29 | Sobel Artur | Stapor Rafal | 3-2
 2026-06-29 | Stapor Rafal | Sobel Artur | 3-1
 2026-06-30 | Sobel Artur | Stapor Rafal | 3-2
@@ -84663,6 +84670,7 @@
 2026-10-06 | Sobel Artur | Stapor Rafal | 3-2
 2026-10-13 | Stapor Rafal | Sobel Artur | 3-0
 2026-10-26 | Stapor Rafal | Sobel Artur | 3-2
+2026-10-27 | Stapor Rafal | Sobel Artur | 3-2
 # pair | Sobel Artur | Sulkowski Karol | 2026-10-27T13:31Z
 2026-02-02 | Sobel Artur | Sulkowski Karol | 3-2
 2026-02-02 | Sobel Artur | Sulkowski Karol | 3-2
