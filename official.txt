@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-28T02:00Z
+# updated 2026-10-28T02:48Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17208,7 +17208,8 @@
 2026-10-27 | Pytlas Wojciech | Jurowicz Grzegorz | 3-0 | 3 | 3 | Pending
 2026-10-27 | Szostok Sebastian | Sokolowski Oliwier | 3-2 | 3 | 8 | +6
 2026-10-27 | Pytlas Wojciech | Juszczyk Krzysztof | 3-1 | 3 | 4 | +11
-2026-10-27 | Fomin Andriej | Machelski Michal | 3-1 | 3 | 7 | Pending
+2026-10-27 | Fomin Andriej | Machelski Michal | 3-1 | 3 | 7 | +6
+2026-10-27 | Brunner Marian | Nocun Zbigniew | 3-2 | 3 | 7 | +11
 2026-10-27 | Michalik Jerzy | Cyndera Jakub | 3-0 | 4 | 3 | +16
 2026-10-27 | Marud Grzegorz | Nowak Jakub | 3-0 | 4 | 4 | +8
 2026-10-27 | Tkaczyk Henryk | Dytko Dawid | 3-0 | 4 | 5 | +17
@@ -17305,12 +17306,12 @@
 2026-10-27 | Brud Szymon | Solilo Dominik | 3-1 | 6 | 8 | +12
 2026-10-27 | Nocun Zbigniew | Krezel Andrzej | 3-1 | 6 | 2 | +11
 2026-10-27 | Trela Mateusz | Rolak Jaroslaw | 3-2 | 6 | 4 | +6
-2026-10-27 | Blocho Przemyslaw | Brud Szymon | 3-2 | 6 | 10 | Pending
+2026-10-27 | Blocho Przemyslaw | Brud Szymon | 3-2 | 6 | 10 | +8
 2026-10-27 | Szostok Sebastian | Marud Grzegorz | 3-1 | 6 | 12 | +14
 2026-10-27 | Kurek Pawel | Tkaczyk Henryk | 3-1 | 6 | 7 | +8
 2026-10-27 | Lebek Marian | Jurowicz Grzegorz | 3-1 | 6 | 6 | +8
 2026-10-27 | Dytko Dawid | Nowak Jakub | 3-0 | 7 | 6 | +13
-2026-10-27 | Perzynski Przemyslaw | Pietraszko Lukasz | 3-2 | 7 | 7 | Pending
+2026-10-27 | Perzynski Przemyslaw | Pietraszko Lukasz | 3-2 | 7 | 7 | +7
 2026-10-27 | Kosowski Jakub | Wiecek Adrian | 3-1 | 7 | 7 | +11
 2026-10-27 | Wloczko Krzysztof | Jadczyk Marcin | 3-1 | 7 | 7 | +16
 2026-10-27 | David Petr | Sklensky Miroslav | 3-1 | 7 | 7 | +8
@@ -17348,7 +17349,7 @@
 2026-10-27 | Brud Szymon | Perzynski Przemyslaw | 3-1 | 8 | 5 | +16
 2026-10-27 | Dytko Dawid | Urban Wojciech | 3-2 | 8 | 12 | +9
 2026-10-27 | Trela Mateusz | Lukaszewski Mikolaj | 3-2 | 8 | 3 | +8
-2026-10-27 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-0 | 8 | 7 | Pending
+2026-10-27 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-0 | 8 | 7 | +13
 2026-10-27 | Szymanski Igor | Adamus Kacper | 3-0 | 9 | 9 | +15
 2026-10-27 | Smolka Kamil | Baron Mariusz | 3-2 | 9 | 9 | +7
 2026-10-27 | Kukawka Milosz | Misiak Mateusz | 3-2 | 9 | 9 | +4
@@ -17360,8 +17361,8 @@
 2026-10-27 | Juzek Sebastian | Brozek Piotr | 3-0 | 9 | 9 | +19
 2026-10-27 | Gajda Rafal | Slawinski Kacper | 3-1 | 9 | 9 | +16
 2026-10-27 | Marud Grzegorz | Urban Wojciech | 3-1 | 9 | 9 | +10
-2026-10-27 | Rudomina Kamil | Perzynski Przemyslaw | 3-2 | 9 | 6 | Pending
-2026-10-27 | Brud Szymon | Pietraszko Lukasz | 3-1 | 9 | 6 | Pending
+2026-10-27 | Rudomina Kamil | Perzynski Przemyslaw | 3-2 | 9 | 6 | +11
+2026-10-27 | Brud Szymon | Pietraszko Lukasz | 3-1 | 9 | 6 | +14
 2026-10-27 | Juzek Sebastian | Smolka Kamil | 3-1 | 10 | 10 | +13
 2026-10-27 | Wloczko Krzysztof | David Petr | 3-1 | 10 | 10 | +18
 2026-10-27 | Jadczyk Marcin | Kosowski Jakub | 3-1 | 10 | 10 | +15
@@ -17386,15 +17387,14 @@
 2026-10-27 | Zwolinski Mariusz | Szoltysek Artur | 3-1 |  |  | 
 2026-10-27 | Glanowski Waldemar | Pruszkowski Jakub | 3-1 |  |  | 
 2026-10-27 | Trela Mateusz | Piecowski Miroslaw | 3-0 |  |  | 
-2026-10-27 | Brunner Marian | Nocun Zbigniew | 3-2 |  |  | 
 2026-10-27 | Delikatny Kamil | Krezel Andrzej | 3-1 |  |  | 
 2026-10-27 | Machelski Michal | Nocun Zbigniew | 3-0 |  |  | 
 2026-10-27 | Delikatny Kamil | Brunner Marian | 3-0 |  |  | 
 2026-10-27 | Fomin Andriej | Krezel Andrzej | 3-2 |  |  | 
 2026-10-28 | Rolak Jaroslaw | Piecowski Miroslaw | 3-2 | 1 | 1 | +8
 2026-10-28 | Lukaszewski Mikolaj | Rolak Jaroslaw | 3-1 | 1 | 2 | +10
-2026-10-28 | Brud Szymon | Perzynski Przemyslaw | 3-2 | 1 | 1 | Pending
-2026-10-28 | Pietraszko Lukasz | Rudomina Kamil | 3-1 | 1 | 1 | Pending
+2026-10-28 | Brud Szymon | Perzynski Przemyslaw | 3-2 | 1 | 1 | +10
+2026-10-28 | Pietraszko Lukasz | Rudomina Kamil | 3-1 | 1 | 1 | +9
 2026-10-28 | Trela Mateusz | Rolak Jaroslaw | 3-0 | 1 | 3 | +11
 2026-10-28 | Marud Grzegorz | Urban Wojciech | 3-0 | 1 | 1 | +13
 2026-10-28 | Lebek Marian | Paszkiewicz Michal | 3-2 | 1 | 1 | +5
@@ -17402,26 +17402,34 @@
 2026-10-28 | Jurowicz Grzegorz | Vincenec Oliver | 3-2 | 1 | 1 | Pending
 2026-10-28 | Tkocz Marek | Lebek Marian | 3-1 | 1 | 2 | Pending
 2026-10-28 | Tkaczyk Henryk | Szostok Sebastian | 3-1 | 1 | 1 | +16
+2026-10-28 | Machelski Michal | Nocun Zbigniew | 3-0 | 1 | 1 | +26
+2026-10-28 | Fomin Andriej | Krezel Andrzej | 3-2 | 1 | 2 | +7
+2026-10-28 | Delikatny Kamil | Krezel Andrzej | 3-1 | 1 | 1 | +14
 2026-10-28 | Piecowski Miroslaw | Skorski Michal | 3-1 | 2 | 1 | +13
-2026-10-28 | Rudomina Kamil | Blocho Przemyslaw | 3-0 | 2 | 1 | Pending
+2026-10-28 | Rudomina Kamil | Blocho Przemyslaw | 3-0 | 2 | 1 | +19
 2026-10-28 | Lukaszewski Mikolaj | Skorski Michal | 3-0 | 2 | 2 | +13
-2026-10-28 | Brud Szymon | Rudomina Kamil | 3-1 | 2 | 3 | Pending
+2026-10-28 | Brud Szymon | Rudomina Kamil | 3-1 | 2 | 3 | +10
 2026-10-28 | Paszkiewicz Michal | Jozefiak Michal | 3-0 | 2 | 1 | Pending
+2026-10-28 | Nocun Zbigniew | Fomin Andriej | 3-1 | 2 | 2 | +12
+2026-10-28 | Marud Grzegorz | Kurek Pawel | 3-2 | 2 | 2 | +7
+2026-10-28 | Pietraszko Lukasz | Blocho Przemyslaw | 3-2 | 2 | 2 | +7
+2026-10-28 | Tkocz Marek | Jozefiak Michal | 3-0 | 2 | 2 | Pending
+2026-10-28 | Tkaczyk Henryk | Dytko Dawid | 3-0 | 2 | 2 | +16
+2026-10-28 | Delikatny Kamil | Brunner Marian | 3-0 | 2 | 1 | +14
 2026-10-28 | Skorski Michal | Trela Mateusz | 3-1 | 3 | 2 | +15
 2026-10-28 | Piecowski Miroslaw | Lukaszewski Mikolaj | 3-0 | 3 | 3 | +20
+2026-10-28 | Delikatny Kamil | Machelski Michal | 3-1 | 3 | 2 | +7
+2026-10-28 | Krezel Andrzej | Brunner Marian | 3-1 | 3 | 2 | +10
+2026-10-28 | Nocun Zbigniew | Brunner Marian | 3-0 | 3 | 3 | Pending
+2026-10-28 | Paszkiewicz Michal | Jurowicz Grzegorz | 3-0 | 3 | 2 | Pending
+2026-10-28 | Delikatny Kamil | Fomin Andriej | 3-1 | 4 | 3 | Pending
+2026-10-28 | Krezel Andrzej | Machelski Michal | 3-1 | 4 | 3 | Pending
+2026-10-28 | Delikatny Kamil | Machelski Michal | 3-0 | 5 | 4 | Pending
 2026-10-28 | Marud Grzegorz | Dytko Dawid | 3-1 |  |  | 
 2026-10-28 | Urban Wojciech | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-28 | Paszkiewicz Michal | Tkocz Marek | 3-1 |  |  | 
 2026-10-28 | Jurowicz Grzegorz | Jozefiak Michal | 3-1 |  |  | 
-2026-10-28 | Delikatny Kamil | Fomin Andriej | 3-1 |  |  | 
 2026-10-28 | Perzynski Przemyslaw | Pietraszko Lukasz | 3-2 |  |  | 
 2026-10-28 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-0 |  |  | 
 2026-10-28 | Szostok Sebastian | Kurek Pawel | 3-1 |  |  | 
 2026-10-28 | Vincenec Oliver | Tkocz Marek | 3-2 |  |  | 
-2026-10-28 | Delikatny Kamil | Machelski Michal | 3-1 |  |  | 
-2026-10-28 | Nocun Zbigniew | Fomin Andriej | 3-1 |  |  | 
-2026-10-28 | Krezel Andrzej | Brunner Marian | 3-1 |  |  | 
-2026-10-28 | Krezel Andrzej | Machelski Michal | 3-1 |  |  | 
-2026-10-28 | Nocun Zbigniew | Brunner Marian | 3-0 |  |  | 
-2026-10-28 | Delikatny Kamil | Machelski Michal | 3-0 |  |  | 
-2026-10-28 | Marud Grzegorz | Kurek Pawel | 3-2 |  |  | 
