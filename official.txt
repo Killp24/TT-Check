@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-28T23:42Z
+# updated 2026-10-29T00:10Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17593,6 +17593,7 @@
 2026-10-28 | Juszczyk Krzysztof | Polok Pawel | 3-1 | 5 | 5 | +14
 2026-10-28 | Kowalczyk Marcin | Golaszewski Kuba | 3-1 | 5 | 5 | +10
 2026-10-28 | Zelezik Jacek | Pyrek Dawid | 3-1 | 5 | 5 | +6
+2026-10-28 | Staniczek Adam | Janus Slawomir | 3-1 | 5 | 5 | Pending
 2026-10-28 | Pruszkowski Jakub | Slosarczyk Pawel | 3-0 | 6 | 6 | +10
 2026-10-28 | Delikatny Kamil | Nocun Zbigniew | 3-0 | 6 | 5 | +16
 2026-10-28 | Nocun Zbigniew | Machelski Michal | 3-1 | 6 | 6 | +6
@@ -17619,6 +17620,8 @@
 2026-10-28 | Kowalczyk Marcin | Suchecki Waclaw | 3-1 | 6 | 6 | Pending
 2026-10-28 | Zelezik Jacek | Delikatny Kamil | 3-0 | 6 | 14 | +9
 2026-10-28 | Koczyba Mariusz | Burkacki Adrian | 3-2 | 6 | 1 | Pending
+2026-10-28 | Mugowski Arkadiusz | Nadolny Jakub | 3-2 | 6 | 6 | Pending
+2026-10-28 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 7 | 6 | Pending
 2026-10-28 | Kolek Maciej | Rutkowski Mateusz | 3-1 | 7 | 7 | +11
 2026-10-28 | Adamus Pawel | Pelka Jerzy | 3-1 | 7 | 7 | +11
 2026-10-28 | Krezel Andrzej | Fomin Andriej | 3-1 | 7 | 6 | +11
@@ -17639,6 +17642,10 @@
 2026-10-28 | Sokolowski Oliwier | Adamus Kacper | 3-2 | 7 | 7 | +9
 2026-10-28 | Blocho Przemyslaw | Mugowski Arkadiusz | 3-1 | 7 | 5 | +7
 2026-10-28 | Perzynski Przemyslaw | Blocho Przemyslaw | 3-1 | 7 | 8 | Pending
+2026-10-28 | Mugowski Arkadiusz | Rudomina Kamil | 3-2 | 7 | 9 | Pending
+2026-10-28 | Szoltysek Artur | Golaszewski Kuba | 3-2 | 7 | 7 | Pending
+2026-10-28 | Kumor Michal | Barton Aleksander | 3-1 | 7 | 2 | +2
+2026-10-28 | Pyrek Dawid | Delikatny Kamil | 3-1 | 7 | 15 | +13
 2026-10-28 | Wiecek Adrian | Kolasa Szymon | 3-0 | 8 | 8 | +13
 2026-10-28 | Slawinski Kacper | Pelka Jerzy | 3-0 | 8 | 8 | +13
 2026-10-28 | Krezel Andrzej | Delikatny Kamil | 3-0 | 8 | 8 | +16
@@ -17669,6 +17676,7 @@
 2026-10-28 | Madej Boguslaw | Pruszkowski Jakub | 3-0 | 9 | 9 | +19
 2026-10-28 | Rus Maksymilian | Adamus Kacper | 3-2 | 9 | 9 | +11
 2026-10-28 | Slosarczyk Pawel | Sokolowski Oliwier | 3-1 | 9 | 9 | +15
+2026-10-28 | Blocho Przemyslaw | Nadolny Jakub | 3-0 | 9 | 7 | Pending
 2026-10-28 | Slawinski Kacper | Gajda Rafal | 3-0 | 10 | 10 | +9
 2026-10-28 | Poliniewicz Grzegorz | Rutkowski Mateusz | 3-1 | 10 | 10 | +7
 2026-10-28 | Kolasa Szymon | Grela Artur | 3-0 | 10 | 10 | +21
@@ -17683,10 +17691,13 @@
 2026-10-28 | Madej Boguslaw | Sokolowski Oliwier | 3-0 | 10 | 10 | +14
 2026-10-28 | Slosarczyk Pawel | Rus Maksymilian | 3-1 | 10 | 10 | +12
 2026-10-28 | Solilo Dominik | Rudomina Kamil | 3-1 | 10 | 8 | +14
+2026-10-28 | Blocho Przemyslaw | Rudomina Kamil | 3-2 | 10 | 10 | Pending
 2026-10-28 | Fomin Andriej | Janus Slawomir | 3-0 | 11 | 4 | Pending
 2026-10-28 | Krezel Andrzej | Pyrek Dawid | 3-1 | 12 | 4 | +10
 2026-10-28 | Delikatny Kamil | Skupinski Arkadiusz | 3-2 | 12 | 4 | +5
+2026-10-28 | Fomin Andriej | Zielinski Marcin | 3-2 | 12 | 5 | Pending
 2026-10-28 | Krezel Andrzej | Delikatny Kamil | 3-1 | 13 | 13 | +11
+2026-10-28 | Krezel Andrzej | Zelezik Jacek | 3-1 | 15 | 7 | +16
 2026-10-28 | Marud Grzegorz | Dytko Dawid | 3-1 |  |  | 
 2026-10-28 | Urban Wojciech | Tkaczyk Henryk | 3-2 |  |  | 
 2026-10-28 | Paszkiewicz Michal | Tkocz Marek | 3-1 |  |  | 
@@ -17700,9 +17711,9 @@
 2026-10-28 | Vincenec Oliver | Lebek Marian | 3-0 |  |  | 
 2026-10-28 | Slosarczyk Pawel | Adamus Kacper | 3-0 |  |  | 
 2026-10-28 | Ruszkiewicz Adam | Krupa Sebastian | 3-2 |  |  | 
-2026-10-28 | Mugowski Arkadiusz | Nadolny Jakub | 3-2 |  |  | 
-2026-10-28 | Kowalczyk Marcin | Szoltysek Artur | 3-1 |  |  | 
+2026-10-29 | Suchecki Waclaw | Golaszewski Kuba | 3-2 | 1 | 1 | Pending
+2026-10-29 | Polok Pawel | Tkaczyk Henryk | 3-1 | 1 | 1 | Pending
+2026-10-29 | Lebek Marian | Polok Pawel | 3-0 | 1 | 2 | Pending
+2026-10-29 | Koczyba Mariusz | Paszkiewicz Michal | 3-0 | 1 | 1 | Pending
 2026-10-29 | Kumor Michal | Barton Aleksander | 3-1 |  |  | 
-2026-10-29 | Suchecki Waclaw | Golaszewski Kuba | 3-2 |  |  | 
-2026-10-29 | Polok Pawel | Tkaczyk Henryk | 3-1 |  |  | 
 2026-10-29 | Staniczek Adam | Janus Slawomir | 3-1 |  |  | 
