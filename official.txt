@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-29T19:51Z
+# updated 2026-10-29T23:37Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -17747,13 +17747,15 @@
 2026-10-29 | Kurek Pawel | Pruszkowski Jakub | 3-1 | 1 | 2 | +10
 2026-10-29 | Sokolowski Oliwier | Skotniczny Rafal | 3-2 | 1 | 1 | +12
 2026-10-29 | Staszczyk Konrad | Kotwica Dawid | 3-0 | 1 | 1 | +2
-2026-10-29 | Eliasz Adrian | Mrugala Bartlomiej | 3-2 | 1 | 1 | Pending
-2026-10-29 | Pytlas Wojciech | Juszczyk Krzysztof | 3-0 | 1 | 1 | Pending
-2026-10-29 | Tkocz Marek | Jurowicz Grzegorz | 3-1 | 1 | 1 | Pending
+2026-10-29 | Eliasz Adrian | Mrugala Bartlomiej | 3-2 | 1 | 1 | +7
+2026-10-29 | Pytlas Wojciech | Juszczyk Krzysztof | 3-0 | 1 | 1 | +15
+2026-10-29 | Tkocz Marek | Jurowicz Grzegorz | 3-1 | 1 | 1 | +9
 2026-10-29 | Nocun Zbigniew | Zmijewski Artur | 3-2 | 1 | 1 | +9
 2026-10-29 | Glanowski Waldemar | Kubiak Artur | 3-1 | 1 | 1 | +12
-2026-10-29 | Skupinski Arkadiusz | Skorupa Jakub | 3-1 | 1 | 1 | Pending
-2026-10-29 | Wolny Michal | Frank Roman | 3-0 | 1 | 1 | Pending
+2026-10-29 | Skupinski Arkadiusz | Skorupa Jakub | 3-1 | 1 | 1 | +17
+2026-10-29 | Wolny Michal | Frank Roman | 3-0 | 1 | 1 | +12
+2026-10-29 | Molenda Dariusz | Bartosik Dominik | 3-0 | 1 | 6 | +9
+2026-10-29 | Jozefiak Michal | Lebek Marian | 3-1 | 1 | 10 | Pending
 2026-10-29 | Suchecki Waclaw | Zwolinski Mariusz | 3-2 | 2 | 1 | +11
 2026-10-29 | Tkaczyk Henryk | Burkacki Adrian | 3-2 | 2 | 1 | +8
 2026-10-29 | Koczyba Mariusz | Lebek Marian | 3-1 | 2 | 2 | +13
@@ -17792,12 +17794,14 @@
 2026-10-29 | Kurek Pawel | Sokolowski Oliwier | 3-1 | 2 | 3 | +8
 2026-10-29 | Staszczyk Konrad | Mugowski Arkadiusz | 3-1 | 2 | 4 | +2
 2026-10-29 | Linek Adam | Kotwica Dawid | 3-0 | 2 | 2 | +8
-2026-10-29 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-2 | 2 | 2 | Pending
-2026-10-29 | Rolak Jaroslaw | Eliasz Adrian | 3-2 | 2 | 2 | Pending
-2026-10-29 | Tkocz Marek | Pytlas Wojciech | 3-1 | 2 | 2 | Pending
-2026-10-29 | Juszczyk Krzysztof | Kowalski Kamil | 3-1 | 2 | 2 | Pending
-2026-10-29 | Skorupa Jakub | Pyrek Dawid | 3-2 | 2 | 5 | Pending
-2026-10-29 | Skupinski Arkadiusz | Frank Roman | 3-0 | 2 | 2 | Pending
+2026-10-29 | Lukaszewski Mikolaj | Mrugala Bartlomiej | 3-2 | 2 | 2 | +7
+2026-10-29 | Rolak Jaroslaw | Eliasz Adrian | 3-2 | 2 | 2 | +10
+2026-10-29 | Tkocz Marek | Pytlas Wojciech | 3-1 | 2 | 2 | +13
+2026-10-29 | Juszczyk Krzysztof | Kowalski Kamil | 3-1 | 2 | 2 | +5
+2026-10-29 | Skorupa Jakub | Pyrek Dawid | 3-2 | 2 | 5 | +6
+2026-10-29 | Skupinski Arkadiusz | Frank Roman | 3-0 | 2 | 2 | +14
+2026-10-29 | Molenda Dariusz | Nocun Zbigniew | 3-1 | 2 | 2 | +5
+2026-10-29 | Michalik Jerzy | Zmijewski Artur | 3-2 | 2 | 2 | +11
 2026-10-29 | Malachowski Michal | Kolasa Szymon | 3-2 | 3 | 3 | +8
 2026-10-29 | Grela Artur | Benes Michal | 3-1 | 3 | 3 | +10
 2026-10-29 | Pelka Jerzy | Schaniel Krzysztof | 3-1 | 3 | 3 | +13
@@ -17828,19 +17832,19 @@
 2026-10-29 | Staszczyk Konrad | Glanowski Jakub | 3-2 | 3 | 3 | +1
 2026-10-29 | Linek Adam | Mugowski Arkadiusz | 3-1 | 3 | 5 | +8
 2026-10-29 | Mugowski Arkadiusz | Glanowski Jakub | 3-2 | 3 | 1 | +8
-2026-10-29 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-2 | 3 | 1 | Pending
-2026-10-29 | Eliasz Adrian | Golaszewski Kuba | 3-1 | 3 | 5 | Pending
-2026-10-29 | Kowalczyk Marcin | Rolak Jaroslaw | 3-2 | 3 | 1 | Pending
-2026-10-29 | Mrugala Bartlomiej | Rolak Jaroslaw | 3-2 | 3 | 3 | Pending
-2026-10-29 | Tkocz Marek | Koczyba Mariusz | 3-0 | 3 | 7 | Pending
-2026-10-29 | Jurowicz Grzegorz | Juszczyk Krzysztof | 3-2 | 3 | 3 | Pending
-2026-10-29 | Pytlas Wojciech | Kowalski Kamil | 3-0 |  | 3 | 
-2026-10-29 | Wolny Michal | Skupinski Arkadiusz | 3-0 | 3 | 3 | Pending
+2026-10-29 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-2 | 3 | 1 | +12
+2026-10-29 | Eliasz Adrian | Golaszewski Kuba | 3-1 | 3 | 5 | +8
+2026-10-29 | Kowalczyk Marcin | Rolak Jaroslaw | 3-2 | 3 | 1 | +7
+2026-10-29 | Mrugala Bartlomiej | Rolak Jaroslaw | 3-2 | 3 | 3 | +8
+2026-10-29 | Tkocz Marek | Koczyba Mariusz | 3-0 | 3 | 7 | +17
+2026-10-29 | Jurowicz Grzegorz | Juszczyk Krzysztof | 3-2 | 3 | 3 | +10
+2026-10-29 | Pytlas Wojciech | Kowalski Kamil | 3-0 | 3 | 3 | +5
+2026-10-29 | Wolny Michal | Skupinski Arkadiusz | 3-0 | 3 | 3 | +15
+2026-10-29 | Krezel Andrzej | Delikatny Kamil | 3-0 | 4 | 4 | +12
 2026-10-29 | Kolek Maciej | Wisniewski Karol | 3-0 | 4 | 3 | +12
 2026-10-29 | Fomin Andriej | Stechly Witold | 3-2 | 4 | 4 | +2
 2026-10-29 | Warzecha Miroslaw | Staniczek Adam | 3-0 | 4 | 4 | +6
 2026-10-29 | Bartosik Dominik | Zielinski Marcin | 3-1 | 4 | 4 | +18
-2026-10-29 | Krezel Andrzej | Delikatny Kamil | 3-0 | 4 | 4 | +12
 2026-10-29 | Polok Pawel | Paszkiewicz Michal | 3-0 | 4 | 3 | +11
 2026-10-29 | Koczyba Mariusz | Polok Pawel | 3-0 | 4 | 5 | +17
 2026-10-29 | Paszkiewicz Michal | Burkacki Adrian | 3-0 | 4 | 4 | +16
@@ -17862,8 +17866,18 @@
 2026-10-29 | Czerwinski Bartosz | Stapor Rafal | 3-1 | 4 | 4 | +11
 2026-10-29 | Kesik Gracjan | Lamperski Jakub | 3-2 | 4 | 9 | +7
 2026-10-29 | Minda Michal | Krcil Frantisek | 3-1 | 4 | 9 | +9
-2026-10-29 | Golaszewski Kuba | Kowalczyk Marcin | 3-1 | 4 | 4 | Pending
-2026-10-29 | Kumor Michal | Pyrek Dawid | 3-0 | 4 | 4 | Pending
+2026-10-29 | Golaszewski Kuba | Kowalczyk Marcin | 3-1 | 4 | 4 | +16
+2026-10-29 | Kumor Michal | Pyrek Dawid | 3-0 | 4 | 4 | +15
+2026-10-29 | Linek Adam | Staszczyk Konrad | 3-0 | 4 | 4 | +27
+2026-10-29 | Eliasz Adrian | Kowalczyk Marcin | 3-1 | 4 | 6 | +11
+2026-10-29 | Glanowski Jakub | Kotwica Dawid | 3-2 | 4 | 4 | +6
+2026-10-29 | Tkocz Marek | Kowalski Kamil | 3-0 | 4 | 4 | +5
+2026-10-29 | Lukaszewski Mikolaj | Rolak Jaroslaw | 3-1 | 4 | 4 | +9
+2026-10-29 | Pytlas Wojciech | Jurowicz Grzegorz | 3-1 | 4 | 4 | +8
+2026-10-29 | Mrugala Bartlomiej | Golaszewski Kuba | 3-1 | 4 | 6 | +9
+2026-10-29 | Juszczyk Krzysztof | Koczyba Mariusz | 3-0 | 4 | 8 | +18
+2026-10-29 | Wolny Michal | Skorupa Jakub | 3-0 | 4 | 4 | +19
+2026-10-29 | Kurek Pawel | Pruszkowski Jakub | 3-1 | 5 | 6 | +10
 2026-10-29 | Lebek Marian | Urban Wojciech | 3-1 | 5 | 1 | +12
 2026-10-29 | Warzecha Miroslaw | Stechly Witold | 3-0 | 5 | 5 | +3
 2026-10-29 | Zielinski Marcin | Fomin Andriej | 3-1 | 5 | 5 | +8
@@ -17882,7 +17896,6 @@
 2026-10-29 | Lamperski Jakub | Krcil Frantisek | 3-1 | 5 | 5 | +10
 2026-10-29 | Iwasyszyn Wojciech | Klocek Kamil | 3-2 | 5 | 5 | +8
 2026-10-29 | Idaczyk Rafal | Paszkiewicz Michal | 3-0 | 5 | 9 | +14
-2026-10-29 | Kurek Pawel | Pruszkowski Jakub | 3-1 | 5 | 6 | +10
 2026-10-29 | Skotniczny Rafal | Kurek Pawel | 3-0 | 5 | 4 | +16
 2026-10-29 | Pruszkowski Jakub | Glanowski Waldemar | 3-1 | 5 | 5 | +9
 2026-10-29 | Sokolowski Oliwier | Adamus Kacper | 3-2 | 5 | 5 | +10
@@ -17890,9 +17903,20 @@
 2026-10-29 | Kesik Gracjan | Krcil Frantisek | 3-1 | 5 | 10 | +8
 2026-10-29 | Minda Michal | Iwasyszyn Wojciech | 3-1 | 5 | 10 | +6
 2026-10-29 | Kukawka Milosz | Lamperski Jakub | 3-2 | 5 | 10 | +7
-2026-10-29 | Kowalczyk Marcin | Lukaszewski Mikolaj | 3-1 | 5 | 3 | Pending
-2026-10-29 | Koczyba Mariusz | Kowalski Kamil | 3-0 | 5 | 1 | Pending
-2026-10-29 | Kumor Michal | Wolny Michal | 3-0 | 5 | 2 | Pending
+2026-10-29 | Kowalczyk Marcin | Lukaszewski Mikolaj | 3-1 | 5 | 3 | +14
+2026-10-29 | Koczyba Mariusz | Kowalski Kamil | 3-0 | 5 | 1 | +6
+2026-10-29 | Kumor Michal | Wolny Michal | 3-0 | 5 | 2 | +13
+2026-10-29 | Staszczyk Konrad | Kesik Gracjan | 3-0 | 5 | 10 | +7
+2026-10-29 | Glanowski Jakub | Linek Adam | 3-1 | 5 | 5 | +17
+2026-10-29 | Eliasz Adrian | Lukaszewski Mikolaj | 3-0 | 5 | 5 | +15
+2026-10-29 | Kotwica Dawid | Mugowski Arkadiusz | 3-1 | 5 | 7 | +15
+2026-10-29 | Tkocz Marek | Juszczyk Krzysztof | 3-0 | 5 | 5 | +14
+2026-10-29 | Pytlas Wojciech | Koczyba Mariusz | 3-1 | 5 | 9 | +10
+2026-10-29 | Mrugala Bartlomiej | Kowalczyk Marcin | 3-0 | 5 | 7 | +16
+2026-10-29 | Jurowicz Grzegorz | Kowalski Kamil | 3-2 | 5 | 5 | +4
+2026-10-29 | Skupinski Arkadiusz | Kumor Michal | 3-1 | 5 | 8 | +17
+2026-10-29 | Skorupa Jakub | Frank Roman | 3-0 | 5 | 5 | +9
+2026-10-29 | Martinko Tomas | Jendrzejewski Patryk | 3-2 | 6 | 5 | +10
 2026-10-29 | Tkaczyk Henryk | Paszkiewicz Michal | 3-0 | 6 | 5 | +15
 2026-10-29 | Lebek Marian | Paszkiewicz Michal | 3-0 | 6 | 6 | +12
 2026-10-29 | Benes Michal | Malachowski Michal | 3-1 | 6 | 6 | +14
@@ -17901,25 +17925,31 @@
 2026-10-29 | Schaniel Krzysztof | Slosarczyk Pawel | 3-2 | 6 | 6 | +4
 2026-10-29 | Buczynski Witold | Pelka Jerzy | 3-0 | 6 | 6 | +23
 2026-10-29 | Juzek Sebastian | Vincenec Oliver | 3-0 | 6 | 6 | +17
-2026-10-29 | Martinko Tomas | Jendrzejewski Patryk | 3-2 | 6 | 5 | +10
 2026-10-29 | Krcil Frantisek | Lamperski Jakub | 3-0 | 6 | 6 | +20
 2026-10-29 | Iwasyszyn Wojciech | Kesik Gracjan | 3-0 | 6 | 1 | +24
 2026-10-29 | Sokolowski Oliwier | Skotniczny Rafal | 3-1 | 6 | 6 | +17
 2026-10-29 | Glanowski Waldemar | Adamus Kacper | 3-2 | 6 | 6 | +11
 2026-10-29 | Kurek Pawel | Skotniczny Rafal | 3-2 | 6 | 7 | +8
 2026-10-29 | Kesik Gracjan | Linek Adam | 3-0 | 6 | 1 | +15
-2026-10-29 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 | 6 | 2 | Pending
+2026-10-29 | Koczyba Mariusz | Jurowicz Grzegorz | 3-0 | 6 | 2 | +11
 2026-10-29 | Zielinski Marcin | Michalik Jerzy | 3-2 | 6 | 1 | +4
-2026-10-29 | Kumor Michal | Skorupa Jakub | 3-0 | 6 | 3 | Pending
-2026-10-29 | Pyrek Dawid | Frank Roman | 3-2 | 6 | 3 | Pending
+2026-10-29 | Kumor Michal | Skorupa Jakub | 3-0 | 6 | 3 | +17
+2026-10-29 | Pyrek Dawid | Frank Roman | 3-2 | 6 | 3 | +5
+2026-10-29 | Staszczyk Konrad | Kotwica Dawid | 3-1 | 6 | 7 | Pending
+2026-10-29 | Linek Adam | Kotwica Dawid | 3-2 | 6 | 6 | Pending
+2026-10-29 | Glanowski Jakub | Mugowski Arkadiusz | 3-1 | 6 | 8 | Pending
+2026-10-29 | Tkocz Marek | Kowalski Kamil | 3-0 | 6 | 6 | Pending
+2026-10-29 | Lukaszewski Mikolaj | Rolak Jaroslaw | 3-0 | 6 | 6 | Pending
+2026-10-29 | Wolny Michal | Kumor Michal | 3-0 | 6 | 9 | +19
+2026-10-29 | Skupinski Arkadiusz | Skorupa Jakub | 3-2 | 6 | 6 | +10
 2026-10-29 | Michna Dawid | Malachowski Michal | 3-2 | 7 | 7 | +6
+2026-10-29 | Krcil Frantisek | Iwasyszyn Wojciech | 3-2 | 7 | 7 | +6
+2026-10-29 | Slosarczyk Pawel | Pelka Jerzy | 3-2 | 7 | 7 | +11
 2026-10-29 | Benes Michal | Grela Artur | 3-2 | 7 | 7 | +11
 2026-10-29 | Kolasa Szymon | Braun Josef | 3-1 | 7 | 7 | +14
-2026-10-29 | Slosarczyk Pawel | Pelka Jerzy | 3-2 | 7 | 7 | +11
 2026-10-29 | Juzek Sebastian | Schaniel Krzysztof | 3-1 | 7 | 7 | +15
 2026-10-29 | Buczynski Witold | Vincenec Oliver | 3-2 | 7 | 7 | +9
 2026-10-29 | Jendrzejewski Patryk | Poliniewicz Grzegorz | 3-0 | 7 | 3 | +16
-2026-10-29 | Krcil Frantisek | Iwasyszyn Wojciech | 3-2 | 7 | 7 | +6
 2026-10-29 | Lamperski Jakub | Minda Michal | 3-2 | 7 | 2 | +10
 2026-10-29 | Paszkiewicz Michal | Burkacki Adrian | 3-1 | 7 | 7 | +11
 2026-10-29 | Kesik Gracjan | Glanowski Jakub | 3-1 | 7 | 2 | +7
@@ -17927,12 +17957,17 @@
 2026-10-29 | Pruszkowski Jakub | Adamus Kacper | 3-1 | 7 | 7 | +13
 2026-10-29 | Tkaczyk Henryk | Burkacki Adrian | 3-1 | 7 | 6 | +9
 2026-10-29 | Sokolowski Oliwier | Glanowski Waldemar | 3-1 | 7 | 7 | +10
+2026-10-29 | Pyrek Dawid | Skupinski Arkadiusz | 3-2 | 7 | 4 | +6
+2026-10-29 | Rolak Jaroslaw | Eliasz Adrian | 3-1 | 7 | 7 | Pending
+2026-10-29 | Zielinski Marcin | Bartosik Dominik | 3-0 | 7 | 7 | +5
+2026-10-29 | Golaszewski Kuba | Rolak Jaroslaw | 3-2 | 7 | 5 | +9
+2026-10-29 | Kumor Michal | Frank Roman | 3-2 | 7 | 4 | +4
+2026-10-29 | Buczynski Witold | Juzek Sebastian | 3-0 | 8 | 8 | +20
 2026-10-29 | Malachowski Michal | Grela Artur | 3-2 | 8 | 8 | +10
 2026-10-29 | Benes Michal | Kolasa Szymon | 3-0 | 8 | 8 | +17
 2026-10-29 | Braun Josef | Michna Dawid | 3-2 | 8 | 8 | +9
 2026-10-29 | Martinko Tomas | Stapor Rafal | 3-0 | 8 | 3 | +9
 2026-10-29 | Lamperski Jakub | Iwasyszyn Wojciech | 3-0 | 8 | 8 | +10
-2026-10-29 | Buczynski Witold | Juzek Sebastian | 3-0 | 8 | 8 | +20
 2026-10-29 | Tkaczyk Henryk | Urban Wojciech | 3-0 | 8 | 3 | +17
 2026-10-29 | Paszkiewicz Michal | Urban Wojciech | 3-1 | 8 | 4 | +14
 2026-10-29 | Burkacki Adrian | Lebek Marian | 3-1 | 8 | 8 | +16
@@ -17940,6 +17975,9 @@
 2026-10-29 | Adamus Kacper | Sokolowski Oliwier | 3-0 | 8 | 8 | +14
 2026-10-29 | Schaniel Krzysztof | Pelka Jerzy | 3-1 | 8 | 8 | +11
 2026-10-29 | Slosarczyk Pawel | Vincenec Oliver | 3-2 | 8 | 8 | +9
+2026-10-29 | Kesik Gracjan | Kotwica Dawid | 3-1 | 8 | 3 | +5
+2026-10-29 | Golaszewski Kuba | Eliasz Adrian | 3-0 | 8 | 6 | Pending
+2026-10-29 | Pyrek Dawid | Wolny Michal | 3-1 | 8 | 5 | +12
 2026-10-29 | Kolasa Szymon | Grela Artur | 3-1 | 9 | 9 | +15
 2026-10-29 | Tkaczyk Henryk | Idaczyk Rafal | 3-1 | 9 | 4 | +1
 2026-10-29 | Lebek Marian | Tkaczyk Henryk | 3-1 | 9 | 10 | +12
@@ -17954,6 +17992,9 @@
 2026-10-29 | Pelka Jerzy | Vincenec Oliver | 3-1 | 9 | 9 | +10
 2026-10-29 | Pruszkowski Jakub | Sokolowski Oliwier | 3-0 | 9 | 9 | +14
 2026-10-29 | Slosarczyk Pawel | Juzek Sebastian | 3-1 | 9 | 9 | +14
+2026-10-29 | Kesik Gracjan | Mugowski Arkadiusz | 3-1 | 9 | 6 | +7
+2026-10-29 | Golaszewski Kuba | Mrugala Bartlomiej | 3-0 | 9 | 6 | Pending
+2026-10-29 | Pyrek Dawid | Frank Roman | 3-1 | 9 | 6 | +7
 2026-10-29 | Pelka Jerzy | Juzek Sebastian | 3-0 | 10 | 10 | +14
 2026-10-29 | Braun Josef | Malachowski Michal | 3-2 | 10 | 10 | +7
 2026-10-29 | Grela Artur | Michna Dawid | 3-1 | 10 | 10 | +13
@@ -17964,6 +18005,7 @@
 2026-10-29 | Vincenec Oliver | Schaniel Krzysztof | 3-2 | 10 | 10 | +10
 2026-10-29 | Pruszkowski Jakub | Glanowski Waldemar | 3-0 | 10 | 10 | +10
 2026-10-29 | Buczynski Witold | Slosarczyk Pawel | 3-1 | 10 | 10 | +11
+2026-10-29 | Kumor Michal | Skupinski Arkadiusz | 3-1 | 10 | 7 | +9
 2026-10-29 | Kumor Michal | Barton Aleksander | 3-1 |  |  | 
 2026-10-29 | Staniczek Adam | Janus Slawomir | 3-1 |  |  | 
 2026-10-29 | Blocho Przemyslaw | Nadolny Jakub | 3-0 |  |  | 
@@ -17977,8 +18019,4 @@
 2026-10-29 | Jendrzejewski Patryk | Zochniak Jakub | 3-1 |  |  | 
 2026-10-29 | Tkaczyk Henryk | Burkacki Adrian | 3-0 |  |  | 
 2026-10-29 | Glanowski Waldemar | Kurek Pawel | 3-1 |  |  | 
-2026-10-29 | Kesik Gracjan | Kotwica Dawid | 3-1 |  |  | 
-2026-10-29 | Linek Adam | Staszczyk Konrad | 3-0 |  |  | 
-2026-10-29 | Pyrek Dawid | Skupinski Arkadiusz | 3-2 |  |  | 
-2026-10-29 | Eliasz Adrian | Kowalczyk Marcin | 3-1 |  |  | 
-2026-10-29 | Molenda Dariusz | Bartosik Dominik | 3-0 |  |  | 
+2026-10-30 | Oracz Lukasz | Jurowicz Grzegorz | 3-2 | 1 | 1 | Pending
