@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-30T02:56Z
+# updated 2026-10-30T05:40Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -18028,6 +18028,9 @@
 2026-10-29 | Nocun Zbigniew | Michalik Jerzy | 3-2 |  |  | 
 2026-10-29 | Bartosik Dominik | Zmijewski Artur | 3-1 |  |  | 
 2026-10-29 | Zielinski Marcin | Molenda Dariusz | 3-2 |  |  | 
+2026-10-29 | Michalik Jerzy | Bartosik Dominik | 3-1 |  |  | 
+2026-10-29 | Molenda Dariusz | Zmijewski Artur | 3-2 |  |  | 
+2026-10-29 | Zielinski Marcin | Nocun Zbigniew | 3-0 |  |  | 
 2026-10-30 | Oracz Lukasz | Jurowicz Grzegorz | 3-2 | 1 | 1 | Pending
 2026-10-30 | Jozefiak Michal | Tkocz Marek | 3-2 | 1 | 1 | Pending
 2026-10-30 | Staszczyk Konrad | Glanowski Jakub | 3-0 | 1 | 2 | +4
@@ -18057,3 +18060,48 @@
 2026-10-30 | Wolny Michal | Frank Roman | 3-1 |  |  | 
 2026-10-30 | Rolak Jaroslaw | Eliasz Adrian | 3-1 |  |  | 
 2026-10-30 | Rolak Jaroslaw | Mrugala Bartlomiej | 3-1 |  |  | 
+2026-10-30 | Poliniewicz Grzegorz | Kuzmicz Jakub | 3-2 |  |  | 
+2026-10-30 | Malachowski Michal | Jendrzejewski Patryk | 3-1 |  |  | 
+2026-10-30 | Jadczyk Marcin | Zandecki Jan | 3-2 |  |  | 
+2026-10-30 | Kuzmicz Jakub | Jendrzejewski Patryk | 3-1 |  |  | 
+2026-10-30 | Hetnar Krzysztof | Slosarczyk Pawel | 3-2 |  |  | 
+2026-10-30 | Baron Mariusz | Juzek Sebastian | 3-2 |  |  | 
+2026-10-30 | Szymanski Igor | Urban Wojciech | 3-1 |  |  | 
+2026-10-30 | Juzek Sebastian | Slosarczyk Pawel | 3-0 |  |  | 
+2026-10-30 | Rutkowski Mateusz | Stapor Rafal | 3-2 |  |  | 
+2026-10-30 | Wisniewski Karol | Czerwinski Bartosz | 3-0 |  |  | 
+2026-10-30 | Zochniak Jakub | Kolek Maciej | 3-1 |  |  | 
+2026-10-30 | Rutkowski Mateusz | Czerwinski Bartosz | 3-2 |  |  | 
+2026-10-30 | Kukawka Milosz | Rudomina Kamil | 3-0 |  |  | 
+2026-10-30 | Sulkowski Karol | Lamperski Jakub | 3-0 |  |  | 
+2026-10-30 | Minda Michal | Klocek Kamil | 3-1 |  |  | 
+2026-10-30 | Kukawka Milosz | Lamperski Jakub | 3-2 |  |  | 
+2026-10-30 | Sokolowski Oliwier | Oracz Lukasz | 3-0 |  |  | 
+2026-10-30 | Lebek Marian | Fomin Yurij | 3-0 |  |  | 
+2026-10-30 | Jozefiak Michal | Skotniczny Rafal | 3-1 |  |  | 
+2026-10-30 | Fomin Yurij | Sokolowski Oliwier | 3-0 |  |  | 
+2026-10-30 | Nocun Zbigniew | Barton Aleksander | 3-1 |  |  | 
+2026-10-30 | Zielinski Marcin | Michalik Jerzy | 3-1 |  |  | 
+2026-10-30 | Zmijewski Artur | Bartosik Dominik | 3-0 |  |  | 
+2026-10-30 | Michalik Jerzy | Barton Aleksander | 3-2 |  |  | 
+2026-10-30 | Zmijewski Artur | Nocun Zbigniew | 3-1 |  |  | 
+2026-10-30 | Zielinski Marcin | Bartosik Dominik | 3-1 |  |  | 
+2026-10-30 | Nocun Zbigniew | Michalik Jerzy | 3-0 |  |  | 
+2026-10-30 | Barton Aleksander | Bartosik Dominik | 3-2 |  |  | 
+2026-10-30 | Zielinski Marcin | Zmijewski Artur | 3-0 |  |  | 
+2026-10-30 | Michalik Jerzy | Bartosik Dominik | 3-2 |  |  | 
+2026-10-30 | Zmijewski Artur | Barton Aleksander | 3-1 |  |  | 
+2026-10-30 | Nocun Zbigniew | Zielinski Marcin | 3-2 |  |  | 
+2026-10-30 | Zmijewski Artur | Michalik Jerzy | 3-2 |  |  | 
+2026-10-30 | Mugowski Arkadiusz | Linek Adam | 3-0 |  |  | 
+2026-10-30 | Staszczyk Konrad | Mugowski Arkadiusz | 3-0 |  |  | 
+2026-10-30 | Skorupa Jakub | Pyrek Dawid | 3-0 |  |  | 
+2026-10-30 | Skupinski Arkadiusz | Frank Roman | 3-2 |  |  | 
+2026-10-30 | Wolny Michal | Pyrek Dawid | 3-2 |  |  | 
+2026-10-30 | Eliasz Adrian | Lukaszewski Mikolaj | 3-1 |  |  | 
+2026-10-30 | Tkocz Marek | Jurowicz Grzegorz | 3-0 |  |  | 
+2026-10-30 | Oracz Lukasz | Lebek Marian | 3-1 |  |  | 
+2026-10-30 | Kowalski Kamil | Jozefiak Michal | 3-2 |  |  | 
+2026-10-30 | Molenda Dariusz | Michalik Jerzy | 3-1 |  |  | 
+2026-10-30 | Nocun Zbigniew | Bartosik Dominik | 3-0 |  |  | 
+2026-10-30 | Zmijewski Artur | Zielinski Marcin | 3-2 |  |  | 
