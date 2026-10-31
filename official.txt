@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-31T08:52Z
+# updated 2026-10-31T13:38Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -7400,7 +7400,7 @@
 2026-09-27 | Mlynarski Filip | Kuzmicz Jakub | 3-2 | 1 | 1 | +9
 2026-09-27 | Kolek Maciej | Olbrycht Michal | 3-0 | 1 | 1 | +20
 2026-09-27 | Pietraszko Lukasz | Kolek Maciej | 3-1 | 1 | 2 | +13
-2026-09-27 | Wos Alan | Wasilewski Damian | 3-0 | 1 | 1 | +11
+2026-09-27 | Wos Alan | Wasilewski Damian | 3-0 | 1 | 1 | +9
 2026-09-27 | Brud Szymon | Rudomina Kamil | 3-2 | 1 | 3 | +9
 2026-09-27 | Rudomina Kamil | Poloszczanski Dawid | 3-0 | 1 | 1 | +8
 2026-09-27 | Pisarczyk Tomasz | Kufel Karol | 3-2 | 1 | 1 | +10
@@ -18356,20 +18356,23 @@
 2026-10-31 | Skorupa Jakub | Krutak Michal | 3-0 | 1 | 2 | +19
 2026-10-31 | Wrzalik Tomasz | Fira Damian | 3-0 | 1 | 1 | +17
 2026-10-31 | Wiza Roman | Tkocz Marek | 3-2 | 1 | 1 | +10
-2026-10-31 | Folwarski Jakub | Petas Kacper | 3-1 | 1 | 1 | Pending
-2026-10-31 | Kolodziej Krystian | Zandecki Jan | 3-1 | 1 | 1 | Pending
-2026-10-31 | Miastowski Maksymilian | Adamiak Grzegorz | 3-2 | 1 | 1 | Pending
-2026-10-31 | Piecowski Milosz | Kufel Karol | 3-1 | 1 | 1 | Pending
-2026-10-31 | Zochniak Jakub | Mugowski Arkadiusz | 3-1 | 1 | 1 | Pending
-2026-10-31 | Dabrowski Igor | Kostyk Kamil | 3-1 | 1 | 1 | Pending
+2026-10-31 | Folwarski Jakub | Petas Kacper | 3-1 | 1 | 1 | +7
+2026-10-31 | Kolodziej Krystian | Zandecki Jan | 3-1 | 1 | 1 | +15
+2026-10-31 | Miastowski Maksymilian | Adamiak Grzegorz | 3-2 | 1 | 1 | +3
+2026-10-31 | Piecowski Milosz | Kufel Karol | 3-1 | 1 | 1 | +18
+2026-10-31 | Zochniak Jakub | Mugowski Arkadiusz | 3-1 | 1 | 1 | +7
+2026-10-31 | Dabrowski Igor | Kostyk Kamil | 3-1 | 1 | 1 | +16
 2026-10-31 | Piotrowski Tadeusz | Piecowski Miroslaw | 3-1 | 1 | 1 | +9
-2026-10-31 | Lach Marcin | Szymanski Igor | 3-0 | 1 | 1 | Pending
-2026-10-31 | Swider Dariusz | Cichocki Aleksander | 3-2 | 1 | 1 | Pending
-2026-10-31 | Guzik Michal | Cesarz Milosz | 3-1 | 1 | 1 | Pending
-2026-10-31 | Pytlas Wojciech | Lojtek Tomasz | 3-2 | 1 | 1 | Pending
+2026-10-31 | Lach Marcin | Szymanski Igor | 3-0 | 1 | 1 | +10
+2026-10-31 | Swider Dariusz | Cichocki Aleksander | 3-2 | 1 | 1 | +10
+2026-10-31 | Guzik Michal | Cesarz Milosz | 3-1 | 1 | 1 | +4
+2026-10-31 | Pytlas Wojciech | Lojtek Tomasz | 3-2 | 1 | 1 | +4
 2026-10-31 | Przewlocki Jacek | Wisniewski Bartlomiej | 3-1 | 1 | 1 | +13
-2026-10-31 | Buczynski Witold | Jesiek Jakub | 3-2 | 1 | 1 | Pending
-2026-10-31 | Adach Rafal | Slosarczyk Pawel | 3-1 | 1 | 1 | Pending
+2026-10-31 | Buczynski Witold | Jesiek Jakub | 3-2 | 1 | 1 | +9
+2026-10-31 | Adach Rafal | Slosarczyk Pawel | 3-1 | 1 | 1 | +9
+2026-10-31 | Wieczerzak Jacek | Polok Pawel | 3-0 | 1 | 1 | +14
+2026-10-31 | Idaczyk Rafal | Szostok Sebastian | 3-1 | 1 | 1 | +13
+2026-10-31 | Wos Alan | Kapik Krzysztof | 3-2 | 1 | 1 | Pending
 2026-10-31 | Malinowski Radoslaw | Szurlej Kacper | 3-2 | 2 | 2 | +12
 2026-10-31 | Kwodawski Bartosz | Kukawka Milosz | 3-2 | 2 | 1 | +11
 2026-10-31 | Golaszewski Kuba | Mrugala Bartlomiej | 3-1 | 2 | 2 | +13
@@ -18383,23 +18386,28 @@
 2026-10-31 | Sawicki Grzegorz | Paszkiewicz Michal | 3-2 | 2 | 2 | +10
 2026-10-31 | Mucha Grzegorz | Krutak Michal | 3-1 | 2 | 3 | +13
 2026-10-31 | Skorupa Jakub | Pawlik Cezary | 3-1 | 2 | 3 | +13
-2026-10-31 | Folwarski Jakub | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
-2026-10-31 | Petas Kacper | Kolodziej Krystian | 3-0 | 2 | 2 | Pending
-2026-10-31 | Miastowski Maksymilian | Zandecki Jan | 3-2 | 2 | 2 | Pending
-2026-10-31 | Kufel Karol | Mugowski Arkadiusz | 3-1 | 2 | 2 | Pending
-2026-10-31 | Zochniak Jakub | Dabrowski Igor | 3-2 | 2 | 2 | Pending
-2026-10-31 | Piecowski Milosz | Kostyk Kamil | 3-1 | 2 | 2 | Pending
+2026-10-31 | Folwarski Jakub | Adamiak Grzegorz | 3-1 | 2 | 2 | +1
+2026-10-31 | Petas Kacper | Kolodziej Krystian | 3-0 | 2 | 2 | +13
+2026-10-31 | Miastowski Maksymilian | Zandecki Jan | 3-2 | 2 | 2 | +8
+2026-10-31 | Kufel Karol | Mugowski Arkadiusz | 3-1 | 2 | 2 | +6
+2026-10-31 | Zochniak Jakub | Dabrowski Igor | 3-2 | 2 | 2 | +5
+2026-10-31 | Piecowski Milosz | Kostyk Kamil | 3-1 | 2 | 2 | +16
 2026-10-31 | Piotrowski Tadeusz | Wisniewski Bartlomiej | 3-2 | 2 | 2 | +6
-2026-10-31 | Cichocki Aleksander | Lach Marcin | 3-0 | 2 | 2 | Pending
-2026-10-31 | Pytlas Wojciech | Guzik Michal | 3-2 | 2 | 2 | Pending
+2026-10-31 | Cichocki Aleksander | Lach Marcin | 3-0 | 2 | 2 | +18
+2026-10-31 | Pytlas Wojciech | Guzik Michal | 3-2 | 2 | 2 | +8
 2026-10-31 | Przewlocki Jacek | Poloszczanski Dawid | 3-2 | 2 | 5 | +6
-2026-10-31 | Swider Dariusz | Jesiek Jakub | 3-1 | 2 | 2 | Pending
+2026-10-31 | Swider Dariusz | Jesiek Jakub | 3-1 | 2 | 2 | +9
 2026-10-31 | Piecowski Miroslaw | Rolak Jaroslaw | 3-2 | 2 | 2 | +7
-2026-10-31 | Szymanski Igor | Buczynski Witold | 3-0 | 2 | 2 | Pending
+2026-10-31 | Szymanski Igor | Buczynski Witold | 3-0 | 2 | 2 | +15
 2026-10-31 | Tkocz Marek | Fira Damian | 3-0 | 2 | 2 | +11
 2026-10-31 | Wiza Roman | Michalski Jakub | 3-1 | 2 | 2 | +9
-2026-10-31 | Adach Rafal | Lojtek Tomasz | 3-1 | 2 | 2 | Pending
-2026-10-31 | Cesarz Milosz | Slosarczyk Pawel | 3-0 | 2 | 2 | Pending
+2026-10-31 | Adach Rafal | Lojtek Tomasz | 3-1 | 2 | 2 | +9
+2026-10-31 | Cesarz Milosz | Slosarczyk Pawel | 3-0 | 2 | 2 | +18
+2026-10-31 | Idaczyk Rafal | Polok Pawel | 3-1 | 2 | 2 | +12
+2026-10-31 | Wieczerzak Jacek | Dytko Dawid | 3-1 | 2 | 1 | +6
+2026-10-31 | Kapik Krzysztof | Kostyk Kamil | 3-0 | 2 | 7 | Pending
+2026-10-31 | Filbrandt Tomasz | Wos Alan | 3-2 | 2 | 2 | Pending
+2026-10-31 | Szostok Sebastian | Dytko Dawid | 3-2 | 2 | 2 | +5
 2026-10-31 | Szurlej Kacper | Kukawka Milosz | 3-1 | 3 | 2 | +8
 2026-10-31 | Malinowski Radoslaw | Sulkowski Bartek | 3-0 | 3 | 2 | +19
 2026-10-31 | Kwodawski Bartosz | Szurlej Kacper | 3-1 | 3 | 4 | +19
@@ -18408,18 +18416,30 @@
 2026-10-31 | Juszczyk Krzysztof | Paszkiewicz Michal | 3-0 | 3 | 3 | +17
 2026-10-31 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-0 | 3 | 2 | +15
 2026-10-31 | Lukaszewski Mikolaj | Skorski Michal | 3-1 | 3 | 3 | +13
-2026-10-31 | Petas Kacper | Zandecki Jan | 3-2 | 3 | 3 | Pending
-2026-10-31 | Dabrowski Igor | Kufel Karol | 3-2 | 3 | 3 | Pending
-2026-10-31 | Zochniak Jakub | Kostyk Kamil | 3-2 | 3 | 3 | Pending
-2026-10-31 | Guzik Michal | Slosarczyk Pawel | 3-1 | 3 | 3 | Pending
-2026-10-31 | Przewlocki Jacek | Piecowski Miroslaw | 3-0 | 3 | 3 | Pending
-2026-10-31 | Jesiek Jakub | Szymanski Igor | 3-2 | 3 | 3 | Pending
+2026-10-31 | Petas Kacper | Zandecki Jan | 3-2 | 3 | 3 | +7
+2026-10-31 | Dabrowski Igor | Kufel Karol | 3-2 | 3 | 3 | +11
+2026-10-31 | Zochniak Jakub | Kostyk Kamil | 3-2 | 3 | 3 | +7
+2026-10-31 | Guzik Michal | Slosarczyk Pawel | 3-1 | 3 | 3 | +5
+2026-10-31 | Przewlocki Jacek | Piecowski Miroslaw | 3-0 | 3 | 3 | +16
+2026-10-31 | Jesiek Jakub | Szymanski Igor | 3-2 | 3 | 3 | +9
 2026-10-31 | Adamus Kacper | Tkocz Marek | 3-1 | 3 | 3 | +15
 2026-10-31 | Wiza Roman | Fira Damian | 3-0 | 3 | 3 | +13
 2026-10-31 | Michalski Jakub | Wrzalik Tomasz | 3-1 | 3 | 3 | +15
-2026-10-31 | Cichocki Aleksander | Buczynski Witold | 3-0 |  | 3 | 
+2026-10-31 | Cichocki Aleksander | Buczynski Witold | 3-0 | 3 | 3 | +8
 2026-10-31 | Sawicki Grzegorz | Vincenec Oliver | 3-0 | 3 | 3 | +18
 2026-10-31 | Skorupa Jakub | Frank Roman | 3-1 | 3 | 3 | +4
+2026-10-31 | Adamiak Grzegorz | Kolodziej Krystian | 3-0 | 3 | 3 | +25
+2026-10-31 | Folwarski Jakub | Miastowski Maksymilian | 3-2 | 3 | 3 | +4
+2026-10-31 | Lach Marcin | Swider Dariusz | 3-2 | 3 | 3 | +7
+2026-10-31 | Mugowski Arkadiusz | Piecowski Milosz | 3-1 | 3 | 3 | +14
+2026-10-31 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-2 | 3 | 3 | +4
+2026-10-31 | Lojtek Tomasz | Cesarz Milosz | 3-0 | 3 | 3 | +14
+2026-10-31 | Pytlas Wojciech | Adach Rafal | 3-0 | 3 | 3 | +12
+2026-10-31 | Kapik Krzysztof | Dabrowski Igor | 3-0 | 3 | 8 | Pending
+2026-10-31 | Filbrandt Tomasz | Kostyk Kamil | 3-2 | 3 | 8 | Pending
+2026-10-31 | Wieczerzak Jacek | Idaczyk Rafal | 3-0 | 3 | 3 | +13
+2026-10-31 | Polok Pawel | Boryszko Piotr | 3-0 | 3 | 3 | +11
+2026-10-31 | Dytko Dawid | Idaczyk Rafal | 3-2 | 3 | 4 | +11
 2026-10-31 | Golaszewski Kuba | Poloszczanski Dawid | 3-0 | 4 | 3 | +11
 2026-10-31 | Krutak Michal | Oracz Jacek | 3-2 | 4 | 3 | +10
 2026-10-31 | Malinowski Radoslaw | Kukawka Milosz | 3-2 | 4 | 4 | +9
@@ -18434,38 +18454,82 @@
 2026-10-31 | Fira Damian | Michalski Jakub | 3-0 | 4 | 4 | +15
 2026-10-31 | Skorupa Jakub | Mucha Grzegorz | 3-1 | 4 | 4 | +12
 2026-10-31 | Pawlik Cezary | Mucha Grzegorz | 3-2 | 4 | 3 | +8
+2026-10-31 | Petas Kacper | Adamiak Grzegorz | 3-0 | 4 | 4 | +5
+2026-10-31 | Kolodziej Krystian | Miastowski Maksymilian | 3-0 | 4 | 4 | +20
+2026-10-31 | Folwarski Jakub | Zandecki Jan | 3-1 | 4 | 4 | +6
+2026-10-31 | Szymanski Igor | Cichocki Aleksander | 3-2 | 4 | 4 | +11
+2026-10-31 | Swider Dariusz | Buczynski Witold | 3-0 | 4 | 4 | +10
+2026-10-31 | Lach Marcin | Jesiek Jakub | 3-1 | 4 | 4 | +6
+2026-10-31 | Zochniak Jakub | Kufel Karol | 3-1 | 4 | 4 | +11
+2026-10-31 | Piecowski Milosz | Dabrowski Igor | 3-2 | 4 | 4 | +9
+2026-10-31 | Kostyk Kamil | Mugowski Arkadiusz | 3-2 | 4 | 4 | +5
+2026-10-31 | Piecowski Miroslaw | Poloszczanski Dawid | 3-0 | 4 | 7 | +12
+2026-10-31 | Wisniewski Bartlomiej | Rolak Jaroslaw | 3-2 | 4 | 4 | +7
+2026-10-31 | Slosarczyk Pawel | Lojtek Tomasz | 3-2 | 4 | 4 | +9
+2026-10-31 | Pytlas Wojciech | Cesarz Milosz | 3-2 | 4 | 4 | +3
+2026-10-31 | Dytko Dawid | Boryszko Piotr | 3-0 | 4 | 1 | +18
+2026-10-31 | Szostok Sebastian | Boryszko Piotr | 3-1 | 4 | 2 | +8
+2026-10-31 | Piotrowski Tadeusz | Przewlocki Piotr | 3-2 | 4 | 1 | +3
+2026-10-31 | Wieczerzak Jacek | Szostok Sebastian | 3-2 | 4 | 3 | +6
+2026-10-31 | Guzik Michal | Adach Rafal | 3-2 | 4 | 4 | +5
+2026-10-31 | Polok Pawel | Dytko Dawid | 3-0 | 4 | 5 | +11
 2026-10-31 | Michalski Jakub | Tkocz Marek | 3-0 | 5 | 5 | +23
 2026-10-31 | Wrzalik Tomasz | Wiza Roman | 3-1 | 5 | 5 | +14
 2026-10-31 | Adamus Kacper | Fira Damian | 3-1 | 5 | 5 | +10
 2026-10-31 | Krutak Michal | Frank Roman | 3-2 | 5 | 4 | +2
-2026-10-31 | Poloszczanski Dawid | Wisniewski Bartlomiej | 3-1 | 6 | 3 | Pending
+2026-10-31 | Folwarski Jakub | Kolodziej Krystian | 3-0 | 5 | 5 | +6
+2026-10-31 | Miastowski Maksymilian | Petas Kacper | 3-1 | 5 | 5 | +14
+2026-10-31 | Zandecki Jan | Adamiak Grzegorz | 3-0 | 5 | 5 | +6
+2026-10-31 | Zochniak Jakub | Piecowski Milosz | 3-2 | 5 | 5 | +5
+2026-10-31 | Kostyk Kamil | Kufel Karol | 3-0 | 5 | 5 | +17
+2026-10-31 | Dabrowski Igor | Mugowski Arkadiusz | 3-2 | 5 | 5 | +7
+2026-10-31 | Piotrowski Tadeusz | Poloszczanski Dawid | 3-1 | 5 | 8 | +5
+2026-10-31 | Lach Marcin | Buczynski Witold | 3-0 | 5 | 5 | +7
+2026-10-31 | Cichocki Aleksander | Jesiek Jakub | 3-0 | 5 | 5 | +9
+2026-10-31 | Wieczerzak Jacek | Boryszko Piotr | 3-0 | 5 | 5 | +7
+2026-10-31 | Pytlas Wojciech | Slosarczyk Pawel | 3-2 | 5 | 5 | +3
+2026-10-31 | Lojtek Tomasz | Guzik Michal | 3-2 | 5 | 5 | +12
+2026-10-31 | Szymanski Igor | Swider Dariusz | 3-2 | 5 | 5 | +9
+2026-10-31 | Rolak Jaroslaw | Przewlocki Jacek | 3-1 | 5 | 4 | +15
+2026-10-31 | Piecowski Miroslaw | Wisniewski Bartlomiej | 3-1 | 5 | 5 | +12
+2026-10-31 | Polok Pawel | Szostok Sebastian | 3-2 | 5 | 5 | +8
+2026-10-31 | Idaczyk Rafal | Boryszko Piotr | 3-1 | 5 | 4 | +8
+2026-10-31 | Cesarz Milosz | Adach Rafal | 3-1 | 5 | 5 | +17
+2026-10-31 | Poloszczanski Dawid | Wisniewski Bartlomiej | 3-1 | 6 | 3 | +16
+2026-10-31 | Folwarski Jakub | Zandecki Jan | 3-1 | 6 | 6 | Pending
+2026-10-31 | Adamiak Grzegorz | Petas Kacper | 3-2 | 6 | 6 | Pending
+2026-10-31 | Miastowski Maksymilian | Kolodziej Krystian | 3-1 | 6 | 6 | Pending
+2026-10-31 | Kufel Karol | Filbrandt Tomasz | 3-2 | 6 | 1 | Pending
+2026-10-31 | Kostyk Kamil | Dabrowski Igor | 3-2 | 6 | 6 | Pending
+2026-10-31 | Piecowski Milosz | Rolak Jaroslaw | 3-1 | 6 | 6 | +6
+2026-10-31 | Piotrowski Tadeusz | Piecowski Miroslaw | 3-2 | 6 | 6 | +6
+2026-10-31 | Lach Marcin | Szymanski Igor | 3-1 | 6 | 6 | Pending
+2026-10-31 | Cichocki Aleksander | Buczynski Witold | 3-2 | 6 | 6 | Pending
+2026-10-31 | Mugowski Arkadiusz | Przewlocki Jacek | 3-1 | 6 | 5 | +10
+2026-10-31 | Dytko Dawid | Wieczerzak Jacek | 3-1 | 6 | 6 | Pending
+2026-10-31 | Jesiek Jakub | Swider Dariusz | 3-2 | 6 | 6 | Pending
+2026-10-31 | Szostok Sebastian | Idaczyk Rafal | 3-2 | 6 | 6 | Pending
+2026-10-31 | Cichocki Aleksander | Lach Marcin | 3-0 | 7 | 7 | Pending
+2026-10-31 | Folwarski Jakub | Adamiak Grzegorz | 3-0 | 7 | 7 | Pending
+2026-10-31 | Kolodziej Krystian | Petas Kacper | 3-0 | 7 | 7 | Pending
+2026-10-31 | Zandecki Jan | Miastowski Maksymilian | 3-2 | 7 | 7 | Pending
+2026-10-31 | Kufel Karol | Dabrowski Igor | 3-1 | 7 | 7 | Pending
+2026-10-31 | Piecowski Milosz | Przewlocki Jacek | 3-1 | 7 | 6 | +8
+2026-10-31 | Mugowski Arkadiusz | Piotrowski Tadeusz | 3-0 | 7 | 7 | +18
+2026-10-31 | Swider Dariusz | Szymanski Igor | 3-1 | 7 | 7 | Pending
+2026-10-31 | Przewlocki Jacek | Piecowski Miroslaw | 3-2 | 7 | 8 | +8
+2026-10-31 | Rolak Jaroslaw | Piecowski Miroslaw | 3-2 | 7 | 7 | +10
+2026-10-31 | Jesiek Jakub | Buczynski Witold | 3-0 | 7 | 7 | Pending
+2026-10-31 | Miastowski Maksymilian | Folwarski Jakub | 3-0 | 8 | 8 | Pending
+2026-10-31 | Zandecki Jan | Petas Kacper | 3-0 | 8 | 8 | Pending
+2026-10-31 | Kolodziej Krystian | Adamiak Grzegorz | 3-2 | 8 | 8 | Pending
+2026-10-31 | Kufel Karol | Wos Alan | 3-0 | 8 | 3 | Pending
+2026-10-31 | Piecowski Milosz | Mugowski Arkadiusz | 3-0 | 8 | 8 | +15
+2026-10-31 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-1 | 8 | 8 | +7
+2026-10-31 | Cichocki Aleksander | Swider Dariusz | 3-1 | 8 | 8 | Pending
+2026-10-31 | Jesiek Jakub | Szymanski Igor | 3-1 | 8 | 8 | Pending
+2026-10-31 | Lach Marcin | Buczynski Witold | 3-2 |  | 8 | 
 2026-10-31 | Wrzalik Tomasz | Adamus Kacper | 3-1 |  |  | 
 2026-10-31 | Tkocz Marek | Michalski Jakub | 3-0 |  |  | 
 2026-10-31 | Wiza Roman | Fira Damian | 3-1 |  |  | 
-2026-10-31 | Adamiak Grzegorz | Kolodziej Krystian | 3-0 |  |  | 
-2026-10-31 | Folwarski Jakub | Miastowski Maksymilian | 3-2 |  |  | 
-2026-10-31 | Petas Kacper | Adamiak Grzegorz | 3-0 |  |  | 
-2026-10-31 | Kolodziej Krystian | Miastowski Maksymilian | 3-0 |  |  | 
-2026-10-31 | Folwarski Jakub | Zandecki Jan | 3-1 |  |  | 
-2026-10-31 | Lach Marcin | Swider Dariusz | 3-2 |  |  | 
-2026-10-31 | Szymanski Igor | Cichocki Aleksander | 3-2 |  |  | 
-2026-10-31 | Swider Dariusz | Buczynski Witold | 3-0 |  |  | 
-2026-10-31 | Lach Marcin | Jesiek Jakub | 3-1 |  |  | 
-2026-10-31 | Mugowski Arkadiusz | Piecowski Milosz | 3-1 |  |  | 
-2026-10-31 | Zochniak Jakub | Kufel Karol | 3-1 |  |  | 
-2026-10-31 | Piecowski Milosz | Dabrowski Igor | 3-2 |  |  | 
-2026-10-31 | Kostyk Kamil | Mugowski Arkadiusz | 3-2 |  |  | 
-2026-10-31 | Piotrowski Tadeusz | Rolak Jaroslaw | 3-2 |  |  | 
-2026-10-31 | Piecowski Miroslaw | Poloszczanski Dawid | 3-0 |  |  | 
 2026-10-31 | Piotrowski Tadeusz | Przewlocki Jacek | 3-2 |  |  | 
-2026-10-31 | Wisniewski Bartlomiej | Rolak Jaroslaw | 3-2 |  |  | 
-2026-10-31 | Lojtek Tomasz | Cesarz Milosz | 3-0 |  |  | 
-2026-10-31 | Pytlas Wojciech | Adach Rafal | 3-0 |  |  | 
-2026-10-31 | Slosarczyk Pawel | Lojtek Tomasz | 3-2 |  |  | 
-2026-10-31 | Pytlas Wojciech | Cesarz Milosz | 3-2 |  |  | 
-2026-10-31 | Wieczerzak Jacek | Polok Pawel | 3-0 |  |  | 
-2026-10-31 | Idaczyk Rafal | Szostok Sebastian | 3-1 |  |  | 
-2026-10-31 | Dytko Dawid | Boryszko Piotr | 3-0 |  |  | 
-2026-10-31 | Idaczyk Rafal | Polok Pawel | 3-1 |  |  | 
-2026-10-31 | Wieczerzak Jacek | Dytko Dawid | 3-1 |  |  | 
-2026-10-31 | Szostok Sebastian | Boryszko Piotr | 3-1 |  |  | 
