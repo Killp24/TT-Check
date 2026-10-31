@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-10-31T02:18Z
+# updated 2026-10-31T06:58Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -16112,7 +16112,7 @@
 2026-10-24 | Tkaczyk Henryk | Hetnar Krzysztof | 3-1 | 1 | 1 | +16
 2026-10-24 | Kukawka Milosz | Glanowski Jakub | 3-2 | 1 | 1 | +5
 2026-10-24 | Baron Mariusz | Adamus Pawel | 3-2 | 1 | 1 | +9
-2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 1 | 1 | +7
+2026-10-24 | Petas Kacper | Domin Maciej | 3-1 | 1 | 1 | +8
 2026-10-24 | Wojtaszczyk Wojciech | Szymanski Igor | 3-2 | 1 | 1 | +4
 2026-10-24 | Wrobel Dariusz | Sinicki Maciej | 3-1 | 1 | 1 | +10
 2026-10-24 | Michna Dawid | Spanik Tibor | 3-2 | 1 | 1 | +9
@@ -18260,10 +18260,10 @@
 2026-10-30 | Kesik Gracjan | Malinowski Radoslaw | 3-1 | 6 | 1 | +11
 2026-10-30 | Nosiadek Jakub | Strus Piotr | 3-2 | 6 | 1 | +8
 2026-10-30 | Lukaszewski Mikolaj | Skorski Michal | 3-0 | 6 | 4 | +16
-2026-10-30 | Vincenec Oliver | Juszczyk Krzysztof | 3-2 | 6 | 1 | Pending
-2026-10-30 | Tkaczyk Henryk | Sawicki Grzegorz | 3-1 | 6 | 6 | Pending
+2026-10-30 | Vincenec Oliver | Juszczyk Krzysztof | 3-2 | 6 | 1 | +10
+2026-10-30 | Tkaczyk Henryk | Sawicki Grzegorz | 3-1 | 6 | 6 | +10
 2026-10-30 | Skorski Michal | Poloszczanski Dawid | 3-0 | 6 | 1 | +12
-2026-10-30 | Schaniel Krzysztof | Paszkiewicz Michal | 3-2 | 6 | 6 | Pending
+2026-10-30 | Schaniel Krzysztof | Paszkiewicz Michal | 3-2 | 6 | 6 | +8
 2026-10-30 | Zandecki Jan | Kuzmicz Jakub | 3-2 | 7 | 7 | +5
 2026-10-30 | Jadczyk Marcin | Jendrzejewski Patryk | 3-1 | 7 | 7 | +6
 2026-10-30 | Rutkowski Mateusz | Filbrandt Tomasz | 3-1 | 7 | 2 | +14
@@ -18343,42 +18343,102 @@
 2026-10-30 | Wichowski Grzegorz | Idaczyk Rafał | 3-0 |  |  | 
 2026-10-30 | Szymanski Igor | Juzek Sebastian | 3-2 |  |  | 
 2026-10-30 | Golaszewski Kuba | Skorski Michal | 3-1 |  |  | 
-2026-10-31 | Szurlej Kacper | Sulkowski Bartek | 3-0 | 1 | 1 | Pending
-2026-10-31 | Malinowski Radoslaw | Kwodawski Bartosz | 3-2 | 1 | 1 | Pending
+2026-10-31 | Szurlej Kacper | Sulkowski Bartek | 3-0 | 1 | 1 | +12
+2026-10-31 | Malinowski Radoslaw | Kwodawski Bartosz | 3-2 | 1 | 1 | +7
 2026-10-31 | Golaszewski Kuba | Skorski Michal | 3-1 | 1 | 1 | +13
 2026-10-31 | Mrugala Bartlomiej | Poloszczanski Dawid | 3-1 | 1 | 1 | +7
-2026-10-31 | Tkaczyk Henryk | Juszczyk Krzysztof | 3-0 | 1 | 1 | Pending
-2026-10-31 | Schaniel Krzysztof | Sawicki Grzegorz | 3-2 | 1 | 1 | Pending
-2026-10-31 | Paszkiewicz Michal | Vincenec Oliver | 3-0 | 1 | 1 | Pending
-2026-10-31 | Adamus Kacper | Michalski Jakub | 3-0 | 1 | 1 | Pending
-2026-10-31 | Oracz Jacek | Mucha Grzegorz | 3-1 | 1 | 1 | Pending
-2026-10-31 | Krutak Michal | Pawlik Cezary | 3-0 | 1 | 1 | Pending
-2026-10-31 | Skorupa Jakub | Krutak Michal | 3-0 | 1 | 2 | Pending
-2026-10-31 | Malinowski Radoslaw | Szurlej Kacper | 3-2 | 2 | 2 | Pending
-2026-10-31 | Kwodawski Bartosz | Kukawka Milosz | 3-2 | 2 | 1 | Pending
+2026-10-31 | Tkaczyk Henryk | Juszczyk Krzysztof | 3-0 | 1 | 1 | +18
+2026-10-31 | Schaniel Krzysztof | Sawicki Grzegorz | 3-2 | 1 | 1 | +6
+2026-10-31 | Paszkiewicz Michal | Vincenec Oliver | 3-0 | 1 | 1 | +14
+2026-10-31 | Adamus Kacper | Michalski Jakub | 3-0 | 1 | 1 | +12
+2026-10-31 | Oracz Jacek | Mucha Grzegorz | 3-1 | 1 | 1 | +9
+2026-10-31 | Krutak Michal | Pawlik Cezary | 3-0 | 1 | 1 | +16
+2026-10-31 | Skorupa Jakub | Krutak Michal | 3-0 | 1 | 2 | +19
+2026-10-31 | Wrzalik Tomasz | Fira Damian | 3-0 | 1 | 1 | +17
+2026-10-31 | Wiza Roman | Tkocz Marek | 3-2 | 1 | 1 | +10
+2026-10-31 | Folwarski Jakub | Petas Kacper | 3-1 | 1 | 1 | Pending
+2026-10-31 | Kolodziej Krystian | Zandecki Jan | 3-1 | 1 | 1 | Pending
+2026-10-31 | Miastowski Maksymilian | Adamiak Grzegorz | 3-2 | 1 | 1 | Pending
+2026-10-31 | Piecowski Milosz | Kufel Karol | 3-1 | 1 | 1 | Pending
+2026-10-31 | Zochniak Jakub | Mugowski Arkadiusz | 3-1 | 1 | 1 | Pending
+2026-10-31 | Dabrowski Igor | Kostyk Kamil | 3-1 | 1 | 1 | Pending
+2026-10-31 | Piotrowski Tadeusz | Piecowski Miroslaw | 3-1 | 1 | 1 | +9
+2026-10-31 | Lach Marcin | Szymanski Igor | 3-0 | 1 | 1 | Pending
+2026-10-31 | Swider Dariusz | Cichocki Aleksander | 3-2 | 1 | 1 | Pending
+2026-10-31 | Guzik Michal | Cesarz Milosz | 3-1 | 1 | 1 | Pending
+2026-10-31 | Pytlas Wojciech | Lojtek Tomasz | 3-2 | 1 | 1 | Pending
+2026-10-31 | Przewlocki Jacek | Wisniewski Bartlomiej | 3-1 | 1 | 1 | +13
+2026-10-31 | Buczynski Witold | Jesiek Jakub | 3-2 | 1 | 1 | Pending
+2026-10-31 | Adach Rafal | Slosarczyk Pawel | 3-1 | 1 | 1 | Pending
+2026-10-31 | Malinowski Radoslaw | Szurlej Kacper | 3-2 | 2 | 2 | +12
+2026-10-31 | Kwodawski Bartosz | Kukawka Milosz | 3-2 | 2 | 1 | +11
 2026-10-31 | Golaszewski Kuba | Mrugala Bartlomiej | 3-1 | 2 | 2 | +13
 2026-10-31 | Skorski Michal | Mrugala Bartlomiej | 3-1 | 2 | 3 | +13
 2026-10-31 | Poloszczanski Dawid | Lukaszewski Mikolaj | 3-0 | 2 | 1 | +21
-2026-10-31 | Vincenec Oliver | Tkaczyk Henryk | 3-0 | 2 | 2 | Pending
-2026-10-31 | Pawlik Cezary | Frank Roman | 3-0 | 2 | 1 | Pending
-2026-10-31 | Oracz Jacek | Frank Roman | 3-1 |  | 2 | 
-2026-10-31 | Wrzalik Tomasz | Fira Damian | 3-0 |  |  | 
-2026-10-31 | Wiza Roman | Tkocz Marek | 3-2 |  |  | 
-2026-10-31 | Wrzalik Tomasz | Adamus Kacper | 3-0 |  |  | 
-2026-10-31 | Szurlej Kacper | Kukawka Milosz | 3-1 |  |  | 
-2026-10-31 | Malinowski Radoslaw | Sulkowski Bartek | 3-0 |  |  | 
-2026-10-31 | Kwodawski Bartosz | Szurlej Kacper | 3-1 |  |  | 
-2026-10-31 | Kukawka Milosz | Sulkowski Bartek | 3-0 |  |  | 
-2026-10-31 | Schaniel Krzysztof | Juszczyk Krzysztof | 3-1 |  |  | 
-2026-10-31 | Sawicki Grzegorz | Paszkiewicz Michal | 3-2 |  |  | 
-2026-10-31 | Schaniel Krzysztof | Tkaczyk Henryk | 3-2 |  |  | 
-2026-10-31 | Juszczyk Krzysztof | Paszkiewicz Michal | 3-0 |  |  | 
-2026-10-31 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-0 |  |  | 
-2026-10-31 | Lukaszewski Mikolaj | Skorski Michal | 3-1 |  |  | 
-2026-10-31 | Golaszewski Kuba | Poloszczanski Dawid | 3-0 |  |  | 
-2026-10-31 | Mucha Grzegorz | Krutak Michal | 3-1 |  |  | 
-2026-10-31 | Skorupa Jakub | Pawlik Cezary | 3-1 |  |  | 
-2026-10-31 | Krutak Michal | Oracz Jacek | 3-2 |  |  | 
+2026-10-31 | Vincenec Oliver | Tkaczyk Henryk | 3-0 | 2 | 2 | +18
+2026-10-31 | Pawlik Cezary | Frank Roman | 3-0 | 2 | 1 | +5
+2026-10-31 | Oracz Jacek | Frank Roman | 3-1 | 2 | 2 | +3
+2026-10-31 | Wrzalik Tomasz | Adamus Kacper | 3-0 | 2 | 2 | +19
+2026-10-31 | Schaniel Krzysztof | Juszczyk Krzysztof | 3-1 | 2 | 2 | +11
+2026-10-31 | Sawicki Grzegorz | Paszkiewicz Michal | 3-2 | 2 | 2 | +10
+2026-10-31 | Mucha Grzegorz | Krutak Michal | 3-1 | 2 | 3 | +13
+2026-10-31 | Skorupa Jakub | Pawlik Cezary | 3-1 | 2 | 3 | +13
+2026-10-31 | Folwarski Jakub | Adamiak Grzegorz | 3-1 | 2 | 2 | Pending
+2026-10-31 | Petas Kacper | Kolodziej Krystian | 3-0 | 2 | 2 | Pending
+2026-10-31 | Miastowski Maksymilian | Zandecki Jan | 3-2 | 2 | 2 | Pending
+2026-10-31 | Kufel Karol | Mugowski Arkadiusz | 3-1 | 2 | 2 | Pending
+2026-10-31 | Zochniak Jakub | Dabrowski Igor | 3-2 | 2 | 2 | Pending
+2026-10-31 | Piecowski Milosz | Kostyk Kamil | 3-1 | 2 | 2 | Pending
+2026-10-31 | Piotrowski Tadeusz | Wisniewski Bartlomiej | 3-2 | 2 | 2 | +6
+2026-10-31 | Cichocki Aleksander | Lach Marcin | 3-0 | 2 | 2 | Pending
+2026-10-31 | Pytlas Wojciech | Guzik Michal | 3-2 | 2 | 2 | Pending
+2026-10-31 | Przewlocki Jacek | Poloszczanski Dawid | 3-2 | 2 | 5 | +6
+2026-10-31 | Swider Dariusz | Jesiek Jakub | 3-1 | 2 | 2 | Pending
+2026-10-31 | Piecowski Miroslaw | Rolak Jaroslaw | 3-2 | 2 | 2 | +7
+2026-10-31 | Szymanski Igor | Buczynski Witold | 3-0 | 2 | 2 | Pending
+2026-10-31 | Tkocz Marek | Fira Damian | 3-0 | 2 | 2 | +11
+2026-10-31 | Wiza Roman | Michalski Jakub | 3-1 | 2 | 2 | +9
+2026-10-31 | Adach Rafal | Lojtek Tomasz | 3-1 | 2 | 2 | Pending
+2026-10-31 | Cesarz Milosz | Slosarczyk Pawel | 3-0 | 2 | 2 | Pending
+2026-10-31 | Szurlej Kacper | Kukawka Milosz | 3-1 | 3 | 2 | +8
+2026-10-31 | Malinowski Radoslaw | Sulkowski Bartek | 3-0 | 3 | 2 | +19
+2026-10-31 | Kwodawski Bartosz | Szurlej Kacper | 3-1 | 3 | 4 | +19
+2026-10-31 | Kukawka Milosz | Sulkowski Bartek | 3-0 | 3 | 3 | +16
+2026-10-31 | Schaniel Krzysztof | Tkaczyk Henryk | 3-2 | 3 | 3 | +7
+2026-10-31 | Juszczyk Krzysztof | Paszkiewicz Michal | 3-0 | 3 | 3 | +17
+2026-10-31 | Golaszewski Kuba | Lukaszewski Mikolaj | 3-0 | 3 | 2 | +15
+2026-10-31 | Lukaszewski Mikolaj | Skorski Michal | 3-1 | 3 | 3 | +13
+2026-10-31 | Petas Kacper | Zandecki Jan | 3-2 | 3 | 3 | Pending
+2026-10-31 | Dabrowski Igor | Kufel Karol | 3-2 | 3 | 3 | Pending
+2026-10-31 | Zochniak Jakub | Kostyk Kamil | 3-2 | 3 | 3 | Pending
+2026-10-31 | Guzik Michal | Slosarczyk Pawel | 3-1 | 3 | 3 | Pending
+2026-10-31 | Przewlocki Jacek | Piecowski Miroslaw | 3-0 | 3 | 3 | Pending
+2026-10-31 | Jesiek Jakub | Szymanski Igor | 3-2 | 3 | 3 | Pending
+2026-10-31 | Adamus Kacper | Tkocz Marek | 3-1 | 3 | 3 | +15
+2026-10-31 | Wiza Roman | Fira Damian | 3-0 | 3 | 3 | +13
+2026-10-31 | Michalski Jakub | Wrzalik Tomasz | 3-1 | 3 | 3 | +15
+2026-10-31 | Cichocki Aleksander | Buczynski Witold | 3-0 |  | 3 | 
+2026-10-31 | Sawicki Grzegorz | Vincenec Oliver | 3-0 | 3 | 3 | +18
+2026-10-31 | Skorupa Jakub | Frank Roman | 3-1 | 3 | 3 | +4
+2026-10-31 | Golaszewski Kuba | Poloszczanski Dawid | 3-0 | 4 | 3 | +11
+2026-10-31 | Krutak Michal | Oracz Jacek | 3-2 | 4 | 3 | +10
+2026-10-31 | Malinowski Radoslaw | Kukawka Milosz | 3-2 | 4 | 4 | +9
+2026-10-31 | Sulkowski Bartek | Kwodawski Bartosz | 3-2 | 4 | 4 | +7
+2026-10-31 | Schaniel Krzysztof | Vincenec Oliver | 3-1 | 4 | 4 | +9
+2026-10-31 | Wrzalik Tomasz | Tkocz Marek | 3-1 | 4 | 4 | +16
+2026-10-31 | Wiza Roman | Adamus Kacper | 3-0 | 4 | 4 | +15
+2026-10-31 | Juszczyk Krzysztof | Sawicki Grzegorz | 3-0 | 4 | 4 | +13
+2026-10-31 | Poloszczanski Dawid | Rolak Jaroslaw | 3-2 | 4 | 1 | +9
+2026-10-31 | Oracz Jacek | Pawlik Cezary | 3-1 | 4 | 5 | +9
+2026-10-31 | Paszkiewicz Michal | Tkaczyk Henryk | 3-2 | 4 | 4 | +8
+2026-10-31 | Fira Damian | Michalski Jakub | 3-0 | 4 | 4 | +15
+2026-10-31 | Skorupa Jakub | Mucha Grzegorz | 3-1 | 4 | 4 | +12
+2026-10-31 | Pawlik Cezary | Mucha Grzegorz | 3-2 | 4 | 3 | +8
+2026-10-31 | Michalski Jakub | Tkocz Marek | 3-0 | 5 | 5 | +23
+2026-10-31 | Wrzalik Tomasz | Wiza Roman | 3-1 | 5 | 5 | +14
+2026-10-31 | Adamus Kacper | Fira Damian | 3-1 | 5 | 5 | +10
+2026-10-31 | Krutak Michal | Frank Roman | 3-2 | 5 | 4 | +2
+2026-10-31 | Poloszczanski Dawid | Wisniewski Bartlomiej | 3-1 | 6 | 3 | Pending
 2026-10-31 | Wrzalik Tomasz | Adamus Kacper | 3-1 |  |  | 
 2026-10-31 | Tkocz Marek | Michalski Jakub | 3-0 |  |  | 
 2026-10-31 | Wiza Roman | Fira Damian | 3-1 |  |  | 
