@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-11-02T20:18Z
+# updated 2026-11-03T02:40Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -19014,14 +19014,15 @@
 2026-11-02 | Solilo Dominik | Sobel Artur | 3-0 | 1 | 6 | +16
 2026-11-02 | Minda Michal | Michalczyk Jakub | 3-2 | 1 | 4 | +6
 2026-11-02 | Hetnar Krzysztof | Buczynski Witold | 3-0 | 1 | 6 | +6
-2026-11-02 | Zwolinski Mariusz | Piecowski Miroslaw | 3-0 | 1 | 1 | Pending
-2026-11-02 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 | 1 | 1 | Pending
-2026-11-02 | Szoltysek Artur | Wisniewski Bartlomiej | 3-1 | 1 | 6 | Pending
+2026-11-02 | Zwolinski Mariusz | Piecowski Miroslaw | 3-0 | 1 | 1 | +15
+2026-11-02 | Przewlocki Jacek | Kowalczyk Marcin | 3-1 | 1 | 1 | +12
+2026-11-02 | Szoltysek Artur | Wisniewski Bartlomiej | 3-1 | 1 | 6 | +12
 2026-11-02 | Oracz Jacek | Nocun Zbigniew | 3-1 | 1 | 5 | Pending
 2026-11-02 | Gesiarz Piotr | Zmijewski Artur | 3-1 | 1 | 5 | +13
-2026-11-02 | Cesarz Milosz | Sokolowski Oliwier | 3-2 | 1 | 1 | Pending
+2026-11-02 | Cesarz Milosz | Sokolowski Oliwier | 3-2 | 1 | 1 | +10
 2026-11-02 | Kumor Michal | Krezel Andrzej | 3-2 | 1 | 1 | Pending
 2026-11-02 | Kubiak Artur | Cyndera Jakub | 3-0 | 1 | 1 | +13
+2026-11-02 | Kukawka Milosz | Michalczyk Jakub | 3-2 | 1 | 9 | +5
 2026-11-02 | Zmijewski Artur | Pyrek Dawid | 3-0 | 2 | 2 | +9
 2026-11-02 | Eliasz Adrian | Rudomina Kamil | 3-1 | 2 | 1 | +18
 2026-11-02 | Nadolny Jakub | Michalczyk Jakub | 3-0 | 2 | 1 | +12
@@ -19054,14 +19055,15 @@
 2026-11-02 | Kubiak Artur | Jadczyk Marcin | 3-1 | 2 | 11 | +24
 2026-11-02 | Pietraszko Lukasz | Myszewski Adrian | 3-1 | 2 | 7 | +6
 2026-11-02 | Solilo Dominik | Kostyk Kamil | 3-1 | 2 | 7 | +13
-2026-11-02 | Smoter Adam | Minda Michal | 3-1 | 2 | 2 | Pending
-2026-11-02 | Glanowski Jakub | Michalczyk Jakub | 3-1 | 2 | 5 | Pending
+2026-11-02 | Smoter Adam | Minda Michal | 3-1 | 2 | 2 | +15
+2026-11-02 | Glanowski Jakub | Michalczyk Jakub | 3-1 | 2 | 5 | +11
 2026-11-02 | Hetnar Krzysztof | Slawinski Kacper | 3-0 | 2 | 7 | +16
-2026-11-02 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 | 2 | 2 | Pending
-2026-11-02 | Szoltysek Artur | Piecowski Miroslaw | 3-1 | 2 | 2 | Pending
+2026-11-02 | Zwolinski Mariusz | Kowalczyk Marcin | 3-2 | 2 | 2 | +7
+2026-11-02 | Szoltysek Artur | Piecowski Miroslaw | 3-1 | 2 | 2 | +12
 2026-11-02 | Oracz Jacek | Kumor Michal | 3-0 | 2 | 2 | Pending
 2026-11-02 | Cyndera Jakub | Gesiarz Piotr | 3-1 | 2 | 2 | +18
 2026-11-02 | Krezel Andrzej | Bladziak Krzysztof | 3-0 | 2 | 2 | Pending
+2026-11-02 | Sokolowski Oliwier | Marud Grzegorz | 3-2 | 2 | 6 | +11
 2026-11-02 | Eliasz Adrian | Sulkowski Karol | 3-1 | 3 | 1 | +11
 2026-11-02 | Nadolny Jakub | Rudomina Kamil | 3-1 | 3 | 3 | +12
 2026-11-02 | Michalczyk Jakub | Sulkowski Karol | 3-0 | 3 | 2 | +11
@@ -19093,12 +19095,12 @@
 2026-11-02 | Abbasi Amirreza | Kolodziej Krystian | 3-1 | 3 | 8 | +7
 2026-11-02 | Kapik Krzysztof | Poliniewicz Grzegorz | 3-2 | 3 | 6 | +10
 2026-11-02 | Pietraszko Lukasz | Sobel Artur | 3-2 | 3 | 8 | +5
-2026-11-02 | Minda Michal | Glanowski Jakub | 3-1 | 3 | 3 | Pending
-2026-11-02 | Smoter Adam | Rudomina Kamil | 3-2 | 3 | 6 | Pending
+2026-11-02 | Minda Michal | Glanowski Jakub | 3-1 | 3 | 3 | +9
+2026-11-02 | Smoter Adam | Rudomina Kamil | 3-2 | 3 | 6 | +9
 2026-11-02 | Skotniczny Rafal | Fomin Yurij | 3-0 | 3 | 3 | +13
-2026-11-02 | Zwolinski Mariusz | Szoltysek Artur | 3-2 | 3 | 3 | Pending
-2026-11-02 | Kowalczyk Marcin | Wisniewski Bartlomiej | 3-1 | 3 | 8 | Pending
-2026-11-02 | Przewlocki Jacek | Piecowski Miroslaw | 3-1 | 3 | 3 | Pending
+2026-11-02 | Zwolinski Mariusz | Szoltysek Artur | 3-2 | 3 | 3 | +7
+2026-11-02 | Kowalczyk Marcin | Wisniewski Bartlomiej | 3-1 | 3 | 8 | +11
+2026-11-02 | Przewlocki Jacek | Piecowski Miroslaw | 3-1 | 3 | 3 | +11
 2026-11-02 | Oracz Jacek | Krezel Andrzej | 3-2 | 3 | 3 | Pending
 2026-11-02 | Gesiarz Piotr | Staniczek Adam | 3-0 | 3 | 3 | +6
 2026-11-02 | Cyndera Jakub | Janus Slawomir | 3-1 | 3 | 7 | +13
@@ -19126,12 +19128,17 @@
 2026-11-02 | Stechly Witold | Michalik Jerzy | 3-0 | 4 | 4 | +26
 2026-11-02 | Kapik Krzysztof | Kwapis Jakub | 3-0 | 4 | 7 | +16
 2026-11-02 | Solilo Dominik | Myszewski Adrian | 3-1 | 4 | 9 | +8
-2026-11-02 | Rudomina Kamil | Glanowski Jakub | 3-2 | 4 | 1 | Pending
-2026-11-02 | Smoter Adam | Michalczyk Jakub | 3-0 | 4 | 7 | Pending
+2026-11-02 | Rudomina Kamil | Glanowski Jakub | 3-2 | 4 | 1 | +6
+2026-11-02 | Smoter Adam | Michalczyk Jakub | 3-0 | 4 | 7 | +13
 2026-11-02 | Skotniczny Rafal | Wichowski Grzegorz | 3-2 | 4 | 4 | +10
-2026-11-02 | Szoltysek Artur | Przewlocki Jacek | 3-2 | 4 | 4 | Pending
+2026-11-02 | Szoltysek Artur | Przewlocki Jacek | 3-2 | 4 | 4 | +9
 2026-11-02 | Wiciok Piotr | Baron Mariusz | 3-1 | 4 | 4 | +14
 2026-11-02 | Fomin Yurij | Tobiasz Wojciech | 3-1 | 4 | 4 | +10
+2026-11-02 | Kowalczyk Marcin | Piecowski Miroslaw | 3-1 | 4 | 4 | +10
+2026-11-02 | Kubiak Artur | Gesiarz Piotr | 3-2 | 4 | 4 | +9
+2026-11-02 | Krezel Andrzej | Nocun Zbigniew | 3-0 | 4 | 8 | Pending
+2026-11-02 | Staniczek Adam | Cyndera Jakub | 3-2 | 4 | 4 | +11
+2026-11-02 | Kumor Michal | Bladziak Krzysztof | 3-0 | 4 | 4 | Pending
 2026-11-02 | Pruszkowski Jakub | Slosarczyk Pawel | 3-0 | 5 | 5 | +10
 2026-11-02 | Urban Wojciech | Slosarczyk Pawel | 3-2 | 5 | 6 | +4
 2026-11-02 | Felkel Grzegorz | Braun Josef | 3-0 | 5 | 5 | +14
@@ -19156,12 +19163,20 @@
 2026-11-02 | Wichowski Grzegorz | Fomin Yurij | 3-2 | 5 | 5 | +4
 2026-11-02 | Hetnar Krzysztof | Vincenec Oliver | 3-0 | 5 | 10 | +8
 2026-11-02 | Wiciok Piotr | Skotniczny Rafal | 3-2 | 5 | 5 | +10
-2026-11-02 | Marud Grzegorz | Adamus Pawel | 3-1 | 5 | 4 | Pending
+2026-11-02 | Marud Grzegorz | Adamus Pawel | 3-1 | 5 | 4 | +12
 2026-11-02 | Baron Mariusz | Tobiasz Wojciech | 3-0 | 5 | 5 | +10
 2026-11-02 | Vincenec Oliver | Przewlocki Piotr | 3-1 | 5 | 5 | +12
 2026-11-02 | Pyrek Dawid | Bladziak Krzysztof | 3-0 | 5 | 1 | Pending
 2026-11-02 | Stechly Witold | Barton Aleksander | 3-1 | 5 | 5 | +9
+2026-11-02 | Glanowski Jakub | Smoter Adam | 3-0 | 5 | 5 | +19
+2026-11-02 | Przewlocki Jacek | Zwolinski Mariusz | 3-1 | 5 | 5 | +13
+2026-11-02 | Kowalczyk Marcin | Szoltysek Artur | 3-1 | 5 | 5 | +11
+2026-11-02 | Oracz Jacek | Bladziak Krzysztof | 3-0 | 5 | 5 | Pending
+2026-11-02 | Gesiarz Piotr | Janus Slawomir | 3-1 | 5 | 9 | +8
+2026-11-02 | Krezel Andrzej | Pyrek Dawid | 3-2 | 5 | 9 | Pending
+2026-11-02 | Kubiak Artur | Staniczek Adam | 3-0 | 5 | 5 | +7
 2026-11-02 | Braun Josef | Kolodziej Krystian | 3-0 | 6 | 6 | +9
+2026-11-02 | Smoter Adam | Rudomina Kamil | 3-2 | 6 | 9 | +9
 2026-11-02 | Nowak Jakub | Dytko Dawid | 3-0 | 6 | 5 | +20
 2026-11-02 | Pruszkowski Jakub | Marud Grzegorz | 3-0 | 6 | 4 | +20
 2026-11-02 | Szymik Robert | Vincenec Oliver | 3-1 | 6 | 3 | +8
@@ -19170,8 +19185,8 @@
 2026-11-02 | Kapik Krzysztof | Mitas Jacek | 3-2 | 6 | 9 | +6
 2026-11-02 | Kwapis Jakub | Mitas Jacek | 3-2 | 6 | 6 | +7
 2026-11-02 | Rutkowski Mateusz | Wisniewski Karol | 3-2 | 6 | 1 | +7
-2026-11-02 | Pietraszko Lukasz | Smoter Adam | 3-2 | 6 | 1 | Pending
-2026-11-02 | Michalczyk Jakub | Pietraszko Lukasz | 3-2 | 6 | 8 | Pending
+2026-11-02 | Pietraszko Lukasz | Smoter Adam | 3-2 | 6 | 1 | +5
+2026-11-02 | Michalczyk Jakub | Pietraszko Lukasz | 3-2 | 6 | 8 | +12
 2026-11-02 | Wichowski Grzegorz | Baron Mariusz | 3-0 | 6 | 6 | +10
 2026-11-02 | Vincenec Oliver | Slawinski Kacper | 3-2 | 6 | 6 | +12
 2026-11-02 | Myszewski Adrian | Iwasyszyn Wojciech | 3-1 | 6 | 6 | +9
@@ -19181,6 +19196,12 @@
 2026-11-02 | Zmijewski Artur | Staniczek Adam | 3-2 | 6 | 2 | +2
 2026-11-02 | Pyrek Dawid | Nocun Zbigniew | 3-1 | 6 | 6 | Pending
 2026-11-02 | Janus Slawomir | Staniczek Adam | 3-1 | 6 | 1 | +7
+2026-11-02 | Zwolinski Mariusz | Kowalczyk Marcin | 3-1 | 6 | 6 | +12
+2026-11-02 | Piecowski Miroslaw | Szoltysek Artur | 3-2 | 6 | 6 | +9
+2026-11-02 | Adamus Pawel | Sokolowski Oliwier | 3-1 | 6 | 3 | +9
+2026-11-02 | Kubiak Artur | Zmijewski Artur | 3-2 | 6 | 10 | +9
+2026-11-02 | Cyndera Jakub | Michalik Jerzy | 3-0 | 6 | 6 | +14
+2026-11-02 | Staniczek Adam | Machelski Michal | 3-0 | 6 | 1 | +18
 2026-11-02 | Baron Mariusz | Fomin Yurij | 3-1 | 7 | 7 | +11
 2026-11-02 | Szymik Robert | Przewlocki Piotr | 3-1 | 7 | 4 | +8
 2026-11-02 | Wloczko Krzysztof | Braun Josef | 3-0 | 7 | 7 | +22
@@ -19188,17 +19209,22 @@
 2026-11-02 | Poliniewicz Grzegorz | Wisniewski Karol | 3-1 | 7 | 2 | +6
 2026-11-02 | Lovha, Mykhailo | Kolodziej Krystian | 3-0 | 7 | 7 | +32
 2026-11-02 | Rutkowski Mateusz | Mitas Jacek | 3-1 | 7 | 7 | +13
-2026-11-02 | Pietraszko Lukasz | Rudomina Kamil | 3-0 | 7 | 5 | Pending
+2026-11-02 | Pietraszko Lukasz | Rudomina Kamil | 3-0 | 7 | 5 | +13
 2026-11-02 | Iwasyszyn Wojciech | Sobel Artur | 3-1 | 7 | 7 | +18
 2026-11-02 | Wichowski Grzegorz | Fomin Yurij | 3-1 | 7 | 8 | +6
 2026-11-02 | Polok Pawel | Vincenec Oliver | 3-1 | 7 | 7 | +7
 2026-11-02 | Skotniczny Rafal | Wiciok Piotr | 3-0 | 7 | 7 | +14
-2026-11-02 | Wisniewski Bartlomiej | Przewlocki Jacek | 3-1 | 7 | 2 | Pending
-2026-11-02 | Pruszkowski Jakub | Nowak Jakub | 3-2 | 7 | 7 | Pending
+2026-11-02 | Wisniewski Bartlomiej | Przewlocki Jacek | 3-1 | 7 | 2 | +14
+2026-11-02 | Pruszkowski Jakub | Nowak Jakub | 3-2 | 7 | 7 | +5
 2026-11-02 | Zmijewski Artur | Kubiak Artur | 3-0 | 7 | 3 | +13
 2026-11-02 | Przewlocki Piotr | Buczynski Witold | 3-0 | 7 | 7 | +15
 2026-11-02 | Nocun Zbigniew | Bladziak Krzysztof | 3-1 | 7 | 3 | Pending
 2026-11-02 | Pyrek Dawid | Kumor Michal | 3-2 | 7 | 3 | Pending
+2026-11-02 | Rudomina Kamil | Minda Michal | 3-2 | 7 | 4 | +9
+2026-11-02 | Smoter Adam | Michalczyk Jakub | 3-1 | 7 | 10 | +9
+2026-11-02 | Piecowski Miroslaw | Przewlocki Jacek | 3-2 | 7 | 6 | +10
+2026-11-02 | Cyndera Jakub | Kubiak Artur | 3-0 | 7 | 7 | +21
+2026-11-02 | Michalik Jerzy | Machelski Michal | 3-0 | 7 | 2 | +14
 2026-11-02 | Slawinski Kacper | Buczynski Witold | 3-0 | 8 | 8 | +6
 2026-11-02 | Braun Josef | Jadczyk Marcin | 3-2 | 8 | 8 | +7
 2026-11-02 | Poliniewicz Grzegorz | Kwapis Jakub | 3-2 | 8 | 8 | +6
@@ -19213,21 +19239,31 @@
 2026-11-02 | Janus Slawomir | Zmijewski Artur | 3-2 | 8 | 8 | +12
 2026-11-02 | Tobiasz Wojciech | Fomin Yurij | 3-2 | 8 | 9 | +10
 2026-11-02 | Przewlocki Piotr | Vincenec Oliver | 3-1 | 8 | 8 | +13
-2026-11-02 | Nowak Jakub | Cesarz Milosz | 3-1 | 8 | 2 | Pending
+2026-11-02 | Nowak Jakub | Cesarz Milosz | 3-1 | 8 | 2 | +12
+2026-11-02 | Rudomina Kamil | Michalczyk Jakub | 3-2 | 8 | 8 | +6
+2026-11-02 | Marud Grzegorz | Cesarz Milosz | 3-0 | 8 | 4 | +8
+2026-11-02 | Pruszkowski Jakub | Adamus Pawel | 3-2 | 8 | 5 | +8
+2026-11-02 | Adamus Pawel | Cesarz Milosz | 3-2 | 8 | 5 | +4
+2026-11-02 | Skotniczny Rafal | Wichowski Grzegorz | 3-2 | 9 | 8 | +11
 2026-11-02 | Lovha, Mykhailo | Jadczyk Marcin | 3-1 | 9 | 9 | +24
 2026-11-02 | Braun Josef | Abbasi Amirreza | 3-2 | 9 | 4 | +7
 2026-11-02 | Rutkowski Mateusz | Poliniewicz Grzegorz | 3-2 | 9 | 9 | +11
 2026-11-02 | Kolodziej Krystian | Wloczko Krzysztof | 3-2 | 9 | 9 | +10
 2026-11-02 | Kwapis Jakub | Wisniewski Karol | 3-1 | 9 | 4 | +8
 2026-11-02 | Iwasyszyn Wojciech | Pietraszko Lukasz | 3-0 | 9 | 4 | +27
-2026-11-02 | Pietraszko Lukasz | Glanowski Jakub | 3-2 | 9 | 4 | Pending
+2026-11-02 | Pietraszko Lukasz | Glanowski Jakub | 3-2 | 9 | 4 | +4
 2026-11-02 | Sobel Artur | Kostyk Kamil | 3-1 | 9 | 9 | +14
-2026-11-02 | Skotniczny Rafal | Wichowski Grzegorz | 3-2 | 9 | 8 | +11
 2026-11-02 | Slawinski Kacper | Polok Pawel | 3-2 | 9 | 9 | +8
 2026-11-02 | Przewlocki Piotr | Hetnar Krzysztof | 3-2 | 9 | 4 | +12
 2026-11-02 | Baron Mariusz | Wiciok Piotr | 3-2 | 9 | 9 | +8
 2026-11-02 | Vincenec Oliver | Buczynski Witold | 3-0 | 9 | 9 | +13
+2026-11-02 | Nowak Jakub | Marud Grzegorz | 3-2 | 9 | 7 | +12
+2026-11-02 | Wisniewski Bartlomiej | Zwolinski Mariusz | 3-2 | 9 | 4 | +10
+2026-11-02 | Pruszkowski Jakub | Cesarz Milosz | 3-2 | 9 | 3 | +4
+2026-11-02 | Zmijewski Artur | Cyndera Jakub | 3-0 | 9 | 5 | +9
+2026-11-02 | Nocun Zbigniew | Kumor Michal | 3-0 | 9 | 5 | Pending
 2026-11-02 | Wichowski Grzegorz | Tobiasz Wojciech | 3-0 | 10 | 10 | +6
+2026-11-02 | Baron Mariusz | Tobiasz Wojciech | 3-0 | 10 | 9 | +10
 2026-11-02 | Lovha, Mykhailo | Braun Josef | 3-0 | 10 | 10 | +32
 2026-11-02 | Kolodziej Krystian | Jadczyk Marcin | 3-1 | 10 | 10 | +16
 2026-11-02 | Poliniewicz Grzegorz | Mitas Jacek | 3-1 | 10 | 10 | +8
@@ -19238,7 +19274,12 @@
 2026-11-02 | Slawinski Kacper | Przewlocki Piotr | 3-0 | 10 | 10 | +8
 2026-11-02 | Buczynski Witold | Polok Pawel | 3-0 | 10 | 10 | +26
 2026-11-02 | Skotniczny Rafal | Fomin Yurij | 3-1 | 10 | 10 | +8
-2026-11-02 | Baron Mariusz | Tobiasz Wojciech | 3-0 | 10 | 9 | +10
+2026-11-02 | Pietraszko Lukasz | Minda Michal | 3-0 | 10 | 5 | +12
+2026-11-02 | Rudomina Kamil | Linek Adam | 3-2 | 10 | 2 | +9
+2026-11-02 | Pruszkowski Jakub | Sokolowski Oliwier | 3-1 | 10 | 4 | +8
+2026-11-02 | Wisniewski Bartlomiej | Piecowski Miroslaw | 3-0 | 10 | 5 | +15
+2026-11-02 | Nowak Jakub | Adamus Pawel | 3-2 | 10 | 7 | +11
+2026-11-02 | Michalczyk Jakub | Linek Adam | 3-1 | 11 | 3 | +17
 2026-11-02 | Urban Wojciech | Dytko Dawid | 3-0 |  |  | 
 2026-11-02 | Mlynarski Filip | Linek Adam | 3-2 |  |  | 
 2026-11-02 | Mlynarski Filip | Staszczyk Konrad | 3-0 |  |  | 
@@ -19252,3 +19293,29 @@
 2026-11-02 | Szymik Robert | Guzik Michal | 3-1 |  |  | 
 2026-11-02 | Adamus Pawel | Sawicki Grzegorz | 3-1 |  |  | 
 2026-11-02 | Kurek Pawel | Sawicki Grzegorz | 3-0 |  |  | 
+2026-11-03 | Michalczyk Jakub | Rudomina Kamil | 3-2 | 1 | 1 | +11
+2026-11-03 | Smoter Adam | Kukawka Milosz | 3-0 | 1 | 1 | +17
+2026-11-03 | Marud Grzegorz | Pruszkowski Jakub | 3-1 | 1 | 1 | +12
+2026-11-03 | Szoltysek Artur | Kowalczyk Marcin | 3-0 | 1 | 1 | +18
+2026-11-03 | Piecowski Miroslaw | Kowalczyk Marcin | 3-0 | 1 | 3 | +19
+2026-11-03 | Zmijewski Artur | Staniczek Adam | 3-0 | 1 | 1 | +5
+2026-11-03 | Michalik Jerzy | Zmijewski Artur | 3-0 | 1 | 2 | Pending
+2026-11-03 | Sokolowski Oliwier | Nowak Jakub | 3-2 | 1 | 1 | +8
+2026-11-03 | Kubiak Artur | Staniczek Adam | 3-0 | 1 | 2 | Pending
+2026-11-03 | Cyndera Jakub | Machelski Michal | 3-1 | 1 | 1 | Pending
+2026-11-03 | Rudomina Kamil | Kukawka Milosz | 3-2 | 2 | 3 | +8
+2026-11-03 | Kukawka Milosz | Linek Adam | 3-0 | 2 | 1 | +17
+2026-11-03 | Linek Adam | Smoter Adam | 3-1 | 2 | 2 | +13
+2026-11-03 | Marud Grzegorz | Nowak Jakub | 3-2 | 2 | 2 | +4
+2026-11-03 | Szoltysek Artur | Zwolinski Mariusz | 3-0 | 2 | 1 | +18
+2026-11-03 | Zwolinski Mariusz | Przewlocki Jacek | 3-0 | 2 | 2 | +15
+2026-11-03 | Piecowski Miroslaw | Zwolinski Mariusz | 3-1 | 2 | 3 | +14
+2026-11-03 | Pruszkowski Jakub | Adamus Pawel | 3-1 | 2 | 1 | +12
+2026-11-03 | Kowalczyk Marcin | Przewlocki Jacek | 3-0 | 2 | 1 | +16
+2026-11-03 | Adamus Pawel | Cesarz Milosz | 3-1 | 2 | 2 | +6
+2026-11-03 | Sokolowski Oliwier | Cesarz Milosz | 3-1 | 2 | 1 | +9
+2026-11-03 | Kubiak Artur | Michalik Jerzy | 3-1 | 2 | 2 | Pending
+2026-11-03 | Marud Grzegorz | Sokolowski Oliwier | 3-0 | 3 | 3 | +10
+2026-11-03 | Pruszkowski Jakub | Nowak Jakub | 3-1 | 3 | 3 | +7
+2026-11-03 | Przewlocki Jacek | Szoltysek Artur | 3-1 | 3 | 3 | +13
+2026-11-03 | Zmijewski Artur | Machelski Michal | 3-0 | 3 | 2 | Pending
