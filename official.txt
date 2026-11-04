@@ -1,5 +1,5 @@
 # Official results collected from tt-series.com (updated automatically)
-# updated 2026-11-03T23:17Z
+# updated 2026-11-04T03:13Z
 # date | winner | loser | score | winner's match # that day | loser's match # that day | winner's Elo change
 2023-01-08 | Linek Adam | Lamperski Jakub | 3-2 |  |  | 
 2023-01-08 | Poloszczanski Dawid | Lamperski Jakub | 3-2 |  |  | 
@@ -19476,6 +19476,7 @@
 2026-11-03 | Jurowicz Grzegorz | Tkocz Marek | 3-2 | 4 | 4 | +12
 2026-11-03 | Paszkiewicz Michal | Oracz Lukasz | 3-2 | 4 | 4 | +8
 2026-11-03 | Wolny Michal | Michalik Jerzy | 3-0 | 4 | 7 | +15
+2026-11-03 | Brunner Marian | Delikatny Kamil | 3-2 | 4 | 4 | +8
 2026-11-03 | Sklensky Miroslav | Kosowski Jakub | 3-1 | 5 | 5 | +13
 2026-11-03 | Wiecek Adrian | Lovha, Mykhailo | 3-1 | 5 | 5 | Pending
 2026-11-03 | Staszczyk Konrad | Kapik Krzysztof | 3-0 | 5 | 5 | +10
@@ -19513,8 +19514,10 @@
 2026-11-03 | Skorski Michal | Wisniewski Bartlomiej | 3-1 | 5 | 5 | +11
 2026-11-03 | Paszkiewicz Michal | Tkaczyk Henryk | 3-2 | 5 | 10 | Pending
 2026-11-03 | Michalski Jakub | Koczyba Mariusz | 3-0 | 5 | 5 | +21
+2026-11-03 | Wolny Michal | Krezel Andrzej | 3-1 | 5 | 10 | +16
+2026-11-03 | Delikatny Kamil | Michalik Jerzy | 3-0 | 5 | 8 | +14
 2026-11-03 | Marud Grzegorz | Pruszkowski Jakub | 3-1 | 6 | 6 | +11
-2026-11-03 | Trela Mateusz | Gluszek Wojciech | 3-0 | 6 | 6 | Pending
+2026-11-03 | Trela Mateusz | Gluszek Wojciech | 3-0 | 6 | 6 | +16
 2026-11-03 | Kosowski Jakub | Wiecek Adrian | 3-2 | 6 | 6 | +8
 2026-11-03 | Sklensky Miroslav | Jadczyk Marcin | 3-2 | 6 | 5 | +7
 2026-11-03 | Jadczyk Marcin | Lovha Mykhailo | 3-0 | 6 | 4 | +16
@@ -19531,13 +19534,14 @@
 2026-11-03 | Adamus Kacper | Gajda Rafal | 3-2 | 6 | 6 | +7
 2026-11-03 | Kurek Pawel | Tkaczyk Henryk | 3-2 | 6 | 6 | +7
 2026-11-03 | Linek Adam | Rudomina Kamil | 3-1 | 6 | 6 | +13
-2026-11-03 | Lebek Marian | Cesarz Milosz | 3-0 | 6 | 6 | Pending
-2026-11-03 | Rolak Jaroslaw | Skorski Michal | 3-2 | 6 | 6 | Pending
+2026-11-03 | Lebek Marian | Cesarz Milosz | 3-0 | 6 | 6 | +6
+2026-11-03 | Rolak Jaroslaw | Skorski Michal | 3-2 | 6 | 6 | +9
+2026-11-03 | Tkocz Marek | Jurowicz Grzegorz | 3-0 | 6 | 6 | +8
 2026-11-03 | Stapor Rafal | Solilo Dominik | 3-2 | 7 | 6 | +5
 2026-11-03 | Adamus Kacper | Vincenec Oliver | 3-1 | 7 | 7 | +10
 2026-11-03 | Slawinski Kacper | Baron Mariusz | 3-2 | 7 | 7 | +5
 2026-11-03 | Rutkowski Mateusz | Kosmal Dawid | 3-1 | 7 | 7 | +11
-2026-11-03 | Nowak Jakub | Sokolowski Oliwier | 3-1 | 7 | 6 | Pending
+2026-11-03 | Nowak Jakub | Sokolowski Oliwier | 3-1 | 7 | 6 | +14
 2026-11-03 | Kosowski Jakub | Lovha Mykhailo | 3-0 | 7 | 3 | +15
 2026-11-03 | Wiecek Adrian | Lovha Mykhailo | 3-1 | 7 | 5 | +11
 2026-11-03 | Sklensky Miroslav | Lovha Mykhailo | 3-1 | 7 | 2 | +11
@@ -19553,8 +19557,10 @@
 2026-11-03 | Rudomina Kamil | Zochniak Jakub | 3-1 | 7 | 5 | +15
 2026-11-03 | Linek Adam | Brud Szymon | 3-1 | 7 | 5 | +15
 2026-11-03 | Smoter Adam | Kukawka Milosz | 3-2 | 7 | 8 | +8
-2026-11-03 | Trela Mateusz | Lukaszewski Mikolaj | 3-1 | 7 | 1 | Pending
+2026-11-03 | Trela Mateusz | Lukaszewski Mikolaj | 3-1 | 7 | 1 | +10
 2026-11-03 | Krezel Andrzej | Delikatny Kamil | 3-2 | 7 | 2 | +6
+2026-11-03 | Brud Szymon | Rudomina Kamil | 3-1 | 7 | 8 | +11
+2026-11-03 | Sokolowski Oliwier | Tkocz Marek | 3-1 | 7 | 7 | +17
 2026-11-03 | Niemiec Rafal | Glanowski Waldemar | 3-0 | 8 | 8 | +6
 2026-11-03 | Szymanski Igor | Idaczyk Rafal | 3-1 | 8 | 8 | +10
 2026-11-03 | Pelka Jerzy | Adamus Kacper | 3-1 | 8 | 8 | +12
@@ -19567,9 +19573,11 @@
 2026-11-03 | Pruszkowski Jakub | Marud Grzegorz | 3-1 | 8 | 8 | +14
 2026-11-03 | Gajda Rafal | Baron Mariusz | 3-2 | 8 | 8 | +10
 2026-11-03 | Urban Wojciech | Przewlocki Piotr | 3-2 | 8 | 8 | +7
-2026-11-03 | Linek Adam | Kukawka Milosz | 3-1 | 8 | 9 | Pending
+2026-11-03 | Linek Adam | Kukawka Milosz | 3-1 | 8 | 9 | +12
 2026-11-03 | Tkaczyk Henryk | Marud Grzegorz | 3-0 | 8 | 9 | +21
 2026-11-03 | Krezel Andrzej | Michalik Jerzy | 3-1 | 8 | 6 | +7
+2026-11-03 | Smoter Adam | Brud Szymon | 3-0 | 8 | 6 | +18
+2026-11-03 | Nowak Jakub | Cesarz Milosz | 3-1 | 8 | 7 | +10
 2026-11-03 | Sobel Artur | Sulkowski Bartek | 3-1 | 9 | 9 | +12
 2026-11-03 | Idaczyk Rafal | Niemiec Rafal | 3-0 | 9 | 9 | +20
 2026-11-03 | Gajda Rafal | Vincenec Oliver | 3-2 | 9 | 9 | +7
@@ -19585,6 +19593,9 @@
 2026-11-03 | Glanowski Waldemar | Przewlocki Piotr | 3-1 | 9 | 9 | +14
 2026-11-03 | Kurek Pawel | Marud Grzegorz | 3-0 | 9 | 10 | +18
 2026-11-03 | Tkaczyk Henryk | Pruszkowski Jakub | 3-1 | 9 | 10 | +14
+2026-11-03 | Rudomina Kamil | Linek Adam | 3-0 | 9 | 10 | +17
+2026-11-03 | Linek Adam | Smoter Adam | 3-2 | 9 | 9 | +8
+2026-11-03 | Krezel Andrzej | Staniczek Adam | 3-0 | 9 | 8 | +5
 2026-11-03 | Sobel Artur | Solilo Dominik | 3-1 | 10 | 10 | +11
 2026-11-03 | Jadczyk Marcin | Wiecek Adrian | 3-2 | 10 | 10 | +9
 2026-11-03 | Sklensky Miroslav | Lovha Mykhailo | 3-0 | 10 | 10 | +11
@@ -19601,3 +19612,29 @@
 2026-11-03 | Stapor Rafal | Minda Michal | 3-2 | 11 | 5 | +5
 2026-11-03 | Kurek Pawel | Paszkiewicz Michal | 3-2 | 11 | 6 | Pending
 2026-11-03 | Marud Grzegorz | Oracz Lukasz | 3-1 | 11 | 5 | Pending
+2026-11-04 | Brud Szymon | Linek Adam | 3-0 | 1 | 1 | +14
+2026-11-04 | Smoter Adam | Kukawka Milosz | 3-2 | 1 | 1 | +7
+2026-11-04 | Lebek Marian | Jurowicz Grzegorz | 3-0 | 1 | 1 | +6
+2026-11-04 | Tkocz Marek | Lebek Marian | 3-1 | 1 | 2 | +15
+2026-11-04 | Gluszek Wojciech | Rolak Jaroslaw | 3-0 | 1 | 1 | +15
+2026-11-04 | Skorski Michal | Gluszek Wojciech | 3-2 | 1 | 2 | +8
+2026-11-04 | Cesarz Milosz | Sokolowski Oliwier | 3-2 | 1 | 1 | +10
+2026-11-04 | Krezel Andrzej | Delikatny Kamil | 3-1 | 1 | 1 | +8
+2026-11-04 | Wolny Michal | Brunner Marian | 3-2 | 1 | 2 | +7
+2026-11-04 | Staniczek Adam | Brunner Marian | 3-2 | 1 | 1 | +11
+2026-11-04 | Brud Szymon | Kukawka Milosz | 3-0 | 2 | 3 | +13
+2026-11-04 | Kukawka Milosz | Rudomina Kamil | 3-2 | 2 | 1 | +9
+2026-11-04 | Rudomina Kamil | Smoter Adam | 3-1 | 2 | 2 | +12
+2026-11-04 | Trela Mateusz | Skorski Michal | 3-0 | 2 | 3 | +14
+2026-11-04 | Sokolowski Oliwier | Lebek Marian | 3-1 | 2 | 3 | +18
+2026-11-04 | Tkocz Marek | Nowak Jakub | 3-1 | 2 | 2 | +7
+2026-11-04 | Lukaszewski Mikolaj | Skorski Michal | 3-2 | 2 | 2 | +9
+2026-11-04 | Rolak Jaroslaw | Lukaszewski Mikolaj | 3-2 | 2 | 1 | +9
+2026-11-04 | Jurowicz Grzegorz | Nowak Jakub | 3-2 | 2 | 1 | +9
+2026-11-04 | Wolny Michal | Staniczek Adam | 3-0 | 2 | 3 | +9
+2026-11-04 | Delikatny Kamil | Michalik Jerzy | 3-1 | 2 | 2 | +9
+2026-11-04 | Staniczek Adam | Michalik Jerzy | 3-1 | 2 | 1 | +15
+2026-11-04 | Rolak Jaroslaw | Trela Mateusz | 3-1 | 3 | 1 | +15
+2026-11-04 | Gluszek Wojciech | Lukaszewski Mikolaj | 3-0 | 3 | 3 | +15
+2026-11-04 | Brunner Marian | Krezel Andrzej | 3-1 | 3 | 2 | +17
+2026-11-04 | Jurowicz Grzegorz | Cesarz Milosz | 3-1 | 3 | 2 | +11
